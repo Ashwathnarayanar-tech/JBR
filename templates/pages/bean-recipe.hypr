@@ -1,0 +1,1044 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static {% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <div class="vending-100">
+        <h1 class="mz-pagetitle mar-top0">Jelly Belly<sup>&reg;</sup> Jelly Bean Recipes</h1>
+        <article>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Apple Cider Shandy</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Draft Beer" src="/resources/images/jb-beans-receipe/beer.png"/>
+                        </figure>
+                        <p>
+                            <a href="/draft-beer-flavored-non-alcoholic-jelly-beans/c/41" title="Draft Beer" >Draft Beer</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Draft Beer" src="/resources/images/jb-beans-receipe/beer.png"/>
+                        </figure>
+                        <p>
+                            <a href="/draft-beer-flavored-non-alcoholic-jelly-beans/c/41" title="Draft Beer" >Draft Beer</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Red Apple" src="/resources/images/jb-beans-receipe/cinnamon.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/red-apple/c/98" title="Red Apple" >Red Apple</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output1.jpg"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Banana Split</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Top Banana" src="/resources/images/jb-beans-receipe/topBanana.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/top-banana/c/104" title="Top Banana" >Top Banana</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Chocolate Pudding" src="/resources/images/jb-beans-receipe/pudding.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/chocolate-pudding/c/74" title="Chocolate Pudding" >Chocolate Pudding</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Crushed Pineapple" src="/resources/images/jb-beans-receipe/pineapple.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/crushed-pineapple/c/76" title="Crushed Pineapple" >Crushed Pineapple</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Strawberry Jam" src="/resources/images/jb-beans-receipe/strawberryJam.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/strawberry-jam/c/101" title="Strawberry Jam" >Strawberry Jam</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Very Cherry" src="/resources/images/jb-beans-receipe/veryCherry.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/very-cherry/c/106" title="Very Cherry" >Very Cherry</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="French Vanilla" src="/resources/images/jb-beans-receipe/vanilla.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/french-vanilla/c/16" title="French Vanilla" >French Vanilla</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output2.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Banana Kiwi Pudding</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Top Banana" src="/resources/images/jb-beans-receipe/topBanana.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/top-banana/c/104" title="Top Banana" >Top Banana</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Top Banana" src="/resources/images/jb-beans-receipe/topBanana.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/top-banana/c/104" title="Top Banana">Top Banana</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Kiwi" src="/resources/images/jb-beans-receipe/kiwi.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/kiwi/c/274" title="Kiwi" >Kiwi</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="French Vanilla" src="/resources/images/jb-beans-receipe/vanilla.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/french-vanilla/c/16" title="French Vanilla" >French Vanilla</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output3.jpg"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Beer Sangria</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Draft Beer" src="/resources/images/jb-beans-receipe/beer.png"/>
+                        </figure>
+                        <p>
+                            <a href="/draft-beer-flavored-non-alcoholic-jelly-beans/c/41" title="Draft Beer" >Draft Beer</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Draft Beer" src="/resources/images/jb-beans-receipe/beer.png"/>
+                        </figure>
+                        <p>
+                            <a href="/draft-beer-flavored-non-alcoholic-jelly-beans/c/41" title="Draft Beer" >Draft Beer</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Peach" src="/resources/images/jb-beans-receipe/peach.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/peach/c/92" title="Peach" >Peach</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output4.jpg"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Berry Smoothie</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Strawberry Daiquiri" src="/resources/images/jb-beans-receipe/strwDaquiri.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/strawberry-daiquiri/c/100" title="Strawberry Daiquiri" >Strawberry Daiquiri</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Raspberry" src="/resources/images/jb-beans-receipe/raspberry.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/raspberry/c/97" title="Raspberry" >Raspberry</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Blueberry" src="/resources/images/jb-beans-receipe/blueberry.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/blueberry/c/67" title="Blueberry" >Blueberry</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output5.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Blueberry Muffin</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Blueberry" src="/resources/images/jb-beans-receipe/blueberry.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/blueberry/c/67" title="Blueberry" >Blueberry</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Blueberry" src="/resources/images/jb-beans-receipe/blueberry.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/blueberry/c/67" title="Blueberry" >Blueberry</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Buttered Popcorn" src="/resources/images/jb-beans-receipe/popcorn.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/buttered-popcorn/c/68" title="Buttered Popcorn" >Buttered Popcorn</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output6.jpg"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Cinnamon Bubble Gum</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Cinnamon" src="/resources/images/jb-beans-receipe/cinnamon.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/cinnamon/c/75" title="Cinnamon" >Cinnamon</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Cinnamon" src="/resources/images/jb-beans-receipe/cinnamon.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/cinnamon/c/75" title="Cinnamon" >Cinnamon</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Bubble Gum" src="/resources/images/jb-beans-receipe/bubbleGum.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/bubble-gum/c/18" title="Bubble Gum" >Bubble Gum</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/bubbleGum.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/bubble-gum/c/18" title="Bubble Gum" >Bubble Gum</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output7.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Candy Apple</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Sizzling Cinnamon" src="/resources/images/jb-beans-receipe/sizCin.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/sizzling-cinnamon/c/99" title="Sizzling Cinnamon" >Sizzling Cinnamon</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Green Apple" src="/resources/images/jb-beans-receipe/greenApple.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/green-apple/c/79" title="Green Apple" >Green Apple</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Green Apple" src="/resources/images/jb-beans-receipe/greenApple.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/green-apple/c/79" title="Green Apple" >Green Apple</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output8.jpg"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Chocolate Popcorn</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Chocolate Pudding" src="/resources/images/jb-beans-receipe/pudding.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/chocolate-pudding/c/74" title="Chocolate Pudding" >Chocolate Pudding</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Chocolate Pudding" src="/resources/images/jb-beans-receipe/pudding.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/chocolate-pudding/c/74" title="Chocolate Pudding" >Chocolate Pudding</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/popcorn.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/buttered-popcorn/c/68" title="Buttered Popcorn" >Buttered Popcorn</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Buttered Popcorn" src="/resources/images/jb-beans-receipe/popcorn.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/buttered-popcorn/c/68" title="Buttered Popcorn" >Buttered Popcorn</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output9.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+			<div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Cola</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Lime" src="/resources/images/jb-beans-receipe/lime.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="lemon-lime/c/85" title="Lime" >Lime</a>
+                        </p>
+                    </li>
+                     <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Cinnamon" src="/resources/images/jb-beans-receipe/cinnamon.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/sizzling-cinnamon/c/99" title="Cinnamon" >Cinnamon</a>
+                        </p>
+                    </li>                   
+                   
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/cola.jpg"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Fruit Salad</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/kiwi.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/kiwi/c/274" title="Kiwi" >Kiwi</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Kiwi" src="/resources/images/jb-beans-receipe/strawberryJam.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/strawberry-jam/c/101" title="Strawberry Jam" >Strawberry Jam</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Strawberry Jam" src="/resources/images/jb-beans-receipe/blueberry.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/blueberry/c/67" title="Blueberry" >Blueberry</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Cantaloupe" src="/resources/images/jb-beans-receipe/cantaloupe.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/cantaloupe/c/69" title="Cantaloupe" >Cantaloupe</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output10.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Lemon Meringue Pie</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Sunkist® Lemon" src="/resources/images/jb-beans-receipe/lemon.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/sunkist-lemon/c/84" title="Sunkist® Lemon" >Sunkist<sup>&reg;</sup> Lemon</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Sunkist® Lemon" src="/resources/images/jb-beans-receipe/lemon.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/sunkist-lemon/c/84" title="Sunkist® Lemon" >Sunkist<sup>&reg;</sup> Lemon</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Coconut" src="/resources/images/jb-beans-receipe/coconut.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/coconut/c/14" title="Coconut" >Coconut</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Coconut" src="/resources/images/jb-beans-receipe/coconut.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/coconut/c/14" title="Coconut" >Coconut</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output11.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Mango Tango Salsa</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Mango" src="/resources/images/jb-beans-receipe/mango.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/mango/c/87" title="Mango" >Mango</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Lemon Lime" src="/resources/images/jb-beans-receipe/lime.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="lemon-lime/c/85" title="Lemon Lime" >Lemon Lime</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Chili Mango" src="/resources/images/jb-beans-receipe/chiliMango.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/chili-mango/c/189" title="Chili Mango" >Chili Mango</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output12.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Mexican Hot Chocolate</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Chocolate Pudding" src="/resources/images/jb-beans-receipe/pudding.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/chocolate-pudding/c/74" title="Chocolate Pudding" >Chocolate Pudding</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Chocolate Pudding" src="/resources/images/jb-beans-receipe/pudding.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/chocolate-pudding/c/74" title="Chocolate Pudding" >Chocolate Pudding</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Toasted Marshmallow" src="/resources/images/jb-beans-receipe/Marshmallow.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/toasted-marshmallow/c/103" title="Toasted Marshmallow" >Toasted Marshmallow</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Sizzling Cinnamon" src="/resources/images/jb-beans-receipe/cinnamon.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/sizzling-cinnamon/c/99" title="Sizzling Cinnamon" >Sizzling Cinnamon</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output13.jpg"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Michelada</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="Draft Beer" title="Draft Beer" src="/resources/images/jb-beans-receipe/beer.png"/>
+                        </figure>
+                        <p>
+                            <a href="/draft-beer-flavored-non-alcoholic-jelly-beans/c/41" title="Draft Beer" >Draft Beer</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Draft Beer" src="/resources/images/jb-beans-receipe/beer.png"/>
+                        </figure>
+                        <p>
+                            <a href="/draft-beer-flavored-non-alcoholic-jelly-beans/c/41" title="Draft Beer" >Draft Beer</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Lemon Lime" src="/resources/images/jb-beans-receipe/lime.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="lemon-lime/c/85" title="Lemon Lime" >Lemon Lime</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Tabasco®" src="/resources/images/jb-beans-receipe/redApple.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/tabasco-/c/346" title="Tabasco®" >Tabasco<sup>&reg;</sup></a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output14.jpg"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Pineapple Salsa</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Mango" src="/resources/images/jb-beans-receipe/mango.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/mango/c/87" title="Mango" >Mango</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Pineapple" src="/resources/images/jb-beans-receipe/pineapple.jpg"/>
+                        </figure>
+                        <p>
+                            <a href=/crushed-pineapple/c/76" title="Pineapple" >Pineapple</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Chili Mango" src="/resources/images/jb-beans-receipe/chiliMango.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/chili-mango/c/189" title="Chili Mango" >Chili Mango</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output15.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="" title="" ></a>
+                        </p>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Raspberry Crème Brûlée</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="French Vanilla" src="/resources/images/jb-beans-receipe/vanilla.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/french-vanilla/c/16" title="French Vanilla" >French Vanilla</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Raspberry" src="/resources/images/jb-beans-receipe/raspberry.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/raspberry/c/97" title="Raspberry" >Raspberry</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Toasted Marshmallow" src="/resources/images/jb-beans-receipe/Marshmallow.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/toasted-marshmallow/c/103" title="Toasted Marshmallow" >Toasted Marshmallow</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output16.jpg"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Raspberry Mocha</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Chocolate Pudding" src="/resources/images/jb-beans-receipe/pudding.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/chocolate-pudding/c/74" title="Chocolate Pudding" >Chocolate Pudding</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Cappuccino" src="/resources/images/jb-beans-receipe/cappuccino.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/cappuccino/c/70" title="Cappuccino" >Cappuccino</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Cappuccino" src="/resources/images/jb-beans-receipe/cappuccino.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/cappuccino/c/70" title="Cappuccino" >Cappuccino</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Raspberry" src="/resources/images/jb-beans-receipe/raspberry.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/raspberry/c/97" title="Raspberry" >Raspberry</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output17.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Root Beer Float</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="A&ampW&reg; Root Beer" src="/resources/images/jb-beans-receipe/rootBeer.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/a-w-root-beer/c/73" title="A&ampW&reg; Root Beer" >A&amp;W<sup>&reg;</sup> Root Beer</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="A&ampW&reg; Root Beer" src="/resources/images/jb-beans-receipe/rootBeer.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/a-w-root-beer/c/73" title="A&ampW&reg; Root Beer" >A&amp;W<sup>&reg;</sup> Root Beer</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="A&ampW&reg; Cream Soda" src="/resources/images/jb-beans-receipe/creamSoda.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/a-w-cream-soda/c/13" title="A&ampW&reg; Cream Soda" >A&amp;W<sup>&reg;</sup> Cream Soda</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output18.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>S'mores</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Caramel Corn" src="/resources/images/jb-beans-receipe/carmelCorn.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/caramel-corn/c/71" title="Caramel Corn" >Caramel Corn</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Toasted Marshmallows" src="/resources/images/jb-beans-receipe/Marshmallow.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/toasted-marshmallow/c/103" title="Toasted Marshmallows" >Toasted Marshmallows</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/Marshmallow.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/toasted-marshmallow/c/103" title="Toasted Marshmallows" >Toasted Marshmallows</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Chocolate Pudding" src="/resources/images/jb-beans-receipe/pudding.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/chocolate-pudding/c/74" title="Chocolate Pudding" >Chocolate Pudding</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output19.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Strawberry Shortcake</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Strawberry Jam" src="/resources/images/jb-beans-receipe/strawberryJam.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/strawberry-jam/c/101" title="Strawberry Jam" >Strawberry Jam</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/strawberryJam.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/strawberry-jam/c/101" title="Strawberry Jam" >Strawberry Jam</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="French Vanilla" src="/resources/images/jb-beans-receipe/vanilla.jpg"/> 
+                        </figure>
+                        <p>
+                            <a href="/french-vanilla/c/16" title="French Vanilla" >French Vanilla</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/vanilla.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/french-vanilla/c/16" title="French Vanilla" >French Vanilla</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output20.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Tiramisu</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Cappuccino" src="/resources/images/jb-beans-receipe/cappuccino.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/cappuccino/c/70" title="Cappuccino" >Cappuccino</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/cappuccino.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/cappuccino/c/70" title="Cappuccino" >Cappuccino</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="A&ampW&reg; Cream Soda" src="/resources/images/jb-beans-receipe/creamSoda.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/a-w-cream-soda/c/13" title="A&ampW&reg; Cream Soda" >A&amp;W<sup>&reg;</sup> Cream Soda</a>
+                        </p>
+                    </li>
+                    <li  class="bg-none">
+                        <figure>
+                            <img alt="" title="Chocolate Pudding" src="/resources/images/jb-beans-receipe/pudding.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/chocolate-pudding/c/74" title="Chocolate Pudding" >Chocolate Pudding</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output21.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Tres Leches Cake</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="French Vanilla" src="/resources/images/jb-beans-receipe/vanilla.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/french-vanilla/c/16" title="French Vanilla" >French Vanilla</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Coconut" src="/resources/images/jb-beans-receipe/coconut.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/coconut/c/14" title="Coconut" >Coconut</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/coconut.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/coconut/c/14" title="Coconut" >Coconut</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Buttered Popcorn" src="/resources/images/jb-beans-receipe/popcorn.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/buttered-popcorn/c/68" title="Buttered Popcorn" >Buttered Popcorn</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="Toasted Marshmallow" src="/resources/images/jb-beans-receipe/Marshmallow.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/toasted-marshmallow/c/103" title="Toasted Marshmallow" >Toasted Marshmallow</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/Marshmallow.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/toasted-marshmallow/c/103" title="Toasted Marshmallow" >Toasted Marshmallow</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output22.jpg"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="block-container80">
+                <div class="headline-beans">
+                    <h2>Wedding Cake</h2>
+                </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <img alt="" title="Cotton Candy" src="/resources/images/jb-beans-receipe/cottonCandy.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/cotton-candy/c/15" title="Cotton Candy" >Cotton Candy</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="French Vanilla" src="/resources/images/jb-beans-receipe/vanilla.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/french-vanilla/c/16" title="French Vanilla" >French Vanilla</a>
+                        </p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/vanilla.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/french-vanilla/c/16" title="French Vanilla" >French Vanilla</a>
+                        </p>
+                    </li>
+                    <li class="bg-none">
+                        <figure>
+                            <img alt="" title="Piña Colada" src="/resources/images/jb-beans-receipe/pinaColada.jpg"/>
+                        </figure>
+                        <p>
+                            <a href="/pina-colada/c/93" title="Piña Colada" >Piña Colada</a>
+                        </p>
+                    </li>
+                    <li class="result">
+                        <figure>
+                            <img alt="" title="" src="/resources/images/jb-beans-receipe/output23.png"/>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div id="fundraisingForm">
+            </div>
+        </article>
+    </div>
+    <div class="clearfix"></div>
+</section>
+{% endblock body-content %}
+

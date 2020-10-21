@@ -1,0 +1,327 @@
+.mz-myaccount-panels {
+    .no-cards{
+        text-align: center;
+        p{
+            margin: 22px 0px 5px;
+            font-size: 12px;
+            color: #231f20;
+        }
+        a{
+            color: #36abe2;
+            display: inline-block; 
+            font-size: 12px;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+            
+            
+        }
+    }
+    .mz-accountaddressbook {
+        .mz-accountaddressbook-list {
+            margin-top: @gutter/2;
+            list-style-image: none;
+            list-style-type: none;
+            padding: 0px 0px;
+            .mz-accountaddressbook-contact {
+                border-right: none;
+                .mz-accountaddressbook-actions {
+                    float: left;
+                    margin: 15px 0 0 0;
+                    a {
+                        padding: 0;
+                        font-size: 12px;
+                        display: inline-block; 
+                        font-size: 12px;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    .mz-accountaddressbook-edit {
+                        color: #36abe2;
+                        padding-right: 10px;
+                    }
+                    .mz-accountaddressbook-delete {
+                        color: #949494;
+                        padding-left: 10px;
+                        
+                    }
+                }
+            }
+        }
+        .mz-accountaddressbook-contactdetails {
+            float: none !important;
+            clear: none !important;
+            margin: 20px 0;
+            font-size: 12px;
+            color: #231f20;
+        }
+        .mz-accountaddressbook-empty {
+            text-align: center;
+        }
+        .mz-l-stack-subtitle {
+            font-size: 14px;
+            font-family: @Trebuchet;
+            font-weight: normal; 
+        }
+        .mz-l-stack-sectiontitle{
+            border-top: 1px solid #ccc;
+            padding: 11px 0px 11px 22px;
+            border-bottom: 1px solid #ccc;
+            font-size: 14px;
+            font-family: @Trebuchet;
+            color: #000;
+            .add-new {
+                color: #36abe2;
+                display: inline-block; 
+                font-size: 12px;
+                text-decoration: none;
+                position: relative;
+                top: -11px;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .mz-l-stack-subtitle{
+            padding: 0px 22px;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .mz-accountaddressbook-contact {
+            border-right: 1px solid #eee;
+            margin: 0 @gutter/2 @gutter/2 0px;
+            width: @addressTileWidth;
+            min-height: 190px;
+            display: inline-block;
+            vertical-align: top;
+            &:last-child {
+                border-right-width: 0;
+            }
+            
+        }
+    
+        .mz-accountaddressbook-form {
+            width: 100%;
+            float: none;
+            margin: 0;
+            padding-right: 0;
+            padding-left: 22px;
+            box-sizing: border-box;
+            .required-label {
+                color: #767676;
+                padding-left: 25px;
+                font-size: 11px;
+                padding-bottom: 15px;
+                display: inline-block;
+            }
+                .mz-contacttypes, .mz-contact-actions {
+                    margin-left: 4%;
+                    label {
+                        text-align: left;
+                        font-size: 12px;
+                        color: #212120;
+                    }
+                    .mz-contact-save, .mz-contact-cancel {
+                        background: #36ABE2;
+                        border: 0;
+                        color: #FFF;
+                        text-transform: uppercase;
+                        border-radius: 0;
+                        -moz-border-radius: 0;
+                        -webkit-border-radius: 0;
+                        padding: 11px 10px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        margin: 40px 7px 0 0;
+                        width: 22%;
+                        &:hover {
+                            background: #077bb2;
+                        }
+                    }
+                    .mz-contact-cancel {
+                        background: #7c7a7a;
+                        &:hover {
+                            background: #656565;
+                        }
+                    }
+                }
+                .mz-l-formfieldgroup-row{
+                    display: inline-block;
+                    width: 45%;
+                    vertical-align: top;
+                    margin-left: 4%;
+                    position: relative;
+                    .mz-l-formfieldgroup-cell{
+                        display: block;
+                        label{
+                            text-align: left;
+                            font-size: 12px;
+                            display: inline-block;
+                            color: #212120;
+                            margin: 5px 0;
+                        }
+                       
+                        input{
+                            width: 86%;
+                            padding: 10px;
+                            border: 1px solid #C2C2C2;
+                            height: auto;
+                        }
+                         select {
+                            width: 93%;
+                            padding: 10px;
+                            border: 1px solid #C2C2C2; 
+                            height: auto;
+                        }
+                        .mz-l-formfieldgroup-halfsize{
+                            width: 48% !important;
+                            margin: 0px;
+                            &:nth-child(2){
+                                margin-left: 7px;
+                            }
+                        }
+                        &:first-child{
+                            padding-bottom: 0px;
+                        }
+                      
+                    }
+                }
+            
+        }
+    
+        .mz-accountaddressbook-actions {
+            float: right;
+            margin: 0 @gutter/2;
+            a {
+                .permalink(#666);
+                display: inline-block;
+                padding: 0 @gutter/4;
+                border-right: 1px solid #eee;
+                &:last-child {
+                    border-right-width: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+        .mz-accountaddressbook-contactdetails {
+            float: left;
+            clear: both;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px){
+    .mz-myaccount-panels .mz-accountaddressbook .mz-accountaddressbook-form .mz-l-formfieldgroup-row .mz-l-formfieldgroup-cell select {
+        width: 90%;
+    }
+    .mz-myaccount-panels .mz-accountaddressbook .mz-accountaddressbook-form .mz-l-formfieldgroup-row{
+        margin-left: 0px;
+    }
+}
+@media only screen and (min-width: 1px) and (max-width: 767px){
+    .mz-myaccount-panels {
+        .no-cards{
+            text-align: center;
+            p{
+                margin: 22px 0px 5px;
+                font-size: 12px;
+                color: #231f20;
+            }
+            a{
+                color: #36abe2;
+                display: inline-block; 
+                font-size: 12px;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+                
+                
+            }
+        }
+        .mz-accountaddressbook {
+            .mz-accountaddressbook-list {
+                padding: 0px 0px;
+                li {
+                    ul {
+                        padding: 0;
+                    }
+                }
+                .mz-accountaddressbook-contact {
+                    .mz-accountaddressbook-actions {
+                        margin: 0;
+                        a {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+            .mz-l-stack-sectiontitle{
+                padding: 11px 0px 11px 0px;
+            }
+            .mz-l-stack-subtitle{
+                padding: 0px;
+            }
+            .mz-accountaddressbook-contact {
+                border-right: none;
+                margin: 0 @gutter/2 @gutter/2 0px;
+                display: block;
+                min-height: 183px;
+                &:last-child {
+                    border-right-width: 0;
+                }
+            }
+            .mz-accountaddressbook-form {
+                width: 100%;
+                float: none;
+                margin: 0;
+                padding-right: 0;
+                padding-left: 0px;
+                box-sizing: border-box;
+                    .mz-contacttypes, .mz-contact-actions {
+                        margin-left: 0%;
+                        .mz-contact-save, .mz-contact-cancel {
+                            margin: 15px 0px 15px 0;
+                            width: 100%;
+                        }
+                    }
+                    .mz-l-formfieldgroup-row{
+                        display: inline-block;
+                        width: 100%;
+                        vertical-align: top;
+                        margin-left: 0%;
+                        position: relative;
+                        .mz-l-formfieldgroup-cell{
+                            display: block;
+                           
+                            input{
+                                width: 100%;
+                                box-sizing: border-box;
+                                padding: 10px;
+                                border: 1px solid #C2C2C2;
+                                height: auto;
+                            }
+                             select {
+                                width: 100%;
+                                padding: 10px;
+                                border: 1px solid #C2C2C2; 
+                                height: auto;
+                            }
+                          
+                        }
+                    }
+                
+            }
+        
+        }
+    }
+} 
+
+
+
+
+
+
+

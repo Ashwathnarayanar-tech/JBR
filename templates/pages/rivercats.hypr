@@ -1,0 +1,46 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <article>
+        <h1 class="mz-pagetitle">Sacramento Rivercats</h1>
+        <figure class="vertImage cyclingImg">
+            <img src="/resources/images/sponsors/Sacramento Rivercats/rivercats_logo.jpg">
+            <br>
+            <br>
+            <img src="/resources/images/sponsors/Sacramento Rivercats/rivercats_dinger.jpg">
+        </figure>
+        <p>
+            Representing California's state capital, the River Cats are one of the most popular teams in minor league baseball, and Jelly Belly is proud to be in the dugout with them!
+        </p>
+        <p>
+            Attend the Cats home games at the gorgeous Raley Field in West Sacramento and you're guaranteed to have a good time and you may get some Jelly Belly jelly beans in the process!
+        </p>
+        <p>
+            There are almost always special Jelly Belly offers at River Cats home games, from free samples to discounts at Jelly Belly retail stores. So if you're in the area, don't miss a game!
+        </p>
+        <p>
+            For more information, including directions to Raley Field, the home of the River Cats, as well as a complete team schedule
+            <a href="http://www.rivercats.com/home" target="_blank" rel="nofollow">click here</a>. 
+        </p>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+

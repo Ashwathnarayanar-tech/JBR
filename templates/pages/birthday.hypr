@@ -1,0 +1,71 @@
+{% extends "page" %}
+
+ 
+
+{% block body-tag-classes %}mz-visit-us{% endblock body-tag-classes %}
+
+{% block body-content %}
+    
+    <h1 class="mz-pagetitle">Birthday Ideas</h1>
+    <ul class="jb-feature-brands">
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>MyJellyBelly.com</h3>
+                <figure>
+                  <a href="https://www.myjellybelly.com/">
+                    <img src="/resources/images/jb_entertainment/myjb_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Now you can give customized Jelly Belly gifts! Pick the container, personalize the message and image, then choose your favorite beans.
+                  <a class="jb-feature-brand-moreinfo" href="https://www.myjellybelly.com/">View More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Birthday Games</h3>
+                <figure>
+                  <a href="/birthday-games">
+                    <img src="/resources/images/jb_entertainment/funFacts_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Mr. Jelly Belly has some great games to spice up your child's birthday party. They're very simple and provide hours of fun! 
+                  <a class="jb-feature-brand-moreinfo" href="/birthday-games">View More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Birthday Recipes</h3>
+                <figure>
+                  <a href="/birthday-recipes">
+                    <img src="/resources/images/visit-us/stores_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Cake’s not enough? Add to the food and festivities with these colorful dishes made to please roomfuls of partygoers. 
+                  <a class="jb-feature-brand-moreinfo" href="/birthday-recipes">View More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+    </ul>
+    <figure class="vertImage">
+      <img src="/resources/images/visit-us/JB_visitUs.jpg">
+    </figure>
+    <div class="clearfix"></div>
+{% endblock body-content %}
+
+
+
+

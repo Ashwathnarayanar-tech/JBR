@@ -1,0 +1,96 @@
+{% extends "page" %}
+
+{% block body-tag-classes %}mz-subscription-main smooth-scroll{% endblock body-tag-classes %}
+{% block breadcrumbs %} {% endblock breadcrumbs %}
+{% block body-content %}
+
+  <div class="main-content">
+    <div class="mz-assortment-search-area">
+        <h2 class="main-heading red">Subscription Setup Page</h2>
+        <ul class="instructions">
+            <li><span> You'll see your Subscription products here (and only here)</span></li>
+            <li><span>When you are ready, click Create Subscription</span></li> 
+            <li><span> We'll take you through a special Checkout to confirm and start your Subscription</span></li>
+        </ul>
+        <span class="caution"><strong>Caution:</strong> Leaving this page will cause you to have to start over</span>
+     
+        <p class="sumamry"></p>
+        <div class="mz-search-area">
+            <h3 class="search-heading">Search by Product Name or Number</h3>
+            <div class="mz-assortment-search-container">
+                <div class="mz-field">
+                    <input placeholder="{{ labels.search }}" type="search" class="mz-searchbox-field" value="{{pageContext.search.query}}" autocomplete="off" name="query" id="assortment-search" />
+                    <label for="assortment-search"><img src="/resources/images/search_icon_blue.png"></label>
+                </div>
+                <div class="mz-assortment-search-result-container">
+                    <ul class="mz-assortment-search-result"></ul>
+                </div>
+            </div>
+        </div>
+      <div class="mz-assortment-accordian-area">
+        <h3 class="">Explore by Category</h3>
+        <div class="assortment-accordion-container">
+            {% for category in navigation.rootCategories  %}
+            {% if not category.isEmpty %}
+                {% if category.originalId != themeSettings.misc %}
+                <div class="accordion" data-mz-categoryid="{{ category.originalId }}"><p><span class="mz-category-name">{{ category.name }}</span><i class="plus-minus"></i></p></div>
+                <div class="panel">
+                {% with "categoryId req {0}"|string_format(category.originalId) as cid %}
+                    {% include_products "modules/assortment" with filter=cid and pageSize=100 as_parameter   %}
+                {% endwith %}
+
+                </div>
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mz-assortment-summary-container">
+      <h3>Subscription List</h3>
+      <div class="mz-assortment-summary"></div>  
+      
+    </div>
+  </div>
+
+
+<div class="mz-notify-popup" data-mz-notify style="display:none;">
+    <div class="mz-alert-container">
+      <div class="mz-alert-close">
+        <div class="fa fa-times-circle fa-lg mz-close"></div>
+      </div>
+      <div class="mz-message-container">
+        <div class="mz-message">
+          <div class="mz-field">
+            <label for="mz-instock-request-email">Enter your email to be notified when this product is back in stock.</label>
+            <input type="email" name="email" id="mz-instock-request-email" placeholder="Enter Email Address" value="">
+            <div class="mz-action-btns">
+                <button class="mz-btn-accept">Notify Me</button>
+            </div>
+            <div class="err-msg-notify"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="instructions-popup">
+    <div class="container">
+        <div class="close-popup fa fa-times-circle fa-lg"></div> 
+        <h4>Congratulations,</h4>
+        <p>You've started building a Subscription!</p>
+        <ul>
+            <li><span> You'll see your Subscription products here (and only here)</span></li>
+            <li><span> When you are ready, click Create Subscription</span></li>
+            <li><span> We'll take you through a special Checkout to confirm and start your Subscription</span>
+        </ul>
+        <span><strong>Caution:</strong> Leaving this page will cause you to have to start over</span>
+        <button class="got-it">Got It</button>
+    </div>
+</div>
+
+{% require_script "modules/assortment-search" %}
+{% require_script "pages/subscription" %}
+{% endblock body-content %}

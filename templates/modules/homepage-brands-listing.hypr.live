@@ -1,0 +1,35 @@
+
+{% for modelItem in model %}
+                <li class="brand-item">
+                <a href="/{{modelItem.slug}}/c/{{modelItem.categoryId}}">
+                    <div class="brand-details" style="background-image:url('{{modelItem.banner}}')">
+                    <p> 
+                      {{modelItem.description}}
+                    </p>
+                    <figure>
+                            <div class="brand_logo" style="background-image:url('{{modelItem.logo}}')" > </div>
+                        <figcaption>{{modelItem.name|safe}}</figcaption>
+                    </figure>
+                    </div>
+                </a>
+                </li>
+{% endfor %}
+
+
+
+<li class="brand-item">
+    <a href="https://myjellybelly.com/">
+                    <div class="brand-details" style="background-image:url('{{ siteContext.cdnPrefix }}/cms/files/myJB.jpg')">
+                    <p> 
+                  Make your own personalized party favors and corporate gifts. Ideal for weddings, baby showers, birthdays and business gifts. Your design or message is printed directly onto custom tins, boxes and jars. Get started today!
+                    </p>
+                    <figure>
+                            <div class="brand_logo" style="background-image:url('{{ siteContext.cdnPrefix }}/cms/files/my_jelly_belly.png')" > </div>
+                        <figcaption>MyJellyBelly.com&reg;</figcaption>
+                    </figure>
+                    </div>
+    </a>
+</li>
+
+
+

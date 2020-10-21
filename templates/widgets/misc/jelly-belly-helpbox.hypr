@@ -1,0 +1,8 @@
+<div class="jelly-belly-help-box">
+    <h4>
+    {{model.config.helphead}}
+    </h4>
+    <p>
+    {{model.config.desc|safe}}
+    </p>
+</div>

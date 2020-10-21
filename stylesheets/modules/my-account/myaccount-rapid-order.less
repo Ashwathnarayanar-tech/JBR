@@ -1,0 +1,303 @@
+.mz-accountrapidorder{
+    .mz-l-stack-sectiontitle{
+          border-top: 1px solid #ccc;
+          padding: 11px 0px 11px 22px;
+          border-bottom: 1px solid #ccc;
+          font-size: 14px;
+          font-family: Trebuchet MS,Verdana,sans-serif;
+          color: #000;
+          margin-bottom: 0;
+          margin: 0 0 6.25px;
+    }
+    .rapid-order-list{
+        
+        .rapid-order-item-list{
+            list-style-type: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+            li{
+                margin-bottom: 15px;
+                .rapid-order-history-head{
+                    ul{
+                          border: 1px solid #1381b5;
+                          color: #000;
+                          margin: 0;
+                          padding: 0;
+                        li{
+                              display: inline-block;
+                              color: #000;
+                              margin: 1px 20px 8px;
+                              font-size: 14px;
+                              font-family: Trebuchet MS,Verdana,sans-serif;
+                              font-weight: bold;
+                            label{
+                                cursor: pointer;
+                            }
+                            span{}
+                            a{
+                              font-size: 25px !important;
+                              position: relative;
+                              top: 4px;
+                              text-decoration: none;
+                              color: #000;
+                              font-family: Trebuchet MS,Verdana,sans-serif;
+                              font-weight: bold;
+                            }
+                        }
+                        .rapid-order-number{
+                              width: 30%;
+                        }
+                        .rapid-order-total{
+                            width: 21%;
+                        }
+                        .rapid-order-plus{
+                            width: 3%;
+                        }
+                        &:hover{
+                            background-color: #686868;
+                            border:1px solid #686868;
+                            color: #FFF;
+                            label,a, span{
+                                color: #FFF;
+                            }
+                        }
+                    }.active{
+                        background-color: #686868;
+                        border:1px solid #686868;
+                        color: #FFF;
+                        label,a,span{
+                            color: #FFF;
+                        }
+                    }
+                    .rapid-order-item-details{
+                        display: none;
+                        .add-all-to-cart{
+                              background: #36abe2;
+                              border: 0;
+                              color: #fff;
+                              text-transform: uppercase;
+                              padding: 10px 10px;
+                              font-size: 14px;
+                              font-weight: bold;
+                              margin: 10px 0px;
+                              width: 120px;
+                              cursor: pointer;
+                              display: block;
+                              &:hover{
+                                background: #0E6E9B;  
+                              }
+                        }
+                        .active{
+                                // background: #0E6E9B;  
+                                background: linear-gradient(270deg, #348bf0, #3fce0a);
+                                background-size: 400% 400%;
+                                
+                                -webkit-animation: AnimationName 5s ease infinite;
+                                -moz-animation: AnimationName 5s ease infinite;
+                                animation: AnimationName 5s ease infinite;
+                                
+                                @-webkit-keyframes AnimationName {
+                                    0%{background-position:0% 50%}
+                                    50%{background-position:100% 50%}
+                                    100%{background-position:0% 50%}
+                                }
+                                @-moz-keyframes AnimationName {
+                                    0%{background-position:0% 50%}
+                                    50%{background-position:100% 50%}
+                                    100%{background-position:0% 50%}
+                                }
+                                @keyframes AnimationName { 
+                                    0%{background-position:0% 50%}
+                                    50%{background-position:100% 50%}
+                                    100%{background-position:0% 50%}
+                                }
+                        }
+                        .product-listing{
+                            .product-listing-row {
+                                min-height: 100px;
+                                border-top: 1px solid #ccc;
+                            }
+                            .mz-itemlisting-thumb {
+                                  width: 12%;
+                                  height: auto;
+                                  float: left;
+                                  margin: 7px;
+                                  cursor: pointer;
+                            }
+                            a.mz-itemlisting-title {
+                               display: inline-block;
+                              width: 30%;
+                              padding: 0px 10px;
+                              text-decoration: none;
+                              margin-top: 15px;
+                              cursor: pointer;
+                              float: left;
+                            }
+                            p.inline {
+                                cursor: pointer;
+                                display: inline-block;
+                                margin: 20px 5%;
+                                float: left;
+                                width: 7%;
+                            }
+                            a.inline-add-to-cart {
+                                  border: none;
+                                  color: #fff;
+                                  background: #f8732e;
+                                  font-size: 12px;
+                                  font-weight: bold;
+                                  text-transform: uppercase;
+                                  text-decoration: none;
+                                  padding: 8px 10px;
+                                  position: relative;
+                                  margin: 18px 2px;
+                                  cursor: pointer;
+                                  float: left;
+                                  &:hover{
+                                       background: #f78d1d;
+                                  }
+                            }
+                            .rapid-order-quantity{
+                                display: inline-block;
+                                  float: left;
+                                  margin-top: 20px;
+                                .changer{
+                                    cursor: pointer;
+                                    text-decoration: none;
+                                      padding: 6px 10px 5px;
+                                      margin: 0;
+                                      background: #686868;
+                                      display: inline-block;
+                                      color: #FFF;
+                                      float: left;
+                                }
+                                // input[type=number]::-webkit-inner-spin-button, 
+                                //     input[type=number]::-webkit-outer-spin-button,
+                                //     input[type=number]::-moz-inner-spin-button,
+                                //     input[type=number]::-moz-outer-spin-button,
+                                //     input[type=number]::-ms-input-inner-spin-button,
+                                //     input[type=number]:-ms-input-outer-spin-button{ 
+                                //     -webkit-appearance: none !important; 
+                                //      margin: 0 !important; 
+                                // }
+                                input[type=number]::-webkit-inner-spin-button { 
+                                    -webkit-appearance: none;
+                                    cursor:pointer;
+                                    display:block;
+                                    width:8px;
+                                    color: #333;
+                                    text-align:center;
+                                    position:relative;
+                                }
+                                .quantity-field{
+                                    text-align: center;
+                                    display: inline-block;
+                                    width: 80px;
+                                    padding: 4px 7px;
+                                    float: left;
+                                }
+                            }
+                        }
+                    }
+                }
+                .mz-more-order{
+                  background: #36abe2;
+                  border: 0;
+                  color: #fff;
+                  text-transform: uppercase;
+                  border-radius: 0;
+                  -moz-border-radius: 0;
+                  -webkit-border-radius: 0;
+                  padding: 11px 10px;
+                  font-size: 14px;
+                  font-weight: bold;
+                  margin: 10px 35%;
+                  width: 28%;
+                }
+            }
+        }
+    
+    }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1016px){
+    .mz-accountrapidorder{
+        .rapid-order-list{
+            .rapid-order-item-list{
+                li{
+                    .mz-more-order{
+                        width: 100%;
+                        margin: 10px 0%;
+                    }
+                    .rapid-order-history-head{
+                        ul{
+                            position: relative;
+                            li{}
+                            .rapid-order-number{
+                                margin-top: 7px;
+                                width: 92%;
+                            }
+                            .rapid-order-total{
+                                width: 92%;
+                            }
+                            .rapid-order-plus{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                            }
+                        }
+                        .rapid-order-item-details{
+                            .add-all-to-cart{
+                                width: auto;
+                                text-align: center;
+                                margin: 5px 0px;
+                            }
+                            .product-listing{
+                                .product-listing-row {
+                                    .mz-itemlisting-thumb {
+                                        // float: none;
+                                    }
+                                    a.mz-itemlisting-title {
+                                        float: right;
+                                        width: 73%;
+                                    }
+                                    p.inline {
+                                        float: right;
+                                        width: 76.5%;
+                                        margin: 0px 0px;
+                                    }
+                                    a.inline-add-to-cart {
+                                        width: 94%;
+                                        float: none;
+                                        display: inline-block;
+                                        margin-bottom: 7px;
+                                        text-align: center;
+                                    }
+                                    .rapid-order-quantity{
+                                        display: inline-block;
+                                        float: right;
+                                        margin-top: 5px;
+                                        width: 76.5%;
+                                        .changer{
+                                        }
+                                        .quantity-field{
+                                            width: 70%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

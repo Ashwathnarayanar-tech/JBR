@@ -1,0 +1,6 @@
+
+{{ Model.config.template|safe }}
+
+
+
+

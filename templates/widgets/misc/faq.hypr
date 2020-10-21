@@ -1,0 +1,25 @@
+<div clas="faq-w" style="border-bottom: 1px solid #CCC;">
+    <div class="faq-q" >
+        <div class="imgCell" style="display: inline-block;float:left;">
+            <img    src="/resources/images/icons/facet_close.png" 
+                    style=" -webkit-transition: all .2s; /* Safari 3.1 to 6.0 */
+                            transition: all .2s;     width: 14px;
+                            -ms-transform: rotate(-90deg);  -webkit-transform: rotate(-90deg);  transform: rotate(-90deg)">
+        </div>
+        <div style="padding: 0px 0px 0px 25px;">
+            <p  
+                    style="color: #000;font-size: 14px;cursor: pointer;">
+                    {{Model.config.question}}</p>
+        </div>
+    </div>
+    <div class="faq-a" style="display:none;padding: 0px 25px 15px;">
+        {{Model.config.answer|safe}}
+    </div>
+</div>
+
+
+
+
+
+
+

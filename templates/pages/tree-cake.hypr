@@ -1,0 +1,81 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Trim The Tree Cupcakes</h1>
+    <article class="carnival-details txt-left">
+        <h2>Trim The Tree Cupcakes</h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg"> 
+                <img src="/resources/images/baking_decoration/Trim The Tree Cupcakes/ChristmasTrees.jpg">
+                <br>
+                <div style="width:340px;margin-top:15px;"><iframe width="100%" height="300" src="//www.youtube.com/embed/XhOf5WgAha0?feature=player_embedded" frameborder="0" allowfullscreen=""></iframe></div>
+            </figure>
+            <!-- AddThis Button -->
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+            <img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border: 0"></a>
+            <!-- /AddThis Button -->
+            <p>
+                Deck the cakes with loads of candy! The holiday season is even sweeter with Jelly Belly ornaments adorning a cupcake tree. A Sunkist topper makes it extra festive!    
+            </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>4 jumbo cupcakes, baked in green paper liners</li>
+                <li>4 standard cupcakes, baked in green paper liners</li>
+                <li>4 mini cupcakes, baked in green paper liners</li>
+                <li>1 can (16 oz) plus 1 cup vanilla frosting</li>
+                <li>Green food coloring</li>
+                <li>1 cup (about 8 oz) assorted green Jelly Belly jelly beans in flavors: 
+                    <a target="_blank" href="/search?query=margarita&amp;asug=">Margarita</a> | 
+                    <a target="_blank" href="/search?query=kiwi&amp;asug=">Kiwi</a> | 
+                    <a target="_blank" href="/search?query=sunkist lime&amp;asug=">Sunkist® Lime</a> | 
+                    <a target="_blank" href="/search?query=green apple&amp;asug=">Green Apple</a> | 
+                    <a target="_blank" href="/search?query=sour apple&amp;asug=">Sour Apple</a>
+                </li>
+                <li>1 cup assorted Jelly Belly jelly beans in flavors: 
+                    <a target="_blank" href="/search?query=red apple&amp;asug=">Red Apple</a> | 
+                    <a target="_blank" href="/search?query=sour orange&amp;asug=">Sour Orange</a> | 
+                    <a target="_blank" href="/search?query=berry blue&amp;asug=">Berry Blue</a> | 
+                    <a target="_blank" href="/search?query=bubble gum&amp;asug=">Bubble Gum</a> | 
+                    <a target="_blank" href="/search?query=lemon drop&amp;asug=">Lemon Drop</a>
+                </li>
+                <li>4 yellow <a target="_blank" href="/search?query=sunkist fruit gems&amp;asug=">Sunkist Fruit Gems®</a></li>
+                <li>1 cup <a target="_blank" href="/search?query=coconut&amp;asug=">Coconut</a> Jelly Belly jelly beans (for the platter)</li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>Tint the vanilla frosting dark green with the food coloring. 
+                    Spoon some of the frosting into a freezer weight zipper bag or a pastry bag fitted with a small star tip. 
+                    Snip a small (1/8 inch) corner from the zipper bag.
+                </li>
+                <li>Trim the tops of the jumbo and standard cupcakes to make flat.</li>
+                <li>Spread a thin layer of frosting on each cupcake. 
+                    Pipe the green frosting around the cupcake edges, always pulling the frosting away from the center. 
+                    Pipe a second row of frosting inside the first overlapping slightly. Leave center of cupcake open. 
+                    Cover the tops of the mini cupcakes completely. 
+                    Stack the cupcakes to make the tree shape with the jumbo cupcakes as the base, a standard cupcake in the middle and topped with a mini cupcake, pressing to secure.
+                </li>
+                <li>Press the green Jelly Belly jelly beans randomly over all of the cupcakes. 
+                    Cut the remaining colored jelly beans in half crosswise. 
+                    Press the cut sides of the Jelly Belly beans into the frosting to show as the lights, all over the cupcakes.
+                </li>
+                <li>Using a small 1 inch star cookie cutter or scissors, cut the yellow Sunkist Fruit Gems into star shapes for the tops of the trees. 
+                    Press the star candies on top of the cupcakes.
+                </li>
+                <li>Arrange the Coconut Jelly Belly jelly beans all around the base of the cupcake trees to represent snow. </li>
+            </ol>
+            <h2>MAKES 4 CUPCAKES</h2>
+            <hr>
+            
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+

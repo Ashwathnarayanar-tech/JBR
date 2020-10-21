@@ -1,0 +1,58 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Bake-Sale Pies</h1>
+    <article class="carnival-details txt-left">
+        <h2>Bake-Sale Pies</h2>
+        <hr>
+        <div class="baking-recipe">
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Bake-Sale Pies/bakesalepies_m.jpg">  
+            </figure>
+            <!-- AddThis Button -->
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+            <img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border: 0"></a>
+            <!-- /AddThis Button --><br>
+            <p>These little cupcakes are so pie-like you’ll want to cool them on your windowsill before you eat them! Bring them to any bake sale and watch them turn heads.</p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>●&nbsp;24 vanilla cupcakes baked in silver foil liners</li>
+                <li>●&nbsp;2 cans (16 ounces each) vanilla frosting</li>
+                <li>●&nbsp;Yellow food coloring</li>
+                <li>●&nbsp;1 teaspoon unsweetened cocoa powder</li>
+                <li>●&nbsp;1 cup each (about 8 oz) <a target="_blank" href="/search/?query=very cherry&amp;asug=">Very Cherry</a> and
+                    <a target="_blank" href="/search/?query=blueberry&amp;asug=">Blueberry</a> Jelly Belly jelly beans
+                </li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>Tint the vanilla frosting with 3 to 4 drops of the yellow food coloring and the cocoa powder to make a light brown for the piecrust. 
+                    Spread some of the frosting on top of a cupcake, leaving the 1/4 inch of the cupcake edge exposed. 
+                    For the filling, arrange about 25 like-colored jelly beans close together on top of the cupcake. 
+                    Repeat with the remaining cupcakes and like-colored jelly beans.
+                </li>
+                <li>Spoon the remaining light brown frosting into a ziplock bag, press out the excess air, and seal. Snip a small (1/8 inch) corner from the bag. 
+                    For the lattice rust, pipe 4 or 5 lines across the top of a cupcake, about ½ inch apart. Pipe 4 or 5 more lines, on the diagonal.
+                    Pipe a beaded edge around top of cupcake. Repeat with the remaining cupcakes and frosting.
+                </li>
+                <li>Arrange the cupcakes on a wire rack and make bake-sale tags to display the cupcakes.</li>
+            </ol>
+            <h2>MAKES 24 BAKE-SALE PIES</h2>
+            <hr>
+            <div class="additional-info">
+                <figure>
+                    <a href="/product/452">
+                    <img src="../resources/images/baking_decoration/Cupid Cakes/Hello_Cupcake_120.jpg" align="left" border="0" alt="Hello, Cupcake!" style="padding-right: 15px;"></a>
+                </figure>
+                <p>For more great cupcake recipes by Karen Tack and Allan Richardson, check out <em>Hello, Cupcake!</em>, available <a href="/p/7000597">here.</a></p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+

@@ -1,0 +1,94 @@
+    <h3 class="mz-formstep-header">
+       <span class="step-no"><label>{% if model.requiresFulfillmentInfo %}04{% else %}03 {% endif %}</label></span>
+        <label>{{ labels.reviewOrder }}</label>
+        <span class="step-completed"></span>
+    </h3>
+    <div class="mz-formstep-body">
+        {% if model.isReady %}
+        
+        {% if model.heatSensitiveSubtotal > 0 %}
+        <div style="text-align: left;">
+          <p>
+            <strong style="color: #cc0000;">IMPORTANT:</strong> 
+            You have one or more Heat-Sensitive items on your Order. 
+              During warm-weather months (March through October), this item requires special handling.  Orders with Heat-Sensitive items:
+          </p>
+          <ul>
+            <li>Require a $10 Handling Fee per cold pack needed
+            <li>Get cold packs for FREE when ordering over $500 of Heat-Sensitive items!
+            <li>Ship only on a Monday or Tuesday
+          </ul>
+          <p>
+            Please <a style="color: #00a3e0; text-decoration:none" href="/shipping_information">click here</a> for more information or <a style="color: #00a3e0; text-decoration:none" href="/contact-us">contact us</a>.
+          </p>
+        </div>
+        {% else %}
+        {% endif %}
+        
+            <p class="mz-formstep-desc">{{ labels.reviewOrderText }}</p>
+
+            {% if themeSettings.requireCheckoutAgreeToTerms %}
+            <div class="mz-l-formfieldgroup mz-l-formfieldgroup-norows">
+            <label class='inline'>
+                <input type="checkbox" name="terms-and-conditions" id="mz-terms-and-conditions" data-mz-value="agreeToTerms" {% if model.agreeToTerms %} checked="checked"{% endif %}> {{ labels.agreeToTerms }}
+            </label>
+            <span class="mz-validationmessage" data-mz-validationmessage-for="agreeToTerms"></span>
+            </div>
+            {% endif %}
+
+            {% if not user or user.isAnonymous %}
+          
+            <div class="mz-l-formfieldgroup mz-l-formfieldgroup-norows">
+                <label class='inline'>
+                    <input type="checkbox" name="create-new-account" data-mz-value="createAccount" {% if model.createAccount %} checked="checked"{% endif %} > {{ labels.createAccount }}
+                </label>
+            </div>
+                {% if model.createAccount %}
+                <div class="mz-l-formfieldgroup mz-create-account-fields">
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="new-account-email"> {{ labels.email }}<span class="is-required"> *</span> </label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="text" name="new-account-email" data-mz-value="emailAddress" value="{{ model.emailAddress|default(model.billingInfo.billingContact.email) }}">
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="new-account-password"> {{ labels.password }}<span class="is-required"> *</span> </label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="password" name="new-account-password" data-mz-value="password" value="{{ model.password }}">
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="new-account-password"> {{ labels.confirmPassword }}<span class="is-required"> *</span> </label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="password" name="new-account-confirm" data-mz-value="confirmPassword" value="{{ model.confirmPassword }}">
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row" style="display: block;">                    
+                        <span class="mz-validationmessage" data-mz-validationmessage-for="confirmPassword"></span>
+                        <span class="mz-validationmessage" data-mz-validationmessage-for="password"></span>
+                        <span class="mz-validationmessage" data-mz-validationmessage-for="emailAddress"></span>
+                    </div>
+                </div>
+                {% endif %}
+            {% endif %}
+
+            {% if not model.isSubscriptionActive %}
+            <div class="mz-formstep-next">
+              <!-- {{ model.heatSensitiveSubtotal }} -->
+              
+                <button type="button" class="brontocart-place-order mz-button mz-button-large" 
+                data-mz-action="submit">{{ labels.placeOrder }}</button>
+            </div>
+            {% else %}
+            <div class="mz-formstep-next">
+                <button type="button" class="mz-button mz-button-large" data-mz-action="subscribe">{{ labels.createSubscription }}</button> 
+            </div>
+            {% endif %}
+        {% endif %}
+    </div>

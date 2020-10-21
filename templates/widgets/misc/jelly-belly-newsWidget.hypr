@@ -1,0 +1,14 @@
+<div class=jb-txtcontent-news>
+    <h2 class="jb-txtcontent-headline" >{{model.config.Headline}}</h2>
+    <div class="jb-txtcontent-news-sub" > 
+        <div {%if model.config.imgpath %}class="jb-txtcontent-text"{%else%} class = 'jb-txtcontent-onlytext' {%endif%} > 
+                    {{model.config.displayText | safe}} 
+        </div>
+        {%if model.config.imgpath%}
+        <figure class="jb-txtcontent-img">
+            <img src={{model.config.imgpath}}/>
+        </figure>
+        {%endif%}
+        <div class="jb-clearfix" style=""></div> 
+    </div>
+</div>

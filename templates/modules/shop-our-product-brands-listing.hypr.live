@@ -1,0 +1,13 @@
+{% for modelItem in model %}
+	<li class="ourproducts-brand-item">
+        <a href="/{{modelItem.slug}}/c/{{modelItem.categoryId}}">
+                <div class="ourproducts-brand-details" 
+                    style="background-image:url('{{modelItem.logoBGI}}')">
+                <img src="{{modelItem.logo }}"></img>
+            </div>
+            <p> {{modelItem.name|safe}} </p>
+        </a>
+    </li>
+{% endfor %}
+
+

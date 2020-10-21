@@ -1,0 +1,92 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static {% endblock body-tag-classes %} 
+{% block body-content %} 
+<section>
+    <div class="vending">
+    
+    <div class="mar-left10">
+    <img alt="" src="/resources/images/explore/jelly-belly-beans/Jb_logo.png" title="Jelly Belly® jelly beans" />
+
+    <h1 class="mz-pagetitle mar-top0">Jelly Belly® jelly beans</h1> 
+   </div>
+   
+    <article>
+    <div class="headline-beans">
+       <h3>The Birth of the World's Most Famous Jelly Bean</h3>
+       </div>
+        <p class="mar-top0">
+     The idea was born in Los Angeles, just next door to Hollywood. Yes, the home of countless famous movie stars is also the birthplace of The Original Gourmet Jelly Bean<sup>®</sup>.
+    </p>
+    
+    <div class="headline-beans">
+	<h2>The Journey</h2>
+	</div>
+	
+    <p class="mar-top0">
+    Back in 1976, a Los Angeles candy distributor had an idea for a jelly bean made with natural flavorings. So he called up the candymakers at Jelly Belly (formerly known as Herman Goelitz Candy Co.) who had a reputation for making the very best candies.
+    </p>
+	
+	<p>
+Creating "true-to-life" flavors was, well, a natural evolution. The candymakers cooked up a recipe for a new kind of jelly bean -- intensely flavored throughout, with natural ingredients for flavoring whenever possible. In 1976 the first eight Jelly Belly flavors were born: Very Cherry, Lemon, Cream Soda, Tangerine, Green Apple, Root Beer, Grape and Licorice. Funny enough they are still some of the most popular flavors made.
+</p>
+<div class="headline-beans">
+<h1>
+The rise to the top, or, what a long, tasty trip it's "bean."
+</h1>
+</div>
+
+<figure>
+      <img class="right-beans" alt="" src="/resources/images/explore/jelly-belly-beans/reagan_beans.jpg">
+    </figure>
+    
+<p>
+A furor arose when people tasted Jelly Belly beans for the first time. Wow, what flavor! Soon Jelly Belly became the favorite candy of Ronald Reagan, who eventually made the beans a staple in the Oval Office and on Air Force One after he was elected president. President Reagan's passion for jelly beans inspired Blueberry flavor, which was cooked up so he could serve red, white, and blue beans at his inaugural parties. Diplomats and world leaders clamored to have Jelly Belly beans. And guess what? Jelly Belly was also the first jelly bean in outer space. Free floating, weightless Jelly Belly beans were sent on the space shuttle Challenger in 1983 as a presidential surprise for the astronauts. Coincidentally, it was the same mission that boasted another bit of history -- the first American female astronaut, Sally Ride.
+</p>
+
+<p>
+Today, Jelly Belly is the world's #1 gourmet jelly bean, the bean of choice for all those with the most discerning taste, and made in 50 amazing and tasty flavors.
+</p>
+
+<h6 class="beans-btn padd-left0">
+<a href="/jelly-belly-jelly-beans/c/6" title="SHOP JELLY BEANS" class="">SHOP JELLY BEANS</a>
+</h6>
+
+    <div id="fundraisingForm">
+     
+    </div>
+
+    </article>
+   </div>
+   <figure class="vendingImage">
+      <img alt="" src="/resources/images/explore/jelly-belly-beans/beans-right-img.jpg">  
+    </figure>
+    <div class="clearfix"></div>
+</section>
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+
+
+

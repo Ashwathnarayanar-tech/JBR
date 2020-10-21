@@ -1,0 +1,404 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static  {% endblock body-tag-classes %} 
+{% block body-content %}
+
+    <!-- orig vidiemi page -->
+
+    <link href="//snap.vidiemi.com/jb/Preference/css/styles-form.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="//snap.vidiemi.com/jb/Preference/jquery/jquery-ui.css" />
+    <script type="text/javascript" src="//snap.vidiemi.com/jb/Preference/jquery/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="//snap.vidiemi.com/jb/Preference/jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" language="javascript">
+        $(function () {
+            $("#BirthDate").datepicker({
+                showOn: "button",
+                buttonImage: "//snap.vidiemi.com/jb/Preference/images/calendar.gif",
+                buttonImageOnly: true
+            });
+
+            $("#AnniversariesDate").datepicker({
+                showOn: "button",
+                buttonImage: "//snap.vidiemi.com/jb/Preference/images/calendar.gif",
+                buttonImageOnly: true
+            });
+
+            $("#OtherBirthDate").datepicker({
+                showOn: "button",
+                buttonImage: "//snap.vidiemi.com/jb/Preference/images/calendar.gif",
+                buttonImageOnly: true
+            });
+
+            $("#OtherImportDate").datepicker({
+                showOn: "button",
+                buttonImage: "//snap.vidiemi.com/jb/Preference/images/calendar.gif",
+                buttonImageOnly: true
+            });
+
+            $("#ImportBusinessDate").datepicker({
+                showOn: "button",
+                buttonImage: "//snap.vidiemi.com/jb/Preference/images/calendar.gif",
+                buttonImageOnly: true
+            });
+
+            $("#accordion").accordion({
+                active: false,
+                collapsible: true,
+                activate: function (event, ui) {
+                    if (!$.isEmptyObject(ui.newHeader.offset())) {
+                        $('html:not(:animated), body:not(:animated)').animate({ scrollTop: ui.newHeader.offset().top }, 'slow');
+                    }
+                },
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <form name="PreferenceForm" method="post" action="https://ws.vidiemi.com/webservices/jb/preference/PostData.aspx" id="PreferenceForm">
+<div>
+
+</div>
+
+<style>
+@media all and (max-width: 768px) {
+    #form-top-img { background-image: none; }
+}
+</style>
+
+<div>
+
+</div>
+        <div id="form-container">
+            <div id="form-top">
+                <div id="form-top-img">
+
+                    <div id="form-about">
+                        <div id="ctl00" style="color:Red;display:none;">
+
+                        </div>
+                        <h3>Please tell us more about yourself.</h3>
+                        <p>All fields are optional. Any information you provide will only be used to assure that we send information on topics that interest you. 
+                        <strong>IMPORTANT:</strong> Please note that for privacy and security we will only display your email address, first name and last name the next time you visit this page. 
+                        However, any preferences you submit will be stored in our secure database so that we can send you the most relevant messages possible.</p>
+
+                        <div class="fields-con">
+                            <p>
+                                Email (you are currently subscribed at this address)<br />
+                                <input name="Email" type="text" id="Email" />
+                                <span id="rfvEmail" style="color:Red;visibility:hidden;">Required</span>
+                            </p>
+
+                            <p>
+                                First Name (or how you would like us to refer to you)<br />
+                                <input name="FirstName" type="text" id="FirstName" />
+                            </p>
+
+                            <p>
+                                Last Name<br />
+                                <input name="LastName" type="text" id="LastName" />
+                            </p>
+
+                            <div class="same-row">
+                                <p class="zipconde-con">
+                                    Zip Code<br />
+                                    <input name="Zipcode" type="text" id="Zipcode" />
+                                </p>
+
+                                <p class="gender-con">
+                                    Gender<br />
+                                    <select name="Gender" id="Gender">
+	<option value="">Select</option>
+	<option value="Male">Male</option>
+	<option value="Female">Female</option>
+</select>
+                                </p>
+                            </div>
+
+                            <p>
+                                Birthdate<br />
+                                <input name="BirthDate" type="text" id="BirthDate" class="datepicker" />
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div id="categories-con">
+                        <h3>Categories (we will send you offers specific to your selections).</h3>
+
+                        <div class="fields-con">
+
+                            <div class="products-con">
+                                <h3>Products</h3>
+                                <label>
+                                    <input id="ProductJellyBellyJellyBeans" type="checkbox" name="ProductJellyBellyJellyBeans" />
+                                    Jelly Belly&reg; Jelly Beans</label>
+                                <br />
+                                <label>
+                                    <input id="ProductSportBeansPerformanceProducts" type="checkbox" name="ProductSportBeansPerformanceProducts" />
+                                    Sport Beans&reg; & Performance Products</label>
+                                <br />
+                                <label>
+                                    <input id="ProductDisney" type="checkbox" name="ProductDisney" />
+                                    Disney&copy;</label>
+                                <br />
+                                <label>
+                                    <input id="ProductSugarFreeCandy" type="checkbox" name="ProductSugarFreeCandy" />
+                                    Sugar-Free Candy</label>
+                                <br />
+                                <label>
+                                    <input id="ProductConfectionsByJellyBelly" type="checkbox" name="ProductConfectionsByJellyBelly" />
+                                    Confections by Jelly Belly&reg;</label>
+                                <br />
+                                <label>
+                                    <input id="ProductChocolateDips" type="checkbox" name="ProductChocolateDips" />
+                                    Chocolate Dips&reg;</label>
+                                <br />
+                                <label>
+                                    <input id="ProductBeanBoozled" type="checkbox" name="ProductBeanBoozled" />
+                                    BeanBoozled&reg;</label>
+                                <br />
+                                <label>
+                                    <input id="ProductSunkistCandies" type="checkbox" name="ProductSunkistCandies" />
+                                    Sunkist&reg; Candies</label>
+                                <br />
+                                <label>
+                                    <input id="ProductBellyFlops" type="checkbox" name="ProductBellyFlops" />
+                                    Belly Flops&copy;</label>
+                                <br />
+                                <label>
+                                    <input id="ProductHarryPotterBertieBotts" type="checkbox" name="ProductHarryPotterBertieBotts" />
+                                    Harry Potter™ Candies</label>
+                                <br />
+                                <label>
+                                    <input id="ProductSanrioHelloKitty" type="checkbox" name="ProductSanrioHelloKitty" />
+                                    Sanrio Hello Kitty&reg;</label>
+                                <br />
+                                <label>
+                                    <input id="ProductColdStoneCreamery" type="checkbox" name="ProductColdStoneCreamery" />
+                                    Cold Stone Creamery&reg;</label>
+                                <br />
+                                <label>
+                                    <input id="ProductTABASCO" type="checkbox" name="ProductTABASCO" />
+                                    TABASCO&reg;</label>
+                                <br />
+                            </div>
+
+                            <div class="holidays-con">
+                                <h3>Holidays</h3>
+                                <label>
+                                    <input id="HolidaysChristmas" type="checkbox" name="HolidaysChristmas" />
+                                    Christmas</label>
+                                <br />
+                                <label>
+                                    <input id="HolidaysEaster" type="checkbox" name="HolidaysEaster" />
+                                    Easter</label>
+                                <br />
+                                <label>
+                                    <input id="HolidaysValentinesDay" type="checkbox" name="HolidaysValentinesDay" />
+                                    Valentine's Day</label>
+                                <br />
+                                <label>
+                                    <input id="HolidaysHalloween" type="checkbox" name="HolidaysHalloween" />
+                                    Halloween</label>
+                                <br />
+                                <label>
+                                    <input id="HolidaysStPatricksDay" type="checkbox" name="HolidaysStPatricksDay" />
+                                    St. Patrick's Day</label>
+                                <br />
+                                <label>
+                                    <input id="HolidaysMothersDay" type="checkbox" name="HolidaysMothersDay" />
+                                    Mother's Day</label>
+                                <br />
+                                <label>
+                                    <input id="HolidaysFathersDay" type="checkbox" name="HolidaysFathersDay" />
+                                    Father's Day</label>
+                                <br />
+                            </div>
+
+                            <div class="imp-date-con">
+                                <h3>Important Date Reminders</h3>
+                                <p>We will send you a reminder email and you may also receive special offers on these dates.</p>
+
+                                <p>
+                                    Anniversary<br />
+                                    <input name="AnniversariesDate" type="text" id="AnniversariesDate" class="datepicker" /><!-- <a href="#" class="add-another">add another</a>-->
+                                </p>
+
+                                <p>
+                                    Other Birthday<br />
+                                    <input name="OtherBirthDate" type="text" id="OtherBirthDate" class="datepicker" /><!-- <a href="#" class="add-another">add another</a>-->
+                                </p>
+
+                                <p>
+                                    Other Important Date<br />
+                                    <input name="OtherImportDate" type="text" id="OtherImportDate" class="datepicker" /><!--<a href="#" class="add-another">add another</a>-->
+                                </p>
+
+                                <p>
+                                    Important Business Date<br />
+                                    <input name="ImportBusinessDate" type="text" id="ImportBusinessDate" class="datepicker" /><!--<a href="#" class="add-another">add another</a>-->
+                                </p>
+
+                            </div>
+
+                            <p>
+                                <input type="submit" name="Apply" value="Apply" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;Apply&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="Apply" />
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <a id="emailfrequency" name="emailfrequency"></a>
+                <!-- frequency -->
+                <div id="accordion">
+                    <h2>Change your email frequency</h2>
+
+                    <div id="frequency-form-area">
+                        <span style="font-size:18px; font-weight:bold; color:#B01111">NOTE: Please be sure your email address appears in the box at the top of this page.</span>
+                        <h3>How often should we email you?</h3>
+
+                        <p>
+                            Jelly Belly makes it easy for you to opt in or out of our email newsletters. Just use the form below to set your 
+                            preferences. You may also review our <a href="//jellybelly.com/Info/aboutjellybelly/privacy_policy">privacy policy.</a>
+                        </p>
+
+                        <div class="fields-con">
+
+                            <label>
+                                <input id="emailfrequency" type="radio" name="emailfrequency" value="EmailSendEverything" checked="checked" />
+                                I love Jelly Belly, please send me everything!
+                            </label>
+                            <br />
+
+                            <label>
+                                <input id="emailfrequency" type="radio" name="emailfrequency" value="EmailOneEmailPerWeek" />
+                                One email per week.
+                            </label>
+                            <br />
+
+                            <label>
+                                <input id="emailfrequency" type="radio" name="emailfrequency" value="TwoEmailsPerMonth" />
+                                Two emails per month.
+                            </label>
+                            <br />
+
+                            <label>
+                                <input id="emailfrequency" type="radio" name="emailfrequency" value="OneEmailPerMonth" />
+                                One email per month.
+                            </label>
+                            <br /><br />
+                            <label>
+                                <input id="Unsubscribe" type="radio" name="Unsubscribe" value="Unsubscribe"/>
+                                Please UNSUBSCRIBE me from all Jelly Belly email messages.
+                            </label>
+                            <br />
+
+                            <p>
+                                <input type="submit" name="Apply2" value="Apply" id="Apply2" />
+                            </p>
+                            <br />
+
+                        </div>
+
+
+                </div>
+            </div>
+
+            <script type="text/javascript" language="javascript">
+
+            //var $accordion = $("#accordion").accordion();
+            //$accordion.accordion("option","active")
+
+            
+                var $accordion = $("#accordion").accordion();
+                $accordion.accordion("option","active")
+            
+            </script>
+
+
+            </div>
+            <!-- end top form -->
+
+            <div id="bottom-form">
+            </div>
+            <!-- end frequency form -->
+
+        </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00"));
+var Page_Validators =  new Array(document.getElementById("rfvEmail"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00 = document.all ? document.all["ctl00"] : document.getElementById("ctl00");
+ctl00.headertext = "You must enter a value in the following fields:";
+ctl00.showmessagebox = "True";
+ctl00.showsummary = "False";
+var rfvEmail = document.all ? document.all["rfvEmail"] : document.getElementById("rfvEmail");
+rfvEmail.controltovalidate = "Email";
+rfvEmail.errormessage = "Email";
+rfvEmail.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+rfvEmail.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+    <!-- end orig vidiemi page -->
+
+    <br>
+    <section  class="jb-email-unsubscribe-section">
+        <h1 class="mz-pagetitle">Jelly Belly Email Preference Center</h1>
+        <div  class="jb-email-unsubscribe-iframe">
+            {% dropzone "email-unsubscribe" scope="template" %}
+        </div>
+    </section>
+{% endblock body-content %}

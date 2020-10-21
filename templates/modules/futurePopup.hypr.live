@@ -1,0 +1,18 @@
+<div class="future-confirmation">
+	<div class="popup-content">
+		<div class="popup-body">
+			<div class="cross-icon">
+				<span tabindex="0" class="closePopup closepopup-fun">&#10006;</span>
+			</div> 
+			<div class="text-popup-content">This item will be available on <strong>{{model.firstShipDate|date("m/j/y")}}</strong>. You can add this item, but your order will not ship before <strong>{{model.firstShipDate|date("m/j/y")}}</strong>. There are no partial shipments.</div>
+			<div class="data-action">
+				<button class="cancel closepopup-fun">Cancel</button>
+				{% if model.listType === "rofForm" %}
+					<button class="savetoList-rof">Proceed</button>
+				{% else %}
+					<button class="savetoList-top">Proceed</button>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div> 

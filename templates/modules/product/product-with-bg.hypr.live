@@ -1,0 +1,97 @@
+
+    <div class="wrapper">
+    
+        <img wi-prduct-image src='loading.jpg' width="100%">
+        <div class="bttn-container">
+        	<a class="btton-link" wi-link href='#'> </a>
+        	<a class="btton-link" wi-link href='#'> </a>
+        </div>
+    
+    {% if model.items %}
+        <div class="right-wrapper">
+            {% for prod in model.items %}
+                {%if forloop.counter == 1%}
+                <div class="clear-container">
+                    <ul class='block'>
+                        <li>
+                        {% if prod.mainImage.imageUrl %}
+                            <a href="{{prod.url}}">
+                                <img alt="{{prod.content.productName|safe}}" src="{{prod.mainImage.imageUrl}}?max=105" />
+                            </a>
+                        {% else %}
+                            <a href="{{prod.url}}">
+                                <img alt="{{prod.content.productName|safe}}" src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/{{themeSettings.no_product_image}}?max=105" />
+                            </a>
+                        {% endif %}
+                        </li>
+                        <li style="height: 66px;overflow: hidden;"><a href="{{prod.url}}">{{prod.content.productName|safe}}</a></li>
+                        
+                        <li><a WI-IDENTI-FYER="{{prod.productCode}}" href="/p/{{prod.productCode}}">..loading {{prod.productCode}}..</a></li>
+                    </ul>
+                {% endif %}
+                {%if forloop.counter == 2%}
+                    <ul class='block'>
+                        <li>
+                        {% if prod.mainImage.imageUrl %}
+                            <a href="{{prod.url}}">
+                                <img alt="{{prod.content.productName|safe}}" src="{{prod.mainImage.imageUrl}}?max=105" />
+                            </a>
+                        {% else %}
+                            <a href="{{prod.url}}">
+                                <img alt="{{prod.content.productName|safe}}" src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/{{themeSettings.no_product_image}}?max=105" />
+                            </a>
+                        {% endif %}
+                        </li>
+                        <li style="height: 66px;overflow: hidden;"><a href="{{prod.url}}">{{prod.content.productName|safe}}</a></li>
+                        
+                        <li><a WI-IDENTI-FYER="{{prod.productCode}}" href="/p/{{prod.productCode}}">..loading {{prod.productCode}}..</a></li>
+                    </ul>
+                </div>
+                {% endif %}
+                {%if forloop.counter == 3%}
+                <div class="clear-container">
+                    <ul class='block'>
+                        <li>
+                        {% if prod.mainImage.imageUrl %}
+                            <a href="{{prod.url}}">
+                                <img alt="{{prod.content.productName|safe}}" src="{{prod.mainImage.imageUrl}}?max=105" />
+                            </a>
+                        {% else %}
+                            <a href="{{prod.url}}">
+                                <img alt="{{prod.content.productName|safe}}" src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/{{themeSettings.no_product_image}}?max=105" />
+                            </a>
+                        {% endif %}
+                        </li>
+                        <li style="height: 66px;overflow: hidden;"><a href="{{prod.url}}">{{prod.content.productName|safe}}</a></li>
+                        
+                        <li><a WI-IDENTI-FYER="{{prod.productCode}}" href="/p/{{prod.productCode}}">..loading {{prod.productCode}}..</a></li>
+                    </ul>
+                {% endif %}
+                {%if forloop.counter == 4%}
+                    <ul class='block'>
+                        <li>
+                        {% if prod.mainImage.imageUrl %}
+                            <a href="{{prod.url}}">
+                                <img alt="{{prod.content.productName|safe}}" src="{{prod.mainImage.imageUrl}}?max=105" />
+                            </a>
+                        {% else %}
+                            <a href="{{prod.url}}">
+                                <img alt="{{prod.content.productName|safe}}" src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/{{themeSettings.no_product_image}}?max=105" />
+                            </a>
+                        {% endif %}
+                        </li>
+                        <li style="height: 66px;overflow: hidden;"><a href="{{prod.url}}">{{prod.content.productName|safe}}</a></li>
+                        
+                        <li><a WI-IDENTI-FYER="{{prod.productCode}}" href="/p/{{prod.productCode}}">..loading {{prod.productCode}}..</a></li>
+                    </ul>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+    </div>
+    {% require_script "pages/product-with-bg" %}
+
+
+
+

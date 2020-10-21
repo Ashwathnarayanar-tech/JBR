@@ -1,0 +1,11 @@
+
+{% if Model.config.template %}
+    
+    {% include Model.config.template with  featured_brands=Model as_parameter %}
+
+{% else %}
+
+<h3> Please select one template </h3>
+{% endif %}
+
+

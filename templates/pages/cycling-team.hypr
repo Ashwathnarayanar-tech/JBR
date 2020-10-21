@@ -1,0 +1,619 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <article>
+        <h1 class="mz-pagetitle">Cycling Team</h1>
+        <figure class="vertImage cyclingImg">
+            <iframe class="mz-cms-video-player" id="youtube-player-1FGCpqDyb-g" 
+                frameborder="0" allowfullscreen="1" title="YouTube video player" 
+                width="275" height="200" src="https://www.youtube.com/embed/TsALT1lrZxc" style="opacity: 1; z-index: 10;">
+            </iframe>
+            <figcaption class="finePrint"><a href="#a">Click here</a>  for more Pro Cycling Team videos.</figcaption>
+        </figure>
+        <h3>2014 Jelly Belly Cycling Team presented by MAXXIS<img align="right" src="/resources/images/2014 JB_CyclingMAXXIS_4BlkBgrd.jpg" style="width: 120px;"></h3>
+        <p>
+            For race results and the most current team news,<br>
+            check out
+            <a class="verdana13BoldDkBlue" target="_blank" href="http://www.jellybellycycling.com">jellybellycycling.com</a>
+        </p>
+        <!-- <p>
+            To find out when and where the team will be racing<br />
+            or appearing, look at our
+            <a href="http://www.jellybelly.com/sports_sponsorships/sponsorships_event_calendar.aspx" target="_blank" class="verdana13BoldDkBlue">Event Calendar</a>
+            </p>    -->
+        <p>
+            Our riders eat their share of Jelly Belly jelly beans and give away lots of samples to the fans they
+            meet at races and on their training rides. Their favorite flavors span the range of Official Flavors
+            from Juicy Pear to Blueberry to Sizzling Cinnamon, but most agree their favorite Sport Beans flavors
+            are <a href="/search?query=berry-sport-beans"> berry </a>(non-caffeinated) and
+            <a href="/search?query=watermelon sport beans"> extreme watermelon </a> (caffeinated). The boys are
+            loving sport beans recovery crisps, the newest addition to their cache of sports nutrition products
+            from jelly belly.
+        </p>
+        <p>
+            Key riders set to return from the winning 2013 squad include Fred Rodriguez, the reigning four-time
+            U.S. National Road Cycling Champion who has signed a two year contract, and two-time Mexican National
+            Champion Luis Lemus. Joining them will be Serghei Tvetcov, whose breakout 2013 season included multiple
+            podium appearances at Cascade, Nature Valley, and Tour of Alberta. Nature Valley stage winner Sean
+            Mazich, Nic Hamilton (of the Canadian National Team) and time-trial specialist Ian Burnett return
+            as well.
+        </p>
+        <p>
+            Team director Danny Van Haute has brought on some new talent to support his veterans and round out the
+            squad: former Australian National Australian Road Race Champion (2008), Matthew Lloyd, who rode the last
+            two years for Lampre-Merida and has claimed a stage victory in Stage Six of the Giro d’Italia and won
+            the overall King of the Mountains competition, former U23 National Road Race Champion Kirk Carlsen signs
+            on after last year’s overall win at the Sea Otter Classic. Jacob Rathe, all-around talent who rode for
+            Jelly Belly as a neo-pro in 2010, returns after three years riding as a domestique for Garmin. Neo pros
+            include Andrew Sjogren, time trial specialist Devon Dunn, climber Johnathan Freter, and sprinter Steve
+            Fisher who won the 2013 Tour de Delta.
+        </p>
+        <p>
+            Led by Team Director Danny Van Haute, this talented squad, with the support of its sponsors, stands
+            poised to continue its winning ways as it prepares to contest prestigious races in the NRC Calendar
+            and several UCI races at home and abroad, including the Tour of Utah, USA Pro Challenge, inaugural Tour
+            of Alberta and Japan Cup.
+        </p>
+        <hr>
+    </article>
+    <h1>New in 2014:</h1>
+    <div class="sponsors-list">
+        <h2>Kirk Carlsen</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: May 25, 1987</li>
+                    <li>● Height: 6'</li>
+                    <li>● Weight: 150 lbs</li>
+                    <li>● Strengths: All Around</li>
+                    <li>● Favorite Jelly Belly&reg; flavor: <a href="/search?query=sour cherry">Sour Cherry</a></li>
+                    <li>● Favorite Sport Beans&reg; flavor: <a href="/search?query=fruit punch sport beans">Fruit Punch</a></li>
+                </ul>
+                <p class="listHeading">
+                    2013 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 1st Overall Sea Otter Classic Stage Race</li>
+                    <li>● 1st Stage 3 Time Trial Sea Otter Classic</li>
+                    <li>● 2nd Stage 2 Sea Otter Classic</li>
+                    <li>● 1st Overall Madera Stage Race</li>
+                    <li>● 1st Stage 1 Madera Stage Race</li>
+                    <li>● 1st Stage 2 Time Trial Madera Stage Race</li>
+                    <li>● 2nd Stage 1 Merco Cycling Classic Stage Race</li>
+                    <li>● 2nd Mt. Hamilton Classic Road Race</li>
+                    <li>● 3rd Leesville Gap Road Race</li>
+                    <li>● 4th Overall Merco Cycling Classic</li>
+                    <li>● 6th Time Trial Merco Cycling Classic</li>
+                    <li>● 6th Time Trial Redlands Bicycle Classic</li>
+                    <li>● 7th Overall Tour de Beauce</li>
+                    <li>● 8th Stage 1 Tour of the Gila</li>
+                    <li>● 8th Overall Redlands Bicycle Classic</li>
+                    <li>● 9th Stage 6 Tour de Beauce</li>
+                    <li>● 9th Overall San Dimas Stage Race</li>
+                    <li>● 13th Stage 3 Tour de Beauce</li>
+                    <li>● 14th Overall Tour of the Gila</li>
+                    <li>● 15th Stage 4 Tour de Beauce</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/KirkCarlsen.jpg">
+                <figcaption>
+                    "To give anything less than your best is to sacrifice the gift." <br>&ndash;Steve Prefontaine
+                </figcaption>
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="sponsors-list">
+        <h2>Devan Dunn</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: March 30, 1990</li>
+                    <li>● Height: 6'3''</li>
+                    <li>● Weight: 165 lbs</li>
+                    <li>● Strengths: Time Trials, Climbing</li>
+                    <li>● Favorite Jelly Belly&reg; flavor: <a href="/search?query=plum jelly beans">Plum</a></li>
+                    <li>● Favorite Jelly Belly&reg; flavor: <a href="/search?query=pomogranite cosmo">Pomegranate Cosmo</a></li>
+                </ul>
+                <p class="listHeading">
+                    2013 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 1st Torrance Criterium</li>
+                    <li>● 13th Time Trial Cascade Classic</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/DevanDunn.jpg">
+                <figcaption>
+                    "Take care of the minutes and the hours take care of themselves."
+                </figcaption>
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="sponsors-list">
+        <h2>Johnathan Freter</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: March 17, 1992</li>
+                    <li>● Height: 6'</li>
+                    <li>● Weight: 150 lbs</li>
+                    <li>● Strengths: Climbing, Criteriums</li>
+                    <li>● Favorite Jelly Belly&reg; flavor: <a href="/search?query=very cherry chocolate dips">Very Cherry Chocolate Dips&reg;</a></li>
+                    <li>● Favorite Sport Beans&reg; flavor: <a href="/search?query=lemon lime">Lemon Lime</a></li>
+                </ul>
+                <p class="listHeading">
+                    2013 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 1st Stage 3 Tour of St. Louis Criterium</li>
+                    <li>● 1st Points Race Ohio State Track Champion</li>
+                    <li>● 1st Elimination Race Ohio State Track Champion</li>
+                    <li>● 2nd Scratch Race USA Cycling Collegiate Nationals</li>
+                    <li>● 3rd Young Riders GC Nature Valley Grand Prix</li>
+                    <li>● 3rd Glencoe Grand Prix</li>
+                    <li>● 4th Young Rider GC Cascade Cycling Classic</li>
+                    <li>● 5th Individual Pursuit USA Cycling Collegiate Track Championships</li>
+                    <li>● 8th USA Cycling Collegiate National Road Race</li>
+                    <li>● 10th USA Cycling U-23 National Road Race Championships</li>
+                    <li>● 12th GC Cascade Cycling Classic</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/JohnathanFreter.jpg">
+                <figcaption>
+                    "A person who never made a mistake never tried anything new." &nbsp;&ndash; Albert Einstein
+                </figcaption>
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="sponsors-list">
+        <h2>Steve Fisher</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: June 22, 1990</li>
+                    <li>● Height: 5'6''</li>
+                    <li>● Weight: 122 lbs</li>
+                    <li>● Strengths: All Around</li>
+                    <li>● Favorite Jelly Belly&reg; flavor: <a href="/search?query=pina colada jelly beans">Pina Colada</a></li>
+                    <li>● Favorite Sport Beans&reg; flavor: <a href="/search?query=extreme watermelon sport beans">Extreme Watermelon</a></li>
+                </ul>
+                <p class="listHeading">
+                    2013 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 1st White Spot Delta Road Race</li>
+                    <li>● 1st King of the Mountains Jersey Mount Hood Cycling Classic</li>
+                    <li>● 1st GC Baker City Cycling Classic</li>
+                    <li>● 4th Bucks County Classic Road Race</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/SteveFisher.jpg">
+                <figcaption>
+                    "Work hard in silence, let success make the noise."
+                </figcaption>
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="sponsors-list">
+        <h2>Matthew Lloyd</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: May 24, 1983</li>
+                    <li>● Height: 5'7''</li>
+                    <li>● Weight: 132 lbs</li>
+                    <li>● Strengths: Climbing, Breakaways</li>
+                    <li>● Favorite Jelly Belly&reg; flavor: <a href="/search?query=watermelon jelly beans">Watermelon</a></li>
+                    <li>● Favorite Sport Beans&reg; flavor: <a href="/search?query=sport beans">All</a></li>
+                </ul>
+                <p class="listHeading">
+                    2012 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 2nd Australian National Road Championships</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/MatthewLloyd.jpg">
+                <figcaption>
+                    "Get involved."
+                </figcaption>
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="sponsors-list">
+        <h2>Jacob Rathe</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: March 13, 1991</li>
+                    <li>● Height: 6'1''</li>
+                    <li>● Weight: 165 lbs</li>
+                    <li>● Strengths:  Sprints, Breakaways</li>
+                    <li>● Favorite Jelly Belly&reg; flavor: <a href="/search?query=pomogranite cosmo">Pomegranate Cosmo</a></li>
+                    <li>● Favorite Sport Beans&reg; flavor: <a href="/search?query=lemon lime">Lemon Lime</a></li>
+                </ul>
+                <p class="listHeading">
+                    2013 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 5th Stage 7 Tour of Britain</li>
+                    <li>● 6th Stage 1 Tour of California</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/JacobRathe.jpg">
+                <figcaption>
+                    "Take what’s yours!"
+                </figcaption>
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="sponsors-list">
+        <h2>Andrew Sjogren</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: February 23, 1992</li>
+                    <li>● Height: 6'4"</li>
+                    <li>● Weight: 175 lbs</li>
+                    <li>● Strengths: Criteriums, Breakaways</li>
+                    <li>● Favorite Jelly Belly&reg; flavor: <a href="/search?query=juicy pear">Juicy Pear</a></li>
+                    <li>● Favorite Sport Beans&reg; flavor: <a href="/search?query=orange sport beans">Orange</a></li>
+                </ul>
+                <p class="listHeading">
+                    2013 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 5th Ontario Grand Prix</li>
+                    <li>● 6th Dana Point GP</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/AndrewSjogren.jpg">
+                <figcaption>
+                    "Life is like riding a bicycle, to keep balanced you must keep moving." &ndash;Albert Einstein
+                </figcaption>
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <h1>Returning Riders:</h1>
+    <article>
+        <hr>
+    </article>
+    <div class="sponsors-list">
+        <h2>Ian Burnett</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: December 9, 1986</li>
+                    <li>● Height: 6'4"</li>
+                    <li>● Weight: 180 lbs</li>
+                    <li>● Strengths: Time Trials</li>
+                    <li>
+                        ● Favorite Jelly Belly&reg; flavor:
+                        <a href="/search?query=Raspberry">Raspberry</a>
+                    </li>
+                    <li>
+                        ● Favorite Sport Beans&reg; flavor:
+                        <a href="/Shop/ProductDetail.aspx?ProductID=72594">Fruit Punch</a>
+                    </li>
+                </ul>
+                <p class="listHeading">
+                    2013 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 1st Front Range Cycling Classic Criterium</li>
+                    <li>● 2nd Prologue Tucson Bicycle Classic</li>
+                    <li>● 5th Front Range Cycling Classic Road Race</li>
+                    <li>● 11th US Pro Championships Time Trial</li>
+                    <li>● 17th GC Tour of the Gila</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/IanBurnett.jpg">
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="sponsors-list">
+        <h2>Nic Hamilton</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: December 10, 1986</li>
+                    <li>● Height: 6'</li>
+                    <li>● Weight: 160 lbs</li>
+                    <li>● Strengths: Time Trials, Climbing</li>
+                    <li>
+                        ● Favorite Jelly Belly&reg; flavor:
+                        <a href="/search?query=juicy+pear">Juicy Pear</a>
+                    </li>
+                    <li>
+                        ● Favorite Sport Beans&reg; flavor:
+                        <a href="">Extreme Watermelon</a>
+                    </li>
+                </ul>
+                <p class="listHeading">
+                    2013 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 1st King of the Mountains Jersey Valley of the Sun</li>
+                    <li>● 2nd Stage 1 Tour of Murrieta</li>
+                    <li>● 3rd Canadian National Championship Criterium</li>
+                    <li>● 3rd King of the Mountains Jersey Stage 5 Tour of Alberta</li>
+                    <li>● 5th Tour de Delta</li>
+                    <li>● 5th Prologue Tour of Elk Grove</li>
+                    <li>● 7th Joe Martin GC, NRC</li>
+                    <li>● 7th Stage 5 Tour of Alberta</li>
+                    <li>● 8th GC Tour of Elk Grove</li>
+                    <li>● 12th Stage 3 USA Pro Challenge</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/NicHamilton.jpg">
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="sponsors-list">
+        <h2>Luis Lemus</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: April 21, 1992</li>
+                    <li>● Height: 5'9"</li>
+                    <li>● Weight: 138 lbs</li>
+                    <li>● Strengths: Climber</li>
+                    <li>
+                        ● Favorite Jelly Belly&reg; flavor:
+                        <a href="/search?query=Blueberry">Blueberry</a>
+                    </li>
+                    <li>
+                        ● Favorite Sport Beans&reg; flavor:
+                        <a href="">Orange</a>
+                    </li>
+                </ul>
+                <p class="listHeading">
+                    2013 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 1st Mexican National Road Race Championship</li>
+                    <li>● King of the Mountains Jersey Japan Cup</li>
+                    <li>● 4th Mexican National Time Trial Championship</li>
+                    <li>● 4th Best Young Rider Larry H. Miller Tour of Utah</li>
+                    <li>● 7th GC Valley of the Sun</li>
+                    <li>● 8th GC San Dimas Stage Race</li>
+                    <li>● 30th GC Larry H. Miller Tour of Utah</li>
+                    <li>● 48th U23 Road World Championships</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/LuisLemus.jpg">
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="sponsors-list">
+        <h2>Sean Mazich</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: November 4, 1986</li>
+                    <li>● Height: 6'2"</li>
+                    <li>● Weight: 170 lbs</li>
+                    <li>● Strengths: Breakaways, Sprinting</li>
+                    <li>
+                        ● Favorite Jelly Belly&reg; flavor:
+                        <a href="/search?query=top+banana">Top Banana</a>
+                    </li>
+                    <li>
+                        ● Favorite Sport Beans&reg; flavor:
+                        <a href="">Berry</a>
+                    </li>
+                </ul>
+                <p class="listHeading">
+                    2013 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 1st Stage 3 Nature Valley Grand Prix</li>
+                    <li>● 2nd Stage 2 Tour of Murrieta</li>
+                    <li>● 2nd Stage 3 Tour of Murrieta</li>
+                    <li>● 2nd Overall Tour of Murrieta</li>
+                    <li>● 4th Stage 2 Tucson Bicycle Classic</li>
+                    <li>● 4th Stage 1 Tulsa Tough Blue Dome</li>
+                    <li>● 5th Stage 4 Sea Otter Classic</li>
+                    <li>● 6th Stage 2 Tulsa Tough Brady Village</li>
+                    <li>● 7th Ontario GP</li>
+                    <li>● 7th Overall Tulsa Tough</li>
+                    <li>● 7th Overall Tucson Bicycle Classic</li>
+                    <li>● 8th U.S. National Criterium Championships</li>
+                    <li>● 8th Manhattan Beach GP</li>
+                    <li>● 8th San Marcos Circuit Race</li>
+                    <li>● 8th Stage 3 Tucson Bicycle Classic</li>
+                    <li>● 8th Stage 2 Tour of Murrieta</li>
+                    <li>● 8th Overall Valley of the Sun</li>
+                    <li>● 9th Missouri Professional Cycling Series Dutchtown Classic</li>
+                    <li>● 10th Stage 2 Nature Valley Grand Prix</li>
+                    <li>● 10th Missouri Professional Cycling Series Tour De Grove</li>
+                    <li>● 13th Overall Nature Valley Grand Prix</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/SeanMazich.jpg">
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="sponsors-list">
+        <h2>Freddie Rodriguez</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: September 3, 1973</li>
+                    <li>● Height: 5'10"</li>
+                    <li>● Weight: 152 lbs</li>
+                    <li>● Strengths: Sprinting</li>
+                    <li>● Favorite Jelly Belly&reg; flavor: <a href="/search?query=Cappuccino">Cappuccino</a></li>
+                    <li>● Favorite Sport Beans&reg; flavor: <a href="">Extreme Watermelon</a></li>
+                </ul>
+                <p class="listHeading">
+                    2013 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 1st U.S. National Road Race Championships</li>
+                    <li>● 7th Overall Nature Valley Grand Prix</li>
+                    <li>● 8th Stage 6 USA Pro Challenge</li>
+                    <li>● 8th Stage 2 Tour of the Gila</li>
+                    <li>● 9th Stage 1 Tour of Utah</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/FreddieRodrigue.jpg">
+                <figcaption>
+                    "Never say never."
+                </figcaption>
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="sponsors-list">
+        <h2>Serghei Tvetcov</h2>
+        <div class="carnival-details">
+            <div class="cyclistDetails">
+                <p class="listHeading">
+                    Personal Info:
+                </p>
+                <ul class="contentList">
+                    <li>● Date of Birth: December 29, 1988</li>
+                    <li>● Height: 5'10''</li>
+                    <li>● Weight: 155 lbs</li>
+                    <li>● Strengths: Time trials, Breakaways, Climbing</li>
+                    <li>● Favorite Jelly Belly&reg; flavor: <a href="/search?query=Blueberry">Blueberry</a></li>
+                    <li>● Favorite Sport Beans&reg; flavor: <a href="/search?query=chocolate protein recovery crisps">Chocolate Protein Recovery Crisps&trade;</a></li>
+                </ul>
+                <p class="listHeading">
+                    2013 Highlights:
+                </p>
+                <ul class="contentList">
+                    <li>● 1st Time Trial Tour of Murrieta</li>
+                    <li>● 1st Stage 1 Time Trial Mutual of Enumclaw Stage Race</li>
+                    <li>● 1st Healthy Newton Covington Road Race</li>
+                    <li>● 1st Stage 1 Time Trial Nature Valley Grand Prix</li>
+                    <li>● 1st Stage 2 Time Trial Cascade Cycling Classic</li>
+                    <li>● 1st Stage 3 Cascade Cycling Classic</li>
+                    <li>● 1st GC Cascade Cycling Classic</li>
+                    <li>● 1st Time Trial Pensacola Cycling Classic</li>
+                    <li>● 2nd Stage 3 Nature Valley Grand Prix</li>
+                    <li>● 2nd GC Mutual of Enumclaw Stage Race Enumclaw</li>
+                    <li>● 2nd Overall Pensacola Cycling Classic</li>
+                    <li>● 2nd Stage 2 Tour of Alberta</li>
+                    <li>● Most Aggressive Rider Stage 2 Tour of Alberta</li>
+                    <li>● 3rd GC Tour of Murrieta</li>
+                    <li>● 3rd Prologue Cascade Cycling Classic</li>
+                    <li>● 4th Criterium Pensacola Cycling Classic</li>
+                    <li>● 4th GC Valley of the Sun</li>
+                    <li>● 5th Stage 3 Road Race Mutual of Enumclaw Stage Race Enumclaw</li>
+                    <li>● 8th GC Merco Classic</li>
+                    <li>● 9th Stage 2 Tour of the Gila</li>
+                    <li>● 9th Stage 5 Tour of the Gila</li>
+                    <li>● 9th Stage 2 Criterium Nature Valley Gran Prix</li>
+                    <li>● 9th Stage 2 Tour of Utah</li>
+                    <li>● 10th GC San Dimas Stage Race</li>
+                    <li>● 11th Criterium Stage 2 Mutual of Enumclaw Stage Race Enumclaw</li>
+                    <li>● 12th Stage 5 Time Trial USA Pro Challenge</li>
+                    <li>● 12th Stage 5 Cascade Cycling Classic</li>
+                    <li>● 13th Stage 6 USA Pro Challenge</li>
+                    <li>● 15th GC Tour of the Gila</li>
+                    <li>● 16th Stage 3 Time Trial Tour of the Gila</li>
+                    <li>● 16th GC Nature Valley Gran Prix</li>
+                    <li>● 16th Japan Cup</li>
+                    <li>● 19th GC Redlands Bicycle Classic</li>
+                    <li>● 28th Overall USA Pro Challenge</li>
+                    <li>● 34th Overall Tour of Utah</li>
+                </ul>
+            </div>
+            <figure class="cyclist-profile">
+                <img src="/resources/images/sponsors/Jelly Belly Cycling Team/SergheiTvetcov.jpg">
+            </figure>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="video-container">
+        <h1>Cycling Team Videos</h1>
+        
+        <iframe class="mz-cms-video-player" id="youtube-player-1FGCpqDyb-g" 
+            frameborder="0" allowfullscreen="1" title="YouTube video player" 
+            width="275" height="200" src="https://www.youtube.com/embed/y42p1qIeVas" style="opacity: 1; z-index: 10;">
+        </iframe>
+    </div>
+</section>
+{% endblock body-content %}
+
+
+
+
+

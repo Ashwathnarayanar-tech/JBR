@@ -1,0 +1,62 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Movie Popcorn Cupcakes</h1>
+    <article class="carnival-details txt-left">
+        <h2>Movie Popcorn Cupcakes</h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Movie Popcorn Cupcakes/buttered_popcorn.jpg">
+            </figure>
+            <!-- AddThis Button -->
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+            <img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border: 0"></a>
+            <!-- /AddThis Button -->
+            <p>
+                It's a luscious twist on a night at the movies. They've got the look and flavor of buttered popcorn with a sweet cupcake kick! 
+            </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>24 mini vanilla cupcakes, unfrosted</li>
+                <li>1 1/2 cups confectioners' sugar</li>
+                <li>1 tablespoon egg white powder</li>
+                <li>1 to 2 tablespoons water</li>
+                <li>3 cups <a target="_blank" href="/search?query=buttered popcorn&amp;asug=">Buttered Popcorn</a> Jelly Belly jelly beans</li>
+                <li>1 can (16 ounces) vanilla frosting</li>
+                <li>Yellow food coloring</li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>Combine the powdered sugar and egg white powder in a medium bowl. Add 1 tablespoon water and mix well.
+                    Add more water, 1 teaspoon at a time, until mixture is thick. 
+                    Spoon mixture into a re-sealable bag; set aside.
+                </li>
+                <li>Line 2 sheet pans with wax paper. Reserve 3/4 cup of the Jelly Belly beans in a small bowl. 
+                    Use a sharp pair of scissors and cut the remaining Jelly Belly beans in half lengthwise. 
+                    Arrange 3 half pieces of Jelly Belly beans on the wax paper lined sheet pans into a star burst having the 3 short ends come together. 
+                    Continue with these arrangements, close together, over both of the prepared sheet pans.
+                </li>
+                <li>Snip a very small corner, (1/8 inch), from the bag with the confectioners' sugar frosting and pipe a small dot of frosting in the center of the jelly bean arrangement. 
+                    Place a whole jelly bean in the center, short end down, to look like a piece of popped corn. 
+                    Continue with the remaining frosting and whole jelly beans. Let candies dry at least 1 hour.
+                </li>
+                <li>Tint the vanilla frosting with the yellow food coloring to make a pale yellow color. 
+                    Spread frosting on top of the cupcakes. Gently remove the dry popcorn jelly bean arrangements from the wax paper and place 4 to 5 pieces on top of each cupcake.
+                </li>
+                <li>Place the cupcakes in a popcorn box to look like they are spilling out of the box.</li>
+            </ol>
+            <h2>MAKES 24 CUPCAKES</h2>
+            <hr>
+            
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+

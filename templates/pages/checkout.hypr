@@ -1,0 +1,390 @@
+{% extends "page" %}
+
+{% block body-tag-classes %} mz-checkout {% endblock body-tag-classes %}
+
+{% block body-content %}
+
+{% require_script "pages/checkout" %}
+{% preload_json model "checkout" %}
+
+<p id="checkout-seasonal-notification">
+<span>Seasonal items are available as first-come, first-served and requesting a specific Ship Date does not reserve the candy. However, an earlier Ship Date will give the buyer the best opportunity for complete fulfillment. <b>Orders with Seasonal candy will be shipped complete (no partial-ships).</b>  First Ship Date is: <span id="first-shipdate"></span></span>
+{% comment %}
+<br>
+<ul>
+	<li>Jurassic World 2: 5/5/18</li>
+	<li>Lollipops: 5/1/18</li>
+</ul>
+</p>
+{% endcomment %}
+
+<div class="mz-l-container">  
+<section>
+       {% dropzone "checkout-notification-dropzone" scope="template" %}
+</section>
+    {% comment %} // add a free product popup css// add a free product popup css {% endcomment %}
+    <div class="autoaddredirect">  
+        <div class="content-body">
+            Congratulations, you qualify for a FREE Item!<br>
+            <div class="list-text">
+                1. You will be redirected to the Cart<br>
+                2. Verify your free item<br>
+                3. Continue to Checkout to complete your purchase
+            </div>
+        </div>
+    </div>  
+     <div class="checkout-header">
+        <h1 class="mz-pagetitle">
+            {{ labels.checkout }}
+            {% comment %}
+            {% if not user.isAuthenticated %} 
+            <span class="mz-pagetitle-note">
+                {{ labels.registeredCustomer }} <a data-mz-action="login" data-placement="left" href="javascript;">{{ labels.logIn }}</a>
+            </span>
+            {% endif %}
+            {% endcomment %}
+        </h1>
+        </div> 
+         <style>
+            .example {
+                margin-top: 55px;
+                height: 90px;
+                background-image: url(http://cdn-tp1.mozu.com/9046-m1/cms/files/cbdacfd9-81f0-4915-84a1-9c2dc6a3c095);
+                background-repeat: no-repeat;
+                background-size: contain;
+             
+            }
+
+            @media (min-width: 500px) {
+
+                .example {
+                    margin-top: 0px;
+                    margin-bottom: -25px;
+                    float: right;
+                    width: 468px;
+                    background-image: url(http://cdn-tp1.mozu.com/9046-m1/cms/files/32e27322-5936-4b8d-9533-e3072a20f542);
+                }
+            }
+        </style>
+        <div class="card-over">
+            <div class="cardsmain">
+                <div class="logo"><img src="/resources/images/Jelly_Belly_logo.png" alt="logo"/></div>
+                <form class="carddetails">   
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="mz-payment-credit-card-number"><span class="is-required"> *</span>{{ labels.cardNumber }}:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="number"  name="cardNumber" class="" id="mz-payment-credit-card-number"  
+                                value=""  maxlength="16">    
+                            <span class="mz-validationmessage"></span>
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="mz-payment-credit-card-name"><span class="is-required"> *</span>{{ labels.nameOnCard }}:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="text" name="credit-card-name" class="" id="mz-payment-credit-card-name"  value="">
+                            <span class="mz-validationmessage"></span>
+                        </div>
+                    </div>
+    	
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="mz-payment-expiration-month"><span class="is-required"> *</span>{{ labels.expires }}:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell ">
+                            <select class="mz-l-formfieldgroup-halfsize" id="expiration-month" name="expirationMonth">
+                                <option value="month">Month</option>
+                                <option  value="01">01 - {{ labels.january }}</option>
+                                <option  value="02">02 - {{ labels.february }}</option>
+                                <option  value="03">03 - {{ labels.march }}</option>
+                                <option  value="04">04 - {{ labels.april }}</option>
+                                <option  value="05">05 - {{ labels.may }}</option>
+                                <option  value="06">06 - {{ labels.june }}</option>
+                                <option  value="07">07 - {{ labels.july }}</option>
+                                <option  value="08">08 - {{ labels.august }}</option>
+                                <option  value="09">09 - {{ labels.september }}</option>
+                                <option  value="10">10 - {{ labels.october }}</option>
+                                <option  value="11">11 - {{ labels.november }}</option>
+                                <option  value="12">12 - {{ labels.december }}</option>
+                            </select>
+                            <select class="mz-l-formfieldgroup-halfsize" name="expirationYear">
+                                <option value="year">Year</option> 
+                                <option  value="{{now.year}}">{{now.year}}</option>
+                                <option  value="{{now.year|add(1)}}">{{now.year|add(1)}}</option>
+                                <option  value="{{now.year|add(2)}}">{{now.year|add(2)}}</option>
+                                <option  value="{{now.year|add(3)}}">{{now.year|add(3)}}</option>
+                                <option  value="{{now.year|add(4)}}">{{now.year|add(4)}}</option>
+                                <option  value="{{now.year|add(5)}}">{{now.year|add(5)}}</option>
+                                <option  value="{{now.year|add(6)}}">{{now.year|add(6)}}</option>
+                                <option  value="{{now.year|add(7)}}">{{now.year|add(7)}}</option>
+                                <option  value="{{now.year|add(8)}}">{{now.year|add(8)}}</option>
+                                <option  value="{{now.year|add(9)}}">{{now.year|add(9)}}</option>
+                                <option  value="{{now.year|add(10)}}">{{now.year|add(10)}}</option>
+                                <option  value="{{now.year|add(11)}}">{{now.year|add(11)}}</option>
+                                <option  value="{{now.year|add(12)}}">{{now.year|add(12)}}</option>   
+                            </select>
+                            <span class="mz-validationmessage"></span>
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell payment-label">
+                            <label for="mz-payment-security-code"><span class="is-required"> *</span>{{ labels.securityCode }}:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="number" name="cvv" id="security-code" class=""  value="" maxlength="4">
+                            <span class="cvv-info">
+                				<a id="toolTipStock" class= "shop-tip" href="javascript:void(0)" data-cart-details="">What is this?</a>
+                				<div class="cvv-info-details">
+                					<img src="/resources/images/cvv-info-2.png"/>
+                					<p class="card-type">Discover, Mastercard, Visa</p>
+                					<p class="card-no">3 Digit Card Verification Number</p>
+                					<img src="/resources/images/cvv-info-1.png"/>
+                					<p class="card-type">American Express</p>
+                					<p class="card-no">4 Digit Card Verification Number</p>
+                				</div>
+                			</span>
+                            <span class="mz-validationmessage"></span>
+                        </div>
+                    </div>     
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="firstName"><span class="is-required"> *</span>First Name:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="text"  name="firstName" class="" id="firstName"  
+                                value="">    
+                            <span class="mz-validationmessage"></span>
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="lastName"><span class="is-required"> *</span>Last Name:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="text"  name="lastName" class="" id="lastName"  
+                                value="">    
+                            <span class="mz-validationmessage"></span>
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="address"><span class="is-required"> *</span>Address1:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="text"  name="address1" class="" id="address"  
+                                value="">    
+                            <span class="mz-validationmessage"></span>
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="address2">Address2:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="text"  name="address2" class="" id="address2"  
+                                value="">    
+                            <span class="mz-validationmessage"></span>
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="city"><span class="is-required"> *</span>City:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="text"  name="ccity" class="" id="city"  
+                                value="">    
+                            <span class="mz-validationmessage"></span>
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row" >
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="stateprov"><span class="is-required"> *</span>{{ labels.state }}</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <select name="state" class="ccstate">
+                                <option></option>
+                                
+                                {% for state in themeSettings.usStates %}
+                                    <option value="{{ state.abbreviation }}">{{ state.name }}</option>
+                                {% endfor %}
+                            </select>
+                            <span class="mz-validationmessage"></span>
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="zip"><span class="is-required"> *</span>Zip/Postal Code:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="text"  name="zip" class="" id="zip"  
+                                value="">    
+                            <span class="mz-validationmessage" ></span>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="subcancel">
+                        <button class="submit-button" type="submit" value="Submit" id="updateCard">Submit</button>
+                        <button class="cancel-button" type="button" data-mz-action="closeModal">Cancel</button>
+                    </div>
+                </form>
+            </div>     
+        </div>
+{% comment %}
+       <div class="example"></div>
+{% endcomment %}      
+      <!-- <a class="keep-shop" href="/shopmain">Keep Shopping</a> -->
+       
+    
+{% comment %}
+Credit card modification
+{% endcomment %}
+
+<div class="credit-overlay">
+    <div class="credit-box">
+        <div class="credit-main">
+            <p class="crediterror"></p>
+            <div class="button_okay"><button class="continue">Okay</button></div>
+        </div>
+    </div>
+</div>
+     
+
+    
+
+    <form id="checkout-form" class="mz-checkoutform mz-l-2column mz-l-2column-right fades-in" method="post" onsubmit="return false;">
+<div class="restrict-pop">
+<div class="to-logout">
+<figure><img width=100px src='../../resources/images/JB_logo2.png' alt='' /></figure>
+<p class="to-logout-msg">Sorry, Cannot order at this time !!</p>
+<button class="">Logout</button>
+</div>
+</div> 
+        {% include "modules/common/message-bar" with model=model.messages %}
+
+        <div class="mz-l-column">
+    
+            <div class="mz-formstep mz-checkoutform-shippingaddress" id="step-shipping-address">
+                {% include "modules/checkout/step-shipping-address" %}
+            </div>
+    
+            <div class="mz-formstep mz-checkoutform-shippingmethod" id="step-shipping-method" {% if not model.requiresFulfillmentInfo %}style="display:none"{% endif %}>
+                {% include "modules/checkout/step-shipping-method" %}
+            </div>
+    			<div class="coupon-code-row mz-l-formfieldgroup-row " id="coupon-code-field">
+                    {% include "modules/checkout/coupon-code-field" %}
+    			</div> 
+            <div class="mz-formstep mz-checkoutform-paymentinfo" id="step-payment-info">
+                {% include "modules/checkout/step-payment-info" %}
+            </div>
+    
+            <div class="mz-formstep mz-checkoutform-review" id="step-review">
+                {% include "modules/checkout/step-review" %}
+            </div>
+    
+        </div><!-- left .column -->
+
+    </form> 
+    <div class="mz-l-column-2" id="checkout-rightcol">
+        
+        <div class="mz-formstep mz-checkoutform-ordersummary" id="order-summary">
+            {% include "modules/checkout/checkout-order-summary" %}
+            
+        </div>
+       
+        <div class="mz-l-formfieldgroup" id="shipping-datepicker" style="display: none;">
+           
+           <div class="shipdatedisplay">
+                <p><b>Your order can ship as early as: </b></p>
+                <p id="calculated-ship-date"><b></b></p>
+           </div>
+           <div>
+                <label style="font-weight: bold;
+                                    font-size: 16px;
+                                    padding-left: 9px;"  for="">Shipping Date </label>
+                <input type="text" class="shipdate"/>
+            </div> 
+                    
+                
+            {% comment %}
+            {% if themeSettings.showCheckoutCommentsField %}
+                <div>
+                    <label style="font-weight: bold;
+                                    font-size: 16px;
+                                    padding-left: 9px;"  for="">Gift Message: </label>
+                    <div class="mz-checkoutform-comments mz-l-formfieldgroup-row" id="comments-field" style="display: block;"  >
+                        
+                        {% include "modules/checkout/comments-field" %}
+                        
+                    </div>
+                </div>
+            {% endif %}
+            {% endcomment %}
+        </div>
+        {% dropzone "checkout-faq" scope="template"%}
+        
+    </div>
+    <div class="clearfix"></div>
+</div>
+    <div  id="freeshipping-notification" style="display:none; width: 75%;
+                                                            text-align: center;
+                                                            top: 28%;
+                                                            position: fixed;">
+        <div style="display: inline-block; box-shadow: 0px 0px 15px #000;
+                    background: #3b679e;
+                    background: -moz-linear-gradient(top, #3b679e 0%, #207cca 41%, #207cca 41%, #2b88d9 51%, #2b88d9 51%, #7db9e8 94%, #7db9e8 94%);
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3b679e), color-stop(41%,#207cca), color-stop(41%,#207cca), color-stop(51%,#2b88d9), color-stop(51%,#2b88d9), color-stop(94%,#7db9e8), color-stop(94%,#7db9e8));
+                    background: -webkit-linear-gradient(top, #3b679e 0%,#207cca 41%,#207cca 41%,#2b88d9 51%,#2b88d9 51%,#7db9e8 94%,#7db9e8 94%);
+                    background: -o-linear-gradient(top, #3b679e 0%,#207cca 41%,#207cca 41%,#2b88d9 51%,#2b88d9 51%,#7db9e8 94%,#7db9e8 94%);
+                    background: -ms-linear-gradient(top, #3b679e 0%,#207cca 41%,#207cca 41%,#2b88d9 51%,#2b88d9 51%,#7db9e8 94%,#7db9e8 94%);
+                    background: linear-gradient(to bottom, #3b679e 0%,#207cca 41%,#207cca 41%,#2b88d9 51%,#2b88d9 51%,#7db9e8 94%,#7db9e8 94%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8',GradientType=0 );">
+            <h2  style="padding: 14px 10px;
+                        width: 250px; color: #FFF;
+                        display: inline-block;"> Congratulations, you qualify for Free Freight! </h2>
+        </div>
+    </div>
+    
+
+<div class="payment-loader">
+    <img src="../resources/images/3.gif" alt="loader"/>
+</div>
+    
+{% endblock body-content %} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

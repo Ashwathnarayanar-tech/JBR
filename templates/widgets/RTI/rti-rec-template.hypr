@@ -1,0 +1,13 @@
+<div class="recommended-product-container {{ model.config.placeholder }}" data-mz-rti-recommended-products="{% json_attribute Model.config%}">
+	{% comment %}
+	<p class="rti-recommended-products-title {{ model.config.placeholder }} slider-title"></p>
+	{% endcomment %} 
+	<div class="rti-recommended-products {{ model.config.placeholder }} carousel-parent">
+		<div class="rti-prod-list" data-rti-recommended-products={{model.config.placeholder }} >
+		</div> 
+	</div>
+</div> 
+
+{% preload_json siteContext "sitecontext" %}
+{% require_script "widgets/rti/rti-rec-script" %}
+

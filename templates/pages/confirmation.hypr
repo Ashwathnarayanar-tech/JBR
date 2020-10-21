@@ -1,0 +1,156 @@
+{% extends "page" %}
+
+{% block body-tag-classes %} mz-confirmation {% endblock body-tag-classes %}
+
+ 
+
+{% block body-content %}
+
+{% preload_json model "order" %}
+<script>
+    function printPage(){
+     jQuery('.confirm-logout').hide();
+     window.print();
+     jQuery('.confirm-logout').show();
+    }
+</script>
+<div class="mz-l-container">
+    <div class="print-receipt"><a onclick="printPage();">Print Receipt</a></div>
+    <div class="clearfix"></div>
+    <div class="content-container">
+        <h1 class="mz-pagetitle">{{ labels.orderConfirmation }} </h1>
+    
+    	<p>{{ labels.confirmationText }}</p>
+    
+        <p>{{ labels.yourOrderNumber|string_format(model.orderNumber)|safe }}</p>
+    
+    	<h4 class="mz-checkout-paymenttitle">{{ labels.payments }} - <strong>{{ model.total|currency }}</strong></h4>
+    	
+        <div class="mz-l-stack">
+            <div class="mz-l-stack-section billing-section">
+                <h4 class="mz-l-stack-sectiontitle">{{ labels.billingInformation }}</h4>
+                {% comment %} <h4 class="mz-l-stack-sectiontitle">{{ labels.payments }}</h4>{% endcomment %}
+                {% for payment in model.payments %}
+                {% if payment.status != "Voided" and payment.status != "Declined" %}
+                        {% include "modules/checkout/checkout-payment" %}
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% if model.hasDirectShip %}
+            <div class="mz-l-stack-section shipping-section">
+                <h4 class="mz-l-stack-sectiontitle">{{ labels.shippingInformation }}</h4>
+                <dl class="mz-propertylist">
+                    <dt>{{ labels.shipTo }}</dt>
+                    <dd class="mz-addresssummary">{% include "modules/common/address-summary" with model=model.fulfillmentInfo.fulfillmentContact %}</dd>
+                    <dt>{{ labels.shippingMethod }}</dt>
+                    <dd>{{ model.fulfillmentInfo.shippingMethodName }}</dd>
+                </dl>
+            </div>
+    		<div class="clearfix"></div>
+            {% endif %}
+            {% for item in model.items %}
+            {% if item.fulfillmentMethod == "Pickup" %}
+            <div class="mz-l-stack-section">
+                <h4 class="mz-l-stack-sectiontitle">{{ labels.storePickupFor|string_format(item.product.name)|safe }}</h4>
+                <dl class="mz-propertylist">
+                    <dt>{{ labels.storeName }}</dt>
+                    <dd>{{ item.fulfillmentLocationName }}</dd>
+                </dl>
+            </div>
+            {% endif %}
+            {% endfor %}
+    
+    
+            <div class="mz-l-stack-section">
+                <h4 class="mz-l-stack-sectiontitle">{{ labels.orderSummary }} </h4>
+                {% include "modules/common/order-summary" %}
+                {% if model.shopperNotes.comments %}
+                <div class="mz-ordercomments">
+                    <h5 class="mz-ordercomments-header">{{ labels.comments }}</h5>
+                    <p>IP Address: <span id="ipad"></span></p>
+                    <p>Browser Name & Version: <span id="bname"></span></p>
+                    <p>OS Name & Version: <span id="osname"></span></p>
+                </div>
+                {% endif %}
+                {% if model.shopperNotes.giftMessage %}
+                <div class="mz-ordercomments">
+                    <h5 class="mz-ordercomments-header">{{ labels.giftMessage }}</h5>
+                    <p class="mz-ordercomments-body">{{ model.shopperNotes.giftMessage }}</p>
+                </div>
+                {% endif %}
+				<div class="confirm-logout">
+				{% if pageContext.pageType == "confirmation" %}  
+					{% if user.isAuthenticated %}
+					<div style="float: right; margin: 10px;"><a href="/logout" data-mz-action='logout'>Logout</a></div>
+					{% endif %}
+					<div style="float: right; margin: 10px;"><a href="/">Continue shopping</a></div>
+				{% endif %}
+				</div>
+            </div>
+        </div>
+    </div>
+</div><!-- #order-confirmation -->
+
+<!-- Commented Mybuys Snippets since its added using Tealium    -->
+		{% comment %} 
+<!-- MyBuys Page Parameters – Place in <body> element -->
+
+    <script type="text/javascript">
+            mybuys.setPageType("ORDER_CONFIRMATION"); 
+            mybuys.set("email","");
+            mybuys.set("amount",{{model.total}}); 
+            mybuys.set("optin","y");
+            {% for item in model.items %}
+                mybuys.addCartItemQtySubtotal("{{item.id}}","{{item.quantity}}","{{item.discountedTotal}}"); 
+            {% endfor %}
+    </script>
+      {% endcomment %}
+<!-- End MyBuys Page Parameters --> 
+<script  type="text/javascript">
+    
+    
+    document.onreadystatechange = function(){
+        
+        var state = document.readyState
+        if (state == 'complete') {    
+            var x = require.mozuData('order').shopperNotes.comments;
+            var comments = JSON.parse(x);
+            document.getElementById('ipad').innerHTML = comments.IP_Address;
+            document.getElementById('bname').innerHTML = comments.Browser_Name_Version;
+            document.getElementById('osname').innerHTML = comments.OS_Name_Version;
+            //document.getElementById('shipdate').innerHTML = comments.date;
+        } 
+    }
+    
+</script>
+ 
+<script language="javascript" type="text/javascript">
+	var bnOrderId = '{{ model.orderNumber }}';
+	var bnOrderTotal = '{{ model.total }}';
+	var bnOrderDetails = new Array();
+
+{% for item in model.items %} 
+	bnOrderDetails.push("{{ item.product.productCode }}:{{ item.quantity }}:{{ item.product.price.salePrice }}");
+{% endfor %}
+
+</script>
+
+{% endblock body-content %}   
+{% comment %}
+{% block trailing-scripts %}
+	{% parent %}
+	{% if siteContext.generalSettings.isGoogleAnalyticsEnabled and siteContext.generalSettings.isGoogleAnalyticsEcommerceEnabled %}
+	{% include "modules/analytics/google-analytics-ecommerce-tracking-code" %}
+	{% endif %}
+{% endblock trailing-scripts %}
+
+{% endcomment %}		
+		
+		
+ 
+
+
+
+
+
+

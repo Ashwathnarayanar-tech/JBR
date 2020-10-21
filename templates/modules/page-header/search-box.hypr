@@ -1,0 +1,24 @@
+
+  {% comment %}
+    <form id="unbxd_searchbox" class="mz-searchbox">
+    	
+    	<input id="search_input" placeholder="{{ labels.search }}" type="search" class="mz-searchbox-field search-box-text"  
+    	        value="{{pageContext.search.query}}" autocomplete="off" name="query" data-mz-role="searchquery"  />
+      <input type="text" value="{{themeSettings.searchSort}}" name="sortBy" style="display:none;"/>   
+    	<button id="search_button" class="mz-searchbox-button" type="submit">{{ labels.search }}</button>
+      
+            
+    	<div class="clearfix"></div>
+      <div id="did_you_mean"></div>
+        {% require_script "modules/contextify" %}
+        {% require_script "modules/search-autocomplete" %}
+          
+      </form>
+    {% endcomment %}
+    <div id="unbxd_searchbox" class="mz-searchbox">
+      <input id="unbxd_search_input" placeholder="{{ labels.search }}" class="mz-searchbox-field search-box-text"  
+    	        value=""/>
+    	<button id="unbxd_search_button" class="mz-searchbox-button" onClick="javascript:;;">Search</button>
+    </div>
+
+

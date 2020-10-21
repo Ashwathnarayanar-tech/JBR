@@ -1,0 +1,260 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static bean-boozeled-only{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <div class="vending">
+    
+    <div class="mar-left10">
+    <img alt="" src="/resources/images/explore/beanboozled/beanboozled_logo.png" title="BeanBoozled®"/> 
+
+    <h1 class="mz-pagetitle mar-top0">BeanBoozled®</h1> 
+   </div>
+   
+    <article>
+    <div class="headline-beans">
+       <h3>Are you ready to be BeanBoozled®?</h3>
+       </div>
+       
+        <p class="mar-top0">
+      Jelly Belly's wildest collection dares you to compare some of our tastiest, most popular flavors with our craziest ones. But here's the catch - you won't know which ones are which!
+    </p>
+    
+	
+    <p class="mar-top0">
+ The black Licorice bean looks exactly like the Skunk Spray bean! Sweet, luscious Caramel Corn might also be Moldy Cheese. You may think you're tasting our world-famous Buttered Popcorn bean, but what you'll be biting into could actually be Rotten Egg. The only way to find out what beans you're getting is to eat them!
+    </p>
+	
+ <p class="mar-top0">
+  The Jelly Belly BeanBoozled® collection currently contains 10 colors of beans, and 20 flavors (10 "real" ones and 10...well...different ones). You can make a fun, and somewhat hair-raising, game out of it by giving your friends beans of the same color and seeing which flavors they get. But don't be a chicken - you have to participate too. Just try not to get BeanBoozled®!
+    </p>
+
+<h6 class="beans-btn padd-left0">
+<a href="/beanboozled-trade-jelly-beans/c/1" title="SHOP BEANBOOZLED®" class="">SHOP BEANBOOZLED®</a>
+</h6>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled1.jpg" title="Lime" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Lime">Lime</a>
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled1.jpg" title="Lawn Clippings" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Lawn Clippings">Lawn Clippings</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled2.jpg" title="Berry Blue" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Berry Blue">Berry Blue</a>  
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled2.jpg" title="Toothpaste" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Toothpaste">Toothpaste</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled3.jpg" title="Peach" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Peach">Peach</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled3.jpg" title="Barf" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Barf">Barf</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled4.jpg" title="Caramel Corn" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Caramel Corn">Caramel Corn</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled4.jpg" title="Moldy Cheese" / >
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Moldy Cheese">Moldy Cheese</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled5.jpg" title="Chocolate Pudding" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Chocolate Pudding">Chocolate Pudding</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled5.jpg" title="Canned Dog Food" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Canned Dog Food">Canned Dog Food</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled6.jpg" title="Coconut" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Coconut">Coconut</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled6.jpg" title="Baby Wipes" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Baby Wipes">Baby Wipes</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled7.jpg" title="Juicy Pear" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Juicy Pear">Juicy Pear</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled7.jpg" title="Booger" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Booger">Booger</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled8.jpg" title="Tutti-Fruitti" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Tutti-Fruitti">Tutti-Fruitti</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled8.jpg" title="Stinky Socks" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Stinky Socks">Stinky Socks</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled9.jpg" title="Buttered Popcorn" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Buttered Popcorn">Buttered Popcorn</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled9.jpg" title="Rotten Egg" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Rotten Egg">Rotten Egg</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled10.jpg" title="Licorice" />
+</figure>
+<p>
+<a href="/search?query=beanboozled+jelly+belly" title="Licorice">Licorice</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/beanboozled/beanboozled10.jpg" title="Skunk Spray" />
+</figure>
+<p>
+<a href="/search?query=beanbozled+jelly+belly" title="Skunk Spray">Skunk Spray</a> 
+</p>
+</div>
+
+    <div id="fundraisingForm"> 
+     
+    </div>
+
+    </article>
+   </div>
+   <figure class="vendingImage">
+      <img alt="" src="/resources/images/explore/beanboozled/beanboozled-rht-img.png">  
+    </figure>
+    <div class="clearfix"></div>
+</section>
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

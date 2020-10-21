@@ -1,0 +1,67 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Bubble Trouble Cupcakes</h1>
+    <article class="carnival-details txt-left">
+        <h2>Bubble Trouble Cupcakes</h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Bubble Trouble Cupcakes/bubble-trouble_m.jpg">
+                <br>
+                <div style="width:340px;margin-top:15px;"><iframe width="100%" height="300" src="//www.youtube.com/embed/NDCnXOgMzTM" frameborder="0" allowfullscreen=""></iframe></div>
+            </figure>
+            <!-- AddThis Button -->
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+            <img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border: 0"></a>
+            <!-- /AddThis Button -->
+            <p>
+                These cupcakes are surprisingly simple to make for a party! Just follow the directions from Lisa Schrader, Jelly Belly Cupcake Challenge winner, to create her "Bubble Trouble" 
+                cupcake design inspired by her son's tendency to overflow the tub.
+            </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>Vanilla cupcake baked in a silver foil liner</li>
+                <li>1/2 cup vanilla frosting</li>
+                <li>Blue food coloring</li>
+                <li>1 tube black frosting for details</li>
+                <li>1/4 cup <a target="_blank" href="/search?query=coconut">Coconut</a> Jelly Belly beans</li>
+                <li>3 <a target="_blank" href="/search?query=lemon">Sunkist® Lemon</a> (or <a target="_blank" href="/search?query=pineapple">Pineapple</a> or 
+                    <a target="_blank" href="/search?query=colada">Piña Colada</a>) Jelly Belly beans
+                </li>
+                <li>1 <a target="_blank" href="/search?query=orange%20sherbet">Orange Sherbet</a> (or <a target="_blank" href="/search?query=sunkis%20orange">Sunkist® Orange</a> or 
+                    <a target="_blank" href="/search?query=sunkist%20tangerine">Sunkist® Tangerine</a> or <a target="_blank" href="/search?query=cantaloupe">Cantaloupe</a>) Jelly Belly bean
+                </li>
+                <li>4 sticks of gum, assorted colors</li>
+                <li>1 vanilla wafer cookie</li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>Reserve small amount of vanilla icing for eyes. Tint remainder blue with food coloring</li>
+                <li>Frost cupcake with blue frosting, piping and spreading small amount down side of cupcake as overflowing "bath" and onto serving dish.</li>
+                <li>Halve most Coconut Jelly Belly Beans. Leave some whole. These are your "bubbles." Place bubbles onto cupcake and down side to your liking.</li>
+                <li>Using kitchen shears, snip short ends of three sticks of gum to look like fringe on a bath towel. 
+                    Cut one in half and push into frosting at side of cupcake to look like it's hanging from bathtub. Fold other two pieces, 
+                    first in half, then in half once more, and place beside the tub.
+                </li>
+                <li>Snip long side of yellow stick of gum and use frosting to attach to back of vanilla wafer for hair. Pipe two white circles onto wafer for eyes. 
+                    Then, using black frosting, add pupils for eyes and wide open mouth. Place onto cupcake secure back with frosting to prop up.
+                </li>
+                <li>To make rubber duck, cut one Sunkist® Lemon Jelly Belly bean in half and use one half for head. Cut another Sunkist® Lemon bean in half lengthwise for wings. 
+                    Snip a small piece of Orange Sherbet Jelly Belly bean for beak. Assemble by gently pushing all pieces together in place on body of duck. Cut pieces will stick to each other. 
+                    Using black frosting, add two small dots for eyes above beak. Place next to cupcake. 
+                </li>
+            </ol>
+            <h2>MAKES 1 BUBBLE TROUBLE CUPCAKE</h2>
+            <hr>
+            
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+

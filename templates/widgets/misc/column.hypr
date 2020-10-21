@@ -1,0 +1,14 @@
+
+<div class="jb-column-main"> 
+    <h3 class="jb-column-heading mz-desktop"><a {% if model.config.headLinelink %} href={{model.config.headLinelink}} {%endif%}>{{model.config.headLine}}</a></h3>
+    <div class='jb-column-mobile' >
+        <h3 class='jb-column-heading-mobile'><span class="i"><a {% if model.config.headLinelink %} href={{model.config.headLinelink}} {%endif%}>{{model.config.headLine}}</a></span></h3>
+    </div>
+<ul class = "jb-column-mainlist"  style> 
+    {% for obj in model.config.data %}
+    <li class="jb-column-list"><a href={{obj.labellnk}} class="jb-link" >{{obj.labeltxt}}</a></li>
+    {% endfor %}
+</ul>
+
+</div>
+{% require_script "widgets/column" %} 

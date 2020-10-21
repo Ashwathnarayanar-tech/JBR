@@ -1,0 +1,441 @@
+.mz-subscription-confirmation {
+	.desktop {
+		display: block;
+	}
+	.mobile {
+		display: none;
+	}
+	.mz-loader {
+	    position: relative;
+	    width: 100%;
+	    height: 100%;
+	    top: 10em;
+	}
+	.mz-confirmation-container {
+		&.is-loading {
+			opacity: 0;
+		}
+		.mz-confirmation-header {
+			text-align: center;
+			padding: 1em 0;
+			background-color: rgba(173, 204, 230, 0.2);
+			h1,h3,h4 {
+				font-weight: normal;
+				line-height: 1;
+				span {
+					color: red;
+				}
+			}
+			h1 {
+				color: #0065a1;
+			}
+		}
+		.mz-shipping-info,.mz-payment-info {
+			margin-top: 1.8em;
+			h4 {
+
+			}
+			.mz-shippinginfo-table,.mz-payment-table {
+				width: 100%;
+			    border: 1px solid #ccc;
+			    border-collapse: separate;
+			    border-radius: 6px;
+				thead {
+					tr {
+						th {
+						    padding: 10px 20px;
+						    border-bottom: 1px solid #e1e1e1;
+						    background-color: rgba(228, 228, 228, 0.24);
+						    text-align: left;
+							&.mz-long {
+								width: 40%;
+								text-align: left;
+							} 
+							&.mz-short {
+								width: 20%;
+								text-align: center;
+							}
+						}
+					}
+				}
+				tbody {
+					tr.mz-row {
+						text-align: center;
+						td {
+							padding: 10px 20px;
+						}
+						td.mz-name {
+					    	text-align: left;
+						}
+						td.mz-price {
+							.mz-retailprice {
+								font-size: smaller;
+								text-decoration: line-through;
+								padding-right: 5px;
+							}
+						}
+						td.mz-product-total {
+							.mz-strikeout {
+								font-size: smaller;
+								text-decoration: line-through;
+								padding-right: 5px;
+							}
+						}
+					}
+				}
+				tfoot {
+					.mz-shipping-info {
+						padding: 10px 20px;
+						.mz-shipto {
+							text-align: left;
+							width: 32%;
+							float: left;
+							border-top: 1px solid #e1e1e1;
+						}
+						.mz-shipping-method {
+							text-align: center;
+							width: 30%;
+							float: left;
+							border-top: 1px solid #e1e1e1;
+						}
+						.mz-shipping-total {
+							text-align: center;
+							width: 20%;
+							float: left;
+							border-top: 1px solid #e1e1e1;
+						}
+						.mz-subtotal {
+							text-align: right;
+							width: 15%;
+							float: left;
+							border-top: 1px solid #e1e1e1;
+						}
+					}
+				}
+			}
+		}
+		.mz-payment-info {
+			.mz-payment-table {
+				padding-bottom: 0.8em;
+				thead {
+					.mz-payment-main {
+						padding: 10px 20px;
+					    border-bottom: 1px solid #e1e1e1;
+					    background-color: rgba(228, 228, 228, 0.24);
+					    span {
+					    	&.mz-payment-amount {
+					    		color: darkred;
+					    		font-size: large;
+					    		font-weight: 600;
+					    	}
+					    	&:last-child {
+					    		padding-left: 0.4em;
+					    		font-size: smaller;
+					    	}
+					    }
+					}
+				}
+				tbody {
+					.mz-billing {
+				    	float: left;
+    					width: 20%;
+					    padding: 10px 20px;
+					}
+				}
+			}
+		}
+		.mz-schedule-info {
+			margin-top: 1.8em;
+		    .mz-schedule-table {
+		    	border: 1px solid #ccc;
+			    border-collapse: separate;
+			    border-radius: 6px;
+			    padding-bottom: 0.8em;
+			    width: 100%;
+		    	tbody {
+					.mz-billing {
+				    	float: left;
+    					width: 25%;
+					    padding: 10px 20px;
+					}
+				}
+		    }
+		}
+
+		.mz-pricing-info {
+		    background-color: rgba(228, 228, 228, 0.24);
+		    margin: 1.8em 0;
+		    // text-align: center;
+		    padding: 1.6em;
+		    .mz-handling {
+		    	width: 480px;
+		    	margin: 0 auto;
+		    	tr.mz-subtotal,tr.mz-shippingtotal {
+		    		td {
+		    			font-size: 1.2em;
+	    			    text-align: right;
+    					padding-right: 0.8em;
+		    			&:last-child {
+		    				color: darkred;
+		    				text-align: right;
+		    			}
+		    		}
+		    	}
+		    	tr.mz-groundship-msg {
+		    		td {
+		    			padding: 1.6em 0;
+		    			border-bottom: 1px solid #e1e1e1;
+		    			span {
+			    			color: green;
+			    			border: 1px dashed #ccc;    
+			    			padding: 0.2em 0.8em;
+			    		}
+		    		}
+		    	}
+		    	tr.mz-total {
+		    		td {
+		    			font-size: 1.3em;
+		    			color: #0065a1;
+		    			text-align: right;
+    					padding-right: 0.8em;
+		    			&:last-child {
+		    				text-align: center;
+		    				padding-right: 0;
+		    			}
+		    		}
+		    	}
+		    }
+		}
+	}
+}
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+	.mz-subscription-confirmation {
+		.desktop {
+			display: none;
+		}
+		.mobile {
+			display: block;
+		}
+		.mz-confirmation-container {
+			font-size: 0.9em;
+			table {
+				tr.mobile {
+					display: table-row;
+				}
+			}
+			.mz-confirmation-header {
+				h1 {
+					font-size: 1.6em;
+				}
+				h3 {
+					font-size: 1.2em;
+				}
+			}
+			.mz-shipping-info {
+				padding: 5px;
+				margin-top: 0.6em;
+				h3 {
+					margin-bottom: 0.6em;
+				}
+				.mz-shippinginfo-table {
+					thead {
+						tr {
+							th {
+								padding: 10px;
+							}
+							th.mz-long {
+								padding-left: 8px !important;
+								width: 55%;
+							}
+							th.mz-short {
+								width: 10%;
+							}
+						}
+					}
+					tbody {
+						tr.mz-row {
+							td {
+								padding: 10px 2px;
+								vertical-align: middle;
+								display: table-cell;
+								&:first-child {
+									padding-left: 8px;
+								}
+							}
+							td.mz-product-total {
+								color: darkred;
+    							font-weight: bold;
+    							.mz-strikeout {
+								    color: #444;
+								    font-weight: normal;
+								}
+							}
+						}
+					}
+					tfoot {
+						tr {
+							.mz-shipping-info-subtotal {
+								padding: 0 10px;
+								border: 1px solid #ccc;
+								border-left: none;
+								border-right: none;
+								.mz-subtotal {
+									h4 {
+										&:first-child {
+											float: left;
+										}
+										&:last-child {
+											float: right;
+										}
+									}
+								}
+							}
+							.mz-shippinginfo-container {
+								padding-bottom: 12px;
+							}
+							.mz-shipto,.mz-shipping-method {
+								width: 46%;
+								float: left;
+								padding-left: 10px;
+							}
+							.mz-shipping-method {
+								text-align: right;
+							}
+						}
+					}
+				}
+			}
+			.mz-payment-info, .mz-schedule-info {
+				padding: 5px;
+				margin-top: 0.6em;
+				h3 {
+					margin-bottom: 0.6em;
+				}
+				.mz-payment-table,.mz-schedule-table {
+					thead {
+						.mz-payment-main {
+							padding-left: 10px;
+						}
+					}
+					tbody {
+						.mz-billing {
+							width: 46%;
+							padding: 0;
+							padding-left: 10px;
+							&:nth-child(even) {
+								float: right;
+							}
+							h4 {
+								margin-bottom: 0.4em;
+							}
+						}
+					}
+				}
+			}
+			.mz-pricing-info {
+				padding: 2em 10px;
+				margin-top: 2.4em;
+				.mz-handling {
+					width: 100%;
+					.mz-subtotal,.mz-shippingtotal {
+						td:first-child {
+							width: 60%;
+						}
+					}
+					tr.mz-subtotal,tr.mz-shippingtotal {
+						td:last-child {
+							font-weight: bold;
+							text-align: left;
+						}
+					}
+					.mz-groundship-msg {
+						td{
+							span {
+								display: block;
+								text-align: center;
+							}
+						}
+					}
+					.mz-total {
+						font-size: large;
+						font-weight: 600;
+						td {
+							padding-top: 10px;
+						}
+					}
+					tr.mz-total td:last-child {
+						text-align: left;
+						padding-left: 10px;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+	.mz-subscription-confirmation {
+		.mz-confirmation-container {
+			table {
+				tr.desktop {
+					display: table-row;
+					td.mz-shipping-info-subtotal {
+						.mz-shipto,.mz-shipping-method,.mz-shipping-total,.mz-subtotal {
+							width: 44.5%;
+							float: left;
+							padding-left: 20px;
+	    					padding-right: 20px;
+						}
+						// .mz-shipping-method,.mz-shipping-total,.mz-subtotal {
+						// 	width: 20%;
+						// 	float: left;
+						// }
+					}
+
+				}
+			}
+			.mz-payment-info {
+				.mz-payment-table {
+					tbody {
+						.mz-billing {
+							width: 44.5% !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.mz-subscription-confirmation {
+		.mz-confirmation-container {
+			table {
+				tr.desktop {
+					display: table-row;
+					td.mz-shipping-info-subtotal {
+						.mz-shipto,.mz-shipping-method,.mz-shipping-total,.mz-subtotal {
+							float: left;
+							width: 22.5%;
+						}
+						.mz-shipto {
+						    padding-left: 20px;
+						}
+						.mz-subtotal {
+							padding-right: 20px;
+							text-align: right;
+							margin-left: -2%;
+						}
+						.mz-shipping-method, .mz-shipping-total {
+						    padding-left: 10px;
+						    padding-right: 10px;
+						    text-align: center;
+						}
+					}
+				}
+			}
+		}
+	}
+}

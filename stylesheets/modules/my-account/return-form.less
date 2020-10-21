@@ -1,0 +1,299 @@
+.mz-returnform {
+    .mz-l-formfieldgroup-cell:first-child {
+        text-align: right;
+    }
+    .mz-l-formfieldgroup-cell:last-child {
+        text-align: left;
+    }
+
+    .mz-returnform-returntype .mz-l-formfieldgroup-cell:first-child label,
+    .mz-returnform-actions .mz-l-formfieldgroup-cell:first-child label {
+        display: none;
+    }
+
+    .mz-returnform-returntype .mz-l-formfieldgroup-cell:last-child label {
+        display: inline-block;
+        margin-right: @gutter/2;
+        min-width: inherit;
+    }
+    .mz-returnform-quantity{
+        a{
+              text-decoration: none;
+              background: #36abe2;
+              font-size: 16px !important;
+              display: inline-block !important;
+              padding: 8px 10px;
+              line-height: 21px;
+              color: #FFF !important;
+              margin-left: 0px !important;
+              font-weight: bold;
+        }
+        input{
+            width: 65% !important;
+            padding: 10px;
+            border: 1px solid #c2c2c2;
+            height: auto;
+        }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+              -webkit-appearance: none; 
+              margin: 0; 
+        }
+    }
+}
+.mz-l-stack {
+.mz-accountreturnhistory {
+    .mz-pagingcontrols {
+        display: none;
+    }
+    .mz-more-order {
+        background: #36ABE2;
+        border: 0;
+        color: #FFF;
+        text-transform: uppercase;
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        padding: 11px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 10px 38%;
+        width: 28%;
+        &:hover {
+            background: #077bb2;
+        }
+    }
+    .mz-l-stack-sectiontitle{
+        border-top: 1px solid #ccc;
+        padding: 11px 0px 11px 22px;
+        border-bottom: 1px solid #ccc;
+        font-size: 14px;
+        font-family: @Trebuchet;
+        color: #000;
+        .add-new {
+            color: #36abe2;
+            display: inline-block; 
+            font-size: 12px;
+            text-decoration: none;
+            position: relative;
+            top: -11px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .mz-orderlisting {
+            border: none;
+            min-height: 100%;
+            .item-list-heading {
+                display: none;
+            }
+            .mz-orderlisting-items {
+                margin: 20px;
+                .mz-itemlisting {
+                    .mz-itemlisting-thumb {
+                        width: auto;
+                        height: auto;
+                    }
+                    .mz-itemlisting-details {
+                        margin-left: 10px;
+                    }
+                }
+                .mz-itemlisting-rmaitem {
+                    h3 {
+                        font-size: 14px;
+                        text-transform: uppercase;
+                    }
+                    .mz-itemlisting-rmaitem-details {
+                        .mz-propertylist {
+                            dt {
+                                font-size: 14px;
+                                font-weight: bold; 
+                                margin: 5px 0;
+                            }
+                            dd {
+                                font-size: 12px;
+                                font-weight: normal;
+                                margin: 5px 0 0 10px;
+                                position: relative;
+                                top: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+            .mz-orderlisting-detail {
+                position: relative; 
+                box-sizing: border-box;
+                height: auto;
+                width: 100%;
+                padding: 0;
+                background-color: #fff;  
+                .mz-orderlisting-heading {
+                    float: left;
+                    font-size: 14px;
+                    font-family: @Trebuchet;
+                    font-weight: bold;
+                    margin: 0 20px;
+                }
+                .mz-orderlisting-date {
+                    float: right;
+                    font-size: 12px;
+                    font-family: @Trebuchet;
+                    font-weight: normal;
+                    margin: 0 20px;
+                    span {
+                        font-size: 14px;
+                        font-family: @Trebuchet;
+                        font-weight: bold;
+                    }
+                }
+                .order-list-heading {
+                    border: 1px solid #1381b5;
+                    color: #000;
+                    margin: 0;
+                    padding: 0;
+                    &.active {
+                        border: none;
+                        background: #1381b5;
+                        li {
+                            color: #fff;
+                        }
+                        a {
+                            color: #fff;
+                        }
+                    }
+                    li {
+                        display: inline-block;
+                        color: #000;
+                        margin: 0px 20px 10px;
+                        font-size: 14px;
+                        font-family: @Trebuchet;
+                        font-weight: bold;
+                        width: 24%;
+                        &.plus-minus {
+                            width: 10px;
+                            a {
+                                font-size: 25px !important;
+                                position: relative;
+                                top: 4px;
+                            }
+                        }
+                        
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                        font-size: 14px;
+                        font-family: @Trebuchet;
+                        font-weight: bold;
+                    }
+                }
+                .order-list-address-details {
+                    width: 100%;
+                    padding: 0 20px 20px;
+                    box-sizing: border-box;
+                    .mz-l-stack-sectiontitle {
+                        border-top: none;
+                        padding: 20px 20px 20px 0;
+                        text-transform: uppercase;
+                    }
+                    .order-billing-address {
+                        float: left;
+                        width: 46%;
+                        margin-right: 8%;
+                    }
+                    .order-shipping-address {
+                        float: left;
+                        width: 46%;
+                        .ship-to-content {
+                            display: inline-block;
+                            width: 47%;
+                            vertical-align: top;
+                            margin: 10px 0;
+                            span{
+                                display: block;
+                            }
+                        }
+                        .ship-to-label {
+                            display: inline-block;
+                            width: 43%;
+                            font-weight: bold;
+                            margin: 10px 0;
+                        }
+                    }
+                    .mz-checkout-paymenttitle {
+                        display: none;
+                    }
+                    .mz-propertylist {
+                        margin: 0;
+                        dt, dd {
+                            margin: 10px 0;
+                        }
+                        dt:nth-of-type(2),dd:nth-of-type(2),dt:nth-of-type(4),dd:nth-of-type(4),dt:nth-of-type(5),dd:nth-of-type(5) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .mz-orderlisting-items {
+                margin-left: 0;
+                padding: 12.5px;
+            }
+        }
+}
+}
+@media only screen and (min-width: 1px) and (max-width: 1016px) {
+.mz-l-stack {
+   
+        .mz-accountreturnhistory {
+            .mz-more-order {
+               width: 100%;
+               margin: 0;
+            }
+            .mz-orderlisting {
+                border: none;
+                min-height: 100%;
+                .mz-orderlisting-detail {
+                    
+                    .order-list-heading {
+                        position: relative;
+                        li {
+                            display: inline-block;
+                            width: 100%;
+                            margin: 10px;
+                            &.plus-minus {
+                                width: 10px;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                margin: 0 15px;
+                                    a {
+                                        top: 0px;
+                                    }
+                            }
+                            
+                        }
+                    }
+        
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+.mz-l-stack {
+   
+        .mz-accountreturnhistory {
+            .mz-l-stack-sectiontitle{
+                padding-left: 0;
+            } 
+        }
+    }
+}
+
+
+
+

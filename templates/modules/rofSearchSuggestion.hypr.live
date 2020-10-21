@@ -1,0 +1,133 @@
+{% if not model.isMobile %}
+	{% if model.items.length > 0 %}
+		<div class="searchSuggestion">
+			{% for item in model.items %}
+				<div class="suggestionItem" >
+					<span class="item-code">{{item.productCode}}</span>	
+					<span class="item-img-cointainer">
+						<img class="item-img" alt="item image of {{item.productName|safe}}" src="{% make_url 'image' item.productImages with max=150 as_parameter %}" />
+					</span>	
+					<span class="item-name">
+						<p class="name">{{item.productName|safe}}</p>
+						<p class="price-data"> 
+							{% if item.price.salePrice < item.price.price %}<span class="unit-price strice">{{item.price.price|currency}}</span><span class="salePrice">{{item.price.salePrice|currency}}</span>{% else %}<span class="unit-price">{{item.price.price|currency}}	</span>{% endif %}
+						</p>
+					</span>
+					<span class="item-coldpack">
+						{% if item.isheatsensitive %} 
+							<span class="item-coldpackState">
+								cold pack
+							</span>
+						{% endif %} 
+					</span> 
+					<span class="item-avalible-state {% if item.inventoryInfo.manageStock %}{% if item.inventoryInfo.onlineStockAvailable > 0 %}{% if item.firstShipDate and now|is_before(item.firstShipDate) %}future{% else %}green{% endif %}{% else %}red{% endif %}{% else %}green{% endif %}"> 
+						{% if item.inventoryInfo.manageStock %}
+							{% if item.inventoryInfo.onlineStockAvailable > 0 %}
+								{% if item.firstShipDate and now|is_before(item.firstShipDate) %}
+									Available on </br>
+									{{item.firstShipDate|date("M j, Y")}}
+								{% else %} 
+									In Stock
+								{% endif %}
+							{% else %}
+								Out of Stock
+							{% endif %}
+						{% else %}
+							In Stock
+						{% endif %}
+					</span>
+					<span class="item-dataAction {% if item.inventoryInfo.manageStock %}{% if item.inventoryInfo.onlineStockAvailable > 0 %}{% if item.firstShipDate and now|is_before(item.firstShipDate) %}both{% else %}single{% endif %}{% else %}single{% endif %}{% else %}single{% endif %}">
+						{% if item.inventoryInfo.manageStock %}
+							{% if item.inventoryInfo.onlineStockAvailable > 0 %}
+								{% if item.firstShipDate and now|is_before(item.firstShipDate) %}
+									<button data-index="{{forloop.index}}" data-attr-code="{{item.productCode}}" class="select-product future-select">Select</button>
+									<button data-index="{{forloop.index}}" data-attr-code="{{item.productCode}}" class="notify-me">Notify Me</button>
+								{% else %} 
+									<button data-index="{{forloop.index}}" data-attr-code="{{item.productCode}}" class="select-product instock-select">Select</button>
+								{% endif %}
+							{% else %}
+								<button data-index="{{forloop.index}}" data-attr-code="{{item.productCode}}" class="notify-me">Notify Me</button>
+							{% endif %}
+						{% else %}
+							<button data-index="{{forloop.index}}" data-attr-code="{{item.productCode}}" class="select-product instock-select">Select</button>
+						{% endif %}
+					</span>
+				</div>
+			{% endfor %}
+		</div>
+	{% else %}
+		<div class="searchSuggestion">
+			<div class="noSuggestion">Item not found.</div> 
+		</div>
+	{% endif %}	 
+{% else %}
+	{% if model.items.length > 0 %} 
+		<div class="searchSuggestion">
+			{% for item in model.items %}
+				<div class="itemCointainer">
+					<div class="suggestionItem">
+						<span class="mobile-firstSec">
+							<span class="item-code">{{item.productCode}}</span>	
+							<span class="item-img-cointainer">
+								<img class="item-img" alt="item image of {{item.productName|safe}}" src="{% make_url 'image' item.productImages with max=150 as_parameter %}" />
+							</span>	
+							<p class="price-data">
+								{% if item.price.salePrice < item.price.price %}<span class="unit-price strice">{{item.price.price|currency}}</span><span class="salePrice">{{item.price.salePrice|currency}}</span>{% else %}<span class="unit-price">{{item.price.price|currency}}	</span>{% endif %}
+							</p>
+						</span><span class="mobile-second">
+							<span class="first-in-second">
+								<span class="item-name">
+									<p class="name">{{item.productName|safe}}</p>
+								</span>
+								<span class="item-coldpack">
+									{% if item.isheatsensitive %}
+										<span class="item-coldpackState">
+											cold pack
+										</span>
+									{% endif %} 
+								</span>
+							</span>
+							<span class="second-insecond">
+								<span class="item-avalible-state {% if item.inventoryInfo.manageStock %}{% if item.inventoryInfo.onlineStockAvailable > 0 %}{% if item.firstShipDate and now|is_before(item.firstShipDate) %}future{% else %}green{% endif %}{% else %}red{% endif %}{% else %}green{% endif %}"> 
+									{% if item.inventoryInfo.manageStock %}
+										{% if item.inventoryInfo.onlineStockAvailable > 0 %}
+											{% if item.firstShipDate and now|is_before(item.firstShipDate) %}
+												Available on </br>
+												{{item.firstShipDate|date("M j, Y")}}
+											{% else %} 
+												In Stock
+											{% endif %}
+										{% else %}
+											Out of Stock
+										{% endif %}
+									{% else %}
+										In Stock
+									{% endif %}
+								</span>
+								<span class="item-dataAction {% if item.inventoryInfo.manageStock %}{% if item.inventoryInfo.onlineStockAvailable > 0 %}{% if item.firstShipDate and now|is_before(item.firstShipDate) %}both{% else %}single{% endif %}{% else %}single{% endif %}{% else %}single{% endif %}">
+									{% if item.inventoryInfo.manageStock %}
+										{% if item.inventoryInfo.onlineStockAvailable > 0 %}
+											{% if item.firstShipDate and now|is_before(item.firstShipDate) %}
+												<button data-index="{{forloop.index}}" data-attr-code="{{item.productCode}}" class="notify-me">Notify Me</button><button data-attr-code="{{item.productCode}}" class="select-product future-select">Select</button>
+											{% else %} 
+												<button data-index="{{forloop.index}}" data-attr-code="{{item.productCode}}" class="select-product instock-select">Select</button>
+											{% endif %}
+										{% else %}
+											<button data-index="{{forloop.index}}" data-attr-code="{{item.productCode}}" class="notify-me">Notify Me</button>
+										{% endif %}
+									{% else %}
+										<button data-index="{{forloop.index}}" data-attr-code="{{item.productCode}}" class="select-product instock-select">Select</button>
+									{% endif %}
+								</span>
+							</span> 
+						</span>
+					</div>
+				</div> 
+			{% endfor %}
+		</div>
+	{% else %}
+		<div class="searchSuggestion noresult">
+			<div class="noSuggestion">Item not found.</div>
+		</div>
+	{% endif %}	
+{% endif %}

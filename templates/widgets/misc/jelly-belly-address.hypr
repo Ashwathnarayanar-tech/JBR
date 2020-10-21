@@ -1,0 +1,27 @@
+
+<article>
+    <div class='jb-address-main'> 
+        <p class='jb-address-heading'>
+            <label>{{model.config.addressheading}}</label>
+        </p>
+        <ul class='jb-address-list'>
+            <li> {{model.config.addressline1}} </li>
+            {%if model.config.addressline2%}
+            <li> {{model.config.addressline2}} </li>
+            {%endif%}
+            {%if model.config.addressline3%}
+            <li> {{model.config.addressline3}} </li>
+            {%endif%}
+            {%if model.config.addressline4%}
+            <li> {{model.config.addressline4}} </li>
+            {%endif%}
+            {%if model.config.addressline5%}
+            <li> {{model.config.addressline5}} </li>
+            {%endif%}
+            {%if model.config.addressline6%}
+            <li> {{model.config.addressline6}} </li>
+            {%endif%}
+        </ul>
+    </div>
+</article>
+

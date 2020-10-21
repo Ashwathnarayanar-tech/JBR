@@ -1,0 +1,39 @@
+{% extends "page" %}
+
+{% block body-tag-classes %}mz-account-status{% endblock body-tag-classes %} 
+ {% block page-header %} {% endblock page-header %}
+{% block breadcrumbs %}{% endblock breadcrumbs %}
+ {% block jb-social-footer %} {% endblock jb-social-footer %}
+  {% block page-footer %}   {% endblock page-footer %}
+{% block body-content %}
+{% require_script "modules/resetpassword" %}  
+
+<div id="addr01" style="display:none;">
+</div>   
+<div id="acc">
+</div>  
+<div id="loading" style="display:none">
+  <img id="loading-image" src="resources/images/3.gif" alt="Loading..." />
+</div>
+
+{% endblock body-content %}   
+   
+
+ 
+    
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+

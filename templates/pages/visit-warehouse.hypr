@@ -1,0 +1,139 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+
+{% block body-tag-classes %}mz-visit-us mz-warehouse{% endblock body-tag-classes %}
+
+{% block body-content %}
+    
+    <h1 class="mz-pagetitle">Wisconsin Visitor Center: Pleasant Prairie</h1>
+    <ul class="jb-feature-brands">
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Free Warehouse Tours</h3>
+                <figure>
+                  <a href="/wisconsin-warehouse">
+                    <img src="/resources/images/visit-us/PP_tours_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Take our world famous warehouse tour and see for yourself just how all your favorite candies are made! 
+                  <a class="jb-feature-brand-moreinfo" href="/wisconsin-warehouse">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Jelly Belly Candy Store</h3>
+                <figure>
+                  <a href="/wisconsin-candy-store">
+                    <img src="/resources/images/visit-us/PP_store_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Step inside and see all of our Beanwear apparel, Beanware logo merchandise and of course, all the candy you can eat! 
+                  <a class="jb-feature-brand-moreinfo" href="/wisconsin-candy-store">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Tour/School/Youth Camps</h3>
+                <figure>
+                  <a href="/wisconsin-tour-school-youth-camps">
+                    <img src="/resources/images/visit-us/tour_school_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Coming with a tour group, field trip or summer camp? Information is available to help plan your visit. 
+                  <a class="jb-feature-brand-moreinfo" href="/wisconsin-tour-school-youth-camps">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Jelly Belly Snack Bar</h3>
+                <figure>
+                  <a href="/wisconsin-snack-bar">
+                    <img src="/resources/images/visit-us/PP_cafe_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  We've got more than just candy! The Jelly Belly Snack Bar offers a large variety of delicious food to fill you up after your warehouse tour. 
+                  <a class="jb-feature-brand-moreinfo" href="/wisconsin-snack-bar">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Events Calendar</h3>
+                <figure>
+                  <a href="/wisconsin-factory-event-calendar">
+                    <img src="/resources/images/visit-us/calendar_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Planning a trip to the Visitor Center? Check here first for info on special dates and big events that you’ll want to attend! 
+                  <a class="jb-feature-brand-moreinfo" href="/wisconsin-factory-event-calendar">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Directions</h3>
+                <figure>
+                  <a href="/wisconsin-directions">
+                    <img src="/resources/images/visit-us/PP_vc_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Need help finding the Visitor Center? Check here for information and maps. 
+                  <a class="jb-feature-brand-moreinfo" href="/wisconsin-directions">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+    </ul>
+    
+    <div class="clearfix"></div>
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+
+

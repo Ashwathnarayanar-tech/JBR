@@ -1,0 +1,103 @@
+
+{% extends "page" %}
+
+{% block title-tag-content %} Login  {% endblock title-tag-content %}
+
+{% block body-tag-classes %} mz-loginpage {% endblock body-tag-classes %}
+   
+{% block body-content %}
+    <div class="mz-l-container">
+        <!-- Login Password Form  -->
+        <div login-form-container>
+            <h1 class="mz-pagetitle">{{ labels.logIn }}</h1>
+            <div class="mz-loginform mz-loginform-page" > 
+                <h2 class="login-header">ENTER YOUR CREDENTIALS</h2>
+                <input type="hidden" name="returnUrl" value="{{model.returnUrl}}"/>
+                <div class="mz-l-formfieldgroup">
+                    <div class="mz-messagebar" message-login-bar style="display:none;">
+                        <ul class="is-showing mz-errors">
+                            <li>{{labels.loginFailedMessage | string_format(model.email) }}</li>
+                        </ul>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="email">*{{ labels.emailAddress }}:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input name="email-login" value="{{model.email|default:user.email}}" type="email"/>
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="password">*{{ labels.password }}:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell zero-cellspace">
+                            <input name="password-login"  type="password"/>
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell"></div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <a toggle-login-forget-password-form="forgetpassword" style="cursor:pointer;" class="mz-forgot">({{ labels.forgotPasswordLink }})</a>
+                            <button class="mz-button mz-button-large" action-login>{{ labels.logIn }}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-message">
+                    <div class="arrow-left"></div>
+                    <p> Welcome to the official Jelly Belly Wholesale Order Site. </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- Forget Password Form  -->
+        <div forgetpassword-form-container style="display:none;">
+            <h1 class="mz-pagetitle">{{ labels.resetPassword }}</h1>
+            <div id="jb-resetpassword" class="forgot-pwd-form">
+                <h2 class="login-header">ENTER YOUR EMAIL ADDRESS</h2>
+                <div class="mz-l-formfieldgroup">
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="email">*{{ labels.emailAddress }}:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell zero-cellspace">
+                            <input type="email" data-mz-forgotpassword-email name="reset-password-email" placeholder="{{ labels.emailAddress }}" />
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <span class="required">No problem! Enter your email address above <br>
+                            and we'll send you instructions to reset your password.</span>
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <a toggle-login-forget-password-form="login" style="cursor:pointer;" class="mz-forgot">(Back to login page)</a>
+                            <button class="mz-button" submitforgotpassword>{{ labels.submit }}</button>
+                        </div>
+                    </div>
+                </div>
+                <section forgetpassword-message class="mz-popover-message"></section>
+            </div>
+        </div>
+    </div>
+    {% require_script "modules/resetpassword"  %} 
+    <div id="receiver" style="display:none;"></div>
+    
+  {% endblock body-content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

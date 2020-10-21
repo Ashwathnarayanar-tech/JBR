@@ -1,0 +1,83 @@
+.mz-productimages {
+    margin-top: 25px;
+    .mz-productimages-main {
+        display: block;
+		cursor:pointer;
+		padding: 5px 0 40px;
+		position: relative;
+		text-align: center;
+		figcaption {
+		    font-style: italic;
+		    font-size: 13px;
+		    color: #666;
+            .mz-productimages-mainimage{
+                width: 82%;
+            }
+		}
+
+    }
+    .mz-productimages-mainimage{
+        width: 250px;
+    }
+    .mz-zoom-icon {
+        position: absolute;
+        right: 0px;
+        bottom: 13%;
+        z-index: 1;
+    }
+    .mz-productimages-thumbs {
+        
+        display: block;
+         .owl-stage {
+            margin: 0 10px;
+        }
+        .owl-stage-outer { 
+    width: 70%;
+    margin-right: 0;  
+    margin: 0 auto;  
+        }
+         .owl-nav{
+        width: 100%;
+        .owl-prev{
+               float: left;
+    height: 42px;
+    width: 16px;
+    position: absolute;
+    top: 26%;
+    left: 0px;
+    background-image: url('../resources/images/Small_arrow_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+            
+        }
+        .owl-next{
+            float: right;
+            height: 42px;
+              width: 16px;
+            position: absolute;
+           top: 25%;
+        
+            background-image: url('../resources/images/Small_arrow_1.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+             }
+    }
+    .mz-productimages-thumb {
+        display: inline-block;
+        margin: @gutter/2 @gutter/2 0 0;
+        border: 1px solid #999;
+        width: 50px;
+        height: 50px;
+        vertical-align: top;
+        &:hover {
+            border-color: #ccc;
+        }
+        img{
+            height: 100%;
+            width: 100%; 
+        }
+    }
+}
+

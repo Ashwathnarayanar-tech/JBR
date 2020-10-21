@@ -1,0 +1,117 @@
+<div class="mz-itemlisting {% block module-classes %}{% endblock module-classes %}" data-attr-code="{{model.product.productCode}}">
+  {% block item-listing-prefix %}
+  {% endblock item-listing-prefix %}
+  {% block item-listing-image %}
+  {% if model.product.imageUrl %}
+  <div class="mz-itemlisting-thumb">
+    <img class="mz-itemlisting-thumb-img" src="{{ model.product.imageUrl }}?max=80" /> 
+  </div>
+  {% endif %}
+  {% endblock item-listing-image %}
+  {% block item-listing-details %}
+  <div class="mz-itemlisting-details">
+    {% block item-name %} 
+    <a class="mz-itemlisting-title" href="{{ model.product.url }}">
+      {{ model.product.name|safe }}</a>
+    <p class="mz-item-shipdate">
+    {% if item.isFutureProduct %}
+        Available: <span><strong>{{item.nextAvailableDate}}</strong></span>
+        {% else %}
+            {% if item.availableInventory > 0 %}
+            Available: <span><strong>NOW</strong></span>
+                {% else %}
+                Available: <span><strong>SOON</strong></span>
+            {% endif %}
+    {% endif %}
+    </p>
+    {% endblock item-name %}
+    {% comment %}
+    {% block item-details %}
+    <div class="mz-itemlisting-description">
+      {% for option in model.product.options %}{{ option.name }}: {{ option.value }}, {% endfor %}{{ model.product.variationProductCode|default(model.product.productCode) }}{% if model.product.measurements.packageWeight.value %}, {{ model.product.measurements.packageWeight.value }}{{model.measurements.packageWeight.unit }}{% endif %}
+    </div>
+    
+    {% endblock item-details %}
+    {% endcomment %} 
+  </div>
+ 
+ {% block quick-order-quantity %}
+        <div class="quick-order-quantity">
+          {% if model.product.price.price > 0 %}
+                <a data-mz-action="decreaseQuickOrderQuantity" class="changer" quickOrderProductCodeQuantityChanger="{{model.product.productCode}}">-</a>
+                <input class="quantity-field" type="number"  OrderProductId="{{model.product.productCode}}" value="{{model.quantity}}" min="1" max="50" readonly class="quick-order-quantityfield" quickOrderQuantity="{{model.quantity}}">
+                <a data-mz-action="increaseQuickOrderQuantity" class="changer" quickOrderProductCodeQuantityChanger="{{model.product.productCode}}">+</a> 
+          {% else %}
+            <a data-mz-action="decreaseQuickOrderQuantity" class="changer" quickOrderProductCodeQuantityChanger="{{model.product.productCode}}">-</a>
+                <input class="quantity-field" type="number"  OrderProductId="{{model.product.productCode}}" value="1" min="1" max="1" readonly class="quick-order-quantityfield" quickOrderQuantity="1">
+                <a data-mz-action="increaseQuickOrderQuantity" class="changer" quickOrderProductCodeQuantityChanger="{{model.product.productCode}}">+</a> 
+          {% endif %} 
+          {% comment %}
+            {% if model.product.price.price > 0 %}
+                <select class="quantity-field" id="quantity" name="quantity"  data-mz-value="quantity" 
+                quickOrderQuantity quickOrderProductCode="{{model.product.productCode}}" locationCode="{{model.fulfillmentLocationCode}}"
+                quickOrderProductId="{{model.product.productCode}}" value="{{model.quantity}}" 
+                min="1" class="quick-order-quantityfield" quickOrderQuantity="{{model.quantity}}" >
+                   
+                       {% for qty in [1,2,3,4] %}
+                            <option {% if model.quantity == qty %}selected="selected"{% endif %} value="{{ qty }}">{{ qty }}</option>
+                        {% endfor %}
+                   
+                
+                <option {% if model.quantity == 1 %}selected="selected"{% endif %} value="1">1</option>
+                <option  {% if model.quantity == 2 %}selected="selected"{% endif %} value="2">2</option>
+                <option {% if model.quantity == 3 %}selected="selected"{% endif %} value="3">3</option>
+                <option {% if model.quantity == 4 %}selected="selected"{% endif %} value="4">4</option>
+                <option {% if model.quantity == 5 %}selected="selected"{% endif %} value="5">5</option>
+                <option {% if model.quantity == 6 %}selected="selected"{% endif %} value="6">6</option>       
+                <option {% if model.quantity == 7 %}selected="selected"{% endif %} value="7">7</option> 
+                <option {% if model.quantity == 8 %}selected="selected"{% endif %} value="8">8</option>
+                <option {% if model.quantity == 9 %}selected="selected"{% endif %} value="9">9</option>
+                <option {% if model.quantity == 10 %}selected="selected"{% endif %} value="10">10</option>
+                <option {% if model.quantity == 11 %}selected="selected"{% endif %} value="11">11</option>
+                <option {% if model.quantity == 12 %}selected="selected"{% endif %} value="12">12</option>
+                <option {% if model.quantity == 13 %}selected="selected"{% endif %} value="13">13</option>
+                <option {% if model.quantity == 14 %}selected="selected"{% endif %} value="14">14</option>
+                <option {% if model.quantity == 15 %}selected="selected"{% endif %} value="15">15</option>
+                <option {% if model.quantity == 16 %}selected="selected"{% endif %} value="16">16</option>
+                <option {% if model.quantity == 17 %}selected="selected"{% endif %} value="17">17</option>
+                <option {% if model.quantity == 18 %}selected="selected"{% endif %} value="18">18</option>
+                <option {% if model.quantity == 19 %}selected="selected"{% endif %} value="19">19</option>
+                <option {% if model.quantity == 20 %}selected="selected"{% endif %} value="20">20</option>
+                
+            </select>
+            {% else %}
+                <select class="quantity-field" id="quantity" name="quantity"  data-mz-value="quantity" 
+                    quickOrderQuantity quickOrderProductCode="{{model.product.productCode}}" locationCode="{{model.fulfillmentLocationCode}}" 
+                    quickOrderProductId="{{model.product.productCode}}" value="1" 
+                    min="1" class="quick-order-quantityfield" quickOrderQuantity="1" >
+                    <option value="1">1</option>
+                </select>    
+            {% endif %}
+            {% endcomment %}
+        </div>  
+         {% endblock quick-order-quantity %}
+  
+  {% block myorder-price %}
+ 
+         
+{% if model.product.price.salePrice < model.product.price.price && model.product.price.salePrice !== 0 %}
+  <p class="inline" OrderProductId="{{model.product.productCode}}" productPrice = "{{model.product.price.salePrice}}">{{model.product.price.salePrice|currency}}</p>   
+{% else %}  
+  <p class="inline" OrderProductId="{{model.product.productCode}}" productPrice = "{{model.product.price.price}}" >   {{model.product.price.price|currency}}</p>    
+{% endif %}  
+<button {% if not model.isFutureProduct %}data-mz-action="addInlineItemToCartmyacc"{% endif %} class="inline-add-to-cart {% if model.isFutureProduct %}show-futureprod-alert{% endif %}" quickOrderProductCode="{{model.product.productCode}}" locationCode="{{model.fulfillmentLocationCode}}" orderNumber="{{orderId}}" inventory = "{{model.availableInventory}}" name = "{{model.product.name}}" {% if model.availableInventory < 1 %} disabled {% endif %}>ADD TO CART</button>
+   
+ {% endblock myorder-price %}
+  
+  {% endblock item-listing-details %}
+  <div class="clearfix"></div>
+  <div class="mz-itemlisting-actions">
+  {% block item-listing-actions %}
+    
+  {% endblock item-listing-actions %}
+  </div>
+  {% block item-listing-extras %}
+  {% endblock item-listing-extras %}
+  <p class="mz-item-error"></p>
+</div>

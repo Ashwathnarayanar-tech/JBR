@@ -1,0 +1,70 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <article>
+        <h1 class="mz-pagetitle">Dennis Walters</h1>
+        <figure class="vertImage cyclingImg">
+            <img src="/resources/images/sponsors/Dennis Walter/dWalters_tall.jpg">
+        </figure>
+        <p>To find out when and where Dennis will be performing, look at our <a href="/sponsorships-event-calendar">Event Calendar</a>.</p>
+        <p>"If there is something you really want to do - no matter how impossible it may seem - with enough hard work and perseverance you can do it," says Dennis Walters.</p>
+        <p>He should know. Dennis is the only person paraplegic who earns a living as a professional golfer. Back in the 1970's, Dennis's goal was to become a PGA touring professional.</p>
+        <p>To sharpen his skills, Dennis spent 1973 competing on the South African tour and in mini-tour events in the U.S. Shortly before the 1974 Tour 
+            Qualifying Event Dennis went home to New Jersey to play a few friendly rounds of golf. On July 21, 1974, he was riding a golf cart down a steep 
+            hill on a course near his house when the brakes failed. Dennis was thrown from the cart and suffered severe spinal cord damage.
+        </p>
+        <p>He was diagnosed as a T-12-level paraplegic and told that he would never walk again, which also made playing golf highly unlikely. 
+            However, at age 24, Dennis was determined to prove otherwise. After five months of rehabilitation, Dennis went home. 
+            Immediately, he began searching for ways to make playing golf practical. Then one day he was struck with an idea.
+        </p>
+        <p>"Why not mount a swivel seat on a golf cart?"</p>
+        <p>With the help of his father and friends, Dennis fashioned a seat that would swing away 90 degrees from a golf cart.</p>
+        <p>Dennis taught himself to hit sand shots and to putt one-handed while balancing himself on his crutches, and got his game to the point where he could break 80 on an average course.</p>
+        <p>He continued practicing his game, and people started noticing what Dennis could do. Pros began asking him to conduct clinics at their local clubs.
+            Those clinics evolved into "The Dennis Walters Golf Show," a one-hour combination of golf mastery and human inspiration. 
+            Since 1977 Dennis has traveled to 49 states, Mexico and Canada, and has given over 2800 performance.
+        </p>
+        <p>As Dennis says in every show, "If you have a dream and it doesn't work out, never stop dreaming, get a new dream!"</p>
+        <p>His famous trick shots, or as Dennis likes to call them &ndash; "shots from unusual lines," are achieved with a wide variety of clubs made from a fishing rod, a crutch, 
+            a radiator hose and a cell phone. During his show, Dennis also hits shots blindfolded and through fire. Woven throughout the show is Dennis's powerful message 
+            that with hard work and perseverance, anything is possible.
+        </p>
+        <p>And we can't forget his opening act: Super Dog, Bucky, who was rescued by Canine Castaways. Dennis believes if you are looking for a dog or cat, 
+            an animal shelter or a rescue group is a great place to begin your search. Bucky is Dennis's best friend and is best known for his uncanny ability 
+            to correctly answer questions by barking out the answers. He is very good in math, general information, and golf trivia.
+        </p>
+        <p>In 2002, Dennis wrote an autobiography called, In My Dreams I Walk with You. In his book he talks about his incredible journey. Dennis's story is now available as an eBook. 
+            In the eBook, buyers will get exclusive access to video links, embedded media and a bonus photo album! The book is for sale exclusively on his website <a href="http://www.denniswalters.com" target="_blank">www.denniswalters.com</a>.
+        </p>
+        <p>Dennis is one of only 11 honorary lifetime members of The PGA of America. This unique club includes three former Presidents of The United States, Eisenhower, 
+            Ford and George HW Bush. In 2008, The PGA of America presented him with their highest honor, The Distinguished Service Award.
+        </p>
+        <p>In 2009, Dennis was appointed a spokesperson and national ambassador for The First Tee, an international youth development organization whose mission is to impact the lives of young 
+            people by providing learning facilities and educational programs that promote character development and life-enhancing values through the game of golf. It's a great fit for Dennis, as he's always tried to grow the game of golf and positively influence others.
+        </p>
+        <p>Read more about Dennis at his website, <a href="http://www.denniswalters.com" target="_blank">www.denniswalters.com.</a></p>
+        <p>Here's the moving tribute to Dennis that was shown at the PGA Award Ceremony:</p>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+

@@ -1,0 +1,21 @@
+{% extends "page" %}
+
+ 
+
+{% block body-tag-classes %}mz-category mz-searchresults {% endblock body-tag-classes %}
+
+{% block body-content %} 
+
+{% require_script "pages/search" %}
+<div {% if pageContext.categoryId %}data-mz-category="{{ pageContext.categoryId }}" {% endif %}data-mz-search="{{ pageContext.search.query }}">
+  
+    {% include "modules/product/faceted-products" %}
+    {% dropzone "search-results" scope="template" %}
+</div>
+{% endblock body-content %}
+
+{% include_products "modules/product/crosssell-carousel" with productCodes=themeSettings.addCrosssellProductList as_parameter %}
+
+<script type="text/javascript">
+	var bn_SearchTerm = "{{ pageContext.search.query }}";
+</script>

@@ -1,0 +1,127 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <article>
+        <h1 class="mz-pagetitle">Carin Koch</h1>
+        <figure class="vertImage cyclingImg">
+            <img src="/resources/images/sponsors/Carin Koch/CarinK.jpg">
+        </figure>
+        <p>To find out when and where Carin will be performing, look at our <a href="/sponsorships-event-calendar">Event Calendar</a>.</p>
+        <p>
+            Carin Koch first started playing golf at the age of nine. While a member of the University of Tulsa golf team, she was named Second-Team All-American in 1989-90.
+        </p>
+        <p>
+            Carin joined the professional golf scene in 1992, competing on the WPGET and the Asian Tour. She joined the LPGA Tour as a rookie in 1995, and is now a top contender, 
+            with over 40 top-10 tournament finishes.
+        </p>
+
+        <h2>Career Highlights:</h2>
+			  <ul class="contentList">
+            <li>
+                <h2>2015</h2>
+            </li>     
+            <li>●&nbsp;European team captain for the Solheim Cup</li>
+        </ul>
+        <hr>
+		  <ul class="contentList">
+            <li>
+                <h2>2007</h2>
+            </li>
+            <li>●&nbsp;Represented Sweden in the World cup</li>
+            <li>●&nbsp;Played in the Women’s World Cup of Golf with Helen Alfredsson</li>
+        </ul>
+        <hr>
+		<ul class="contentList">
+            <li>
+                <h2>2006</h2>
+            </li>
+            <li>●&nbsp;Represented the international team at the Lexus Cup</li>           
+        </ul>
+        <hr>
+          <ul class="contentList">
+            <li>
+                <h2>2005</h2>
+            </li>
+            <li>●&nbsp;Won the Corona Morelia Championship</li>
+            <li>●&nbsp;Won the Lexus Cup, representing the international team</li>
+			<li>●&nbsp;Represented Sweden in the World cup</li>
+			<li>●&nbsp;Captain’s pick representing Europe in the Solheim Cup</li>
+        </ul>
+        <hr>
+		
+		<ul class="contentList">
+            <li>
+                <h2>2003</h2>
+            </li>
+            <li>●&nbsp;Gave birth to her second child, Simzon Michael, on April 6, and returned to the Tour at the U.S. Women's Open in July</li>
+            <li>●&nbsp;Best finish was fourth at the Wachovia LPGA Classic hosted by Betsy King; posted a 1-2-1 record as a member of the victorious European Solheim Cup Team</li>
+        </ul>
+        <hr>
+        <ul class="contentList">
+            <li>
+                <h2>2002</h2>
+            </li>
+            <li>●&nbsp;Recorded a career-best 13 top-10 finishes, including three runner-up finishes</li>
+            <li>●&nbsp;Second at the Sports Today CJ Nine Bridges Classic and tied for second at the ShopRite LPGA Classic and Mobile LPGA Tournament of Champions 
+                Presented by Ultimate Software, where she recorded a career-low 62 during the first round and crossed the $2 million mark in career earnings
+            </li>
+            <li>●&nbsp;Finished with a 4-0-1 record as a member of the European Solheim Cup Team</li>
+        </ul>
+        <hr>
+        <ul class="contentList">
+            <li>
+                <h2>2001</h2>
+            </li>
+            <li>●&nbsp;Became a Rolex First-Time Winner at the LPGA Corning Classic by posting four consecutive rounds in the 60s; her husband Stefan was her caddie that week</li>
+        </ul>
+        <hr>
+        <ul class="contentList">
+            <li>
+                <h2>2000</h2>
+            </li>
+            <li>●&nbsp;Was a runner-up at the Los Angeles Women's Championship; crossed the $1 million mark in career earnings after tying for 14th at the Evian Masters</li>
+            <li>●&nbsp;was a member of the victorious European Solheim Cup Team, where she went 3-0 as a “rookie” and sank an eight-foot birdie putt on the 17th hole to win her match against Michele 
+                Redman and clinch the European Team's victory
+            </li>
+            <li>Won the Chrysler Open on the LET, her first professional victory, as well as the Team World Cup with Sophie Gustafson in Ireland</li>
+        </ul>
+        <hr>
+        <h2>Personal Information:</h2>
+        <ul class="contentList">
+            <li>●&nbsp;5'6”, blond hair, blue eyes</li>
+            <li>●&nbsp;Started playing golf at the age of 9</li>
+            <li>●&nbsp;Credits her father Owe Hjalmarsson, husband Stefan Koch, Kjell Enhager, Pia Nilsson and Chuck Cook as the individuals most influencing her career</li>
+            <li>●&nbsp;Married Stefan Koch on Dec. 30, 1995</li>
+            <li>●&nbsp;Competed as Carin Hjalmarsson in 1995 and Carin Hj Koch in 1996</li>
+            <li>●&nbsp;Gave birth to son Oliver Michael Ture on Nov</li>
+            27, 1998
+            <li>●&nbsp;Gave birth to son Simzon Michael on April 6, 2003</li>
+            <li>●&nbsp;Enjoys spending time with friends and family</li>
+            <li>●&nbsp;Represents PING, Jelly Belly, Dexter shoes and Ivanhoe of Sweden</li>
+        </ul>
+        <hr>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+
+

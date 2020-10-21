@@ -1,0 +1,151 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static{% endblock body-tag-classes %}
+{% block body-content %}
+<section>
+    <article>
+        <h1 class="mz-pagetitle">
+            Specialty Wholesale Customers
+        </h1>
+        <p>
+            A candy shop is complete when it has a full selection of Jelly Belly jelly beans and Jelly Belly Confections.
+            If you are the owner/operator of your own shop, you’ll want to download our various catalogs to get an up-close view of all the items we offer.
+        </p>
+        <p>
+            If you wish to carry our products feel free to call and we will be happy to answer any questions that you may have!
+            Please call 1-800-323-9380 (US only) or 707-428-2800 (all countries) and ask for Customer Service.
+        </p>
+        <p>Please note: Catalog pages are large Adobe® Acrobat® (PDF) files.</p>
+        <p>They may open very slowly. To open them more quickly, please RIGHT-CLICK on the link and select "Save Target As..." from the list to save a copy to your computer. </p>
+        <div class="products-certificates">
+            <div class="multiple-products">
+                <p class="listHeading bold">Year-round products:</p>
+                <ul class="contentList">
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_Covers_lr.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('Catalogs/Specialty15-16/ZMA960_YrRnd2015_Covers_lr.pdf'); ">2015-16 Catalog Covers</a> (PDF 1.72 MB)
+                    </li>                    
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_Bags_lr.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_Bags_lr.pdf'); ">Bags & Gift Bags</a>&nbsp;&nbsp;(PDF 6.08 MB)
+                    </li>                  
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_Boxes_lr.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_Boxes_lr.pdf'); ">Boxes and Gift Boxes</a>&nbsp;(PDF 1.97 MB)
+                    </li>
+					<li>
+                        <a href="//content.jellybelly.com/cachefly/B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_Bulk_lr.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_Bulk_lr.pdf'); ">Bulk</a>&nbsp;&nbsp;(PDF 3.19 MB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_Novelty_lr.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_Novelty_lr.pdf'); ">Gifts and Novelty</a> (PDF 8.04 MB)
+                    </li>
+					  <li>
+                        <a href="//content.jellybelly.com/cachefly/B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_SB_lr.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_SB_lr.pdf'); ">Sport Beans</a> (PDF 1.01 MB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_SK_lr.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_SK_lr.pdf'); ">Sunkist Candies</a>&nbsp; (PDF 530 KB)
+                    </li>               
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_DisplayDecor_lr.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('B2B/Catalogs/Specialty15-16/ZMA960_YrRnd2015_DisplayDecor_lr.pdf'); ">Displays and Store Decor</a> (PDF 3.41 MB)
+                    </li>
+                </ul>
+            </div>
+            <div class="multiple-certificates">
+                <p class="listHeading bold">Forms and Certficates:</p>
+                <ul class="contentList">
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/B2B/Other/HelpfulHints001.jpg" target="_blank" onclick="javascript: pageTracker._trackPageview('B2B/Other/HelpfulHints001.jpg'); ">
+                        Helpful Hints
+                        </a> (JPG)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/Wholesale%20Customers/JBBC_Credit_App_2011.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('Wholesale%20Customers/JBBC_Credit_App_2011.pdf');">Credit Application</a> (PDF, 647 KB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/Wholesale%20Customers/Multijurisdiction_Resale_Certificate_1.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('Wholesale%20Customers/Multijurisdiction_Resale_Certificate_1.pdf'); ">Multi-Jurisdiction Resale form 1</a> (PDF,&nbsp;51.8 KB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/Wholesale%20Customers/Multijurisdiction_Resale_Certificate_2-MA_MS_WY_WV.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('Wholesale%20Customers/Multijurisdiction_Resale_Certificate_2-MA_MS_WY_WV.pdf'); ">Multi-Jurisdiction Resale form 2</a>
+                        (PDF, 283 KB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/Wholesale%20Customers/CALIFORNIA%20RESALE%20CERTIFICATE.doc" target="_blank" onclick="javascript: pageTracker._trackPageview('Wholesale%20Customers/CALIFORNIA%20RESALE%20CERTIFICATE.doc'); ">California Resale form</a> (Word, 27.5 KB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/Wholesale%20Customers/Indiana%20Resale%20Cert%20ST-105%208-05.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('Wholesale%20Customers/Indiana%20Resale%20Cert%20ST-105%208-05.pdf'); ">Indiana Resale form</a> (PDF, 359 KB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/Wholesale%20Customers/Virginia%20Resale%20Certificate.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('Wholesale%20Customers/Virginia%20Resale%20Certificate.pdf'); ">Virginia Resale form</a> (PDF, 30.2 KB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/Wholesale%20Customers/Lousiana_Resale_Certificate_R-1042_(10-08).pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('Wholesale%20Customers/Lousiana_Resale_Certificate_R-1042_(10-08).pdf'); ">Louisiana Resale form</a> (PDF, 136 KB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/Wholesale%20Customers/Mississipi_Sample.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('Wholesale%20Customers/Mississipi_Sample.pdf'); ">Mississippi Resale form</a> (PDF,&nbsp;100 KB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/Wholesale%20Customers/Washington%20Resale%20Certificate%20REV%2027%200020.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('Wholesale%20Customers/Washington%20Resale%20Certificate%20REV%2027%200020.pdf'); ">Washington Resale form</a> (PDF, 261 KB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/Wholesale%20Customers/New%20York%20Resale%20Certificate.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('Wholesale%20Customers/New%20York%20Resale%20Certificate.pdf'); ">New York Resale form</a> (PDF, 56.1 KB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/B2B/Other/WHOLESALE_CUSTOMER_CHANGE_REQUEST_FORM.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('B2B/Other/HelpfulHints001.jpg'); ">Wholesale Customer Change Request Form</a> (PDF, 25 KB)
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="products-certificates">
+            <div class="multiple-products">
+                <p class="listHeading bold">Seasonal products:</p>
+                <ul class="contentList">
+                    <li>
+                         <a href="//content.jellybelly.com/cachefly/B2B/Catalogs/JB_ValSpringCatalog2016_B2B.pdf" target="_blank" onclick="javascript: pageTracker._trackPageview('B2B/Catalogs/JB_ValSpringCatalog2016_B2B.pdf'); ">Valentine and Spring&nbsp;2016</a> (PDF, 6.56 MB)
+                    </li>
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/B2B/Catalogs/ZMA106_2015FallWinter_Cat_HR.zip" target="_blank" onclick="javascript: pageTracker._trackPageview('B2B/Catalogs/ZMA106_2015FallWinter_Cat_HR.zip'); ">Fall and Winter&nbsp;Catalog 2015</a> (ZIP, 71.8  MB)
+                    </li>
+                </ul>
+            </div>
+            <div class="multiple-certificates">
+                <p class="listHeading bold">Display Materials</p>
+                <ul class="contentList">
+                    <li>
+                        <a href="//content.jellybelly.com/cachefly/B2B/Catalogs/Specialty13-14/13SpecialtyB2B_Displays_StoreDecor.zip" target="_blank" onclick="javascript: pageTracker._trackPageview('B2B/Catalogs/Specialty13-14/13SpecialtyB2B_Displays_StoreDecor.zip'); ">
+                        Display Materials
+                        </a>&nbsp;&nbsp;(ZIP, 4.51 MB)
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <p>
+            <strong>Note: Multi-Jurisdiction Resale form 1 is only applicable to residents of the following 38 states:</strong>
+            <br>
+            AL, AR, AZ, CA, CO, CT, DC, FL, GA, HI, ID, IL, IA, KS, KY, ME, MD, MI, MN, MO, NE, NV, NJ, NM, NC, ND, OH, OK, PA, RI, SC, SD, TN, TX, UT, VT, WA, WI
+        </p>
+        <p class="bold">Residents of Massachusetts, Mississippi, West Virginia and Wyoming must use Multi-Jurisdiction Resale form 2.</p>
+        <p class="bold">The following states do not require a resale form: Alaska, Delaware, Montana, New Hampshire, Oregon </p>
+        <p>
+            To submit your forms, fax <strong>707-399-2914</strong> or email us at <a href="mailto:NewAccounts@jellybelly.com">NewAccounts@jellybelly.com</a>.
+            <br><em class="red">(Note: this information is only to be used for submission of forms and certificates.</em>
+        </p>
+    </article>
+</section>
+<div class="clearfix"></div>
+{% endblock body-content %}
+
+
+

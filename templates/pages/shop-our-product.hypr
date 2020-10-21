@@ -1,0 +1,63 @@
+{% extends "page" %}
+
+ 
+
+{% block body-tag-classes %}mz-ourproduct{% endblock body-tag-classes %}
+
+{% block body-content %}
+
+    {% require_script "pages/shop-our-product" %}  
+    <div class="jb-slide-show">
+        {% dropzone "shop-our-products-slideshow" scope="page" %}
+        {% comment %}
+            {% include "modules/shop-our-product-slideshow" %}   
+        {% endcomment %}
+    </div>
+  
+    <div class="jb-search">
+        <div class="jb-search-ourproduct">
+            <p>Search our Huge Selection:</p>
+            {% include "modules/page-header/search-box" %}   
+        </div>
+        <img class="jb-made-in-usa" src="../resources/images/madeInUSA.png"/>
+    </div>
+    
+    <div id="shop-our-product-brands-listing">
+        <div class="jb-ourproducts-brands-listing">
+            <p>Shop by Category:</p>
+            {% block featured-brands-category %}
+                {% dropzone "shop-pageour-products-featuredbrands" scope="page" %}
+    	    {% endblock featured-brands-category %}
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div mybuyszone="2" class="recommended-product"></div> 
+    
+    <!-- Commented Mybuys Snippets since its added using Tealium    -->
+		{% comment %} 
+   <script type="text/javascript"> 
+    mybuys.setPageType("HIGH_LEVEL_CATEGORY");
+   </script>
+    {% endcomment %}
+    <div class="jb-e-commerce-details">
+        <hr/>
+        <div class="jb-links">
+            <a href="/shipping-information">Free Shipping on $55+&nbsp;<span>▶</span></a>
+            <a href="/ordering-information">No Sales Tax&nbsp;<span>▶</span></a>
+            <a href="/StoreLocator">Retail Locations&nbsp;<span>▶</span></a>
+        </div>
+        <hr/>
+    </div>
+    
+
+    
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,153 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar mz-w-direction mz-w-youth-camps{% endblock body-tag-classes %} 
+
+{% block body-content %} 
+    <section> 
+        <div class="carnival-details">
+             {% dropzone "dropzone_area1-warehouse-tour" scope="page" %}
+        </div> 
+        <article>
+            <h1 class="mz-pagetitle">Pleasant Prairie Wisconsin - Warehouse Tours</h1>
+            <figure class="vertImage">
+                <img src="/resources/images/visit-us/PP_warehouseTour.jpg">
+            </figure>
+            <h3>Daily from 9 AM to 4 PM CT*</h3>
+            <p class="finePrint noPad">*Except New Year's Day, Easter Sunday, Thanksgiving Day and Christmas Day</p>
+        <p class="finePrint noPad">WAREHOUSE AND VISITOR CENTER (not a working factory)</p>
+        <p>
+            <a href="/wisconsin-factory-event-calendar">Click here</a> to find out what's happening at our Visitor Center in Pleasant Prairie, Wisconsin; calendar includes holiday hours and special events.
+        </p>
+
+        <h3 class="allCaps">WAREHOUSE TOURS</h3>
+        <p>
+            Sweet sensations and a world of delight await you at the Jelly Belly Visitor Center. Located in Pleasant Prairie, Wisconsin, near Kenosha and Racine, 30 minutes south of Milwaukee,
+            and 90 minutes north of Chicago, the Jelly Belly Visitor Center features full-throttle fun on the FREE Jelly Belly Express Train Tour.
+            The Visitor Center is designed so visitors can take a tour of our warehouse (really, it's fun!) and taste the magic of the original gourmet Jelly Belly jelly bean.
+            The 25-30 minute train ride makes stops at a variety of Stations with large screen video monitors showing the company's century of candy making and how we make candy corn, jelly beans, gummies and more.
+        </p>
+        <p>
+            From the start Mr. Jelly Belly flies overhead welcoming you to the tour. Once you hop on board the Jelly Belly Express Train you will see Jelly Belly Bean Art,
+            a chorus line of dancing Jelly Belly characters, and giant Jelly Belly jelly beans overhead as you travel down "Candy Alley".
+        </p>
+
+        <hr>
+
+        <h3 class="allCaps">JELLY BELLY CANDY STORE</h3>
+        <p>
+            Your Jelly Belly experience would not be complete without exploring our Jelly Belly Candy Store.
+            Your first stop has to be our Sample Bar where you can try each and every flavor of Jelly Belly jelly beans that we make, along with any other new or favorite confection on our menu!
+            Try them one at a time or in combination to create a colorful and tasty recipe!
+        </p>
+        <p>
+            In our Jelly Belly Candy Store you can shop for your favorite flavors either individually or combined in a variety of beautiful gift boxes or mixed bags,
+            including a variety of Sugar Free Jelly Belly flavors and gift boxes. Also available are Jelly Belly Confections like our Dutch Mints&reg;, Jordan Almonds, gummies, fruit snacks,
+            sours and chocolate items. Create your own mixed bag of your favorites!
+        </p>
+        <p>
+            Don't forget to pick up a few bags of our world famous Belly Flops&reg; and have a blast guessing the flavors.
+            Belly Flops&reg; are no less flavorful or lovable than regular Jelly Belly jelly beans; they just come in wild shapes and sizes.
+        </p>
+        <p>
+            Find fun Jelly Belly gifts for everyone on your list. Pick up a plush Mr. Jelly Belly toy, fun school accessories, hats, t-shirts and other items. Bring home a fun souvenir of your visit!
+        </p>
+        <p>
+            Stop at our fudge counter to try free samples of our delicious fudge. Our specialities include Cookies &amp; Cream and Red Velvet fudge.
+        </p>
+        <p class="finePrint">
+            ALLERGEN NOTICE: Our Retail Store, Café, and Chocolate Shoppe confections and foods contain certain allergy triggers. Please check out our <a href="/frequently-asked-questions">FAQ</a> (Frequently Asked Questions) to learn more about allergens and to submit a question.
+        </p>
+
+        <hr>
+
+        <h3 class="allCaps">JELLY BELLY SNACK BAR</h3>
+        <p>
+            Whether you are in the mood for a meal or just a snack, the Jelly Belly Snack Bar is the place for you! Enjoy a variety of luncheon items, snacks and beverages.
+            Groups of 15 or more may pre-arrange lunch. See our menu for more details.
+            <a href="http://jellybelly.com/resources/images/visit-us/Pleasant_Prairie_Snack_Bar_Menu_January_2015.pdf" target="_blank">Download our menu here</a>. The Snack Bar is open daily from
+            <strong>9 AM to 4PM CT*</strong>
+        </p>
+        <p class="finePrint">*(See Store and Tour Hours for exceptions to normal schedule)</p>
+
+        <h3 class="allCaps">STORE AND TOUR HOURS</h3>
+        <p>
+            The Jelly Belly Visitor Center is open daily from 9 AM to 5 PM CT. Warehouse tours operate daily from 9 AM to 4 PM CT, except for <strong>New Year's Day, Easter Sunday, Thanksgiving Day,</strong>
+            and <strong>Christmas Day.</strong> We have reduced hours on the 2nd Saturday in December, Christmas Eve and New Year's Eve; on these three days tours end at 2 PM and our retail store closes at 3 PM.
+        </p>
+        <p>
+            Groups of 20 or more should contact the Visitor Center at 866-868-7522 to pre-arrange their visit. (This is not a reservation.)
+            Tours are FREE and depart approximately every 15-30 minutes throughout the day and last approximately 25-30 minutes. <span class="bold">
+                While the typical wait for tours can be 15 to 30 minutes,
+                during certain holidays, the Easter season, Spring Break, summer (mid-June to the end of August), Veteran’s Day, the Friday and Saturday after Thanksgiving, the week before Christmas,
+                and the week before New Year's, tour waits can be as long as 1 hour or more.
+            </span>
+        </p>
+        <p>
+            Please plan to bring strollers or wheelchairs as all areas of the Visitor Center and warehouse tour are fully ADA accessible.
+            Note that strollers and wheelchairs are not available in the Visitor Center.
+        </p>
+        <p class="bold">For further Jelly Belly tour information call (866) TOUR-JBC (868-7522)</p>
+        </article>
+    </section>
+    
+    <section class="warehouse-direction">
+        <hr>
+        <figure class="direction-map">
+            <iframe width="400" height="400" frameborder="1" src="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=10100+Jelly+Belly+Lane+Pleasant+Prairie,+Wisconsin+53158&amp;sll=42.52912,-87.876128&amp;sspn=1.325733,2.287903&amp;ie=UTF8&amp;s=AARTsJoShrLZPrxC_Jqoc2Wr-Tt6_oq1iQ&amp;ll=42.540307,-87.896805&amp;spn=0.044268,0.072956&amp;z=13&amp;iwloc=addr&amp;output=embed" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            <br>
+            <small><a  href="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=10100+Jelly+Belly+Lane+Pleasant+Prairie,+Wisconsin+53158&amp;sll=42.52912,-87.876128&amp;sspn=1.325733,2.287903&amp;ie=UTF8&amp;ll=42.540307,-87.896805&amp;spn=0.044268,0.072956&amp;z=13&amp;iwloc=addr&amp;source=embed">View Larger Map</a></small>
+        </figure>
+        <div class="direction-details">
+            <h3>DIRECTIONS</h3>
+            <ul class="finePrint">
+                <li>Jelly Belly Center</li>
+                <li>10100 Jelly Belly Lane</li>
+                <li>Pleasant Prairie, Wisconsin 53158</li>
+            </ul>
+            <p>
+                <strong>From the North (MILWAUKEE):</strong>
+                <br>
+                Take Interstate 94 (also known as US 41) South to Exit 347. Turn left (East) at stop sign on State Route 165 (Lakeview Parkway), proceed East to State Route 31 (Green Bay Road). 
+                Turn left (North) on Green Bay Road and proceed approximately 1/4 mile to Jelly Belly Lane. Turn left (West) on Jelly Belly Lane into the Jelly Belly Center. - OR - 
+                Take State Route 31 (Green Bay Road) South to Jelly Belly Lane, approximately 1/4 mile North of State Route 165 (Lakeview Parkway) and Green Bay Road intersection. 
+                Turn right (West) on Jelly Belly Lane into the Jelly Belly Center.
+            </p>
+            <p>
+                <strong>From the South (CHICAGO):</strong>
+                <br>
+                <em>Note: Traffic from the Chicago metropolitan area may vary during peak commute times. Travel time given with map directions may not reflect this exception to normal travel conditions. 
+                    Peak commute times may result in delays of 1 or more hours and should be considered when planning a visit to the Jelly Belly Visitor Center.</em>
+            </p>
+            <p>
+                Take Interstate 94 or US 41 North into Wisconsin, proceed on Interstate 94 (also known as US 41) in Wisconsin to Exit 347. Stay on left side of ramp when exiting and proceed to intersection. 
+                Turn right (East) on State Route 165 (Lakeview Parkway) and proceed East to State Route 31 (Green Bay Road). Turn left (North) on Green Bay Road and proceed approximately 1/4 mile to Jelly Belly Lane. Turn left (west) on Jelly Belly Lane into the Jelly Belly Center. - OR - Take State Route 31 (Green Bay Road) North to State Route 165 (Lakeview Parkway) and proceed approximately 1/4 mile North of intersection to Jelly Belly Lane. Turn left (West) on Jelly Belly Lane into the Jelly Belly Center. 
+            </p>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+

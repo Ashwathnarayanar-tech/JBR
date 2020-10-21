@@ -1,0 +1,171 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" /> 
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+
+{% block body-tag-classes %}mz-visit-us mz-factory{% endblock body-tag-classes %}
+
+{% block body-content %}
+    
+    <h1 class="mz-pagetitle">Customer Service</h1> 
+    <ul class="jb-feature-brands">
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Frequently Asked Questions</h3>
+                <figure>
+                  <a href="/frequently-asked-questions">
+                    <img src="/resources/images/jb-customer-service/faq.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 Many of the questions that you might have are already answered in our Frequently Asked Questions (FAQ) section. If you don't find what you need, submit your question to us! 
+                  <a class="jb-feature-brand-moreinfo" href="/frequently-asked-questions">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Online Order Information</h3>
+                <figure>
+                  <a href="/online-order-info-index">
+                    <img src="/resources/images/jb-customer-service/onlineOrder.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Read more about the billing and ordering policies of our JellyBelly.com Shop, and other ways that you can place orders for your favorite Jelly Belly products. 
+                  <a class="jb-feature-brand-moreinfo" href="/online-order-info-index">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Contact Us</h3>
+                <figure>
+                  <a href="/contact-us">
+                    <img src="/resources/images/jb-customer-service/contactus.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  There are a variety of ways that you can contact the Jelly Belly Candy Company.
+                  <a class="jb-feature-brand-moreinfo" href="/contact-us">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Email Unsubscribe</h3>
+                <figure>
+                  <a href="http://snap.vidiemi.com/jb/optout.aspx">
+                    <img src="/resources/images/jb-customer-service/email.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Click here if you wish to be removed from our email subscription.  
+                  <a class="jb-feature-brand-moreinfo" href="http://snap.vidiemi.com/jb/optout.aspx">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>MyJellyBelly.com</h3>
+                <figure>
+                  <a href="https://www.myjellybelly.com/">
+                    <img src="/resources/images/jb-customer-service/myjb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Now you can give customized Jelly Belly gifts! Pick the container, personalize the message and image, then choose your favorite beans. 
+                  <a class="jb-feature-brand-moreinfo" href="https://www.myjellybelly.com/">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Educators &amp; Students</h3>
+                <figure>
+                  <a href="/information-for-students">
+                    <img src="/resources/images/jb-customer-service/students.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Are you a student or educator looking for information regarding the Jelly Belly Candy Company? Get the scoop on useful information about the company on our Educators &amp; Students page.  
+                  <a class="jb-feature-brand-moreinfo" href="/information-for-students">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Volume Discounts</h3>
+                <figure>
+                  <a href="/volume-discounts">
+                    <img src="/resources/images/jb-customer-service/vol-discounts.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 When you purchase in quantity, a discount will be applied to your order according to the total purchase amount (excluding shipping).  
+                  <a class="jb-feature-brand-moreinfo" href="/volume-discounts">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Satisfaction Guarantee</h3>
+                <figure>
+                  <a href="/satisfaction-guarantee">
+                    <img src="/resources/images/jb-customer-service/satisfaction.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Read about Jelly Belly's dedication to delivering the best possible products and the best possible service right here.  
+                  <a class="jb-feature-brand-moreinfo" href="/satisfaction-guarantee">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+    </ul>
+    
+    <div class="clearfix"></div>
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+

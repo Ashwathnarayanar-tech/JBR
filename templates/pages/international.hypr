@@ -1,0 +1,1059 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static{% endblock body-tag-classes %}
+{% block body-content %}
+<section>
+    <article>
+        <h1 class="mz-pagetitle">
+            Find Stores Outside the U.S.
+        </h1>
+        <p>
+        Questions involving international sales may be submitted to our corporate office at <a href="mailto:international.sales@jellybelly.com">international.sales@jellybelly.com</a>. Listed below are authorized international distributors of Jelly Belly Candy Co. products:
+    </p>
+    <article>
+        <ul class="intlMainCont">
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Australia</strong></li>
+                        <li>Manassen Foods Pty Ltd.</li>
+                        <li>Attn: Mr. David Tucker, Brand Manager</li>
+                        <li>TEL: +61 (0) 3.8379.7815</li>
+                        <li>FAX: +61 (0) 3.8379.7801</li>
+                        <li>EMAIL: <a href="mailto:dtucker@manassen.com.au">dtucker@manassen.com.au</a></li>
+                        <li>WEBSITE: <a href="http://www.manassen.com.au" target="_blank">www.manassen.com.au</a></li>
+                        <li>WEBSITE: <a href="http://www.jellybelly.com.au" target="_blank">www.jellybelly.com.au</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Austria</strong></li>
+                        <li>Markenagentur Olivier</li>
+                        <li>Attn: Mr. Wolfgang Olivier</li>
+                        <li>Johannesgasse 23 </li>
+                        <li>1010 Wien Austria </li>
+                        <li>TEL: +43.1. 8901873 </li>
+                        <li>FAX: +43.1.5129366 </li>
+                        <li>EMAIL: <a href="mailto:olivier@markenagentur.co.at">olivier@markenagentur.co.at</a></li>
+                        <li>WEBSITE: <a href="www.markenagentur.co.at" target="_blank">www.markenagentur.co.at</a></li>
+                        <li>WEBSITE: <a href="http://www.JellyBelly.at">www.jellybelly.at</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Bahrain</strong></li>
+                        <li>American Trading International, Inc.</li>
+                        <li>ATTN: Seth Wilen, President</li>
+                        <li>Peggy Ho, Account Manager</li>
+                        <li>3415 South Sepulveda Blvd., Ste. 610</li>
+                        <li>Los Angeles, CA 90034, U.S.A.</li>
+                        <li>TEL: 310-445-2000</li>
+                        <li>FAX: 310-445-2001</li>
+                        <li>EMAIL: <a href="mailto:ati@american-trading.com">ati@american-trading.com</a></li>
+                        <li>WEBSITE: <a href="http://www.american-trading.com" target="_blank">www.american-trading.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Belgium</strong></li>
+                        <li>Dills N.V.</li>
+                        <li>Attn: Mr. Luk Morren</li>
+                        <li>Interleuvenlaan 62</li>
+                        <li>3001 Leuven Belgium</li>
+                        <li>TEL.: +32.16.81.80.77</li>
+                        <li>FAX: +32.16.81.29.78</li>
+                        <li>EMAIL: <a href="mailto:luk.morren@dills.be">luk.morren@dills.be</a></li>
+                        <li>WEBSITE: <a href="http://www.dills.be" target="_blank">www.dills.be</a></li>
+                        <li>WEBSITE: <a href="http://www.jellybelly.be">www.jellybelly.be</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Brazil</strong></li>
+                        <li>Lemon Lime Imp. E Exp. LTDA</li>
+                        <li>Attn: Isaac Candi</li>
+                        <li>Lemon Lime Import  Export LTDA</li>
+                        <li>Alexandre Czitrom</li>
+                        <li>Al. Barao De Piracicaba</li>
+                        <li>799 - 1 Andar</li>
+                        <li>Campos Eliseos</li>
+                        <li>Sao Paulo, Brazil 01216-012</li>
+                        <li>TEL: 55 11 3562-0808</li>
+                        <li>55 11-3333-5111</li>
+                        <li>FAX: 55 11-3333-5111</li>
+                        <li>EMAIL: <a href="mailto:alexandre@limsimport.com.br">alexandre@limsimport.com.br</a></li>
+                        <li>EMAIL: <a href="mailto:zouky@sunnybrinquedos.com.br">zouky@sunnybrinquedos.com.br</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Canada</strong></li>
+                        <li>Jelly Belly Candy Company</li>
+                        <li>One Jelly Belly Lane</li>
+                        <li>Fairfield, CA 94533</li>
+                        <li>TEL: (800) 323-9380</li>
+                        <li>FAX: (855) 758-7906</li>
+                        <li>EMAIL: <a href="mailto:CAInquiries@jellybelly.com ">CAInquiries@jellybelly.com </a></li>
+                        <li>WEBSITE: <a href="http://intl.jellybelly.com/en-CA/CAN/home.aspx">www.jellybelly.ca</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Central America</strong></li>
+                        <li>Otis McAllister</li>
+                        <li>Attn : Royce Nicolaisen</li>
+                        <li>San Francisco, CA 94111</li>
+                        <li>TEL: 415-421-6010</li>
+                        <li>FAX: 415-421-6016</li>
+                        <li>A/P Contact: Castallia Haynes</li>
+                        <li>EMAIL: <a href="mailto:rnicolaisen@otismcallister.com">rnicolaisen@otismcallister.com</a></li>
+                        <li>EMAIL: <a href="mailto:chaynes@otismcallister.com">chaynes@otismcallister.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Chile </strong></li>
+                        <li>Importadora y Distribuidora Santiago S.A.</li>
+                        <li>Attn:  Sergio Valenzuela</li>
+                        <li>Av. Mexico 1199 Recoleta</li>
+                        <li>Santiago, Chile</li>
+                        <li>TEL: 56 2 596 000</li>
+                        <li>FAX: 56 2 596 0001</li>
+                        <li>EMAIL: <a href="mailto:svalenzuela@ids.cl">svalenzuela@ids.cl</a></li>
+                        <li>WEBSITE: <a href="http://www.ids.cl" target="_blank">www.ids.cl</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>China</strong></li>
+                        <li>Shanghai Giant Faith Food Co., Ltd.</li>
+                        <li>Room 502, Block Financial A,Bund Square, 818</li>
+                        <li>Longhua Road East,</li>
+                        <li>Huangpu District, Shanghai, P.R.China</li>
+                        <li>TEL: +86 21-5306 9100 or 5306 9056 or 5306 9058</li>
+                        <li>EMAIL: <a href="mailto:kimi.qian@giantfaith.com">kimi.qian@giantfaith.com</a>
+                            or <a href="mailto:erichyli@gmail.com">erichyli@gmail.com </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>China </strong></li>
+                        <li>Pinlive Shanghai Food Co., Ltd</li>
+                        <li>Owner: Wangmu</li>
+                        <li>A/P: Rebeca</li>
+                        <li>ROOM 308 ，BUILDING 10</li>
+                        <li>652 CHANGSHOU RD</li>
+                        <li>PUTUO DISTRICT</li>
+                        <li>200060 SHANGHAI，P.R.CHINA</li>
+                        <li>TEL: 86-21-51863006</li>
+                        <li>FAX: 86-21-51012046</li>
+                        <li>EMAIL: <a href="mailto:Wangmu@pinlive.com">Wangmu@pinlive.com</a></li>
+                             or <a target="_blank" href="mailto:rebeca@pinlive.com">rebeca@pinlive.com</a>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Energia Deportiva S.A.</strong></li>
+                        <li>Attn: Ronald Koberg</li>
+                        <li>Centro Comercial Plaza Madrid #46</li>
+                        <li>Concepcion de Tres Rios</li>
+                        <li>San Jose, Costa Ricas</li>
+                        <li>TEL: 8393-4563</li>
+                        <li>EMAIL: <a href="mailto:kobergronal@gmail.com">kobergronal@gmail.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Czech Republic</strong></li>
+                        <li>Partnex spol. s r.o.</li>
+                        <li>Attn: Mrs. Xénia Dziaková, Managing Director </li>
+                        <li>Záhradná 49</li>
+                        <li>900 23 Vinicné, Slovak Republic</li>
+                        <li>TEL: +421 33 6476358</li>
+                        <li>FAX: +421 33 6476358</li>
+                        <li>EMAIL: <a href="mailto:xenia.dziakova@partnex.sk">xenia.dziakova@partnex.sk</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Denmark</strong></li>
+                        <li>Jens &amp; Co. Aps</li>
+                        <li>Attn: Mr Jens Peder Damgaard Jensen</li>
+                        <li>Virkelyst 2-4, Gjellerup</li>
+                        <li>7400 Herning Denmark</li>
+                        <li>TEL: +45.96.27.60.66</li>
+                        <li>FAX: +45.96.27.60.61</li>
+                        <li>EMAIL: <a href="mailto:jp@jensogco.dk">jp@jensogco.dk</a></li>
+                        <li>WEBSITE: <a href="http://www.jellybelly.dk">www.jellybelly.dk</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Ecuador</strong></li>
+                        <li>ImporMass</li>
+                        <li>Attn: William Chasifan</li>
+                        <li>Owner: Antonio Alvarez</li>
+                        <li>Av. Victor Emilio Estrada No. 200 y Balsamos </li>
+                        <li>Guayaquil, Ecuador</li>
+                        <li>TEL: 5934.2883321</li>
+                        <li>EMAIL: <a href="mailto:wchasifan@impormass.com">wchasifan@impormass.com</a>
+                            or <a href="mailto:aalvareze@lasfrangancias.com">aalvareze@lasfrangancias.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li>
+                            <strong>El Salvador</strong>
+                        </li>
+                        <li>DISNA, S.A.DE.C.V.</li>
+                        <li>ATTN: Rodrigo Jose Zablah</li>
+                        <li>Km 11 ½ Carretera al Puerto de La Libertad</li>
+                        <li>Santa Tecla, La Libertad</li>
+                        <li>El Salvador, Centro América</li>
+                        <li>TEL: (503) 2525-1012</li>
+                        <li>FAX: (503) 2525-8223</li>
+                        <li>EMAIL: <a href="mailto:rzablah@disna.com.sv">rzablah@disna.com.sv</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Energia Deportiva S.A.</strong></li>
+                        <li>ATTN: Ronald Koberg</li>
+                        <li>Centro Comercial Plaza Madrid #46</li>
+                        <li>Concepcion de Tres Rios</li>
+                        <li>San Jose, Costa Ricas</li>
+                        <li>TEL: 8393-4563</li>
+                        <li>EMAIL:<a href="mailto:kobergronal@gmail.com">kobergronal@gmail.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Germany</strong></li>
+                        <li>Starkfried GmbH</li>
+                        <li>Oststrasse 41-43</li>
+                        <li>D-22844 Norderstedt Germany</li>
+                        <li>TEL: +49.40.3259643-0</li>
+                        <li>FAX: +49.40.3259643-45</li>
+                        <li>EMAIL: <a href="mailto:teamde@jellybelly.com">teamde@jellybelly.com</a></li>
+                        <li>WEBSITE: <a href="http://www.jellybelly.de">www.jellybelly.de</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Greece</strong></li>
+                        <li>Athanassiou SA</li>
+                        <li>Attn: Ms. Natalia Vasileiou</li>
+                        <li>63, Loutrou Street</li>
+                        <li>Acharne, 13671</li>
+                        <li>Athens, Greece</li>
+                        <li>TEL: +30 211 1047700</li>
+                        <li>FAX: +30 2102445282</li>
+                        <li>EMAIL: <a href="mailto:vasileiou_n@athanassiou.gr">vasileiou_n@athanassiou.gr</a></li>
+                        <li>WEBSITE: <a href="http://www.athanassiou.gr" target="_blank">www.athanassiou.gr</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Guatemala</strong></li>
+                        <li>Distribuidora La Uva</li>
+                        <li>Attn: Ms. Carolina Cofiño Molina</li>
+                        <li>Gerencia Mercadeo Corporativo</li>
+                        <li>Umbral-Codicasa-Distribuidora Marte-Alamsa-Vinoteca-DiUva</li>
+                        <li>4a. calle 0-74 zona 13</li>
+                        <li>Guatemala, Ciudad 01013</li>
+                        <li>TEL: +502.2285.9600 Ext 3109</li>
+                        <li>EMAIL: <a href="mailto:ccofino@umbral.com.gt">ccofino@umbral.com.gt</a></li>
+                        <li>EMAIL: <a href="mailto:kgonzalez@umbral.com.gt">kgonzalez@umbral.com.gt</a> (Karen)</li>
+                        <li>WEBSITE: <a href="http://www.umbral.com.gt" target="_blank">www.umbral.com.gt</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Hong Kong</strong></li>
+                        <li>Prince of Peace (Hong Kong) Ltd.</li>
+                        <li>Attn: Mr. Edward Lee</li>
+                        <li>Unit 1, 5/F, Block B</li>
+                        <li>Shatin Industrial Center</li>
+                        <li>5-7 Yuen Shun Circuit</li>
+                        <li>Shatin, N.T., Hong Kong</li>
+                        <li>TEL: +852.2314.8919</li>
+                        <li>CEL: +852.9162.5116</li>
+                        <li>FAX: +852.2314.8905</li>
+                        <li>EMAIL: <a href="mailto:edwardlpop@gmail.com"> edwardlpop@gmail.com</a></li>
+                        <li>WEBSITE: <a href="http://www.princeofpeace.hk" target="_blank">www.princeofpeace.hk</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Hong Kong</strong></li>
+                        <li>Giant Faith Corporation Limited</li>
+                        <li>Attn: Shirley Fok</li>
+                        <li>Unit 25, 6/F Corporation Park</li>
+                        <li>11 On Lai Street, Siu Lek Yuen</li>
+                        <li>Shatin, N.T., Hong Kong, China</li>
+                        <li>TEL: (852) 2673 0198</li>
+                        <li>FAX: (852) 26526118</li>
+                        <li>EMAIL: <a href="mailto:shirleyfok@giantfaith.com">shirleyfok@giantfaith.com</a> or <a href="mailto:szgfm@giantfaith.com">szgfm@giantfaith.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Hungary</strong></li>
+                        <li>Heinemann Testvérek Kft.</li>
+                        <li>2310 Szigetszentmiklós</li>
+                        <li>Leshegy út 30.</li>
+                        <li>TEL: +36.24.525.090</li>
+                        <li>TEL: +36.30.986.6131</li>
+                        <li>EMAIL: <a href="mailto:info@heinemann.hu">info@heinemann.hu</a> or <a href="mailto:serman.katalin@heinemann.hu">serman.katalin@heinemann.hu</a></li>
+                        <li>WEBSITE: <a href="http://www.jellybelly.hu">www.jellybelly.hu</a></li>
+                        <li>WEBSITE: <a href="http://www.heinemann.hu/" target="_blank">www.heinemann.hu</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Iceland</strong></li>
+                        <li>Attn: Ms. Hildur Sesselja Aðalsteinsdóttir</li>
+                        <li>HB Heildverslun ehf</li>
+                        <li>Skútuvogi 11a</li>
+                        <li>104 Reykjavík</li>
+                        <li>TEL: +354-5524848 </li>
+                        <li>FAX: +354-5524849</li>
+                        <li>MOBILE: +354-6900377</li>
+                        <li>EMAIL: <a href="mailto:hildur@hbheildverslun.is">hildur@hbheildverslun.is</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Indonesia</strong></li>
+                        <li>aka CV Aneka Semesta Nutrisindo</li>
+                        <li>Attn: Mr. Rudy Wirawan</li>
+                        <li>Jl Rawasari Selatan No. 8</li>
+                        <li>Jakarta Indonesia 10570</li>
+                        <li>TEL: 62.21.56982960</li>
+                        <li>FAX: 62.21.56982961</li>
+                        <li>EMAIL: <a href="mailto:aneka_semesta@yahoo.com">aneka_semesta@yahoo.com</a>
+                            or
+                            <a href="mailto:udimeda@yahoo.com">udimeda@yahoo.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Ireland</strong></li>
+                        <li>Niblock Enterprises Ltd.</li>
+                        <li>Attn: David Niblock</li>
+                        <li>4 Knockrea Lawn</li>
+                        <li>Ballinlough, Cork City, Ireland</li>
+                        <li>TEL: +353 86 3410 365</li>
+                        <li>EMAIL: <a href="mailto:david.niblock@niblockenterprises.com"> david.niblock@niblockenterprises.com</a>
+                        </li><li>WEBSITE: <a href="http://www.NiblockEnterprises.com" target="_blank">www.NiblockEnterprises.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Italy</strong></li>
+                        <li>Specialty &amp; Wholesale Retailers, E-commerce: VI.MA. Trading S.r.l.</li>
+                        <li>Attn: Mr. Vittorio Mazzocchi</li>
+                        <li>Via Caduti di Sabbiuno, 22</li>
+                        <li>40053 Bazzano, BO Italy</li>
+                        <li>TEL: +39.051.832345</li>
+                        <li>FAX: +39.051.835189</li>
+                        <li>EMAIL: <a href="mailto:shopping@vimatrading.it">shopping@vimatrading.it</a></li>
+                        <li>WEBSITE: <a href="http://www.JellyBelly.it">www.JellyBelly.it</a></li>
+                        <li>WEBSITE: <a href="http://www.vimatrading.it" target="_blank">www.vimatrading.it</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Italy</strong></li>
+                        <li>Modern Trade: Afima S.r.l.</li>
+                        <li>Attn: Francesca Favero</li>
+                        <li>Via Padre Paolo Sevesi 18</li>
+                        <li>21047 Saronno (Va)</li>
+                        <li>FAX: +39 02 96704403</li>
+                        <li>WEBSITE: <a href="http://www.afimasrl.com/" target="_blank">www.afimasrl.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Japan</strong></li>
+                        <li>Mitsubishi Shokuhin Co., Ltd</li>
+                        <li>Attn: Ms. Akiko Urahara</li>
+                        <li>1-1, HEIWAJIMA 6-CHOME, OTA-KU</li>
+                        <li>TOKYO 143-6556, JAPAN</li>
+                        <li>TEL: 810337675351</li>
+                        <li>FAX: 810337675350</li>
+                        <li>EMAIL: <a href="mailto:rkj-urah@rkg.ryoshoku.co.jp">rkj-urah@rkg.ryoshoku.co.jp</a></li>
+                        <li>WEBSITE: <a href="http://www.ryoka-japan.co.jp" target="_blank">www.ryoka-japan.co.jp</a></li>
+                        <li>WEBSITE: <a href="http://www.jellybelly.jp">www.JellyBelly.jp</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Korea</strong></li>
+                        <li>Yes Commercial Co. Ltd</li>
+                        <li>Attn: Ms. Jinhwa Woo</li>
+                        <li>88 Shangha-Ri, Goosung-Eup,</li>
+                        <li>Yongin-Si</li>
+                        <li>Kyunggi-Do, Korea 449-914</li>
+                        <li>TEL: +82 (2) 566-1334</li>
+                        <li>FAX: +82.31.266.2275</li>
+                        <li>EMAIL: <a href="mailto:yhchoi@yeshs.com">yhchoi@yeshs.com</a></li>
+                        <li>WEBSITE: <a href="http://www.yeshs.com" target="_blank">www.yeshs.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+
+        <!-- second column -->
+
+        <ul class="intlMainCont">
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Kuwait</strong></li>
+                        <li>Sweets City Co. for Foodstuff</li>
+                        <li>Attn: Mr. Emad Albuaijan</li>
+                        <li>Ghazali Street, Shuwaikh Industrial Area</li>
+                        <li>P.O. BOX. 138</li>
+                        <li>Abdullah Al-Salem, Kuwait 72261</li>
+                        <li>TEL: +965.4757632</li>
+                        <li>FAX: +965.4758722</li>
+                        <li>EMAIL: <a href="mailto:sweetcityco@hotmail.com">sweetcityco@hotmail.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Lebanon</strong></li>
+                        <li>NAJJARCO SARL</li>
+                        <li>Attn: Aboudi Najjar </li>
+                        <li>Main Street, Building Omeira</li>
+                        <li>BP46 Bikfaya</li>
+                        <li>Beirut, Lebanon</li>
+                        <li>TEL: +961 4 981 604</li>
+                        <li>MOBILE: +961 3 99 66 68</li>
+                        <li>EMAIL: <a href="mailto:anajjar@najjarco.com">anajjar@najjarco.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Macau</strong></li>
+                        <li>Pegasus International Limited</li>
+                        <li>Ave. de Ven. De Morais nos 201</li>
+                        <li>Edf. Ind. Chun Fok 12/E</li>
+                        <li>Macau, China</li>
+                        <li>TEL: 853-6688-4614</li>
+                        <li>FAX: 852-38329120</li>
+                        <li>EMAIL: <a href="mailto:kitty@pegasus.com.mo">kitty@pegasus.com.mo</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Mexico</strong></li>
+                        <li>Comercializadora Kram, S.A. de C.V.</li>
+                        <li>Attn: Andres Sevilla Kram</li>
+                        <li>Doctora No. 41, </li>
+                        <li>Col. Tacubaya C.P. 11870</li>
+                        <li>Deleg. Miguel Hidalgo</li>
+                        <li>Mexico City, Mexico </li>
+                        <li>TEL: +52.55.5515.4900</li>
+                        <li>FAX: +52.55.5515.0145</li>
+                        <li>EMAIL: <a href="mailto:ask@comerkram.com.mx"> ask@comerkram.com.mx</a></li>
+                        <li>WEBSITE: <a href="http://www.comerkram.com.mx" target="_blank">www.comerkram.com.mx</a></li>
+                        <li>WEBSITE: <a href="http://www.jellybelly.com.mx">www.JellyBelly.com.mx</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Mexico</strong></li>
+                        <li>Nuxxo Business Network </li>
+                        <li>Attn: José A. Belmares Guajardo</li>
+                        <li>Jose Vasconcelos 204 Ptd. Suite 10</li>
+                        <li>66250 San Pedro Garza Garcia, N.L.</li>
+                        <li>Mexico</li>
+                        <li>TEL: +52.81.8348.0175</li>
+                        <li>EMAIL: <a href="mailto:jose.belmares@nuxxo.com">jose.belmares@nuxxo.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Mongolia</strong>
+                        </li><li>TTEM LLC</li>
+                        <li>Attn: Mrs. S. Enkhzul</li>
+                        <li>Zamchdiin St #3, 4th Khoroo, Bayangol District</li>
+                        <li>Ulaanbaatar, Mongolia 210535</li>
+                        <li>TEL: +976.367054</li>
+                        <li>FAX: +976.366856</li>
+                        <li>EMAIL: <a href="mailto:enkhzul@khanburgedei.mn">enkhzul@khanburgedei.mn</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Netherlands</strong> </li>
+                        <li>Copar B.V.</li>
+                        <li>Attn: Ms. Mandy Rosheuvel-Turner</li>
+                        <li>Eftweg 6</li>
+                        <li>Postbus 222</li>
+                        <li>4940 AE Raamsdonksveer Netherlands</li>
+                        <li>TEL: +31 (0) 162.576.372</li>
+                        <li>FAX: +31 (0) 162.676.380</li>
+                        <li>EMAIL: <a href"mailto:mandy.rosheuvel@copar.nl"="">mandy.rosheuvel@copar.nl</a></li>
+                        <li>WEBSITE: <a href="http://www.copar.nl" target="_blank">www.copar.nl</a></li>
+                        <li>WEBSITE: <a href="http://www.Jelly-Belly.nl">www.Jelly-Belly.nl</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>New Zealand</strong></li>
+                        <li>Wilson Consumer Products</li>
+                        <li>Attn: David Cunningham</li>
+                        <li>9th Floor, Hobson Towers West</li>
+                        <li>26-28 Hobson Street</li>
+                        <li>Auckland, New Zealand 1143</li>
+                        <li>TEL: 64.9.379.5350, Ext 814</li>
+                        <li>FAX: 64.9.379.5356</li>
+                        <li>EMAIL: <a href="mailto:davidc@wilson.co.nz">davidc@wilson.co.nz</a></li>
+                        <li>WEBSITE: <a href="http://www.wilson.co.nz" target="_blank">www.wilson.co.nz</a> </li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Norway</strong></li>
+                        <li>sweetUS AS</li>
+                        <li>Helgelandsmoen Næringspark – Bygg 24</li>
+                        <li>N- 3512 Hønefoss</li>
+                        <li>TEL: + 47 32 12 70 70 </li>
+                        <li>EMAIL: <a href="mailto:tone@sweetus.no">tone@sweetus.no</a></li>
+                        <li>WEBSITE: <a href="http://www.Jelly-Belly.no">www.Jelly-Belly.no</a> </li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Oman</strong></li>
+                        <li>ZAINAL BAQER MOHEBI LLC</li>
+                        <li>Attn: Nasser Hussain - Brand Development Manager</li>
+                        <li>TEL: +968-99810611</li>
+                        <li>EMAIL:<a href="mailo:nasserhussain.zbm@mohebi.com">nasserhussain.zbm@mohebi.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Peru</strong></li>
+                        <li>Eurogourmet S.A.C.</li>
+                        <li>Attn: Mr. Jose Kerszenberg</li>
+                        <li>Av. Del Ejercito 1251</li>
+                        <li>Miraflores</li>
+                        <li>Lima, Peru</li>
+                        <li>TEL: +51.1.222.5053</li>
+                        <li>EMAIL: <a href="mailo:eurogourmetperu@terra.com.pe">eurogourmetperu@terra.com.pe</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Philippines</strong></li>
+                        <li>Candy Corner Philippines, Inc.</li>
+                        <li>DBA Kidstuff Marketing</li>
+                        <li>Attn: Mr. Ricky Andres or Ms. Rosemarie (Bubu) Andres</li>
+                        <li>#1 St. Augustine Street</li>
+                        <li>Oranbo, Pasig City</li>
+                        <li>Philippines 1600</li>
+                        <li>TEL: +632.632.7741, 632.633.4624</li>
+                        <li>FAX: +632.913.5378, 632.632.0379</li>
+                        <li>EMAIL: <a href="mailto:bubu@candycorner.ph">bubu@candycorner.ph</a>
+                            or <a href="mailto:jocsreyes@candycorner.ph">jocsreyes@candycorner.ph</a></li>
+                        <li>WEBSITE: <a href="http://www.candycorner.ph" target="_blank">www.candycorner.ph</a></li>
+                        <li>WEBSITE: <a href="http://www.JellyBelly.ph">www.JellyBelly.ph</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Poland</strong></li>
+                        <li>Solon</li>
+                        <li>Attn: Tomasz Figurski</li>
+                        <li>Al.Prymasa 1000-lecia 62</li>
+                        <li>01-424 Warszawa</li>
+                        <li>TEL: +48.22.877 67 92</li>
+                        <li>FAX: +48.22.877 67 93</li>
+                        <li>EMAIL: <a href="mailto:solon@solon.pl">solon@solon.pl</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+           <!-- <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Qatar</strong></li>
+                        <li>Abu Issa Marketing & Distribution</li>
+                        <li>Attn: Santosh Kumar, Brand Manager</li>
+                        <li>P.O.Box 6255,</li>
+                        <li>Suhaim Bin Hamad Street</li>
+                        <li>Doha, Qatar.</li>
+                        <li>TEL: 974.444.78606</li>
+                        <li>MOBILE: 974.331.30371</li>
+                        <li>FAX: 974.444.79138</li>
+                        <li>EMAIL: <a href="mailto:santosh.kumar@abuissa.com">santosh.kumar@abuissa.com</a></li>
+                    </ul>
+                </div>
+            </li> -->
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Romania</strong></li>
+                        <li>S.C. Heinrig Distribution S.R.L.</li>
+                        <li>Attn: Olivia Anghel, Sr. Brand Manager</li>
+                        <li>STR. Coriolan Caius Marcius NR. 29</li>
+                        <li>Sect. 5, 050866 Bucuresti</li>
+                        <li>TEL: +40 372 057 920</li>
+                        <li>FAX: +40 372 057 902</li>
+                        <li>EMAIL:<a href="mailto:o.anghel@heinrig.com">o.anghel@heinrig.com</a></li>
+                        <li>WEBSITE: <a href="www.heinrig.com" target="_blank">www.heinrig.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Russia</strong></li>
+                        <li>Company Bona</li>
+                        <li>Attn: Ms. Tatiana Namestnikova</li>
+                        <li>Universitetsky Prospect, post office box 120</li>
+                        <li>119296, Moscow, Russia</li>
+                        <li>TEL: 007 495 956 6796 or 007 499 137 7272</li>
+                        <li>FAX: 007 495 956 6795</li>
+                        <li>EMAIL: <a href="mailto:tatiana@bona-company.ru">tatiana@bona-company.ru</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Saudi Arabia</strong></li>
+                        <li>QUARISH TRADING CO.</li>
+                        <li>Attn: Mr. Abdallah Abdallah</li>
+                        <li>P.O. Box 2052 </li>
+                        <li>Jeddah 21441</li>
+                        <li>Saudi Arabia</li>
+                        <li>TEL: +96.626.533.009</li>
+                        <li>EMAIL: <a href="mailto:abdallah@quraish.com">abdallah@quraish.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Singapore</strong></li>
+                        <li>Focus Network Agencies (S) Pte Ltd</li>
+                        <li>Attn: Mr. Loo Lip Giam</li>
+                        <li>No.87 Defu Lane 10 #02-01 </li>
+                        <li>Mec Technocentre</li>
+                        <li>Singapore 539219</li>
+                        <li>TEL: +65.6858.1800</li>
+                        <li>FAX: +65.6858.1808</li>
+                        <li>EMAIL: <a href="mailto:loofocus@thecocoatrees.com">loofocus@thecocoatrees.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Slovakia</strong></li>
+                        <li>Partnex spol. s r.o.</li>
+                        <li>Attn: Xénia Dziaková, Managing Director</li>
+                        <li>Záhradná 49</li>
+                        <li>900 23 Viničné</li>
+                        <li>Slovak Republic</li>
+                        <li>TEL: +421 33 6476358</li>
+                        <li>MOBILE: +421 905 212334 (Xenia)</li>
+                        <li>FAX: +421 33 6476358</li>
+                        <li>EMAIL: <a href="mialto:xenia.dziakova@partnex.sk">xenia.dziakova@partnex.sk</a>
+                            or <a href="mailto:anton.dziak@partnex.sk">anton.dziak@partnex.sk</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>South Africa</strong></li>
+                        <li>Brook Sales CC</li>
+                        <li>Attn: Mr. Wayne Brook</li>
+                        <li>Postnet Suite 54</li>
+                        <li>Private Bag X4006 Ferndale</li>
+                        <li>Johannesburg, S. Africa  2160</li>
+                        <li>TEL: 27.11.792.6266</li>
+                        <li>MOBILE: 27.79.898.2203</li>
+                        <li>EMAIL: <a href="mailto:wayne@brooksales.co.za">wayne@brooksales.co.za</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Spain</strong></li>
+                        <li>Primar Iberica, S.A.</li>
+                        <li>Attn: Mr. Albert Romero</li>
+                        <li>C/ Angel Guimerà, 5-7</li>
+                        <li>08930 Sant Adrià del Besòs</li>
+                        <li>Barcelona Spain</li>
+                        <li>TEL: +34.93.4626511</li>
+                        <li>FAX: +34 93.3811901</li>
+                        <li>EMAIL: <a href="mailto:aromero@primariberica.com">aromero@primariberica.com</a></li>
+                        <li>WEBSITE: <a href="http://www.primariberica.com" target="_blank">www.primariberica.com</a> </li>
+                        <li>WEBSITE: <a href="http://www.JellyBelly.es">www.JellyBelly.es</a> </li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Sweden</strong></li>
+                        <li>US2U AB</li>
+                        <li>Attn: Ms. Rachel Wilson</li>
+                        <li>Oxtorgsgränd 2, bv</li>
+                        <li>11157 Stockholm Sverige</li>
+                        <li>TEL: +46.8.22.81.80</li>
+                        <li>EMAIL:<a href="mailto:info@us2u.se">info@us2u.se</a></li>
+                        <li>WEBSITE: <a href="www.JellyBelly.se">www.JellyBelly.se</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Taiwan</strong>
+                        </li><li>San Pacific International Inc.</li>
+                        <li>SPI West Port Corporation</li>
+                        <li>Attn: Mr. Brian Choi or Kay Chen</li>
+                        <li>11F, No. 398, Section 4 Renai Road</li>
+                        <li>Taipei Taiwan 106</li>
+                        <li>TEL: +886-27038755 ext 15</li>
+                        <li>FAX: +866-27022747</li>
+                        <li>EMAIL: <a href="mailto:export@sanpacific.com">export@sanpacific.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Thailand</strong></li>
+                        <li>Sino Pacific Trading (Thailand) Co., Ltd.</li>
+                        <li>Attn: Mr. Pablo De Albadal</li>
+                        <li>122/2-3 Nonsi Rd., Chongnonsi</li>
+                        <li>Yannawa, Bangkok, Thailand 10120</li>
+                        <li>TEL: +662.681.5081</li>
+                        <li>FAX: +662.681.5097</li>
+                        <li>EMAIL: <a href="mailto:pablo@sino.co.th">pablo@sino.co.th</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+           <!-- <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Turkey</strong></li>
+                        <li>PERDA GIDA</li>
+                        <li>Attn: BENGÜ TOPÇU, Managing Director</li>
+                        <li>Barbaros Mah. Sümbül Sok.</li>
+                        <li>Deluxia Palace D.46, 34746</li>
+                        <li>Ataşehir/ İstanbul</li>
+                        <li>TEL: +90 216 510 12 42</li>
+                    </ul>
+                </div>
+            </li> -->
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>United Arab Emirates</strong></li>
+                        <li>Ghassan Ahmed Al Sulaiman Trading</li>
+                        <li>Attn: Mr. Mazen Khourdaji</li>
+                        <li>P.O. Box 13952</li>
+                        <li>Dubai, United Arab Emirates</li>
+                        <li>TEL.: 971.426.98.191</li>
+                        <li>FAX: 971.426.97.801</li>
+                        <li>EMAIL: <a href="mailto:ghasan@emirates.net.ae">ghasan@emirates.net.ae</a></li>
+                        <li>WEBSITE: <a href="http://www.ghassan-dubai.com" target="_blank">www.ghassan-dubai.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>United Kingdom</strong></li>
+                        <li>Best Imports Ltd.</li>
+                        <li>Attn: Mr Tony Alfano</li>
+                        <li>Best House, Unit 4 &amp; 5</li>
+                        <li>Alban Park, Hatfield Road</li>
+                        <li>St Albans, Hertfordshire, UK</li>
+                        <li>AL4 0JJ</li>
+                        <li>TEL: +44.1727.829010</li>
+                        <li>FAX: +44.1727.829011</li>
+                        <li>TOLL FREE: 0800.018.4416</li>
+                        <li>EMAIL: <a href="mailto:info@bestimports.co.uk"> info@bestimports.co.uk</a></li>
+                        <li>WEBSITE: <a href="http://www.bestimports.co.uk" target="_blank">www.bestimports.co.uk</a></li>
+                        <li>WEBSITE: <a href="http://www.jellybelly-uk.co.uk">www.jellybelly-uk.co.uk</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Duty Free Broker: Asia</strong> </li>
+                        <li>Asia Pan International Co., Ltd.</li>
+                        <li>Attn: Mr. Ligo Han</li>
+                        <li>1106-1104, Hill State</li>
+                        <li>635, Bulkwang-1Dong</li>
+                        <li>Eunpyoung-Gu</li>
+                        <li>Seoul, Korea122-040</li>
+                        <li>TEL: +822 36 63 41 80</li>
+                        <li>FAX: +822.36.63.63.91</li>
+                        <li>MOBILE: +82.11.478.7465</li>
+                        <li>EMAIL: <a href="mailto:ligohan@pandfs.com">ligohan@pandfs.com</a></li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Duty Free Broker: North America</strong></li>
+                        <li>ALFA Branfds Inc.</li>
+                        <li>ATTN: Ms. Amy Hildreth</li>
+                        <li>197 Northwood Court</li>
+                        <li>Lexington, NC 27295 USA</li>
+                        <li>TEL 1.336.775.2995</li>
+                        <li>FAX 1.336.775.2996</li>
+                        <li>EMAIL: <a href="mailto:ahildreth@alfabrandsdfs.com">ahildreth@alfabrandsdfs.com</a>
+                    </li></ul>
+                </div>
+            </li>
+
+
+            <li>
+                <div>
+                    <ul class="contentList">
+                        <li><strong>Duty Free Broker: Caribbean, Latin America</strong></li>
+                        <li>American Caribbean Gateway</li>
+                        <li>A Division of Otis McAllister, Inc.</li>
+                        <li>Attn: Justin Nee, Vice President
+                        </li><li>2601 SW 13th Ave.</li>
+                        <li>Fort Lauderdale, FL 33315</li>
+                        <li>TEL (954) 524-9097</li>
+                        <li>FAX (954) 524-9101</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <br style="clear:both;">
+    </article>
+</section>
+<div class="clearfix"></div>
+{% endblock body-content %}
+
+
+
+

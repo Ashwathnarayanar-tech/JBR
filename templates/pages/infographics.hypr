@@ -1,0 +1,25 @@
+{% extends "page" %}
+
+ 
+
+{% block body-tag-classes %}mz-visit-us mz-factory{% endblock body-tag-classes %}
+
+{% block body-content %}
+    
+    <h1 class="mz-pagetitle">Jelly Belly Infographics</h1>
+    
+    <div class="infographics">
+        <img src="/resources/images/infographics/jellybelly_infographic_01.jpg" alt="infographics_1"/>
+        <img src="/resources/images/infographics/jellybelly_infographic_02.jpg" alt="infographics_2"/>
+        <img src="/resources/images/infographics/jellybelly_infographic_03.jpg" alt="infographics_3"/> 
+    </div>
+    
+    <div class="clearfix"></div>
+{% endblock body-content %}
+
+
+
+
+
+
+

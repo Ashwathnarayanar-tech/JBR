@@ -1,0 +1,69 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %} mz-visit-us {% endblock body-tag-classes %} 
+{% block body-content %}
+
+<h1 class="mz-pagetitle"> Jelly Belly Downloads </h1>
+    <ul class="jb-feature-brands">
+        
+        <!-- Android Live Wallpaper -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Android Live Wallpaper </h3>
+                <figure>
+                  <a href="http://play.google.com/store/apps/details?id=jellybelly.jellybeanjarwp">
+                    <img src="/resources/images/jb_downloads/googlePlay_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 We know you love Jelly Belly jelly beans. We also know that you can't always have them with you...until now. Have a jar of jelly beans on your phone! 
+                  <a class="jb-feature-brand-moreinfo" href="http://play.google.com/store/apps/details?id=jellybelly.jellybeanjarwp">Download Now ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+        <!-- iTunes Jelly Belly Recipe Shaker App -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> iTunes Jelly Belly Recipe Shaker App </h3>
+                <figure>
+                  <a href="http://itunes.apple.com/mu/app/jugglefit-tracker/id560796741?mt=8">
+                    <img src="/resources/images/jb_downloads/itunes_thumb.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Shake up fun jelly bean recipes with the Jelly Belly Recipe Shaker! Virtually combine dozens of Jelly Belly jelly bean flavors to create a variety of gourmet treats! 
+                  <a class="jb-feature-brand-moreinfo" href="http://itunes.apple.com/mu/app/jugglefit-tracker/id560796741?mt=8">Download Now ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Commercials -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Commercials </h3>
+                <figure>
+                  <a href="https://www.youtube.com/user/Jellybelly">
+                    <img src="/resources/images/jb_downloads/youtube_thumbs.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Check out our fun and colorful "Get Real" commercials. You've never seen Jelly Belly jelly beans quite like this. 
+                  <a class="jb-feature-brand-moreinfo" href="https://www.youtube.com/user/Jellybelly">View Now ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+    </ul>
+    <figure class="vertImage">
+      <img src="/resources/images/jb_downloads/downloads_pageImg.jpg">
+    </figure>
+    <div class="clearfix"></div>
+
+{% endblock body-content %}
+
+
+

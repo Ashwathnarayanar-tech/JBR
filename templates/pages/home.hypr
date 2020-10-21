@@ -1,0 +1,141 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-homepage{% endblock body-tag-classes %}
+{% block body-content %}
+    {% require_script "pages/homepage" %}  
+    <div class="jb-slide-show">
+        {% dropzone "home-page-slideshow" scope="page" %}
+        <div class="home-btn-sec">
+            {% if pageContext.isMobile %}
+            <div class="section group mobile">   
+                <div class="col span_1_of_2 tab-col" style="text-align:center;" float="center">
+                    <!--<a href="/one-minute-clinics" style="color:#007aaf" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'JBR.com Home Buttons', 'eventAction': 'click', 'eventLabel': '1-Minute-Clinics' });">    
+                        <button class="btn-jbr" style="color: #007aaf; text-decoration: underline; margin: 5px">
+                            1 Minute Clinics
+                        </button>
+                    </a>-->
+                    <a href="/rapid-order" style="color:#007aaf" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'JBR.com Home Buttons', 'eventAction': 'click', 'eventLabel': 'Rapid-Order-Form' });">
+                        <button class="btn-jbr" style="color: #007aaf; text-decoration: underline; margin: 5px">
+                            Rapid Order Form
+                        </button>
+                    </a>
+                </div>   
+                <div class="col span_1_of_2 tab-col" style="text-align:center;">
+                    <a href="/myaccount#account-orderhistory" style="color:#007aaf" style="margin:0 auto; text-align:center; margin-bottom:10px" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'JBR.com Home Buttons', 'eventAction': 'click', 'eventLabel': 'Repeat-an-Order' });"> 
+                        <button class="btn-jbr" style="color: #007aaf; text-decoration: underline; margin: 5px">
+                            Repeat an Order
+                        </button>
+                    </a>
+                    <a href="/new-and-upcoming" style="color:#007aaf" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'JBR.com Home Buttons', 'eventAction': 'click', 'eventLabel': 'New-Products' });">
+                        <button class="btn-jbr" style="color: #007aaf; text-decoration: underline; margin: 5px">
+                            See What's New
+                        </button>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+            {% if pageContext.isTablet %}
+            <div class="section group tablet">   
+                <!--<div class="col span_1_of_4" style="text-align:center;">
+                    <a href="/one-minute-clinics" style="color:#007aaf" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'JBR.com Home Buttons', 'eventAction': 'click', 'eventLabel': '1-Minute-Clinics' });">       
+                        <button class="btn-jbr" style="color: #007aaf; text-decoration: underline;">
+                            1 Minute Clinics
+                        </button>
+                    </a>
+                </div>-->
+                <div class="col span_1_of_4" style="text-align:center;">
+                    <a href="/rapid-order" style="color:#007aaf" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'JBR.com Home Buttons', 'eventAction': 'click', 'eventLabel': 'Rapid-Order-Form' });">
+                        <button class="btn-jbr" style="color: #007aaf; text-decoration: underline;">
+                            Rapid Order Form
+                        </button> 
+                    </a>
+                </div>
+                <div class="col span_1_of_4" style="text-align:center;">
+                    <a href="/myaccount#account-orderhistory" style="color:#007aaf" style="margin:0 auto; text-align:center; margin-bottom:10px" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'JBR.com Home Buttons', 'eventAction': 'click', 'eventLabel': 'Repeat-an-Order' });"> 
+                        <button class="btn-jbr" style="color: #007aaf; text-decoration: underline;">
+                            Repeat an Order
+                        </button>
+                    </a>
+                </div>
+                <div class="col span_1_of_4" style="margin:0 auto;text-align:center; margin-top: 7px;">
+                    <a href="/new-and-upcoming" style="color:#007aaf" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'JBR.com Home Buttons', 'eventAction': 'click', 'eventLabel': 'New-Products' });">
+                        <button class="btn-jbr" style="color: #007aaf; text-decoration: underline;">
+                            See What's New
+                        </button>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+            {% if pageContext.isDesktop %}
+            <div class="section group desktop" style="height: 270px;">
+                <!--<div class="col span_1_of_4" style="text-align:center;">
+                    <p style="margin:0 auto; text-align:center; margin-bottom:10px">Merchandising &amp; Sales Tips</p>
+                    <a href="/one-minute-clinics" style="color:#007aaf" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'JBR.com Home Buttons', 'eventAction': 'click', 'eventLabel': '1-Minute-Clinics' });">   
+                        <button class="btn-jbr" style="color: #007aaf; text-decoration: underline">
+                            1 Minute Clinics
+                        </button>
+                    </a>
+                </div>-->
+                <div class="col span_1_of_4" style="text-align:center;">
+                    <p class="btn-header" style="margin:0 auto; text-align:center; margin-bottom:10px"> Build Your Order Faster </p>
+                    <a href="/rapid-order" style="color:#007aaf" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'JBR.com Home Buttons', 'eventAction': 'click', 'eventLabel': 'Rapid-Order-Form' });">
+                        <button class="btn-jbr" style="color: #007aaf; text-decoration: underline">
+                            Rapid Order Form
+                        </button>
+                    </a>
+                </div>
+                <div class="col span_1_of_4" style="text-align:center;">
+                    <p class="btn-header" style="margin:0 auto; text-align:center; margin-bottom:10px"> Need It Again? </p>
+                    <a href="/myaccount#account-orderhistory" style="color:#007aaf" style="margin:0 auto; text-align:center; margin-bottom:10px" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'JBR.com Home Buttons', 'eventAction': 'click', 'eventLabel': 'Repeat-an-Order' });"> 
+                        <button class="btn-jbr" style="color: #007aaf; text-decoration: underline">
+                            Repeat an Order
+                        </button>
+                    </a>
+                </div>
+                <div class="col span_1_of_4" style="margin:0 auto;text-align:center;margin-top:10px;">
+                    <p class="btn-header" style="margin:0 auto; text-align:center; margin-bottom:10px"> Discover Products </p>
+                    <a href="/new-and-upcoming" style="color:#007aaf" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'JBR.com Home Buttons', 'eventAction': 'click', 'eventLabel': 'New-Products' });">
+                        <button class="btn-jbr" style="color: #007aaf; text-decoration: underline">
+                            See What's New
+                        </button>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        <div class="section group text-information">
+            <div class="col span_4_of_4" style="background-color:#007aaf;font-size:16pt;font-weight:bold;text-align:center;">
+                <p style="font-size:18px;color:#FFFFFF; text-align:center;">
+                    Orders over $200: <u><a href="/shipping-information" style="color:white;">Free Shipping</a></u> to the Lower 48!
+                </p>
+            </div>
+        </div>
+        {% comment %}
+            {% include "modules/homepage-slideshow" %}   
+        {% endcomment %}
+    </div>
+     <div class="jb-about-jelly-belly">
+       
+         <p>
+         {% dropzone "home-page-aoubt" scope="page" %}
+       
+        </p>
+    </div>
+    {% comment %}
+    <div id="data-visualizations" style="background-color: #EFEFEF;width: 98%;margin: 0 auto;padding: 40px 0px;"></div>
+    {% endcomment %}
+                    
+    <div id="homepage-brands-listing">
+        <div class="brands-listing">
+            {% block featured-brands-category %}
+                {% dropzone "home-page-featuredbrands" scope="page" %}
+    	    {% endblock featured-brands-category %}
+        </div>
+    </div>
+  
+    <!-- Commented Mybuys Snippets since its added using Tealium    -->
+		{% comment %} 
+    
+    <script type="text/javascript"> mybuys.setPageType("HOME"); </script>
+      {% endcomment %}
+{% endblock body-content %}

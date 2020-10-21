@@ -1,0 +1,147 @@
+.mz-alert-popup,.mz-notify-popup{
+    .mz-alert-body{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 999999;
+        display: none;
+        .mz-alert-container{
+            background: #fff;
+            margin: 0 auto;
+            width: 35%;
+            padding: 18px 15px;
+            margin-top: 11%;
+            .mz-alert-close{
+                text-align: right;
+                margin-bottom: -1em;
+                .fa-times-circle{
+                    color: #fff;
+                    background: #a7a7a7;
+                    border-radius: 11px;
+                    border: 1px solid #a7a7a7;
+                    font-size: 24px;
+                    padding: 2px 0px 1px 0px;  
+                    position: relative;
+                    font-weight: normal;
+                    cursor: pointer;
+                    left: 5px;
+                    top: -10px;
+                }
+            }
+            .mz-message-container{
+                text-align: center;
+                width: 85%;
+                margin: 0 auto;
+                padding: 15px;
+                .mz-message{
+                    padding: 2px 0 15px 0;
+                    color: #000;
+                }
+                .mz-action-btns{
+                    .mz-btn-accept,.mz-btn-reject{
+                        width: 28%;
+                        padding: 8px 0;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        color: #fff;
+                        border: 0px;
+                        font-size: small;
+                        &.mz-btn-subscribe {
+                            width: 35%;
+                        }
+                        &.mz-btn-proceed {
+                            width: 25%;
+                        }
+                        &.mz-btn-backtosub {
+                            width: 55%;
+                        }
+                    }
+                    .mz-btn-accept{
+                        background: #fb9d23;
+                        &:hover{
+                            background-color: #f38c07 
+                        }
+                    }
+                    .mz-btn-reject{
+                        background-color: #a7a7a7;
+                        margin-left: 0.6em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+    .mz-alert-popup,.mz-notify-popup {
+        .mz-alert-body {
+            .mz-alert-container {
+                width: 85%;
+                padding: 15px;
+                margin-top: 50%;
+                .mz-message-container {
+                    padding: 15px 0;
+                    .mz-action-btns {
+                        .mz-btn-accept,.mz-btn-reject {
+                            padding: 10px 0;
+                            width: 45%;
+                            &.mz-btn-subscribe {
+                                width: 35%;
+                            }
+                            &.mz-btn-proceed {
+                                width: 35%;
+                            }
+                            &.mz-btn-backtosub {
+                                width: 60%;
+                            }
+                        }
+                        .mz-btn-accept{
+                            background: #fb9d23;
+                            &:hover{
+                                background-color: #f38c07 
+                            }
+                        }
+                        .mz-btn-reject{
+                            background-color: #a7a7a7;
+                            margin-left: 0.6em;
+                        }
+                    }
+                }
+            }
+            
+            &.third-dialog {
+                .mz-alert-container {
+                    .mz-message-container {
+                        width: 90%;
+                        padding: 10px 0;
+                        .mz-action-btns {
+                            .mz-btn-proceed {
+                                width: 40%;
+                            }
+                            .mz-btn-backtosub {
+                                width: 75%;
+                                margin-top: 0.7em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .mz-alert-popup,.mz-notify-popup {
+        .mz-alert-body {
+            .mz-alert-container {
+                width: 60%;
+                padding: 15px;
+                margin-top: 30%;
+            }
+        }
+    }
+}

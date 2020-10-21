@@ -1,0 +1,291 @@
+<ul class="jb-feature-brands" id="explore-jb-feature-brands">
+
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>Jelly Belly Jelly Beans</h3>
+                    <figure >
+                        <a href="/jelly-belly-jelly-beans">
+                            <img class="img-align" src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/jellybellyLogo.png" border="0">
+                        </a>
+                    </figure>
+                <p>Born in 1976 with eight flavors, they've been a worldwide phenomenon ever since. Get the details on all 50 flavors of our most famous and colorful creation.
+                        <a class="jb-feature-brand-moreinfo" href="/jelly-belly-jelly-beans"> Click here for more information ►</a>
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_jellybelly}}">Shop Now ►</a>
+        
+        </div>
+    </li>
+
+
+
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>Confections by Jelly Belly®</h3>
+                    <figure >
+                        <a href="/confections-by-jelly-belly">
+                            <img src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/confections_Logo.png" border="0">
+                        </a>
+                    </figure>
+                <p>We started with Candy Corn, and have since expanded to include the most delectable sweets known to humankind, like our mouthwatering chocolates, gummis and more.
+                        <a class="jb-feature-brand-moreinfo" href="/confections-by-jelly-belly"> Click here for more information ►</a>
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_confection}}">Shop Now ►</a>
+        
+        </div>
+    </li>
+
+
+
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>Sunkist®</h3>
+                    <figure >
+                        <a href="/sunkist-candies">
+                            <img src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/Sunkist_Logo.png"  border="0">
+                        </a>
+                    </figure>
+                <p>Made with real fruit pectin, Sunkist Candies are bursting with the juiciest natural flavors, no preservatives added. 
+                        <a class="jb-feature-brand-moreinfo" href="/sunkist-candies"> Click here for more information ►</a>
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_sunkist}}">Shop Now ►</a>
+        
+        </div>
+    </li>
+
+
+    
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>BeanBoozled®</h3>
+                    <figure >
+                        <a href="/beanboozled-challenge">
+                            <img src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/BeanBoozled_logo.png"  border="0">
+                        </a>
+                    </figure>
+                <p>Great tasting, energizing jelly beans and recovery crisps specifically designed to power you through your workouts and aid your recovery.
+                        <a class="jb-feature-brand-moreinfo" href="/beanboozled-challenge"> Click here for more information ►</a>
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_beanboozled}}">Shop Now ►</a>
+        
+        </div>
+    </li>
+
+
+    
+    
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>Sport Beans®</h3>
+                    <figure >
+                        <a href="/sport-beans">
+                            <img  src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/SportBeans_Logo.png"  border="0">
+                        </a>
+                    </figure>
+                <p>Great tasting, energizing jelly beans and recovery crisps specifically designed to power you through your workouts and aid your recovery.
+                        <a class="jb-feature-brand-moreinfo" href="/sport-beans"> Click here for more information ►</a>
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_spotbean}}">Shop Now ►</a>
+        
+        </div>
+    </li>
+
+
+
+
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>Cold Stone Creamery®</h3>
+                    <figure >
+                        <a href="/Cold-Stone-Creamery-Jelly-Beans">
+                            <img src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/cold_stone_square_Logo.png"  border="0">
+                        </a>
+                    </figure>
+                <p>Jelly Belly and Cold Stone Creamery® team up to create jelly beans that taste just like scrumptious Cold Stone treats. So cool and creamy you'll want to put them in a waffle cone!
+                        <a class="jb-feature-brand-moreinfo" href="/Cold-Stone-Creamery-Jelly-Beans"> Click here for more information ►</a>
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_cold_stone}}">Shop Now ►</a>
+        
+        </div>
+    </li>
+
+
+
+
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>Sugar Free Jelly Belly® Jelly Beans</h3>
+                    <figure >
+                        <a href="/sugar-free-candy">
+                            <img  src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/sf_logo.png"  border="0">
+                        </a>
+                    </figure>
+                <p>The calories and guilt are reduced, but not the flavor. Beans, gummies, jells, and more--take your pick. And forget about the extra 10 minutes on the stationary bike.
+                        <a class="jb-feature-brand-moreinfo" href="/sugar-free-candy"> Click here for more information ►</a>
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_sugarfree}}">Shop Now ►</a>
+        
+        </div>
+    </li>
+
+
+
+
+
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>Jelly Bean Chocolate Dips®</h3>
+                    <figure >
+                        <a href="/dips">
+                            <img src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/dips_logo.png"  border="0">
+                        </a>
+                    </figure>
+                <p>Jelly Belly beans take a dip in rich, dark chocolate to bring you a tidal wave of deliciousness! The marriage of America's favorite jelly beans with dark chocolate will delight chocolate lovers AND Jelly Belly fans! 
+                        <a class="jb-feature-brand-moreinfo" href="/dips"> Click here for more information ►</a>
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_choco_dips}}">Shop Now ►</a>
+        </div>
+    </li>
+
+
+
+
+
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>Disney©</h3>
+                    <figure >
+                        <a href="/disney/c/47">
+                            <img src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/exploreDisney.jpg"  border="0">
+                        </a>
+                    </figure>
+                <p>Celebrations and events – from birthdays to anniversaries, graduations to holidays – get even sweeter with the iconic Disney characters of Mickey Mouse, Minnie Mouse, Donald Duck, Goofy and Pluto. 
+                        
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_disney}}">Shop Now ►</a>
+        </div>
+    </li>
+
+
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>Belly Flops®</h3>
+                    <figure >
+                        <a href="/bellyflops/c/47">
+                            <img src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/myBelly.jpg" border="0">
+                        </a>
+                    </figure>
+                <p>Did you ever wonder what happens to the Jelly Belly jelly beans that are a little less perfect? Or the ones that somehow escaped the Jelly Belly logo stamper? Well, those are our beloved Belly Flops! 
+                        
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_belly_flops}}">Shop Now ►</a>
+        </div>
+    </li>
+
+
+
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>Harry Potter™ Bertie Bott's</h3>
+                    <figure >
+                        <a href="bertiebotts/c/4">
+                            <img src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/potterBrand.jpg"  border="0">
+                        </a>
+                    </figure>
+                <p>Muggles rejoice – the boy wizard's favorite candies are here! Bertie Bott's Every Flavour Beans™ features truly magical flavours, while the Chocolate Frogs include collectible trading cards – the lucky might get Dumbledore!
+                        <a class="jb-feature-brand-moreinfo" href="/flavor-guides?guide=bertieBotts"> Click here for more information ►</a>
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_harryporter}}">Shop Now ►</a>
+        </div>
+    </li>
+
+
+    
+
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>Sanrio Hello Kitty®</h3>
+                    <figure >
+                        <a href="/jellybellyjellybeans_hellokitty/0">
+                            <img src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/exploreKitty.jpg"  border="0">
+                        </a>
+                    </figure>
+                <p>Hello Kitty’s favorite red, pink and white Jelly Belly jelly bean flavors create her personal mix and she keeps them in her own Hello Kitty candy dishes. Our Hello Kitty® Collection – a sweet treat for any fashionista!
+                      
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_hello_kitty}}">Shop Now ►</a>
+        </div>
+    </li>
+
+ 
+    
+
+
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            
+            <div class="details">
+                <h3>TABASCO®</h3>
+                    <figure >
+                        <a href="/tabasco/0">
+                            <img src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/exploreTabasco.jpg"  border="0">
+                        </a>
+                    </figure>
+                <p>Jelly Belly® TABASCO® Jelly Beans are as spicy as the iconic sauce itself. Take a walk on the wild side and try the beans drenched in rich dark chocolate – a surprisingly tasty flavor combination. 
+                       
+                </p>
+            </div>
+            <a class="jb-feature-brand-shopnow" href="{{themeSettings.explore_url_tobasco}}">Shop Now ►</a>
+        </div>
+    </li>
+
+
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+

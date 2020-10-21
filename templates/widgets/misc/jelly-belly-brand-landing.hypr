@@ -1,0 +1,24 @@
+<div class="brand-landing">
+    <div class="brand-landing-widget" {% if not model.config.sidebanner%}style="width:100%;display:block; float:none;"{% endif %}>
+        <div>
+            <img src="{{model.config.brandlogo}}"/>
+        </div>
+        <h1>{{model.config.brandname|safe}}</h1>
+        <p>{{model.config.description|safe}}</p>
+        <div>
+            {% for bean in model.config.data %}  
+                <div class="beanImg">
+                    <img src="{{bean.imgUrl}}"/>
+                    <a {%if bean.link != '' %}href="{{bean.link}}"{% else %} style="color:#000;"{%endif%}>{{bean.name}}</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% if model.config.sidebanner %}
+        <div class="brand-landing-right-hero">
+            <img src="{{model.config.sidebanner}}"/>
+        </div>
+    {% endif %}
+</div>
+
+

@@ -1,0 +1,29 @@
+
+<div flavour-guide-widget class="flavour-guide-widget-parent">
+    <div class="flavour-guide-widget-title">
+        <h3>{{Model.config.header|safe}}</h3>
+        <p class="mz-desktop">open/close</p>
+        <p class="mz-mobile">-</p>
+    </div>
+         
+    <div class="flavour-guide-widget-container" style="display: none;">
+        <div class="flavour-guide-widget-description">
+            {{Model.config.description|safe}}
+        </div>
+        <div class="flavour-guide-widget-item-listing">
+            {% for item in Model.config.data %} 
+                <a {% if item.link %}href="{{item.link}}" {% endif %} class="flavour-guide-widget-item-link">
+                    <div style="background-image:url('{{item.imageUrl}}');" class="flavour-guide-widget-item-imgcontainer">
+                        <p {% if not item.link %}style="color:#000;"{% endif %}>{{item.name}}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        <div class="flavour-guide-widget-footerlinks">
+            <a href="{{Model.config.shoplink}}"><span>Shop</span>{{Model.config.shoplabel|safe}} ►</a>
+            <a href="{{Model.config.findstorelink}}"><span>Find</span>a store near you ►</a>
+        </div>
+    </div>
+</div>
+{% require_script "widgets/jelly-belly-flavourguides" %}
+

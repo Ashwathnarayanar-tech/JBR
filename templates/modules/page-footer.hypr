@@ -1,0 +1,306 @@
+{% if pageContext.cmsContext.template.path == 'login' %}
+
+
+
+{%else%}
+
+<footer class="mz-pagefooter">
+    <div class="mz-footer-row"> 
+        {% block mz-footer-row2 %}
+            <div class="mz-mobile jblogo"></div>
+        <div class="mz-footer-row2">
+            <div class="mz-wrapper">
+                <!-- FOOTER 1ST COL -->
+                    <div class="mz-column mz-column-1">
+                        <div class="mz-desktop">
+					    </div>
+					    <div class="mz-mobile">
+					    </div>
+					     <ul class="mz-footer-links">
+					    {% dropzone "dropzone_area_footer_1" scope="site" %}
+					    </ul>
+                    </div>
+                    <!-- FOOTER 2ND COL -->
+    				<div class="mz-column mz-column-2">
+    					<div class="mz-desktop">
+    					</div>	
+    					<div class="mz-mobile">
+    					</div>	
+    					<ul class="mz-footer-links">
+    				        {% dropzone "dropzone_area_footer_2" scope="site" %}	
+    					</ul>
+    				</div>
+				    <!-- FOOTER 3RD COL --> 
+    				<div class="mz-column mz-column-3">
+    					<div class="mz-desktop">
+    					</div>
+    					<div class="mz-mobile">
+    					</div>
+    					<ul class="mz-footer-links">
+    					{% dropzone "dropzone_area_footer_3" scope="site" %}
+    					</ul>
+    				</div>
+    				<!-- FOOTER 4TH COL -->
+    				<div class="mz-column mz-column-4">
+    					<div class="mz-desktop">
+    						
+    					</div>	
+    					<div class="mz-mobile">
+    					</div>	
+    					<ul class="mz-footer-links">
+    					{% dropzone "dropzone_area_footer_4" scope="site" %}
+    					</ul>
+    				</div>
+    				<div class="mz-column mz-flag">
+    					<div class="mz-desktop">
+    					</div>	
+    					<div class="mz-mobile">
+    					</div>
+    					{% dropzone "inernational-flag" scope="site" %} 
+    				</div>
+    				{% comment %} Bugzilla – Bug 140
+
+    				<div class="mz-column mz-flag">
+    					<div class="mz-desktop">
+    						<span class="mz-footer-title">Popular Links</span>
+    					</div>	
+    					<div class="mz-mobile">
+    						<span class="mz-footer-title">Popular Links</span>
+    					</div>
+    					<ul class="mz-footer-links mz-poluarlinks mz-desktop">
+    					    <li><a title="Bean Machines and Dispensers" href="javascript:void(0)">Bean Machines and Dispensers</a></li>
+                            <li><a title="BeanBoozled Jelly Beans" href="javascript:void(0)">BeanBoozled Jelly Beans</a></li>
+                            <li><a title="Beanware and Apparel" href="javascript:void(0)">Beanware and Apparel</a></li>
+                            <li><a title="Bulk Candy" href="javascript:void(0)">Bulk Candy</a></li>
+                            <li><a title="Confections" href="javascript:void(0)">Confections</a></li>
+                            <li><a title="Gift Boxes" href="javascript:void(0)">Gift Boxes</a></li>
+                            <li><a title="Gifts by Price" href="javascript:void(0)">Gifts by Price</a></li>
+                            <li><a title="Holiday Gift Guide" href="javascript:void(0)">Holiday Gift Guide</a></li>
+                            <li><a title="Jelly Belly Bargain Outlet" href="javascript:void(0)">Jelly Belly Bargain Outlet</a></li>
+                            <li><a title="Jelly Belly Jelly Beans" href="javascript:void(0)">Jelly Belly Jelly Beans</a></li>
+                            <li><a title="Occasions" href="javascript:void(0)">Occasions</a></li>
+                            <li><a title="Sport Beans" href="javascript:void(0)">Sport Beans</a></li>
+                            <li><a title="Sugar Free Candy" href="javascript:void(0)">Sugar Free Candy</a></li>
+                            <li><a title="Sunkist Candy" href="javascript:void(0)">Sunkist Candy</a></li>
+        				</ul>
+    				</div>
+    				{% endcomment %} 
+    				<!--Sie Map-->
+    				{% comment %} 
+    				<div class="mz-columnfull"> 
+    					<div class="mz-desktop">
+    						<span class="mz-footer-title"><a href="void:javascript();" title="Site Map">Site Map</a>
+    						<span id="siteMapToggle" class="mz-desktop">+</span></span>
+    					</div>	
+    					<div class="mz-mobile">
+    						<span class="mz-footer-title"><a href="void:javascript();" title="Site Map">Site Map</a></span>
+    					</div>
+    					<ul class="mz-footer-links datalink mz-desktop">
+    					    <li><span class="mz-footer-title">
+    					    <span class="mz-desktop">Jelly Belly Jelly Beans </span>
+    					    <span class="mz-mobile sublinktext">Jelly Belly Jelly Beans </span>
+    					    <span class="mz-datlinktoogle mz-mobile">+</span></span>
+    					    <ul class="mz-footer-links  mz-desktop">
+        					    <li><a title="Jelly Bean Chocolate Dips" href="javascript:void(0)">Jelly Bean Chocolate Dips</a></li>
+                                <li><a title="Machines and Dispensers" href="javascript:void(0)">Machines and Dispensers</a></li>
+                                <li><a title="Harry Potter and Bertie Bott's" href="javascript:void(0)">Harry Potter and Bertie Bott's</a></li>
+                                <li><a title="Individual Flavors" href="javascript:void(0)">Individual Flavors</a></li>
+                                <li><a title="Ronald Reagan Centennial Items" href="javascript:void(0)">Ronald Reagan Centennial Items</a></li>
+                                <li><a title="Rookie Flavors" href="javascript:void(0)">Rookie Flavors</a></li>
+                                <li><a title="Mixes" href="javascript:void(0)">Mixes</a></li>
+                                <li><a title="Re-Sealable Tubs" href="javascript:void(0)">Re-Sealable Tubs</a></li>
+                                <li><a title="Bags" href="javascript:void(0)">Bags</a></li>
+                                <li><a title="Small Bags and Boxes" href="javascript:void(0)">Small Bags and Boxes</a></li>
+                                <li><a title="Bulk" href="javascript:void(0)">Bulk</a></li>
+                                <li><a title="Sugar Free" href="javascript:void(0)">Sugar Free</a></li>
+                                <li><a title="Cold Stone Jelly Beans" href="javascript:void(0)">Cold Stone Jelly Beans</a></li>
+                                <li><a title="Gift Boxes" href="javascript:void(0)">Gift Boxes</a></li>
+                                <li><a title="Jars Tins and Other Containers" href="javascript:void(0)">Jars Tins and Other Containers</a></li>
+                            </ul>
+                            </li>
+                            <li><span class="mz-footer-title">
+                            <span class="mz-desktop">Confections</span>
+                            <span class="mz-mobile sublinktext">Confections</span>
+                            <span class="mz-datlinktoogle mz-mobile">+</span></span>
+    					    <ul class="mz-footer-links  mz-desktop">
+        					   <li><a title="Confections Jelly Bean Chocolate Dips" href="javascript:void(0)">Jelly Bean Chocolate Dips</a> </li>
+                                <li><a title="Confections Bulk Confections" href="javascript:void(0)">Bulk Confections</a> </li>
+                                <li><a title="Confections Re-Sealable Tubs" href="javascript:void(0)">Re-Sealable Tubs</a> </li>
+                                <li><a title="Confections Bags" href="javascript:void(0)">Bags</a> </li>
+                                <li><a title="Confections Gift Boxes" href="javascript:void(0)">Gift Boxes</a> </li>
+                                  <li><a href="javascript:void(0)" title="Confections Novelty Candy">Novelty Candy</a> </li>
+                                
+                            </ul>
+                            </li>
+                            <li><span class="mz-footer-title">
+                            <span class="mz-desktop">Sugar Free Candy</span>
+                            <span class="mz-mobile sublinktext">Sugar Free Candy</span>
+                            <span class="mz-datlinktoogle mz-mobile">+</span></span>
+    					    <ul class="mz-footer-links  mz-desktop">
+        					    <li><a title="Sugar Free Candy Jelly Beans" href="javascript:void(0)">Jelly Beans</a> </li>
+                                <li><a title="Sugar Free Candy Sugar Free Gummis" href="javascript:void(0)">Sugar Free Gummis</a> </li>
+                                <li><a title="Sugar Free Candy Gift Boxes and Baskets" href="javascript:void(0)">Gift Boxes and Baskets</a></li>
+                            </ul>
+                            </li>
+                            <li><span class="mz-footer-title">
+                            <span class="mz-desktop">Sunkist Candy</span>
+                            <span class="mz-mobile sublinktext">Sunkist Candy</span>
+                            <span class="mz-datlinktoogle mz-mobile">+</span></span>
+    					    <ul class="mz-footer-links  mz-desktop">
+        					     <li><a title="Sunkist Candy Bulk Sunkist Candy" href="javascript:void(0)">Bulk Sunkist Candy</a> </li>
+                                        <li><a title="Sunkist Candy Re-Sealable Tubs" href="javascript:void(0)">Re-Sealable Tubs</a> </li>
+                                        <li><a title="Sunkist Candy Bags" href="javascript:void(0)">Bags</a> </li>
+                                        <li><a title="Sunkist Candy Boxes and More" href="javascript:void(0)">Boxes and More</a> </li>
+                            </ul>
+                            </li>
+                            
+                             <li><span class="mz-footer-title">
+                             <span class="mz-desktop">Sport Beans</span>
+                             <span class="mz-mobile sublinktext">Sport Beans</span>
+                             <span class="mz-datlinktoogle mz-mobile">+</span></span>
+    					    <ul class="mz-footer-links  mz-desktop">
+                                        <li><a href="javascript:void(0)" title="Sport Beans Cases">Cases</a> </li>
+                                        <li><a href="javascript:void(0)" title="Sport Beans Accessories">Accessories</a> </li>
+                            </ul>
+                            </li>
+                            
+                            <li><span class="mz-footer-title">
+                            <span class="mz-desktop">BeanBoozled Jelly Beans</span>
+                            <span class="mz-mobile sublinktext">BeanBoozled Jelly Beans</span>
+                            <span class="mz-datlinktoogle mz-mobile">+</span></span>
+    					    <ul class="mz-footer-links  mz-desktop">
+        					     <li><a title="BeanBoozled Jelly Beans Cases" href="javascript:void(0)">Cases</a></li>
+                            </ul>
+                            </li>
+                            <li><span class="mz-footer-title">
+                            <span class="mz-desktop">Gift Boxes</span>
+                            <span class="mz-mobile sublinktext">Gift Boxes</span>
+                            <span class="mz-datlinktoogle mz-mobile">+</span></span>
+    					    <ul class="mz-footer-links  mz-desktop">
+                                        <li><a title="Gift Boxes Christmas Gift Boxes" href="javascript:void(0)">Christmas Gift Boxes</a> </li>
+                                        <li><a title="Gift Boxes 5 and 10 Flavors" href="javascript:void(0)">5 and 10 Flavors</a> </li>
+                                        <li><a title="Gift Boxes 20 and 25 Flavors" href="javascript:void(0)">20 and 25 Flavors</a> </li>
+                                        <li><a title="Gift Boxes 40 and 50 Flavors" href="javascript:void(0)">40 and 50 Flavors</a> </li>
+                                        <li><a title="Gift Boxes 40 and 50 Flavors" href="javascript:void(0)">Other Gift Boxes</a> </li>
+                                 
+                            </ul>
+                            </li>
+                            <li><span class="mz-footer-title">
+                            <span class="mz-desktop">Bulk Candy</span>
+                            <span class="mz-mobile sublinktext">Bulk Candy</span>
+                            <span class="mz-datlinktoogle mz-mobile">+</span></span>
+    					    <ul class="mz-footer-links  mz-desktop">
+                                       <li><a title="Bulk Candy Bulk Confections" href="javascript:void(0)">Bulk Confections</a> </li>
+                                        <li><a title="Bulk Candy Bulk Sunkist Candy" href="javascript:void(0)">Bulk Sunkist Candy</a> </li>
+                                        <li><a title="Bulk Candy Bulk Jelly Beans" href="javascript:void(0)">Bulk Jelly Beans</a> </li>
+                                        <li><a title="Bulk Candy Bulk Sugar-Free Candies" href="javascript:void(0)">Bulk Sugar-Free candies</a></li>
+                            </ul>
+                            </li>
+                            <li><span class="mz-footer-title">
+                            <span class="mz-desktop">Beanware and Apparel</span>
+                            <span class="mz-mobile sublinktext">Beanware and Apparel</span>
+                            <span class="mz-datlinktoogle mz-mobile">+</span></span>
+    					    <ul class="mz-footer-links  mz-desktop">
+                                       <li><a title="Beanware and Apparel Apparel" href="javascript:void(0)">Apparel</a> </li>
+                                        <li><a title="Beanware and Apparel Sports Gear" href="javascript:void(0)">Sports Gear</a> </li>
+                                        <li><a title="Beanware and Apparel Machines and Dispensers" href="javascript:void(0)">Machines and Dispensers</a> </li>
+                                        <li><a title="Beanware and Apparel Bath and Body" href="javascript:void(0)">Bath and Body</a> </li>
+                                        <li><a title="Beanware and Apparel Toys and Games" href="javascript:void(0)">Toys and Games</a> </li>
+                                        <li><a title="Beanware and Apparel Bottles and Cups" href="javascript:void(0)">Bottles and Cups</a> </li>
+                                        <li><a title="Beanware and Apparel Stuffed Toys" href="javascript:void(0)">Stuffed Toys</a> </li>
+                                        <li><a title="Beanware and Apparel Jewelry and Pins" href="javascript:void(0)">Jewelry and Pins</a> </li>
+                                        <li><a title="Beanware and Apparel Keychains and Magnets" href="javascript:void(0)">Keychains and Magnets</a> </li>
+                                        <li><a title="Beanware and Apparel Other Stuff" href="javascript:void(0)">Other Stuff</a> </li>
+                            </ul>
+                            </li>
+                             <li><span class="mz-footer-title">
+                             <span class="mz-desktop">Jelly Belly Bargain Outlet</span>
+                             <span class="mz-mobile sublinktext">Jelly Belly Bargain Outlet</span>
+                             <span class="mz-datlinktoogle mz-mobile">+</span></span>
+    					    <ul class="mz-footer-links  mz-desktop">
+                                       <li><a title="Seasonal Outlet Candy" href="javascript:void(0)">Seasonal Outlet Candy</a> </li>
+                                        <li><a title="Belly Flops" href="javascript:void(0)">Belly Flops</a> </li>
+                                        <li><a title="Hodgepodge" href="javascript:void(0)">Hodgepodge</a> </li>
+                            </ul>
+                            </li>
+                            <li><span class="mz-footer-title">
+                            <span class="mz-desktop">Gifts by Price</span>
+                            <span class="mz-mobile sublinktext">Gifts by Price</span>
+                            <span class="mz-datlinktoogle mz-mobile">+</span></span>
+    					    <ul class="mz-footer-links  mz-desktop">
+                                        <li><a title="Gifts by Price Under $10" href="javascript:void(0)">Under $10</a> </li>
+                                        <li><a title="Gifts by Price Under $20" href="javascript:void(0)">Under $20</a> </li>
+                                        <li><a title="Gifts by Price Under $50" href="javascript:void(0)">Under $50</a> </li>
+                                        <li><a title="Gifts by Price Over $50" href="javascript:void(0)">Over $50</a> </li>
+                            </ul>
+                            </li>
+                            <li><span class="mz-footer-title">
+                            <span class="mz-desktop">Occasions</span>
+                            <span class="mz-mobile sublinktext">Occasions</span>
+                            <span class="mz-datlinktoogle mz-mobile">+</span></span>
+                            <ul class="mz-footer-links  mz-desktop">
+                              <li><a title="Occasions Back to School" href="javascript:void(0)">Back to School</a> </li>
+                                        <li><a title="Occasions Holiday Gifts" href="javascript:void(0)">Holiday Gifts</a> </li>
+                                        <li><a title="Occasions Birthday Gifts" href="javascript:void(0)">Birthday Gifts</a> </li>
+                                        <li><a title="Occasions Business Gifts" href="javascript:void(0)">Business Gifts</a> </li>
+                                        <li><a title="Occasions Graduation Gifts" href="javascript:void(0)">Graduation Gifts</a> </li>
+                                        <li><a title="Occasions Weddings" href="javascript:void(0)">Weddings</a> </li>
+                                        <li><a title="Occasions Baby Showers" href="javascript:void(0)">Baby Showers</a> </li>
+                            </ul>
+                            </li>
+                            <li><span class="mz-footer-title">
+                            <span class="mz-desktop">Bean Machines and Dispensers</span>
+                            <span class="mz-mobile sublinktext">Bean Machines and Dispensers</span>
+                            <span class="mz-datlinktoogle mz-mobile">+</span></span>
+                            <ul class="mz-footer-links  mz-desktop">
+                               <li><a title="Bean Machines and Dispensers Machines" href="javascript:void(0)">Machines</a> </li>
+                                        <li><a title="Bean Machines and Dispensers Dispensers" href="javascript:void(0)">Dispensers</a> </li>
+                            </ul>
+                            </li>
+                            <li><span class="mz-footer-title">
+                            <span class="mz-desktop">Holiday Gift Guide</span>
+                            <span class="mz-mobile sublinktext">Holiday Gift Guide</span>
+                            <span class="mz-datlinktoogle mz-mobile">+</span></span>
+                            <ul class="mz-footer-links  mz-desktop">
+                                        <li><a title="Holiday Gift Guide Machines and Dispensers" href="javascript:void(0)">Machines and Dispensers</a> </li>
+                                        <li><a title="Holiday Gift Guide Holiday Sale" href="javascript:void(0)">Holiday Sale</a> </li>
+                                        <li><a title="Holiday Gift Guide Christmas Candy" href="javascript:void(0)">Christmas Candy</a> </li>
+                                        <li><a title="Holiday Gift Guide Holiday Candy By Color" href="javascript:void(0)">Holiday Candy By Color</a> </li>
+                                        <li><a title="Holiday Gift Guide Holiday Candy Bags" href="javascript:void(0)">Holiday Candy Bags</a> </li>
+                                        <li><a title="Holiday Gift Guide Stocking Stuffers" href="javascript:void(0)">Stocking Stuffers</a> </li>
+                                        <li><a title="Holiday Gift Guide Hanukkah Gifts" href="javascript:void(0)">Hanukkah Gifts</a> </li>
+                                        <li><a title="Holiday Gift Guide Gift Boxes and Baskets" href="javascript:void(0)">Gift Boxes and Baskets</a> </li>
+                                        <li><a title="Holiday Gift Guide Tins and Tubes" href="javascript:void(0)">Tins and Tubes</a> </li>
+                                        <li><a title="Holiday Gift Guide Sugar-Free Candy" href="javascript:void(0)">Sugar-Free Candy</a> </li>
+                                        <li><a title="Holiday Gift Guide Gifts for Men" href="javascript:void(0)">Gifts for Men</a> </li>
+                                        <li><a title="Holiday Gift Guide Gifts for Women" href="javascript:void(0)">Gifts for Women</a> </li>
+                                        <li><a title="Holiday Gift Guide Gifts for Children" href="javascript:void(0)">Gifts for Children</a> </li>
+                                        <li><a title="Holiday Gift Guide Gifts for Athletes" href="javascript:void(0)">Gifts for Athletes</a> </li>
+                            </ul>
+                            </li>
+        				</ul>
+    				</div>
+                    {% endcomment %} 	
+                   <div class="clearfix"></div>
+                    <!-- FOOTER 2ND COL -->
+		
+            </div>
+        </div>
+        {% endblock mz-footer-row2 %} 
+ 
+     <div class="footer_copyright">
+      <div class="mz-mobile">
+        <p>Toll free: 1-800-522-3267</p> 
+        &copy; 2011-<span>{% now Y %}</span> Jelly Belly Candy Company. All Rights Reserved
+      </div>
+      <div class="mz-desktop">
+            &copy; 2011-<span>{% now Y %}</span> Jelly Belly Candy Company. All Rights Reserved
+      </div>
+  
+    </div>
+    </div>
+</footer>
+
+{%endif%}
+
+

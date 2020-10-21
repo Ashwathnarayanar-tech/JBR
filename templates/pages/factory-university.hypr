@@ -1,0 +1,132 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <div class="carnival-details">
+             {% dropzone "dropzone_area1-factory-university" scope="page" %}
+    </div> 
+    <article>
+        <h1 class="mz-pagetitle">Jelly Belly University</h1>
+        <figure class="vertImage">
+            <img src="/resources/images/visit-us/JB_University.png">
+        </figure>
+        <h3>EARN YOUR DEGREE IN BEANOLOGY&reg; BY ENROLLING IN JELLY BELLY UNIVERSITY!</h3>
+        <p>
+            For the candy lover who seeks the exclusive and personal travel experience, the Jelly Belly Visitor Center in Fairfield, California, offers a behind-the-scenes factory tour. 
+            The guided tour leads visitors through the factory for an up close and personal experience like no other. Limited to 6 (six) participants, the Jelly Belly University (JBU) 
+            tour gives fans a real education on how American's favorite gourmet jelly bean is made.
+        </p>
+        <p>
+            Participants will be given lab coats, gloves and hair nets before setting out on the guided tour; and will soon find themselves in the heart of the factory and watch while master 
+            confectioners create Jelly Belly and other delicious confections.
+        </p>
+        <p>
+            At the end of the JBU tour, which can take over one hour, visitors will receive a discount on a souvenir photo and a discount card for shopping in the retail store.
+        </p>
+        <p>
+            The cost of the JBU tour is $47 per person, plus a ticket processing fee.  Children must be at least 6 years or older to enroll. <span class="red bold">Adult guardian/parent MUST attend with any/all minors.</span> No sandals, high heels, or flip-flops please. 
+            The factory is wheelchair accessible. Groups of less than 6 participants will be grouped together.
+        </p>
+        <p>
+            Dates are available 6-8 weeks in advance.
+        </p>
+        <p>
+            JBU tours are available Monday through Friday only, except certain holidays and scheduled maintenance shut down periods. Production schedule subject to change without notice. 
+        </p>
+        <hr>
+        <h3>JBU Floor Tour Guidelines:</h3>
+        <ol class="contentList">
+            <li>Reservations are required. Walk-ins are accepted only if a specified tour time has not been booked or in the event of a cancellation or "no-show."</li>
+            <li>Check in at least 10 minutes prior to tour time.</li>
+            <li>Children must be at least 6 years of age to participate. <span class="red bold">Adult guardian/parent MUST attend with any/all minors.</span></li>
+            <li>For your safety, closed-toe shoes and pants are required for factory floor access. No sandals, high heels, or flip-flops please.</li>
+            <li>Each guest must have proper attire prior to entering the factory. Lab coats, hair nets, beard/mustache nets, and other coverings provided by Jelly Belly.</li>
+            <li>Groups are limited to 6 people.</li>
+            <li>Each adult must sign a waiver prior to starting the factory tour and must sign for each attending minor child.</li>
+            <li>Each tour is guided by a "Dean of the Bean"; instructions and other guidelines must be followed without exception.</li>
+            <li>Food, drink and still and video photography are prohibited on the factory floor.</li>
+            <li>Jewelry, piercings, watches or other loose items must be stored prior to entering the factory. Lockers will be provided for guests to store these or any other items.</li>
+            <li>Persons with high sensitivity to sugar, tree nuts, and cornstarch, should be aware of possible exposure to air-born particulates and take this into consideration prior to taking the JBU factory floor tour. In addition, guests may also be exposed to heat; those with sensitivity to higher temperatures should also be aware of possible exposure for their safety.</li>
+            <li>Persons with colds or severe allergies may be asked to wear face masks prior to entering the factory.</li>
+        </ol>
+        <hr>
+        <h3>FAQs:</h3>
+        <h4>What are the Jelly Belly University (JBU) tour times?</h4>
+        <p>Standard tour times are 9:30am, 11:30am and 1:30pm. Additional times may be added as they become available.</p>
+        <h4>Is the tour available on weekends?</h4>
+        <p>
+            Jelly Belly University tours are designed to showcase our factory in full production. Typically there is no production on weekends; 
+            therefore we do not conduct behind-the-scenes tours on Saturdays and Sundays.
+        </p>
+        <h4>What age requirements are there for the JBU Tour?</h4>
+        <p>
+            Each participant must be at least 6 years of age in order to participate. This has been mandated for the safety of our guests and complies with factory policy. 
+            <span class="red bold">Adult guardian/parent MUST attend with any/all minors.</span>
+        </p>
+        <h4>How many people may we have in our group?</h4>
+        <p>Tours are limited to 6 people per tour time.</p>
+        <h4>Is the tour private?</h4>
+        <p>Tours will have no more than 6 people; however, individual groups of less than 6 participants will be grouped together.</p>
+        <h4>How long is the tour?</h4>
+        <p>Tours are between 60 and 90 minutes long. Please plan accordingly.</p>
+        <h4>Is the tour wheelchair accessible?</h4>
+        <p>
+            Yes. Our tour route has been designed to be ADA compliant. Wheelchairs or other man-powered devices are acceptable. Motorized devices may require advance notice and approval. 
+            Jelly Belly does not provide wheelchairs.
+        </p>
+        <h4>How early should I arrive?</h4>
+        <p>
+            Please plan to arrive at least 10 minutes prior to your scheduled tour time. The Jelly Belly Candy Company and Visitor Center reserves the right to offer unfilled 
+            spots to walk-in requests.
+        </p>
+        <h4>What are the clothing requirements?</h4>
+        <p>To participate in the factory floor tour we require that each participant wear closed-toe shoes. No sandals, high heels, or flip-flops please. Long pants are preferred.</p>
+        <h4>Where do I check in for the tour?</h4>
+        <p>Please check in for your tour at the Information Booth located just inside the main entrance of the Visitor Center.</p>
+        <h4>How far in advance can I book my tour?</h4>
+        <p>Available tour dates and times will be listed 6-8 weeks in advance.</p>
+        <h4>What medical restrictions should I be aware of?</h4>
+        <p>
+            People with severe food allergies to tree nuts, sugar and corn may want to avoid the floor tour, as there may be airborne tree nut, sugar and cornstarch particulates. 
+            Please be aware that this plant processes tree nuts. Portions of the tour will also expose guests to high temperatures; those sensitive to heat should be aware of this 
+            and plan accordingly. Persons with colds, coughs or other communicable illnesses may be asked to wear a facemask. Those who have trouble walking for extended periods, 
+            should consider the more than ¼-mile length of the JBU tour and plan accordingly.
+        </p>
+        <h4>If I am traveling with a pet, what are my options?</h4>
+        <p>
+            Pets, other than guide dogs, are not allowed in the Visitor Center. For those persons with service dogs, the Visitor Center will provide a kennel to house 
+            the animal until the JBU tour is complete. Please DO NOT leave pets in vehicles unattended.
+        </p>
+        <div class="carnival-details txt-left">
+            <h2 class="indent">Pricing and Limitations</h2>
+            <p> The cost of the JBU tour is $47 per person, plus a ticket processing fee.  You must be at least 6 years old to enroll. Closed-toe shoes and pants are required. No sandals or flip-flops please. 
+                <span class="red bold">Adult guardian/parent MUST attend with any/all minors.</span>
+            </p>
+            <p>Certain restrictions apply. Group sizes are limited.</p>
+            <div style="text-align:center;">
+                <a target="_blank" href="https://www.brownpapertickets.com/producer/8313">
+                Click here to enroll!</a>
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+

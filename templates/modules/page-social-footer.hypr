@@ -1,0 +1,88 @@
+{% if pageContext.cmsContext.template.path == 'login' %}
+
+
+
+{%else%}
+
+
+
+<div class="jb-socialize" id="ll-footer">
+  {% dropzone zoneId="evrgreen-footer-buttons" scope="site" %}
+
+{% comment %}
+        <div class="jb-social-links-desktop">
+            <div class="jb-tours-shipping">
+                <ul>
+                    <li> <a class="free-tours" href="/visitjellybelly"> free tours </a><span class="jb-tours"></span> </li>
+                    <li> <a class="free-ship" href="/shipping-information#ShipGround"> free shipping</a><span class="jb-shipping"></span> </li>
+                    <li> <a class="find-store" href="/StoreLocator"> store locator</a><span class="jb-store"></span> </li>
+                </ul>
+            </div>
+
+            <div class="jb-follow-us">
+                <ul >
+                    <li><span>follow us on</span> </li>
+                    <li>
+                        <a href="http://www.pinterest.com/jellybelly" class="jb-pin" target="_blank"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.facebook.com/jellybelly" class="jb-fb" target="_blank"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.youtube.com/jellybelly" class="jb-utube" target="_blank"></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+jellybelly/posts" class="jb-plus" target="_blank"></a>
+                    </li>
+                    <li>
+                        <a href="http://instagram.com/JellyBellyCandyCo" class="jb-insta" target="_blank"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.linkedin.com/company/jelly-belly-candy-company" class="jb-link" target="_blank"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {% endcomment %}
+        
+        {% if pageContext.isDesktop %}
+        <div class="jb-center-logo mz-desktop">
+            <img class="jb-center-logo-img toggleModal lazy-load" src="{{ siteContext.cdnPrefix }}/resources/images/new-logo-images/jb_logo_web_footer_revised.png?quality=20" data-src="{{ siteContext.cdnPrefix }}/resources/images/new-logo-images/jb_logo_web_footer_revised.png?quality=90" alt="" nopin = "nopin" />
+        </div>
+        {% endif %}
+  
+    <div class="modal">
+
+        <header>
+            <h2> Client Details</h2>
+            <button id="close-popup" class="close">Close</button>
+        </header>
+
+        <div class="jb-userdetails">
+            <p id="osview3"> </p>
+            <p id="osview"></p>
+            <p id="osview2"> </p>
+        </div>
+
+    </div>
+    
+    {% if pageContext.isMobile or pageContext.isTablet %}
+    <div class="jb-social-links-mobile">
+        <div class="jb-center-logo">
+            <img class="jb-center-logo-img toggleModal lazy-load" src="{{ siteContext.cdnPrefix }}/resources/images/new-logo-images/jb_logo_web_footer_mobile_revised.png?quality=20" data-src="{{ siteContext.cdnPrefix }}/resources/images/new-logo-images/jb_logo_web_footer_mobile_revised.png?quality=90" alt="footer-logo" width="100" height="55" nopin="nopin" />
+        </div>
+
+    </div>
+    {% endif %}
+</div>
+
+{%endif%}
+
+
+
+
+
+
+
+
+

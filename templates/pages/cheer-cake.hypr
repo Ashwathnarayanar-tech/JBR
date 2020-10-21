@@ -1,0 +1,74 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Cheers To You Cupcakes</h1>
+    <article class="carnival-details txt-left">
+        <h2>Cheers To You Cupcakes</h2>
+        <hr>
+        <div class="baking-recipe">
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Cheers To You Cupcakes/cheers_cupcakes.jpg">
+            </figure>
+            <p>Have a happy new year, any time of year! A few jelly beans, a few confections and some martini glasses and you’re ready to create New Year’s treats for partiers of all ages.</p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>1 tablespoon light corn syrup</li>
+                <li>1/4 cup finely chopped coconut</li>
+                <li>1/4 cup white coarse decorating sugar</li>
+                <li>1 can (16 oz) vanilla frosting</li>
+                <li>Assorted food colors</li>
+                <li>1 frozen pound cake (16 ounce), thawed</li>
+                <li>1/2 cup each (about 4 oz) Jelly Belly jelly beans in flavors: <a target="_blank" href="/search/?query=berry blue&amp;asug=">Berry Blue</a> | <a target="_blank" href="/search/?query=sunkist lime&amp;asug=">Sunkist® Lime</a> | <a target="_blank" href="/search/?query=strawberry cheesecake&amp;asug=">Strawberry Cheesecake</a>.</li>
+                <li>4 <a target="_blank" href="/search/?query=red apple&amp;asug=">Red Apple</a> Jelly Belly jelly beans</li>
+                <li>10 green <a target="_blank" href="/search/?query=jordan almonds&amp;asug=">Jordan Almonds</a></li>
+                <li>2 green and 1 yellow <a target="_blank" href="/search/?query=fruit gems&amp;asug=">Sunkist® Fruit Gems®</a></li>
+                <li>4 white Jelly Belly <a target="_blank" href="/search/?query=licorice pastels&amp;asug=">Licorice Pastels</a></li>
+                <li>1/4 cup (about 2 oz) Jelly Belly <a target="_blank" href="/search/?query=champagne bubbles&amp;asug=">Champagne Bubbles</a></li>
+                <li>2 red Jelly Belly <a target="_blank" href="/search/?query=wiggle worms&amp;asug=">Wiggle Worms®</a></li>
+                <li>2 lollipop sticks</li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>Lightly brush the rim of four 8 ounce martini glasses with the corn syrup. Dip the rims of 2 of the glasses in the chopped coconut and 2 glasses in the coarse sugar; set aside.</li>
+                <li>
+                    Spoon 2 tablespoons vanilla frosting into a small zipper bag. Press out the excess air and seal. Divide the remaining vanilla frosting into 3 bowls.
+                    Tint one bowl pink, one light blue and one light green with the food coloring. Cover the frosting with plastic wrap to prevent drying.
+                </li>
+                <li>
+                    Place the pound cake on a clean work surface, flat side down. Slice horizontally into thirds to make 3 thin layers. Use a 4-inch round cookie cutter,
+                    cut out 6 circles of the pound cake. Take the scraps of cake and cut into 1/2-inch pieces.
+                </li>
+                <li>
+                    Working with one color of frosting at a time, heat the frosting in the microwave, stirring frequently, until the frosting is the texture of lightly whipped cream.
+                    Spoon about 2 tablespoons of the melted frosting into each martini glass; blue in the coconut rimmed glasses, pink in the sugar rimmed glasses, green in the plain glasses,
+                    and swirl the frosting to coat the inside of the glasses. Let frosting sit for a few minutes to set, and then working with one glass at a time, add some of the chopped cake
+                    to fill the bottom of one glass. Top with a cake circle, pressing down to make sure the cake is lower than the rim of the glass. Pour the remaining same color melted
+                    frosting on top of the cake in the glass to cover. Repeat with the remaining tinted frostings and cake in the other glasses.
+                </li>
+                <li>
+                    Garnish the pink glasses with the pink jelly beans along the inside edge of the glass. Arrange the green Jordan Almonds in the shape of a flower using a red jelly bean
+                    as the center of the flower. Wrap the Wiggle Worm around the lollipop stick securing at the top with a dot of frosting and a red jelly bean. Insert into the glass as the stirrer.
+                </li>
+                <li>
+                    Garnish the green glasses with a row of green jelly beans along the inside edge of the glass. Add a few Champagne Bubbles in the center with a few green Jelly Belly beans and some more sugar.
+                    Cut the yellow Sunkist Fruit Gem in half crosswise. Snip a very small corner from the bag with the vanilla frosting. Pipe lines on top of the cut Fruit Gem to look like a lemon slice.
+                    Add the candy lemon slice to the side of the glass.
+                </li>
+                <li>
+                    Garnish the blue glasses with a row of the blue jelly beans along the inside edge of the glass. To make the olive, trim the green Sunkist Fruit Gem into an oval.
+                    Cut the red jelly bean in half crosswise. Attach one half of the red jelly bean, cut side against a short end of the green candy oval for the olive.
+                    Press a white Licorice Pastel on either side of the green candy to look like a toothpick. Place on top of the glass.
+                </li>
+            </ol>
+            <h2>MAKES 6 Cupcakes</h2>
+            <hr>
+            
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+

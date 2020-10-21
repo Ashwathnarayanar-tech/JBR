@@ -1,0 +1,21 @@
+
+{% if model.items.length > 0 %}
+{% comment %}
+<p class="recenthead">Recently Viewed: </p>
+{% endcomment %}
+{% endif %}
+{% if model.items %}
+<div class="mz-productlist mz-productlist-carousel recentlyviewed">
+	{% if model.items.length > 0 %}
+	<ul class="mz-productlist-list mz-l-carousel">
+		{% for prod in model.items %}
+			<li class="mz-productlist-item mz_recently_viewed" data-mz-product="{{ prod.productCode }}">
+                {% include "modules/recentlyviewed" with model=prod %}
+            </li> 
+		{% endfor %}
+	</ul>
+	{% else %}
+		<div class="no-prod-list">There are no products in recently viewed list</div>
+	{% endif %}
+</div>
+{% endif %}

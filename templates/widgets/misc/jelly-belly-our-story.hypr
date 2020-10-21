@@ -1,0 +1,16 @@
+<div class="company-history-widget">
+    {% for data in model.config.data %}
+        <div class="company-history-item">
+            <img src="{{data.imageUrl}}" class="company-history-banner"/>
+            <div class="company-history-details">
+                <img src="{{data.details.thump}}"/>
+                <div class="company-history-text">
+                    <h3>{{data.details.head}}</h3>
+                    <p>{{data.details.details}}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% require_script "widgets/jelly-belly-our-story"%}
+

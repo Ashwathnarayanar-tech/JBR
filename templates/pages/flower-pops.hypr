@@ -1,0 +1,63 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+
+<section>
+<div itemscope="" itemtype="http://schema.org/Recipe">
+    <h1 class="mz-pagetitle" itemprop="name">Jelly Belly Flower Cookie Pops</h1>
+    <article class="carnival-details txt-left">
+        <h2>Jelly Belly Flower Cookie Pops</h2>
+        <hr>
+        <div class="baking-recipe">
+              <figure class="vertImage cyclingImg">
+                <img itemprop="image" src="/resources/images/baking_decoration/Jelly Belly Flower Cookie Pops/flowerPops.jpg">
+            </figure>            
+          <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div style="margin-left: 20px" class="addthis_sharing_toolbox"></div>
+            <p>
+                These colorful cookies are fun and easy to make, and are topped with some of your favorite Jelly Belly Confections like Mint Cremes and Jelly Belly Chewy Fish, 
+                and of course lots of Jelly Belly jelly beans! 
+            </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li itemprop="ingredients">1 roll of refrigerated sugar cookie dough</li>
+                <li itemprop="ingredients">3/4 cup all-purpose flour</li>
+                <li itemprop="ingredients">1 1/2 cups confectioners' sugar</li>
+                <li itemprop="ingredients">1 tablespoon egg white powder</li>
+                <li itemprop="ingredients">1 to 2 tablespoons water</li>
+                <li itemprop="ingredients"><a target="_blank" href="/jelly-belly-jelly-beans/c/6">Assorted Jelly Belly jelly beans</a></li>
+                <li itemprop="ingredients"><a target="_blank" href="/search?query=mint cremes&amp;asug=">Mint Cremes by Jelly Belly</a></li>
+                <li itemprop="ingredients"><a target="_blank" href="/search?query=fish&amp;asug=">Green Jelly Belly Chewy Fish</a></li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li itemprop="recipeInstructions">Preheat oven to 350°F. Line 2 cookie sheets with parchment paper. Knead the sugar cookie dough with the flour on a work surface until smooth. Divide the dough in half.</li>
+                <li itemprop="recipeInstructions">Roll out half on a lightly floured surface to a scant 1/4 inch thickness. Use 2 to 3 inch flower shape cookie cutters and cut out as many shapes as possible. 
+                    Transfer the shapes to the prepared pans on either long edge. Insert a lollipop stick into the dough about half way into the cut out.
+                </li >
+                <li itemprop="recipeInstructions">Bake until cookies are golden about 10 to 12 minutes. Transfer to a wire rack and cool completely. Repeat with the remaining dough and lollipop sticks.
+                </li>
+                <li itemprop="recipeInstructions">Combine the powdered sugar and egg white powder in a medium bowl. Add 1 tablespoon water and mix well. Add more water, 1 teaspoon at a time, until mixture is thick. 
+                    Spoon the mixture into a re-sealable bag.
+                </li>
+                <li itemprop="recipeInstructions">Snip a very small corner from the bag, about 1/8 inch. Pipe dots of frosting on cookies and attach the Jelly Belly beans. 
+                    For the center on some of the cookies use the flat mints or cut some of the Jelly Belly beans in half crosswise and add, cut side down. 
+                    Continue with the remaining Jelly Belly beans and cookies. Let cookies dry at least 2 hours.
+                </li>
+                <li itemprop="recipeInstructions">Place a piece of Styrofoam into a clean planter or serving bowl. Fill planter with green Jelly Belly beans. 
+                    Insert the cookie pops into the planter, pushing the sticks into the Styrofoam to secure at different heights. Add a few green Jelly Belly Chewy Fish as the leaves. 
+                </li>
+            </ol>
+            <hr>
+            
+        </div>
+    </article>
+	</div>
+</section>
+{% endblock body-content %}
+
+
+
+
+

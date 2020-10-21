@@ -1,0 +1,42 @@
+<div class="mz-contactselector">
+    {% block contact-selector %}
+        {% for contact in model.contacts %}
+        {% comment %}
+            {% if  viewcontext === "isCardSaving" %}
+                {% for type in contact.types %}
+                    {% if  type.name ===  "Billing" %} 
+                        <label class="mz-contactselector-contact">
+                            <span class="mz-contactselector-inputwrapper">
+                                <input type="radio" data-mz-value="{{ contactcontext }}contactId" name="contactId" value="{{ contact.id }}" {% if model.id == contact.id or model.contactId == contact.id" %} checked="checked" {% endif %}>
+                            </span>
+                            <span class="mz-contactselector-summarywrapper">
+                                <div class="mz-addresssummary">
+                                    <p style="margin: 0px;"><b>Default Billing Address</b></p>
+                                  {% include "modules/common/address-summary" with model=contact %}    
+                                </div>
+                            </span>    
+                        </label>
+                    {% endif %}
+                {% endfor %}
+          {% endif %}
+          {% endcomment %}
+          
+                    <label class="mz-contactselector-contact {% for type in contact.types %} {{ type.name }} {% endfor %}">
+                        <span class="mz-contactselector-inputwrapper">
+                            <input type="radio" data-mz-value="{{ contactcontext }}contactId" name="contactId" value="{{ contact.id }}" {% if model.id == contact.id or model.contactId == contact.id" %} checked="checked" {% endif %}>
+                        </span>
+                        <span class="mz-contactselector-summarywrapper">
+                            <div class="mz-addresssummary">
+                                <p style="margin: 0px;" ><b>Default Shipping Address</b></p>
+                                {% include "modules/common/address-summary" with model=contact %}        
+                            </div>
+                        </span>  
+                    </label>
+          
+        {% endfor %}
+        <p shipping-address-validation-message-specialty style="margin: 0px;color: #F00;font-size: 12px;font-style: italic;text-align: right;"> </p>
+        <div class="clearfix"></div>
+    {% endblock contact-selector %}
+</div>
+
+

@@ -1,0 +1,2579 @@
+{
+    "about": {
+        "name": "B2B_Specialty_Theme_19",
+        "author": "Echidna, Inc for Jelly Belly",
+        "defaultLanguage": "en-US",
+        "extends": null,
+        "isDesktop": true,
+        "isMobile": true,
+        "isTablet": true,
+        "allowProduction": true,
+        "baseTheme": "https://github.com/mozu/core-theme.git",
+        "baseThemeVersion": {
+          "commit": "8bf2cc5e8af8d863516815ae660df0f5dfa7196e",
+          "version": "9.4.1"
+        },
+        "baseThemeChannel": "stable"
+    },
+  "editors": [
+    {
+    "id" : "rti-rec-editor",
+    "path" : "rti-rec-editor.js"
+  },
+    {
+      "id": "beanartgallery",
+      "path": "jelly-belly-bean-artgallery.js"
+    },
+    {
+      "id": "richtext",
+      "path": "richtext.js"
+    },
+    {
+      "id": "footercolumn",
+      "path": "column.js"
+    },
+    {
+      "id": "card",
+      "path": "card.js"
+    },
+    {
+      "id": "question",
+      "path": "jelly-belly-question.js"
+    },
+    {
+      "id": "our-story",
+      "path": "jelly-belly-our-story.js"
+    },
+    {
+      "id": "brand-landing",
+      "path": "jelly-belly-brand-landing.js"
+    },
+    {
+      "id": "brand-banner",
+      "path": "jelly-belly-brandbanner.js"
+    },
+    {
+      "id": "address",
+      "path": "jelly-belly-address.js"
+    },
+    {
+      "id": "newsWidget",
+      "path": "jelly-belly-newsWidget.js"
+    },
+    {
+      "id": "flavourguide",
+      "path": "jelly-belly-flavour-guides.js"
+    },
+    {
+      "id": "bean-recipes",
+      "path": "jelly-belly-recipes.js"
+    },
+        {
+            "id": "layout",
+            "path": "layout.js"
+        },
+        {
+            "documentTypes": [
+                "web_page@mozu"
+            ],
+            "id": "web_page@mozu",
+            "path": "web_page.js",
+            "priority": 0.2
+        },
+        {
+            "id": "about-us@mozu",
+            "path": "about-us.js"
+        },
+        {
+            "id": "email-orderconfirmation",
+            "path": "email-orderconfirmation.js"
+        },
+        {
+            "id": "back-office@mozu",
+            "path": "back-office.js"
+        },
+        {
+            "id": "email@mozu",
+            "path": "email.js",
+            "documentLists": [
+                "emailTemplateContent@mozu"
+            ],
+            "priority": 0.2
+        },
+        {
+            "id": "image",
+            "path": "image.js"
+        },
+        {
+            "id": "horizontalrule",
+            "path": "horizontalRule.js"
+        },
+        {
+            "id": "pageTemplateContent@mozu",
+            "path": "pageTemplateContent.js",
+            "documentTypes": [
+                "pageTemplateContent@mozu"
+            ],
+            "priority": 0.2
+        },
+        {
+            "id": "productContent@mozu",
+            "path": "productContent.js",
+            "documentTypes": [
+                "productContent@mozu"
+            ],
+            "priority": 0.2
+        },
+        {
+            "id": "categoryContent@mozu",
+            "path": "categoryContent.js",
+            "documentTypes": [
+                "categoryContent@mozu"
+            ],
+            "priority": 0.2
+        },
+        {
+      "id": "textcontent",
+      "path": "jelly-belly-textcontent.js"
+    },
+    {
+      "id": "html-content-with-default-data",
+      "path": "html-content-with-default-data.js"
+    },
+    {
+      "id": "faq",
+      "path": "faq.js"
+    },
+    {
+      "id": "configured-plp",
+      "path": "configured-plp.js"
+    },
+    {
+      "id": "plp-with-bg",
+      "path": "plp-with-bg.js"
+    },
+    {
+      "id": "special-button",
+      "path": "special-button.js"
+    },
+    {
+      "id": "profile",
+      "path": "profile.js"
+    },
+        {
+      "documentTypes": [
+        "candypage@echidna"
+      ],
+      "id": "static-page",
+      "path": "static-page.js",
+      "priority": 1
+    }
+  ],
+  "settings": {
+	"showProductDetailShortDesc": true,
+	"showBreadcrumbs": true,
+	"showCategoryFacets": true,
+  "extendedPropertiesEnabled": false,
+  "extendedPropertyParameters": "",
+	"defaultPageSize": 15,
+    "showCartItemImage": true,  
+    "maxProductImageThumbnailSize": 50,
+    "maxProductSummaryWords": 40,
+    "maxTopLevelNavItems": 8, 
+    "maxTopLevelNavLabelLength": 20,  
+    "shipping_date": "05/26/2016,05/18/2016,05/24/2016",
+    "fontSize": "14px",
+    "gutterWidth": "25px",
+    "textColor": "#444444",
+    "bodyBackgroundColor": "#FFFFFF",
+    "itemListingThumbSize": 80,
+    "listProductThumbSize": 160,
+    "bannerImage": "/resources/images/banner.jpg",
+    "bannerImageRepeat": "repeat-x",
+    "noOfItemsRecentStore": 10,
+    "noOfItemsSelectStore": 10,
+    "primaryFont": "sans-serif",
+    "blackoutDates": [
+      "September 7, 2015",
+      "November 26, 2015",
+      "November 27, 2015",
+      "December 24, 2015",
+      "December 25, 2015",
+      "January 1, 2016"
+    ],
+	"po_message":"PO Numbers can be alphanumeric, may use a dash or underscore, and must be 20 characters or less.",
+    "addCrosssellProductList": ["62213","61800","83748","61805","76880","66315","66152","72493","76830","66938","66158","66340","66115","66834","91200","66137","72528","66138","66314","61778"],
+    "themeLoginURL": "",
+    "codePack": "88072",
+    "heatsensitive": true,
+    "b2bwest": "",
+    "b2beast": "",
+    "selectstore":"",
+    "themeRC": "RC 71",
+    "mobileAddToCartPopupTimer": 2,
+    "newsletterDelay": 12,
+    "giftcardMessage": "CLAIMING YOUR GIFT CERTIFICATE IS EASY!<br/>Simply type the gift certificate code below and click “Apply” to attach the gift certificate to your account. You may use your total credit balance for any purchase you make today or in future.",
+    "GiftcardHeadline": "MY GIFT CERTIFICATE BALANCE",
+    "giftcardbalMessage": "You currently have a gift certificate balance of {0}. This balance is available for you to apply to any future purchases here on <a href='www.jellybelly.com'>www.jellybelly.com</a>.",
+    "shippedMessage": "Hurray! Your order shipped and we sent an email with tracking information. We hope you enjoy your treats and please let us know if anything is amiss!",
+    "processingMessage": "Good news! We're in the middle of packing and shipping your order. Keep an eye out for an email with shipping information.",
+    "acceptedMessage": "Congratulations! Your order has been received and will be processed as soon as possible.",
+    "shippingMethods": " ups_UPS_GROUND,ups_UPS_SECOND_DAY_AIR,ups_UPS_THREE_DAY_SELECT,ups_UPS_NEXT_DAY_AIR_SAVER,ups_UPS_SUREPOST_1LB_OR_GREATER ",
+    "editingHelp": false,
+    "allowQuickOrder": true,
+    "newsLetterMarkettingInMyAccount": false,
+    "mybuyszone": 2,
+    "hideShowEditButton": "none",
+    "requireCheckoutAgreeToTerms": false,
+    "robots_value": "nofollow",
+    "googlebot_value": "index,follow",
+    "google-site-verification_value": "nvjYSw4EcnycKd6qG0rARmm8FVaZxyVZjUFQ6fNo1x0",
+    "useDebugScripts": true,
+    "useAnimatedProductLists": true,
+    "allowWishlist": true,
+    "showCheckoutCommentsField": true,
+    "useSearchAutocomplete": true,
+    "freeshippingBoundingValue": 200,
+    "shippingSwitchoverValue": 200,
+    "productImagesContainerWidth": 300,
+    "showHeatSensitiveText": true,
+    "showPronsAndCons": "none",
+    "reviewsConnection": "powerreviews@jbelly",
+    "signup-coupon": "AWEL1X27",
+    "home_slide_1": "slide1.jpg",
+    "home_slide_2": "slide2.jpg",
+    "home_slide_3": "slide3.jpg",
+    "home_slide_4": "slide4.jpg",
+    "home_slide_5": "slide5.jpg",
+    "minimumOrderAmount": 100,
+    "usStates": [
+      {
+        "abbreviation": "AA",
+        "name": "Armed Forces Americas (AA)"
+      },
+      {
+        "abbreviation": "AE",
+        "name": "Armed Forces Europe (AE)"
+      },
+      {
+        "abbreviation": "AP",
+        "name": "Armed Forces Pacific (AP)"
+      },
+      {
+        "abbreviation": "AL",
+        "name": "Alabama"
+      },
+      {
+        "abbreviation": "AK",
+        "name": "Alaska"
+      },
+      {
+        "abbreviation": "AZ",
+        "name": "Arizona"
+      },
+      {
+        "abbreviation": "AR",
+        "name": "Arkansas"
+      },
+      {
+        "abbreviation": "CA",
+        "name": "California"
+      },
+      {
+        "abbreviation": "CO",
+        "name": "Colorado"
+      },
+      {
+        "abbreviation": "CT",
+        "name": "Connecticut"
+      },
+      {
+        "abbreviation": "DE",
+        "name": "Delaware"
+      },
+      {
+        "abbreviation": "DC",
+        "name": "District Of Columbia"
+      },
+      {
+        "abbreviation": "FL",
+        "name": "Florida"
+      },
+      {
+        "abbreviation": "GA",
+        "name": "Georgia"
+      },
+      {
+        "abbreviation": "HI",
+        "name": "Hawaii"
+      },
+      {
+        "abbreviation": "ID",
+        "name": "Idaho"
+      },
+      {
+        "abbreviation": "IL",
+        "name": "Illinois"
+      },
+      {
+        "abbreviation": "IN",
+        "name": "Indiana"
+      },
+      {
+        "abbreviation": "IA",
+        "name": "Iowa"
+      },
+      {
+        "abbreviation": "KS",
+        "name": "Kansas"
+      },
+      {
+        "abbreviation": "KY",
+        "name": "Kentucky"
+      },
+      {
+        "abbreviation": "LA",
+        "name": "Louisiana"
+      },
+      {
+        "abbreviation": "ME",
+        "name": "Maine"
+      },
+      {
+        "abbreviation": "MD",
+        "name": "Maryland"
+      },
+      {
+        "abbreviation": "MA",
+        "name": "Massachusetts"
+      },
+      {
+        "abbreviation": "MI",
+        "name": "Michigan"
+      },
+      {
+        "abbreviation": "MN",
+        "name": "Minnesota"
+      },
+      {
+        "abbreviation": "MS",
+        "name": "Mississippi"
+      },
+      {
+        "abbreviation": "MO",
+        "name": "Missouri"
+      },
+      {
+        "abbreviation": "MT",
+        "name": "Montana"
+      },
+      {
+        "abbreviation": "NE",
+        "name": "Nebraska"
+      },
+      {
+        "abbreviation": "NV",
+        "name": "Nevada"
+      },
+      {
+        "abbreviation": "NH",
+        "name": "New Hampshire"
+      },
+      {
+        "abbreviation": "NJ",
+        "name": "New Jersey"
+      },
+      {
+        "abbreviation": "NM",
+        "name": "New Mexico"
+      },
+      {
+        "abbreviation": "NY",
+        "name": "New York"
+      },
+      {
+        "abbreviation": "NC",
+        "name": "North Carolina"
+      },
+      {
+        "abbreviation": "ND",
+        "name": "North Dakota"
+      },
+      {
+        "abbreviation": "OH",
+        "name": "Ohio"
+      },
+      {
+        "abbreviation": "OK",
+        "name": "Oklahoma"
+      },
+      {
+        "abbreviation": "OR",
+        "name": "Oregon"
+      },
+      {
+        "abbreviation": "PA",
+        "name": "Pennsylvania"
+      },
+      {
+        "abbreviation": "RI",
+        "name": "Rhode Island"
+      },
+      {
+        "abbreviation": "SC",
+        "name": "South Carolina"
+      },
+      {
+        "abbreviation": "SD",
+        "name": "South Dakota"
+      },
+      {
+        "abbreviation": "TN",
+        "name": "Tennessee"
+      },
+      {
+        "abbreviation": "TX",
+        "name": "Texas"
+      },
+      {
+        "abbreviation": "UT",
+        "name": "Utah"
+      },
+      {
+        "abbreviation": "VT",
+        "name": "Vermont"
+      },
+      {
+        "abbreviation": "VA",
+        "name": "Virginia"
+      },
+      {
+        "abbreviation": "WA",
+        "name": "Washington"
+      },
+      {
+        "abbreviation": "WV",
+        "name": "West Virginia"
+      },
+      {
+        "abbreviation": "WI",
+        "name": "Wisconsin"
+      },
+      {
+        "abbreviation": "WY",
+        "name": "Wyoming"
+      }
+    ],
+    "shipaddress1": "10100 Jelly Belly Lane",
+    "shipcityOrTown": "Pleasant Prairie",
+    "shipcountryCode": "US",
+    "shippostalOrZipCode": 53158,
+    "shipstateOrProvince": "WI",
+    "shipamtCode": "USD",
+    "home_slide1_url": "/jelly-belly-mini-bean-machine/p/97600",
+    "home_slide2_url": "/20-flavor-ultra-gift-box/p/96840",
+    "home_slide3_url": "/search?query=draft",
+    "home_slide4_url": "/search?query=ginger",
+    "home_slide5_url": "/shopmain",
+    "category_slide_1": "shop-slider1.jpg",
+    "category_slide_2": "shop-slider2.jpg",
+    "category_slide_3": "shop-slider3.jpg",
+    "category_slide_4": "shop-slider4.jpg",
+    "category_slide1_url": "/search?query=halloween-candy",
+    "category_slide2_url": "/p/JBD1252",
+    "category_slide3_url": "/search?query=star war",
+    "category_slide4_url": "/beanboozled-trade-jelly-beans/c/1",
+    "category_offer1_mainLabel": "Free shipping on orders over $200",
+    "category_offer1_secondaryLabel": "We also ship international",
+    "category_offer2_mainLabel": "July is National Watermelon Month",
+    "category_offer2_secondaryLabel": "Select items 15% Off",
+    "footer_evergreen_image1": "rack_instructions.jpg",
+    "footer_evergreen_image2": "Specialty-17-18-Catalog_button_2.jpg",
+    "footer_evergreen_image3": "Specialty-17-18-Fall-Christmas_button.jpg",
+    "footer_evergreen_image4": "helpful_hints.jpg",
+    "footer_evergreen_image1_url": "/rack-instructions",
+    "footer_evergreen_image2_url": "https://cdn-tp1.mozu.com/9046-m1/cms/files/Specialty2017-2018-1-52r2_LR-optimized6.pdf",
+    "footer_evergreen_image3_url": "https://cdn-tp1.mozu.com/9046-m1/cms/files/2017FallXmasCatalogFA_LR_r2_2.pdf",
+    "footer_evergreen_image4_url": "/cms/16492/files/Helpful%20Hints.pdf",
+    "Brand_img": "Brand_heroimage.jpg",
+    "Brand_url": "/kids-mix/c/234",
+    "Color_img": "Color_Heroimage.jpg",
+    "Color_url": "/wedding-center",
+    "Taste_img": "Brand_heroimage.jpg",
+    "Taste_url": "/kids-mix/c/234",
+    "Packaging_img": "Brand_heroimage.jpg",
+    "Packaging_url": "/kids-mix/c/234",
+    "Occasion_img": "Color_Heroimage.jpg",
+    "Occasion_url": "/wedding-center",
+    "Holiday_img": "holiday_heroimage.png",
+    "Holiday_url": "search?query=gift-basket-sandbundles",
+    "Gifts_img": "gifts_heroimage.jpg",
+    "Gifts_url": "https://www.myjellybelly.com/",
+    "Jelly_Belly_Flavour_Guides_img": "Brand_heroimage.jpg",
+    "Jelly_Belly_Flavour_Guides_url": "/kids-mix/c/234",
+    "What_We_Offer_img": "beanboozled_small_square_asset.jpg",
+    "What_We_Offer_url": "/beanboozled-challenge",
+    "California_Visitors_Center_img": "Californiavistors_heroimage.jpg",
+    "California_Visitors_Center_url": "/wine-experience",
+    "Wiscosin_Visitors_Center_img": "wisconsin_heroimage.jpg",
+    "Wiscosin_Visitors_Center_url": "/wisconsin-warehouse-index",
+    "Retail_Stores_img": "Retail_heroimage.jpg",
+    "Retail_Stores_url": "/retail-store",
+    "Fun_Stuff_img": "funstuff_heroimage.jpg",
+    "Fun_Stuff_url": "/JellyBelly-Infographics",
+    "Ideas_for_Occasions_img": "ideas_heroimage.jpg",
+    "Ideas_for_Occasions_url": "/jb-ideas",
+    "Teams_img": "cycling_team_mm.jpg",
+    "Teams_url": "/pro-cycling-team",
+    "Individual_Athletes_img": "sportBeans_heroimage.jpg",
+    "Individual_Athletes_url": "/search?query=sports-beans",
+    "Event_Calendar_img": "sportBeans_heroimage.jpg",
+    "Event_Calendar_url": "/search?query=sports-beans",
+    "Gift_Cards_img": "eGiftCards_heroimage.jpg",
+    "Gift_Cards_url": "/c/352",
+    "nosearch_result_banner_image": "SLI_jelly_bean_day_nobtn_extended.jpg",
+    "nosearch_result_banner_image_url": "/",
+    "search_result_banner_image": "SLI_candy_month.jpg",
+    "search_result_banner_image_url": "/bouncing-beans-jelly-bean-dispenser/p/95122",
+    "nostore_banner_image": "/easter-sale/c/369",
+    "nostore_url": "/",
+    "no_product_image": "missing.gif",
+    "CustomFontName": "News Cycle",
+    "enableShippingquotes": false,
+    "breadcrumbsDomain": "jellybelly.com",
+    "sortByOptions": [
+      {
+        "text": "Alphabetical: A-Z",
+        "value": "productName asc"
+      },
+      {
+        "text": "Relevance",
+        "value": "createDate desc"
+      },
+      {
+        "text": "Best Ratings",
+        "value": "tenant~rating desc"
+      },
+      {
+        "text": "Number of Reviews",
+        "value": "tenant~review desc"
+      },
+      {
+        "text": "Price: Low to High",
+        "value": "price asc"
+      },
+      {
+        "text": "Price: High to Low",
+        "value": "price desc"
+      },
+      {
+        "text": "Alphabetical: Z-A",
+        "value": "productName desc"
+      },
+      {
+        "text": "New Arrivals",
+        "value": "createDate desc"
+      },
+      {
+        "text": "Most Recent Last",
+        "value": "createDate asc"
+      }
+    ],
+    "defaultSort": "productName asc",
+    "searchSort": "",
+    "ProductView": [
+      "Grid",
+      "List"
+    ],
+    "defaultProductView": "Grid",
+    "pageSizeOptions": [
+      12,
+      24,
+      36,
+      300
+    ],
+    "quantityOptions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "explore_url_jellybelly": "/c/6",
+    "explore_url_confection": "/c/3",
+    "explore_url_sunkist": "/c/9",
+    "explore_url_beanboozled": "/c/1",
+    "explore_url_spotbean": "/c/7",
+    "explore_url_cold_stone": "/c/157",
+    "explore_url_sugarfree": "/c/8",
+    "explore_url_choco_dips": "/c/28",
+    "explore_url_disney": "/c/35",
+    "explore_url_belly_flops": "/c/44",
+    "explore_url_harryporter": "/c/215",
+    "explore_url_hello_kitty": "/c/231",
+    "explore_url_tobasco": "/c/43",
+    "bypass_headline1": "If you still want to have your shipment sent to this address,",
+    "bypass_headline2": "please understand that:",
+    "bypass_warn1": "Your order may not arrive on time (or ever!); and",
+    "bypass_warn2": "Jelly Belly is not responsible for any costs associated with orders shipped to invalid addresses",
+    "bypass_proceed": "To proceed with the address as entered, choose the \"BYPASS\" button below.",
+    "showShippingAddressChoosingRadioButton": "none",
+    "emailMissing": "Please enter a valid email address",
+    "passwordMissing": "Please provide a valid Password, which must have a minimum of 6 characters with at least 1 number and 1 alphabetic character",
+    "passwordsDoNotMatch": "Please provide a valid Password, which must have a minimum of 6 characters with at least 1 number and 1 alphabetic character, a second time",
+    "phoneMissing": "Please add your Phone Number. ",
+    "streetMissing": "Please add your Street Address. ",
+    "cityMissing": "Please add your City or Town.",
+    "stateProvMissing": "Please add your State. ",
+    "postalCodeMissing": "Please add your Postal Code. ",
+    "countryMissing": "Please make a country selection",
+    "firstNameMissing": "Please add your First Name. ",
+    "lastNameMissing": "Please add your Last Name .",
+    "myAccountGiftCertificateItemNotFound": "Sorry, but '{0}' does not appear to qualify as a valid coupon code. Please be sure that you're using the correct code (copy-and-paste may help), that it hasn't expired and that you have met any required threshold.",
+    "loginFailedMessage": "Unfortunately, login as {0} failed. Please provide your Email Address and Password and try again",
+    "resetPasswordMessage": "Please make sure your Email Address is correct and that you have an account. Make sure you have included the '@' and the '.' in the address",
+    "resetPasswordEntered": "Please make sure you have entered your new Password, which must have a minimum of 6 characters with at least 1 number and 1 alphabetic character, twice.",
+    "differentFromPreviousPasswords": "To keep things safe, your new Password cannot be one of your 4 previous Passwords. Please make sure the new Password has a minimum of 6 characters with at least 1 number and 1 alphabetic character.",
+    "resetEmailSent": "You should receive an email with instructions to reset your password shortly.",
+    "firstName": "Please provide your First Name.",
+    "lastName": "Please provide your Last Name. ",
+    "validEmail": "Please enter a valid Email Address and Password combination. Make sure you include the '@' and the '.' in the Email Address and that your Password has a minimum of 6 characters with at least 1 number and 1 alphabetic character.",
+    "validPassword": "Please provide a valid Password, which must have a minimum of 6 characters with at least 1 number and 1 alphabetic character.",
+    "passwordNotMatch": "Sorry, but your Password and Confirm Password entries don't match. Make sure your new Password has a minimum of 6 characters with at least 1 number and 1 alphabetic character.",
+    "validPostalCode": "Please enter a valid Postal Code. ",
+    "firstNameShip": "Please add your First Name. ",
+    "lastNameShip": "Please add your Last Name. ",
+    "address": "Please add your Street Address. ",
+    "city": "Please add your City or Town .",
+    "state": "Please add your State. ",
+    "zipCode": "Please add your Postal Code. ",
+    "phone": "Please add your Phone Number. ",
+    "addressType": "Please select the appropriate Address Type so that we know where to deliver the package.",
+    "chooseShippingMethod": "Please select a shipping method.",
+    "cardType": "Please select your Card Type.",
+    "cardNumber": "Please enter your card number ",
+    "nameOnCard": "Please enter the name shown on your card. ",
+    "securityCode": "Please enter your card's security code. ",
+    "expires": "Please enter an expiration date in the future. ",
+    "oldPassword": "Please enter the correct Old Password that you're replacing. It must have a minimum of 6 characters with at least 1 number and 1 alphabetic character.",
+    "validEmialSignUp": "Please be sure to provide your Email Address. Make sure you have included the '@' and the '.' in the address.",
+    "validPasswordSecond": "Please provide a valid Password, which must have a minimum of 6 characters with at least 1 number and 1 alphabetic character, a second time.",
+    "newsLetterInvalidEmail": "Sorry, but that Email Address appears to be invalid. Make sure you have included the '@' and the '.' in the address.",
+    "missingcredentials": "Sorry, but you need to enter an Email Address and Password.",
+    "alreadyassociated": "Sorry, but that Email Address is already associated with an account on our site",
+    "lockedaccount": "Sorry, but you've exceeded the allowable number of attempts. Contact us and we'll help.",
+    "outofstock": "is currently out of stock. Click the product link (below) to go to the Product Page and select the 'Notify Me' option so that we can send an email when it's available."
+  },
+  "emailTemplates": [
+    {
+      "id": "order.shipped",
+      "properties": {
+        "subject": "Your Jelly Belly Order #{model.orderNumber} has Shipped"
+      },
+      "template": "email/order-shipped",
+      "title": "Your Jelly Belly Order has Shipped"
+    },
+    {
+      "id": "order.changed",
+      "customEditor": "email-orderconfirmation",
+      "properties": {
+        "subject": "Your Jelly Belly Order Confirmation"
+      },
+      "template": "email/order-confirmation",
+      "title": "Your Jelly Belly Order Confirmation"
+    },
+    {
+      "id": "return.created",
+      "properties": {
+        "subject": "Your Return Request"
+      },
+      "template": "email/product-return-changed",
+      "title": "Return Created"
+    },
+    {
+      "id": "return.authorized",
+      "properties": {
+        "subject": "RMA Request Approved"
+      },
+      "template": "email/product-return-authorized",
+      "title": "Return Authorized"
+    },
+    {
+      "id": "return.rejected",
+      "properties": {
+        "subject": "RMA Request Rejected"
+      },
+      "template": "email/product-return-rejected",
+      "title": "Return Rejected"
+    },
+    {
+      "id": "return.closed",
+      "properties": {
+        "subject": "Return Item Received"
+      },
+      "template": "email/product-return-received",
+      "title": "Return Item Received"
+    },
+    {
+      "id": "return.changed",
+      "properties": {
+        "subject": "Your Return Updated"
+      },
+      "template": "email/product-return-changed",
+      "title": "Return Has Been Updated"
+    },
+    {
+      "id": "user.created",
+      "properties": {
+        "subject": "Welcome"
+      },
+      "template": "email/new-user",
+      "title": "Your JellyBelly.com login"
+    },
+    {
+      "id": "user.passwordreset",
+      "properties": {
+        "subject": "Reset Your Password"
+      },
+      "template": "email/password-reset",
+      "title": "Password Reset"
+    },
+    {
+      "id": "product.instock",
+      "properties": {
+        "subject": "Back in Stock"
+      },
+      "template": "email/product-instock",
+      "title": "Back in Stock"
+    },
+    {
+      "id": "giftcard.created",
+      "properties": {
+        "subject": "Gift Card"
+      },
+      "template": "email/giftcard-created",
+      "title": "Gift Card"
+    }
+  ],
+    "backOfficeTemplates": [
+        {
+            "id": "order-details",
+            "title": "Order Details",
+            "template": "back-office/order-details",
+            "customEditor": "back-office@mozu"
+        },
+        {
+            "id": "packing-slip",
+            "title": "Packing Slip",
+            "template": "back-office/packing-slip",
+            "customEditor": "back-office@mozu"
+        }
+    ],
+  "pageTypes": [
+    {
+        "entityType": "siteTemplate",
+        "id": "site_page",
+        "template": "page",
+        "title": "Default Site Template"
+    },
+        {
+          "documentType": "web_page",
+          "entityType": "webpage",
+          "id": "blank-page",
+          "template": "blank-page",
+          "title": "Blank Page",
+          "userCreatable": true
+        },
+        {
+            "documentType": "web_page",
+            "entityType": "webpage",
+            "id": "home",
+            "template": "home",
+            "title": "Home Page",
+            "userCreatable": true
+        },
+        {
+      "documentTypeFQN": "candypage@echidna",
+      "listFQN": "candypages@echidna",
+      "entityType": "webpage",
+      "id": "static-page",
+      "template": "static-page",
+      "title": "StaticPage",
+      "userCreatable": true
+    },
+    {
+      "id": "gnewtonresize",
+      "title": "G-Newton Resize",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": false,
+      "template": "pages/career/GnewtonResize"
+    },
+    {
+      "id": "Accountvalidation",
+      "title": "Account",
+      "entityType": "webpage", 
+      "documentType": "web_page",   
+      "userCreatable": true,  
+      "template": "pages/Account-status-verfication" 
+    },    
+    {    
+      "id": "general-facts",
+      "title": "General Info",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/general-info"
+    },
+    {
+      "id": "write-a-review",
+      "title": "Write  Review",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/review"
+    },
+    {
+      "id": "resize",
+      "title": "Resize  Review",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "resize"
+    },
+    {
+      "id": "principles-and-practices",
+      "title": "Principles and Practices",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/principles-practices"
+    },
+    {
+      "id": "trademark-usage",
+      "title": "Logo & Terms of Use",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/logo-tm-use"
+    },
+    {
+      "id": "privacy-policy",
+      "title": "Privacy Policy",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/privacy-policy"
+    },
+    {
+      "id": "terms-of-use",
+      "title": "Terms of Use",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/terms-of-use"
+    },
+    {
+      "id": "promo",
+      "title": "Promo",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/promo"
+    },
+    {
+      "id": "contact-us",
+      "title": "Contact Us",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/contact-us"
+    },
+    {
+      "id": "rapid-order",
+      "title": "Rapid Order Form",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/rapid-order"
+    },
+    {
+      "id": "return-policy",
+      "title": "Returns and Refunds",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/return-refund"
+    },
+    {
+      "id": "shipping-information",
+      "title": "Shipping Information",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/shipping-info"
+    },
+    {
+      "id": "volume-discounts",  
+      "title": "Volume Discounts",
+      "entityType": "webpage",   
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/volume-discounts"
+    },
+    {
+      "id": "satisfaction-guarantee",
+      "title": "Satisfaction Guarantee",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/satisfaction-guarantee"
+    },
+    {
+        "entityType": "product",
+        "id": "product",
+        "template": "product",
+        "title": "Product",
+        "userCreatable": false,
+        "customEditor": "productContent@mozu" 
+    },
+    {
+      "id": "careers",
+      "title": "Careers",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/careers"
+    },
+    {
+      "id": "donations",
+      "title": "Donations",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/donations"
+    },
+    {
+      "id": "jelly-belly-email-preference-center",
+      "title": "Email Preference Center",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/email-preference-center"
+    },
+    {
+      "id": "wholesale-customers-national",
+      "title": "National",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/national"
+    },
+    {
+      "id": "information-for-students",
+      "title": "Educators Students",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/educators-students"
+    },
+    {
+      "id": "stores-outside-united-states",
+      "title": "International",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/international"
+    },
+    {
+      "id": "frequently-asked-questions",
+      "title": "Frequently Asked Questions",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/faq"
+    },
+    {
+      "id": "online-order-info-index",
+      "title": "Online Order Info",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/online-order-info"
+    },
+    {
+      "id": "StoreLocator",
+      "title": "Store Locator",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/store-locator"
+    },
+    {
+      "id": "company-history",
+      "title": "Company History",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/company-history"
+    },
+    {
+      "id": "jelly-belly-email-preference-center",
+      "title": "Email Unsubscribe",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/email-unsubscribe"
+    },
+    {
+      "id": "event-calendar",
+      "title": "Event Calendar",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/event-calendar"
+    },
+    {
+      "id": "personalize-customize",
+      "title": "Personalize Customize",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/personalize-customize"
+    },
+    {
+      "id": "fundraising-and-vending",
+      "title": "Vending",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/vending"
+    },
+    {
+      "id": "gift-cards",
+      "title": "Buy Gift Card",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/buy-gift-card"
+    },
+    {
+      "id": "sponsorships-event-calendar",
+      "title": "Sponsor Events",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/sponsor-events"
+    },
+    {
+      "id": "jelly-belly-customer-testimonials",
+      "title": "Customer Testimonials",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/customer-testimonials"
+    },
+    {
+        "entityType": "cart",
+        "id": "cart",
+        "template": "cart",
+        "title": "Cart",
+        "userCreatable": false
+    },
+    {
+        "entityType": "order",
+        "id": "checkout",
+        "template": "checkout",
+        "title": "Checkout",
+        "userCreatable": false
+    },
+    {
+        "entityType": "order",
+        "id": "confirmation",
+        "template": "confirmation",
+        "title": "Confirmation",
+        "userCreatable": false
+    },
+    {
+        "entityType": "customer",
+        "id": "my_account",
+        "template": "my-account",
+        "title": "My Account",
+        "userCreatable": false
+    },
+    {
+      "id": "jelly-belly-social-media",
+      "title": "Social Media Links",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/social-media-links"
+    },
+    {
+      "id": "wholesale-customers",
+      "title": "Speciality Customer",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/specialty-customers"
+    },
+    {
+      "id": "ordering-information",
+      "title": "Ordering Information",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/ordering-info"
+    },
+    {
+      "id": "sportsSponsorships",
+      "title": "Sponsorships",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/sponsorships"
+    },
+    {
+      "id": "sports-sponsorships",
+      "title": "Sponsorships",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/sponsorships"
+    },
+    {
+      "id": "sponsorship-guidelines",
+      "title": "Sponsorship Guidelines",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/sponsorship-guidelines"
+    },
+    {
+      "id": "pro-cycling-team",
+      "title": "Cycling Team",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/cycling-team"
+    },
+    {
+      "id": "jim-pace",
+      "title": "Jim Pace",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/jim-pace"
+    },
+    {
+      "id": "dennis-walters",
+      "title": "Dennis Walters",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/dennis-walters"
+    },
+    {
+      "id": "brant-seghetti",
+      "title": "Brant",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/brant"
+    },
+    {
+      "id": "new-and-upcoming",
+      "title": "New And Upcoming",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/new-and-upcoming"
+    },
+    {
+      "id": "kent-pietsch",
+      "title": "Kent",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/kent"
+    },
+    {
+      "id": "rivercats",
+      "title": "Rivercats",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/rivercats"
+    },
+    {
+      "id": "ed-jones",
+      "title": "Ed Jones",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/jones"
+    },
+    {
+      "id": "carin-koch",
+      "title": "Carin",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/carin"
+    },
+    {
+      "id": "visitjellybelly",
+      "title": "Visit Us",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/visit-us"
+    },
+    {
+      "id": "california-factory-index",
+      "title": "Visit Factory",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/visit-factory"
+    },
+    {
+      "id": "wisconsin-warehouse-index",
+      "title": "Visit Warehouse",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/visit-warehouse"
+    },
+    {
+      "id": "retail-store",
+      "title": "Visit Retail Store",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/visit-retail-store"
+    },
+    {
+      "id": "wisconsin-candy-store",
+      "title": "Warehouse Candy Store",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/warehouse-candy-store"
+    },
+    {
+      "id": "wisconsin-directions",
+      "title": "Warehouse Directions",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/warehouse-directions"
+    },
+    {
+      "id": "warehouse-events",
+      "title": "Warehouse Events",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/warehouse-events"
+    },
+    {
+      "id": "wisconsin-snack-bar",
+      "title": "Warehouse Snack Bar",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/warehouse-snack-bar"
+    },
+    {
+      "id": "wisconsin-warehouse",
+      "title": "Warehouse Tour",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/warehouse-tour"
+    },
+    {
+      "id": "wisconsin-tour-school-youth-camps",
+      "title": "Warehouse Youth Camps",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/warehouse-youth-camps"
+    },
+    {
+      "id": "jelly-belly-university",
+      "title": "Factory University",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/factory-university"
+    },
+    {
+      "id": "California-Factory-Conference-Space",
+      "title": "Factory Conference Space",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/factory-conference-space"
+    },
+    {
+      "id": "wine-experience",
+      "title": "Factory Wine Experience",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/factory-wine-experience"
+    },
+    {
+      "id": "tour-school-youth-camps",
+      "title": "Factory Youth Camps",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/factory-youth-camps"
+    },
+    {
+      "id": "California-Factory-Chocolate-Shoppe",
+      "title": "Factory Choco Shop",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/factory-choco-shop"
+    },
+    {
+      "id": "california-factory-store",
+      "title": "Factory Candy Store",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/factory-candy-store"
+    },
+    {
+      "id": "California-Factory-Cafe",
+      "title": "Factory Cafe",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/factory-cafe"
+    },
+    {
+      "id": "california-factory-tours",
+      "title": "Factory Tour",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/factory-tour"
+    },
+    {
+      "id": "factory-tour",
+      "title": "Factory Tour",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/factory-tour"
+    },
+    {
+      "id": "factory-events",
+      "title": "Factory Events",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/factory-events"
+    },
+    {
+      "id": "find-a-store",
+      "title": "Store Locator",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/find-a-store"
+    },
+    {
+      "id": "wisconsin-factory-event-calendar",
+      "title": "Wisconsin Factory Event Calendar",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/wisconsin-factory-event-calendar"
+    },
+    {
+      "id": "California-Factory-Events",
+      "title": "California Factory Events",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/california-factory-events"
+    },
+    {
+      "id": "cooking-index",
+      "title": "Cooking",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/cooking"
+    },
+    {
+      "id": "cooking-ideas",
+      "title": "Cooking Recipe",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/cooking-recipe"
+    },
+    {
+      "id": "bake-and-decorate-Index",
+      "title": "Baking and Decoration",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/baking"
+    },
+    {
+      "id": "coloring-pages",
+      "title": "Coloring Page",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/coloring-page"
+    },
+    {
+      "id": "downloads",
+      "title": "Jelly Belly Downloads",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/jb-downloads"
+    },
+    {
+      "id": "jelly-belly-bean-recipes",
+      "title": "Jelly Belly Recipe",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/bean-recipe"
+    },
+    {
+      "id": "jelly-belly-fleet",
+      "title": "Jelly Belly Fleet",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/jb-fleet"
+    },
+    {
+      "id": "fun-facts",
+      "title": "Jelly Belly Fun Facts",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/fun-facts"
+    },
+    {
+      "id": "funstuff",
+      "title": "Entertainment",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/entertainment"
+    },
+    {
+      "id": "ArtGallery",
+      "title": "Art Gallery",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/art-gallery"
+    },
+    {
+      "id": "birthday-ideas",
+      "title": "Birthday",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/birthday"
+    },
+    {
+      "id": "birthday-recipes",
+      "title": "Birthday Recipe",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/birthday-recipe"
+    },
+    {
+      "id": "birthday-games",
+      "title": "Birthday Game",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/birthday-game"
+    },
+    {
+      "id": "recipes-cripsy-balls",
+      "title": "Crispy Balls",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/crispy-balls"
+    },
+    {
+      "id": "recipes-nest-cookies",
+      "title": "Nest Cookies",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/nest-cookies"
+    },
+    {
+      "id": "recipes-birthday-bark",
+      "title": "Birthday Bark",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/birthday-bark"
+    },
+    {
+      "id": "recipes-cupid-cupcakes",
+      "title": "Cupid Cupcakes",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/cupid-cupcakes"
+    },
+    {
+      "id": "recipes-white-chocolate-pops-with-jelly-belly-jelly-beans",
+      "title": "Chocolate Pop",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/chocolate-pop"
+    },
+    {
+      "id": "recipes-lucky-shamrock-cupcakes",
+      "title": "Shamrock Cupcakes",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/shamrock-cupcakes"
+    },
+    {
+      "id": "recipes-bunny-cookies",
+      "title": "Bunny Cookies",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/bunny-cookies"
+    },
+    {
+      "id": "recipes-spring-flowers-cupcakes",
+      "title": "Flower Cupcakes",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/flower-cupcakes"
+    },
+    {
+      "id": "recipes-flower-pops",
+      "title": "Flower Pops",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/flower-pops"
+    },
+    {
+      "id": "flower-cookie-pops",
+      "title": "Flower Cookie Pops",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/flower-cookie-pops"
+    },
+    {
+      "id": "recipes-bake-sale-pies",
+      "title": "Bake Pie",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/bake-pie"
+    },
+    {
+      "id": "recipes-tie-riffic-fathers-day-cake",
+      "title": "Fathers Day Cake",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/fathers-day-cake"
+    },
+    {
+      "id": "recipes-bubble-trouble-cupcakes",
+      "title": "Trouble Cake",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/trouble-cake"
+    },
+    {
+      "id": "recipes-cheers-to-you-cupcakes",
+      "title": "Cheer Cake",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/cheer-cake"
+    },
+    {
+      "id": "recipes-indian-corn-cupcakes",
+      "title": "Corn Cake",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/corn-cake"
+    },
+    {
+      "id": "recipes-party-perfect-cupcakes",
+      "title": "Perfect Cake",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/perfect-cake"
+    },
+    {
+      "id": "recipes-movie-popcorn-cupcakes",
+      "title": "Popcorn Cake",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/popcorn-cake"
+    },
+    {
+      "id": "recipes-creepy-critter-cupcakes",
+      "title": "Critter Cake",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/critter-cake"
+    },
+    {
+      "id": "recipes-pumpkin-patch-cupcakes",
+      "title": "Pumpkin Cake",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/pumpkin-cake"
+    },
+    {
+      "id": "recipes-Sugarplum-Sleigh",
+      "title": "Plum Sleigh",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/plum-sleigh"
+    },
+    {
+      "id": "recipes-holiday-wreath-cupcakes",
+      "title": "Holiday Cake",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/holiday-cake"
+    },
+    {
+      "id": "recipes-shooting-star-cookie-pops",
+      "title": "Star Cookie",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/star-cookie"
+    },
+    {
+      "id": "recipes-trim-the-tree-cupcakes",
+      "title": "Tree Cake",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/tree-cake"
+    },
+    {
+      "id": "wedding-featured-candy",
+      "title": "Wedding Candy",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/wedding-candy"
+    },
+    {
+      "id": "wedding-center-cb",
+      "title": "Wedding Center Promotion",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/wedding-center-cb"
+    },
+    {
+      "id": "wedding-center",
+      "title": "Wedding Center",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/wedding-center"
+    },
+    {
+      "id": "wedding-theme-slider",
+      "title": "Wedding Theme Slider",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/wedding-theme-slider"
+    },
+    {
+      "id": "wedding-color-palettes",
+      "title": "Wedding Color Palette",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/wedding-color-palette"
+    },
+    {
+      "id": "wedding-personalized-favors",
+      "title": "Wedding Favors",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/wedding-favors"
+    },
+    {
+      "id": "wedding-ideas",
+      "title": "Wedding Ideas",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/wedding-ideas"
+    },
+    {
+      "id": "shop-our-product",
+      "title": "Shop Our Product",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/shop-our-product"
+    },
+    {
+      "id": "explore-our-product",
+      "title": "Explore Our Product",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/explore-our-product"
+    },
+    {
+      "id": "jelly-belly-jelly-beans",
+      "title": "Jelly Belly Beans",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/jelly-belly-beans"
+    },
+    {
+      "id": "sugar-free-candy",
+      "title": "sugar-free-candy",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/sugar-free-candy"
+    },
+    {
+      "id": "sport-beans",
+      "title": "sports-beans",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/sports-beans"
+    },
+    {
+      "id": "confections-by-jelly-belly",
+      "title": "confections-by-jelly-belly",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/confections-by-jelly-belly"
+    },
+    {
+      "id": "sunkist-candies",
+      "title": "sunkist-candies",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/sunkist-candies"
+    },
+    {
+      "id": "dips",
+      "title": "dips",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/dips"
+    },
+    {
+      "id": "Cold-Stone-Creamery-Jelly-Beans",
+      "title": "cold-stone-creamery-jb",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/cold-stone-creamery-jb"
+    },
+    {
+      "id": "beanboozled",
+      "title": "beanboozled",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/beanboozled"
+    },
+    {
+      "id": "aboutjellybelly",
+      "title": "About Jelly Belly",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/about-jb"
+    },
+    {
+      "id": "ideas",
+      "title": "Ideas",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/jb-ideas"
+    },
+    {
+      "id": "JellyBelly-Infographics",
+      "title": "Infographics",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/infographics"
+    },
+    {
+      "id": "CustomerService",
+      "title": "Customer Service",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/jb-customer-service"
+    },
+    {
+      "id": "newsandevents",
+      "title": "News and Events",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/jb-news-events"
+        },
+        {
+            "entityType": "category",
+            "id": "category",
+            "template": "category",
+            "title": "Category",
+            "userCreatable": false
+        },
+        {
+            "entityType": "category",
+            "id": "parent-category",
+            "template": "parent-category",
+            "title": "ParentCategory",
+            "userCreatable": false,
+            "customEditor": "categoryContent@mozu"
+        },
+    {
+      "id": "jb-flavor-guides",
+      "title": "Flavor Guides - Jelly Belly",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": true,
+      "template": "pages/flavor-guides"
+    },
+    {
+      "id": "jb-default-footer",
+      "title": "Jelly Belly default footer",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": false,
+      "template": "modules/page-footer"
+    },
+    {
+      "id": "explore-product-static",
+      "title": "Explore Product Static Page",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": false,
+      "template": "pages/explore-our-product-brandlisting-statichtml"
+    },
+    {
+      "id": "home-slider-static",
+      "title": "Home A-spot Static Page",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": false,
+      "template": "pages/homepage-slideshow-statichtml"
+    },
+    {
+      "id": "shopourproduct-slideshow-static",
+      "title": "Shop Product A-spot Static Page",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": false,
+      "template": "pages/shop-our-product-slideshow-statichtml"
+    },
+    {
+      "id": "homepage-brand-listing-static",
+      "title": "Home page brands Static Page",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": false,
+      "template": "pages/homepage-brandlisting-statichtml"
+    },
+    {
+      "id": "shopour-product-brandlisting-static",
+      "title": "Shop our product brand listing Static page",
+      "entityType": "webpage",
+      "documentType": "web_page",
+      "userCreatable": false,
+      "template": "pages/shopour-product-brandlisting-statichtml"
+    },
+    {
+      "entityType": "login",
+      "id": "login",
+      "template": "login",
+      "title": "Login",
+      "userCreatable": false
+    },
+    {
+      "entityType": "webpage",
+      "id": "recover-password",
+      "template": "forget-password",
+      "documentType": "web_page",
+      "title": "Recover Passwprd",
+      "userCreatable": true
+        },
+
+        {
+          "documentType": "web_page",
+          "entityType": "webpage",
+          "id": "blank-splash-page",
+          "template": "blank-splash-page",
+          "title": "Blank Splash Page",
+          "userCreatable": true
+        },
+        {
+            "documentType": "web_page",
+            "editor": "landing-page",
+            "entityType": "webpage",
+            "id": "landing",
+            "template": "blank-page",
+            "title": "Landing Page",
+            "userCreatable": true
+        },        
+        {
+            "documentType": "web_page",
+            "entityType": "webpage",
+            "id": "location",
+            "template": "location",
+            "title": "Store Locator",
+            "userCreatable": true
+        },
+        {
+            "entityType": "searchresult",
+            "id": "search-results",
+            "template": "search-results",
+            "title": "Search Results",
+            "userCreatable": false
+        },
+        {
+            "entityType": "nosearchresult",
+            "id": "no-search-results",
+            "template": "no-search-results",
+            "title": "Empty Search Results",
+            "userCreatable": false
+        },
+        {
+            "documentType": "web_page",
+            "entityType": "webpage",
+            "id": "404",
+            "template": "404",
+            "title": "404 Not Found",
+            "userCreatable": false
+        },
+        {
+          "entityType": "checkout",
+          "id": "confirmationv2",
+          "template": "confirmationv2",
+          "title": "ConfirmationV2",
+          "userCreatable": false
+        },
+        {
+            "entityType": "checkout",
+            "id": "checkoutv2",
+            "template": "checkoutv2",
+            "title": "Checkout V2",
+            "userCreatable": false
+        },
+        {
+            "entityType": "resetPasswordConfirmDetails",
+            "id": "reset_password",
+            "template": "reset-password",
+            "title": "Reset Password",
+            "userCreatable": false
+        },
+        {
+            "entityType": "anonymous_account",
+            "id": "my_anonymous_account",
+            "template": "my-anonymous-account",
+            "title": "Anonymous Order Status",
+            "userCreatable": false
+        },
+        {
+            "entityType": "signup",
+            "id": "signup",
+            "template": "signup",
+            "title": "Sign Up",
+            "userCreatable": false
+        },
+        {
+            "entityType": "forgotpassword",
+            "id": "forgotpassword",
+            "template": "forgot-password",
+            "title": "Forgot Password",
+            "userCreatable": false
+        },
+        {
+            "entityType": "orderStatus",
+            "id": "orderStatus",
+            "template": "order-status",
+            "title": "Order Status",
+            "userCreatable": false
+        },
+        {
+          "entityType": "webpage",
+          "id": "subscription-setup",
+          "template": "subscription",
+          "documentType": "web_page",
+          "title": "Subscription Listing",
+          "userCreatable": true
+        },
+        {
+          "entityType": "webpage",
+          "id": "subscription-confirmation",
+          "template": "subscription-confirmation",
+          "documentType": "web_page",
+          "title": "Subscription Confirmation",
+          "userCreatable": true
+        }
+  ],
+  "widgets": [
+    {
+    "displayName": "RTI Recommended Products",
+    "displayTemplate": "RTI/rti-rec-template",
+    "customEditor": "rti-rec-editor",
+    "icon": "/resources/admin/widgets/rti-recommend.png",
+    "id": "rti-rec-display",
+    "validPageTypes": [
+      "*"
+    ]
+  },
+  {
+    "displayName": "RTI Observation Tag",
+    "displayTemplate": "RTI/rti-observation.hypr",
+    "icon": "/resources/admin/widgets/rti-observation.png",
+    "id": "rti-observation-tag",
+    "validPageTypes":[ "*" ]
+  },
+    {
+      "displayName": "Art Gallery",
+      "displayTemplate": "misc/jelly-belly-bean-artgallery",
+      "customEditor": "beanartgallery",
+      "icon": "/resources/admin/widgets/art.png",
+      "id": "beanartgallery",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "Rich Text Editor",
+      "displayTemplate": "misc/richtext",
+      "customEditor": "richtext",
+      "icon": "/resources/admin/widgets/richEditor.png",
+      "id": "richtext",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "Footer Column Widget",
+      "displayTemplate": "misc/column",
+      "customEditor": "footercolumn",
+      "icon": "/resources/admin/widgets/column.png",
+      "id": "footercolumn",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "defaultConfig": {
+        "head": "Jelly Belly Candy Company",
+        "img": "https://t8018.sandbox.mozu.com/cms/10386/files/5d9f05b4-d227-4ccb-9952-6014dc9abb5c",
+        "content": "Did you know that Jelly Belly Candy Company makes more than just world famous jelly beans? We are proud to offer our enormous line-up of gourmet treats, from jelly beans to chocolate to gummi candy, here on Jellybelly.com. Explore our candy and see what makes Jelly Belly better than the average candy company!",
+        "link": "/shopmain",
+        "headColor": "#000"
+      },
+      "displayName": "Card",
+      "displayTemplate": "misc/jelly-belly-card",
+      "customEditor": "card",
+      "icon": "/resources/admin/widgets/card.png",
+      "id": "card",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "Question & Answers",
+      "displayTemplate": "misc/jelly-belly-question",
+      "customEditor": "question",
+      "icon": "/resources/admin/widgets/qa.png",
+      "id": "question",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "Our Story",
+      "displayTemplate": "misc/jelly-belly-our-story",
+      "customEditor": "our-story",
+      "icon": "/resources/admin/widgets/story.png",
+      "id": "our-story",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "Brand Landing",
+      "displayTemplate": "misc/jelly-belly-brand-landing",
+      "customEditor": "brand-landing",
+      "icon": "/resources/admin/widgets/brand-landing.png",
+      "id": "brand-landing",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "Brand Banner",
+      "displayTemplate": "misc/jelly-belly-brandBanner",
+      "customEditor": "brand-banner",
+      "icon": "/resources/admin/widgets/banner.png",
+      "id": "brand-banner",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "Address",
+      "displayTemplate": "misc/jelly-belly-address",
+      "customEditor": "address",
+      "icon": "/resources/admin/widgets/address.png",
+      "id": "address",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "News Content",
+      "displayTemplate": "misc/jelly-belly-newsWidget",
+      "customEditor": "newsWidget",
+      "icon": "/resources/admin/widgets/news.png",
+      "id": "news",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "Flavour Guides",
+      "displayTemplate": "misc/jelly-belly-flavour-guide",
+      "customEditor": "flavourguide",
+      "icon": "/resources/admin/widgets/flavours.png",
+      "id": "flavourguide",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "Bean Recipe",
+      "displayTemplate": "misc/jelly-belly-recipes",
+      "customEditor": "bean-recipes",
+      "icon": "/resources/admin/widgets/recipe.PNG",
+      "id": "recipes",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "Texbox with Border",
+      "displayTemplate": "misc/jelly-belly-textboxcontentwidget",
+      "customEditor": "textcontent",
+      "icon": "/resources/admin/widgets/textbox-border.png",
+      "id": "textcontent",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "id": "B-spoteBrands",
+      "icon": "/resources/admin/widgets/listCAT.png",
+      "displayName": "Dynamic Category Listings",
+      "validPageTypes": [
+        "*"
+      ],
+      "displayTemplate": "catalog/jb-featured-brands",
+      "editViewFields": [
+        {
+          "fieldLabel": "Featured Brand Categories",
+          "name": "featured-brand-categories",
+          "xtype": "boxselect",
+          "width": 500,
+          "displayField": "name",
+          "valueField": "id",
+          "queryMode": "local",
+          "store": {
+            "type": "Taco.store.Categories"
+          }
+        },
+        {
+          "name": "template",
+          "fieldLabel": "Widget Droping Page",
+          "xtype": "combo",
+          "width": 500,
+          "required": true,
+          "store": [
+            [
+              "widgets/catalog/home-featuredbrands",
+              "Home Page Featured Brands"
+            ],
+            [
+              "widgets/catalog/shop-our-products-featuredbrands",
+              "Shop Our Products Featured Brands"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "displayName": "Dynamic HTML Content ",
+      "displayTemplate": "catalog/html-content",
+      "customEditor": "html-content-with-default-data",
+      "icon": "/resources/admin/widgets/dynaHTML.png",
+      "id": "html-content-with-default-data",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "defaultConfig": {
+        "height": "100%",
+        "heightResizable": true,
+        "imageHeight": "100%",
+        "imageSource": "file",
+        "linkSource": "externalUrl"
+      },
+      "displayName": "Category Hero Image",
+      "displayTemplate": "cms/jb-plp-brand-image",
+      "editView": "taco-image-widgeteditor",
+      "icon": "/resources/admin/widgets/respoIMG.png",
+      "id": "cms-image1",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "defaultConfig": {
+        "name": "shop now ▶",
+        "textColor": "#FFF",
+        "textHoverColor": "#000",
+        "gradientStartingColor": "#ff0000",
+        "gradientEndingingColor": "#4a2f2f",
+        "borderRadius": "5",
+        "borderColor": "#ffffff",
+        "link": "/shopmain",
+        "alignment": "center",
+        "fontSize": "12"
+      },
+      "displayName": "Special Button",
+      "displayTemplate": "misc/special-button",
+      "customEditor": "special-button",
+      "icon": "/resources/admin/widgets/button.png",
+      "id": "special-button",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "defaultConfig": {
+        "": ""
+      },
+      "displayName": "Product listing with BG",
+      "displayTemplate": "misc/product-with-bg",
+      "customEditor": "plp-with-bg",
+      "icon": "/resources/admin/widgets/button2.png",
+      "id": "plp-with-bg",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "Configurable Product listing",
+      "displayTemplate": "misc/product-listing",
+      "customEditor": "configured-plp",
+      "icon": "/resources/admin/widgets/gridsettings2.png",
+      "id": "configured-plp",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "displayName": "FAQ",
+      "displayTemplate": "misc/faq",
+      "customEditor": "faq",
+      "icon": "/resources/admin/widgets/faq.jpg",
+      "id": "faq",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "defaultConfig": {
+        "imageFileId": ""
+      },
+      "displayName": "Athlet Profile",
+      "displayTemplate": "misc/profile",
+      "customEditor": "profile",
+      "icon": "/resources/admin/widgets/PROFILE.png",
+      "id": "profile",
+      "anchor": "100%",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "id": "googlemap",
+      "icon": "/resources/admin/widgets/MAP.png",
+      "displayName": "Google Map",
+      "validPageTypes": [
+        "*"
+      ],
+      "displayTemplate": "catalog/google-map",
+      "editViewFields": [
+        {
+          "fieldLabel": "Source for location",
+          "name": "googlemap",
+          "xtype": "textfield",
+          "width": 500
+        },
+        {
+          "fieldLabel": "Link for view large map",
+          "name": "link",
+          "xtype": "textfield",
+          "width": 500
+        },
+        {
+          "xtype": "combobox",
+          "fieldLabel": "Alignment of MAP",
+          "name": "alignment",
+          "store": [
+            [
+              "left",
+              "Left"
+            ],
+            [
+              "center",
+              "Center"
+            ],
+            [
+              "right",
+              "Right"
+            ]
+          ],
+          "allowblank": false
+        }
+      ]
+    },
+    {
+      "displayName": "Simple Editor",
+      "displayTemplate": "catalog/html-content",
+      "editViewFields": [
+        {
+          "fieldLabel": "Rich text document",
+          "name": "template",
+          "xtype": "htmleditor",
+          "width": 700,
+          "height": 350
+        }
+      ],
+      "icon": "/resources/admin/widgets/richEditor.png",
+      "id": "richEditor",
+      "anchor": "100%",
+      "validPageTypes": [
+        "*"
+      ]
+    },
+    {
+      "id": "helpbox",
+      "displayName": "Help Box",
+      "displayTemplate": "misc/jelly-belly-helpbox",
+      "icon": "http://www.clipartbest.com/cliparts/RiG/6k5/RiG6k5xiL.jpeg",
+      "editViewFields": [
+            {
+              "xtype": "textfield",
+              "name": "helphead",
+              "fieldLabel": "test name",
+              "width": 300
+            },
+            {
+              "xtype": "htmleditor",
+              "name": "desc"
+            }
+          ],
+          "validPageTypes": [
+            "*"
+          ]
+        }
+    ],
+    "layoutWidgets": [
+        {
+            "id": "mz-1-col",
+            "category": "*",
+            "displayName": "1 Column 100",
+            "displayTemplate": "base",
+            "defaultConfig": {
+                "title": "Dropzone",
+                "mz-col1": 100
+            },
+            "customEditor": "layout",
+            "icon": "/resources/admin/widgets/1-col_icon.png",
+            "validPageTypes": [
+                "*"
+            ],
+            "columns": [
+                {
+                    "width": "100%"
+                }
+            ]
+        },
+        {
+            "id": "mz-2-col",
+            "category": "*",
+            "displayName": "2 Column 50/50",
+            "displayTemplate": "base",
+            "defaultConfig": {
+                "title": "Dropzone",
+                "mz-col1": 50,
+                "mz-col2": 50
+            },
+            "customEditor": "layout",
+            "icon": "/resources/admin/widgets/2-col_icon.png",
+            "validPageTypes": [
+                "*"
+            ],
+            "columns": [
+                {
+                    "width": "50%"
+                },
+                {
+
+                    "width": "50%"
+                }
+            ]
+        },
+        {
+            "id": "mz-3-col",
+            "category": "*",
+            "displayName": "3 Column 33/33/33",
+            "displayTemplate": "base",
+            "defaultConfig": {
+                "title": "Dropzone",
+                "mz-col1": 33.33,
+                "mz-col2": 33.33,
+                "mz-col3": 33.33
+            },
+            "customEditor": "layout",
+            "icon": "/resources/admin/widgets/3-col_icon.png",
+            "validPageTypes": [
+                "*"
+            ],
+            "columns": [
+                {
+                    "width": "33.3%"
+                },
+                {
+
+                    "width": "33.3%"
+                },
+                {
+
+                    "width": "33.3%"
+                }
+            ]
+        },
+        {
+            "id": "mz-4-col",
+            "category": "*",
+            "displayName": "4 Column 25/25/25/25",
+            "displayTemplate": "base",
+            "defaultConfig": {
+                "title": "Dropzone",
+                "mz-col1": 25,
+                "mz-col2": 25,
+                "mz-col3": 25,
+                "mz-col4": 25
+            },
+            "customEditor": "layout",
+            "icon": "/resources/admin/widgets/4-col_icon.png",
+            "validPageTypes": [
+                "*"
+            ],
+            "columns": [
+                {
+                    "width": "25%"
+                },
+                {
+
+                    "width": "25%"
+                },
+                {
+
+                    "width": "25%"
+                },
+                {
+
+                    "width": "25%"
+                }
+            ]
+        }
+    ]    
+}

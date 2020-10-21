@@ -1,0 +1,32 @@
+    
+    <div style="padding: 0px 0px;">
+        {% if Model.config.name %}
+        <h2 class="heading" style="margin: 0px;padding-left:6px;">{{Model.config.name}}</h2>
+        {% endif %}
+        <div style="padding:11px 15px 0px 15px;
+                {% if Model.config.showBorder %}
+                    box-shadow: 0 -40px 80px -80px rgba(0,0,0,0.5) inset;
+                    border-radius: 12px;border: 1px solid #ccc;
+                {% endif %}
+                margin: 5px;">
+            <div class="athlet-desc" style="display:inline-block;float: left;width: {% if Model.config.imageFileId %}72%{% else %} 100%{% endif %};text-align: left;">
+                        {{Model.config.content|safe}}
+                <div style="clear:both;"></div>
+            </div>                
+            {% if Model.config.imageFileId %}
+                <div class="athlet-hero">
+                    <figure style="text-align: center;">
+                        <img class="imgSrcValue" src="{{Model.config.imageFileId}}" width="245" border="0">
+                    </figure>
+                    {% if Model.config.quote %}
+                    <p style="text-align: center;"> {{Model.config.quote}} </p>
+                    {% endif %}
+                </div>
+            {% endif %}
+            <div style="clear:both;"></div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+
+

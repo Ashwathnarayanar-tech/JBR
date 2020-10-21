@@ -1,0 +1,139 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static{% endblock body-tag-classes %}
+{% block body-content %}
+<h1 class="mz-pagetitle">General Information About Our Products</h1>
+<ul class="jb-feature-brands">
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            <h3>Jelly Belly Jelly Beans Have a Lot Going for Them</h3>
+            <figure> 
+                <img border="0" src="/resources/images/footer-static/cartwheel.png">
+            </figure>
+            <p class="noPad">
+                Jelly Belly jelly beans are gluten free, peanut free, dairy free, fat free and vegetarian friendly.
+            </p>
+            <div class="clearfix"></div>
+        </div>
+    </li>
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            <h3>Certified Kosher</h3>
+            <figure>
+                <img border="0" src="/resources/images/footer-static/ou-kosher.png">
+            </figure>
+            <p class="noPad">
+                All Jelly Belly jelly beans and most of our Confections are certified OU Kosher by the Orthodox Union.  
+            </p>
+            <div class="clearfix"></div>
+        </div>
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            <h3>4 Calories Per Bean</h3>
+            <figure>
+                <img border="0" src="/resources/images/footer-static/dancing.png">
+            </figure>
+            <p class="noPad">
+                Each Jelly Belly jelly bean is four calories.   
+                Twenty-five Jelly Belly jelly beans is 100 calories &ndash; you can dance off that amount of calories in about 15 minutes. 
+                For more ideas to Treat Right, check out <a target="_blank" href="http://www.candyusa.com/TreatRight/index.cfm">this resource</a> 
+                for making life a little sweeter.
+            </p>
+            <div class="clearfix"></div>
+        </div>
+    </li>
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            <h3>No Gelatin</h3>
+            <figure>
+                <img border="0" src="/resources/images/footer-static/no-gelatin.png">
+            </figure>
+            <p class="noPad">
+                Jelly Belly jelly beans beans do not contain gelatin. 
+            </p>
+            <div class="clearfix"></div>
+        </div>
+    </li>
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            <h3>How Much Does it Weigh?</h3>
+            <figure>
+                <img border="0" src="/resources/images/footer-static/basket-o-beans.png">
+            </figure>
+            <p class="noPad">
+                Twenty-five Jelly Belly jelly beans weigh approximately 1 ounce. 
+            </p>
+            <div class="clearfix"></div>
+        </div>
+    </li>
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            <h3>Natural Flavors</h3>
+            <figure>
+                <img border="0" src="/resources/images/footer-static/snapple_box.png">
+            </figure>
+            <p class="noPad">
+                Looking for Jelly Belly jelly beans with natural flavors and colors from natural sources? Check out the Snapple Flavor line and the Superfruit flavors. 
+                Confectionery choices free of artificial colors can be found in the Sunkist Fruit Gems, Sunkist Orange Slices and Sunkist Dark Chocolate Sticks.
+            </p>
+            <div class="clearfix"></div>
+        </div>
+    </li>
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            <h3>More Than 100 Flavors</h3>
+            <figure>
+                <img border="0" src="/resources/images/footer-static/floating-beans.png">
+            </figure>
+            <p class="noPad">
+                Jelly Belly jelly beans are made in more than 100 different flavors.
+            </p>
+            <div class="clearfix"></div>
+        </div>
+    </li>
+    <li class="jb-feature-brand-listing">
+        <div class="jb-feature-brand-item">
+            <h3>Made in a Peanut Free Factory</h3>
+            <figure>
+                <img border="0" src="/resources/images/footer-static/peanut-free_factory.png">
+            </figure>
+            <p class="noPad">
+                After two decades of tasty service, Peanut Butter flavor was retired to make room for new flavors.
+            </p>
+            <div class="clearfix"></div>
+        </div>
+    </li>
+</ul>
+<figure class="vertImage">
+    <img src="/resources/images/footer-static/mrJB_verticalImage.jpg">
+    <figcaption>Did you know we have an extensive list of nutritional information questions in our <a href="/frequently-asked-questions">FAQ</a>? 
+        If you don’t find your answer there, submit a question for a personal response.
+    </figcaption>
+    <br>
+    <figcaption>If you have questions regarding any products that carry the Jelly Belly logo, please contact our Consumer Affairs Department, toll free, 
+        at 1-800-522-3267 between 8 AM and 5 PM Pacific Time, Monday through Friday, excluding major holidays, 
+        OR you may submit a question at any time on our <a href="/frequently-asked-questions">FAQ</a> page for a personal response.
+    </figcaption>
+</figure>
+<div class="clearfix"></div>
+{% endblock body-content %}
+
+
+
+
+

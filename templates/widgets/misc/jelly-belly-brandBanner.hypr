@@ -1,0 +1,16 @@
+<div class="jb-brandbanner-main">
+    <a href="{{model.config.URL}}">
+        <div class="jb-brandbanner-div" style="background-image:url('{{model.config.backgroundImagePath}}');"> 
+            <p class="jb-brandbanner-desc">
+                    {{model.config.brandDetails | safe}}
+            </p>
+            <figure>
+                <div class="jb-brandbanner-logo" style="background-image:url('{{model.config.logoPath}}');"> </div>
+                <figcaption style=""> 
+                                   {{model.config.imageCaption | safe}}  
+                </figcaption>            
+            </figure>
+        </div>
+    </a>
+</div>
+

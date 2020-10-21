@@ -1,0 +1,2274 @@
+.mz-category {
+    font-family:@Trebuchet;
+    /* font-family: Tahoma, Helvetica, Arial, sans-serif; */
+    background: url('../../resources/images/mainBG2.jpg') no-repeat fixed center top;
+    color: #444;
+    .mz-l-container {
+        margin-top: 20px;
+    }
+    /*.mz-l-sidebar {
+        .mz-facetingform {
+            width: 190px;
+        }
+    }*/
+    .mz-l-paginatedlist {
+        top: 0em;
+        margin: 0 auto;
+        clear: both;
+        /*text-align: center;*/ 
+        width: 71%;
+        clear: none;
+    }
+    .jb-category-container{
+        clear: both;
+        width: 96%;
+        margin: 0 auto;
+        .jb-category-title{
+            color: rgb(188, 0, 0);
+            font-size: 20px;
+        }
+        .jb-childcategory-container{
+            clear: both;
+            width: 75%;
+            margin: 0 auto;
+            .jb-childcategory{
+                min-height: 50px;
+                overflow: hidden;
+                border: 1px solid #8D8989;
+                border-radius: 16px;
+                margin: 20px auto;
+                transition: max-height 100ms;
+               /* box-shadow: inset 0 -40px 80px -80px rgba(0, 0, 0, 0.5);
+                -moz-box-shadow: inset 0 -40px 80px -80px rgba(0, 0, 0, 0.5);
+                -webkit-box-shadow: inset 0 -40px 80px -80px rgba(0, 0, 0, 0.5);*/
+                -webkit-box-shadow:inset 0 -40px 80px -80px rgba(0,0,0,0.5);
+                box-shadow:inset 0 -40px 80px -80px rgba(0,0,0,0.5);
+                .jb-colapsing-title{
+                    margin: 0px;
+                    cursor: pointer;
+                    clear: both;
+                    width: 100%;
+                    padding: 12px 0px 12px 12px;
+                    h1{
+                        margin: 0px;
+                        width: 75%;
+                        text-align: left;
+                        display: inline-block;
+                        font-size:24px;
+                        font-weight:normal;
+                    }
+                    p.mz-desktop{
+                        display: inline-block;
+                        color:rgb(139, 139, 139);
+                        font-size:12px;
+                        float: right;
+                        padding-right: 25px;
+                        position: relative;
+                    }
+                    p.mz-mobile{
+                        display: none;
+                    }
+                }
+                .jb-childcategory-description{
+                    margin: 20px auto;
+                    padding: 0px 20px;
+                }
+                .jb-childChildrenCategories-container{
+                    padding: 0px 20px;
+                    margin: 0 auto;
+                    width: 100%;
+                    text-align: center;
+                    clear: both;
+                    display: inline-block;
+                    a{
+                        .jb-childChildrenCategory{
+                            width: 103px;
+                            height: 62px;
+                            padding-bottom: 53px;;
+                            float: left;
+                            margin: 15px;
+                            display: block;
+                            background-repeat: no-repeat;
+                            p{
+                                text-decoration: none;
+                                color: #00a3e0;
+                                cursor: pointer;
+                                position: relative;
+                                top: 70px;
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .jb-child-category-button{
+                text-align: center;
+                margin-bottom: 10px;
+                a{
+                    text-decoration: none;
+                    color: rgb(0, 163, 224);
+                    cursor: pointer;
+                    border: 1px solid rgb(204, 204, 204);
+                    padding: 5px 0px;
+                    border-image-source: initial;
+                    border-image-slice: initial;
+                    border-image-width: initial;
+                    border-image-outset: initial;
+                    border-image-repeat: initial;
+                    border-radius: 8px;
+                    font-size: 19px;
+                    text-align: center;
+                    width: 45%;
+                    display: inline-block;
+                    &:hover{
+                        background:#e3e3e3;
+                    }
+                    span{
+                        color: rgb(68, 68, 68);
+                    }
+                }
+            }
+        }
+    }
+    #mz-drop-zone-cateoryplpdropzone {
+        .mz-cms-content {
+            height: auto !important;
+        }
+    }
+    .crosssell-carousel{
+        display: none !important;   
+    }
+	.mz-cms-content{
+		padding: 0px;
+	}
+}
+
+/* filters css start */
+    .mz-category,.mz-searchresults{
+        .mz-l-pagewrapper{
+            .mz-l-pagecontent{
+                .mz-l-container{
+                    .mz-l-paginatedlist{
+                        .jb-pagecontrols{
+                            
+                            .facet-filtercointainer{
+                                display: inline-block;
+                                width: 58%;
+                                text-align: left;
+                                .mz-desktop-filters{ 
+                                        width: 30%;  
+                                    }
+                                .facets-container{
+                                    
+                                    .facets-header {
+                                    display: block;
+                                    text-align: left;
+                                    text-decoration: none;
+                                    border: 1px solid #b9b9b9;
+                                    border-radius: 5px;
+                                    padding: 4% 0; 
+                                        .container-filter{
+                                            text-align: left;
+                                            font-size: 16px;
+                                            position: relative;
+                                            padding-left: 10px;
+                                            color: #5f5f5f;
+                                            font-weight: bold;
+                                            &:after{
+                                                content: '';
+                                                display: inline-block;
+                                                background-image: url(../../resources/images/filter_icon.png);
+                                                width: 14px;
+                                                height: 20px;
+                                                background-size: 100%;
+                                                background-repeat: no-repeat;
+                                                position: absolute;
+                                                top: 4px;
+                                                right: 14px;
+                                            }  
+                                             &.active{
+                                                 &:after{
+                                                    content: '';
+                                                    display: inline-block;
+                                                    background-image: url(../../resources/images/filter_icon.png);
+                                                    width: 14px;
+                                                    height: 20px; 
+                                                    background-size: 100%;
+                                                    background-repeat: no-repeat;
+                                                    position: absolute;
+                                                    top: -3px;
+                                                    right: 14px;
+                                                    transform: rotate(180deg);
+                                                    -ms-transform: rotate(180deg);
+                                                    -moz-transform: rotate(180deg);
+                                                    -webkit-transform: rotate(180deg);
+                                                    -o-transform: rotate(180deg); 
+                                                }
+                                             }
+                                        }
+                                    }
+                                    .filter-list{ 
+                                        display: none;
+                                        position: absolute;
+                                        z-index: 999;
+                                        width: 40%; 
+                                        left: 0px; 
+                                        background-color: #fff;
+                                        top: 62px;
+                                        border: solid 0.5px #6ca7ec;
+                                        border-radius: 10px; 
+                                        &:before{
+                                            content: '';
+                                            width: 16px;
+                                            height: 16px;
+                                            transform: rotate(45deg);
+                                            border-top: solid 0.5px #6ca7ec;
+                                            border-left: solid 0.5px #6ca7ec;
+                                            margin-left: 10px;
+                                            position: absolute;
+                                            margin-bottom: 3px;
+                                            left: 136px;
+                                            top: -8px;
+                                            background-color: #fff;
+                                            z-index: 999;                                     
+                                        }
+                                        &.active{
+                                            display: block;
+                                        } 
+                                        &.threefacet{
+                                            width: 60%;
+                                            .facete-type-li{
+                                                width: 30%;
+                                                .item-name {
+                                                    padding-bottom: 5%;
+                                                    .mz1-facetingform-value{
+                                                        width: 78%;
+                                                        display: inline !important;
+                                                        &.color{
+                                                            display:inline-block !important;
+                                                        }
+                                                    }
+                                                    
+                                                }
+                                            }
+                                            .mz-facetingform{
+                                                .mz-l-sidebaritem.mz-shop-home{
+                                                    .filter-bottom-button{
+                                                        text-align:right;
+                                                    }
+                                                    .mz-facetingform-clearall{
+                                                        width: 23%;
+                                                    }
+                                                    .apply-filter-button{
+                                                        width: 23%; 
+                                                    }
+                                                } 
+                                            } 
+                                        }
+                                        &.fourfacet{
+                                            width: 80%;
+                                            .facete-type-li{
+                                                width: 22%;
+                                                 &.Color{
+                                                    width: 28% !important; 
+                                                 }
+                                                .item-name {
+                                                    padding-bottom: 5%;
+                                                    .mz1-facetingform-value{
+                                                        width: 78%;
+                                                        display: inline !important;
+                                                        &.color{
+                                                            display:inline-block !important;
+                                                        }
+                                                    }
+                                                    
+                                                }
+                                            }
+                                            .mz-facetingform{
+                                                .mz-l-sidebaritem.mz-shop-home{
+                                                    .filter-bottom-button{
+                                                        text-align:right;
+                                                    }
+                                                    .mz-facetingform-clearall{
+                                                        width: 23%;
+                                                    }
+                                                    .apply-filter-button{
+                                                        width: 23%; 
+                                                    }
+                                                } 
+                                            }
+                                        }
+                                        .mz-facetingform{
+                                            padding: 30px 20px;
+                                            position: relative;
+                                            border:0;
+                                            .cross-icon{
+                                                position: absolute;
+                                                right: 30px;
+                                                background-image: url(../../resources/images/close-search.png);
+                                                width: 15px;
+                                                height: 15px;
+                                                background-size: 100%;
+                                                background-repeat: no-repeat;
+                                                top: 20px;
+                                                cursor: pointer;
+                                            }
+                                            .facets-type-list{
+                                               /* border-bottom: solid 1px #cfcfcf;*/
+                                                .facete-type-ul{
+                                                    list-style-type: none;
+                                                    margin: 0;
+                                                    text-align: center; 
+                                                    padding: 0;
+                                                     &:after{
+                                                                        clear: both;
+                                                                        content: '';
+                                                                        display: table;
+                                                                    }
+                                                    .facete-type-li{
+                                                        display: inline-block;
+                                                        vertical-align: top;
+                                                        padding: 0;
+                                                        text-align: left;
+                                                        float: left;
+                                                        .mz-l-sidebaritem-main{
+                                                            text-align: left;
+                                                            padding-left: 2px; 
+                                                            span{
+                                                                text-transform: uppercase;
+                                                                font-size: 16px;
+                                                                color: #004E99;
+                                                                text-align: center;
+                                                                font-weight: 700;
+                                                            }
+                                                        }
+                                                        .facet-name-list{
+                                                            .mz-l-sidebaritem{
+                                                                .mz-facetingform-facet{
+                                                                    margin: 0;
+                                                                    padding: 12px 0;
+                                                                    list-style-type: none;
+                                                                    text-align: left;
+                                                                   
+                                                                    .item-name{
+                                                                        .mz1-facetingform-value{
+                                                                            display: inline-block;
+                                                                            color: #CFCFCF;
+                                                                            font-size: 15px;
+                                                                            font-weight: normal;
+                                                                            vertical-align: top;
+                                                                            margin: 0;
+                                                                            padding-bottom: 5px;
+                                                                            &:hover{
+                                                                                font-weight: 700;
+                                                                            }
+                                                                        } 
+                                                                        .checkbox-style{
+                                                                            width: 15px;
+                                                                            position: relative;
+                                                                            height: 15px;
+                                                                            border: 1px solid #000;
+                                                                            display: inline-block;
+                                                                            border-radius: 4px;
+                                                                            margin-top: 3px; 
+                                                                            vertical-align: top;
+                                                                            margin-right: 6px; 
+                                                                        }
+                                                                        &.mz-facetform-selected{
+                                                                            .checkbox-style{
+                                                                                border-color: #004e99;
+                                                                                background-color: #004e99;
+                                                                                &:after{
+                                                                                    position: absolute;
+                                                                                    content: '';
+                                                                                    width: 4px;
+                                                                                    height: 7px;
+                                                                                    transform: rotate(45deg);
+                                                                                    border-bottom: 3px solid white;
+                                                                                    top: 0;
+                                                                                    border-right: 3px solid white;
+                                                                                    top: 1px;
+                                                                                    left: 4px;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                &.g-taste{
+                                                                    .mz-facetingform-facet{
+                                                                        .item-name{
+                                                                            .mz1-facetingform-value{
+                                                                                color: #000;
+                                                                                .mz-facetingform-valuelabel{
+                                                                                    color: #4A4A4A;
+                                                                                }
+                                                                                &:hover{
+                                                                                    font-weight: 700;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        &.Price{
+                                                            .facet-name-list{
+                                                                .mz-l-sidebaritem{
+                                                                    .mz-facetingform-facet{
+                                                                        .item-name{
+                                                                            .mz1-facetingform-value{
+                                                                                color: #000;
+                                                                                .mz-facetingform-valuelabel{
+                                                                                    color: #4A4A4A;   
+                                                                                }
+                                                                                &:hover{
+                                                                                    font-weight: 700;
+                                                                                }
+                                                                            } 
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        &.Color{
+                                                            width: 38%;
+                                                            text-align: left;
+                                                            .facet-name-list{ 
+                                                                .mz-l-sidebaritem{ 
+                                                                    .mz-facetingform-facet{ 
+                                                                        .item-name{ 
+                                                                            margin: 6px;
+                                                                            display: inline-block;
+                                                                            .mz1-facetingform-value{
+                                                                                width: 20px;
+                                                                                height: 20px;
+                                                                                padding: 2px;
+                                                                                border: 1px solid #000;
+                                                                                border-radius: 4px;
+                                                                                &:hover{
+                                                                                    padding: 0px;
+                                                                                    border: 3px solid black;
+                                                                                    border-radius: 4px;
+                                                                                }
+                                                                            }
+                                                                            &:hover{
+                                                                                font-weight: 700;
+                                                                            }
+                                                                            &.mz-facetform-selected{
+                                                                                .mz1-facetingform-value{
+                                                                                    padding: 0px;
+                                                                                    border: 3px solid #000;
+                                                                                    border-radius: 4px;
+                                                                                    
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .mz-l-sidebaritem.mz-shop-home{
+                                                padding: 0;
+                                                clear: both;
+                                                border-top: solid 1px #cfcfcf;
+                                                .filter-bottom-button{
+                                                    margin-top: 3%;
+                                                    width: 100%;
+                                                }
+                                                .apply-filter-button{
+                                                    text-align: center;
+                                                    text-transform: uppercase;
+                                                    padding: 2%;
+                                                    font-size: 18px;
+                                                    text-decoration: none;
+                                                    background-color: #1381b5;
+                                                    color: #fff;
+                                                    border-radius: 4px;
+                                                    display: inline-block;
+                                                    -moz-border-radius: 4px;
+                                                    -webkit-border-radius: 4px;
+                                                    border: 1px solid #1381b5;
+                                                    /* margin-right: 10px; */
+                                                    width: 43%;
+                                                   
+                                                    &:hover{ 
+                                                        background: #1381b5;
+                                                        border-color: #1381b5; 
+                                                        
+                                                    }
+                                                }
+                                                .mz-facetingform-clearall{
+                                                    border-radius: 4px;
+                                                    -moz-border-radius: 4px;
+                                                    -webkit-border-radius: 4px;
+                                                    padding: 2%;
+                                                    font-size: 18px;
+                                                    background: white;
+                                                    border: 1px solid #1381b5;
+                                                    color: #1381b5;
+                                                    text-transform: uppercase;
+                                                    text-decoration: none;
+                                                    display: inline-block;
+                                                    width: 43%;
+                                                    text-align: center;
+                                                    float: none;
+                                                    margin-left: 3%;
+                                                    &:hover{
+                                                        background: #1381b5;
+                                                        border-color: #1381b5;
+                                                        color: white;
+                                                    }
+                                                }
+                                            }
+                                        } 
+                                    }  
+                                } 
+                                .mz-pagesort.mz-desktop { 
+                                    display: inline-block;
+                                    width: 38%;
+                                    text-align: left;
+                                    vertical-align: top;
+                                    padding-left: 1%;
+                                    border: 1px solid #b9b9b9;
+                                    border-radius: 5px;
+                                    margin-left: 2%;
+                                    
+                                     p{
+                                         font-size: 16px;
+                                         font-weight: bold;
+                                         display: inline-block;
+                                         vertical-align: super;
+                                     }
+                                     .deflab{
+                                         vertical-align: unset;
+                                     }
+                                    
+                                    .wrapper-demo{
+                                        display: inline-block;
+                                    }
+                                    .wrapper-dropdown-1 {  
+                                    /* Size and position */
+                                    position: relative; /* Enable absolute positioning for children and pseudo elements */
+                                    width: 136px;
+                                    padding: 2px 0 0 0;
+                                    margin: 0 auto;
+                                    
+                                    /* Styles */
+                                    background: transparent;
+                                    color: #5f5f5f; 
+                                    outline: none; 
+                                    cursor: pointer; 
+                                    
+                                    /* Font settings */
+                                    font-weight: bold;
+                                        &:after{ 
+                                            content: '';
+                                            display: inline-block;
+                                            background-image: url(../../resources/images/sort_by_icon.png);
+                                            width: 14px;
+                                            height: 20px;
+                                            background-size: 100%;
+                                            background-repeat: no-repeat;
+                                            position: absolute;
+                                            top: 12px;
+                                            right: 6px; 
+                                        }
+                                        .sortdefval{
+                                            padding: 4%;
+                                        }
+                                        .sortlab {
+                                            display: block;
+                                            font-size: 12px;
+                                            margin-bottom: -3px;
+                                            color: #a5a4a4;
+                                        }
+                                        .sortval{
+                                            display: block;
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                            padding-bottom: 2px;
+                                        }
+                                    } 
+                                    
+                                   /* Hover state */
+                                    .wrapper-dropdown-1 {
+                                    	.dropdown {
+                                    		position: absolute;
+                                    		top: 100%; 
+                                    		left: 0;
+                                    		right: 0;
+                                    		background: #fff;
+                                    		font-weight: normal;
+                                    		opacity: 0;
+                                    		pointer-events: none;
+                                    		li {
+                                    			//a {
+                                    				display: block;
+                                    				text-decoration: none;
+                                    				color: #000;
+                                    				padding: 10px;
+                                    				font-size: 14px;
+                                    			//}
+                                    			/*&:hover {
+                                    				a {
+                                    					background: #f3f8f8;
+                                    				}
+                                    			}*/
+                                    		}
+                                    	}
+                                    }
+                                    .wrapper-dropdown-1.active {
+                                    	.dropdown {
+                                    		opacity: 1;
+                                    		pointer-events: auto;
+                                    		 z-index: 99;
+                                             margin: 0;
+                                             padding: 0;
+                                             width: 210px;
+                                             margin-top: 12px;
+                                             left: -72px;
+                                             border: solid 0.5px #6ca7ec;
+                                             border-radius: 5px;
+                                             &:before{
+                                                content: '';
+                                                width: 16px;
+                                                height: 16px;
+                                                transform: rotate(45deg);
+                                                border-top: solid 0.5px #6ca7ec;
+                                                border-left: solid 0.5px #6ca7ec;
+                                                margin-left: 10px;
+                                                position: absolute;
+                                                margin-bottom: 3px;
+                                                left: 46px;
+                                                top: -8px;
+                                                background-color: #fff;
+                                                z-index: 999;                                     
+                                            }
+                                    	}
+                                    	&:after {
+                                    		//border-color: #9bc7de transparent;
+                                    		//border-width: 6px 6px 0 6px;
+                                    		//margin-top: -3px;
+                                    	}
+                                    	
+                                    	//background: #9bc7de;
+                                    	//background: linear-gradient(to right, #9bc7de 0%, #9bc7de 78%, #ffffff 78%, #ffffff 100%);
+                                    }
+	
+                                }
+                            }    
+                            .mz-pagingcontrols{
+                                width: 40%;
+                                float: right;
+                                padding-top: 5px;
+                                padding-right: 6px;
+                                .jb-result-details{
+                                    width: 100%;
+                                    display: inline-block;
+                                    text-align: right;
+                                    float: none; 
+                                }
+                            }
+                        } 
+                        .selected-facets{
+    width: 99%;
+    margin: 0 auto;
+    .facets-container-selected{
+        .filter-list-selected{
+            .mz-facetingform-selected{
+                line-height: 0;
+                text-align: left;
+                padding-top: 10px;
+                .facet-name-list{
+                    display: inline-block;
+                    .mz-l-sidebaritem{
+                        width: 100%;
+                        .mz-facetingform-facet{
+                            padding: 0;
+                            list-style-type: none;
+                            margin: 5px 0;
+                            .item-name{
+                                background-color: #fff;
+                                border: 1px solid #6ca7ec;
+                                border-radius: 4px;
+                                color: #000;
+                                font-size: 16px;
+                                display: inline-block;
+                                line-height: 18px;
+                                margin: 0px 10px 5px 0px;
+                                padding: 6px 10px;
+                                label{
+                                    cursor: auto;
+                                    font-weight: bold;
+                                }
+                                .mz1-facetingform-value.color{
+                                    display: inline-block;
+                                    width: 18px;
+                                    height: 18px;
+                                    vertical-align: middle;
+                                    border-radius: 3px;
+                                    border: 2px solid;
+                                }
+                                .cross-btn-facets{
+                                    cursor: pointer;
+                                    font-weight: normal;
+                                    background-image: url(../../resources/images/close-search.png);
+                                    font-size: 0; 
+                                    width: 14px;
+                                    height: 14px;
+                                    display: inline-block;
+                                    background-size: 100%;
+                                    background-repeat: no-repeat;
+                                    vertical-align: top;
+                                    margin-top: 3px;
+                                    margin-left: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .mz-l-sidebaritem{
+                    width: 30%;
+                    display: inline-block;
+                    margin: 0; 
+                    .mz-facetingform-clearall{
+                        color: #0080b7;
+                        font-weight: 700;
+                        margin-right: 12px;
+                        cursor: pointer;
+                        display: none;
+                        font-size: 18px; 
+                        &.active{ 
+                            display: block;
+                        } 
+                    } 
+                    .hidden-element-to-apply{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+} 
+                    } 
+                } 
+            } 
+        } 
+    } 
+
+/* filters css end */
+
+@media only screen  and (min-width: 1025px){
+    .mz-category {
+        .mz-l-sidebar {
+            //display: none !important;
+        }
+        .mz-l-paginatedlist {
+            top: 0em;
+            margin: 0 auto;
+            clear: both;
+            /*text-align: center;*/ 
+            width: 100%;
+            clear: none;
+            .jb-pagecontrols.mz-desktop{
+                background : rgba(207, 207, 207, 0.21);
+                border : none;
+                border-top-left-radius : 6px;
+                border-top-right-radius : 6px;
+                border-bottom-right-radius : 6px;
+                border-bottom-left-radius : 6px;   
+                .mz-pagesort{
+                    p{
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                    select{
+                        width : 54%;
+                        height : 38px;
+                        font-size : 14px;
+                        font-weight : bold;
+                        border-top-left-radius : 5px;
+                        border-top-right-radius : 5px;
+                        border-bottom-right-radius : 5px;
+                        border-bottom-left-radius : 5px;
+                    }
+                }   
+            }
+        }
+    }
+    .mz-category #colorbox #cboxWrapper #cboxContent #cboxLoadedContent #notify-me-dialog #notify-me-email{
+        width: 50%;
+    }
+}
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.4s;
+     -moz-transition-duration: 0.4s;
+      -ms-transition-duration: 0.4s;
+       -o-transition-duration: 0.4s;
+          transition-duration: 0.4s; 
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+
+
+
+
+//styles for lightbox
+#cboxOverlay{
+    opacity: 0.5;
+    cursor: pointer;
+    visibility: visible;
+    //height: 100%;
+    position: fixed !important;
+    top: 0px;
+    width: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.84);
+    z-index: 1;
+}
+.mz-category { 
+#colorbox {
+    display: block;
+    visibility: visible;
+    left: 32% !important;
+    position: absolute;
+    width: 36% !important;
+    height: auto !important;
+    border: none;
+    overflow: hidden;
+    z-index: 99999;
+    outline: none;
+    border: none;
+    &:focus {
+        outline: 0;
+    }   
+    #cboxWrapper{
+        height: auto !important;
+         width: 100% !important;
+        #cboxContent {
+            position: relative;
+            z-index: 99;
+            float: left;
+            width: 100% !important;
+            height: auto !important;
+            border: none;
+           
+            #cboxLoadedContent {
+                border-radius: 10px;
+                width: 100% !important;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-box-shadow: 0 0 10px 0px #81b8ef; 
+                -webkit-box-shadow: 0 0 10px 0px #81b8ef;
+                box-shadow: 0 0 10px 0px #81b8ef;
+                height: auto !important;
+                    
+                    #notify-me-dialog{
+                        padding: 30px;
+                        
+                    #notify-me-email{
+                        margin-top: 10px;   
+                    }
+                    #notify-me-button{
+                        background: #39A857;
+                        color: #ffffff;
+                        padding: 5px 12px;
+                        margin-left: 5px;
+                        cursor: pointer;
+                    }
+                    .notify-error{
+                        color: #dc0909;
+                        display: none;
+                        }
+                    }
+                }
+            #cboxClose {
+                background: url("../../resources/images/icons/close-popup.png") no-repeat scroll 0px 0px #fff !important;
+                border: 0 none;
+                box-shadow: none;
+                height: 25px;
+                position: absolute;
+                right: 11px;
+                text-indent: -9999px;
+                top: 10px;
+                width: 27px;
+                display: none;
+                }
+            }
+        }
+    }
+}
+//styles for lightbox
+#colorbox {
+    z-index: 99999;
+    &:focus {
+        outline: 0;
+    }
+
+    #cboxContent {
+        #cboxClose {
+            /* background: url("../resources/images/icons/close-popup.png") no-repeat scroll 0px 0px #fff !important; */
+            border: 0 none;
+            box-shadow: none;
+            height: 25px;
+            position: absolute;
+            right: 11px;
+            text-indent: -9999px;
+            top: 10px;
+            width: 27px;
+        }
+    }
+
+}
+.mz-cart{
+    .crosssell-carousel{
+        display: none !important;
+    }
+}
+#mz-drop-zone-rti-category,#mz-drop-zone-rti-cart,#mz-drop-zone-rti-product{
+    .rti-recommended-products{     
+        .rti-prod-list{ 
+            .related-prod-owl-carousel{
+                position: relative;
+                .row.mz-productlisting{
+                    display: inline-block;
+                    width: 19%;
+                    .mz-productlisting-image-right{
+                        .product-listing-row-content{
+                            .mz-subcategory-image-div{
+                                max-width: 125px;
+                                margin: 0 auto;
+                                a{
+                                    height: 106px;
+                                    display: block;
+                                    img{
+                                        max-height: 100px;
+                                    } 
+                                }
+                            }
+                            .mz-productlisting-info{
+                                text-align: center;
+                                .productTitle{
+                                    width: 80%;
+                                    a{
+                                        text-decoration: none;
+                                    }
+                                }
+                                .mz-productdetail-conversion-controls{
+                                    .mz-productdetail-qty{
+                                        display: inline-block;
+                                        width: 30%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } 
+                .owl-stage{ 
+                    margin: 0 auto;  
+                    min-height: 245px;    
+                    .owl-item {
+                        text-align: center;
+                        display: inline-block;
+                        .mz-productlisting{
+                            display: inline-block;
+                            width: 100%;
+                            text-align: center;
+                            vertical-align: top;
+                            position: relative;
+                            overflow: hidden;
+                            .sale-tag-icon{
+                                position: absolute;
+                                z-index: 2;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                                background-color: #25cc38;
+                                transform: rotate(45deg);
+                                -webkit-transform: rotate(45deg);
+                                -moz-transform: rotate(45deg);
+                                -o-transform: rotate(45deg);
+                                -ms-transform: rotate(45deg);
+                                right: -31px;
+                                top: 11px;
+                                color: #FFF;
+                                font-size: 14px;
+                                padding: 3px 41px;
+                                box-shadow: 0px 4px 4px -3px rgba(0, 0, 0, 0.75);
+                                -moz-box-shadow: 0px 4px 4px -3px rgba(0, 0, 0, 0.75);
+                                -webkit-box-shadow: 0px 4px 4px -3px rgba(0, 0, 0, 0.75);
+                                -o-box-shadow: 0px 4px 4px -3px rgba(0, 0, 0, 0.75);
+                                -ms-box-shadow: 0px 4px 4px -3px rgba(0, 0, 0, 0.75);
+                            }
+                            .prod-content{ 
+                                .product-listing-row-content{
+                                    .mz-subcategory-image-div{
+                                        width: 61%;
+                                        margin: 0 auto;
+                                        a{
+                                            img{
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                    .mz-productlisting-info{
+                                        .productTitle{
+                                            font-size: 13px;
+                                            height: 54px;  
+                                            margin: 0 auto;
+                                            width: 100%;
+                                            
+                                            overflow: hidden;
+                                            display: -webkit-box;
+                                            -webkit-line-clamp: 3;
+                                            -webkit-box-orient: vertical;
+                                        }
+                                        .priceSection{
+                                            margin-bottom: 6px;
+                                            height: 40px;
+                                            .mz-pricestack{
+                                                height: 40px;
+                                                .mz-pricestack.mz-pricestack-range{
+                                                    .mz-price{
+                                                        &:before{
+                                                            content: "Price: ";
+                                                            font-size: 12px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .mz-productdetail-conversion-controls{
+                                            .mz-qty-label{
+                                                font-size: 12px;
+                                            }
+                                            .mz-productdetail-qty{
+                                                //width: 57px !important;
+                                                display: inline-block;
+                                                zoom: 1;
+                                                margin: 0 6px;
+                                                padding: 2px 3px;
+                                                font-size: 11px;
+                                                font-family: Trebuchet MS, Verdana, sans-serif;
+                                                width: 50px;
+                                                text-align: center;
+                                                border: 1px solid #cccccc;
+                                                border-radius: 3px;
+                                                height: auto;
+                                                margin-bottom: 11px; 
+                                            }
+                                        }
+                                        .stock{
+                                            font-size: 12px;
+                                            color: #777777;
+                                            font-family: Trebuchet MS, Verdana, sans-serif;
+                                            height: 28px;
+                                            margin: 5px 0 0 0;
+                                            .green{
+                                                font-size: 12px;
+                                                color: green;
+                                            }
+                                            .blue{
+                                                color: #007aaf;
+                                            }
+                                        }
+                                        .stock.notify-me{
+                                            cursor: pointer;
+                                            margin: 5px 15px 0 0;
+                                            color: #007aaf;
+                                            font-weight: bold;
+                                        }
+                                        .jb-buy-product{
+                                            .jb-out-of-stock-cur,.show-popup-confirmation{ 
+                                                text-decoration: none;
+                                                margin: 0;
+                                                border: 1px solid #e55d00;
+                                                color: white;
+                                                text-transform: uppercase;
+                                                background: #ff7619;
+                                                text-decoration: none;
+                                                color: #606060;
+                                                border: solid 1px #b7b7b7;
+                                                padding: 4px 10px;
+                                                background: white;
+                                                background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ededed));
+                                                background: -moz-linear-gradient(top, white, #ededed);
+                                                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+                                                cursor: pointer !important;
+                                                //width: 89% !important;
+                                                display: block !important;
+                                                //margin-left: 0px !important;
+                                                font-size: 14px !important;
+                                                padding: 4px 10px !important;
+                                                margin: 0 auto;
+                                                &:hover{ 
+                                                    background: white;
+                                                    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#a29b9b));
+                                                    background: -moz-linear-gradient(top, white, #a29b9b);
+                                                }
+                                            }
+                                            .add-to-cart-cur,.jb-add-to-cart-cur,.show-popup-confirmation{ 
+                                               // width: 89%;
+                                                display: block;
+                                                margin-left: 0px;
+                                                border: 1px solid #e55d00;
+                                                color: white;
+                                                background: #ff7619;
+                                                font-size: 14px;
+                                                text-decoration: none;
+                                                color: #fef4eb;
+                                                border: solid 1px #da7c0c;
+                                                padding: 4px 10px;
+                                                background: #f47c20;
+                                                background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+                                                background: -moz-linear-gradient(top, #f88e11, #f06015);
+                                                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+                                                margin: 0 auto;
+                                                &:hover{
+                                                    color: #fef4e9;
+                                                    border: solid 1px #da7c0c;
+                                                    background: #f78d1d;
+                                                    background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+                                                    background: -moz-linear-gradient(top, #faa51a, #f47a20);
+                                                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }  
+                        }
+                    } 
+                }
+                .owl-nav{
+                    display: block; 
+                }
+            }
+            .navigation-arrows{
+                position: relative;
+                .previous{
+                    position: absolute;
+                    right: 0;
+                    top: 82px;
+                }
+                .next{
+                    position: absolute;  
+                    left: 0;
+                    top: 82px;    
+                }
+            }
+        }
+    } 
+}
+#mz-drop-zone-rti-category{
+    .rti-recommended-products{
+        .rti-prod-list{ 
+            .related-prod-owl-carousel{ 
+                .owl-stage{ 
+                    .owl-item{ 
+                        .mz-productlisting{ 
+                            .prod-content{ 
+                                .product-listing-row-content{ 
+                                    .mz-productlisting-info{ 
+                                        .jb-buy-product{ 
+                                            .jb-add-to-cart-cur,.show-popup-confirmation,.jb-out-of-stock-cur{
+                                                width: 80% !important;   
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.revently-viewed{
+    .recentlyviewed{
+        position: relative;
+        .row.mz-productlisting{
+            display: inline-block;
+            width: 19%;
+            .mz-productlisting-image-right{
+                .product-listing-row-content{
+                    .mz-subcategory-image-div{
+                        max-width: 125px;
+                        margin: 0 auto;
+                        a{
+                            height: 106px;
+                            img{
+                                max-height: 100px;
+                            } 
+                        }
+                    }
+                    .mz-productlisting-info{
+                        text-align: center;
+                        .productTitle{
+                            width: 80%;
+                            a{
+                                text-decoration: none;
+                                font-size: 13px;
+                                font-weight: normal;
+                            }
+                        }
+                        .mz-productdetail-conversion-controls{
+                            .mz-productdetail-qty{
+                                display: inline-block;
+                                width: 30%;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        .owl-stage-outer{
+            .owl-stage{
+                margin: 0 auto;  
+                min-height: 245px;    
+                .owl-item {
+                    display: inline-block;
+                    vertical-align: top;
+                    text-align: center;
+                    .mz-productlisting{
+                        display: inline-block;
+                        width: 100%;
+                        text-align: center;
+                        vertical-align: top;
+                        position: relative;
+                        overflow: hidden;
+                        .jb-product-min-details{
+                            .mz-productlisting-info{
+                                .mz-productlisting-title{
+                                    font-size: 13px;
+                                    font-weight: normal;
+                                    color: #3f3f3f;  
+                                }
+                            }
+                            .jb-quickviewdetails{
+                                .jb-product-prize{
+                                    //height: 31px;
+                                    .jb-quickprice{
+                                        font-size: 16px;
+                                        font-weight: normal;
+                                        span{
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                                .jb-buy-product{
+                                    .jb-add-to-cart-cur,.show-popup-confirmation{
+                                       // width: 89%;
+                                        display: block;
+                                        margin-left: 0px;
+                                        border: 1px solid #e55d00;
+                                        color: white;
+                                        background: #ff7619;
+                                        font-size: 14px;
+                                        text-decoration: none;
+                                        color: #fef4eb;
+                                        border: solid 1px #da7c0c;
+                                        padding: 4px 10px;
+                                        background: #f47c20;
+                                        background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+                                        background: -moz-linear-gradient(top, #f88e11, #f06015);
+                                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+                                        &:hover{
+                                            color: #fef4e9;
+                                            border: solid 1px #da7c0c;
+                                            background: #f78d1d;
+                                            background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+                                            background: -moz-linear-gradient(top, #faa51a, #f47a20);
+                                            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+                                        } 
+                                    }
+                                    .jb-out-of-stock-cur{ 
+                                        cursor: pointer;
+                                       // width: 89%;
+                                        display: block;
+                                        margin-left: 0px;
+                                        font-size: 14px;
+                                        text-decoration: none;
+                                        padding: 4px 10px;
+                                        margin:0;
+                                        &:hover{
+                                            background: -webkit-gradient(linear, left top, left bottom, from(white), to(#a9a9af));
+                                            background: -moz-linear-gradient(top, white, #a9a9af);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }   
+    }
+}
+.mz-cart{
+    .rti-recommended-products{ 
+        .rti-prod-list{ 
+            .related-prod-owl-carousel{
+                .owl-stage{ 
+                    .owl-item{ 
+                        .mz-productlisting{ 
+                            .prod-content{ 
+                                .product-listing-row-content{ 
+                                    .mz-productlisting-info{ 
+                                        .jb-buy-product{ 
+                                            .jb-out-of-stock-cur,.jb-add-to-cart-cur,.show-popup-confirmation{
+                                                width: 80% !important;  
+                                                margin: 0 auto; 
+                                            }
+                                            .jb-out-of-stock-cur,.show-popup-confirmation{
+                                                padding: 4px !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
+.mz-cart{
+    #mz-drop-zone-rti-cart{
+        .rti-recommended-products{ 
+            .rti-prod-list{ 
+                .related-prod-owl-carousel{ 
+                    .owl-stage{
+                        .owl-item{ 
+                            .mz-productlisting{ 
+                                .prod-content{ 
+                                    .product-listing-row-content{ 
+                                        .mz-productlisting-info{ 
+                                            .jb-buy-product{ 
+                                                .show-popup-confirmation,.jb-out-of-stock-cur{
+                                                    padding: 4px !important;   
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen  and (min-width: 1px) and (max-width: 767px){
+    .tz-Facets.mz-mobile,.selected-facets{ 
+        display: none; 
+    }
+    
+    /* mobile filters start */
+    .mz-category, .mz-searchresults{ 
+        .mz-l-pagewrapper{ 
+        .mz-l-pagecontent{ 
+            margin-top: 101px !important;
+                &.topZero{
+                    margin-top: 101px !important;  
+                }
+        .tz-mobrefine-slot {
+                    background-color: whitesmoke; 
+                    width: 100%;
+                    margin: 0;
+                    padding: 20px 0;
+                    text-align: center;
+                    box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.32);
+                    li{
+                        color:#0b1e30;
+                        display: inline-block;
+                        width: 168PX;
+                        text-align: center;
+                        padding: 7px 0;
+                        font-size:14px; 
+                        text-align: left;
+                        border-radius: 6px;
+                        border: solid 1px #cfcfcf;
+                        &:first-child {
+                            padding: 10px 0;
+                            margin-right: 10px;
+                        }
+                        a{
+                            margin-left: 12px;
+                            position: relative;
+                            color: #000;
+                            &:after{
+                                content: '';
+                                display: inline-block;
+                                width: 8px;
+                                height: 8px;
+                                background-color: transparent;
+                                transform: rotate(45deg);
+                                border-bottom: 1px solid black;
+                                border-right: 1px solid black;
+                                margin-left: 10px;
+                                margin-bottom: 3px;
+                                position: absolute;
+                                right: 8px;
+                                top: 3px;
+                            }
+                        }
+                        a.tz-mobRefine {
+                            padding: 0 0 0 28px;
+                            text-decoration:none;
+                            background: url("../../resources/images/icons/refine.png") 0 0px no-repeat;
+                            display: inline-block;
+                            height: 19px;
+                            width: 72%;
+                            background-size: contain;
+                        }
+                        label {
+                            background: url("../../resources/images/Sort_Icon.png") 0 0px no-repeat;
+                            display: inline-block;
+                            height: 19px;
+                            width: 72%;
+                            background-size: 26px;
+                            padding: 3px 0 3px 31px;
+                        }
+                        span {
+                            border:none;
+                            width: auto;
+                            margin: 0;
+                            font-size:14px;
+                            appearance:none;
+                            -moz-appearance:none; 
+                            -webkit-appearance:none;
+                        }
+                    }
+                } 
+
+            }
+        }
+        
+    }
+    #tz-refinePopup{ 
+        display: none;
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        width: 94%;
+        background-color: white;
+        padding: 3%;
+        overflow-y: auto;
+        height: 100%;
+        #tz-mobilePopmenu{            
+            position: relative;
+            height: 620px;
+            .tzPopup-exit{
+                float: right;
+                background-image: url(../../resources/images/icons/close-search.png);
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                background-size: 100%;
+                cursor: pointer;
+                
+            }
+            .tzPopup-body{
+                .tzPopup-content{
+                    .facets-header{
+                        display: block;
+                        text-align: left;
+                        text-decoration: none;
+                        padding: 14px 0;
+                        width: 30%;
+                        .container-filter{
+                            text-align: left;                                        
+                            font-size: 18px; 
+                            position: relative;
+                            padding-left: 20px;
+                            color: #000;
+                            .filter-icon{
+                                background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADjVADoAAAAAXNSR0IArs4c6QAABGpJREFUeAHtmttrE0EUh8/Z2BQRtC2IIN5eCi34oHmoiCIWRVG0N7FeKqUFk0BFUJAiilDBB/FBBaHSFkVBVAza2kRtbRFURFERBMHmLxBfpEhB00vGczaZmrbRZJPd7KaZhWRmzs6emfPxm8tOgtDQ5YEpuAIC1gHAYvoUzoXwDRDaoM/fh1DT9ZUiryic6GdHioIsbRp9LZ99q7DKAkkV5zRA/FxYgSeJVkCEQVxPcquwTCiuumAk+AUqa37QZLmrsKKX0eI96Pe38xwB0Oe7Bpp2Ut4qoDQAnvJmjtc1HfRI8B1U7h0jZeyYts3nDOJ9KC5tgs49UxzmXxBcGgm9hYqa35TbzsV5fN0hCM0QaNQhcJwzQbAlHHwDFbUTAGIbF+fdhXgLPL5W6FwbTYxtLgi+Gw6+pmESpWFSnVg57/OIPdDn9UK1vomaEU5yEFxlJPSKYCDB2DrjiXwtIHYShDbaLvBOcs6FcyyzDbU9F0BEz84251n5Ki2R/10V/60IGWk4+IIm0IVU3CxN+ZXiJYJwKlWfU4NgD+HgMFTsXUS5TakcOuq+hhfgse9MOn1KDwR7CoeGSBlLKLcxHcf218FzBOF8uv1IHwR7DAcHSRlllNuQbgP21NPaod930UjbxkCw53BogGAspVyVkYZyVxdPEITLRttLvWok8yjoHb6u5zoI4U922x4bLYuaOEanTRm9TWcGgiPVYXR30z7jqD2BJ7SKQJs/9JISbiZYDWUzB8HNxGDcIBithlo1szLiFG2SWmizdCcbt7HX8Ew98C5tvY8VcTtTF1k+N0nHbIezhcB9yE4RMooOocGnboZxRJosTxHHAcUBPoE2o63sFCF70IFReq1tIa73pMnaFOmoAOvNgsB9NUcRMur9D1wQGb1Lk0ejNJmeIvyi07Ra6PUOmenbHEXIHvFBh6e8iSavh9JkaoowBhruMhsC99FcEOyxo3oSlolDpDVTxi67jF8/ScA7odf3UhrMTM0dGok983UVwXcYpqV1S6I54/wCrIJHvg8ZP5/iQfMVIRvs9k/QEPkoi9mltExbCIH7Zh0I9h6FCCf5cFkLAlCB0FWgifF8UAP30VpFqKER1wGqoREjIdTQiIFQiogPDaUIOUeofYQkofYRMRJqslSKiBOIJWrVkDiiaouto1CKiCtCKEXESGiaWj51Ei6XAhGTxISaLHUQi9xKETqINS1KEToI/ikQYFLPO/zL2qM6Pfj8OKWyHgTCc4eLQe+e9SDcJQfpp7qQ02FYDyLQOA7FJfvot9AnToZhPQiOnmG4SxucDCM3ICSMVStJGfjUicrIHQiO/truCKxa0UBzxjOnwcgtCAlj9Yp6yg44CUbuQUzDWFnnJBj2gJAwytz1NGcMOkEZ9oHg6G+1/obSojpaTWzfdNkLYhqGu5YmUFP/JWdUZfaDkDDKimpomAwnDYD/TWfx5QwQEoa75F8wuizmYPEfRYz2PtD4CyQMxFFSyHvq4XGynTbqymj9P5jWAf3omHpGAAAAAElFTkSuQmCC");
+                                width: 16px;
+                                height: 16px;
+                                background-repeat: no-repeat;
+                                display: inline-block;
+                                background-size: 100%;
+                                position: absolute;
+                                top: 4px;
+                                left: 0;
+                            }
+                        }
+                    }
+                    .tz-mobileSelected-filter{
+                        label{
+                            display: none; 
+                        }
+                        .selected-facet-mobile{
+                            padding: 6px 15px;
+                            border: solid 0.7px #00408b; 
+                            color: #000;
+                            margin: 0 10px 10PX 0;
+                            display: inline-block;
+                            .mobjb-color{
+                                display: inline-block;
+                                width: 20px;
+                                height: 16px;
+                                vertical-align:sub;
+                                border-radius: 3px;
+                                border: 2px solid #000;
+                            }
+                            .remove-filter-one{
+                                font-weight: bold;
+                                margin-left: 10px;
+                            } 
+                        }
+                    }
+                    
+                    .mz-l-sidebar.mobsidebar{
+                        display: block;
+                        float: none; 
+                        .mz-facetingform-new{
+                            height: 425px;
+                            overflow-y: auto;
+                            .mz-l-sidebaritem-new{
+                                h4{
+                                    font-size: 18px; 
+                                    color: #004e99;
+                                    font-weight: normal;
+                                    border-top: 1px solid #CFCFCF;
+                                    padding: 14px 10px;
+                                    margin: 0;
+                                    background-image: url(../../resources/images/icons/plus-qty.png);
+                                    background-size: 24px;
+                                    background-repeat: no-repeat;
+                                    background-position-y: 50%;
+                                    background-position-x: 96%;
+                                }
+                                &.selected{
+                                    h4{
+                                        background-image: url(../../resources/images/icons/minus_qty.png);
+                                        border-bottom: 1px solid #CFCFCF;
+                                    }
+                                }
+                                .mz-facetingform-facet{
+                                    padding: 0;
+                                    list-style-type: none;
+                                    display: none;
+                                    .item-name{
+                                        display: inline-block; 
+                                        margin: 10px 0 10px 10px;
+                                        width: 90%;
+                                        .mz1-facetingform-value{
+                                            display: inline-block;
+                                            margin: 0;
+                                            color: #000;
+                                            .mz-facetingform-valuelabel{
+                                                color: #4a4a4a;
+                                            }
+                                        }
+                                        &.mz-facetform-selected{
+                                            .checkbox-style{
+                                                border-color: #004e99;
+                                                background-color: #004e99;
+                                                &:after{
+                                                    position: absolute;
+                                                    content: '';
+                                                    width: 4px;
+                                                    height: 7px;
+                                                    transform: rotate(45deg);
+                                                    border-bottom: 3px solid white;
+                                                    border-right: 3px solid white;
+                                                    top: 1px;
+                                                    left: 4px; 
+                                                }
+                                            }
+                                        }
+                                        .checkbox-style{
+                                            width: 15px;
+                                            position: relative;
+                                            height: 15px;
+                                            border: 1px solid black;
+                                            display: inline-block;
+                                            border-radius: 4px;
+                                            margin-top: 0px;
+                                            vertical-align: top;
+                                            margin-right: 10px;
+                                        } 
+                                        &.color{
+                                            margin: 6px;
+                                            width: 10%;
+                                            display: inline-block;
+                                            .mz1-facetingform-value{
+                                                width: 20px;
+                                                height: 20px;
+                                                padding: 2px;
+                                                border: 1px solid #000;
+                                                border-radius: 4px;
+                                            }
+                                            &.mz-facetform-selected{
+                                                .mz1-facetingform-value{
+                                                    padding: 0px;
+                                                    border: 3px solid #000;
+                                                    border-radius: 4px;
+                                                }
+                                            }
+                                        }
+                                        
+                                        .cat-name-container-mobile{
+                                            border-top: 1px solid #000;
+                                            padding: 5px 0;
+                                            position: relative;
+                                            a{
+                                                font-size: 18px;
+                                                text-decoration: none;
+                                                font-weight: 700;
+                                            }
+                                            .arrow{
+                                                width: 8px;
+                                                height: 8px;
+                                                transform: rotate(45deg);
+                                                display: inline-block;
+                                                position: absolute;
+                                                right: 15px;
+                                                top: 7px; 
+                                                border-bottom: 3px solid black;
+                                                border-right: 3px solid black;
+                                            }
+                                        }
+                                        .sub-cat-list-mobile{
+                                            display: none;
+                                            .mz-facetingform-facet{
+                                                .item-name-submenu-mobile{
+                                                    a{
+                                                        font-size: 18px;
+                                                        padding: 5px 5px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    } 
+                                }
+                            }
+                        }
+                    }
+                    .button-data{
+                        display: block;
+                        margin: 0px 0;
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        text-align: center;
+                        background-color: #fff;
+                        .tzPopup-Done{
+                            text-align: center;
+                            text-transform: uppercase;
+                            padding: 7px 45px;
+                            font-size: 18px;
+                            text-decoration: none;
+                            background-color: #004e99;
+                            color: #fff;
+                            border-radius: 4px;
+                            display: inline-block;
+                            border-radius: 4px;
+                            -moz-border-radius: 4px;
+                            -webkit-border-radius: 4px;
+                            border: 1px solid #004e99;
+                            &:hover{
+                                background: #003a72;
+                                border-color: #003a72;
+                            }
+                        }
+                        .mz-refine-search{ 
+                            .mz-reset-filter{
+                                border-radius: 4px;
+                                -moz-border-radius: 4px;
+                                -webkit-border-radius: 4px;
+                                padding: 7px 45px;
+                                font-size: 18px;
+                                background: white;
+                                border: 1px solid #003a72;
+                                color: #003a72;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                display: inline-block;
+                                &:hover{
+                                    background: #003a72;
+                                    border-color: #003a72;
+                                    color: white;
+                                }    
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #tzMoboverlay{
+            display: none;
+        }
+    }
+    /* mobile filters end */
+}
+@media only screen  and (min-width: 1px) and (max-width: 767px) and (orientation: portrait)  {
+    .tz-Facets.mz-mobile{
+        display: none; 
+    }
+    //styles for lightbox
+    #colorbox {
+        left: 0%;
+        //width: 20% !important;
+        top: 35% !important;
+        #notify-me-dialog {
+            #notify-me-email {
+                width: 62%;
+            }
+            #notify-me-button {
+                width: 35%;
+            }
+        }
+    }
+    .mz-category { 
+        #colorbox {           
+            left: 1.1% !important;
+            width: 96% !important;
+            top: 39% !important;            
+        } 
+    }
+    .rti-recommended-products{ 
+        .rti-prod-list{ 
+            .related-prod-owl-carousel{ 
+                .owl-stage{ 
+                    .owl-item{ 
+                        .mz-productlisting{ 
+                            width: 48%;
+                            .prod-content{ 
+                                .product-listing-row-content{ 
+                                    .mz-productlisting-info{ 
+                                        .productTitle{
+                                            width: 70%;
+                                            height: 39px;
+                                            font-size: 16px;
+                                        }
+                                        .jb-buy-product{ 
+                                            .add-to-cart-cur,.jb-add-to-cart-cur,.show-popup-confirmation{
+                                                width: 44%;
+                                                margin: 0 auto;  
+                                            }
+                                            .jb-out-of-stock-cur{
+                                                width: 44% !important;
+                                                margin: 0 auto !important; 
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .items-per-order,.zero-popup{ 
+        .zero-pop{
+            width: 60% !important;
+            left: 21% !important;
+        }
+    }
+    #mz-drop-zone-rti-cart {
+        .rti-recommended-products{ 
+            .rti-prod-list{ 
+                .related-prod-owl-carousel{ 
+                    .owl-stage{ 
+                        .owl-item{ 
+                            .mz-productlisting{ 
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media only screen  and (min-width: 1px) and (max-width: 767px) and (orientation: landscape)  {
+    //styles for lightbox
+    .tz-Facets.mz-mobile{
+        display: none; 
+    }
+    #colorbox {
+        left: 0;
+        width: 86% !important;
+        top: 28% !important;
+        #notify-me-dialog {
+            #notify-me-email {
+                width: 60%;
+            }
+            #notify-me-button {
+                width: 35%;
+            }
+        }
+    }
+    .mz-category { 
+        #colorbox {           
+            left: 7% !important;
+            width: 86% !important;
+            top: 28% !important;       
+        }
+    }
+    .mz-cart {
+        #colorbox {
+            width: 100% !important;
+            #notify-me-dialog {
+                #notify-me-email {
+                    width: 60%;
+                }
+                #notify-me-button {
+                    width: 35%;
+                }
+            }
+        }
+    }
+    .rti-recommended-products{ 
+        .rti-prod-list{ 
+            .related-prod-owl-carousel{ 
+                .owl-stage{ 
+                    .owl-item{ 
+                        .mz-productlisting{ 
+                            width: 48%;
+                            .prod-content{ 
+                                .product-listing-row-content{ 
+                                    .mz-productlisting-info{ 
+                                        .productTitle{
+                                            width: 70%;
+                                        }
+                                        .jb-buy-product{ 
+                                            .add-to-cart-cur,.jb-add-to-cart-cur,.show-popup-confirmation{
+                                                width: 44%;
+                                                margin: 0 auto;  
+                                            }
+                                            .jb-out-of-stock-cur{
+                                                width: 44%;
+                                                margin: 0 auto;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .items-per-order,.zero-popup{ 
+        .zero-pop{
+            width: 60% !important;
+            left: 21% !important;
+        }
+    }
+}
+/* Samsung Galaxy Devices */
+@media screen 
+      and (device-width: 360px) 
+      and (device-height: 640px) 
+      and (-webkit-device-pixel-ratio: 3) {
+          
+    .mz-category { 
+        #colorbox {           
+            width: 96% !important;     
+        }
+    }
+    .mz-category #colorbox #cboxWrapper #cboxContent #cboxLoadedContent #notify-me-dialog #notify-me-email {
+        text-indent: 5px; 
+        width: 62%;
+    }
+    // .mz-category #colorbox.samsung-device-fix {
+    //     width: 60% !important;
+    // }
+}
+
+@media screen 
+      and (device-width: 360px) 
+      and (device-height: 640px) 
+      and (-webkit-device-pixel-ratio: 3) 
+      and (orientation: landscape) {
+        .mz-category { 
+            #colorbox {           
+                width: 54% !important;     
+            }
+        } 
+    }
+    
+@media screen 
+    and (device-width: 360px) 
+    and (device-height: 640px) 
+    and (-webkit-device-pixel-ratio: 4) and (orientation: landscape) {
+          
+    .mz-category { 
+        #colorbox {
+            width: 94% !important;
+        }
+    }
+}
+
+@media only screen  and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait)  {
+    //styles for lightbox
+    .mz-category {
+        #colorbox {   
+            left: 13% !important;
+            width: 76% !important;
+            top: 35% !important; 
+          
+            #cboxWrapper{
+                #cboxContent {
+                    #cboxClose {  
+                        right: 12px;
+                        top: 13px;
+                    }
+                }
+            }
+        }
+    }
+    
+    #colorbox {
+        left: 13% !important;
+        width: 60% !important;
+        top: 35% !important; 
+      
+        #cboxWrapper{
+            #cboxContent {
+                #cboxClose {
+                    right: 12px;
+                    top: 13px;
+                }
+            }
+        }
+    } 
+    .rti-recommended-products{ 
+        .rti-prod-list{ 
+            .related-prod-owl-carousel{ 
+                .owl-stage{ 
+                    .owl-item{ 
+                        .mz-productlisting{ 
+                            .prod-content{ 
+                                .product-listing-row-content{ 
+                                    .mz-productlisting-info{ 
+                                        .productTitle{
+                                            width: 70%;    
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .items-per-order,.zero-popup{ 
+        .zero-pop{
+            width: 60% !important;
+            left: 21% !important;
+        }
+    }
+    body.mz-product{ 
+        .overlay-for-complete-page{
+            width: 100%; 
+            left: 0;
+        }
+    }
+        .mz-category,.mz-searchresults {
+    	.mz-l-pagewrapper {
+    		.mz-l-pagecontent { 
+    			.mz-l-container {
+    				.mz-l-paginatedlist {
+    					.jb-pagecontrols {
+    						.facet-filtercointainer {
+    							.mz-desktop-filters {
+    								width: 38%;
+    							}
+    							.facets-container{
+    							    .filter-list{
+    							        width: 56%;
+    							        top: 56px;
+    							        &.threefacet{
+                                            width: 98%;
+                                            .facete-type-li{
+                                                width: 30%;
+                                                .item-name {
+                                                    padding-bottom: 5%;
+                                                    .mz1-facetingform-value{
+                                                        width: 78%;
+                                                        display: inline !important;
+                                                        &.color{
+                                                            display:inline-block !important;
+                                                        }
+                                                    }
+                                                    
+                                                }
+                                            }
+                                            .mz-facetingform{
+                                                .mz-l-sidebaritem.mz-shop-home{ 
+                                                    .filter-bottom-button{
+                                                        text-align:right;
+                                                    }
+                                                    .mz-facetingform-clearall{
+                                                        width: 23%;
+                                                    }
+                                                    .apply-filter-button{
+                                                        width: 23%; 
+                                                        margin-top: 0;
+                                                    }
+                                                } 
+                                            } 
+                                        }
+                                        &.fourfacet{
+                                            width: 98%;
+                                            .facete-type-li{
+                                                width: 34%;
+                                                 &.Color{
+                                                    width: 32% !important; 
+                                                 }
+                                                .item-name {
+                                                    padding-bottom: 5%;
+                                                    .mz1-facetingform-value{
+                                                        width: 78%;
+                                                        display: inline !important;
+                                                        &.color{
+                                                            display:inline-block !important;
+                                                        }
+                                                    }
+                                                    
+                                                }
+                                            }
+                                            .mz-facetingform{
+                                                .mz-l-sidebaritem.mz-shop-home{
+                                                    .filter-bottom-button{
+                                                        text-align:right;
+                                                    }
+                                                    .mz-facetingform-clearall{
+                                                        width: 23%;
+                                                    }
+                                                    .apply-filter-button{
+                                                        width: 23%; 
+                                                        margin-top: 0;
+                                                    }
+                                                } 
+                                            }
+                                        }
+    							        .mz-facetingform{
+    							            .mz-l-sidebaritem.mz-shop-home{
+    							                .mz-facetingform-clearall{
+    							                    width: 100%;
+    							                }
+    							                .apply-filter-button{
+    							                    width: 99%;
+    							                    margin-top: 5%;
+    							                }
+    							            } 
+    							        } 
+    							        &:before{
+    							            left: 86px;
+    							        }
+    							    } 
+    							    .facets-header{ 
+    							        padding: 5% 0;
+    							        .container-filter{
+    							            font-size: 14px;
+    							        }
+    							    }
+    							} 
+    							.mz-pagesort.mz-desktop{
+    							    width: 56%;
+    							    
+    							    margin-left: 1%;
+    							     p{
+    							         font-size: 12px;
+    							     }
+    							    .wrapper-dropdown-1{
+    							        width: 112px;
+    							        &:after{
+    							            right: 2px;
+    							            top: 8px;
+    							        }
+    							        .sortdefval{
+    							         padding: 4%;
+                                        font-size: 14px;
+    							         
+    							        } 
+    							        .sortlab{
+    							            font-size: 10px;
+    							        }
+    							        .sortval{
+    							            font-size: 12px;
+    							        }
+    							    }
+    							}
+    						}
+    					    .mz-pagingcontrols{
+    					        width: 39%;
+    					        font-size: 12px;
+    					        
+    					    }	
+    					}
+    				}
+    			}
+    		}
+    	}
+    }
+}
+
+@media only screen  and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)  {
+    //styles for lightbox
+    #colorbox {
+        left: 25% !important;
+        width: 50% !important;
+      //  top: 35% !important;
+    }
+    .mz-category {
+        #colorbox {
+            left: 25% !important;
+            width: 50% !important; 
+          //  top: 35% !important;
+        }
+    }
+    .rti-recommended-products{ 
+        .rti-prod-list{ 
+            .related-prod-owl-carousel{ 
+                .owl-stage{ 
+                    .owl-item{ 
+                        .mz-productlisting{ 
+                            .prod-content{ 
+                                .product-listing-row-content{ 
+                                    .mz-productlisting-info{ 
+                                        .productTitle{
+                                            width: 70%;    
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .items-per-order,.zero-popup{ 
+        .zero-pop{
+            width: 60% !important;
+            left: 21% !important;
+        }
+    } 
+    body.mz-product{ 
+        .overlay-for-complete-page{
+            width: 100%;
+            left: 0;
+        }
+    }
+    .mz-category,.mz-searchresults {
+	.mz-l-pagewrapper {
+		.mz-l-pagecontent { 
+			.mz-l-container { 
+				.mz-l-paginatedlist {
+					.jb-pagecontrols {
+						.facet-filtercointainer {
+							.mz-desktop-filters {
+								width: 38%;
+							}
+							.facets-container{
+							    .filter-list{
+							        width: 56%;
+							        top: 62px;
+							        &:before{
+    							            left: 118px;
+    							        }
+    							        &.threefacet{
+    							             width: 98%;
+    							        }
+    							        &.fourfacet{
+    							            width: 98%;
+    							            .facete-type-li{
+    							                width: 23%;
+    							            }
+    							        }
+							    } 
+							} 
+							.mz-pagesort.mz-desktop{
+							    width: 52%;
+							    padding-left: 2%;
+							    .wrapper-dropdown-1{
+							      width: 132px;
+							    }
+							}
+						}
+					    .mz-pagingcontrols{
+					        font-size: 14px;
+					        padding-top: 8px;
+					    }	
+					}
+				}
+			}
+		}
+	}
+}
+}
+#mz-drop-zone-rti-product,#mz-drop-zone-rti-category{    width: 975px;}  
+//width: 99%; 
+.owl-prev, .owl-next {
+    &.disabled{  
+        display: none;
+    }
+}
+
+
+
+
+
+

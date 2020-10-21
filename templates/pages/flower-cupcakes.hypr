@@ -1,0 +1,62 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Spring Flowers Cupcakes</h1>
+    <article class="carnival-details txt-left">
+        <h2>Spring Flowers Cupcakes</h2>
+        <hr>
+        <div class="baking-recipe">
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Spring Flowers Cupcakes/spring_flowers.jpg">
+                <br><br>
+                <div style="width:340px;"><iframe width="100%" height="300" src="//www.youtube.com/embed/Cbtv8A_692Y?feature=player_embedded" frameborder="0" allowfullscreen=""></iframe></div>
+            </figure>
+            <!-- AddThis Button -->
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+            <img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border: 0"></a>
+            <!-- /AddThis Button -->
+            <p>
+                Just as tasty as they are beautiful, these cupcakes are a fantastic addition to any Easter party. 
+            </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>Standard cupcakes Mini cupcakes</li>
+                <li>Standard cupcakes</li>
+                <li>Mini cupcakes</li>
+                <li>1 can (16 ounces) vanilla frosting</li>
+                <li>Assorted food coloring, (green, yellow, red, purple, orange)</li>
+                <li>Assorted Jelly Belly jelly beans: 
+                    <a target="_blank" href="/search?query=sunkist orange&amp;asug=">Sunkist Orange</a> | 
+                    <a target="_blank" href="/search?query=bubble gum&amp;asug=">Bubble Gum</a> |
+                    <a target="_blank" href="/search?query=french vanilla&amp;asug=">French Vanilla</a> |
+                    <a target="_blank" href="/search?query=island punch&amp;asug=">Island Punch</a> |
+                    <a target="_blank" href="/search?query=sour lemon&amp;asug=">Sour Lemon</a> |
+                    <a target="_blank" href="/search?query=cantaloupe&amp;asug=">Cantaloupe</a> |
+                    <a target="_blank" href="/search?query=cotton candy&amp;asug=">Cotton Candy</a>
+                </li>
+                <li><a target="_blank" href="/search?query=bunny corn&amp;asug=">Bunny Corn®</a> by Jelly Belly (only available in Spring)</li>
+                <li><a target="_blank" href="/search?query=fruit sours&amp;asug=">Fruit Sours</a> by Jelly Belly</li>
+                <li><a target="_blank" href="/search?query=jordan almonds&amp;asug=">Jordan Almonds</a> by Jelly Belly</li>
+                <li><a target="_blank" href="/search?query=licorice pastels&amp;asug=">Licorice Pastels</a> by Jelly Belly</li>
+                <li><a target="_blank" href="/search?query=mint cremes&amp;asug=">Mint Cremes</a> by Jelly Belly</li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>Divide and tint the vanilla frosting into the desired colors with the food coloring. Cover the frosting with plastic wrap until ready to use.
+                </li>
+                <li>Pick the desired cupcake and frosting color. Spread the frosting on top of the cupcake. Arrange the Jelly Belly beans, side by side, along the outside edge of the cupcake. 
+                    Continue with another color Jelly Belly beans. Insert a few Licorice Pastels in the center.
+                </li>
+                <li>Have fun mixing and matching the candies into flowers as shown.
+                </li>
+            </ol>
+           
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+

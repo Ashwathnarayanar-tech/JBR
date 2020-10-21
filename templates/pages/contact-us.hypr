@@ -1,0 +1,79 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static{% endblock body-tag-classes %}
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Contact Us</h1>
+    <article>
+        <p>
+            <strong>Mail address</strong> (all consumer mail goes to Fairfield):
+        </p>
+        <p class="listHeading">
+            <strong>Headquarters and Visitor's Center: Fairfield, California</strong>
+        </p>
+        <ul class="contentList">
+            <li>Jelly Belly Candy Company</li>
+            <li>One Jelly Belly Lane</li>
+            <li>Fairfield, CA 94533</li>
+        </ul>
+        <p class="listHeading">
+            <strong>Pleasant Prairie, Wisconsin Distribution Center</strong>
+        </p>
+        <ul class="contentList">
+            <li>Jelly Belly Center</li>
+            <li>10100 Jelly Belly Lane</li>
+            <li>Pleasant Prairie, WI, 53158</li>
+        </ul>
+        <p>
+            <strong>Phone:</strong>
+            <br>
+            (Monday-Friday between the hours of 7 AM - 5 PM, Pacific Time)
+            <br>
+            Toll-free: 1-800-JB-BEANS (1-800-522-3267 - US &amp; Canada only) or 707-399-2390 (all countries)
+        </p>
+        <p>
+            Check our <a href="http://mycusthelp.com/JELLYBELLY/_cs/FindAnswers.aspx?sSessionID=">FAQ</a> for answers to your questions or contact us <a href="http://mycusthelp.com/JELLYBELLY/_cs/QuestionAsk.aspx?sSessionID=">via email</a>.
+        </p>
+        <p>
+            If you have a current resale permit in your state and wish to inquire about
+            becoming a wholesale customer of Jelly Belly Candy Co., please call 
+            1-800-323-9380 (US &amp; Canada) or 707-428-2800 (all countries) and ask for the Customer Service department.
+        </p>
+        <p>
+            <strong>Consumer Affairs:</strong> 
+            <br>
+            Consumers may submit questions/comments on our <a href="http://mycusthelp.com/JELLYBELLY/_cs/QuestionAsk.aspx?sSessionID=">Ask a Question page</a>.
+            <br>
+        </p>
+        <p>
+            <strong>International Sales:</strong>
+            <br>
+            To find international distributors, check our <a href="/stores-outside-united-states">International Distributor Page</a>.
+            <br>
+            Our online <a href="http://mycusthelp.com/Jellybelly/_cs/Findanswers.aspx">Frequently Asked Questions (FAQ) section</a> has many answers to commonly 
+            (and even not commonly) asked questions. 
+        </p>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+
+
+

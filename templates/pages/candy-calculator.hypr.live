@@ -1,0 +1,249 @@
+<div style="width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            z-index: 10;
+            opacity: .9;
+            background-color: #373636;"></div>
+        <div id="candyCalcFields" style="   display: block;
+                                            top: 12%;
+                                            width: 650px;
+                                            height: 500px;
+                                            position: fixed;
+                                            background-color: #FFF;
+                                            z-index: 10;
+                                            overflow: hidden;
+                                            left: 37%;
+                                            transform: translate(-32%,0);
+											 -webkit-transform: translate(-32%, 0%) ;
+                                            -moz-transform:translate(-32%, 0); 
+                                            -ms-transform:translate(-32%, 0) ; 
+                                            -o-transform:translate(-32%, 0) ; 
+                                            border: 3px solid #000;
+                                            border-radius: 10px;
+                                            box-shadow: 0px 0px 38px #000;">
+                                            
+                        <button type="button" id="cboxClose" class="cboxClose" style="position: absolute;
+                                                                    top: 3px;
+                                                                    right: 3px;
+                                                                    width: 26px;
+                                                                    height: 24px;
+                                                                    border: 0;
+                                                                    background: #fff url('../resources/images/directimages/controls.png') -25px 0px no-repeat !important;
+                                                                    box-shadow: none;
+                                                                    z-index: 12;
+                                                                    text-indent: -9999px;">close</button>
+                                            
+                    <div id="candyCalcSlideOne" class="candyCalcSlideOne" style=" background: url('../resources/images/directimages/headerImage.jpg') no-repeat top center;
+                                                        height: 315px;
+                                                        width: 100%;
+                                                        position: absolute;
+                                                        display: block;">
+                        <p  style=" bottom: 1px;
+                                    position: absolute;
+                                    right: 35px;
+                                    width: 400px;
+                                    text-align: center;">
+                            Easily see how much candy you need for your event. Just choose your preferred candy and container shape,
+                            then enter the container dimensions and the Candy Calculator will give you an approximate amount of candy necessary.
+                            <a class="candyCalcSlideOne_a" style="display: block;padding: 15px 1px;">
+                                <img src="../resources/images/directimages/startButton.png">
+                            </a>
+                        </p>
+                    </div>
+                    
+                    
+                    <div id="candyCalcSlideTwo" class="candyCalcSlideTwo" style="height: 315px;
+                                                        width: 100%;
+                                                        position: absolute;
+                                                        display: none;">
+                            <div class="contentContainer" style="   margin-top: 1px;
+                                                                    width: 100%;
+                                                                    text-align: center;">
+                            <p style="display: inline-block;" >Choose type of candy:</p>
+                            <select name="candyType" id="candyType" style="    height: 22px;
+                                                                padding: 0px;   ">
+                                <option data-position="-100%" value="none">Choose Candy Type</option>
+                                <option data-position="0%" value=".523">Jelly Belly® Jelly Beans</option>
+                                <option data-position="25%" value=".383">Champagne Bubbles</option>
+                                <option data-position="50%" value=".3830">Raspberries &amp; Blackberries</option>
+                                <option data-position="75%" value=".463">Jordan Almonds</option>
+                                <option data-position="100%" value=".44">Dutch Mints</option>
+                            </select>
+                            <br>
+                            <p  style="display: inline-block;">Choose type of container:</p>
+                            <select name="container" id="container_shape" style="    height: 22px;
+                                                                padding: 0px;   ">
+                                <option selected="selected" value="none">Choose Container Shape</option>
+                                <option value="Square">Square/Rectangle</option>
+                                <option value="Circular">Circular/Cylindrical</option>
+                            </select>
+        
+                            <div id="numContDiv">
+                                <p  style="display: inline-block;">Number of Containers:</p>
+                                <input type="number" id="numCont" name="numCont" size="4" maxlength="4" min="0" max="9999" style="width: 30px">
+                            </div>
+                        </div>
+                        <!--/candy info -->
+                        <br>
+                        <!-- CUBE DIV -->
+                        <div class="contentContainer">
+                            <div class="candyDetails" style="   float: left;
+                                                                margin-top: 0px;
+                                                                position: relative;
+                                                                width: 40%;
+                                                                padding-left: 10%
+                                                                                                ">
+                                <div id="cube" style="display: none;">
+                                    <div class="contentContainer">
+                                        <h3>Fill in Rectangular Dimensions:</h3>
+                                        <p style="display: inline-block;margin: 0px;">Height</p>
+                                        <input type="number" name="heightCube" size="2" maxlength="2"  min="0" max="99" style="width: 35px;height: 20px;">
+                                        <select name="heightCubeFrac" style="width: 75px;
+                                                                            height: 30px;">
+                                            <option value="">-</option>
+                                            <option value=".125">1/8</option>
+                                            <option value=".25">1/4</option>
+                                            <option value=".375">3/8</option>
+                                            <option value=".5">1/2</option>
+                                            <option value=".625">5/8</option>
+                                            <option value=".75">3/4</option>
+                                            <option value=".875">7/8</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="contentContainer">
+                                        <p style="display: inline-block;margin: 0px;">Width</p>
+                                        <input type="number" name="widthCube" size="2" maxlength="2"  min="0" max="99" style="width: 35px;height: 20px;">
+                                        <select name="widthCubeFrac" style="width: 75px;
+                                                                            height: 30px;">
+                                            <option value="">-</option>
+                                            <option value=".125">1/8</option>
+                                            <option value=".25">1/4</option>
+                                            <option value=".375">3/8</option>
+                                            <option value=".5">1/2</option>
+                                            <option value=".625">5/8</option>
+                                            <option value=".75">3/4</option>
+                                            <option value=".875">7/8</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="contentContainer">
+                                        <p style="display: inline-block;margin: 0px;" >Depth</p>
+                                        <input name="depthCube" type="number" size="2" maxlength="2"   min="0" max="99" style="width: 35px;height: 20px;">
+                                        <select name="depthCubeFrac" style="width: 75px;
+                                                                            height: 30px;"> 
+                                            <option value="">-</option>
+                                            <option value=".125">1/8</option>
+                                            <option value=".25">1/4</option>
+                                            <option value=".375">3/8</option>
+                                            <option value=".5">1/2</option>
+                                            <option value=".625">5/8</option>
+                                            <option value=".75">3/4</option>
+                                            <option value=".875">7/8</option>
+                                        </select>
+                                    </div>
+                                </div><!-- /CUBE DIV -->
+        
+                                <!-- CYLINDER DIV -->
+                                <div id="cyl" style="display:none;">
+                                    <div class="contentContainer">
+                                        <h3>Fill in Cylindrical Dimensions:</h3>
+                                        <p style="display: inline-block;margin: 0px;">Height</p>
+                                        <input type="number" name="heightCyl" size="2" maxlength="2"   min="0" max="99" style="width: 35px;height: 20px;">
+                                        <select name="heightCylFrac" style="width:75px;
+                                                                            height: 30px;">
+                                            <option value="">-</option>
+                                            <option value=".125">1/8</option>
+                                            <option value=".25">1/4</option>
+                                            <option value=".375">3/8</option>
+                                            <option value=".5">1/2</option>
+                                            <option value=".625">5/8</option>
+                                            <option value=".75">3/4</option>
+                                            <option value=".875">7/8</option> 
+                                        </select>
+                                    </div>
+        
+                                    <div class="contentContainer">
+                                        <p style="display: inline-block;margin: 0px;">Width</p>
+                                        <input type="number" name="widthCyl" size="2" maxlength="2"   min="0" max="99" style="height: 20px;width: 35px;">
+                                        <select name="widthCylFrac" style="width: 75px;
+                                                                            height: 30px;">
+                                            <option value="">-</option>
+                                            <option value=".125">1/8</option>
+                                            <option value=".25">1/4</option>
+                                            <option value=".375">3/8</option>
+                                            <option value=".5">1/2</option>
+                                            <option value=".625">5/8</option>
+                                            <option value=".75">3/4</option>
+                                            <option value=".875">7/8</option>
+                                        </select>
+                                    </div>
+                                    <br style="clear:both;">
+                                </div><!-- CYLN DIV -->
+                            </div>
+                            <div class="candyDetailImages" style="  float: right;
+                                                                    width: 50%;
+                                                                    text-align: center;">
+                                <div id="candyChoice" style="   background: url(../resources/images/directimages/candycalc_bagImages.jpg) no-repeat 0 -125px;
+                                                                height: 128px;
+                                                                position: relative;
+                                                                width: 125px;
+                                                                width: 100%;
+                                                                display: none;"></div>
+                                <div id="containerChoice" style="   background: url(../resources/images/directimages/candycalc_containers_01.jpg) no-repeat;
+                                                                    height: 147px;
+                                                                    overflow: hidden;
+                                                                    width: 135px; display: none;
+                                                                "></div>
+        
+                                <div class="candyCalcButton"  id="submit_with_label" style="display: none;">
+                                    <p style="display: inline-block; margin:0px;">All measurements are in inches.</p>
+                                    <button class="buttonStandard action" name="submit" id="submit" value="Submit" style="
+                                                                                                        padding: 3px;
+                                                                                                        border-radius: 4px;
+                                                                                                        display: inline-block;
+                                                                                                        position: relative;
+                                                                                                        background: linear-gradient(to bottom, rgba(255,48,25,1) 0%,rgba(216,0,0,1) 47%,rgba(198,0,3,1) 48%,rgba(207,4,4,1) 100%);
+                                                                                                        color: #fff;
+                                                                                                        box-shadow: inset 0px -80px 20px -70px rgba(0, 0, 0, .2),1px 1px 2px 0px rgba(0, 0, 0, .4);                                                                                 ">
+                                                                                                        Submit</button>
+                                </div>
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    
+                <div id="candyCalcSlideThree" style="display:none;">
+                    <div id="resultsDiv" style="background: url(../resources/images/directimages/resultsHeader_01.png) no-repeat top center;
+                                                height: 250px;
+                                                position: relative;
+                                                top: -12px;">
+                    <div></div>
+                    </div>
+                    <h2 style="text-align: center;"><a id="recalculateAll" href="" style=" text-decoration: none;
+                                                                        color: #00a3e0;
+                                                                        cursor: pointer;">Click here</a> to recalculate.</h2>
+                    <p class="candyCalcFinePrint" style="color: #777777;
+                                                                font-size: 13px;
+                                                                line-height: 16px;
+                                                                margin: 0 auto;
+                                                                padding: 0px 28px;
+                                                                text-align: center;" >
+                        The results provided by Jelly Belly’s Candy Calculator are approximate.
+                        Jelly Belly Candy Company assumes no responsibility in the event that the amount of candy ordered by the consumer proves incorrect.
+                        The amount needed is the sole responsibility of the consumer.
+                    </p>
+                </div>
+                    
+        </div>
+        
+
+
+
+
+
+
+
+
+

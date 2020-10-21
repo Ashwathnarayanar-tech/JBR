@@ -1,0 +1,76 @@
+  {% extends "email/email" %}
+
+  {% block body-content %}
+
+    <div class="mz-returncontent " style=" display: block; width: 100%;font-family:'Trebuchet MS', Verdana, Geneva, sans-serif;">
+    <div style=" clear:both;display: block; width: 100%; margin: 0 auto; margin-bottom: 20px;">
+        <p style="color:black;font-size: 22px;padding: 20px 0;width: 85%;display: block;margin: 0 auto;">Hello {{ user.firstName}},</p>
+        <p style="word-break: break-all;color:black;display: block;line-height: 30px;  font-size: 16px; padding: 10px 0; width:85%;margin: 0 auto;text-align:justify;line-height:25px; ">A return cannot be processed for the requested items. Please review the return policy <a style=" margin: 0; text-decoration: none; color: #00AEEF; " href="http://{{domainName}}/return-policy/">here,</a> or email jborders@jellybelly.com for more information.</p>
+    </div>
+    
+  </div> 
+
+{% comment %}
+	<dl class="mz-orderheader">
+	<!--
+		<dt>{{ labels.orderNo }}</dt>
+		<dd><a href="https://{{domainName}}/checkout/{{model.id}}/confirmation">{{ model.orderNumber }}</a></dd>
+-->
+
+		<dt style="font-weight:bold">{{ labels.return }}</dt>
+		<dd>{{ model.returnNumber }}</dd>
+
+		<dt style="font-weight:bold">{{ labels.orderDate }}:</dt>
+		<dd>{{ model.auditInfo.createDate }}</dd>
+
+		<dt style="font-weight:bold">{{ labels.returnRequestDate }}</dt>
+		<dd>{{ model.rmaDeadline }}</dd>
+	</dl>
+	<br />
+
+	<p>
+	{% if user and user.firstName %}
+		{{ labels.emailOpening|string_format(user.firstName)|safe }}
+	{% else %}
+		{{ labels.emailOpeningAlternative|safe }}
+	{% endif %}
+	</p>
+
+	{{ labels.returnRejectedBlob1|string_format(siteContext.generalSettings.websiteName, domainName)|safe }}
+
+	<table class="mz-ordersummary">
+        <thead>
+            <tr>
+                <th class="mz-ordersummary-header-qty">{{ labels.qty }}</th>
+                <th class="mz-ordersummary-header-product">{{ labels.product }}</th>
+            </tr>
+		</thead>
+		<tbody class="mz-ordersummary-lineitems">
+		{% for item in model.items %}
+			{% for reason in item.reasons %}
+			<tr class="mz-ordersummary-line mz-ordersummary-line-item">
+				<td style="border:1px solid #ccc;text-align:center;">{{ reason.quantity }}</td>
+				<td style="border:1px solid #ccc;text-align:center;" class="mz-ordersummary-item-product">{{ item.product.name }}</td>
+			</tr>
+			{% endfor %}
+		{% endfor %}
+		</tbody>
+    </table>
+
+	{{ labels.returnRejectedBlob2|safe }}
+
+	{{ labels.emailClosing|string_format(siteContext.generalSettings.websiteName)|safe }}
+    {% endcomment %}
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+
+
+

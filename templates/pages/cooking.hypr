@@ -1,0 +1,139 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-factory{% endblock body-tag-classes %} 
+{% block body-content %}
+
+<h1 class="mz-pagetitle"> Cooking &amp; Entertaining </h1>
+    <ul class="jb-feature-brands">
+        
+        <!-- Candy Corn Caramel Corn -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Candy Corn Caramel Corn</h3>
+                <figure>
+                  <a href="/cooking-ideas#candyCarmelCorn">
+                    <img src="/resources/images/cooking_entertaining/candyCorn_cones_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Candy Corn Cones will be the hit of your Halloween party. Stir in Candy Corn with a batch of caramel corn, then serve in tri-colored cones for easy munching and quick cleanup – we'll show you how!  
+                  <a class="jb-feature-brand-moreinfo" href="/cooking-ideas#candyCarmelCorn">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Gridiron Cake -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Gridiron Cake </h3>
+                <figure>
+                  <a href="/cooking-ideas#gridiron">
+                    <img src="/resources/images/cooking_entertaining/gridiron_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 Show a ton of spirit with this cake decorated with your favorite football team's colors. You make it from scratch, and Jelly Belly has the colors for any team you can think of!  
+                  <a class="jb-feature-brand-moreinfo" href="/cooking-ideas#gridiron">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Festival Mix -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Festival Mix </h3>
+                <figure>
+                  <a href="/cooking-ideas#festival">
+                    <img src="/resources/images/cooking_entertaining/festival_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Combine your favorite snacks with Jelly Belly jelly beans to put a unique spin on your party mix. Just try to save some for your guests!  
+                  <a class="jb-feature-brand-moreinfo" href="/cooking-ideas#festival">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Rat-a-Tat-Tat Drum Cake -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Rat-a-Tat-Tat Drum Cake </h3>
+                <figure>
+                  <a href="/cooking-ideas#drum">
+                    <img src="/resources/images/cooking_entertaining/drum_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Here's a cake that's made for music lovers. It's so simple to assemble, yet so perfect for parties and get-togethers with musical themes. 
+                  <a class="jb-feature-brand-moreinfo" href="/cooking-ideas#drum">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <!-- Gourmet Tasting Party -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Gourmet Tasting Party </h3>
+                <figure>
+                  <a href="/cooking-ideas#gourmetTasting">
+                    <img src="/resources/images/cooking_entertaining/tasting_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Here's a fun, colorful and tasty game that the whole family can enjoy. All you need is a 50 Flavor Gift Box and some Jelly Belly fans! 
+                  <a class="jb-feature-brand-moreinfo" href="/cooking-ideas#gourmetTasting">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- New Year Tasting Party -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>New Years Tasting Party</h3>
+                <figure>
+                  <a href="/cooking-ideas#newYears">
+                    <img src="/resources/images/cooking_entertaining/newYears_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Sweeten up your New Year celebration with Jelly Belly. All you need are a few glasses and some Jelly Belly jelly beans to add plenty of color, and flavor, to the party. 
+                  <a class="jb-feature-brand-moreinfo" href="/cooking-ideas#newYears">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Tuxedo Jelly Belly Bean Fudge -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Tuxedo Jelly Belly Bean Fudge </h3>
+                <figure>
+                  <a href="/cooking-ideas#tuxedo">
+                    <img src="/resources/images/cooking_entertaining/tuxedo_fudge_t.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Tuxedo Fudge is fancy and fun, classy and colorful, an irresistibly luscious treat for any kind of party!  
+                  <a class="jb-feature-brand-moreinfo" href="/cooking-ideas#tuxedo">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+    </ul>
+    
+    <div class="clearfix"></div>
+
+{% endblock body-content %}
+
+
+
+
+
+

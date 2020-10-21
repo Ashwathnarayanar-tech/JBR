@@ -1,0 +1,62 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Birthday Party Recipes</h1>
+    <article class="carnival-details txt-left">
+        <h2>Nest Cookies</h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg">
+            <img src="/resources/images/baking_decoration/nests.jpg" alt="Birthday Recipe"> 
+        </figure>
+             <p>All the little birds will be flocking to your nest when you make these coconut delights, topped with Jelly Belly jelly beans. </p>
+
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>1 ½ C. all purpose flour</li>
+                <li>1 tsp. baking powder </li>
+                <li>½ tsp. salt </li>
+                <li>½ C. shortening </li>
+                <li>½ C. sugar </li>
+                <li>1 egg white </li>
+                <li>1 tsp. vanilla </li>
+                <li>2 Tbs. milk </li>
+                <li>2 C. shredded coconut </li>
+                <li>5 oz. <a target="_blank" href="/nav/cat1/jellybellyjellybeans/0"> jelly belly jelly beans assorted flavors</a></li>
+            </ul>
+
+            
+
+
+        <h2>Instructions:</h2>
+        <ol class="contentList">
+            <li>Heat oven to 375 degrees F.</li>
+            <li>Sift together flour, baking powder and salt and set aside.</li>
+            <li>In large bowl beat shortening, sugar, egg white and vanilla until well blended.</li>
+            <li>Add flour mixture and milk until blended. Stir in coconut.</li>
+            <li>Roll dough into a ball, divide in half. Roll 15 one-inch balls from each half and place on ungreased baking sheet.</li>
+            <li>Make thumbprint depression in center of each ball to form next. Bake 6 minutes.</li>
+            <li>Remove from oven and place 4 Jelly Belly jelly beans in center of each cookie.</li>
+            <li>Return to oven and bake 5 more minutes. Transfer cookies to wire rack to cool.</li>
+        </ol>
+        <h2>MAKES 30 COOKIES</h2>
+        
+   
+        <hr>
+            <div class="additional-info">
+                <figure>
+                    <a href="/product/452">
+                    <img src="http://content.jellybelly.com/cachefly/Jelly-Belly/OtherImages/bakeAndDecorate/Hello_Cupcake_120.jpg" align="left" border="0" alt="Hello, Cupcake!" style="padding-right: 15px;">
+                    </a>
+                </figure>
+                <p>For more great cupcake recipes by Karen Tack and Allan Richardson, check out <em>Hello, Cupcake!</em>, available <a href="/product/452">here.</a></p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+

@@ -1,0 +1,33 @@
+<h3 class="mz-l-stack-sectiontitle">MY WISHLIST</h3>
+
+<div class="mz-accountwishlist-list">
+    {% if model.hasItems %}
+        <table class="mz-table">
+            
+              <tr class="header-tr">
+                <th class="accountstorecredit-header-creditnumber">ITEM</th>
+                <th class="accountstorecredit-header-creditdate">ITEM DESCRIPTION</th>
+                <th class="accountstorecredit-header-creditamount">PRICE</th>
+                <th class="accountstorecredit-header-remaining"></th>
+              </tr>
+              
+            {% for item in model.items %}
+            <tr class="item-tr">
+                {% include "modules/my-account/my-account-wishlist-item-listing" with model=item %}    
+            
+            {% endfor %}
+            
+        </table>
+    {% else %}
+        <div class="no-cards">
+            <p class="mz-accountaddressbook-empty">
+            {{ labels.accountNoWishlists }}
+            </p>
+        </div>
+    {% endif %}
+</div>
+
+
+
+
+

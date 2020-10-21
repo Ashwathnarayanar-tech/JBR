@@ -1,0 +1,285 @@
+<h3 class="mz-formstep-header">
+    <span class="step-no"><label>{% if model.requiresFulfillmentInfo %}03{% else %}02 {% endif %}</label></span>
+    <span class="checkout-icons"></span>
+    <label>{{ labels.paymentInformation }}</label>
+    <span class="step-completed"></span>
+    <button type="button" class="mz-button mz-button-small mz-formstep-edit" data-mz-action="edit">{{ labels.edit }}</button>
+</h3>
+<div class="mz-formstep-body">
+    <div class="mz-formstep-summary mz-l-stack">
+        {% if model.activeStoreCredits and model.activeStoreCredits.length > 0 %}
+            <div class="mz-l-stack-section mz-checkout-payment">
+                <h4 class="mz-l-stack-sectiontitle">{{ labels.digitalCredit }}</h4>
+                {% for payment in model.activeStoreCredits %}
+                    <div class="mz-l-stack-section">
+                        <span>
+                            <strong>{{ payment.amountRequested|currency }}</strong> &mdash; {{ payment.billingInfo.storeCreditCode }}
+                        </span>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}   
+        {% for payment in model.activePayments %}
+            {% if payment.billingInfo.paymentType == "Check" %}
+                <div class="mz-l-stack-section mz-checkout-payment">
+                <h4 class="mz-l-stack-sectiontitle">{{ labels.checkByMail }}</h4>
+                    {% comment %}
+                    <h4 class="mz-l-stack-sectiontitle">{{ payment.billingInfo.paymentType }}</h4>
+                    {% endcomment %}
+                    <span><strong>{{ payment.amountRequested|currency }}</strong> &mdash; {{ payment.billingInfo.check.checkNumber }}</span>
+                    <dl class="mz-propertylist">
+                        <dt>{{ labels.billingAddress }}</dt>
+                        <dd>
+                            <div class="mz-addresssummary">
+                                {% include "modules/common/address-summary" with model=payment.billingInfo.billingContact %}
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            {% endif %}
+            {% if payment.billingInfo.paymentType == "CreditCard" %}
+                <div class="mz-l-stack-section mz-checkout-payment">
+                    <h4 class="mz-l-stack-sectiontitle">{{ payment.billingInfo.paymentType }}</h4>
+                    <span><strong>{{ payment.amountRequested|currency }}</strong> &mdash; {{ model.card.cardNumberPartOrMask }}</span>
+                    <dl class="mz-propertylist">
+                        <dt>{{ labels.billingAddress }}</dt>
+                        <dd>
+                            <div class="mz-addresssummary">
+                                {% include "modules/common/address-summary" with model=payment.billingInfo.billingContact %}
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            {% endif %}
+			 {% if payment.billingInfo.paymentType == "PurchaseOrder" and model.nonStoreCreditTotal > 0  %}
+        <div class="mz-l-stack-section mz-checkout-payment  mz-checkoutform">
+            <div class="mz-l-stack-section mz-checkout-current-payment">
+            <!--
+                <div class="mz-l-formfieldgroup-row mz-payment-purchase-order-amount-row">
+                    <div class="mz-l-formfieldgroup-cell">
+                        <span>{{ labels.purchaseOrderAmount }}: </span> <span>{{ payment.amountRequested | currency }}</span>
+                    </div>
+                </div>
+                -->
+                <div class="mz-l-formfieldgroup-row mz-payment-purchase-order-number-row">
+                    <div class="mz-l-formfieldgroup-cell">
+                        <span >{{ labels.purchaseOrderNumber }}: </span><span name="purchase-order-number" id="mz-payment-purchase-order-number">{{ payment.billingInfo.purchaseOrder.purchaseOrderNumber }}</span>
+                    </div>
+                </div>
+                <div class="mz-l-formfieldgroup-row mz-payment-purchase-order-payment-terms-row">
+                    <div class="mz-l-formfieldgroup-cell">
+                        <span>{{ labels.purchaseOrderPaymentTerms }}: </span><span id="mz-payment-purchase-order-payment-terms">
+                        {% if payment.billingInfo.purchaseOrder.paymentTerm.description == "Terms On File" %} Net Terms on File {% else %} {{ payment.billingInfo.purchaseOrder.paymentTerm.description }} {% endif %}</span>
+                    </div>
+                </div>
+                {% for field in payment.billingInfo.purchaseOrder.customFields %}
+                {% if not model.isSubscriptionActive %}
+                <div class="mz-l-formfieldgroup-row mz-payment-purchase-order-custom-field-row">
+                    <div class="mz-l-formfieldgroup-cell">
+                        <span>{{ field.label }}: </span><span id="mz-payment-purchase-order-custom-field-{{ field.code }}">{{ field.value }}</span>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% comment %}
+				    <div class="mz-l-stack-section mz-checkout-current-payment mz-checkout-saved-billingaddress">
+                        <h4 class="mz-checkoutform-title">{{ labels.billingAddress }}</h4>
+                        <div class="mz-addresssummary">
+                            {% include "modules/common/address-summary" with model=model.billingContact %}
+                        </div>
+                    </div>
+                {% endcomment %}    
+                </div>
+            </div>
+            {% if model.paymentType == "CreditCard" %}
+            <div class="mz-l-stack-section mz-checkout-current-payment mz-checkout-saved-billingaddress">
+                <h4 class="mz-checkoutform-title">{{ labels.billingAddress }}</h4>
+                <div class="mz-addresssummary">
+                    {% include "modules/common/address-summary" with model=model.billingContact %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        {% endif %}
+            {% if payment.billingInfo.paymentType == "PaypalExpress" %}
+                <div class="mz-l-stack-section mz-checkout-payment">
+                    <h4 class="mz-l-stack-sectiontitle">{{ labels.paypalExpress }}</h4>
+                    <span>
+                        <strong>{{ model.nonStoreCreditTotal|currency }}</strong> &mdash; {{ labels.paypalExpressSummary }}
+                    </span>
+                    <dl class="mz-propertylist">
+                        <dt>{{ labels.billingAddress }}</dt>
+                        <dd>
+                            <div class="mz-addresssummary">
+                                {% include "modules/common/address-summary" with model=payment.billingInfo.billingContact %}
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            {% endif %}
+        {% endfor %}  
+    {% comment %}
+        {% if model.billingContact.email %}
+            <div class="mz-l-stack-section">
+                <h4 class="mz-l-stack-sectiontitle">{{ labels.billingContact }}</h4>
+                <p>{{ labels.email }}: <strong>{{ model.billingContact.email }}</strong></p>
+            </div>
+        {% endif %}
+     {% endcomment %}    
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="mz-formstep-fields mz-l-stack">
+        {% if model.availableDigitalCredits.length > 0 %}
+            {% include "modules/checkout/checkout-digital-credit" %}
+        {% endif %}
+        {% if model.nonStoreCreditTotal > 0 %}
+        <div class="mz-l-stack-section">
+            
+            <!-- <h4 class="mz-l-stack-sectiontitle">CREDIT CARD & PAYPAL</h4> -->
+            <div class="mz-l-formfieldgroup">
+            {% comment %}
+                {% if model.savedPaymentMethods %}
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label>{{ labels.savedPaymentMethods }}:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <select name="savedPaymentMethods" class="mz-payment-select-saved-payments" data-mz-value="savedPaymentMethodId">
+                                <option value="" {% if not model.savedPaymentMethodId %} selected="selected" {% endif %}>{{ labels.selectSavedPaymentMethod }}</option>
+                                {% for card in model.savedPaymentMethods %}
+                                    <option value="{{ card.id }}" {% if model.savedPaymentMethodId == card.id %} selected="selected" {% endif %}>{{ card.cardType }} {{ card.cardNumberPartOrMask }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endcomment %}    
+                <div class="mz-l-formfieldgroup-row paymenttypes-choosing">
+                    {% if model.purchaseOrder.isEnabled %}
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label><span class="is-required"> *</span> {{ labels.paymentType }}:</label>
+                        </div>
+                    {% endif %}
+                    <div class="mz-l-formfieldgroup-cell mz-paymenttypes">
+                        {% comment %}
+                            <label id="credit" class="mz-paymenttype mz-paymenttype-creditcard">
+                                <input data-mz-value="paymentType" name="paymentType" type="radio" class="mz-paymenttype-input" value="CreditCard" {% if model.paymentType == "CreditCard" %}checked="checked"{% endif %} />
+                                <span class="mz-paymenttype-label mz-paymenttype-label-creditcard">{{ labels.creditCard }}</span>
+                            </label>
+                            {% if model.purchaseOrder.isEnabled %}
+                            <label id="purchaseorder" class="mz-paymenttype mz-paymenttype-purchase">
+                                <input data-mz-value="paymentType" name="paymentType" type="radio" class="mz-paymenttype-input" value="PurchaseOrder" {% if model.paymentType == "PurchaseOrder" %}checked="checked"{% endif %}/>
+                                <span class="mz-paymenttype-label mz-paymenttype-label-check">Payment Terms</span>
+                            </label>
+                            {% endif %}
+                        {% endcomment %}        
+                        {% comment %}
+                            {% if siteContext.checkoutSettings.isPayPalEnabled %}
+                                <label class="mz-paymenttype mz-paymenttype-paypal">
+                                    <input data-mz-value="paymentType" name="paymentType" type="radio" class="mz-paymenttype-input" value="PaypalExpress" {% if model.paymentType == "PaypalExpress" %}checked="checked"{% endif %} />
+                                    <span class="mz-paymenttype-label mz-paymenttype-label-paypal">
+                                        <img src="../resources/images/paypal_logo.png?max=48" alt="{{ labels.payPal }}" align="left" style="width:48px;margin-right:7px;">
+                                        {{ labels.payPal }}
+                                    </span>
+                                </label>
+                            {% endif %}
+                        {% endcomment %}
+                        <span class="mz-validationmessage" data-mz-validationmessage-for="paymentType"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="mz-l-formfieldgroup payment-form-section" >
+                {% if model.purchaseOrder.isEnabled %}
+                    {% if model.paymentType == "PurchaseOrder" %}
+                        {% include "modules/checkout/billing-purchase-order-form" with model = model.purchaseOrder %}
+                    {% endif %}
+                {% else %}
+                <span>It appears that you have neither Payment Terms nor a credit card on file. Please contact Customer Service to discuss payment options.</span>
+                {% endif %}    
+           {% comment %}
+                {% if model.paymentType == "CreditCard" %}
+                    {% include "modules/checkout/billing-credit-card-form" with model=model.card %}
+                {% endif %}
+                  {% if model.paymentType == "PurchaseOrder" %}
+                    {% include "modules/checkout/billing-purchase-order-form" with model = model.purchaseOrder %}
+                {% endif %}
+            {% endcomment %} 
+            </div>
+        </div>
+        {% if model.paymentType == "CreditCard"%}  
+        {% comment %}
+            <div class="mz-l-stack-section">
+                <h4 class="mz-l-stack-sectiontitle">{{ labels.billingAddress }}</h4>
+                {% if model.requiresFulfillmentInfo %}
+                    <p>If your Billing Information is same as the Shipping Information, click the "Copy from Shipping" button</p>
+                    <div class="copy-address">
+                       <label>
+                          <input type="checkbox" data-mz-value="isSameBillingShippingAddress" value="true" {% if model.isSameBillingShippingAddress %}checked="checked"{% endif %}>
+                          <span id="copyshipping">{% if model.isSameBillingShippingAddress %}EDIT BILLING INFO {% else %} COPY FROM SHIPPING{% endif %}</span>
+                       </label>
+                    </div>
+                {% endif %}
+                {% if model.isSameBillingShippingAddress %}
+                    <div class="mz-addresssummary mz-same-as-shipping-summary" id="mz-same-as-shipping-summary">
+                        {% include "modules/common/address-summary" with model=model.billingContact %}
+                    </div>
+                {% else %}
+                    <div class="mz-l-formfieldgroup mz-l-formfieldgroup-address">
+                        {% include "modules/checkout/billing-address-form" with model=model.billingContact countries=pageContext.billingCountries %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endcomment %}
+            {% endif %}
+        {% else %}
+            <h4 class="mz-checkout-nopaymentrequired">{{ labels.noPaymentRequired|string_format(model.remainingTotal|currency) }}</h4>
+        {% endif %}
+        {% if user.isAnonymous %}
+            <div class="mz-l-stack-section">
+                <h4 class="mz-l-stack-sectiontitle">{{ labels.billingContact }}</h4>
+                <div class="mz-l-formfieldgroup">
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="billing-email">
+                                {{ labels.email }}<span class="is-required"> *</span>:
+                            </label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <input type="text" id="billing-email" name="billing-email" data-mz-value="billingContact.email" value="{{ model.billingContact.email }}"/>
+                            <span class="mz-validationmessage" data-mz-validationmessage-for="billingContact.email"></span>
+                        </div>
+                    </div>
+                    <div class="mz-l-formfieldgroup-row">
+                        <div class="mz-l-formfieldgroup-cell"></div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label class="mz-inline">
+                                <input type="checkbox" name="special-offers" {% if model.acceptsMarketing %}checked="checked" {% endif %}data-mz-value="acceptsMarketing" class="mz-checkout-optin" /> {{ labels.optIn|string_format(siteContext.generalSettings.websiteName) }}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %} 
+        <div id="handling-fee"></div>
+    </div>
+
+    <div class="mz-formstep-next">
+        {% if model.purchaseOrder.isEnabled %}   
+            {% if model.purchaseOrder.availableBalance < model.totel %} <p class="poMessageinsf">Your order value has exceeded the purchase order balance</p>{% endif %}  
+            <button class="mz-button brontocart-billing" {% if model.purchaseOrder.availableBalance < model.totel %} disabled="disabled" {% endif %} data-mz-action="next">{{ labels.next }}</button>
+        {% endif %}
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

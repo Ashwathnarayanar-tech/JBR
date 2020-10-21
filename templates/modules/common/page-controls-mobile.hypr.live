@@ -1,0 +1,81 @@
+<div class="jb-mobile-paging" data-mz-mobile-page-controls>
+
+    <div class="jb-mobile-pagesize">
+     <select data-mz-value="pageSize" class="mz-pagingcontrols-pagesize-dropdown" autocomplete="off">
+        	{% block page-sizes %}
+        		{% for pageSize in themeSettings.pageSizeOptions %}
+        			<option   data-mz-url="{% make_url "paging" model with pageSize=pageSize page=1 %}" 
+        			{% if model.pageSize == pageSize %}selected="selected"{% endif %}
+        			value="{{ pageSize }}">{% if pageSize == 300 %}Max {% else %}{{ pageSize }}{% endif %}</option>
+        		{% endfor %}
+        	{% endblock page-sizes %}
+    </select>
+    {% comment %}
+            <select data-mz-value="PageSize" class="mz-pagingcontrols-pagesize-dropdown">
+                {% block page-sizes %}
+                {% for pageSize in themeSettings.pageSizeOptions %}
+                
+                <option 
+                       {% if model.pageSize == pageSize %}
+                                selected="selected" 
+                       {% else %}  {% if model.pageSize == 300 %}
+                                        {% if pageSize == 'Max' %}
+                                            selected="selected"             
+                                        {% endif %}    
+                                    {% endif %}
+                        {% endif %}
+                            value="{{ pageSize }}">Show {{ pageSize }}</option>
+                {% endfor %}
+                {% endblock page-sizes %}
+            </select>
+    {% endcomment %}        
+    </div>
+
+
+    <div class="jb-mobile-paging-count">
+    
+    {% comment %}
+        {% dump model.hasPreviousPage %}
+        {% dump model.previousPageNumber %}
+        {% dump model.currentPage %}
+        {% dump model.nextPageNumber %}
+        {% dump model.hasNextPage %}
+    {% endcomment %}
+        {% if model.hasPreviousPage %}
+            <a class="mz-pagenumbers-prev" href="{% make_url "paging" model with page="previous" %}" rel="previous" data-mz-action="previous"><span class="triangle"/></a>
+        {% else %}
+            <a class="mz-pagenumbers-prev is-disabled" href="#" data-mz-action="previous"><span class="triangle"/></a>
+        {% endif %}
+        
+        
+            {% if model.hasPreviousPage %}
+                <a class="mz-pagenumbers-number mob-previous" href="{% make_url "paging" model with page="previous" %}" rel="previous" data-mz-action="page" data-mz-page-num="{{model.previousPageNumber}}">{{model.previousPageNumber}}</a>
+            {% endif %}
+        
+            <a class="mz-pagenumbers-number is-current mob-current" href="#" data-mz-action="page" data-mz-page-num="{{model.currentPage}}">{{model.currentPage}}</a>
+                
+            {% if not model.hasPreviousPage %}
+                {% if model.hasNextPage %}
+                    {% if model.currentPage == 1 %}
+                            <a class="mz-pagenumbers-number" href="{% make_url "paging" model with page="next" %}" rel="next" data-mz-action="page" data-mz-page-num="2">2</a>
+                    {% else %}
+                            <a class="mz-pagenumbers-number" href="{% make_url "paging" model with page="next" %}" rel="next"  data-mz-action="page" data-mz-page-num="{{model.nextPageNumber}}">{{model.nextPageNumber}}</a>
+                    {% endif %}
+                {% endif %}
+            {% endif %}  
+            
+            
+           
+        {% if model.hasNextPage %}
+            <a class="mz-pagenumbers-next " href="{% make_url "paging" model with page="next" %}" rel="next" data-mz-action="next"><span class="triangle"/></a>
+        {% else %}
+            <a class="mz-pagenumbers-next is-disabled" href="#" data-mz-action="next"><span class="triangle"/></a>
+        {% endif %}   
+    </div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+{% preload_json featured_brands.config.featured-brand-categories "home_featured_categories" %}
+
+{% require_script "widgets/home-page-featuredbrands" %}
+<ul class="brand-lister" id="home_featured_categories">
+
+</ul>
+
+
+
+
+
+

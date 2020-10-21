@@ -1,0 +1,337 @@
+.mz-accountsettings {
+    .mz-accountsettings-displayname,
+    .mz-accountsettings-displayemail,
+    .mz-accountsettings-displayphone {
+        display: inline-block;
+        margin-right: @gutter/4;
+    }
+
+    .mz-accountsettings-displayname {
+        font-size: @fontSizeLarger;
+        margin: 0 @gutter/4 0 0;
+    }
+
+    .mz-accountsettings-section {
+        padding-top: @gutter/2;
+        min-height: @gutter*1.5;
+    }
+
+    /*.mz-accountsettings-sectionheader {
+        border-top: 1px solid #eee;
+        padding-top: 5px;
+        
+    }*/
+
+    .mz-accountsettings-name {
+        input, button {
+            vertical-align: middle;
+            margin-bottom: 0;
+        }
+
+    }
+
+    .mz-accountsettings-email, .mz-accountsettings-phone {
+        padding-top: 0;
+    }
+
+    .mz-accountsettings-firstname,
+    .mz-accountsettings-lastname {
+        width: 90%;
+        font-size: @fontSizeLarger;
+        height: @fontSizeLarger + 4;
+    }
+    mz-accountsettings-password {
+        > div {
+            width: 100%;
+            float: left;
+            margin-bottom: @gutter;
+
+            label, input {
+                display: inline-block;
+                margin-bottom: @gutter;
+                vertical-align: middle;
+                width: 140px;
+            }
+        }
+
+        .mz-password-actions {
+            margin-bottom: @gutter * 2;
+        }
+    }
+
+    .mz-accountsettings-email, .mz-accountsettings-phone {
+        padding-top: 0;
+    }
+
+    .mz-accountsettings-firstname,
+    .mz-accountsettings-lastname,.mz-accountsettings-email {
+        width: 89%;
+        padding: 10px;
+        border-color: #c2c2c2;
+        font-size: 12px;
+        margin-bottom: 15px;
+        height: auto;
+    }
+
+    .mz-accountsettings-acceptsmarketing {
+        clear: both;
+        label { vertical-align: middle; }
+    }
+    
+    //Custome code:
+    .mz-accountsettings-details{
+        margin:0 auto;
+        .mz-accountsettings-user{
+            width: 48%;
+            display: inline-block;
+            .edit-name {
+                float: right;
+                position: relative;
+                top: 15px;
+            }
+            .edit{
+                  color: #36abe2;
+                  text-decoration: none;
+                  position: relative;
+                  top: -11px;
+                  font-size: 12px;
+                  cursor: pointer;
+                  &:hover {
+                      text-decoration: underline;
+                  }
+            }
+            ul{
+                margin: 0px;
+                padding: 0px 0px 0px 22px;
+                font-size: 15px;
+                list-style: none;
+                .grouping{
+                    padding: 2px 0px;
+                }
+                li{
+                    padding: 2px 0px;
+                    label{
+                        font-size: 14px;
+                        font-weight: 600;
+                        display: inline-block;
+                        width: 100px;
+                        vertical-align: top; 
+                    }
+                    span {
+                        font-size: 12px;
+                        color: #212120;
+                        a{
+                            color: #36abe2;
+                            text-decoration: none;
+                            position: relative;
+                            font-size: 12px;
+                            cursor: pointer;
+                        }
+                    }
+                    .address{
+                        display: inline-block;
+                        padding: 0;
+                        li{
+                            padding: 0;
+                            text-align: left;
+                            span{
+                                padding:0;
+                            }
+                        }
+                    }
+                    .edit-user-settings, .mz-accountsettings-email-edit{
+                        p {
+                            font-size: 12px;
+                            color: #212120;
+                            margin: 5px 0;
+                        }
+                        .required-label{
+                            color: #767676;
+                            padding-left: 0px;
+                            font-size: 11px;
+                        }
+                        .mz-accountsettings-namedone,
+                        .mz-accountsettings-namecancel{
+                            background: #36abe2;
+                            border: 0;
+                            color: #fff;
+                            text-transform: uppercase;
+                            border-radius: 0;
+                            -moz-border-radius: 0;
+                            -webkit-border-radius: 0;
+                            padding: 11px 10px;
+                            font-size: 14px;
+                            font-weight: bold;
+                            width: 46%;
+                            margin: 40px 7px 0 0;
+                            &:hover {
+                                background: #077bb2;
+                            }
+                        }
+                        .mz-accountsettings-namecancel{
+                            background: #7C7A7A;
+                            &:hover {
+                                background: #656565;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mz-accountsettings-password{
+            width: 48%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 3%;
+            .mz-accountsettings-password-container {
+                p {
+                    font-size: 12px;
+                    color: #212120;
+                    margin: 5px 0;
+                }
+                .required-label{
+                    color: #767676;
+                    padding-left: 0px;
+                    font-size: 11px;
+                }
+            }
+            .edit{
+                width: 100%;
+                a{
+                  color: #36abe2;
+                  text-decoration: none;
+                  position: relative;
+                //   top: 9px;
+                  font-size: 12px;
+                  cursor: pointer;
+                  &:hover {
+                      text-decoration: underline;
+                  }
+                }
+            }
+            .mz-accountsettings-password-container{
+                padding-left: 22px;
+                padding-top: 7px;
+                        .mz-accountsettings-passworddone,
+                        .mz-accountsettings-passwordcancel{
+                            background: #36abe2;
+                            border: 0;
+                            color: #fff;
+                            text-transform: uppercase;
+                            border-radius: 0;
+                            -moz-border-radius: 0;
+                            -webkit-border-radius: 0;
+                            padding: 11px 10px;
+                            font-size: 14px;
+                            font-weight: bold;
+                            width: 46%;
+                            margin: 40px 7px 0 0;
+                            &:hover {
+                                background: #077bb2;
+                            }
+                        }
+                        .mz-accountsettings-passwordcancel{
+                            background: #7C7A7A;
+                            &:hover {
+                                background: #656565;
+                            }
+                        }
+                        input{
+                            width: 89%;
+                            padding: 10px;
+                            border-color: #c2c2c2;
+                            font-size: 12px;
+                            margin: 0 0 12px 0;
+                            height: auto;
+                        }
+            }
+        }
+        .mz-l-stack-sectiontitle{
+            border-top: 1px solid #ccc;
+            padding: 11px 0px 11px 22px;
+            border-bottom: 1px solid #ccc;
+            font-size: 14px;
+            font-family: @Trebuchet;
+            color: #000;
+        }
+    }
+}
+@media only screen and (min-width: 1px) and (max-width: 940px){
+    .mz-accountsettings .mz-accountsettings-details .mz-accountsettings-user ul li .edit-user-settings .mz-accountsettings-namedone, .mz-accountsettings .mz-accountsettings-details .mz-accountsettings-user ul li .edit-user-settings .mz-accountsettings-namecancel, 
+    .mz-accountsettings .mz-accountsettings-details .mz-accountsettings-user ul li .edit-user-settings .mz-accountsettings-namedone, .mz-accountsettings .mz-accountsettings-details .mz-accountsettings-user ul li .edit-user-settings .mz-accountsettings-namedone {
+        margin: 15px 0;
+    }
+    .mz-myaccount {
+        .mz-l-pagewrapper {
+            .mz-accountsettings-user {
+                width: 88%;
+            }
+            .mz-accountsettings-password {
+                width: 88%;
+                margin-left: 0;
+            }
+        }
+    }
+    
+} 
+
+@media only screen and (min-width: 1px) and (max-width: 767px){
+    .mz-myaccount {
+        .mz-l-pagewrapper {
+            .mz-l-pagecontent {
+                padding: 10px 10px 0px 10px;
+            }
+            .mz-accountsettings {
+                .mz-accountsettings-firstname,  .mz-accountsettings-lastname {
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+               
+                .mz-accountsettings-details {
+                    .mz-l-stack-sectiontitle {
+                        padding: 10px 0;
+                    }
+                    
+                    .mz-accountsettings-user {
+                        width: 100% !important;
+                        ul {
+                            padding-left: 0;
+                            li {
+                                .edit-user-settings  {
+                                    .mz-accountsettings-namecancel, .mz-accountsettings-namedone {
+                                        width: 100%;
+                                        margin: 15px 0 15px 0;
+                                    }
+                                }
+                            }
+                              
+                        }
+                    }
+                    .mz-accountsettings-password {
+                        width: 100%;
+                        margin-left: 0%;
+                        margin-top: 15px;
+                        .mz-accountsettings-password-container {
+                            padding-left: 0;
+                            input {
+                                width: 100%;
+                                box-sizing: border-box;
+                                margin-top: 0;
+                            }
+                            .mz-accountsettings-passworddone,
+                            .mz-accountsettings-passwordcancel{
+                                width: 100%;
+                                 margin: 15px 0 15px 0;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+} 
+
+
+
+

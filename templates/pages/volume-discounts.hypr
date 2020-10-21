@@ -1,0 +1,74 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static  {% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Volume Discounts</h1>
+    <article>
+        <p>
+            When you purchase in quantity, a discount will be applied to your order according to the total purchase amount (excluding shipping). 
+            Any combination of products from our Shopping section may be ordered to reach a discount level from the chart below. When you order online, 
+            the discount will be automatically calculated and displayed to you on the Shopping Cart page. Simply select the items and quantity of each from the Shopping section.
+        </p>
+        <p>
+            From time to time, Jelly Belly may offer discounts and/or promotions on products, categories or shipping. In general, these are not “stackable”, which means that you cannot use more than one offer at a time, but we’ll always try to give you the best deal. 
+            <a href="/shipping-information#ShipGround">Free Ground Shipping</a> CAN be stacked with (most) other offers, including <a href="/volume-discounts">Volume Discounts</a>.
+        </p>
+        <p>
+            <a href="/shipping-information"> Click here</a> for details on Free Standard Shipping. 
+        </p>
+        <p>
+            We also accept telephone orders. Call Jelly Belly Customer Service at 1-800-JB-BEANS (1-800-522-3267 - US only) Monday through Friday from 7 a.m. to 5 p.m. Pacific Time. 
+            Please mention you are calling about Volume Discounts.
+        </p>
+        <div class="carnival-details vol-discount">
+            <h2>Volume Discounts</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Merchandise Total</th>
+                        <th>Discount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$500 - $1,499.99</td>
+                        <td>5%</td>
+                    </tr>
+                    <tr>
+                        <td>$1,500 - $2,999.99</td>
+                        <td>7%</td>
+                    </tr>
+                    <tr>
+                        <td>$3000 - $5,999.99</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>$6000+</td>
+                        <td>15%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+

@@ -1,0 +1,206 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static sponsorship mz-warehouse  {% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Sports Sponsorships</h1>
+    <article class="carnival-details txt-left">
+        <p>
+                Thank you for your interest in sponsorship from Jelly Belly Candy Company. At this time, all of our sponsorship funds are allocated for the 2015 calendar year.
+            </p>
+            <p>
+                If you would like to be considered for sports or event sponsorship in 2016, please meet the policy found on our <a href="http://www.jellybelly.com/sponsorship-guidelines">sponsorship guidelines</a> page and submit your proposal to:
+                <a href="mailto:eventmarketing@jellybelly.com">eventmarketing@jellybelly.com</a>
+            </p>
+            <p>
+                Due to the large volume of requests we receive, we regret that we can only respond to inquiries we might wish to pursue.
+            </p>
+            <p>
+                Thank you again for your interest in Jelly Belly Candy Company.
+            </p>
+            <p>
+                Sweet regards,
+                <br>
+                <br>
+                The Event Marketing Team 
+                <br>
+                Jelly Belly Candy Company
+            </p>
+         
+    </article>
+</section>
+<ul class="jb-feature-brands">
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Event Calendar</h3>
+                <figure>
+                  <a href="/sponsorships-event-calendar">
+                    <img src="/resources/images/sponsors/events_thumb.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 Get details on the exciting events that Jelly Belly is involved in, from cycling races to Belly Flop sales! 
+                  <a class="jb-feature-brand-moreinfo" href="/sponsorships-event-calendar">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Jelly Belly Cycling Team</h3>
+                <figure>
+                  <a href="/pro-cycling-team">
+                    <img src="/resources/images/sponsors/athletes_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  This energetic and dedicated team of top athletes race in the elite and highly-competitive Pro-Am divisions, where the best cyclists from around the world battle for the gold in road and track courses all over the world. 
+                  <a class="jb-feature-brand-moreinfo" href="/pro-cycling-team">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Jim Pace</h3>
+                <figure>
+                  <a href="/jim-pace">
+                    <img src="/resources/images/sponsors/pace_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Jim Pace owner, builder and driver of J.P.'s Toyz, an A/GAS 1948 Anglia nostalgia drag car, has won several drag races and shows including Best in Show Competition in the Sacramento Autorama in 1998-2001. 
+                  <a class="jb-feature-brand-moreinfo" href="/jim-pace">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Dennis Walters</h3>
+                <figure>
+                  <a href="/dennis-walters">
+                    <img src="/resources/images/sponsors/dwalters_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Professional golfer Dennis Walters's story and abilities will leave you stunned, amazed and inspired as you’ve never been before. He is truly one of a kind. 
+                  <a class="jb-feature-brand-moreinfo" href="/dennis-walters">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Brant Seghetti</h3>
+                <figure>
+                  <a href="/brant-seghetti">
+                    <img src="/resources/images/sponsors/seghetti_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Brant rules the skies as a professional air racer. Flying at speeds in excess of 300 mph, he dashes around pylons with other racers right on his tale. His trusty plane is Sparky, Jelly Belly’s authentic P-51D Mustang. 
+                  <a class="jb-feature-brand-moreinfo" href="/brant-seghetti">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Kent Pietsch</h3>
+                <figure>
+                  <a href="/kent-pietsch">
+                    <img src="/resources/images/sponsors/pietsch_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Professional stunt pilot Kent Pietsch performs aerobatic acts that are beyond belief. From scraping his wings along the ground to landing on a moving vehicle, Kent's shows are absolute must-see attractions. 
+                  <a class="jb-feature-brand-moreinfo" href="/kent-pietsch">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Sacramento Rivercats</h3>
+                <figure>
+                  <a href="/rivercats">
+                    <img src="/resources/images/sponsors/rivercats_thumb.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  The River Cats and Jelly Belly team up to thrill baseball fans every week. And you can get in on the action at home games too! 
+                  <a class="jb-feature-brand-moreinfo" href="/rivercats">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Ed Jones</h3>
+                <figure>
+                  <a href="/ed-jones">
+                    <img src="/resources/images/sponsors/edAndWendy-thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 Not only does Ed Jones roar down dragstrips at over 100 miles per hour, he does it on the two rear wheels, making "The Outlaw" one of the finest exhibition wheelstanders around. 
+                  <a class="jb-feature-brand-moreinfo" href="/ed-jones">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Carin Koch</h3>
+                <figure>
+                  <a href="/carin-koch">
+                    <img src="/resources/images/sponsors/carin_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  A pro on the LPGA tour since 1995, Carin has already recorded 10 top 10 finishes, and she’s just getting started. She’s sure to keep Jelly Belly on the green for a long time to come. 
+                  <a class="jb-feature-brand-moreinfo" href="/carin-koch">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+    </ul>
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+

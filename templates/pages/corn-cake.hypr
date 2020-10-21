@@ -1,0 +1,64 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Harvest Corn Cupcakes</h1>
+    <article class="carnival-details txt-left">
+        <h2>Harvest Corn Cupcakes</h2>
+        <hr>
+        <div class="baking-recipe">
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Indian Corn Cupcakes/indiancorn_m.jpg">
+            </figure>
+            <!-- AddThis Button -->
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+            <img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border: 0">
+            </a>
+            <!-- /AddThis Button -->
+            <p>
+                A-maize your crowd with this crafty centerpiece inspired by the dried harvest corn decorations that grace doorways each fall.
+                The kernels are gourmet jelly beans in beautiful autumn shades. Sheets of toasted Phyllo dough form the tawny corn husks.
+            </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>24 vanilla cupcakes baked in white paper liners</li>
+                <li>3 sheets Phyllo dough, thawed</li>
+                <li>Vegetable cooking spray</li>
+                <li>1 can (16 ounces) vanilla frosting</li>
+                <li>3 1/4 teaspoon unsweetened cocoa powder</li>
+                <li>
+                    About 4 cups <a target=" _blank" href="/nav/cat1/jellybellyjellybeans/0">assorted</a> Jelly Belly jelly beans in
+                    <a target=" _blank" href="/search?query=brown jelly beans&amp;asug=">russet</a>,  
+                    <a target="_blank" href="/search?query=orange&amp;asug=">orange</a>, 
+                    <a target="_blank" href="/search?query=jewel beans gold&amp;asug=">gold</a>, 
+                    <a target="_blank" href="/search?query=cream&amp;asug=">cream</a>, and 
+                    <a target="_blank" href="/search?query=brown jelly beans&amp;asug=">brown
+                    </a> colors. See
+                    <a target="_blank" href="/Info/FunStuff/flavor_guides?guide=original50">here.</a>
+                </li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>
+                    Preheat the oven to 350°F. Line a cookie sheet with crumpled foil. Cut the Phyllo sheets crosswise into 3-inch-wide strips, tapering both ends. Drape the stacked husks on the prepared pan,
+                    shaping them over the crumpled foil to make curves. Spray lightly with vegetable cooking spray. Bake until the Phyllo is golden brown, 4 to 5 minutes.
+                    Transfer to a wire rack and allow to cool completely. (The husks can be made up to 1 day in advance and kept in an airtight container.)
+                </li>
+                <li>Tint the vanilla frosting pale beige with the cocoa powder.</li>
+                <li>
+                    Working with 3 cupcakes at a time, spread some of the pale beige frosting on top. Arrange about 5 straight rows of jelly beans, side by side and close together, on each cupcake.
+                    (Try to select flavors that go well together, such as toasted marshmallow, banana, cappuccino, and chocolate pudding.) Repeat with the remaining cupcakes, frosting, and jelly beans.
+                </li>
+                <li>For each ear of corn, place 3 cupcakes end to end on a serving platter, aligning the rows of jelly beans. Arrange the Phyllo husks on either side of the corn. </li>
+            </ol>
+            <h2>MAKES 8 EARS OF CORN, 24 CUPCAKES</h2>
+            <hr>
+            
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+

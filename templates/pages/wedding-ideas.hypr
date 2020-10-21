@@ -1,0 +1,201 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-wedding{% endblock body-tag-classes %} 
+{% block body-content %}
+{% require_script "modules/common" %} 
+<section>
+    <article class="wedding-title">
+        <p class="sectionTitle">Jelly Belly Wedding Center</p>
+        <img class="ring" src="/resources/images/wedding/Wedding Center/rings.gif" />
+        <div class="clearfix"></div>
+    </article>
+    <div class="wedding-center">
+        <div class="weddingNav">
+            <p class="sectionTitle whereToStartText">Wedding Guide</p>
+            <img src="/resources/images/wedding/brideGroom.png" alt="brideGroom"/> 
+            <ul>
+                    <li><a href="/wedding-center">Wedding Center Home</a> &#9658;</li>
+                    <li><a href="/wedding-ideas">Wedding Themes</a> &#9658;</li>
+                    <li><a href="/wedding-color-palettes">Color Palettes</a> &#9658;</li>
+                    <li><a href="/wedding-personalized-favors">Personalized Favors</a> &#9658;</li>
+                    <li><a href="/wedding-featured-candy">Featured Candy</a> &#9658;</li>
+                    <li><a class="candyCalculatorModal" href="">Candy Calculator</a> &#9658;</li>
+            </ul>
+        </div>
+        <div class="weddingBody">
+            <p class="sectionTitle" style="font-size: 50px;">Wedding Themes</p>
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">
+                        <a href="/wedding-theme-slider?wedding=beach-wedding">Beach Wedding</a>
+                    </p>
+                    <p class="col2 themeDescription">
+                        Berry Blue, Juicy Pear and A&W&reg; Cream Soda give the allusion of an aquamarine hue of sea glass to this fun, breezy theme.
+                        Starfish and seashells make easy-to-find adornments if you want to celebrate in the sun and sand.
+                        <br />
+                        <br />
+                        <a href="/wedding-theme-slider?wedding=beach-wedding"><strong>Click here </strong></a>to see the entire photo set.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a href="/wedding-theme-slider?wedding=beach-wedding">
+                        <img src="/resources/images/wedding/Wedding Theme/beach.jpg" />
+                        <p>view full set</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /beach -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">
+                        <a href="/wedding-theme-slider?wedding=california-wedding">California Wedding</a>
+                    </p>
+                    <p class="col2 themeDescription">
+                        A delicious medley of candies awash in the colors of California Poppies and the clear blue sky.
+                        Brightly-hued treats, simple ribbons and patterns can add a lot of West Coast personality to plain glass jars.
+                        <br />
+                        <br />
+                        <a href="/wedding-theme-slider?wedding=california-wedding"><strong>Click here </strong></a>to see the entire photo set.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a href="/wedding-theme-slider?wedding=california-wedding">
+                        <img src="/resources/images/wedding/Wedding Theme/california.jpg" />
+                        <p>view full set</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /california -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">
+                        <a href="/wedding-theme-slider?wedding=contemporary-wedding">Contemporary Wedding</a>
+                    </p>
+                    <p class="col2 themeDescription">
+                        Chic glass globes and charming wooden boxes are some of the round and angular elements in this timeless plan.
+                        Sharp, vibrant colors are used to accentuate the eye-popping symmetry.
+                        <br />
+                        <br />
+                        <a href="/wedding-theme-slider?wedding=contemporary-wedding"><strong>Click here </strong></a>to see the entire photo set.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a href="/wedding-theme-slider?wedding=contemporary-wedding">
+                        <img src="/resources/images/wedding/Wedding Theme/contemporary.jpg" />
+                        <p>view full set</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /contemporary -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">
+                        <a href="/wedding-theme-slider?wedding=garden-wedding">Garden Wedding</a>
+                    </p>
+                    <p class="col2 themeDescription">
+                        The traditional outdoor party never goes out of style.
+                        A bouquet of fresh flowers, pink and white place settings and a handful of jelly beans for each guest are all you need for sublime Spring or Summer nuptials.
+                        <br />
+                        <br />
+                        <a href="/wedding-theme-slider?wedding=garden-wedding"><strong>Click here </strong></a>to see the entire photo set.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a href="/wedding-theme-slider?wedding=garden-wedding">
+                        <img src="/resources/images/wedding/Wedding Theme/garden.jpg" />
+                        <p>view full set</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Garden Wedding -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">
+                        <a href="/wedding-theme-slider?wedding=rustic-wedding">Rustic Wedding</a>
+                    </p>
+                    <p class="col2 themeDescription">
+                        Turn down the formality a bit with distressed woods, faded wallpapers and homespun rural flair.
+                        Chocolates and pastel-colored candies served in old-fashioned jars and tins give country character to your gathering.
+                        <br />
+                        <br />
+                        <a href="/wedding-theme-slider?wedding=rustic-wedding"><strong>Click here </strong></a>to see the entire photo set.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a href="/wedding-theme-slider?wedding=rustic-wedding">
+                        <img src="/resources/images/wedding/Wedding Theme/rustic.jpg" />
+                        <p>view full set</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Rustic Wedding -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">
+                        <a href="/wedding-theme-slider?wedding=uptown-wedding">Uptown Wedding</a>
+                    </p>
+                    <p class="col2 themeDescription">
+                        Pale blues and silvers accented by white lilies are ideal when sophistication is paramount.
+                        Deep brown Cappuccino and Chocolate Pudding jelly beans bring rich, sumptuous flavors and colors to the party.
+                        <br />
+                        <br />
+                        <a href="/wedding-theme-slider?wedding=uptown-wedding"><strong>Click here </strong></a>to see the entire photo set.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a href="/wedding-theme-slider?wedding=uptown-wedding">
+                        <img src="/resources/images/wedding/Wedding Theme/uptown.jpg" />
+                        <p>view full set</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Uptown Wedding -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">
+                        <a href="/wedding-theme-slider?wedding=zen-wedding">Zen Wedding</a>
+                    </p>
+                    <p class="col2 themeDescription">
+                        Exotic and unique, but no less elegant, this theme has a Far Eastern twist.
+                        Fun, flowery origami filled with jelly beans are sure to bring smiles, and a stalk of bamboo here and there is an exquisite finishing touch.
+                        <br />
+                        <br />
+                        <a href="/wedding-theme-slider?wedding=zen-wedding"><strong>Click here </strong></a>to see the entire photo set.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a href="/wedding-theme-slider?wedding=zen-wedding">
+                        <img src="/resources/images/wedding/Wedding Theme/zen.jpg" />
+                        <p>view full set</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- /Zen Wedding -->
+    </div>
+</section>
+<script src="{{siteContext.cdnPrefix}}/scripts/vendor/cufon.js"></script> 
+<script src="{{siteContext.cdnPrefix}}/scripts/vendor/UniRom_500.font.js"></script>
+<script type="text/javascript">Cufon.replace('.sectionTitle');</script>
+<script type="text/javascript">Cufon.now();</script>
+{% endblock body-content %}
+
+
+
+
+

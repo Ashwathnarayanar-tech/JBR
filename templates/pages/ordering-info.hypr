@@ -1,0 +1,147 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">
+        Ordering Information
+    </h1>
+    <article>
+        <div>
+            <h2>Questions Regarding Your Order </h2>
+            <p>
+                If you have any questions regarding your order or are having trouble placing your order, please do not hesitate to call 1-800-JB-BEANS (1-800-522-3267 - US only)
+                or 707-399-2390 (all countries), Monday-Friday between the hours of 7 AM - 5 PM, Pacific Time.
+            </p>
+            <p>
+                Due to the perishable nature of food items, if you have any problems when you receive your order please contact us within three days of the delivery date.
+                (Delivery date determined by shipper's records).
+            </p>
+            <p>
+                If you have a current permit for resale in your state and wish to inquire about becoming a wholesale customer of Jelly Belly Candy Co.,
+                please call 1-800-323-9380 (US only) or 707-428-2800 (all countries) and ask for the Customer Service department.
+            </p>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Product Guarantee </h2>
+            <p>
+                Your Jelly Belly items should reach you in excellent condition. If not, please contact us at 1-800-522-3267, between 7 AM and 5 PM PT, Monday through Friday.
+                We will replace them free of charge as long as you return the unused portion of the package and the packaging and reason for return along with where and when you bought it.
+                Please contact us BEFORE returning, or this Product Guarantee may not apply.
+            </p>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Billing Addresses</h2>
+            <p>
+                Currently, we are only able to accept billing addresses from United States addresses.
+            </p>
+        </div>
+
+        <hr>
+
+        <div id="orderInfoSalesTaxPolicy">
+            <h2>Sales and Use Tax</h2>
+            <p>
+                <strong>
+                    Jelly Belly pays the sales tax for orders shipped to the states of California, Georgia, Illinois, New York, Washington and Wisconsin.
+                </strong>
+                The information below is for customers who take delivery of merchandise in other states.
+            </p>
+            <ul>
+                <li><strong>Jelly Belly does not collect sales or use tax in other states.</strong></li>
+                <li>Purchases are subject to use tax in other states unless exempt from taxation in those other states.</li>
+                <li>The purchase is not exempt merely because it is made over the Internet or by Phone.</li>
+                <li>Other states will require customers to report their purchases that were not taxed and pay use tax on those purchases. Customers should check their state's reporting requirements for tax forms to be used for this purpose.</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Discounts and Promotions</h2>
+
+            <p>
+                From time to time, Jelly Belly may offer discounts and/or promotions on products, categories or shipping. In general, these are not "stackable", which means that you cannot use more than one offer on a single order,
+                but we'll always try to give you the best deal. <a href="/shipping-information">Free Ground Shipping</a> CAN be stacked with (most) other offers, including <a href="/volume-discounts">Volume Discounts</a>.
+            </p>
+            <p>
+                Any stated dollar-amount threshold applies to the subtotal of product(s) after any discount(s) and before shipping charges. If a promotion code or coupon code is designated, you must use that code at checkout to
+                receive the offer. Purchases of e-Gift Cards are not calculated when determining qualification for an offer threshold.
+            </p>
+            <p>
+                Offers are valid only for orders placed on www.JellyBelly.com, not valid for any other products, previous purchases or purchases on MyJellyBelly, affiliated websites, other websites or physical stores.
+                Discounts have no cash value and there are no rain checks.
+            </p> 
+
+
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Available Payment Methods</h2>
+            <p>
+                We accept the following forms of payment for consumer online and phone orders:
+                <br>
+                VISA, Mastercard, American Express, Discover, <a href="/gift-cards">Jelly Belly Gift Card</a>
+            </p>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Unauthorized Purchases from your Credit Card</h2>
+            <p>
+                We guarantee that every online transaction you make will be 100% safe. This means you pay nothing if unauthorized charges are made to your card as a result of shopping at our online store.
+                Under the Fair Credit Billing Act, your bank cannot hold you liable for more than $50.00 of fraudulent charges.
+                If your bank does hold you liable for any of this $50.00, we will cover the entire liability for you, up to the full $50.00.
+                We will only cover this liability if the unauthorized use of your credit card resulted through no fault of your own from purchases made while using the secure server.
+                In the event of unauthorized use of your credit card, you must notify your credit card provider in accordance with its reporting rules and procedures.
+            </p>
+            <p>
+                For additional information on the Fair Credit Billing Act, please visit the U.S. Government's Federal Trade Commission fact page.
+            </p>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Price Policy</h2>
+            <p>
+                All prices are subject to change. For all prices, products and offers, JellyBelly.com reserves the right to make adjustments due to changing market conditions,
+                product discontinuation, manufacturer price changes, errors in advertisements and other extenuating circumstances.
+                In the event of an incorrect price, JellyBelly.com reserves the right to refuse or cancel any orders for items listed at the incorrect price,
+                whether or not the order has been confirmed and your credit card charged. If your credit card has already been charged for the purchase and your order is canceled,
+                JellyBelly.com will issue a credit to your credit card account in the amount of the incorrect price.
+            </p>
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+
+
+

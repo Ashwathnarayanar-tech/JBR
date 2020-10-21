@@ -1,0 +1,446 @@
+<tbody><tr><td>
+
+<style>
+.mz-table td { 
+    padding: 0px;
+    }
+</style>
+
+{% if themeSettings.heatsensitive %}
+<div id="heat-warning" style="margin-bottom: 50px; margin-top: -15px; display: none;">
+   <p>
+     <strong style="color: #cc0000;">IMPORTANT:</strong> 
+     You have one or more Heat-Sensitive items on your Order. 
+       During warm-weather months (March through October), this item requires special handling.  Orders with Heat-Sensitive items:
+   </p>
+   <ul>
+     <li>Require a $10 Handling Fee per cold pack needed
+     <li>Get cold packs for FREE when ordering over $500 of Heat-Sensitive items!
+     <li>Ship only on a Monday or Tuesday
+   </ul>
+   <p>
+     Please <a style="color: #00a3e0; text-decoration:none" href="/shipping_information">click here</a> for more information or <a style="color: #00a3e0; text-decoration:none" href="/contact-us">contact us</a>.
+   </p>
+</div> 
+{% endif%}
+
+  <table class="item-table">
+    <thead>
+      <tr>
+        <th class="mz-carttable-header-product">{{ labels.product }}</th> 
+        <th class="mz-carttable-header-price">{{ labels.price }}</th>
+        <th class="mz-carttable-header-qty">{{ labels.qty }}</th>
+        <th class="mz-carttable-header-total">{{ labels.itemTotal }}</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+ 
+    <tbody class="mz-table-cart-{%if Model.IsEmpty %}isempty{% else %}items{% endif %}">
+     <p class="overlay"></p>
+      {% if not model.isEmpty %}
+      {% for item in model.items %} 
+      
+      <tr class="mz-carttable-item" data-mz-carttable-item-sku="{{ item.product.productCode }}"> 
+        <td class="mz-carttable-item-product">
+        
+   
+          {% if item.product.imageUrl and themeSettings.showCartItemImage %}
+                <img class="mz-carttable-item-image" src="{{ item.product.imageUrl }}?max=80" />
+            {% else %}
+                <img class="mz-carttable-item-image" style="padding: 0px;" src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/{{themeSettings.no_product_image}}?max=80"/>
+          {% endif %}
+          
+          <div class="mz-carttable-item-info-wrap{% if not item.product.imageUrl %} mz-no-image{% endif %}">
+            <a class="mz-carttable-item-title" href="{{item.product.url}}">SKU {{ item.product.productCode }} – {{ item.product.name|safe }}</a>
+            <a href="javascript:void(0)" data-mz-action="removeItem" data-mz-cart-item="{{ item.id }}" class="mz-icon mz-mobile-close-icon mz-icon-close">{{ labels.remove }}</a>
+            {% if item.product.options and themeSettings.showCartItemOptions %}
+            {% comment %}
+                <dl class="mz-propertylist">
+                  {% for option in item.product.options %}
+                  <dt>{{ option.name }}</dt>&nbsp;
+                  <dd>{{ option.value }}</dd>
+                  {% endfor %}
+                </dl>
+            {% endcomment %}
+            {% endif %}
+            {% if item.product.productUsage == 'Bundle' %}
+            <dl class="mz-propertylist">
+              {% for bundledProduct in item.product.bundledProducts %}
+              <dt>{{ bundledProduct.productCode }}</dt>&nbsp;
+              <dd>{{ bundledProduct.name | safe }} ({{ bundledProduct.quantity }})</dd>
+              {% endfor %}
+            </dl>
+            {% endif %}
+            {% comment %}
+            <span class="mz-carttable-item-code">
+              {{ labels.productCode }}: <em>{{ item.product.productCode }}</em>
+            </span>
+            {% endcomment %}
+            {% if item.fulfillmentMethod == 'Pickup' %}
+            <span class="mz-carttable-item-pickuplocation">
+                {{ labels.storePickupAt|string_format(item.fulfillmentLocationName)|safe }}
+            </span>
+            {% endif %}
+            {% comment %} v.r.s changes for SFO {% endcomment %}
+            <div class="mz-item-purchasedate">
+                {% if item.isFutureProduct %}
+                    Available: <span><strong>{{item.nextAvailableDate}}</strong></span>
+                    {% else %}
+                        {% if item.availableInventory > 0 %}
+                        Available: <span><strong>NOW</strong></span>
+                            {% else %}
+                            Available: <span><strong>SOON</strong></span>
+                        {% endif %}
+                {% endif %}
+              {% comment %}
+              {% with model.data.inventoryInfo|findwhere('productCode', item.product.productCode) as inventory %}
+              
+                {% if inventory.inventory < 1 && item.nextAvailableDate %}
+                    Available: <span><strong>{{item.nextAvailableDate}}</strong></span>
+                    {% else %}
+                    {% if inventory.inventory < 1 && not item.nextAvailableDate %}
+                    Available: <span><strong>SOON</strong></span>
+                        {% else %}
+                        {% if inventory.inventory >= 1 %}
+                            Available: <span><strong>NOW</strong></span>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+              
+              {% endwith %}
+              {% endcomment %}
+            </div>
+            
+          </div>
+          <div class="clearfix"></div>
+        </td>
+        <td class="mz-carttable-item-price">
+          {% include "modules/common/item-price" %}
+        </td>     
+            {% if item.product.price.price == 0 %}
+              <td class="mz-carttable-item-qty">
+                  <input class="mz-carttable-qty-field" type="number" min="1" style="text-align: center;" {% if model.isLoading %}disabled="disabled"{% endif %} data-mz-cart-item="{{ item.id }}" data-mz-value="quantity" value="{{ item.quantity }}" disabled/>
+                </td>
+            {% else %}
+                <td class="mz-carttable-item-qty">
+                  <input class="mz-carttable-qty-field" type="number" min="1" max='50' step="1" style="text-align: center;"  {% if model.isLoading %}disabled="disabled"{% endif %} data-mz-cart-item="{{ item.id }}" data-mz-value="quantity" value="{{ item.quantity }}" />
+                {% comment %}
+                  <select class="mz-carttable-qty-field" id="quantity" style="text-align: center;" name="quantity"  {% if model.isLoading %}disabled="disabled"{% endif %} data-mz-cart-item="{{ item.id }}" data-mz-value="quantity" value="{{ item.quantity }}" >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                  <option value="32">32</option>
+                  <option value="33">33</option>
+                  <option value="34">34</option>
+                  <option value="35">35</option>
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+                  <option value="45">45</option>
+                  <option value="46">46</option>
+                  <option value="47">47</option>
+                  <option value="48">48</option>
+                  <option value="49">49</option>
+                  <option value="50">50</option>
+                    </select>
+                 {% endcomment %}
+                </td>
+            {% endif %}
+            {% comment %}
+        <td class="mz-carttable-item-qty">
+          <input class="mz-carttable-qty-field" type="number" min="1" {% if model.isLoading %}disabled="disabled"{% endif %} data-mz-cart-item="{{ item.id }}" data-mz-value="quantity" value="{{ item.quantity }}"  />
+          <select id="prod_quantity_{{forloop.counter}}" data-mz-cart-item="{{ item.id }}" data-mz-value="quantity" class="mz-productdetail-qty" id="quantity" name="quantity">
+               {% for quantity in themeSettings.quantityOptions %}
+                 <option {% if item.quantity == quantity %}selected="selected"{% endif %} value="{{ quantity }}">{{ quantity }}</option>
+             {% endfor %}
+        </select>
+      
+        </td>
+          {% endcomment %}
+          <td class="mz-carttable-item-total">
+            {% include "modules/common/item-total" %}
+        </td>
+        <td class="mz-carttable-item-remove">
+    		  <a href="javascript:void(0)" data-mz-action="removeItem" data-mz-cart-item="{{ item.id }}"><font style="font-size: 14px;"><i unbxd-product-code="{{ item.product.productCode }}" unbxd-quantity="{{ item.quantity }}" class="fa fa-times-circle fa-lg unbxd-remove-from-cart" style="color: #bbb;" ></i></font></a>
+        </td>        
+            {% if item.availableInventory !== "" %}
+            {% if item.availableInventory == 0 or item.quantity > item.availableInventory %}
+            <tr class="mz-carttable-item mz-stockout-error">
+                <td colspan="5" class="mz-carttable-item-product" style="margin-top: 20px;">
+                <span style="font-size: 14px; font-weight: bold;"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color: #dd0000;"></i>
+                   Sorry, but this item has 0 units left in stock. Please <span class="jb-out-of-stock-cur" data-mz-product-code="{{item.product.productCode}}">_click here_</span> to be notified when it's available again. You'll need to remove this item from the Cart before proceeding to Checkout.
+                </span>
+                </td>
+            </tr>
+            {% endif %}
+            {% endif %}
+            
+        
+      </tr>
+    {% endfor %}
+    {% else %}
+      <tr class="mz-carttable-noitems">
+        <td colspan="5">
+            {{ labels.cartEmpty }}
+            </td>
+      </tr>
+      {% endif %}
+	<tr class="clear-cart">
+		<td colspan="2">
+		</td>
+		<td colspan="3">
+			<p id="clear-cart-prompt" data-mz-action="clearCartWarning">CLEAR CART</p>
+				<span id="clear-cart-warning" style="display: none;">
+					<span id="clear-cart-warning-text" style="color: #ff0000; padding: 3px;"><strong>ARE YOU SURE?</strong> This will clear all contents in your cart!</span><br>
+					<span id="clear-cart-yes" style="text-decoration: underline; cursor: pointer;" data-mz-action="clearCartYes">YES</span> 
+					<span id="clear-cart-no" style="text-decoration: underline; cursor: pointer;" data-mz-action="clearCartNo">NO</span>
+				</span>
+		</td>
+	</tr>
+
+      </tbody>
+    {% comment %}
+    <tfoot>
+      <tr class="mz-carttable-shipping-row">
+        <td colspan="4">
+          <em class="mz-auxiliary-text">{{ labels.taxAtCheckout }}</em>
+        </td>
+        <td></td>
+      </tr> 
+    
+      {% for discount in model.orderDiscounts %}
+        {% if not discount.excluded %}
+      <tr class="mz-carttable-total-row">
+        <td class="mz-carttable-total-label" colspan="3">
+            {{ discount.discount.name }}:
+        </td>
+        <td class="mz-carttable-total-wrap">
+          <span class="mz-carttable-rowtotal">-{{ discount.impact|currency }}</span>
+        </td>
+        <td></td>
+      </tr>
+        {% endif %}
+      {% endfor %} 
+    
+    
+      <tr class="mz-carttable-total-row">
+        <td class="mz-carttable-total-wrap" colspan="4">
+          {{ labels.orderTotal }}:
+            <span id="mz-carttable-total" class="mz-carttable-total">
+              <strong>{{ model.discountedTotal|currency }}</strong>
+            </span>
+        </td>
+        <td></td>
+      </tr>
+      <tr class="mz-carttable-checkout-row">
+        <td colspan="4">
+          <button id="cart-checkout" class="mz-button mz-button-large {% if model.discountedTotal < 100 %}orderNotAllowed{% endif %}"
+                {% if model.isEmpty or model.isCartFaulty %} style="background-color: #ECECEC;" disabled="disabled" {% endif %} data-mz-action="proceedToCheckout">
+                {{ labels.proceedToCheckout }}</button>
+        </td>
+        <td></td>
+      </tr>
+          
+    </tfoot>
+    {% endcomment %}
+    </table>
+<table class="price-table" style="margin-top: -15px;">  
+    <tbody>
+    <tr class="checkout-col">
+        <td colspan="4">
+            <button id="cart-checkout-top" class="mz-button mz-button-large proceed-btn {% if model.discountedTotal < 100 %}orderNotAllowed{% endif %} {% if model.isCartFaulty %}faulty-cart {% endif %}"
+                {% if model.isEmpty or model.isCartFaulty %} style="background-color: #ECECEC; margin-left: 18px;" disabled="disabled" {% else %} style="margin-left: 18px;" {% endif %}  data-mz-action="proceedToCheckout">
+                {{ labels.proceedToCheckout }}
+            </button>
+            <br>
+          <input id="keep-shopping-button" type="button" class="mz-button mz-button-large proceed-btn mleft18" style="background: #c2c2c2; color: #ffffff; margin-top: 8px;" onClick="location.href='/home';" value="KEEP SHOPPING"/>
+            <p></p>
+        </td>
+        <td></td>
+      </tr>
+        
+        <tr class="checkout-col">
+            <td  style="padding-bottom: 5px;">
+                <span class="mleft18">SubTotal:</span>
+                <span id="mz-carttable-total" class="mz-carttable-total">
+                    {{ model.discountedSubtotal|currency }}
+                </span>
+            </td>
+        </tr>
+        
+        {% if themeSettings.enableShippingquotes %}
+        <tr class="checkout-col">
+            <td class="shippingrates">
+                <span class="mleft18" >Estimate shipping cost:</span><!-- <br/> -->
+                <span id="mz-carttable-total" class="mz-carttable-total mleft18 " style="margin:0px 0px 20px 20px; margin-top: 0px; float : none" >
+                    <span class="estimate-total" > <input type="text" name="shippingZip" placeholder = "Enter Zip Code" id="shipping-zip" style="width:114px; margin-bottom: 2px;"/></span>
+                    <span id="mz-carttable-total" class="mz-carttable-total dispdate" style="width:50px;"/>    
+                        <button class="mz-button mz-button-small proceed-btn" disabled="disabled" style="text-decoration : none;color : #fff;width : 88px" data-mz-action="estimateShip" id="estimateShip">ESTIMATE</button>
+                        
+                    </span>
+                       
+                </span>
+                <label id="ziperror" class="mleft18" style="display: none;"> *Please enter valid Zip Code </label>
+                 <div class="shippingquotes" style=""></div>
+                 <div id="estimateradio">
+                 </div>
+            </td>
+        </tr>
+        {% else %}
+        <tr class="checkout-col">
+            <td>
+                <span class="mleft18">Shipping:</span>
+                <span id="mz-carttable-total" class="mz-carttable-total">
+                    TBD
+                </span>
+            </td>
+        </tr>
+        {%endif%}
+
+        {% comment %}
+        <tr class="mz-carttable-shipping-row">
+        <td colspan="4">
+          <em class="mz-auxiliary-text">{{ labels.taxAtCheckout }}</em>
+        </td>
+        <td></td>
+      </tr>
+     {% endcomment %}
+     
+      {% for discount in model.orderDiscounts %}
+        {% if not discount.excluded %}
+      {% comment %}  
+      <tr class="mz-carttable-total-row">
+        <td class="mz-carttable-total-label"  style="color: #2A8B23;font-size: 13px;padding: 5px 5px 0px 3px;text-align: right;" colspan="3">
+            {{ discount.discount.name }}:
+        </td>
+        <td class="mz-carttable-total-wrap">
+          <span class="mz-carttable-rowtotal" style="color: #2A8B23;font-size: 14px;padding: 2px 5px 0px 5px;text-align: right;" >-{{ discount.impact|currency }}</span>
+        </td>
+        <td></td>
+      </tr>
+      {% endcomment %}
+      
+      
+      <tr class="mz-carttable-total-row" id="discount-row">
+        <td class="mz-carttable-total-label" colspan="3" id="discount-cell">
+            <div>
+                <span class="mleft18" id="discount-name">{{ discount.discount.name }}:</span>
+                <span class="mz-carttable-rowtotal" id="discount-impact">-{{ discount.impact|currency }}</span>
+            </div>
+        </td>
+      </tr>
+        {% endif %}
+      {% endfor %}
+    
+    
+      <tr class="mz-carttable-total-row checkout-col">
+        <td class="mz-carttable-total-wrap" colspan="4">
+            <span class="mleft18 order-total ordertotalWithoutshipping">
+          <span class="estimate-total">Estimated Total:</span>
+            <span id="mz-carttable-total" class="mz-carttable-total"> 
+              <strong>{{ model.discountedTotal|currency }}</strong>
+            </span>
+            </span>
+        </td>
+        <td></td>
+      </tr>
+      
+       <tr class="mz-carttable-total-row checkout-col">
+        <td class="mz-carttable-total-wrap estimateprice" id="estimateprice" colspan="4">     
+                 
+        </td>
+        <td></td>
+      </tr>
+      
+      
+      
+       {% if model.discountedTotal != 0  %}
+      <tr class="mz-carttable-freeshipping-row" >
+        <td class="mz-carttable-total-wrap" colspan="4">
+            <span id="mz-carttable-freeshipping" class="mleft18 mz-carttable-freeshipping hide-when-heat-sensitive">
+             {% if model.remainingfreeshippinng > 0  %}
+                    You are only ${{model.remainingfreeshippinng}} away from 
+                    <a href="/shipping-information" style="text-decoration: none;">
+                    FREE Freight</a>!
+            {% endif %}
+            {% if model.remainingfreeshippinng == 0  %}
+                 Congratulations, you qualify for <a href="/shipping-information" >FREE Freight</a>! (Exclusions apply, click for more info.)
+            {% endif %}
+            </span>
+        </td>
+        <td></td>
+      </tr>
+       {% endif %}
+      <!--<tr class="mz-carttable-freeshipping-row">
+        <td class="mz-carttable-total-wrap" colspan="4">
+            <span id="mz-carttable-freeshipping" class="mleft18 mz-carttable-freeshipping">
+                Congratulations you are qualify for <a href="javascript:void(0)"> Free Freight</a>
+            </span>
+        </td>
+        <td></td>
+      </tr>-->
+      <tr class="mz-carttable-checkout-row">
+        <td colspan="4">
+
+          <div style="margin-left: 2px; margin-bottom: 7px;">
+
+            <img src="/resources/images/credit cards - amex first-one.png" width="95%">
+            </div>
+             <!--
+            <div class="mz-carttable-checkout-couponcode" id="coupon-code-field" >
+                {% include "modules/common/coupon-code-field" %}
+            </div>
+		
+			<div class="mz-l-formfieldgroup-cell" style="text-align: left; padding-left: 18px;">
+                <span syle="margin-left: 18px;">Note: <b>Shipping-related</b> coupons must be entered during checkout.</span>
+            </div>
+			 -->
+          <button id="cart-checkout" class="mz-button mz-button-large proceed-btn {% if model.discountedTotal < 100 %}orderNotAllowed{% endif %}"
+                {% if model.isEmpty or model.isCartFaulty %} style="background-color: #ECECEC;" disabled="disabled" {% endif %} data-mz-action="proceedToCheckout">
+                {{ labels.proceedToCheckout }}
+            </button>
+        </td>
+        <td></td>
+      </tr>
+     
+    </tbody>
+</table>
+<div class="clearfix"></div>
+
+</td>
+</tr>
+</tbody>

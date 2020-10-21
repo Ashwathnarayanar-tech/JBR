@@ -1,0 +1,34 @@
+{% comment %}
+	{% for item in model.orderDetails reversed %}
+		<div>{{item.subscriptionId}}</div>
+	{% endfor %}
+{% endcomment %}
+{% if model.customerId %}
+<div data-mz-subscriptionlist class="mz-l-paginatedlist-list">
+	<ul class="mz-subscriptionlist">
+
+		{% for item in model.orderDetails %}
+	    <li class="mz-subscription-listing" data-subscription="{{item.subscriptionId}}" style="display: none;">
+	    	{% include "modules/my-account/subscription-details-list" with model=item %}
+	    </li>
+	    {% endfor %}
+	        
+	</ul>
+
+	{% if model.orderDetails.length > 5 && model.batch > 1 %}
+		<button class="mz-more-order mz-more-subscription">VIEW MORE SUBSCRIPTIONS</button>
+	{% endif %}
+
+</div>
+{% else %}
+<div class="no-cards">
+    <p class="mz-accountaddressbook-empty">
+        {{ labels.accountNoOrders }}
+    </p>
+</div>
+{% endif %}
+{% comment %}
+{% if model.allLoaded != 2 %}
+    <button class="mz-more-order" data-mz-action-load-more-items data-mz-action="loadMoreItems">VIEW MORE ORDERS</button>
+{% endif %}
+{% endcomment %}

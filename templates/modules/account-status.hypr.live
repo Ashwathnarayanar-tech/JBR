@@ -1,0 +1,89 @@
+<div class="mz-account-status">
+<div class="addr-pop-up"> 
+<div class="pop-acc">
+
+<figure class="fig01"><img width=100px src='../../resources/images/JB_logo2.png' alt='' /> </figure> 
+
+</div>    
+   </div>       
+  {% if model.contacts.length > 1 %}
+<h2>Choose your address</h2>   
+  
+
+ 
+<select value="" class="addr-select">
+ <option value="0">Choose an Address</option>
+ {% for contact in model.contacts %}
+ <option addressId="{{contact.id}}" accountid="{{contact.accountId}}" lastname="{{contact.lastNameOrSurname}}">
+
+<span class="name" style="display:none">
+ {{ contact.firstName}} {{ contactmiddleNameOrInitial }} {{ contact.lastNameOrSurname}}  
+</span>
+<span class="adress01" style="">{{ contact.address.address1}}
+{{ contact.address.address2}}
+{{ contact.address.address3}} 
+{{ contact.address.cityOrTown}}
+{{ contact.address.stateOrProvince}}
+{{ contact.address.countryCode}}-{{ contact.address.postalOrZipCode}}</span> 
+</option>
+{% endfor %}   
+</select><br/>   
+
+<button id="addressproceed" class="proceed">Proceed</button>  
+<p style="color:red; padding: 0 0 0 6.5%; display:none;">An error has occurred looking up the account</p>
+{% endif %}
+    {% if model.contacts.length === 1 %}
+        <h2>Thank you for using our Specialty Site!</h2>
+        <p class="one-ad">This is the address where your order will be shipped:</p>
+        {% for contact in model.contacts %}
+            <div class="one-address" addressId="{{contact.id}}" accountid="{{contact.accountId}}" lastname="{{contact.lastNameOrSurname}}" >
+                <span>{{ contact.firstName}} {{ contactmiddleNameOrInitial }} {{ contact.lastNameOrSurname}}  </span>
+                <span>{{ contact.address.address1}}</span>
+                <span>{{ contact.address.address2}}</span>
+                <span>{{ contact.address.address3}} </span>
+                <span>{{ contact.address.cityOrTown}}</span>
+                <span>{{ contact.address.stateOrProvince}}</span>
+                <span>{{ contact.address.countryCode}}-{{ contact.address.postalOrZipCode}}</span>
+            </div>
+        {% endfor %}
+       
+    {% endif %}
+  {% if model.contacts.length === 0 %}
+<h2 class="jbchoose">No Addresses Found</h2>   
+<div class="parent-support-red">
+ <p class="supportclass">Sorry, but we don’t have a shipping address on file for you.  Please send an email to please send an email to <a href="mailto:CustomerChanges@jellybelly.com?Subject=Specialty%20Address%20Help" target="_top">CustomerChanges@jellybelly.com</a> and we'll do our best to help.</p>
+ </div>
+ {% else %}
+ {% if  model.contacts.length === 1 %}
+ <div class="parent-support-black">
+        <p class="supportclass">If you need to update this address, please do not proceed with your online order.  
+        Send the information (including a copy of your Reseller Certificate) to <a href="mailto:CustomerChanges@jellybelly.com?Subject=Specialty%20Address%20Help" target="_top">
+        CustomerChanges@jellybelly.com</a> so that we can update our records.</p>
+         <button id="oneproceed" class="proceed">Proceed</button>  
+         <p style="color:red; padding: 0 0 0 6.5%; display:none;">An error has occurred looking up the account</p>
+    </div>    
+ {% else %}
+    <div class="parent-support-black">
+ <p class="supportclass">If you don't see the address you need, or if an address needs to be updated or changed please send an email to <a href="mailto:CustomerChanges@jellybelly.com?Subject=Specialty%20Address%20Help" target="_top">CustomerChanges@jellybelly.com</a>  and we'll do our best to help.  Please call Customer Service at 800-323-9380 for other issues.</p>
+ </div>
+  {% endif %}
+  {% endif %}
+
+<div id="loading" style="display:none">
+  <img id="loading-image" src="resources/images/3.gif" alt="Loading..." />
+</div>
+ </div> 
+ 
+
+ 
+   
+
+ 
+
+
+
+
+
+
+
+

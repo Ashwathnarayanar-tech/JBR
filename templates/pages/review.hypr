@@ -1,0 +1,62 @@
+{% extends "page" %}
+
+{% block body-tag-classes %} mz-product {% endblock body-tag-classes %}
+
+{% block body-content %}
+
+<script type="text/javascript">
+
+var queryString = (function(a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i)
+    {
+        var p=a[i].split('=', 2);
+        if (p.length == 1)
+            b[p[0]] = "";
+        else
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+})(window.location.search.substr(1).split('&'));
+
+
+var source = queryString["pr_source"];
+if(queryString["pr_source"] == null || queryString["pr_source"] == ""){
+    source = "web"
+}
+
+
+
+
+var pr_locale="en_US";
+var pr_merchant_group_id="11094"; // Production server : 11094, Testing Server : 15866
+var pr_site_id="1";
+var pr_page_id=queryString["pr_page_id"]; // Product id - SKU value
+var pr_source=source;
+var pr_merchant_user_email="";
+var pr_merchant_user_id="";
+var pr_resize_url = "http://www.jellybelly.com/templates/resize";
+
+</script>
+
+{% preload_json model "product" %}
+
+
+<script type="text/javascript" src="https://pr.jellybelly.com/pwr/engine/js/appLaunch.js"></script>
+
+
+
+
+
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+

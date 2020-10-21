@@ -1,0 +1,95 @@
+<div class="mobile_megamenu"> 
+         
+  <div class="mobile_menu_drop">
+    <div class="mobile-menu"><div class="mobile_bars"><span class="bars"></span></div><div class="menu_text"> Menu</div> </div>
+        </div> 
+       <ul class="mz-sitenav-list" 
+                data-mz-contextify='.mz-sitenav-link[href="{{ navigation.currentNode.url }}"]'
+                data-mz-contextify-attr='class'
+                data-mz-contextify-val='is-current'> 
+                <span class="close">X</span>
+              {% partial_cache %}
+              {% for link in navigation.tree %} 
+              {% comment %}
+              {% if not link.isHidden  and  forloop.counter0 < themeSettings.maxTopLevelNavItems %}
+              {% endcomment %}    
+              {% if not link.isHidden %}
+                <li class="mz-sitenav-item">
+                    <div class="mz-sitenav-item-inner">
+                    <a class="mz-sitenav-link main-link" href="{{link.url}}">{{link.name|safe}}{% if link.items %} <span class="arrow_right"> <span>{% endif %}</a>
+                        {% if link.items %}
+                            <ul class="mz-sitenav-sub">
+                                <div class="mobile-megmenu">
+                                    <div><span class="mainmenu"><span class="arrow_left"></span>menu</span> <span class="close">X</span></div>
+                                    <p>
+                                        {{link.name|safe}}
+                                    </p> 
+                                </div>
+                                {% for sublink in link.items %}
+                                    <li data-mz-role="sitemenu-item" class="mz-sitenav-item">
+                                        <a class="mz-sitenav-link sub-link" href="{{sublink.url}}">{{ sublink.name|safe }}{% if sublink.items  %} <span class="arrow_right"> <span>{% endif %}</a>  
+                                        <!-- uncoment out  this block to get 3rd laver of nav -->
+                                        {% if sublink.items %}
+                                        <ul class="mz-sitenav-sub-sub">
+                                            <div class="sub-sub-menu"> 
+                                                <div class="sub-sub-menu-arrow"><div class="sub-sub-arrow"><span class="arrow_left"></span><span class="sublinkName"> {{link.name|truncatechars(themeSettings.maxTopLevelNavLabelLength)|safe}}</span></div> <span class="close">X</span></div>
+                                                <p>
+                                                    {{sublink.name|safe}}
+                                                </p> 
+                                            </div>
+                                            {% for subsublink in sublink.items %}
+                                                <li class="mz-sitenav-item">
+                                                    <a class="mz-sitenav-link sub-sub-item" href="{{subsublink.url}}">{{ subsublink.name|safe }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                </li>
+                    {% endif %}
+                {% endfor %}
+                {% comment %}  
+                {% if navigation.tree.length > themeSettings.maxTopLevelNavItems %}
+                <li class="mz-sitenav-item mz-sitenav-item-more">
+                    <div class="mz-sitenav-item-inner">
+                        <a class="mz-sitenav-link" href="javascript:;">{{ labels.navMore }}</a>
+                        <ul class="mz-sitenav-sub">
+                            {% for sublink in navigation.tree %}
+                                {% if sublink.index >= themeSettings.maxTopLevelNavItems %}
+                                <li data-mz-role="sitemenu-item" class="mz-sitenav-item">
+                                        <a class="mz-sitenav-link" href="{{sublink.url}}">{{sublink.name|safe}}</a>
+                                      {% if sublink.items %}
+                                      {% endcomment %}
+                                      {%comment%}
+                                      <!-- uncoment out  this block to get 3rd laver of nav -->
+                                               <ul class="mz-sitenav-sub-sub">
+                                                    {% for subsublink in sublink.items %}
+                                                        <li class="mz-sitenav-item">
+                                                            <a class="mz-sitenav-link" href="{{subsublink.url}}">{{subsublink.name|safe}}</a>
+                                                        </li>
+                                                    {% endfor %}
+                                                </ul>
+        
+                                      {%endcomment%}
+                                      {% comment %}
+                                      {% endif %}
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+                {% endif %}
+                {% endcomment %}
+                {% endpartial_cache %}
+                {% require_script "modules/contextify" %}
+            </ul>
+       
+         
+    </div> 
+
+

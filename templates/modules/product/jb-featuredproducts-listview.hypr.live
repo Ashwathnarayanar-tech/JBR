@@ -1,0 +1,27 @@
+
+{% if model.items %}
+    
+        <ul class="jb-featured-products" id="jb-featured-productlist">
+        
+            {% for prod in model.items %}
+            
+                <li class="jb-featured-product" data-mz-product="{{ prod.productCode }}">
+                    
+                    <a href="{{prod.url}}">
+                        <div class="jb-featured-product-img-container">
+                            <img src="{{prod.mainImage.imageUrl}}" style="height:105px;"/> 
+                        </div>
+                        <p class="jb-featured-product-name" >{{prod.content.productName}}</p>
+                        
+                        <p class="jb-featured-product-price" >Price: ${{prod.price.price}}</p>
+                    </a>
+                    
+                </li>
+            {% endfor %}
+        
+        </ul>
+        
+{% endif %}
+
+
+

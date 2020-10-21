@@ -1,0 +1,1010 @@
+{% extends "page" %}
+
+{% block body-tag-classes %}art-gallery {% endblock body-tag-classes %} 
+{% block body-content %}
+
+    <div class="art-gallery-content">
+        <p class="art-gallery-mainhead">Jelly Belly Bean Art Collection</p>
+        <div class="art-galleries">
+              <p class="art-galleries-head active" galleryname="new_art"
+                                        galleryItemURL="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/newArt.jpg">New Art</p>
+		    <p class="art-galleries-head " galleryname="endangered_species" 
+                                        galleryItemURL="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/endangered.jpg">Endangered Species</p>
+            <p class="art-galleries-head" galleryname="famous_people"
+                                        galleryItemURL="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/famousPeople.jpg">Famous People</p>
+            <p class="art-galleries-head" galleryname="american_history"
+                                        galleryItemURL="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/MLK_tribute.jpg">American History</p>
+            <p class="art-galleries-head" galleryname="masterpieces"
+                                        galleryItemURL="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/masterpieces.jpg">Masterpieces</p>
+            <p class="art-galleries-head" galleryname="icons"
+                                        galleryItemURL="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/icons.jpg">Icons</p>
+        </div>
+        <div class="art-gallery-item">
+            <img class="galleryItemURL" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/newArt.jpg" width="100%"/>
+            
+            <div class="art-gallery-details" AGD="1" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Large View - Size/Foxes.png"/>
+                <div  class="banner-detail" >
+                    <h3>Canadian Swift Foxes</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings <br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">These cute critters are native to the Alberta and Saskatchewan area and on Canada’s endangered species list. The portrait was created in Montreal using Pink Grapefruit, Orange, Cantaloupe/Melon, Strawberry Daiquiri and a bevy of other Jelly Belly flavors to capture the Swift Fox’s playful nature.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="2" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Large View - Size/bear.png"/>
+                <div  class="banner-detail" >
+                    <h3>Tribute to the Golden State Grizzly</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">The Grizzly Bear adorns the California State Flag and is the inspiration for University of California Golden Bears. The majestic creature known for its strength and speed is an enduring symbol of the State's earliest days when settlers and bears shared the wilderness.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="3" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Large View - Size/Panda.png"/>
+                <div  class="banner-detail" >
+                    <h3>Giant Panda</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">This cuddly bear is munching on a bamboo stick made of Lime, Green Apple and Watermelon Jelly Belly jelly beans. Our Giant Panda comes to life with Coconut, Cream Soda, Licorice and Plum Jelly Belly beans. The creation of the portrait was broadcast live on the internet from the Jelly Belly Visitor Centre in California to celebrate National Jelly Bean Day 2014 with fans around the world.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="4" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Large View - Size/Macaws.jpg"/>
+                <div  class="banner-detail" >
+                    <h3>Great Green Macaw: 2013</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">These beautiful birds have a wingspan of up to 50 inches and live in deep canyons and plateaus in Central America. The bright green feathers are brought to life with an array of Green Apple, Lime and Juicy Pear jelly beans.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            
+            <div class="art-gallery-details" AGD="5" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Large View - Size/Penguin.jpg"/>
+                <div  class="banner-detail" >
+                    <h3>Rockhopper Penguin: 2013</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">Found among the craggy shorelines of Antarctica, Chile and New Zealand these penguins are only 20 inches tall, the world’s smallest penguins. Their distinctive yellow plumes over their brow and head are made with Lemon, Buttered Popcorn and Top Banana Jelly Belly jelly beans.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="6" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Large View - Size/turtle.png"/>
+                <div  class="banner-detail" >
+                    <h3>Hawksbill Sea Turtle: 2013</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">A dazzling tribute to the majestic Hawksbill Sea Turtle. Found in tropical waters of the Atlantic, Pacific and Indian Oceans, this depiction finds the critically endangered turtle in a sea of Blueberry Jelly Belly beans.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="64" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/darth_vader.png"/>
+                <div  class="banner-detail" >
+                    <h3>Darth Vader</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cummings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">
+                    The sweet portrait of Darth Vader is made from more than 12,000 Jelly Belly jelly beans in 30 different flavors, including Jewel Blueberry, Sizzling Cinnamon and Bubble Gum (yes, Bubble Gum). Now in the private collection of Jelly Belly Art, this popular piece has been showcased at events around the United States. 
+                    </p>
+                    
+                    <div class="art-gallery-details" AGD="7" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/beatles.png"/>
+                <div  class="banner-detail" >
+                    <h3>The Beatles - Let it Bean</h3>
+                    <p  class="banner-dimension">
+                        Artist: Malcolm West<br>
+                        Dimensions: 6' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">It took six weeks and more than 15,000 Jelly Belly jelly beans (including 51 different flavors) to create this gorgeous portrait of the music icons.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div></p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="7" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/beatles.png"/>
+                <div  class="banner-detail" >
+                    <h3>The Beatles - Let it Bean</h3>
+                    <p  class="banner-dimension">
+                        Artist: Malcolm West<br>
+                        Dimensions: 6' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">It took six weeks and more than 15,000 Jelly Belly jelly beans (including 51 different flavors) to create this gorgeous portrait of the music icons.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="8" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/crown.png"/>
+                <div  class="banner-detail" >
+                    <h3>The Crown Jewels</h3>
+                    <p  class="banner-dimension">
+                        Artist: Malcolm West<br>
+                        Dimensions: 1' wide, sits on a 1.5' cushion
+                    </p>
+                    <p  class="banner-detail-desc">A sweet reproduction of the St. Edward's Crown is a scrumptious look-a-like of the crown that was used for HM Queen Elizabeth II coronation in 1953. The 3D Jelly Belly sculpture was commissioned for the Queen's Diamond Jubilee of 2012.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="9" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/GirlWithAPearlEarring.png"/>
+                <div  class="banner-detail" >
+                    <h3>Girl with a Pearl Earring</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">Known as "The Mona Lisa of the North," Jelly Belly commissioned a recreation of Johannes Vermeer's masterwork, Girl with a Pearl Earring, made completely from Jelly Belly jelly beans. The artwork's focal point, a dangling pearl earring, was created using three different flavors of Jelly Belly beans to achieve the same effect as Vermeer's work.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="10" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/gothic.jpg"/>
+                <div  class="banner-detail" >
+                    <h3>American Gothic</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4.5' x 5.5'
+                    </p>
+                    <p  class="banner-detail-desc">A sweet take on farm families and life in the American Midwest, the Jelly Belly reproduction of Grant Wood's American Gothic* is a fitting tribute for a candy family whose roots began in Belleville, Illinois. The direct descendents of Gustav Goelitz who started making candy in 1869 are now leading the Jelly Belly Candy Company.</p>
+                    <p style=" font-size: 9px;">
+                        *Derived from American Gothic, 1930 by Grant Wood.<br>
+                        All rights reserved Wood Graham <br>
+                        Beneficiaries/Licensed by <a href="http://www.vagarights.com/">VAGA, New York, NY.</a>
+                    </p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            
+            <div class="art-gallery-details" AGD="11" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/harrypotter.png"/>
+                <div  class="banner-detail" >
+                    <h3>Harry Potter</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait of Harry Potter used 11,000 Jelly Belly beans in honor of Bertie Bott's Every Flavour Beans® Made by Jelly Belly. This fictional confection now brought to the Muggle-world includes original flavors such as Earwax, Booger and Dirt. The piece can be viewed at Jelly Belly Visitor Center in Fairfield, California.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="12" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/MonaLisa.png"/>
+                <div  class="banner-detail" >
+                    <h3>Mona Lisa</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 6'
+                    </p>
+                    <p  class="banner-detail-desc">Made completely from Jelly Belly jelly beans, artist Kristen Cumings recreated Leonardo Da Vinci's masterpiece with a sweet twist. The Jelly Belly Mona Lisa is reflective of what art historians believe the original colors may have looked like before almost 600 years of wear and tear.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="61" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/santa.jpg"/>
+                <div  class="banner-detail" >
+                    <h3>Santa Claus</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Year: 2014<br>
+                        Dimensions: 5’ x 4’
+                    </p>
+                    <p  class="banner-detail-desc">This sweet Santa Claus portrait is made with more than 10,000
+                        Jelly Belly® jelly beans each lovingly placed by hand. Santa has a Blueberry
+                        twinkle in his eye and jolly red velvet suit made of Very Cherry, Red Apple and
+                        even Strawberry Jam Jelly Belly beans! The big man joins the private collection
+                        of Jelly Belly Art, a colorful and larger-than life collection of art pieces
+                        made completely out of Jelly Belly jelly beans.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="13" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/RosieTheRiveter.png"/>
+                <div  class="banner-detail" >
+                    <h3>We Can Do It!</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">In celebration of the American spirit and the vital role women played in World War II, Jelly Belly recreated a wartime poster that has become an icon for the work of American women who streamed into factories to build the war machines.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="14" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/StarryNight.png"/>
+                <div  class="banner-detail" >
+                    <h3>The Starry Night</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">In celebration of Vincent van Gogh's masterwork, The Starry Night, Jelly Belly commissioned artist Kristen Cumings to recreate the famous image completely in Jelly Belly jelly beans. Because Van Gogh's brush strokes went in a circular, swirling pattern, Cumings had to place each individual bean in the same direction as the brushstroke to mimic the effect and recreate it on a larger scale.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="15" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/TheGreatWave.png"/>
+                <div  class="banner-detail" >
+                    <h3>The Great Wave Off <br> Kanagawa</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 6'
+                    </p>
+                    <p  class="banner-detail-desc">Katsushika Hokusai's The Great Wave Off Kanagawa is comprised of a wide range of Jelly Belly bean flavors used to capture the intense blue of the waves and the white of the foam caps. The artist went to great lengths to recreate the intricate details of the original wood block print, even using just three beans to depict the fishermen kneeling on the boats caught in the waves.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="16" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/WillAndKate.png"/>
+                <div  class="banner-detail" >
+                    <h3>The Marriage of HRH Prince William and Kate Middleton</h3>
+                    <p  class="banner-dimension">
+                        Artist: Malcolm West<br>
+                        Dimensions: 4.5' x 3.7'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait was created in honor of the marriage of HRH Prince William of Wales and Kate Middleton. The image joins previous portraits of Prince William's grandmother, Queen Elizabeth II, and his mother, Diana, Princess of Wales.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="17" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/WomanWithMango.png"/>
+                <div  class="banner-detail" >
+                    <h3>Woman with a Mango</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">While working in the blues and purples to recreate the woman's dress in Jelly Belly beans, artist Kristen Cumings became enamored with the range of blues and the flavor Island Punch. A fitting flavor for a tribute to the islands and the people of Tahiti.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="18" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Large View Size/YoungBlondeGirl.png"/>
+                <div  class="banner-detail" >
+                    <h3>Young Blonde Girl</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">The bright candy colors of the original painting expanded artist Kristen Cumings color palette of Jelly Belly beans into a brilliant new range, a fitting tribute to both the colorful confections and Impressionism of Renoir's original. This piece in the Masterpieces of Jelly Bean Art collection from Jelly Belly is a happy slice of real life that speaks to us today.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="19" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/amelia.png"/>
+                <div  class="banner-detail" >
+                    <h3>Amelia Earhart</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">The image of the legendary pilot consists mainly of Berry Blue, Cotton Candy, Buttered Popcorn, Lemon, Very Cherry and Coconut flavored jelly beans.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="20" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/beatles.png"/>
+                <div  class="banner-detail" >
+                    <h3>The Beatles - Let it Bean</h3>
+                    <p  class="banner-dimension">
+                        Artist: Malcolm West<br>
+                        Dimensions: 6' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">It took six weeks and more than 15,000 Jelly Belly jelly beans (including 51 different flavors) to create this gorgeous portrait of the music icons.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="21" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/Diana.png"/>
+                <div  class="banner-detail" >
+                    <h3>Diana, Princess of Wales</h3>
+                    <p  class="banner-dimension">
+                        Artist: Roger Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">Consisting of 9,770 beans, this piece was commissioned upon the Princess's visit to the White House in 1985.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="22" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/elvis.png"/>
+                <div  class="banner-detail" >
+                    <h3>Elvis Presley</h3>
+                    <p  class="banner-dimension">
+                        Artist: Roger Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">The King of Rock and Roll's trademark hair was brought to life with a combination of Licorice, Blueberry, Very Cherry, Berry blue and Raspberry flavors.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="23" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/Elvis2.png"/>
+                <div  class="banner-detail" >
+                    <h3>Elvis Presley 2</h3>
+                    <p  class="banner-dimension">
+                        Artist: Roger Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">In this portrait, 10 different flavors were used in the King's hair alone!</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="24" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/Elvis3.png"/>
+                <div  class="banner-detail" >
+                    <h3>Elvis Presley 3</h3>
+                    <p  class="banner-dimension">
+                        Artist: Roger Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait features a young Elvis in 1956, his breakout year.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="25" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/GeorgeClooney.png"/>
+                <div  class="banner-detail" >
+                    <h3>George Clooney</h3>
+                    <p  class="banner-dimension">
+                        Artist: Roger Rocha<br>
+                        Dimensions: 3' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">Roger Rocha unveiled this image of the Oscar-winning actor/producer/director in February, 2008. He used over 10 different Jelly Belly jelly bean flavors.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="26" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/HermRowland.png"/>
+                <div  class="banner-detail" >
+                    <h3>Portrait of Herm Rowland</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 6'
+                    </p>
+                    <p  class="banner-detail-desc">The portrait of Herm Rowland, Sr. was commissioned to honor the Chairman of Bean's 50 years of candy making. The portrait uses all 50 official flavors.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="27" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/indian.png"/>
+                <div  class="banner-detail" >
+                    <h3>Chief Rainbow Tree</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">This image of a former Great Plains tribal chief consists of 9,514 beans of over 15 different colors.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="28" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/jamesdean.png"/>
+                <div  class="banner-detail" >
+                    <h3>James Dean</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">The legendary actor's portrait was inspired by his 1956 film Giant.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="29" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/larryking.png"/>
+                <div  class="banner-detail" >
+                    <h3>Larry King</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait was completed when King was primarily known as a radio talk-show host.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="30" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/laurelandhardy.png"/>
+                <div  class="banner-detail" >
+                   <h3>Laurel & Hardy</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">This image of the iconic duo consists primarily of Buttered Popcorn, Bubble Gum, Licorice and Very Cherry flavors.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="31" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/Marilyn.png"/>
+                <div  class="banner-detail" >
+                    <h3>Marilyn Monroe</h3>
+                    <p  class="banner-dimension">
+                        Artist: Roger Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">Unveiled on January 10th, 2008, this portrait of the iconic Hollywood bombshell was created by Roger Rocha. It contains over 8,000 beans.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="32" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/Marilyn2.png"/>
+                <div  class="banner-detail" >
+                    <h3>Marilyn Monroe 2</h3>
+                    <p  class="banner-dimension">
+                        Artist: Malcolm West<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">The blond bombshell of the 1950s starred in a hit movie The Seven Year Itch in a white dress and became one of the world's best known celebrities.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="33" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/QueenElizabeth50th.png"/>
+                <div  class="banner-detail" >
+                    <h3>Her Majesty Queen Elizabeth II</h3>
+                    <p  class="banner-dimension">
+                        Artist: Roger Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait was commissioned for the 50th anniversary of the queen's reign.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="34" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/thatcher.png"/>
+                <div  class="banner-detail" >
+                    <h3>Margaret Thatcher</h3>
+                    <p  class="banner-dimension">
+                        Artist: Roger Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">The former Prime Minister of Britain, Margaret Thatcher's portrait consists of over 9,900 beans.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="35" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Large View - Size/WillAndKate.png"/>
+                <div  class="banner-detail" >
+                    <h3>The Marriage of HRH Prince William and Kate Middleton</h3>
+                    <p  class="banner-dimension">
+                        Artist: Malcolm West<br>
+                        Dimensions: 4.5' x 3.7'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait was created in honor of the marriage of HRH Prince William of Wales and Kate Middleton. The image joins previous portraits of Prince William's grandmother, Queen Elizabeth II, and his mother, Diana, Princess of Wales.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="36" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Large View - Size/bushSr.png"/>
+                <div  class="banner-detail" >
+                    <h3>George H.W. Bush</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 6'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait of the then-vice president was commissioned shortly after the 1984 presidential election.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="37" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Large View - Size/flagandfife.png"/>
+                <div  class="banner-detail" >
+                    <h3>'Spirit of 1776' Fife Player</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">This slice of colonial Americana consists of just over 10,000 beans and more than 20 flavors.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="38" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Large View - Size/franklin.png"/>
+                <div  class="banner-detail" >
+                    <h3>Benjamin Franklin</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">The primarily Blueberry background of this work has Very Cherry and Kiwi flavors scattered in it to create a more vibrant, shiny appearance.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="39" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Large View - Size/JimmyDoolittle.png"/>
+                <div  class="banner-detail" >
+                    <h3>General Jimmy Doolittle</h3>
+                    <p  class="banner-dimension">
+                        Artist: Roger Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">A portrait of the famed WWII hero, commissioned for the Jimmy Doolittle Air and Space Museum in Fairfield, California.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="40" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Large View - Size/king.png"/>
+                <div  class="banner-detail" >
+                    <h3>Martin Luther King, Jr.</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">To honor the life and accomplishments of the late civil rights leader, Martin Luther King, Jr., this mosaic was commissioned by the company at the suggestion of the company's employees.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="41" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Large View - Size/lincolnStatue.png"/>
+                <div  class="banner-detail" >
+                    <h3>Abraham Lincoln</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait of the 16th US president, inspired by the Lincoln Memorial, was unveiled in the Illinois Governor's Office.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="42" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Large View - Size/NancyAndRon.png"/>
+                <div  class="banner-detail" >
+                    <h3>President & Mrs. Reagan</h3>
+                    <p  class="banner-dimension">
+                        Artist: Roger Rocha<br>
+                        Dimensions: 4' x 6'
+                    </p>
+                    <p  class="banner-detail-desc">Based on the iconic photo of President Reagan and the First Lade from the 1984 election season, this is the only Jelly Belly Art piece in our collection that includes them both. It was displayed at the Ronald Reagan Presidential Library in November 2010 and now resides at the Jelly Belly Visitor Center in California.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="43" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Large View - Size/reagan.png"/>
+                <div  class="banner-detail" >
+                    <h3>Ronald Reagan</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait resides at the Reagan Library in Simi Valley, California.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="44" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Large View - Size/ReaganCowboy.png"/>
+                <div  class="banner-detail" >
+                    <h3>Reagan Country</h3>
+                    <p  class="banner-dimension">
+                        Artist: Roger Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">One of the most popular pieces of Jelly Belly Art, this portrait of President Ronald Reagan was inspired by his love for horseback riding at his California ranch.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="45" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Large View - Size/RosieTheRiveter.png"/>
+                <div  class="banner-detail" >
+                    <h3>We Can Do It!</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">In celebration of the American spirit and the vital role women played in World War II, Jelly Belly recreated a wartime poster that has become an icon for the work of American women who streamed into factories to build the war machines.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="46" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Large View - Size/washington.png"/>
+                <div  class="banner-detail" >
+                    <h3>George Washington</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait of the first US president was unveiled in the Virginia Governor's Office and shown at the Seattle Art Museum.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="47" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/Large View - Size/GirlWithAPearlEarring.png"/>
+                <div  class="banner-detail" >
+                    <h3>Girl with a Pearl Earring</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">Known as "The Mona Lisa of the North," Jelly Belly commissioned a recreation of Johannes Vermeer's masterwork, Girl with a Pearl Earring, made completely from Jelly Belly jelly beans. The artwork's focal point, a dangling pearl earring, was created using three different flavors of Jelly Belly beans to achieve the same effect as Vermeer's work.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="48" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/Large View - Size/gothic.jpg"/>
+                <div  class="banner-detail" >
+                    <h3>American Gothic</h3>
+					 <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4.5' x 5.5'
+                    </p>
+                    <p  class="banner-detail-desc">A sweet take on farm families and life in the American Midwest, the Jelly Belly reproduction of Grant Wood's American Gothic* is a fitting tribute for a candy family whose roots began in Belleville, Illinois. The direct descendents of Gustav Goelitz who started making candy in 1869 are now leading the Jelly Belly Candy Company.</p>
+                    <p style=" font-size: 9px;">
+                        *Derived from American Gothic, 1930 by Grant Wood.<br>
+                        All rights reserved Wood Graham <br>
+                        Beneficiaries/Licensed by <a href="http://www.vagarights.com/">VAGA, New York, NY.</a>
+                    </p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="49" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/Large View - Size/StarryNight.png"/>
+                <div  class="banner-detail" >
+                    <h3>The Starry Night</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 6'
+                    </p>
+                    <p  class="banner-detail-desc">In celebration of Vincent van Gogh's masterwork, The Starry Night, Jelly Belly commissioned artist Kristen Cumings to recreate the famous image completely in Jelly Belly jelly beans. Because Van Gogh's brush strokes went in a circular, swirling pattern, Cumings had to place each individual bean in the same direction as the brushstroke to mimic the effect and recreate it on a larger scale.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="50" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/Large View - Size/TheGreatWave.png"/>
+                <div  class="banner-detail" >
+                    <h3>The Great Wave Off Kanagawa</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 6'
+                    </p>
+                    <p  class="banner-detail-desc">Katsushika Hokusai's The Great Wave Off Kanagawa is comprised of a wide range of Jelly Belly bean flavors used to capture the intense blue of the waves and the white of the foam caps. The artist went to great lengths to recreate the intricate details of the original wood block print, even using just three beans to depict the fishermen kneeling on the boats caught in the waves.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="51" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/Large View - Size/WomanWithMango.png"/>
+                <div  class="banner-detail" >
+                    <h3>Woman with a Mango</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">While working in the blues and purples to recreate the woman's dress in Jelly Belly beans, artist Kristen Cumings became enamored with the range of blues and the flavor Island Punch. A fitting flavor for a tribute to the islands and the people of Tahiti.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="52" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/Large View - Size/YoungBlondeGirl.png"/>
+                <div  class="banner-detail" >
+                    <h3>Young Blonde Girl</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">The bright candy colors of the original painting expanded artist Kristen Cumings color palette of Jelly Belly beans into a brilliant new range, a fitting tribute to both the colorful confections and Impressionism of Renoir's original. This piece in the Masterpieces of Jelly Bean Art collection from Jelly Belly is a happy slice of real life that speaks to us today.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="art-gallery-details" AGD="53" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Large View - Size/buffaloNickel.png"/>
+                <div  class="banner-detail" >
+                    <h3>Buffalo Nickel</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">With over 9,500 beans in this place, the 'silver' effect was created by large amounts of A&W® Cream Soda, Coconut and Berry Blue flavors.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="54" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Large View - Size/crown.png"/>
+                <div  class="banner-detail" >
+                    <h3>The Crown Jewels</h3>
+                    <p  class="banner-dimension">
+                        Artist: Malcolm West<br>
+                        Dimensions: 1' wide, sits on a 1.5' cushion
+                    </p>
+                    <p  class="banner-detail-desc">A sweet reproduction of the St. Edward's Crown is a scrumptious look-a-like of the crown that was used for HM Queen Elizabeth II coronation in 1953. The 3D Jelly Belly sculpture was commissioned for the Queen's Diamond Jubilee of 2012.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="55" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Large View - Size/Dragon.png"/>
+                <div  class="banner-detail" >
+                    <h3>Lunar New Year Dragon</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 6'
+                    </p>
+                    <p  class="banner-detail-desc">Made to celebrate the Lunar New Year, this portrait shows a dragon, the sign of good luck for the new year.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="56" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Large View - Size/eagle.png"/>
+                <div  class="banner-detail" >
+                    <h3>American Bald Eagle</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">The white in the bald eagle's head consists mainly of Coconut flavored beans, shaded with A&W® Cream Soda and Berry Blue.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="57" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Large View - Size/harrypotter.png"/>
+                <div  class="banner-detail" >
+                    <h3>Harry Potter</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait of Harry Potter used 11,000 Jelly Belly beans in honor of Bertie Bott's Every Flavour Beans® Made by Jelly Belly. This fictional confection now brought to the Muggle-world includes original flavors such as Earwax, Booger and Dirt. The piece can be viewed at Jelly Belly Visitor Center in Fairfield, California.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="58" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Large View - Size/liberty.png"/>
+                <div  class="banner-detail" >
+                    <h3>Statue of Liberty</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 6'
+                    </p>
+                    <p  class="banner-detail-desc">The primary flavors used to create the Statue were Green Apple, Lemon Lime, Berry Blue, Lemon and Buttered Popcorn.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="59" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Large View - Size/Liberty2.png"/>
+                <div  class="banner-detail" >
+                    <h3>Statue of Liberty 2</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 4'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait, made of almost 14,000 beans, is featured in the American Crafts Museum national tour.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <div class="art-gallery-details" AGD="60" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Large View - Size/minnie.png"/>
+                <div  class="banner-detail" >
+                    <h3>Minnie Mouse</h3>
+                    <p  class="banner-dimension">
+                        Artist: Peter Rocha<br>
+                        Dimensions: 4' x 6'
+                    </p>
+                    <p  class="banner-detail-desc">This portrait was commissioned for Walt Disney World ® and was hung in the candy shop, appropriately in the Jelly Belly section.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+			
+			 <div class="art-gallery-details" AGD="62" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Large View - Size/tiger.jpg"/>
+                <div  class="banner-detail" >
+                    <h3>Bengal Tiger</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">This big cat stares regally over its shoulder with its rich honey-colored eyes in this larger-than-life portrait. There are now fewer than 3,000 of these majestic beasts in the wild and have been classified endangered since 2010. The incredible portrait is brought to life by more than 10,000 Jelly Belly jelly beans lovingly placed by hand. </p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+
+			 <div class="art-gallery-details" AGD="63" style="display:none;">
+                <img class="banner" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Large View - Size/orangutan.png"/>
+                <div  class="banner-detail" >
+                    <h3>Orangutan</h3>
+                    <p  class="banner-dimension">
+                        Artist: Kristen Cumings<br>
+                        Dimensions: 4' x 5'
+                    </p>
+                    <p  class="banner-detail-desc">Orangutans are found in the wild only Sumatra and Borneo. With an arm span of 7 feet from fingertip to fingertip, these primates are ideal for life in the canopy. Highly intelligent and a close relative to humans, the Jelly Belly Orangutan looks out at viewers with eyes made of Red Apple, Berry Smoothie, Plum and Licorice Jelly Belly® jelly beans.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+        <div class="art-gallery-item-thumb">
+            <div class="art-gallery-item-thumbs endangered_species"  style="display:none;">
+			    <img class="thump" AGD="62" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Thumb Nails - Size/Tiger.png" />
+			    <img class="thump" AGD="63" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Thumb Nails - Size/Orangutan.png" />
+                <img class="thump" AGD="1" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Thumb Nails - Size/Foxes.png" />
+                <img class="thump" AGD="2" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Thumb Nails - Size/bear.png" />
+                <img class="thump" AGD="3" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Thumb Nails - Size/Panda.png" />
+                <img class="thump" AGD="4" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Thumb Nails - Size/thumb_Macaws.png" />
+                <img class="thump" AGD="5" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Thumb Nails - Size/thumb_Penguin.jpg" />
+                <img class="thump" AGD="6" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Endangered Species/Thumb Nails - Size/thumb_turtle.png" />
+            </div>
+            <div class="art-gallery-item-thumbs new_art" style="display:block;">
+			    <img class="thump" AGD="64" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/vader_thumb.jpg" />
+                <img class="thump" AGD="61" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/santa_thumb.jpg" />
+                <img class="thump" AGD="7" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/beatles.png" />
+                <img class="thump" AGD="8" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/crown.png" />
+                <img class="thump" AGD="9" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/GirlWithAPearlEarring.png" />
+                <img class="thump" AGD="10" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/gothic.png" />
+                <img class="thump" AGD="11" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/harrypotter.png" />               
+                <img class="thump" AGD="13" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/RosieTheRiveter.png" />
+                <img class="thump" AGD="14" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/StarryNight.png" />
+                <img class="thump" AGD="15" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/TheGreatWave.png" />
+                <img class="thump" AGD="16" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/WillAndKate.png" />
+                <img class="thump" AGD="17" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/WomanWithMango.png" />
+                <img class="thump" AGD="18" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/YoungBlondeGirl.png" />
+            </div>
+            <div class="art-gallery-item-thumbs famous_people"  style="display:none;">
+                <img class="thump" AGD="19" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/amelia.png" />
+                <img class="thump" AGD="20" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/beatles.png" />
+                <img class="thump" AGD="21" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/Diana.png" />
+                <img class="thump" AGD="22" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/elvis.png" />
+                <img class="thump" AGD="23" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/Elvis2.png" />
+                <img class="thump" AGD="24" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/Elvis3.png" />
+                <img class="thump" AGD="25" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/GeorgeClooney.png" />
+                <img class="thump" AGD="26" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/HermRowland.png" />
+                <img class="thump" AGD="27" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/indian.png" />
+                <img class="thump" AGD="28" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/jamesdean.png" />
+                <img class="thump" AGD="29" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/larryking.png" />
+                <img class="thump" AGD="30" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/laurelandhardy.png" />
+                <img class="thump" AGD="31" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/Marilyn.png" />
+                <img class="thump" AGD="32" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/Marilyn2.png" />
+                <img class="thump" AGD="33" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/QueenElizabeth50th.png" />
+                <img class="thump" AGD="34" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/thatcher.png" />
+                <img class="thump" AGD="35" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Famous People/Thumb Nail - Size/WillAndKate.png" />
+            </div>
+            <div class="art-gallery-item-thumbs american_history"  style="display:none;">
+                <img class="thump" AGD="36" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Thumb Nail - Size/bushSr.png" />
+                <img class="thump" AGD="37" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Thumb Nail - Size/flagandfife.png" />
+                <img class="thump" AGD="38" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Thumb Nail - Size/franklin.png" />
+                <img class="thump" AGD="39" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Thumb Nail - Size/JimmyDoolittle.png" />
+                <img class="thump" AGD="40" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Thumb Nail - Size/king.png" />
+                <img class="thump" AGD="41" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Thumb Nail - Size/lincolnStatue.png" />
+                <img class="thump" AGD="42" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Thumb Nail - Size/NancyAndRon.png" />
+                <img class="thump" AGD="43" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Thumb Nail - Size/reagan.png" />
+                <img class="thump" AGD="44" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Thumb Nail - Size/ReaganCowboy.png" />
+                <img class="thump" AGD="45" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Thumb Nail - Size/RosieTheRiveter.png" />
+                <img class="thump" AGD="46" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - American History/Thumb Nail - Size/washington.png" />
+            </div>
+            <div class="art-gallery-item-thumbs masterpieces"  style="display:none;">
+			    <img class="thump" AGD="12" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/MonaLisa.png" />
+                <img class="thump" AGD="47" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/Thumb Nail -Size/GirlWithAPearlEarring.png" />
+                <img class="thump" AGD="48" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/Thumb Nail -Size/gothic.png" />
+                <img class="thump" AGD="49" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/Thumb Nail -Size/StarryNight.png" />
+                <img class="thump" AGD="50" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/Thumb Nail -Size/TheGreatWave.png" />
+                <img class="thump" AGD="51" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/Thumb Nail -Size/WomanWithMango.png" />
+                <img class="thump" AGD="52" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation menu - Master Pieces/Thumb Nail -Size/YoungBlondeGirl.png" />
+            </div>
+            <div class="art-gallery-item-thumbs icons"  style="display:none;">
+			    <img class="thump" AGD="61" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - New Art/Thumb Nail - Size/santa_thumb.jpg" />
+                <img class="thump" AGD="53" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Thumb Nail - Size/buffaloNickel.png" />
+                <img class="thump" AGD="54" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Thumb Nail - Size/crown.png" />
+                <img class="thump" AGD="55" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Thumb Nail - Size/Dragon.png" />
+                <img class="thump" AGD="56" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Thumb Nail - Size/eagle.png" />
+                <img class="thump" AGD="57" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Thumb Nail - Size/harrypotter.png" />
+                <img class="thump" AGD="58" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Thumb Nail - Size/liberty.png" />
+                <img class="thump" AGD="59" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Thumb Nail - Size/Liberty2.png" />
+                <img class="thump" AGD="60" src="/resources/images/Entertainments/Jelly Belly Bean Art Gallery/Navigation Menu - Icons/Thumb Nail - Size/minnie.png" />
+            </div>
+        </div>
+    </div>
+
+
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+
+

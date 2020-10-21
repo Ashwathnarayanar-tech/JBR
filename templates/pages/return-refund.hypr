@@ -1,0 +1,131 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Returns &amp; Cancellations</h1>
+
+  <article>
+    <h2 class="noPad">Return Policy</h2>
+    <p class="noPad">
+      <em class="finePrint">The following applies to orders placed through our website, www.jellybelly.com, and our Jelly Belly Order Desk Hotline.</em>
+    </p>
+
+    <p>
+      Due to the perishable nature of food items, please contact us within three business days after receiving your order to obtain a Return Merchandise Authorization (RMA) number and instructions for returning your unopened item(s). The delivery date will be determined by the shipper's records.
+    </p>
+    <p>
+      All items sold in the <a rel="nofollow" target="_blank" href="http://www.jellybelly.com/Shop/ShopMain.aspx?CategoryID=Outlet">Jelly Belly Outlet section</a> are final. For wrong items shipped or damaged in transit we will offer a replacement or refund. Otherwise, there are no returns, refunds or exchanges on any items purchased from the Outlet/Clearance section. Belly Flops and Hodgepodge are randomly mixed. Specific colors/flavors cannot be chosen.
+    </p>
+    <p>
+      Contacting us for returns more than three business days after the order is delivered will cause the order to incur a 15% restocking fee. If we are not notified prior to the return of the items, the 15% restocking fee is automatically assessed. Please contact us first! In some cases, the customer may be directed to return product to Jelly Belly for repair or replacement. If a return product is found to be non-defective, it will be returned to the customer freight collect.
+    </p>
+    <p class="listHeading">
+      <strong>Send returns to:</strong>
+    </p>
+    <ul class="contentList">
+      <li>Jelly Belly Center</li>
+      <li>10100 Jelly Belly Lane</li>
+      <li>Pleasant Prairie, WI, 53158</li>
+    </ul>
+    <p>
+      Shipping charges will be refunded only in the event that wrong item is shipped or if the item sent is defective. In the case of Free Standard Shipping, the shipping charge for the returned order is assessed as though the order had shipped via Standard Shipping.
+    </p>
+  </article>
+
+  <hr>
+
+  <article>
+    <h2 class="noPad">Cancelling an Order</h2>
+    <p>You may cancel your order for any item sold by JellyBelly.com, provided that the order has not yet entered the shipping process.</p>
+    <p>
+      Log into your account by clicking on "My Account”, which is located in the upper right corner of any web page at JellyBelly.com. Click "Order History” and find your order from the
+      list that appears. Click on the expand menu feature on the order line. If the order is marked as "shipped” (a tracking number will be provided), it cannot be cancelled. 
+    </p>
+    <p>
+      If the order has not been shipped and you wish to cancel it, please call 1-888-TO-BUY-JB (1-888-862-8952) between 7 AM and 5 PM Pacific Time, Monday through Friday excluding major holidays, 
+      and we may be able to cancel the order.
+    </p>
+    <p>
+      If your order contains multiple products and you wish to cancel one or some of the products, the entire order must be cancelled. You must then re-order the items you wish to receive.
+    </p>
+    <p>
+      Also, if you wish to add products to an order that has already been placed, you must cancel the entire order and re-order, or order the new products separately.
+    </p>
+    <p>
+      If the item you want to cancel has entered the shipping process, it cannot be cancelled by you or by our Customer Service Department. You can, however, return the item for a refund, 
+     excluding shipping cost. See "Return Policy” above for more details. 
+    </p>
+  </article>
+
+  <hr>
+
+  <article>
+    <h2 class="noPad">Jelly Belly Beanwear Apparel Return Policy</h2>
+    <p>
+      These policies apply to Beanwear apparel and other non-edible logo products purchased through JellyBelly.com and the Order Desk Hotline only. Unworn, unwashed, or defective merchandise is eligible for return within 90 days from date of purchase:
+    </p>
+    <p>
+      - If within 30 days from the date of purchase, a full refund for the price paid, less shipping, will be issued on the original form of payment
+    </p>
+    <p>
+      - If past 30 days from the date of purchase, a full refund for the price paid, less shipping, will be issued in the form of a merchandise exchange.
+    </p>
+    <p class="listHeading">
+      <strong>To return Beanwear apparel:</strong>
+    </p>
+    <ol class="return-contentList">
+      <li>
+        If the item is eligible for return, obtain a Return Merchandise Authorization (RMA) number from us by calling 1-888-862-8952 from Monday &ndash; Friday, 7 AM to 5 PM PT. 
+        We require an RMA number for all returns.
+      </li>
+      <li>
+        Include, in your package, a copy of your packing list or order invoice. Failure to do so could delay the processing of your refund or exchange. 
+        Indicate which item(s) you are returning or exchanging and the reason why the item(s) is/are being returned.
+      </li>
+      <li>
+        For refunds, we will issue the refund on the original form of payment, minus shipping charges. For exchanges due to sizing (of unwashed and unworn product), indicate the size you would like. 
+        We will pay the costs for Standard shipping of the exchange order.
+      </li>
+      <li>
+        For merchandise exchanges, we will send the product to the shipping address on the original order, unless otherwise directed. If you need to change the shipping address, please note this with your return.
+      </li>
+      <li>
+        Pack and seal your return securely and write your RMA number noticeably on the outside of the box. Use the original packaging material if possible. Packages must be returned shipping prepaid. 
+        We recommend using a delivery service which provides tracking.
+      </li>
+    </ol>
+    <p>
+     </p><p class="listHeading">
+       <strong>Send returns to:</strong>
+     </p>
+      <ul class="contentList">
+        <li>Jelly Belly Center</li>
+        <li>10100 Jelly Belly Lane</li>
+        <li>Pleasant Prairie, WI, 53158</li>
+      </ul>
+    <p></p>
+    <p>
+      We will refund shipping charges only if we've sent the wrong item, or if the item sent is defective. In the case of Free Standard Shipping, 
+      the shipping charge for the order will be assessed as though the order had shipped via Standard Shipping. 
+    </p>
+  </article>
+</section>
+{% endblock body-content %}
+
+
+

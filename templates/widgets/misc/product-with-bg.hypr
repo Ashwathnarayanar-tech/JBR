@@ -1,0 +1,6 @@
+
+    
+{% preload_json Model.config "product-with-bg" %}
+
+{% include_products "modules/product/product-with-bg" with  productCodes=Model.config.products as_parameter %}
+

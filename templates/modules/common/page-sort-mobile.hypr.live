@@ -1,0 +1,66 @@
+
+<div  class="jb-mobile-sort">
+    <div  class="jb-mobile-sort-cancel">
+        <p data-mz-action="hideSortPopup" class="jb-mobile-sort-cancel-label">CANCEL</p>
+        <span data-mz-action="hideSortPopup" class="jb-mobile-sort-icon"></span>
+    </div>
+    
+    <p class="jb-mobile-sort-sort-label">{{ labels.sortby }}</p>
+    <ul>
+        {% comment %}
+        {% for sort in model.sorts %}
+            <li data-mz-action="updateSortBy" class="{% if model.currentSort == sort.value  %}selected{% endif %}" 
+                {% if sort.value %}value="{{ sort.value }}"{% else %} value="" {% endif %}>
+                {{ sort.text }}
+                {% if model.currentSort == sort.value %}
+                    <span class="jb-selection-tick"></span>
+                {% endif %}
+            </li>
+        {% endfor %}
+        
+        
+        
+        {% if model.currentSort  %}
+            {% for sort in themeSettings.sortByOptions %}
+            
+                <li data-mz-action="updateSortBy" class="{% if model.currentSort == sort.value  %}selected{% endif %}" value="{{ sort.value }}">
+                    {{ sort.text }}
+                    {% if model.currentSort == sort.value %}
+                        <span class="jb-selection-tick"></span>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        {% else %}
+            {% for tsort in themeSettings.sortByOptions %}
+                    
+                <li data-mz-action="updateSortBy" class="{% if themeSettings.defaultSort == tsort.value  %}selected{% endif %}" value="{{  tsort.value }}">
+                    {{ tsort.text }}
+                    {% if  themeSettings.defaultSort == tsort.value  %}
+                        <span class="jb-selection-tick"></span>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        {% endif %}
+    </ul>   
+    {% endcomment %}
+    
+    {% block sort-types %}
+    <ul>
+        {% for sort in model.sorts %}
+                {% with sort.value as sortValue %}
+            <li data-mz-value="sortMob" class="{% if model.currentSort == sort.value  %}selected{% endif %}" 
+            data-mz-url="{% make_url "sorting" model with sortBy=sortValue %}" value="{{ sortValue }}"{% if model.currentSort == sortValue %} selected="selected"{% endif %}>
+            {{ sort.text }}
+            {% if model.currentSort == sort.value %}
+                        <span class="jb-selection-tick"></span>
+                    {% endif %}
+            </li>
+          {% endwith %}
+        {% endfor %}
+    </ul>   
+    {% endblock sort-types %}
+</div>
+
+
+
+

@@ -1,0 +1,77 @@
+
+<div class="sb-desktop-only">	  
+    <div id="shop_our_product_gallery">
+    
+       
+        
+        
+        
+        
+         
+		<div class="slides">
+			<div class="viewport_gallery_slide">
+				<a href="{{themeSettings.category_slide1_url}}"><img src="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/{{themeSettings.category_slide_1}}">
+				   
+				</img></a>
+			</div>
+			<div class="viewport_gallery_slide">
+				<a href="{{themeSettings.category_slide2_url}}"><img src="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/{{themeSettings.category_slide_2}}">
+				   
+				</img></a>
+			</div>
+			<div class="viewport_gallery_slide">
+				<a href="{{themeSettings.category_slide3_url}}"><img src="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/{{themeSettings.category_slide_3}}">
+				   
+				</img></a>
+			</div>
+			<div class="viewport_gallery_slide">
+				<a href="{{themeSettings.category_slide4_url}}"><img src="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/{{themeSettings.category_slide_4}}">
+				   
+				</img></a>
+			</div>
+	    </div>
+	    
+	    
+	    
+	     <a class="jb-shop-now" href="/search?query==Belly Flops">Shop Now</a>
+        <div class="jb-free-shipping">
+        
+             <h3>
+                <em>
+                   {{themeSettings.category_offer1_mainLabel}}
+                </em>
+            </h3>
+            <p>
+                {{themeSettings.category_offer1_secondaryLabel}}
+            </p>
+            <a class="jb-free-shipping-button" href="/Info/customerservice/shipping_information#ShipInternational">View Details</a>
+        </div>
+        <div class="jb-monthly-theme">
+        
+            <h3>
+                <em>
+                    {{themeSettings.category_offer2_mainLabel}}
+                </em>
+            </h3>
+            <p>
+                {{themeSettings.category_offer2_secondaryLabel}}
+            </p>
+            <a class="jb-monthly-theme-button" href="/search?query=watermelon">Shop Now</a>
+        </div>
+        
+	    
+	    
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Holiday Wreath Cupcakes</h1>
+    <article class="carnival-details txt-left">
+        <h2>Holiday Wreath Cupcakes</h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Holiday Wreath Cupcakes/Jelly-Belly-Wreath_m.jpg">
+            </figure>
+            <!-- AddThis Button -->
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+            <img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border: 0"></a>
+            <!-- /AddThis Button -->
+            <p>The great thing about making a wreath is that you can make it as large or as small as you like. Just remember to have plenty of Jelly Belly® jelly beans on hand! </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>9 cupcakes, your favorite flavor, baked in green paper liners and cooled</li>
+                <li>1 1/2 cups canned vanilla frosting, divided</li>
+                <li>Red and green food coloring</li>
+                <li>1/2 cup each, <a href="/search?query=kiwi&amp;asug=">Kiwi</a>, <a href="/search?query=margarita&amp;asug=">Margarita</a> and <a href="/search?query=green apple&amp;asug=">Green Apple</a> Jelly Belly® jelly beans</li>
+                <li>13 red <a href="/search?query=sour cherry&amp;asug=">Cherry Sours</a> by Jelly Belly®</li>
+                <li>2 whole graham crackers</li>
+                <li>4 thin pretzel sticks</li>
+                <li>1/2 cup <a href="/search?query=very cherry&amp;asug=">Very Cherry</a> or <a href="/search?query=cinnamon">Cinnamon red</a> Jelly Belly® jelly beans</li>
+                <li>Coconut Jelly Belly jelly beans</li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>Tint 1/2 cup of the vanilla frosting red with the food coloring and spoon frosting into a small re-sealable bag; set aside. 
+                    Tint the remaining 1 cup of vanilla frosting green with the food coloring.
+                </li>
+                <li>Spread the tops of the cupcakes with the green frosting. Arrange a line of Green Apple Jelly Belly jelly beans, end to end across the top of all but 1 cupcake. 
+                    Arrange the Kiwi and Margarita Jelly Belly jelly beans on either side of the Green Apple Jell Belly jelly beans to create the holly leaf shape. 
+                    Allow the beans to stand up slightly to give some texture or motion. Place the cupcakes in a circle on a serving platter, keeping the plain cupcake at the bottom of wreath.
+                </li>
+                <li>Using a serrated knife cut the graham crackers into two 2 by 1 1/2 inch triangles and two 2 1/2 by 3 inch triangles. 
+                    Snip a small corner from the bag with the red frosting. Pipe the red frosting on top of the graham cracker pieces. 
+                    Arrange the Very Cherry Jelly Belly jelly beans in rows on top of the graham cracker pieces. 
+                    Place the pieces on top of the plain frosted cupcake using the pretzel sticks as support under the crackers to make the bow. 
+                    Place the cherry sour balls in clusters on top of the wreath and one in the center of the bow.
+                </li>
+                <li>Spread the Coconut Jelly Belly jelly beans all over the platter around the wreath.</li>
+            </ol>
+            <h2>MAKES 9 CUPCAKES</h2>
+            <hr>
+             
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+

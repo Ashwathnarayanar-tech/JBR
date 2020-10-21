@@ -1,0 +1,17 @@
+{% extends "page" %}
+{% block body-tag-classes %} mz-category {% endblock body-tag-classes %}
+{% block body-content %}
+    {% require_script "pages/flavor-guides" %}  
+
+<div class="jb-category-container">
+    
+        <h1 class="jb-category-title">Jelly Belly Flavor Guides</h1>
+    
+        <h3>Discover the flavor adventure of the world's most famous jelly bean. Jelly Belly beans expand the flavor horizons with the largest collection of flavors on the planet, each a delicious delight to the taste buds. The Original Gourmet Jelly Bean®.</h3>
+    
+        <div class="jb-childcategory-container" id="jb-childcategory-container">
+        </div>
+    </div>
+
+{% endblock body-content %}
+

@@ -1,0 +1,171 @@
+<div class="jb-inner-overlay"></div>
+    <div class="mz-messagebar" data-mz-message-bar>
+        <ul id="bypassNotification" class="is-showing mz-errors" style="display: none; padding: 3px 3px 3px 3px;">
+			<li>
+				<p style="text-align: center;">{{themeSettings.bypass_headline1}}<br>{{themeSettings.bypass_headline2}}</p>
+				<p style="margin-left: 15px; text-align: left;">
+				    1. {{themeSettings.bypass_warn1}}<br>
+					2. {{themeSettings.bypass_warn2}}</p>
+				<p style="text-align: center">{{themeSettings.bypass_proceed}}</p>
+			</li>
+		</ul>
+    </div>
+    
+    <h3 class="mz-formstep-header">
+        <span class="step-no"><label>01</label></span>
+        <span class="checkout-icons"></span>
+        <label>{{ labels.shippingInformation }}</label> 
+        <span class="step-completed"></span>
+        {% if model.requiresFulfillmentInfo %}
+        <button class="mz-button mz-button-small ship-adress-edit mz-formstep-edit" data-mz-action="edit" >
+            {{ labels.edit }}
+        </button>
+        {% endif %}
+    </h3>
+    <div class="mz-formstep-body">
+    
+      {% if not model.address.candidateValidatedAddresses %}
+          <div class="mz-formstep-summary mz-addresssummary">
+          {% comment %}
+                 {% for contact in model.contacts %}
+            {% if  viewcontext === "isCardSaving" %}
+                {% for type in contact.types %}
+                    {% if  type.name ===  "Billing" %} 
+                        <label class="mz-contactselector-contact">
+                           
+                            <span class="mz-contactselector-summarywrapper">
+                                <div class="mz-addresssummary">
+                                  
+                                  {% include "modules/common/address-summary" with model=contact %}    
+                                </div>
+                            </span>    
+                        </label>
+                    {% endif %}
+                {% endfor %}
+          {% endif %}
+            
+                    <label class="mz-contactselector-contact {% for type in contact.types %} {{ type.name }} {% endfor %}">
+                       
+                        <span class="mz-contactselector-summarywrapper">
+                            <div class="mz-addresssummary">
+                              
+                                {% include "modules/common/address-summary" with model=contact %}        
+                            </div>
+                        </span>  
+                    </label> 
+           {% endfor %} 
+        {% endcomment %}
+           
+                   {% if model.requiresFulfillmentInfo %}
+                    {% include "modules/common/address-summary" %}
+                {% else %}
+                    {{ labels.noFulfillmentInfoRequired }}
+                {% endif %}
+            </div>  
+            {% if model.requiresFulfillmentInfo %}
+                  <div class="mz-formstep-fields mz-l-formfieldgroup">
+                    <p class="address-info">
+                      <br />{{ labels.shippingAddressMsg }}
+                      <a title="contact us" href="/contact-us">Contact Us.</a>
+                    </p>
+					{% if model.contacts %}
+                        {% include "modules/checkout/checkout-shipping-contact-selector" with editingContact=model %}
+                    {% else %}
+                        <p class="address-info">Please please <a title="contact us" href="/contact-us">Contact Us</a> if there is no active shiipiing address available for purchasing the product.</p>
+                    {% endif %}
+                  </div>
+            {% endif %}  
+            {% if model.requiresDigitalFulfillmentContact %}
+                  <div class="mz-formstep-fields mz-l-formfieldgroup">
+                    {% include "modules/checkout/checkout-digital-fulfillment" with editingContact=model %}
+                  </div>
+                  <div class="mz-formstep-summary mz-addresssummary">
+                    <span>Gift Card Email: {{ model.email }}</span>
+                  </div>
+            {% endif %}
+            
+          <div class="mz-formstep-next">
+            <button class="mz-button" style="display: none;" data-mz-action="confirmValidationBypass" id="bypassButton">
+                BYPASS
+            </button>
+          
+            <button class="mz-button autoclickable-btn {% if model.requiresDigitalFulfillmentContact %} mz-digital-gift-card-product {% endif %}" data-mz-action="next" invoke-choose>
+                 {% if model.requiresFulfillmentInfo %}
+                    {{ labels.contToShipMethod }}
+                 {%else%}
+                    {% if model.requiresDigitalFulfillmentContact %}
+                        Continue to Payment Information
+                    {% endif %}
+                {%endif%}
+            </button>
+          </div>
+      {% else %}
+
+      <div class="mz-formstep-fields mz-l-formfieldgroup suggestion-address">
+        {% for addr in model.address.candidateValidatedAddresses %}
+            <label class="mz-l-formfieldgroup-row">
+                <div class="mz-l-formfieldgroup-cell">
+                {% if forloop.index == 1 %}
+                    <span>We have updated your address to:</span>
+                {% else %}
+                    <span>{{ labels.suggestionNum|string_format(forloop.index) }}</span>
+                {% endif %}
+              </div>
+              <div class="mz-l-formfieldgroup-cell"> 
+                <input data-mz-action="choose" id="candidateValidatedAddresses"  name="candidateValidatedAddresses" type="radio" 
+                    value="{{forloop.index0}}"  style="display:{{themeSettings.showShippingAddressChoosingRadioButton}};"/>
+              </div>
+              <div class="mz-l-formfieldgroup-cell">
+                {{addr.address1}}<br />
+                {% if addr.address2 %}{{addr.address2}}<br />{% endif %}
+                {{addr.cityOrTown}}, {{addr.stateOrProvince}} {{addr.postalOrZipCode}} {{addr.countryCode}}
+              </div>
+            </label>
+        {% endfor %}
+        {% if siteContext.generalSettings.allowInvalidAddresses %}
+            <label class="mz-l-formfieldgroup-row">
+              <div class="mz-l-formfieldgroup-cell">
+                  <span>Original</span> 
+              </div>
+              <div class="mz-l-formfieldgroup-cell">
+                <input data-mz-action="choose" name="candidateValidatedAddresses" type="radio" value="-1" style="display:{{themeSettings.showShippingAddressChoosingRadioButton}};"/>
+              </div>
+              <div class="mz-l-formfieldgroup-cell">
+                {{model.address.address1}}<br />
+                {% if model.address.address2 %}{{model.address.address2}}<br />{% endif %}
+                {{model.address.cityOrTown}}, {{model.address.stateOrProvince}} {{model.address.postalOrZipCode}} {{model.address.countryCode}}
+              </div>
+            </label>
+        {% endif %}
+        
+        </div>
+        <div class="mz-formstep-next">
+            <button class="mz-button brontocart-shipping-info" data-mz-action="next">
+                {{ labels.contToShipMethod }}
+            </button>
+        </div>
+    {% endif %}
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

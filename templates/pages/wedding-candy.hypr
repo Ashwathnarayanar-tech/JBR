@@ -1,0 +1,111 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-wedding mz-wed-favor{% endblock body-tag-classes %} 
+{% block body-content %}
+{% require_script "modules/common" %} 
+<section>
+    <article class="wedding-title">
+        <p class="sectionTitle">Jelly Belly Wedding Center</p>
+        <img class="ring" src="http://content.jellybelly.com/cachefly/Jelly-Belly/WeddingCenter/rings.gif" />
+        <div class="clearfix"></div>
+    </article>
+    <div class="wedding-center">
+        <div class="weddingNav">
+            <p class="sectionTitle whereToStartText">Wedding Guide</p>
+            <img src="/resources/images/wedding/brideGroom.png" alt="brideGroom"/> 
+            <ul>
+                <li><a href="/wedding-center">Wedding Center Home</a> &#9658;</li>
+                <li><a href="/wedding-ideas">Wedding Themes</a> &#9658;</li>
+                <li><a href="/wedding-color-palettes">Color Palettes</a> &#9658;</li>
+                <li><a href="/wedding-personalized-favors">Personalized Favors</a> &#9658;</li>
+                <li><a href="/wedding-featured-candy">Featured Candy</a> &#9658;</li>
+                <li><a class="candyCalculatorModal" href="">Candy Calculator</a> &#9658;</li>
+            </ul>
+        </div>
+        <div class="weddingBody">
+            <p class="sectionTitle" style="font-size: 50px;">Featured Candy</p>
+            <hr />
+            <div class="weddingThemeCont weddingFavor">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle" style="font-size: 22px;">Jelly Belly Jewel Party Bags</p>
+                    <p>
+                        Jelly Belly is proud to present a shimmering collection of jelly beans. Our Jewel jelly beans come dressed up with a beautiful edible pearlescent finish adding a shimmer of brilliance to each bean - Perfect for your Special Day. These glamorous jelly beans can be used to make stylish wedding favors or bridal shower gifts. 
+                    </p>
+                    <a href="/search?query=jewel party bag&amp;asug=" target="_blank" class="W_links">View Jelly Belly Jewel Party Bags ►</a>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=redblack&asug=">
+                    <img src="http://content.jellybelly.com/cachefly/Jelly-Belly/WeddingCenter/photoShoots/confections/sparklers1.png" border="0" />
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="favor-pic-container">
+                <figure>
+                    <h3 class="sectionTitle featuredCandyTitle">Raspberries &amp; Blackberries</h3>
+                    <a href="/search?query=raspberries">
+                    <img src="http://content.jellybelly.com/cachefly/Jelly-Belly/WeddingCenter/photoShoots/confections/raspberry.jpg" border="0" />
+                    </a>
+                    <figcaption>
+                        <p>Bold colors and even bolder flavors make these Confections the right choice to jazz up the traditional wedding ceremony or reception.</p>
+                        <a class="W_links" target="_blank" href="/search?query=raspberries">View Raspberries &amp; Blackberries &#9658;</a>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <h3 class="sectionTitle featuredCandyTitle">Champagne Bubbles</h3>
+                    <img src="http://content.jellybelly.com/cachefly/Jelly-Belly/WeddingCenter/photoShoots/confections/champagne.jpg" border="0" />
+                    <figcaption>
+                        <p>Are unconventional arrangements your thing? These juicy jells with a candy coating are simply ideal for brides who crave the unique.</p>
+                        <a class="W_links" target="_blank" href="/search?query=champagne">View Champagne Bubbles &#9658;</a>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <h3 class="sectionTitle featuredCandyTitle">White Jordan Almonds</h3>
+                    <img src="http://content.jellybelly.com/cachefly/Jelly-Belly/WeddingCenter/photoShoots/confections/jordanAlmonds.jpg" border="0" />
+                    <figcaption>
+                        <p>Sometimes the traditional route is the best one, and nothing beats these elegant white candies as complements to a sophisticated wedding ceremony or reception.</p>
+                        <a class="W_links" target="_blank" href="/search?query=white%20jordan">View White Jordan Almonds &#9658;</a>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <h3 class="sectionTitle featuredCandyTitle">White Chocolate Dutch Mints</h3>
+                    <img src="http://content.jellybelly.com/cachefly/Jelly-Belly/WeddingCenter/photoShoots/confections/dutchMints.jpg" border="0" />
+                    <figcaption>
+                        <p> White as satin, sweet as sugar and with a cool, minty kick. They’re equal parts distinguished and fun.</p>
+                        <a class="W_links" target="_blank" href="/search?query=dutch_mints">View White Chocolate Dutch Mints &#9658;</a>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <h3 class="sectionTitle featuredCandyTitle">Assorted Jordan Almonds</h3>
+                    <img src="http://content.jellybelly.com/cachefly/Jelly-Belly/WeddingCenter/photoShoots/confections/jordanAlmondsColor.jpg" border="0" />
+                    <figcaption>
+                        <p>The classic Confection for a classic wedding or reception. Plump almonds in pastel shades of lavender, pink, yellow, green and white are ageless treats.</p>
+                        <a class="W_links" target="_blank" href="/search?query=assorted%20jordan">View Assorted Jordan Almonds &#9658;</a>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <h3 class="sectionTitle featuredCandyTitle">Chocolate Dutch Mints</h3>
+                    <img src="http://content.jellybelly.com/cachefly/Jelly-Belly/WeddingCenter/photoShoots/confections/dutchMintsColor.jpg" border="0" />
+                    <figcaption>
+                        <p>Crispy chocolate shells filled with cool peppermint. Serve these at your wedding reception and sweet, minty "oohs and ahs" will fill the air.</p>
+                        <a class="W_links" target="_blank" href="/search?query=chocolate%20dutch">View Chocolate Dutch Mints &#9658;</a>
+                    </figcaption>
+                </figure>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /beach -->
+        </div>
+        <div class="clearfix"></div>
+        <!-- /Zen Wedding -->
+    </div>
+</section>
+<script src="{{siteContext.cdnPrefix}}/scripts/vendor/cufon.js"></script> 
+<script src="{{siteContext.cdnPrefix}}/scripts/vendor/UniRom_500.font.js"></script>
+<script type="text/javascript">Cufon.replace('.sectionTitle');</script>
+<script type="text/javascript">Cufon.now();</script>
+{% endblock body-content %}
+
+
+
+
+

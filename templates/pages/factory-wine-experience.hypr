@@ -1,0 +1,68 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar mz-wine-exp{% endblock body-tag-classes %} 
+{% block body-content %}
+<section class="wineExp">
+    <img alt="Jelly Belly Chocolate and Wine Experience" src="/resources/images/visit-us/JBwine_header.png">
+    <article>
+        <ul>
+            <li class="header">Tasting Daily</li>
+            <li>11:00am to 4:00pm</li> 
+            <li>Jelly Belly Visitor Center</li>
+            <p class="trebuchetFam">
+                One Jelly Belly Lane<br>
+                Fairfield, CA 94533
+            </p>
+            <li class="trebuchetFam">2nd Floor Very Cherry Room</li>
+        </ul>
+        <img src="/resources/images/visit-us/JBwine_logos.png">
+        <p class="trebuchetFam">
+            Featuring select wines from Suisun Valley Wineries, hand-made confections from the Jelly Belly Chocolate Shoppe and Chocolate Confections from the Makers of Jelly Belly.
+        </p>
+        <ul>
+            <li class="header">EXPERIENCE INCLUDES:</li>
+            <li>Samples of five local vintner wines</li>
+            <p class="trebuchetFam">paired with decadent chocolate confections and a souvenir Jelly Belly wine glass.</p>
+            <li>Front-of-Line Access</li>
+            <p class="trebuchetFam">Paid participants may also take advantage of front-of-line access to the Jelly Belly factory tour at the end of the tasting experience.</p>
+            <hr>
+            <p class="trebuchetFam"><em>No "to-go" tastings. Front-of-line access is limited to paid participating guests. More than half of guests must participate in the experience to take advantage of front-of-line access.</em></p>
+            
+            <hr>
+            <li>Experience is for those age 21 and over only</li>
+            <p>~ Minors welcome <br><span class="trebuchetFam">(Non-alcoholic experience available)</span></p>
+            <hr>
+            <p class="trebuchetFam">
+                During certain times of the year, the Jelly Belly Visitor Center will host annual and evening events. During these times the Chocolate &amp; Wine tasting hours may be
+                modified. Some examples would be our annual Brunch with Santa and employee holiday party. Please refer to our <a href="/California-Factory-Events">Event Calendar</a> for modified hours alerts.
+            </p>
+            <br>
+            <p class="trebuchetFam"><a target="_blank" href="/resources/images/visit-us/wine_pairing_dec_2014.jpg">Click here</a> for our current Chocolate &amp; Wine pairings.</p>
+        </ul>
+        <div class="bannerText">
+            Wine Bottles Available for Sale!
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+
+
+

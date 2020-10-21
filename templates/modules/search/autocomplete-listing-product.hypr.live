@@ -1,0 +1,57 @@
+{% comment %}
+    Code Changes made by Amit on 03-july for Auto search price display
+    line no 30
+{% endcomment %}
+
+{% extends "modules/common/item-listing" %}
+ {% block quick-order-quantity %}
+    <div class="quick-order-quantity" style="display:none"> </div>
+  {% endblock quick-order-quantity %}
+  
+   {% block addtocart %}
+       <a class="inline-add-to-cart" style="display:none"></a>
+    {% endblock addtocart %}
+       <p class="inline" style="display:none"></p> 
+    {% block myorder-price %} 
+    
+    {% endblock myorder-price %}
+    
+    {% block module-classes %}mz-itemlisting-autocomplete mz-itemlisting-autocomplete-product{% endblock module-classes %}
+    <a href="/p/{{ model.productCode }}">
+            {% block item-listing-image %}
+                <div class="mz-itemlisting-thumb">
+                    {% with model.content.productImages|first as image %}
+                        {% if image.imageUrl %}
+                         <a href="/p/{{ model.productCode }}">
+                        <img class="mz-itemlisting-thumb-img" src="{{ image.imageUrl }}?max=40" />
+                        </a>
+                        {% endif %}
+                    {% endwith %}
+                </div>
+            {% endblock item-listing-image%}
+            
+            {% block item-name %}
+                <div class="details">
+                    <a class="mz-itemlisting-title" href="/p/{{ model.productCode }}">{{ model.content.productName|safe }}</a>
+                    <div class="mz-itemlisting-description">
+                    <span>{% if model.price.salePrice %}{{ model.price.salePrice|currency }}{% endif %}</span>
+                     {% comment %}
+                         <a href="/p/{{ model.productCode }}" style="text-decoration: none;">
+                            <label>{{model.content.productShortDescription|safe|truncatewords(5)}}</label>
+                            {% if model.price.salePrice %}<span>${{ model.price.salePrice|safe }}</span> {% endif %}
+                         </a>
+                    {% endcomment %}
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            {% endblock item-name %}
+                    
+    </a>
+
+
+
+
+
+
+
+

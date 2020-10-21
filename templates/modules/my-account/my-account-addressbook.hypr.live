@@ -1,0 +1,81 @@
+<h3 class="mz-l-stack-sectiontitle">{{ labels.addressBook }} {% if model.hasSavedContacts %}
+<a href="javascript:;" class="add-new" data-mz-action="beginAddContact">{{ labels.addNewContact }}</a>{%endif%}</h3>
+
+{% if model.hasSavedContacts %}
+    <ul class="mz-accountaddressbook-list">
+      {% if editing.contact == "new" %}
+            <h4 class="mz-l-stack-subtitle">ADD NEW BILLING ADDRESS</h4>
+            {% include "modules/my-account/my-account-address-form" with model=model.editingContact %}
+      {% else %}
+        {% if editing.contact %}
+            <li>
+                <h4 class="mz-l-stack-subtitle">EDIT ADDRESS</h4>
+                {% for contact in model.contacts %}
+                    {% if editing.contact == contact.id %}
+                        {% include "modules/my-account/my-account-address-form" with model=model.editingContact %}
+                    {% endif %}
+                {% endfor %}
+            </li>
+        {% else %}
+        <li>
+  
+        
+            <h4 class="mz-l-stack-subtitle">MY SAVED ADDRESSES</h4>
+            <ul>
+            {% for contact in model.contacts %}
+        
+       
+                <li class="mz-accountaddressbook-contact">
+                  
+                        <div class="mz-accountaddressbook-actions">
+                            <a class="mz-accountaddressbook-edit" href="javascript:;" data-mz-action="beginEditContact" data-mz-contact="{{ contact.id }}">{{ labels.edit }}</a>
+                            <a class="mz-accountaddressbook-delete" href="javascript:;" data-mz-action="beginDeleteContact" data-mz-contact="{{ contact.id }}">{{ labels.delete }}</a>
+                        </div>
+                  
+                    <div class="clearfix"></div>
+                    <div class="mz-accountaddressbook-contactdetails mz-addresssummary">
+                        {% include "modules/common/address-summary" with model=contact %}
+                        <span>{{ contact.email }}</span>
+                        <span class="mz-accountaddressbook-contacttype">
+                            {% if contact.isShippingContact %}
+                                <span class="mz-accountaddressbook-contacttype">
+                                    <strong>Shipping Address</strong>
+                                </span>
+                            {% endif %}
+                            {% if contact.isBillingContact %}
+                                <span class="mz-accountaddressbook-contacttype">
+                                    <strong>Billing Address</strong>
+                                </span>
+                            {% endif %}
+                        </span>
+                    </div>
+                </li>
+         
+            {% endfor %}
+            </ul>
+        </li>
+        {% endif %}
+      {% endif %}
+</ul>
+{% else %}
+    {% if editing.contact == "new" %}
+        <h4 class="mz-l-stack-subtitle">ADD NEW ADDRESS</h4>
+        {% include "modules/my-account/my-account-address-form" with model=model.editingContact %}
+    {% else %}
+        <div class="no-cards">
+            <p class="mz-accountaddressbook-empty">
+              {{ labels.noSavedContacts }} 
+            </p>
+            <a href="javacript:;" data-mz-action="beginAddContact">{{ labels.addNewContact }}</a>
+        </div>
+    {% endif %}
+{% endif %}
+
+
+
+
+
+
+
+
+

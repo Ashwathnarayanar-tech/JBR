@@ -1,0 +1,1302 @@
+{
+  "items": [
+    {
+      "xtype": "panel",
+      "title": "Features",
+      "collapsed": false,
+      "items": [
+	          {
+              "xtype": "textfield",
+              "name": "reviewsConnection",
+              "fieldLabel": "Power Reviews connection string",
+              "allowBlank": false,  
+              "forceSelection": true,
+              "queryMode": "local",
+              "width": "300px",
+              "grow": true,
+              "growMin": 300
+        },
+        {
+              "xtype": "textfield",
+              "name": "shipping_date",
+              "fieldLabel": "Shipping Blockout Dates",
+              "allowBlank": true,
+              "forceSelection": true,
+              "queryMode": "local",
+              "width": "500px",
+              "grow": true,
+              "growMin": 300
+        },
+        {
+            "xtype": "textfield",
+            "name": "themeLoginURL",
+            "fieldLabel": "Site Login URL",
+            "vtype":"url",
+            "width": "500px",
+            "grow": true,
+            "growMin": 300,
+            "allowBlank": false
+        },
+        {
+            "xtype": "textfield",
+            "name": "selectstore",
+            "fieldLabel": "Select Store URL",
+            "vtype":"url",
+            "width": "500px",
+            "grow": true,
+            "growMin": 300, 
+            "allowBlank": false
+        },
+        {
+            "xtype": "textfield",
+            "name": "b2bwest",
+            "fieldLabel": "West Site Url",
+            "vtype":"url",
+            "width": "500px",
+            "grow": true,
+            "growMin": 300,
+            "allowBlank": false
+        },
+        {
+            "xtype": "textfield",
+            "name": "b2beast",
+            "fieldLabel": "East Site Url",
+            "vtype":"url",
+            "width": "500px",
+            "grow": true,
+            "growMin": 300,
+            "allowBlank": false
+        },
+        
+         {
+            "xtype": "textfield",
+            "name": "codePack",
+            "fieldLabel": "Cold Pack Product Code",
+            "width": "300px",
+            "grow": true,
+            "growMin": 300,
+            "allowBlank": false
+        },
+        
+        {
+          "xtype": "checkbox",
+          "name": "heatsensitive",
+          "fieldLabel": "Allow Heat Sensitive"
+        },
+        {
+          "xtype": "checkbox",
+          "name": "allowWishlist",
+          "fieldLabel": "Allow Wishlist"
+        },
+        {
+            "xtype":"checkbox",
+            "name":"editingHelp",
+            "fieldLabel":"Check to show my account help drop zone in site builder"
+        },
+        {
+          "xtype": "checkbox",
+          "name": "useAnimatedProductLists",
+          "fieldLabel": "Use Animated Product Lists"
+        },
+        {
+          "xtype": "checkbox",
+          "name": "enablePartialCaching",
+          "fieldLabel": "Enable Partial Caching",
+          "value": true
+        },
+        {
+          "xtype": "checkbox",
+          "name": "useDebugScripts",
+          "fieldLabel": "Debug Mode (use unminified JavaScript)"
+        },
+        {
+          "xtype": "checkbox",
+          "name": "requireCheckoutAgreeToTerms",
+          "fieldLabel": "Show 'Agree to Terms & Conditions' option while placing the order"
+        },
+         {
+          "xtype": "mz-input-productmulti",
+          "name": "addCrosssellProductList",
+          "fieldLabel": "Add products for crosssell",
+          "width": 500
+        },
+        {
+          "xtype": "combobox",
+          "name": "showPronsAndCons",
+          "fieldLabel": "Show 'PRONS & CONS' in product review section",
+          "store": [
+            [
+              "block",
+              "Show Prons & Cons"
+            ],
+            [
+              "none",
+              "Hide Prons & Cons"
+            ]
+          ],
+          "width": 500
+        },{
+          "xtype": "combobox",
+          "name": "showShippingAddressChoosingRadioButton",
+          "fieldLabel": "Show radio button for shipping addres choosing while suggesting:",
+          "store": [
+            [
+              "block",
+              "Show"
+            ],
+            [
+              "none",
+              "Hide"
+            ]
+          ],
+          "width": 500
+        },
+        {
+          "xtype": "checkbox",
+          "name": "showAddressTypeDropdown",
+          "fieldLabel": "Show Address Type dropdown in Address Forms (Residential/Commercial)"
+        },
+        {
+          "xtype": "numberfield",
+          "name": "freeshippingBoundingValue",
+          "fieldLabel": "Freeshipping Limit",
+          "allowBlank": false,
+          "forceSelection": true,
+          "queryMode": "local",
+          "width": "300px",
+          "grow": false,
+          "growMin": 100
+        },
+        {
+          "xtype": "numberfield",
+          "name": "minimumOrderAmount",
+          "fieldLabel": "Minimum Order Amount",
+          "allowBlank": false, 
+          "forceSelection": true,
+          "queryMode": "local",
+          "width": "300px",
+          "grow": false,
+          "growMin": 100
+        },
+		{
+          "xtype": "numberfield",
+          "name": "mobileAddToCartPopupTimer",
+          "fieldLabel": "Add to cart popup (only mobile) - Number of seconds",
+          "allowBlank": false,
+          "forceSelection": true,
+          "queryMode": "local",
+          "width": "300px",
+          "grow": false,
+          "growMin": 100
+        },
+		{
+          "xtype": "numberfield",
+          "name": "newsletterDelay",
+          "fieldLabel": "Newsletter popup delay",
+          "allowBlank": false,
+          "forceSelection": true,
+          "queryMode": "local",
+          "width": "300px",
+          "grow": false,
+          "growMin": 100
+        },
+		{
+          "xtype": "numberfield",
+          "name": "shippingSwitchoverValue",
+          "fieldLabel": "SurePost-to-UPS switchover value",
+          "allowBlank": false,
+          "forceSelection": true,
+          "queryMode": "local",
+          "width": "300px",
+          "grow": false,
+          "growMin": 100
+        },
+        {
+          "xtype": "numberfield",
+          "name": "mybuyszone",
+          "fieldLabel": "Muybuys Zone Number",
+          "allowBlank": false,
+          "forceSelection": true,
+          "queryMode": "local",
+          "width": "300px",
+          "grow": false,
+          "growMin": 100
+        },
+        {
+              "xtype": "textfield",
+              "name": "signup-coupon",
+              "fieldLabel": "Sign up discount code for 10% Off",
+              "allowBlank": false,
+              "forceSelection": true,
+              "queryMode": "local",
+              "width": "300px",
+              "grow": true,
+              "growMin": 300
+        }
+        ,
+        {
+              "xtype": "textfield",
+              "name": "CustomFontName",
+              "fieldLabel": "Google Font Family",
+              "allowBlank": false,
+              "forceSelection": true,
+              "queryMode": "local",
+              "width": "300px",
+              "grow": true,
+              "growMin": 300
+        },
+        {
+              "fieldLabel": "Default Items Per Page",
+              "xtype": "combo",
+              "name": "defaultPageSize",
+              "allowBlank": false,
+              "editable": false,
+              "forceSelection": true,
+              "store": [
+                15,
+                30,
+                45,
+                "All"
+              ],
+              "queryMode": "local"
+        },
+        {
+              "xtype": "textareafield",
+              "name": "acceptedMessage",
+              "fieldLabel": "Accepted Message",
+              "allowBlank": false,
+              "forceSelection": true,
+              "queryMode": "local",
+              "width": "500px",
+              "grow": true,
+              "growMin": 100
+        },
+        {
+              "xtype": "textareafield",
+              "name": "processingMessage",
+              "fieldLabel": "Processing Message",
+              "allowBlank": false,
+              "forceSelection": true,
+              "queryMode": "local",
+              "width": "500px",
+              "grow": true,
+              "growMin": 100
+        }, 
+        {
+              "xtype": "textareafield",
+              "name": "shippedMessage",
+              "fieldLabel": "Shipped Message",
+              "allowBlank": false,
+              "forceSelection": true,
+              "queryMode": "local",
+              "width": "500px",
+              "grow": true,
+              "growMin": 100
+        },
+        {
+              "xtype": "htmleditor",
+              "name": "giftcardMessage", 
+              "fieldLabel": "Gift Card Redeeming Message",
+              "allowBlank": false,
+              "forceSelection": true,
+              "queryMode": "local",
+              "width": "700px",
+              "grow": true,
+              "growMin": 100
+        },
+        {
+              "xtype": "textfield",
+              "name": "GiftcardHeadline",
+              "fieldLabel": "Gift card Message Headline",
+              "allowBlank": false,
+              "forceSelection": true,
+              "queryMode": "local",
+              "width": "500px",
+              "grow": true,
+              "growMin": 300 
+        },
+        {
+              "xtype": "htmleditor",
+              "name": "giftcardbalMessage",
+              "fieldLabel": "Gift card Balance Message",
+              "allowBlank": false,
+              "forceSelection": true,
+              "queryMode": "local",
+              "width": "700px",
+              "grow": true,
+              "growMin": 100
+        },
+        {
+              "xtype": "textareafield",
+              "name": "shippingMethods",
+              "fieldLabel": "Shipping methods",
+              "allowBlank": true,
+              "forceSelection": true,
+              "queryMode": "local",
+              "width": "700px",
+              "grow": true,
+              "growMin": 100
+        },
+        {
+              "xtype": "checkbox",
+              "name": "enableShippingquotes",
+              "fieldLabel": "Enable Shipping Quotes"
+        }
+      ]
+    },
+    {
+      "xtype": "panel",
+      "title": "Slide show",
+      "defaultType": "textfield",
+      "collapsed": false,
+      "items": [
+        {
+          "xtype": "panel",
+          "title": "Homepage slide show widget file links & images",
+          "defaultType": "textfield",
+          "collapsed": false,
+          "items": [
+            {
+              "xtype": "panel",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "home_slide_1",
+                  "fieldLabel": "image 1",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "home_slide1_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "home_slide_2",
+                  "fieldLabel": "image 3",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "home_slide2_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "home_slide_3",
+                  "fieldLabel": "image 3",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "home_slide3_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "home_slide_4",
+                  "fieldLabel": "image 4",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "home_slide4_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "home_slide_5",
+                  "fieldLabel": "image 5",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "home_slide5_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "xtype": "panel",
+          "title": "Shop-main  slide show widget file links & images",
+          "defaultType": "textfield",
+          "collapsed": false,
+          "items": [
+            {
+              "xtype": "panel",
+              "layout": "hbox",
+              "collapsed": false,
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "category_slide_1",
+                  "fieldLabel": "image 1",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "category_slide1_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "layout": "hbox",
+              "collapsed": false,
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "category_slide_2",
+                  "fieldLabel": "image 2",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "category_slide2_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "layout": "hbox",
+              "collapsed": false,
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "category_slide_3",
+                  "fieldLabel": "image 3",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "category_slide3_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "layout": "hbox",
+              "collapsed": false,
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "category_slide_4",
+                  "fieldLabel": "image 4",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "category_slide4_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "xtype": "panel",
+      "title": "Category page offers",
+      "defaultType": "textfield",
+      "collapsed": false,
+      "items": [
+        {
+          "xtype": "panel",
+          "title": "Offer 1 - Right Top",
+          "collapsed": false,
+          "layout": "hbox",
+          "items": [
+            {
+              "xtype": "textfield",
+              "name": "category_offer1_mainLabel",
+              "fieldLabel": "Main Label",
+              "maxLength": 35,
+              "width": "350px"
+            },
+            {
+              "xtype": "textfield",
+              "name": "category_offer1_secondaryLabel",
+              "maxLength": 35,
+              "fieldLabel": "Secondary Label",
+              "width": "350px"
+            }
+          ]
+        },
+        {
+          "xtype": "panel",
+          "title": "Offer 2- Right Bottom",
+          "collapsed": false,
+          "layout": "hbox",
+          "items": [
+            {
+              "xtype": "textfield",
+              "name": "category_offer2_mainLabel",
+              "maxLength": 35,
+              "fieldLabel": "Main Label",
+              "width": "350px"
+            },
+            {
+              "xtype": "textfield",
+              "name": "category_offer2_secondaryLabel",
+              "maxLength": 35,
+              "fieldLabel": "Secondary Label",
+              "width": "350px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "xtype": "panel",
+      "title": "Search result banner",
+      "defaultType": "textfield",
+      "collapsed": false,
+      "items": [
+        {
+          "xtype": "panel",
+          "title": "No search result banner",
+          "defaultType": "textfield",
+          "collapsed": false,
+          "items": [
+            {
+              "xtype": "textfield",
+              "name": "nosearch_result_banner_image",
+              "fieldLabel": "Main banner",
+              "width": "350px"
+            },
+            {
+              "xtype": "textfield",
+              "name": "nosearch_result_banner_image_url",
+              "fieldLabel": "Banner URL",
+              "width": "350px"
+            }
+          ]
+        },
+        {
+          "xtype": "panel",
+          "title": "Search result banner",
+          "defaultType": "textfield",
+          "collapsed": false,
+          "items": [
+            {
+              "xtype": "textfield",
+              "name": "search_result_banner_image",
+              "fieldLabel": "Main banner",
+              "width": "350px"
+            },
+            {
+              "xtype": "textfield",
+              "name": "search_result_banner_image_url",
+              "fieldLabel": "Banner URL",
+              "width": "350px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "xtype": "panel",
+      "title": "Mega Menu Hero Images",
+      "defaultType": "textfield",
+      "collapsed": false,
+      "items": [
+        {
+          "xtype": "panel",
+          "title": "SHOP OUR PRODUCTS MEGA MENU",
+          "collapsed": false,
+          "items": [
+            {
+              "xtype": "panel",
+              "title": "Brand",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Brand_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Brand_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "title": "Color",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Color_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Color_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "title": "Taste",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Taste_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Taste_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "title": "Packaging",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Packaging_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Packaging_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "title": "Occasion",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Occasion_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Occasion_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "title": "Holiday",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Holiday_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Holiday_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "title": "Gifts",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Gifts_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Gifts_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "xtype": "panel",
+          "title": "EXPLORE OUR PRODUCTS MEGA MENU",
+          "collapsed": false,
+          "items": [
+            {
+              "xtype": "panel",
+              "title": "Jelly Belly Flavour Guides",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Jelly_Belly_Flavour_Guides_img",
+                  "fieldLabel": "Image",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Jelly_Belly_Flavour_Guides_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "title": "What We Offer",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "What_We_Offer_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "What_We_Offer_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "xtype": "panel",
+          "title": "VISIT US MEGA MENU",
+          "collapsed": false,
+          "items": [
+            {
+              "xtype": "panel",
+              "title": "California Visitors Center",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "California_Visitors_Center_img",
+                  "fieldLabel": "Image",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "California_Visitors_Center_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "title": "Wiscosin Visitors Center",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Wiscosin_Visitors_Center_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Wiscosin_Visitors_Center_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "title": "Retail Stores",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Retail_Stores_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Retail_Stores_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "xtype": "panel",
+          "title": "ENTERTAINMENT MEGA MENU",
+          "collapsed": false,
+          "items": [
+            {
+              "xtype": "panel",
+              "title": "Fun Stuff",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Fun_Stuff_img",
+                  "fieldLabel": "Image",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Fun_Stuff_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "title": "Ideas for Occasions",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Ideas_for_Occasions_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Ideas_for_Occasions_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "xtype": "panel",
+          "title": "ATHLETES WE SPONSOR MEGA MENU",
+          "collapsed": false,
+          "items": [
+            {
+              "xtype": "panel",
+              "title": "Teams",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Teams_img",
+                  "fieldLabel": "Image",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Teams_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "title": "Individual Athletes",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Individual_Athletes_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Individual_Athletes_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            },
+            {
+              "xtype": "panel",
+              "title": "Event Calendar",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Event_Calendar_img",
+                  "fieldLabel": "Img",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Event_Calendar_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "xtype": "panel",
+          "title": "GIFT CARDS MEGA MENU",
+          "collapsed": false,
+          "items": [
+            {
+              "xtype": "panel",
+              "title": "Gift Cards",
+              "collapsed": false,
+              "layout": "hbox",
+              "items": [
+                {
+                  "xtype": "textfield",
+                  "name": "Gift_Cards_img",
+                  "fieldLabel": "Image",
+                  "width": "350px"
+                },
+                {
+                  "xtype": "textfield",
+                  "name": "Gift_Cards_url",
+                  "fieldLabel": "Link",
+                  "width": "350px"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "xtype": "panel",
+      "title": "Footer evergreen",
+      "defaultType": "textfield",
+      "collapsed": false,
+      "items": [
+        {
+          "xtype": "panel",
+          "title": "Footer image 1",
+          "collapsed": false,
+          "layout": "hbox",
+          "items": [
+            {
+              "xtype": "textfield",
+              "name": "footer_evergreen_image1",
+              "fieldLabel": "Image1",
+              "width": "350px"
+            },
+            {
+              "xtype": "textfield",
+              "name": "footer_evergreen_image1_url",
+              "fieldLabel": "Link",
+              "width": "350px"
+            }
+          ]
+        },
+        {
+          "xtype": "panel",
+          "title": "Footer image 2",
+          "collapsed": false,
+          "layout": "hbox",
+          "items": [
+            {
+              "xtype": "textfield",
+              "name": "footer_evergreen_image2",
+              "fieldLabel": "Image2",
+              "width": "350px"
+            },
+            {
+              "xtype": "textfield",
+              "name": "footer_evergreen_image2_url",
+              "fieldLabel": "Link",
+              "width": "350px"
+            }
+          ]
+        },
+        {
+          "xtype": "panel",
+          "title": "Footer image 3",
+          "collapsed": false,
+          "layout": "hbox",
+          "items": [
+            {
+              "xtype": "textfield",
+              "name": "footer_evergreen_image3",
+              "fieldLabel": "Image3",
+              "width": "350px"
+            },
+            {
+              "xtype": "textfield",
+              "name": "footer_evergreen_image3_url",
+              "fieldLabel": "Link",
+              "width": "350px"
+            }
+          ]
+        },
+        {
+          "xtype": "panel",
+          "title": "Footer image 4",
+          "collapsed": false,
+          "layout": "hbox",
+          "items": [
+            {
+              "xtype": "textfield",
+              "name": "footer_evergreen_image4",
+              "fieldLabel": "Image4",
+              "width": "350px"
+            },
+            {
+              "xtype": "textfield",
+              "name": "footer_evergreen_image4_url",
+              "fieldLabel": "Link",
+              "width": "350px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+        "xtype": "panel",
+        "title": "Explore Our Product Widget File URLs",
+        "collapsed": false,
+        "items": [
+            {
+                "xtype": "textfield",
+                "name": "explore_url_jellybelly",
+                "fieldLabel": "Explore Our Product Page URL for Jelly Belly",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "explore_url_confection",
+                "fieldLabel": "Explore Our Product Page URL for Confection",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "explore_url_sunkist",
+                "fieldLabel": "Explore Our Product Page URL for Sunkist",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "explore_url_beanboozled",
+                "fieldLabel": "Explore Our Product Page URL for Beanboozled",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "explore_url_spotbean",
+                "fieldLabel": "Explore Our Product Page URL for Sportbean",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "explore_url_cold_stone",
+                "fieldLabel": "Explore Our Product Page URL for Coldstone",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "explore_url_sugarfree",
+                "fieldLabel": "Explore Our Product Page URL for Sugarfree",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "explore_url_choco_dips",
+                "fieldLabel": "Explore Our Product Page URL for Choco Dips",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "explore_url_disney",
+                "fieldLabel": "Explore Our Product Page URL for Disney",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "explore_url_belly_flops",
+                "fieldLabel": "Explore Our Product Page URL for Belly Flops",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "explore_url_harryporter",
+                "fieldLabel": "Explore Our Product Page URL for Harry Portter",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "explore_url_hello_kitty",
+                "fieldLabel": "Explore Our Product Page URL for Hello Kitty",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "explore_url_tobasco",
+                "fieldLabel": "Explore Our Product Page URL for Tobasco",
+                "allowBlank": false,
+                "queryMode": "local",
+                "width": "300px"
+            }
+        ]
+    },
+	{
+	    "xtype": "panel",
+        "title": "Strings - Bypass Warning",
+        "collapsed": false,
+        "items": [
+            {
+                "xtype": "textfield",
+                "name": "bypass_headline1",
+                "fieldLabel": "Bypass address validation warning - headline 1",
+                "allowBlank": false,
+                "width": "300px"
+            },
+			{
+                "xtype": "textfield",
+                "name": "bypass_headline2",
+                "fieldLabel": "Bypass address validation warning - headline 2",
+                "allowBlank": false,
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "bypass_warn1",
+                "fieldLabel": "Bypass address validation warning - warning 1",
+                "allowBlank": false,
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "bypass_warn2",
+                "fieldLabel": "Bypass address validation warning - warning 2",
+                "allowBlank": false,
+                "width": "300px"
+            },
+            {
+                "xtype": "textfield",
+                "name": "bypass_proceed",
+                "fieldLabel": "Bypass address validation warning - proceed",
+                "allowBlank": false,
+                "width": "300px"
+            }
+        ]
+	}	
+  ]
+}
+
+
+
+
+
+
+
+

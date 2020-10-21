@@ -1,0 +1,25 @@
+<div class="ip-container"><div class="jb-inner-overlay"></div></div> 
+<div class="mz-productlist {% block module-classes %}{% endblock module-classes %}">
+{% if model.items %}
+    <ul class="gridder mz-productlist-grid" id="mz-productlist-list">{% for prod in model.items %}<li id="gridder-list" data-griddercontent="" class="gridder-list mz-productlist-item" data-mz-product="{{ prod.productCode }}">{% include "modules/product/product-listing" with model=prod %}</li>{% endfor %}</ul>
+{% endif %}
+    {% comment %}
+    {% if model.items %}
+    <!-- Appending Div Contents -->
+        {% for prod in model.items %}  
+            <div id="productCode_{{prod.productCode}}" class="gridder-content quickview"> 
+           
+           {% include "modules/product/product-listing" with model=prod %}
+       
+            </div>
+        {% endfor %}
+    {% endif %}  
+    {% endcomment %}  
+</div>
+
+
+
+
+
+
+

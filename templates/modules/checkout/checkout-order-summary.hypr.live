@@ -1,0 +1,68 @@
+<div class="mz-ordersummary-checkout">
+    <h3 class="mz-formstep-header">
+        {{ labels.orderSummary }}
+        <button class="mz-button mz-button-small" data-mz-action="editCart">{{ labels.editCart }}</button>
+    </h3>
+
+    <div class="mz-formstep-body">
+    
+        {% include "modules/common/order-summary" %}
+    </div><!-- #order-summary -->
+</div>
+
+	{% if model.scheduleInfo %}
+	<div class="mz-formstep-footer mz-subscription-interval-container">
+		<form>
+			<div class="mz-field-wrapper">
+				<div class="inline-content">
+					<label>How often? Every: </label>
+				</div>
+				<div class="inline-content">
+					<select id="interval-month" name="frequency" class="mz-small">
+						<option value="1" {% if model.scheduleInfo.frequency == 1 %}selected{% endif %}>1</option>
+						<option value="2" {% if model.scheduleInfo.frequency == 2 %}selected{% endif %}>2</option>
+						<option value="3" {% if model.scheduleInfo.frequency == 3 %}selected{% endif %}>3</option>
+						<option value="4" {% if model.scheduleInfo.frequency == 4 %}selected{% endif %}>4</option>
+						<option value="5" {% if model.scheduleInfo.frequency == 5 %}selected{% endif %}>5</option>
+						<option value="6" {% if model.scheduleInfo.frequency == 6 %}selected{% endif %}>6</option>
+					</select>
+					<select id="interval-month-label" name="frequencyType" class="mz-large">
+						<option value="Weeks" {% if model.scheduleInfo.frequencyType == "Weeks" %}selected{% endif %}>Weeks</option>
+						<option value="Months" {% if model.scheduleInfo.frequencyType == "Months" %}selected{% endif %}>Months</option>
+					</select>
+				</div>
+			</div>
+			<div class="mz-field-wrapper">
+				<div class="inline-content">
+					<label>For How Long? </label>
+				</div> 
+				<div class="inline-content">
+					<select id="interval-cancellation" name="endType" class="mz-full">
+						<option value="null" {% if model.scheduleInfo.endType == "until i cancel" %}selected{% endif %}>Until I Cancel</option>
+						<option value="3 Deliveries" {% if model.scheduleInfo.endType == "3 Deliveries" %}selected{% endif %}>3 Deliveries</option>
+						<option value="4 Deliveries" {% if model.scheduleInfo.endType == "4 Deliveries" %}selected{% endif %}>4 Deliveries</option>
+						<option value="5 Deliveries" {% if model.scheduleInfo.endType == "5 Deliveries" %}selected{% endif %}>5 Deliveries</option>
+						<option value="6 Deliveries" {% if model.scheduleInfo.endType == "6 Deliveries" %}selected{% endif %}>6 Deliveries</option>
+						<option value="7 Deliveries" {% if model.scheduleInfo.endType == "7 Deliveries" %}selected{% endif %}>7 Deliveries</option>
+						<option value="8 Deliveries" {% if model.scheduleInfo.endType == "8 Deliveries" %}selected{% endif %}>8 Deliveries</option>
+						<option value="9 Deliveries" {% if model.scheduleInfo.endType == "9 Deliveries" %}selected{% endif %}>9 Deliveries</option>
+						<option value="10 Deliveries" {% if model.scheduleInfo.endType == "10 Deliveries" %}selected{% endif %}>10 Deliveries</option>
+						<option value="11 Deliveries" {% if model.scheduleInfo.endType == "11 Deliveries" %}selected{% endif %}>11 Deliveries</option>
+						<option value="12 Deliveries" {% if model.scheduleInfo.endType == "12 Deliveries" %}selected{% endif %}>12 Deliveries</option>
+					</select>
+				</div>
+			</div>
+			<div class="mz-field-wrapper">
+				<div class="inline-content"> 
+					<label>When? Starting: </label>
+				</div>
+				<div class="inline-content" style="position: relative;">
+					<input type="text" name="startDate" id="interval-startdate" class="mz-large" style="width: 70%; margin-left: 0;" readonly="true" value="{% if model.scheduleInfo.startDate %}{{model.scheduleInfo.startDate}}{% endif %}">
+					</input>
+					<label class="mz-small" for="interval-startdate" style="position: absolute; right: -2px; top: 5px;"><img class="mz-calendar-icon" src="../resources/images/calendaricon1.png" style="width: 90%;"></img></label>
+				</div>
+			</div>
+		</form>
+	</div>
+	{% endif %}
+</div>

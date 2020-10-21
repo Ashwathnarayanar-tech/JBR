@@ -1,0 +1,47 @@
+<div class="jb-childcategory" data-mz-category-url="{{model.guide}}" data-mz-category-guide="{{model.guide}}">
+  <div class="jb-colapsing-title">
+    <h1 class="jb-category-title">{{model.name}}</h1>
+    <p class="mz-desktop">open/close</p>
+    <p class="mz-mobile">+</p>
+  </div>
+
+  <div class="jb_contentfolder" style="display:none">
+    <div class="jb-childcategory-description">{{model.description|safe}}</div>
+    <div class="jb-childChildrenCategories-container">
+
+      {% for childChildrenCategories in model.childcategories%}
+      <a href="c/{{childChildrenCategories.slug}}">
+        <div class="jb-childChildrenCategory" style="background-image:url('{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/{{childChildrenCategories.image}}');">
+          <p href="c/{{childChildrenCategories.slug}}">
+            {{childChildrenCategories.name}}
+          </p>
+        </div>
+      </a>
+      {% endfor %}
+
+    </div>
+    <div class="jb-child-category-button">
+      <a href="c/{{model.category}}">
+        <span>Shop</span>  {{model.shopName}}&nbsp;►
+      </a>
+      <a href="/store-locator">
+        <span>Find</span> a store near you&nbsp;►
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

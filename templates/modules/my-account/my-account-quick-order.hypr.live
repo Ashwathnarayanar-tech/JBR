@@ -1,0 +1,17 @@
+<h3 class="mz-l-stack-sectiontitle">{{ labels.accountQuickOrder }}</h3>
+<div >
+    {% if model.items %}
+        <div data-mz-quick-orderlist class="quick-order-list">
+            {% include "modules/my-account/my-account-quick-order-items" %} 
+        </div>
+        
+    {% else %}
+        <div class="no-cards">   
+            <p class="mz-accountaddressbook-empty">
+                {{ labels.accountNoOrders }}
+            </p>
+        </div>
+    {% endif %}
+</div>
+
+

@@ -1,0 +1,12 @@
+
+{% preload_json featured_brands.config.featured-brand-categories "shop_featured_categories" %}
+
+{% require_script "widgets/shop-our-products-featuredbrands" %}
+<ul class="jb-ourproducts-brand-lister" id="jb-ourproducts-brand-lister">
+
+</ul>
+
+
+
+
+

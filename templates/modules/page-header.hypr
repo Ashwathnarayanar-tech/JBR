@@ -1,0 +1,177 @@
+{% if pageContext.cmsContext.template.path == 'login' %}
+
+
+
+{%else%}
+{% comment %} {% if pageContext.secureHost == "https://t12046-s16708.sandbox.mozu.com" %} {% if pageContext.pageType == "category" or pageContext.pageType == "search" %}style="width: 79.5%;"{% endif %}{% endif %} {% endcomment %}
+
+
+{% if pageContext.isMobile %}
+<!-- Mobile code -->
+
+  <header class="mz-pageheader-mobile">
+  		<div style="width: 100%; position: absolute; z-index: 500; height: 1px; text-align: center;">
+  		    <center>
+  			<div class="jb-mobile-minicart-popup" style="background: #ffffff; margin-top: 140px; height: 200px; width: 200px; z-index: 501; display: none; position: relative;"> 
+                      <div style="background: #ff0000; padding: 5px; width: 190px; height: 20px;">
+                          <span style="color: #ffffff; font-size: 16px; font-weight: bold; float: left;">ITEM ADDED!</span>
+                          <span class="close-mobile-minicart-popup" style="float: right; color: #efefef;">X</span>
+                      </div>
+                      <div style="width: 200px; height: 170px; text-align: center; padding-top: 15px;">
+                          <img src="/resources/images/mr_jelly_belly_flag2.png">
+                      </div>
+              </div>
+              </center>
+          </div>
+  		<div class="jb-mobile-main-menu-items">  
+              <ul class="">
+                  <li class="mobile-menu-list"> 
+                      <a id="jb-mobile-menu" class="list-icon" href="#"></a>
+                  </li>
+                  <li class="mobile-menu-store">
+                      <a id="usFlag" class="store-icon" onclick="window.open('/StoreLocator','_self');" href="/StoreLocator"></a>
+                  </li>
+                  <li class="mobile-menu-logo">
+                      <a class="mobile-logo" href="/" onclick="window.open('/','_self');"></a>
+                  </li>
+                  <li class="mobile-menu-search">
+                      <a id="mobile_show_search" class="search-icon" href="#"></a>
+                  </li>
+                  <li class="mobile-menu-cart">
+                      <a id="mb_cart" class="cart-icon" href="/cart" onclick="window.open('/cart','_self');">
+                        <span class="jb-mobile-cart-count" data-mz-role="cartmonitor">0</span>  
+                        {% require_script "modules/cart-monitor" %}
+                      </a>
+                      
+                  </li>
+              </ul>
+              {% comment %}
+              <a href="javascript:;" class="left" id="jb-mobile-menu">
+                <img src="../../resources/images/menu_icon.png" alt="Menu">
+              </a>
+              
+              <a href="/StoreLocator" id="usFlag" class="left inbetween-left" onclick="window.open('/StoreLocator','_self');">
+                <img src="../../resources/images/us_flag.png" alt="">
+              </a>
+
+              <a href="/cart" id="mb_cart" class="right" onclick="window.open('/cart','_self');" >
+                <img src="../../resources/images/cart_icon.png" alt="">
+                <span class="jb-mobile-cart-count" data-mz-role="cartmonitor">0</span>
+                  {% require_script "modules/cart-monitor" %}
+              </a>
+
+              <a href="javascript:;" id="mobile_show_search" class="inbetween-right">
+                <img src="//cdn-sb.mozu.com/8018-10386/cms/10386/files/search.png" alt="search"  width="50%">
+              </a>
+              {% endcomment %}
+
+          </div>
+          
+          <div class="jb-mobile-logo">
+              <a href="/">
+                  <img src="../../resources/images/icons/mobile-logo.png" alt="" width="50%">
+              </a>    
+          </div>
+          
+          <div class="jb-mobile-main-menu-myacount">
+              {% if user.isAnonymous %}
+                   <a href="/user/login" class="my-account"> Login</a>
+           
+              {% else %}
+                 {% comment %} <a href="/myaccount" class="my-account"> {{user.firstName|default(user.emailAddress)}}!</a>{% endcomment %}
+                  <a href="/myaccount" class="my-account mobile-usermail">My Account</a> 
+                  (<a href="/logout" data-mz-action="logout" class="mz-utilitynav-link">{{ labels.logOut }}</a>)
+              {% endif %}
+       
+              <a href="javascript:;" class="number">  1-800-323-9380 </a>
+          
+          </div>
+          <div class="jb-mobile-search">
+              <p>Looking for something?</p>
+              <div class="jb-mobile-search-box-container"> 
+                  <form id="searchbox-mobile" class="mz-searchbox" action="/search">
+                      <input onclick="this.focus()" placeholder="enter search item" name="query"  data-mz-role="searchquery" type="search" value="{{pageContext.search.query}}"> 
+                      <input type="text" value="{{themeSettings.searchSort}}" name="sortBy" style="display:none;"/>   
+                      <button type="submit"></button>
+                      <div class="clearfix"></div>
+                      {% require_script "modules/contextify" %}
+                      {% require_script "modules/search-autocomplete" %}
+                  </form>
+                  
+                  <span id="jb-mobile-search-close"></span>
+              </div>
+          </div>
+  </header>
+  
+  
+  {% else %}
+    <header class="mz-pageheader-desktop {% if themeSettings.bannerImageEnabled %} mz-pageheader-hasbanner {% endif %}">
+
+            {% block store-branding %}
+                {% include "modules/page-header/store-branding" %}
+            {% endblock store-branding %}
+             
+            {% block menu %}
+                {% include "modules/site-nav" %}
+            {% endblock menu %}   
+            
+            {% block rapid-order %}
+                <div class="rapid-button desktop-ROF">
+                    <a class="rof-button" href="/rapid-order">Rapid Order Form </a>
+                    <a class="sub-button" href="/subscriptions">Subscription Order</a>
+                </div>
+            {% endblock rapid-order %}
+            
+            {% block search-box %}
+                <div class="jb-serach-box-with-label">
+                   <!-- <p>Looking for something?  </p> -->
+                    {% include "modules/page-header/search-box" %}
+                </div>
+            {% endblock search-box %}
+
+            {% block search-icon %}
+                <div class="ipad-search-icon">
+                    <span class="ipad-search-icon-cointainer">
+                        <img src="/resources/images/search_icon_blue.png" class="search icon">
+                    </span>
+                </div>
+            {% endblock search-icon %} 
+
+            {% block rapid-order %} 
+                <div class="rapid-button ipad-ROF">
+                    <a class="rof-button" href="/rapid-order">Rapid Order Form </a>
+                    <a class="sub-button" href="/subscriptions">Subscription Order</a>
+                </div>
+            {% endblock rapid-order %}
+            
+            {% block utility-nav %} 
+                {% include "modules/page-header/utility-nav" %}
+                
+            {% endblock utility-nav %}
+               
+           
+           
+    {% if pageContext.pageType == "confirmation" %}  
+    	{% if user.isAuthenticated %}
+    	<div style="float: right; margin: 10px;"><a href="/logout" data-mz-action='logout'>Logout</a></div>
+    	{% endif %}
+    	<div style="float: right; margin: 10px;"><a href="/">Continue shopping</a></div>
+    {% endif %}
+    	   
+    </header>
+{% endif %}    
+
+{%endif%}
+
+
+
+
+
+
+
+
+
+
+
+
+

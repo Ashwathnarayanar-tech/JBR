@@ -1,0 +1,61 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Creepy Critter Cupcakes</h1>
+    <article class="carnival-details txt-left">
+        <h2>Creepy Critter Cupcakes (you may also enjoy <a href="/recipes-pumpkin-patch-cupcakes">Pumpkin Patch Cupcakes)</a></h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Creepy Critter Cupcakes/creepy_critters.jpg">
+                <br>
+                <div style="width:340px;margin-top:15px;"><iframe width="100%" height="300" src="//www.youtube.com/embed/DO7bSxmHVmQ?feature=player_embedded" frameborder="0" allowfullscreen=""></iframe></div>
+            </figure>
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+            <img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border: 0">
+            </a>
+            <!-- /AddThis Button -->
+            <p>
+                Spooky creatures have never been this tasty! Jelly Belly jelly beans and Confections make these cupcakes perfect for Halloween, or any time you want a scary treat.
+            </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>4 jumbo cupcakes, baked in orange paper liners</li>
+                <li>12 standard cupcakes, baked in orange paper liners</li>
+                <li>1 can (16 oz) chocolate frosting</li>
+                <li>32 Jelly Belly <a target="_blank" href="/search/?query=Mint Cremes">Mint Cremes</a> (about 4 oz)</li>
+                <li>32 Jelly Belly <a target="_blank" href="/search/?query=Licorice Pastels">Licorice Pastels</a> (about 1 oz)</li>
+                <li>6 cups (about 3 lbs.) Jelly Belly jelly beans in flavors: <a target="_blank" href="/search/?query=Watermelon">Watermelon</a> | <a target="_blank" href="/search/?query=Juicy Pear">Juicy Pear</a> | <a target="_blank" href="/search/?query=Island Punch">Island Punch</a></li>
+                <li>
+                </li>
+                <li>64 Jelly Belly Assorted <a target="_blank" href="/search/?query=Worms">Wiggle Worms</a> (about 1 lb., 2 oz.)</li>
+                <li>16 <a target="_blank" href="/search/?query=Very Cherry">Very Cherry</a> Jelly Belly jelly beans (about 1/2 oz)</li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>
+                    Spoon 1/4 cup of the chocolate frosting into a small zipper bag. Press out the excess air and seal.
+                    Snip a small corner (1/8 inch) from the bag. Pipe a dot of frosting on the flat side of the Mint Cremes and attach a Licorice Pastel to make the monster eyes.
+                </li>
+                <li>
+                    Working on 1 cupcake at a time, spread some of the chocolate frosting on top of a cupcake, mounding slightly.
+                    Arrange like colored Jelly Belly jelly beans all around the outer edge of the cupcake lengthwise from center to outer edge.
+                    Place another row of jelly beans, slightly overlapping the first row. Continue adding rows of Jelly Belly jelly beans until it is covered.
+                    Remove 4 of the jelly beans along the outer edge and in their place add the ends of 4 Wiggle Worms as legs. Add a dot of chocolate frosting to secure if necessary.
+                    Pipe dots of frosting and attach the Mint Creme eyes and red jelly bean nose on top of the cupcake. Repeat with the other cupcakes, jelly beans and frosting.
+                </li>
+            </ol>
+            <h2>MAKES 16 CUPCAKES</h2>
+            <hr>
+            
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+

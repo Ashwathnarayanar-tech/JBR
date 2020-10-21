@@ -1,0 +1,70 @@
+{% extends "page" %}
+
+
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+
+ 
+{% block body-tag-classes %}mz-footer-static mz-store-locator {% endblock body-tag-classes %} 
+{% block body-content %}
+    <section>
+        <h1 class="mz-pagetitle">Store Locator</h1>
+        <div class="locator">
+        <iframe id="locatoriframe" width="100%" scrolling="no" src="//hosted.where2getit.com/jellybelly/us-en.html" style="border: none;"></iframe>
+        
+        
+
+<script type="text/javascript">
+var iframe_id="locatoriframe"; // replace with id of the iframe to dynamically resize
+		
+var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+var eventer = window[eventMethod];
+var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+
+eventer(messageEvent,function(e) {
+	if(e.data.indexOf("w2gi:iframeHeightUpdated") !== -1) {
+		var dimensions = e.data.split("//");
+		autoResize(dimensions[1], dimensions[2]);
+	}
+	if(e.data.indexOf("w2gi:scrollPage") !== -1) {
+		var offsets = document.getElementById(iframe_id).getBoundingClientRect();
+		
+		var values = e.data.split("//");
+		var destination = values[1];
+		var offset = values[2];
+		window.scrollTo(0, destination + offsets.top);
+		
+	}
+},false);
+
+function autoResize(newheight, newwidth){
+	document.getElementById(iframe_id).style.height= parseInt(newheight) + 40 + "px";
+}
+</script>
+
+        </div>
+    </section>
+    <a href="/shopmain" style="display: block;padding: 0px 5px;">
+        <img style=" border-radius: 10px;border: 1px solid #999; max-width: 100%;" src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/shop_online_store_locator_page.jpg">
+    </a>
+{% endblock body-content %} 
+
+
+
+
+
+
+
+

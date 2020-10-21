@@ -1,0 +1,52 @@
+.ReviewHeader{
+	display: block;
+}
+.pr-snippet-wrapper{
+	padding: 10px;
+	width: 210px;
+	position:relative;
+}
+.pr-snippet-read-write{
+	display: inherit;
+	border: 0px;
+}
+.pr-snippet-review-count,.pr-snippet-read-reviews,.pr-snippet-write-review{
+    display:inherit;
+}
+
+
+
+.pr-snapshot-body-wrapper{
+    border : 0px;
+}
+.pr-snapshot-body{
+    padding : 0px;
+}
+.pr-snapshot-consensus{
+    width : 100%;
+}
+
+.pr-attribute-group{
+    display:block;
+}
+ul.pr-other-attributes-list{
+  display:block;  
+}
+
+.pr-review-sort{
+    border : 0px;
+}
+.pr-review-count{
+    padding:5px inherit;
+}
+.pr-contents{
+    border: 0px;
+    background-color: #FFF;
+}
+
+
+.ReviewsContainer{
+    max-height:300px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}

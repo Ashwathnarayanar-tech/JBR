@@ -1,0 +1,190 @@
+<div class="mz-productlisting" data-mz-product="{{ prod.productCode }}"> 
+{% if prod.newLabel %} 
+        <p class="product-sale-new-label" attr-value="" style="background-color: #25cc38">NEW</p>
+    {% endif %}
+    {% if prod.price.price > prod.price.salePrice and prod.price.salePrice !== null and prod.price.salePrice !== 0 %}
+        <p class="product-sale-new-label" attr-value=""  style ="background-color: #ED1A2C" >SALE</p>
+    {% endif %}    
+    
+    <div class="mz-productlisting-image">
+        {% if prod.mainImage.imageUrl %}
+            <a href="{{prod.url}}">
+               <img class="img-quick" alt="{{prod.content.productName|safe}}" src="{{prod.mainImage.imageUrl}}" />
+            </a>
+        {% else %}
+            <a href="{{prod.url}}">
+                <img alt="{{prod.content.productName|safe}}" src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/{{themeSettings.no_product_image}}?max=105" />
+            </a>
+        {% endif %}
+    </div>
+      
+    <div class="jb-product-min-details">
+        <div class="mz-productlisting-info">
+            <a class="mz-productlisting-title" href="{{prod.url}}">{{prod.content.productName|safe}}</a>
+            
+        </div>
+  <p class="jb-product-description">{{ prod.content.productShortDescription|safe }}</p>
+        <div class="clear"></div>    
+        <div class="jb-quickviewdetails">
+        <div class="jb-product-prize" data-mz-product-price="{{prod.price.price}}">
+            {% if prod.options and prod.options.length > 0 %}
+                {% for option in prod.options %}
+                    {% if option.attributeDetail.inputType == "List" %}
+                        <select plp-giftcart-prize-change-action data-jb-pid="{{ prod.productCode }}" data-mz-product-option="tenant~gift-card-prices"
+                            {% if option.isMultiValue %}multiple{% endif %} 
+                            class="" data-mz-product-option="{{ option.attributeFQN }}"
+                            style="         display: inline-block;
+                                            zoom: 1;
+                                            margin: 0 1px;
+                                            padding: 2px 2px;
+                                            font-size: 12px;
+                                            font-family: Trebuchet MS,Verdana,sans-serif;
+                                            width: 135px;
+                                            text-align: center;
+                                            border: 1px solid #ccc;
+                                            border-radius: 3px;
+                                            height: auto;
+                                            font-weight: bold;
+                                            color: #5E5454;">
+                            {% if not option.isMultiValue %}<option>Select gift amount</option>{% endif %}
+                            {% for value in option.values %}
+                            <option {% if not value.isEnabled %} class="is-disabled" {% endif %} {% if value.isSelected %}selected="true"{% endif %}
+                                value="{{value.value}}">$
+                                {{value.stringValue|default(value.value)}}{% if value.deltaPrice and value.deltaPrice > 0 %} ( {{ value.deltaPrice|currency }} {{ labels.more }} ){% endif %}</option>
+                            {% endfor %}
+                        </select>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                {%if prod.price.price%}<p class="jb-quickprice"><span>Price:</span> {{prod.price.price|currency}}</p>{%endif%}
+                {% if prod.price.price !=  prod.price.salePrice %} 
+                {%if prod.price.salePrice%}<p class="jb-quickcsale">SALE: {{prod.price.salePrice|currency}}</p>{%endif%}
+                {% endif %}
+            {% endif %}    
+        </div> 
+       
+        <div class="mz-productdetail-conversion-controls">
+            <span class="mz-qty-label">{{ labels.qty }}</span>
+            {% if model.price.price > 0 %}
+            <select class="mz-productdetail-qty" id="quantity" name="quantity"  data-mz-value="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>  
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+            </select>
+            {% else %}
+                <select class="mz-productdetail-qty" id="quantity" name="quantity"  data-mz-value="quantity">
+                    <option value="1">1</option>
+                </select>    
+            {% endif %}
+          {% comment %}
+          <input class="mz-productdetail-qty" type="number" value="1" min="1" {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} data-mz-value="quantity" />
+          {% endcomment %}
+          <span class="mz-validationmessage" data-mz-validationmessage-for="quantity"></span>
+        </div>
+        <p class="stock {% if model.purchasableState.isPurchasable %} green {% endif %}">{% if model.purchasableState.isPurchasable and model.inventoryInfo.onlineStockAvailable > 1 %}{% if model.daysAvailableInCatalog == -10 %}Available:<b class="blue"> {{ model.dateFirstAvailableInCatalog|date("m/d/y") }}</b> {% else %} Available: <b class="green">NOW</b> {% endif %}{% else %}{% if model.inventoryInfo.onlineStockAvailable <= 0 %}Available: <b class="blue">SOON</b>{% endif %}{% endif %}</p>
+        {% comment %}
+        <div class="jb-buy-product quickview-jb">
+            {% if  prod.purchasableState.isPurchasable %}
+                <a id="add-to-cart-cur" href="javascript:void(0);" data-mz-prcode="{{ prod.productCode }}"  data-jb-price="{% if prod.price.onSale %}{{ prod.price.salePrice }} {% else %} {{ prod.price.price }} {% endif %}" data-jb-pid="{{ prod.productCode }}" class="jb-add-to-cart-cur jb-tealium-trigger" type="submit" > ADD TO CART </a>
+            {% else %}   
+                {% if prod.options and prod.options.length > 0 %}
+                    <a id="add-to-cart-cur" href="javascript:void(0);" data-mz-prcode="{{ prod.productCode }}" data-jb-price="
+                        {% if prod.price.onSale %}{{ prod.price.salePrice }} {% else %} {{ prod.price.price }} {% endif %}" 
+                        data-jb-pid="{{ prod.productCode }}" 
+                        class="jb-add-to-cart-cur jb-tealium-trigger gift-prize-select" type="submit" >
+                        SHOP GIFT CARD
+                    </a>
+                {% else %}
+                    <p class="jb-out-of-stock-cur" data-mz-product-code="{{ prod.productCode }}" data-mz-location-code="MDC" style="cursor: pointer;"> Notify Me </p>
+                {% endif %}
+            {% endif %}
+        </div>
+        {% endcomment %}
+        
+        <div class="jb-buy-product quickview-jb"> 
+            {% if  model.purchasableState.isPurchasable %} 
+                {% if model.inventoryInfo.onlineStockAvailable > 1 and model.daysAvailableInCatalog == -10 %}
+                    <a id="add-to-cart" href="javascript:void(0);" data-mz-prcode="{{ model.productCode }}"  data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" data-jb-pid="{{ model.productCode }}" class="show-popup-confirmation jb-tealium-trigger" type="submit" >ADD TO CART</a>
+                {% else %}
+                    {% if model.inventoryInfo.onlineStockAvailable > 1 %}
+                        <a id="add-to-cart-cur" href="javascript:void(0);" data-mz-prcode="{{ model.productCode }}"  data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" data-jb-pid="{{ model.productCode }}" class="jb-add-to-cart-cur jb-tealium-trigger" type="submit" > ADD TO CART </a>
+                    {% else %}
+                        <p class="jb-out-of-stock-cur" data-mz-product-code="{{ prod.productCode }}" data-mz-location-code="MDC" style="cursor: pointer;"> Notify Me </p>
+                    {% endif %}
+                {% endif %}
+            {% else %}   
+                {% if model.options and model.options.length > 0 %}
+                    <a id="add-to-cart" href="javascript:void(0);" data-mz-prcode="{{ model.productCode }}" data-jb-price="
+                        {% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" 
+                        data-jb-pid="{{ model.productCode }}" 
+                        class="jb-add-to-cart jb-tealium-trigger gift-prize-select" type="submit" >
+                        SHOP GIFT CARD
+                    </a>
+                {% else %}
+                    <p class="jb-out-of-stock-cur" data-mz-product-code="{{ prod.productCode }}" data-mz-location-code="MDC" style="cursor: pointer;"> Notify Me </p>
+                {% endif %}
+            {% endif %}
+        </div>
+        <p class="stock {% if model.inventoryInfo.onlineStockAvailable > 0 and model.daysAvailableInCatalog == -10 %} notify-me jb-out-of-stock{% endif %}" data-mz-product-code="{{ model.productCode }}" data-mz-location-code="{{ model.inventoryInfo.onlineLocationCode }}">{% if  model.purchasableState.isPurchasable and model.inventoryInfo.onlineStockAvailable > 0 and model.daysAvailableInCatalog == -10 %}<span class="lowercase">or </span>NOTIFY ME {% else %}  {% endif %}</p>
+        <div class="clear"></div>
+        <div class="jb-information">
+            <p class="jb-prodcutinfo"> Product Info</p>
+            <p class="jb-mode"> {{ prod.content.productFullDescription }} </p>
+            <p class="jb-view"><a href="{{prod.url}}">View Details</a></p>
+        </div>
+    </div>            
+    </div>
+     
+    
+</div>
+
+
+
+

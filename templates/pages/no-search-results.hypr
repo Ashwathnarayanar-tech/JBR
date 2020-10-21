@@ -1,0 +1,46 @@
+{% extends "page" %}
+
+{% block body-tag-classes %}mz-category mz-noresults {% endblock body-tag-classes %}
+{% block body-content %}
+<div class="jb-no-result-container">
+    <div class="jb-no-result-box">
+       {% dropzone "SLI" scope="template"%}
+  
+        <div class="jb-no-search-result">
+         <p class="jb-no-search-result-text" style="font-size: 14px;">
+       Sorry, but 
+         <span style="font-weight: bold; font-style: italic;">
+        {{ pageContext.search.query }}
+         </span>
+         is unavailable on this site. If you feel that there's an error, please call 1-800-323-9380 (US only) and ask for Customer Service.
+         </p>  
+                <p class="jb-search-phrases">{{ labels.jbSearchPhrasesSuggetions}}</p>
+        <br>
+        {% dropzone "content" scope="template"%}
+        {% comment %}
+                <h3>Jelly Belly Recommends</h3>
+				<div id="mz-drop-zone-cateoryplpdropzone-above-mbz" class="mz-drop-zone"></div>
+                <div id="mybuyspagezone2" mybuyszone="2" class="recommended-product"></div>
+                <div id="mz-drop-zone-cateoryplpdropzone-below-mbz" class="mz-drop-zone"></div>
+                <div mybuyszone="2" class="recommended-product"></div>                  
+        {% endcomment %}
+        </div>
+    </div>
+    <div  class="jb-no-search-result-sidebar">
+        <div class="jb-no-search-result-facetHeaderdiv">
+            
+        </div> 
+        <a href="/shipping-information" target="_blank">
+            <img src="../resources/images/directimages/free_Shipping_50.png" border="0" style="margin:16px 0px 20px 5px;"/>
+        </a>
+        <a  class="jb-McAfee" target="_blank" href="https://www.mcafeesecure.com/RatingVerify?ref=jellybelly.com">
+            <img width="94" height="54" border="0" 
+                src="//images.scanalert.com/meter/jellybelly.com/23.gif" 
+                alt="McAfee Secure sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" 
+                oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;">
+        </a>
+    </div>
+</div>
+
+{% endblock body-content %}
+

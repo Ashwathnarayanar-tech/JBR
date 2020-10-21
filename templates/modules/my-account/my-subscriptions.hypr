@@ -1,0 +1,4 @@
+<h3 class="mz-l-stack-sectiontitle">{{ labels.subscription }}</h3>
+<div class="mz-subscription-section mz-l-paginatedlist">
+
+</div>

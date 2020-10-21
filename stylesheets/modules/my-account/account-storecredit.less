@@ -1,0 +1,236 @@
+
+
+.mz-accountstorecredit-row {
+    &:last-child td {
+        padding-bottom: @gutter/2;
+    }
+}
+
+.mz-accountstorecredit-totalrow {
+    td {
+        border-top: 1px solid #eee;
+    }
+}
+
+.mz-accountstorecredit-totallabel {
+    font-size: @fontSizeLarger;
+    font-weight: bold;
+    padding-right: @gutter/2;
+}
+
+.mz-accountstorecredit-totalamount {
+    font-size: @fontSizeLarger;
+}
+//Custom
+#x-account-storecredit{
+    .mz-l-stack-sectiontitle{
+        border-top: 1px solid #ccc;
+        padding: 11px 0px 11px 22px;
+        border-bottom: 1px solid #ccc;
+        font-size: 14px;
+        font-family: @Trebuchet;
+        color: #000;
+    }
+    .mz-subtitle{
+        padding-left: 22px;
+        font-size: 14px;
+    }
+    .mz-subtitle-para{
+        padding-left: 22px;
+        font-size: 12px;
+    }
+    .mz-accountstorecredit-form {
+        padding-left: 22px;
+        
+        .mz-accountstorecredit-input {
+            width: 250px;
+        }
+        .mz-accountstorecredit-input{
+          width: 303px;
+          padding: 7px 13px;
+          font-size: 14px;
+        }
+        .mz-accountstorecredit-add{
+            background: #36abe2;
+            border: 0;
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 0;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            padding: 8px 21px;
+            font-size: 14px;
+            font-weight: bold;
+            &:hover {
+                background: #077bb2;
+            }
+        }
+    }
+    .mz-accountstorecredit-table{
+        padding-left: 22px;
+        margin: 40px 0;
+        .mz-table {
+            tfoot {
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                
+            }
+            .mz-accountstorecredit-totalrow td {
+                border: none;
+                padding: 10px 0;
+                color: #F8732E;
+            }
+            th {
+                color: #F8732E;
+                border-bottom: 1px solid #CCC;
+                border-top: 1px solid #CCC;
+                padding: 10px 0;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 950px) {
+.mz-l-stack {
+   
+        #x-account-storecredit {
+            .mz-l-stack-sectiontitle{
+                padding-left: 0px;
+            }
+            .mz-subtitle{
+                padding-left: 0px;
+            }
+            .mz-subtitle-para{
+                padding-left: 0px;
+            }
+            .mz-accountstorecredit-form {
+                padding-left: 0px;
+                
+                .mz-accountstorecredit-input {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+                .mz-accountstorecredit-add{
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+            .mz-accountstorecredit-table{
+                padding-left: 0px;
+                margin: 20px 0;
+            }
+            .mz-table {
+           display: block;
+           width: 100%;
+           float:none;
+           .mz-accountstorecredit-totallabelcell {
+               text-align: center;
+           }
+           thead, tbody { 
+        		display: block; 
+        		tr, td, th {
+        		    display: block;
+        		}
+        	}
+        	tfoot {
+        	    display: table;
+        	    width: 100%;
+        	}
+        	thead tr { 
+        		position: absolute;
+        		top: -9999px;
+        		left: -9999px;
+        	}
+        	tbody {
+        	tr {
+        	    border: 1px solid #ccc;
+        	    margin: 10px;
+        	    padding: 10px;
+        	    td {
+        	        padding-top: 4px;
+        	        padding-bottom: 4px;
+        	    }
+    	    }
+	
+        	td { 
+        		/* Behave  like a "row" */
+        		border: none;
+        		position: relative;
+        		padding-left: 110px; 
+        		overflow:  hidden;
+        		
+        	}
+        	
+        	td:before { 
+        		/* Now like a table header */
+        		position: absolute;
+        		/* Top/left values mimic padding */
+        		top: 4px;
+        		left: 6px;
+        		width: 45%; 
+        		padding-right: 10px; 
+        		white-space: nowrap;
+        		text-align: left;
+        		color: #F8732E;
+        	} 
+        
+        	
+           
+    		
+            
+        	/*
+        	Label the data
+        	*/
+        	td:nth-of-type(1):before { 
+        	    content: "Claim Code:"; 
+        	    top: 4px;
+        	    font-weight: bold;
+    	    }
+        	td:nth-of-type(2):before { 
+        	    content: "Credit Date:";  
+        	    top: 4px;
+        	    font-weight: bold;
+    	    }
+        	td:nth-of-type(3):before { 
+        	    content: "Credit Amount:"; 
+        	    top: 4px;
+        	    font-weight: bold;
+        	    
+    	    }
+    	    td:nth-of-type(4):before { 
+        	    content: "Remaining:";
+        	    top: 4px;
+        	    font-weight: bold;
+        	    
+    	    }
+        	}
+        	
+       }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+.mz-l-stack {
+   
+        .mz-accountstorecredit {
+            .mz-l-stack-sectiontitle{
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

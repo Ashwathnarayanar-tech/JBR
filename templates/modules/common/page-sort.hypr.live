@@ -1,0 +1,83 @@
+
+
+{% comment %}
+  <select data-mz-value="sortBy" autocomplete="off">
+    {% block sort-types %}
+    
+        {% if model.currentSort  %}
+            {% for tsort in themeSettings.sortByOptions %}
+                <option {% if tsort.value %}value="{{ tsort.value }}"{% else %} value="" {% endif %}
+                    {% if model.currentSort == tsort.value %} selected="selected"{% endif %}>{{ tsort.text }}</option>
+            {% endfor %}
+                {% else %}
+                    {% for tsort in themeSettings.sortByOptions %}
+                            <option {% if tsort.value %}value="{{ tsort.value }}"{% else %} value="" {% endif %}
+                                    {% if themeSettings.defaultSort == tsort.value %} selected="selected"{% endif %}>{{ tsort.text }}</option>
+                    {% endfor %}   
+        {% endif %}
+    
+    {% endblock sort-types %}
+  </select>  
+  
+
+ <select data-mz-value="sortBy" class="mz-pagingcontrols-pagesort-dropdown" autocomplete="off">
+    {% block sort-types %}
+    {% for sort in model.sorts %}
+            {% with sort.value as sortValue %}
+        <option data-mz-url="{% make_url "sorting" model with sortBy=sortValue %}" value="{{ sortValue }}"{% if model.currentSort == sortValue %}
+        selected="selected"{% endif %}>{{ sort.text }}</option>
+      {% endwith %} 
+    {% endfor %}
+    {% endblock sort-types %}
+  </select>
+  {% endcomment %}
+  
+ <p class="{% if model.currentSort == null %} deflab {% endif %}">{{ labels.sortby }}</p>
+  <div class="wrapper-demo"> 
+ <div id="dd" tabindex="1"  class="mz-pagingcontrols-pagesort-dropdown wrapper-dropdown-1" autocomplete="off">
+    {% if model.currentSort == null %}
+        <div class="sortdefval"> Default</div>
+    {% endif %} 
+    {% for sort in model.sorts %}
+        {% with sort.value as sortValue %}
+            {% if sort.selected %}
+                {% for sorts in sort.text|split(":") %}
+                    {% if forloop.first %} 
+                        <span class="sortlab {% if model.currentSort == sortValue %} active {% endif %}"> {{sorts}}</span>
+                    {% else %}
+                        <span class="sortval"> {{sorts}} </span>
+                    {% endif %}
+                {% endfor %}
+                {% else %}
+                  
+            {% endif %}
+        {% endwith %}
+    {% endfor %}
+   
+    {% block sort-types %} 
+    <ul class="dropdown"> 
+    {% for sort in model.sorts %}
+            {% with sort.value as sortValue %}
+            {% if sort.text != "Default"%}  
+        <li data-mz-url="{% make_url "sorting" model with sortBy=sortValue %}" data-mz-value="sortBy" id="sort"> 
+        {% for sorts in sort.text|split(":") %}
+        {% if forloop.first %} 
+        <span class="sort-in-lab"> {{sorts}}</span>
+        {% else %}
+         <span class="sort-in-val"> {{sorts}} </span>
+        {% endif %}
+        {% endfor %}
+        </li>
+      {% endif %}
+      {% endwith %}
+      
+    {% endfor %}
+    </ul>
+    {% endblock sort-types %}
+  </div>
+  </div>
+
+
+
+
+

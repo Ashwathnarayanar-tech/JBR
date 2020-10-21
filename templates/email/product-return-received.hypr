@@ -1,0 +1,70 @@
+  {% extends "email/email" %}
+
+  {% block body-content %}
+
+   
+	<dl class="mz-orderheader">
+
+	<dt style="color:black;" >{{ labels.orderNo }}</dt>
+		<dd><a href="https://{{domainName}}/checkout/{{model.id}}/confirmation">{{ model.orderNumber }} </a></dd>
+	
+
+		<dt style="font-weight:bold;color:black;"> {{ labels.return }}</dt>
+		<dd>{{ model.returnNumber }}</dd>
+
+		<dt style="font-weight:bold;color:black;">{{ labels.orderDate }}:</dt>
+		<dd>{{ model.auditInfo.createDate }}</dd>
+
+		<dt style="font-weight:bold;color:black;">{{ labels.returnRequestDate }}</dt>
+		<dd>{{ model.rmaDeadline }}</dd>
+	</dl>
+	<br />
+
+
+	{% if user and user.firstName %}
+		<p style="line-height:25px;font-size:12px;color:black; ">	{{ labels.emailOpening|string_format(user.firstName)|safe }}</p>
+	{% else %}
+		<p style="line-height:25px;font-size:12px;color:black;">	{{ labels.emailOpeningAlternative|safe }}
+	{% endif %}
+	</p>
+
+	<p style="line-height:25px;color:black;" >{{ labels.returnReceivedBlob1|string_format(siteContext.generalSettings.websiteName, domainName)|safe }}</p>
+
+	<table align="left" class="mz-ordersummary" style="border-collapse:collapse;width:100%;" >
+        <thead>
+            <tr>
+                <th class="mz-ordersummary-header-qty" style="border:1px solid #cfcfcf; text-transform:uppercase; background:#0079b0 ; color:white;
+text-align: center;">{{ labels.qty }}</th>
+                <th style="border:1px solid #cfcfcf; text-transform:uppercase; background:#0079b0;color: white;
+text-align: center;" class="mz-ordersummary-header-product">{{ labels.product }}</th>
+            </tr>
+		</thead>
+		<tbody class="mz-ordersummary-lineitems">
+		{% for item in model.items %}
+			{% for reason in item.reasons %}
+			<tr class="mz-ordersummary-line mz-ordersummary-line-item">
+				<td style="border:1px solid #cfcfcf;text-align:center;color:black;">{{ reason.quantity }}</td>
+				<td style="border:1px solid #cfcfcf;text-align:center;color:black;" class="mz-ordersummary-item-product">{{ item.product.name }}</td>
+			</tr>
+			{% endfor %}
+		{% endfor %}
+		</tbody>
+    </table>
+
+	<span class="display:block ; line-height:25px; font-size:12px; ">{{ labels.returnReceivedBlob2|safe }} </span>
+
+	<p style="line-height:25px;font-size:12px;color:black;"> {{ labels.emailClosing|string_format(siteContext.generalSettings.websiteName)|safe }}</p>
+	
+ 
+
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+

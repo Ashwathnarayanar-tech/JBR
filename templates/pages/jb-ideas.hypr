@@ -1,0 +1,140 @@
+{% extends "page" %}
+
+ 
+
+{% block body-tag-classes %}mz-visit-us mz-factory{% endblock body-tag-classes %}
+
+{% block body-content %}
+    
+    <h1 class="mz-pagetitle">Jelly Belly Ideas</h1> 
+    <ul class="jb-feature-brands">
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Wedding Center</h3>
+                <figure>
+                  <a href="/wedding-center">
+                    <img src="/resources/images/jb-ideas/wedding_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 Jelly Belly is proud to offer unique candies for your most special day. With flavors and colors befitting the occasion, our vast selection will give your arrangements a classic, yet fun flair. 
+                  <a class="jb-feature-brand-moreinfo" href="/wedding-center"="/pages/factory-tour">See More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+
+   <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Birthday Ideas</h3>
+                <figure>
+                  <a href="/birthday-party-ideas">
+                    <img src="http://cdn-tp1.mozu.com/9046-m1/cms/files/47e97669-9a87-45ad-8423-404a867f5ab4" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Let Jelly Belly help you throw a birthday bash everyone will talk about! Party theme ideas, candy buffets, and recipes, plus free printables you can print and cut at home. 
+                  <a class="jb-feature-brand-moreinfo" href="/birthday-party-ideas">See More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Bake And Decorate Center</h3>
+                <figure>
+                  <a href="/bake-and-decorate-Index">
+                    <img src="/resources/images/jb-ideas/decorating_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Create stunning and scrumptious cupcake masterpieces with videos and step-by-step instructions direct from the authors of Hello, Cupcake? Karen Tack and Alan Richardson! 
+                  <a class="jb-feature-brand-moreinfo" href="/bake-and-decorate-Index">See More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Cooking/Entertaining</h3>
+                <figure>
+                  <a href="/cooking-index">
+                    <img src="/resources/images/jb-ideas/entertaining_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  You can't go wrong with these unique ideas from Jelly Belly. They've got the flavor and the style to make your shindig a surefire hit. 
+                  <a class="jb-feature-brand-moreinfo" href="/cooking-index">See More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Spring and Easter Ideas</h3>
+                <figure>
+                  <a href="/spring-and-easter-ideas">
+                    <img src="http://cdn-tp1.mozu.com/9046-m1/cms/files/eb63f364-705a-49c5-8b81-03b5889179f0" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  From Easter brunch to the shower of your dreams, make your spring celebrations memorable with entertaining ideas, tips and recipes from the jelly bean experts. 
+                  <a class="jb-feature-brand-moreinfo" href="/spring-and-easter-ideas">See More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>MyJellyBelly.com - Custom Gifts</h3>
+                <figure>
+                  <a href="https://www.myjellybelly.com/">
+                    <img src="/resources/images/jb-ideas/myjb_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Now you can give customized Jelly Belly gifts! Pick the container, personalize the message and image, then choose your favorite beans. 
+                  <a class="jb-feature-brand-moreinfo" href="https://www.myjellybelly.com/">See More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Coloring Pages</h3>
+                <figure>
+                  <a href="/coloring-pages">
+                    <img src="/resources/images/jb-ideas/coloring_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Bring color (any color you want) to Mr. Jelly Belly at your birthday party with these fun coloring pages. You have 10 different ones to choose from! 
+                  <a class="jb-feature-brand-moreinfo" href="/coloring-pages">See More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+    </ul>
+    
+    <div class="clearfix"></div>
+{% endblock body-content %}
+
+
+
+
+
+

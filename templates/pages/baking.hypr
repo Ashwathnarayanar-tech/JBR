@@ -1,0 +1,346 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-factory{% endblock body-tag-classes %} 
+{% block body-content %}
+
+<h1 class="mz-pagetitle"> Bake and Decorate Center </h1>
+    <ul class="jb-feature-brands">
+
+	        <!-- Jelly Belly Flower Cookie Pops -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Jelly Belly Flower Cookie Pops </h3>
+                <figure>
+                  <a href="/recipes-flower-pops">
+                    <img src="/resources/images/baking_decoration/flowerPops_t.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  These colorful cookies are fun and easy to make, and are topped with some of your favorite Jelly Belly Confections like Mint Cremes and Jelly Belly Chewy Fish, and of course lots of Jelly Belly jelly beans! 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-flower-pops">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+		   <!-- Easter Bunny Cookies -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Easter Bunny Cookies </h3>
+                <figure>
+                  <a href="/recipes-bunny-cookies">
+                    <img src="/resources/images/baking_decoration/BunnyCookies_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Decorate with fun this cute colorful Easter bunny with Jelly Belly® Kids Mix jelly beans. The perfect Easter treat to gather families! 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-bunny-cookies">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+    
+        
+        <!-- Lucky Shamrock Cupcakes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Lucky Shamrock Cupcakes </h3>
+                <figure>
+                  <a href="/recipes-lucky-shamrock-cupcakes">
+                    <img src="/resources/images/baking_decoration/luckyShamrocks_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 Whoever you make these for will be the luckiest one! Bright and beautifully green, these sweet shamrocks are easy to create and simply scrumptious. 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-lucky-shamrock-cupcakes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <!-- Spring Flowers Cupcakes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Spring Flowers Cupcakes </h3>
+                <figure>
+                  <a href="/recipes-spring-flowers-cupcakes">
+                    <img src="/resources/images/baking_decoration/spring_flowers_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 Just as tasty as they are beautiful, these cupcakes are a fantastic addition to any Easter party. 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-spring-flowers-cupcakes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+<!-- NEW! Spring White Chocolate Pops -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Spring White Chocolate Pops </h3>
+                <figure>
+                  <a href="/recipes-white-chocolate-pops-with-jelly-belly-jelly-beans">
+                    <img src="/resources/images/baking_decoration/lolli_t.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 These candy creations will delight for any occasion and are super simple to make! Grab your favorite cookie cutter and Jelly Belly jelly beans, and check out the recipe.   
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-white-chocolate-pops-with-jelly-belly-jelly-beans">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+		     <!-- Cupid Cupcakes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Cupid Cupcakes </h3>
+                <figure>
+                  <a href="/recipes-cupid-cupcakes">
+                    <img src="/resources/images/baking_decoration/cupidCupcakes_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Love, Jelly Belly style! If your sweetheart has a sweet tooth, create these charming cupcakes and watch the sparks fly!  
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-cupid-cupcakes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Bake-Sale Pies -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Bake-Sale Pies </h3>
+                <figure>
+                  <a href="/recipes-bake-sale-pies">
+                    <img src="/resources/images/baking_decoration/bakesalepies_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  These little cupcakes are so pie-like you'll want to cool them on your windowsill before you eat them! Bring them to any bake sale and watch them turn heads. 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-bake-sale-pies">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Tie-Riffic Father's Day Cake -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Tie-Riffic Father's Day Cake </h3>
+                <figure>
+                  <a href="/recipes-tie-riffic-fathers-day-cake">
+                    <img src="/resources/images/baking_decoration/tierifficFathersDay_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  It's a delicious twist on that classic Father’s Day gift, easy to make and handsome-looking as well. Why go shopping when you can decorate for Dad? 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-tie-riffic-fathers-day-cake">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Bubble Trouble Cupcakes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Bubble Trouble Cupcakes </h3>
+                <figure>
+                  <a href="/recipes-bubble-trouble-cupcakes">
+                    <img src="/resources/images/baking_decoration/bubble-trouble_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Follow the directions from our Jelly Belly Cupcake Challenge winner to create these fun and suprisingly simple cupcakes! 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-bubble-trouble-cupcakes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Cheers to You Cupcakes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Cheers to You Cupcakes </h3>
+                <figure>
+                  <a href="/recipes-cheers-to-you-cupcakes">
+                    <img src="/resources/images/baking_decoration/cheersToYou_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Have a happy new year, any time of year! A few jelly beans, a few confections and some martini glasses and you're ready to create New Year's treats for partiers of all ages.
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-cheers-to-you-cupcakes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Indian Corn Cupcakes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Harvest Corn Cupcakes </h3>
+                <figure>
+                  <a href="/recipes-indian-corn-cupcakes">
+                    <img src="/resources/images/baking_decoration/indiancorn_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 A-maize your crowd with this crafty centerpiece inspired by the dried harvest corn decorations that grace doorways each fall.
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-indian-corn-cupcakes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Party Perfect Cupcakes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Party Perfect Cupcakes </h3>
+                <figure>
+                  <a href="/recipes-party-perfect-cupcakes">
+                    <img src="/resources/images/baking_decoration/partyPerfect_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 A unique, colorful spin on birthday cakes! These stacked cupcakes trimmed with Jelly Belly jelly beans make a special day even better! 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-party-perfect-cupcakes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Movie Popcorn Cupcakes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Movie Popcorn Cupcakes </h3>
+                <figure>
+                  <a href="/recipes-movie-popcorn-cupcakes">
+                    <img src="/resources/images/baking_decoration/moviepopcorn_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                It's a luscious twist on a night at the movies. They've got the look and flavor of buttered popcorn with a sweet cupcake kick! 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-movie-popcorn-cupcakes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Creepy Critter Cupcakes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Creepy Critter Cupcakes </h3>
+                <figure>
+                  <a href="/recipes-creepy-critter-cupcakes">
+                    <img src="/resources/images/baking_decoration/creepyCritters_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                Spooky creatures have never been this tasty! Jelly Belly jelly beans and Confections make these cupcakes the perfect Halloween treats. 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-creepy-critter-cupcakes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Pumpkin Patch Cupcakes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Pumpkin Patch Cupcakes </h3>
+                <figure>
+                  <a href="/recipes-pumpkin-patch-cupcakes">
+                    <img src="/resources/images/baking_decoration/pumpkinPatch_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                Don't carve – just bite! Covered in orange-colored jelly beans, these cakes are the spitting images of your favorite gourd. And no seeds! 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-pumpkin-patch-cupcakes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Sugarplum Sleigh -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Sugarplum Sleigh </h3>
+                <figure>
+                  <a href="/recipes-Sugarplum-Sleigh">
+                    <img src="/resources/images/baking_decoration/sleigh_t.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+               The kids will delight in becoming Santa's helpers this holiday season when they decorate a gingerbread sleigh dashing through candy snow. 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-Sugarplum-Sleigh">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Shooting Star Cookie Pops -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Shooting Star Cookie Pops </h3>
+                <figure>
+                  <a href="/recipes-shooting-star-cookie-pops">
+                    <img src="/resources/images/baking_decoration/shootingStar_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+               Just as fun as watching fireworks, but a lot better tasting! These patriotic pops are yummy sugar cookies lit up with Jelly Belly beans and Confections. A fun summer sweet!
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-shooting-star-cookie-pops">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Trim The Tree Cupcakes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Trim The Tree Cupcakes </h3>
+                <figure>
+                  <a href="/recipes-trim-the-tree-cupcakes">
+                    <img src="/resources/images/baking_decoration/trimTheTree_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+               Deck the cakes with loads of candy! Christmas is sweeter with Jelly Belly ornaments on a cupcake tree. A Sunkist top, and it's extra festive!
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-trim-the-tree-cupcakes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Holiday Wreath Cupcakes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Holiday Wreath Cupcakes </h3>
+                <figure>
+                  <a href="/recipes-holiday-wreath-cupcakes">
+                    <img src="/resources/images/baking_decoration/Jelly-Belly-Wreath_s.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+               The great thing about making a wreath is that you can make it as large or as small as you like. Just remember to have plenty of Jelly Belly® jelly beans on hand! 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-holiday-wreath-cupcakes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+    </ul>
+    
+    <div class="clearfix"></div>
+
+{% endblock body-content %}
+
+
+
+
+
+
+
+

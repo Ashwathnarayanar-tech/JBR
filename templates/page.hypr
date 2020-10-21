@@ -1,0 +1,433 @@
+{% autoescape on %}
+{% block doctype %}
+<!doctype html>
+{% endblock doctype %}
+{% block open-html-tag %}
+<html class="no-js" lang="en">
+{%endblock open-html-tag %}
+    {% block head-tag %}
+    <head>
+        {% block meta-tags %}
+            <meta charset="utf-8"> 
+            {% block meta-candytags %} 
+                <meta name="description" content="{{ PageContext.MetaDescription }}">
+        		<meta name="keywords" content="{{ PageContext.MetaKeywords }}">
+		    {% endblock meta-candytags %}
+    		<meta name="correlationId" content="{{ pageContext.correlationId }}">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        {% include "modules/json-required-for-hyprlive" %}
+        {% endblock meta-tags %}
+
+          {% comment %}
+           {% if not pageContext.isEditMode %}     
+            {% if not user.isAuthenticated and pagecontext.url != siteContext.themeSettings.themeLoginURL and not model.validationToken and pagecontext.cmsContext.template.path|lower != "reset-password" %}
+                <!-- <meta http-equiv="REFRESH" content="0;url={{ pagecontext.secureHost }}/user/login"> -->
+                <meta http-equiv="REFRESH" content="0;url={{ themeSettings.themeLoginURL }}">
+            {% endif %}  
+        {% endif %} 
+        {% endcomment %}
+
+
+        <title>
+            {% block title-tag-content %} 
+                {% firstof pageContext.metaTitle model.content.productName PageContext.Title %} 
+                    {% if model.content.productName %}|{% endif %} 
+                    {% if PageContext.Title %}|{% endif %} {% parent %} {{ siteContext.generalSettings.websiteName }} 
+            {% endblock title-tag-content %}
+        </title>
+		{% block shortcut-icon %}
+    		<link rel="shortcut icon" href="{{siteContext.cdnPrefix}}/resources/images/icons/jb-favicon.ico" type="image/x-icon">
+    		<link rel="icon" href="{{siteContext.cdnPrefix}}/resources/images/icons/jb-favicon.ico" type="image/x-icon">
+    		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{siteContext.cdnPrefix}}/resources/images/icons/favicon.png" />
+    		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{siteContext.cdnPrefix}}/resources/images/icons/favicon.png" />
+    		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{siteContext.cdnPrefix}}/resources/images/icons/favicon.png" />
+    		<link href="/resources/3rdparty/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		{% endblock shortcut-icon %}
+        {% if PageContext.FeedUrl  %}
+            <link rel="alternate" type="application/rss+xml" title="{{ PageContext.Title }}" href="{{ PageContext.FeedUrl }}" />
+        {% endif %}
+        
+        {% comment %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{% make_url "stylesheet" "/stylesheets/storefront.less" %}" title="default" />
+        {% endblock stylesheets %}
+        {% endcomment %}
+
+        {% block head-tag-scripts %}
+            {% include "modules/web-fonts-loader" %}
+        {% endblock head-tag-scripts %}
+            <script src="{{siteContext.cdnPrefix}}/scripts/vendor/modernizr.respond.js"></script>
+            <!-- <script src="https://ws.vidiemi.com/webservices/jb/VidiEmiOptV2/EasyXDM.JB.20141030/easyXDM.min.js"></script> -->
+            <script>
+                if(!navigator.cookieEnabled){
+                    alert('Please enable your browser cookies.');
+                }
+            </script>
+    		{% cms_resources %}
+            {% require_script "modules/common" %} 
+       
+		{% header_content %}
+	    <script type="application/ld+json">
+            {   "@context" : "http://schema.org",
+                "@type" : "WebSite",
+                "name" : "{{ siteContext.generalSettings.websiteName }}",
+                "alternateName" : "Jelly Belly Retailer",
+                "url" : "http://www.jellybellyretailer.com"
+            }
+        </script>
+	
+	    {% if pageContext.cmsContext.page.path == 'home' %}
+    		<script type="application/ld+json">
+        		{
+        		"@context": "http://schema.org",
+        		"@type": "WebSite",
+        		"url": location.href,
+        		"potentialAction": {
+        			"@type": "SearchAction",
+        			"target": location.href+"search?query={search_term_string}&sortBy=",
+        			"query-input": "required name=search_term_string"
+        			}
+        		}
+        	</script>
+	    {% endif %}
+      
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      //window.dataLayer.push({'userId': '{{ user.accountId }}'});
+      </script>
+      
+	    {% block google-optimize %}
+         <style>.async-hide { opacity: 0 !important} </style>
+            <script>
+                (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+                h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+                (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+                })(window,document.documentElement,'async-hide','dataLayer',4000,
+                {'GTM-NFMQQP2':true});
+            </script>
+			        
+<!-- Google Tag Manager -->
+{% ifnotequal siteContext.tenantId 9046 %}
+<!-- test GTM (development environment in container) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=qSVo-Q9lAEghPH4bSqArCQ&gtm_preview=env-3&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NFMQQP2');</script>
+{% else %}
+  <!-- production GTM -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=R9xZ1kyKarmeSM8HNr69Aw&gtm_preview=env-2&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NFMQQP2');</script>
+{% endifnotequal %}
+<!-- End Google Tag Manager -->
+								
+           {% require_script "pages/jb-tealium-new" %}
+           {% require_script "modules/lazy-load" %} 
+
+     {% endblock google-optimize %}
+    
+    {% block stylesheets %}
+      {% if pagecontext.pageType == "web_page" and pagecontext.cmsContext.page.path == "home" %}
+        {{ "/stylesheets/new/home.less"|stylesheet_tag:"default" }} 
+      {% endif %}
+      {% if pagecontext.pageType == "web_page" and pagecontext.cmsContext.page.path != "home" and pagecontext.cmsContext.page.path != "unbxd-search-results" %}
+        {{ "/stylesheets/new/web_page.less"|stylesheet_tag:"default" }}
+      {% endif %}
+      {% if pagecontext.pageType == "web_page" and pagecontext.cmsContext.page.path == "unbxd-search-results" %}
+        {{ "/stylesheets/new/search.less"|stylesheet_tag:"default" }}
+      {% endif %}
+      {% if pagecontext.pageType == "cart" %}
+        {{ "/stylesheets/new/cart.less"|stylesheet_tag:"default" }} 
+      {% endif %}
+      {% if pagecontext.pageType == "my_account" %}
+        {{ "/stylesheets/new/my_account.less"|stylesheet_tag:"default" }} 
+      {% endif %}
+      {% if pagecontext.pageType == "product" %}
+        {{ "stylesheets/new/product.less"|stylesheet_tag:"default" }}
+      {% endif %}
+      {% if pagecontext.pageType == "category" %}
+        {{ "stylesheets/new/category.less"|stylesheet_tag"default" }}
+      {% endif %}
+      {% if pagecontext.pageType == "confirmation" %}
+        {{ "stylesheets/new/confirmation.less"|stylesheet_tag"default" }}
+      {% endif %}
+      {% if pagecontext.pageType == "checkout" %}
+        {{ "stylesheets/new/checkout.less"|stylesheet_tag"default" }}
+      {% endif %}
+      {% if pagecontext.pageType == "search" %}
+        {{ "stylesheets/new/search.less"|stylesheet_tag"default" }}
+      {% endif %}
+      {% if pagecontext.cmsContext.template.path == "404" %}
+        {{ "/stylesheets/storefront.less"|stylesheet_tag:"default" }} 
+      {% endif %}
+      {% if pagecontext.cmsContext.template.path == "login" or pagecontext.cmsContext.template.path == "forgot-password" or pagecontext.cmsContext.template.path == "signup"  or pagecontext.cmsContext.template.path =="Reset-Password"%}
+        {{ "/stylesheets/new/web_page.less"|stylesheet_tag:"default" }}
+      {% endif %}
+    {% endblock stylesheets %}
+    
+  {% if siteContext.tenantId == 12046 %}
+    <!-- load Unbxd development stylesheets -->
+    <link rel="stylesheet" href="https://sandbox.unbxd.io/dev-jellybellyretailer-com809071570732436_autosuggest.css"/>
+    {% if pageContext.cmsContext.page.path == 'unbxd-search-results' %}
+      <link rel="stylesheet" href="https://sandbox.unbxd.io/dev-jellybellyretailer-com809071570732436_search.css"/>
+    {% endif %}
+  {% else %}
+    <!-- load Unbxd production stylesheets -->
+    <link rel="stylesheet" href="https://libraries.unbxdapi.com/prod-jellybellyretailer-com809071570732436_autosuggest.css">  
+    {% if pageContext.cmsContext.page.path == 'unbxd-search-results' %}
+      <link rel="stylesheet" href="https://libraries.unbxdapi.com/prod-jellybellyretailer-com809071570732436_search.css">
+    {% endif %}
+  {% endif %}
+    
+    </head>
+    {% endblock head-tag %}
+        
+    {% block body-tag %}
+        {% if pagecontext.pageType == "web_page" and pagecontext.cmsContext.page.path == "main" %}
+            {% require_script "vendor/google-tag-manager/home" %}
+        {% endif %}
+        {% if pagecontext.pageType == "web_page" and pagecontext.cmsContext.page.path != "main" %}
+            {% require_script "vendor/google-tag-manager/web_page" %}
+        {% endif %}
+        {% if pagecontext.pageType == "cart" %}
+            {% require_script "vendor/google-tag-manager/cart" %}
+        {% endif %}
+        {% if pagecontext.pageType == "my_account" %}
+
+        {% endif %}
+        {% if pagecontext.pageType == "product" %}
+            {% require_script "vendor/google-tag-manager/product" %}
+        {% endif %}
+        {% if pagecontext.pageType == "category" %}
+            {% require_script "vendor/google-tag-manager/category" %}
+        {% endif %}
+        {% if pagecontext.pageType == "confirmation" %}
+            {% require_script "vendor/google-tag-manager/confirmation" %}
+        {% endif %}
+        {% if pagecontext.pageType == "checkout" %}
+            {% require_script "vendor/google-tag-manager/checkout" %}
+        {% endif %}
+        {% if pagecontext.pageType == "search" %}
+            {% require_script "vendor/google-tag-manager/search" %}
+        {% endif %}
+
+        {% block open-body-tag %}
+            <body class="{% block body-tag-classes %}{% endblock body-tag-classes %}">
+        {% endblock open-body-tag %}
+
+		<!-- Google Tag Manager (noscript) -->
+{% ifnotequal siteContext.tenantId 9046 %}
+<!-- test GTM noscript (development environment in container) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFMQQP2&gtm_auth=qSVo-Q9lAEghPH4bSqArCQ&gtm_preview=env-3&gtm_cookies_win=x"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+{% else %}
+  <!-- production GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFMQQP2&gtm_auth=R9xZ1kyKarmeSM8HNr69Aw&gtm_preview=env-2&gtm_cookies_win=x"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+{% endifnotequal %}
+<!-- End Google Tag Manager (noscript) -->
+		
+		<div id="segments" style="display: none;">{% for segment in pagecontext.user.segments %}{{segment}},{% endfor %}BLANK</div>
+
+       {% comment %}
+       {% if user.isAuthenticated or pagecontext.url == siteContext.themeSettings.themeLoginURL or model.validationToken or pageContext.isEditMode %} 
+       {% endcomment %}
+           
+            {% preload_json navigation "menu" %}
+        
+            <div id="page-wrapper" class="mz-l-pagewrapper">
+            <div class="mz-alert-popup"></div>
+            <div class="overlay-for-complete-page"></div>
+            {% if user.isAuthenticated or pageContext.isEditMode %}
+                {% block progress-bar %} 
+    		        <div class="progress-bar">
+    		            <a href="javaScript:void(0);" title="shipping information">
+    		            <div class="meter blue"> 
+    		                <p class="text-content"></p>
+    		                <span style="width: 0%"></span>
+    		            </div> 
+    		            </a>
+    		        </div> 
+    		    {% endblock progress-bar %}   
+                {% block page-header %}
+                    {% include "modules/page-header" %}
+                {% endblock page-header %}
+            {% endif %}  
+            {% if not PageContext.isEditMode %} 
+                {% require_script "modules/logoutlogic" %} 
+            {% endif %}
+            <div role="main" id="page-content" class="mz-l-pagecontent">
+                {% if user.isAuthenticated or pageContext.isEditMode %}
+                    {% block breadcrumbs %}
+                        {% if themeSettings.showBreadcrumbs %}
+                            {% include "modules/breadcrumbs" %}
+                        {% endif %}
+                    {% endblock breadcrumbs %}
+                    {% block body-content %}
+                        {% dropzone "body" scope="page" %}
+    				{% endblock body-content %}
+                    {% comment %}
+                    <div id="data-visualizations" style="background-color: #EFEFEF;width: 98%;margin: 0 auto;padding: 40px 0px;"></div>
+                    {% endcomment %}
+                    {% block jb-social-footer %}
+                        {% include "modules/page-social-footer" %}
+                    {% endblock jb-social-footer %}
+                    
+                    {% block page-footer %}
+                        <div class="jb-footer-dpzone">
+                        {% include "modules/page-footer" %}
+                        </div>
+                    {% endblock page-footer %}
+                    
+                    {% if user.isAuthenticated %}
+                        {% block page-popup %}
+                            {% include "modules/page-popup" %}
+                        {% endblock page-popup %}
+                    {% endif %}
+                {% endif %}
+            </div>
+
+        </div>
+ 
+        {% block trailing-scripts %}
+        {% include "modules/trailing-scripts" %}
+        {% endblock trailing-scripts %}
+        {% require_script "modules/common" %} 
+        <div class="hide">
+			{% visitor_tracking_pixel %}
+		</div>
+        
+		{% dropzone zoneId="rti-observer-tag" scope="site" %}
+		
+        <div id="segments" style="display: none;">{% for segment in pagecontext.user.segments %}{{segment}},{% endfor %}BLANK</div>
+        {% block current-date%}
+            <span id="currentDate" style="display: none"> {% now j-n-Y %}</span>
+        {% endblock current-date %}
+        
+        {% block user-timeout %}
+            <div class="pop-up-one">
+                <div class="pop-timer"> 
+                    <p class="msg1">It looks like you've been interrupted.</p>  
+                    <p class="msg2">To resume your order, please click the button.  
+                        Otherwise, we'll log you out (and save your order info) after 
+                        <span class="countdown"></span>.
+                    </p>
+                    
+                    <div class="button_continue"><button class="continue">Continue</button></div>
+                    
+                </div>
+            </div>    
+            {% endblock user-timeout %}
+            
+            {% block user-timeout2 %}
+            <div class="pop-up-two">
+                <div class="pop-timer">
+                    <p class="msg3"> To keep your information secure, you've been logged out after 15 minutes of inactivity.  
+                    Your shopping info is safe, so come on back and complete your order!
+                    </p>
+                    <div class="button_continue"><button class="inactivity-button">Okay</button></div>
+                </div>
+            </div>    
+            {% endblock user-timeout2 %} 
+            
+            {% block zero-dollar %}
+                <div class="zero-popup">
+                    <div class="zero-pop">
+                        <p class="zero-msg">
+                            Sorry, but free items are one-per-order. <br/> If you need more, please call Customer Service at 800-323-9380.
+                        </p>
+                        <div class="button_continue"><button class="continue">Continue</button></div>
+                    </div>
+                </div>    
+            {% endblock zero-dollar %}
+            {% block fifty-product-limit %}
+            <div class="items-per-order">
+                    <div class="zero-pop">
+                        <p class="zero-msg">
+                            Sorry, but you can't order more than 50 at a time.
+                        </p>
+                        <div class="button_continue"><button class="continue">Continue</button></div>
+                </div>
+            </div>   
+            <div class="confirm-popup-body"></div>
+            <div class="confirmation-popup">
+                <div class="cross-btn"><div class="times-circle">✕</div></div>
+                <div class="cointainer">   
+                    <div class="message">This item will be available on <strong class="bold-text">10/25/2018</strong>. You can add this item, but your order will not ship before <strong class="bold-text">10/25/2018</strong>. There are no partial shipments.</div>
+                    <div class="button-cointainer">
+                        <button class="add-to-cart-popup jb-tealium-trigger">proceed</button>
+                        <button class="cancel-atc">cancel</button>
+                    </div>
+                </div>
+            </div>
+        {% endblock fifty-product-limit %}     
+        
+        {% block minimumorder-alert %}
+            <div class="minimumorder-alert" style="display: none;">
+                <div class="cart-content">
+                    <div class="cart-message"><p>Your order is below the {{themeSettings.minimumOrderAmount|currency }} minimum threshold.</p><p>Add more products!</p></div>
+                    <div class="cart-btns">
+                        <button class="btn accept">OK</button>
+                    </div>
+                </div>
+            </div>
+        {% endblock minimumorder-alert %}
+
+	<!-- <script type="text/javascript" src="/resources/rti/baynote.js"></script>  -->
+  
+{% comment %}
+{% if siteContext.tenantId == 12046 %}
+<!-- load Unbxd development scripts -->
+  {% if pageContext.cmsContext.page.path == 'unbxd-search-results' %}
+    <script type="text/javascript" src="https://sandbox.unbxd.io/dev-jellybellyretailer-com809071570732436_search.js"></script>
+  {% endif %}
+  <script type="text/javascript" src="https://sandbox.unbxd.io/dev-jellybellyretailer-com809071570732436_autosuggest.js"></script>
+{% else %}
+<!-- load Unbxd production scripts -->
+  {% if pageContext.cmsContext.page.path == 'unbxd-search-results' %}
+    <script type="text/javascript" src="https://libraries.unbxdapi.com/prod-jellybellyretailer-com809071570732436_search.js"></script>
+  {% endif %}
+  <script type="text/javascript" src="https://libraries.unbxdapi.com/prod-jellybellyretailer-com809071570732436_autosuggest.js"></script>
+{% endif %}
+{% endcomment %}
+
+{% dropzone zoneId="unbxd-config" scope="site" %}
+
+    </body>
+    {% endblock body-tag %}
+</html>
+{% endautoescape %}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

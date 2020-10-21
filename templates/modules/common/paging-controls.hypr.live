@@ -1,0 +1,79 @@
+  <div class="jb-result-details" data-total-results="{{ model.totalCount }}">
+        <h3 class="heading-jb-result">  
+            {% if  pageContext.search.query %}
+                        {% if model.totalCount %}
+                            {{ labels.pageStateSearchPlural|string_format(model.firstIndex,model.lastIndex,model.totalCount,pageContext.search.query) }}
+                        {% else %}
+                            {{ labels.pageStateSearchSingular|string_format(pageContext.search.query) }}
+                        {% endif %}
+                    {% else %}
+                        {% if model.totalCount != 1 %}
+                            {{ labels.pageStatePlural|string_format(model.firstIndex,model.lastIndex,model.totalCount) }}
+                        {% else %}
+                            {{ labels.pageStateSingular|string_format(pageContext.title) }}
+                        {% endif %}
+            {% endif %}
+        </h3> 
+        {% comment %}
+            <p>Looking for Company or Product Information? <a href="/">Click here for 16 articles.</a></p>
+        {% endcomment %}
+        
+    </div>
+    {% comment %}
+    <div class="mz-pagingcontrols-filters">
+        <div class="mz-pagingcontrols-group">
+            
+            <p>{{ labels.show }}</p>            
+            <select data-mz-value="PageSize" class="mz-pagingcontrols-pagesize-dropdown">
+                {% block page-sizes %}
+                
+                {% for pageSize in themeSettings.pageSizeOptions %}
+                <option 
+                        {% if model.pageSize == pageSize %}
+                                selected="selected" 
+                        {% else %}  {% if model.pageSize == 300 %}
+                                        {% if pageSize == 'Max' %}
+                                            selected="selected"             
+                                        {% endif %}    
+                                    {% endif %}
+                        {% endif %}
+                        value="{{ pageSize }}">{{ pageSize }}</option>
+                {% endfor %}
+                {% endblock page-sizes %}
+            </select>
+            
+            
+            <select data-mz-value="pageSize" class="mz-pagingcontrols-pagesize-dropdown" autocomplete="off">
+            	{% block page-sizes %}
+            		{% for pageSize in themeSettings.pageSizeOptions %}
+            			<option   data-mz-url="{% make_url "paging" model with pageSize=pageSize page=1 %}" 
+            			{% if model.pageSize == pageSize %}selected="selected"{% endif %}
+            			value="{{ pageSize }}">{% if pageSize == 300 %}Max {% else %}{{ pageSize }}{% endif %}</option>
+            		{% endfor %}
+            	{% endblock page-sizes %}
+            </select>
+            
+            <p>{{ labels.view }}</p>
+            <select data-mz-value="pageView" class="mz-pagingcontrols-pagesize-dropdown">
+           
+                {% for view in themeSettings.ProductView %}
+                    {% if model.currentProductView %}
+                    <option {% if model.currentProductView == view %}selected="selected"{% endif %} value="{{ view }}">{{ view }}</option>
+                    {% else %}
+                    <option {% if themeSettings.defaultProductView == view %}selected="selected"{% endif %} value="{{ view }}">{{ view }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    {% endcomment %}
+    
+
+
+
+
+
+
+
+
+

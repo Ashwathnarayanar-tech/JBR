@@ -1,0 +1,15 @@
+
+<div class="jb-question-main" > 
+    <div class="jb-questiononly" >
+        <h2 class="jb-question-text" >
+            {{model.config.question}}
+        </h2>
+    </div>
+    <div class="jb-answeronly" style="display:none" >
+        <div>
+            <p> {{model.config.answer|safe}} </p>
+        </div>
+    </div>
+</div>
+
+{% require_script "widgets/jelly-belly-questionwidgetscript" %} 

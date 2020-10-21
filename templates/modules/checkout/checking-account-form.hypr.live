@@ -1,0 +1,39 @@
+﻿    <div class="mz-l-formfieldgroup-row">
+        <div class="mz-l-formfieldgroup-cell">
+            <label for="checkNumber">PO Number<span class="is-required"> *</span>:</label>
+        </div>
+        <div class="mz-l-formfieldgroup-cell">
+            <input type="text" name="ponumber" id="ponumber" data-mz-value="check.ponumber"  maxlength="20" value="{{ model.check.ponumber }}">
+            <p class="po-info">{{themeSettings.po_message|safe}}</p>
+            <span class="mz-validationmessage" data-mz-validationmessage-for="check.ponumber"></span>
+        </div>
+    </div>
+    <div class="po-hide" style="position: absolute;left: -160%;"> 
+    <div class="mz-l-formfieldgroup-row">
+        <div class="mz-l-formfieldgroup-cell">
+                <label for="nameOnCheck">{{ labels.nameOnCheck }}<span class="is-required"> *</span>:</label>
+            </div>
+            <div class="mz-l-formfieldgroup-cell">
+                <input type="text" name="nameOnCheck" id="nameOnCheck" data-mz-value="check.nameOnCheck" value="Purchase Order" >
+                <span class="mz-validationmessage" data-mz-validationmessage-for="check.nameOnCheck"></span>
+            </div>
+        </div>
+        <div class="mz-l-formfieldgroup-row">
+        <div class="mz-l-formfieldgroup-cell">
+                <label for="checkNumber">{{ labels.routingNumber }}<span class="is-required"> *</span>:</label>
+            </div>
+            <div class="mz-l-formfieldgroup-cell">
+                <input type="text" name="checkNumber" id="routenumber" data-mz-value="check.routingNumber" value="00000000">
+            <span class="mz-validationmessage" data-mz-validationmessage-for="check.routingNumber"></span>
+        </div>
+    </div>                    
+    <div class="mz-l-formfieldgroup-row">
+        <div class="mz-l-formfieldgroup-cell">
+                <label for="checkNumber">PO Number<span class="is-required"> *</span>:</label>
+        </div>
+        <div class="mz-l-formfieldgroup-cell">
+                <input type="text" name="checkNumber" id="checkNumber" data-mz-value="check.checkNumber" value="{{ model.orderId }}">
+            <span class="mz-validationmessage" data-mz-validationmessage-for="check.checkNumber"></span>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,29 @@
+  {% extends "email/email" %}
+
+  {% block body-content %}
+
+   <div  class="mz-returncontent" style=" font-family:'Trebuchet MS', Verdana, Geneva, sans-serif;display: block; width: 100%;">
+    <div style=" color:#000000;display: block; width: 100%; margin: 0 auto;margin-bottom: 40px;clear: both ">
+    	{% if user and user.firstName %}
+            <p style="clear:both;color:#000000;font-weight: 300; font-style: normal;font-size: 16px;padding: 20px 0;width: 85%;display: block;margin: 0 auto;color:black;">Hello {{ user.firstName}},</p>
+    	{% else %}
+    		<p style="text-align:justify;font-weight: 300; font-style: normal;font-size: 16px;padding: 20px 0;width: 85%;display: block;margin: 0 auto;color:#000;">Hello</p>
+    		<p style="text-align:justify;padding: 1%;margin: 0 auto; font-style: normal;font-size: 16px;width: 85%;display: block;color:black;line-height:25px;">
+    		Your return has been created and we’ll be taking care of it based on your request. 
+    		If you need assistance or have any questions, you are welcome to send an email to <a href="/contact-us" style="color: #1184dd;text-decoration: underline;font-size: 16px;text-align:justify;display:inline-block;word-break:break-all;">jborders@jellybelly.com</a>
+    		or call our friendly Customer Service representatives at 1-800-323-9380.</p>
+            <p style=" margin: 0 auto;color:#000000; font-size: 16px; padding: 0; width: 85%; display: block;line-height:21px;">
+                Sweet Regards,
+            </p>
+            <p style="margin: 0 auto;color:#000000; font-size: 16px; padding: 0; width: 85%; display: block;line-height:21px;">
+                The Jelly Belly  Team
+            </p>
+    	{% endif %}
+
+    </div> 
+  </div> 
+
+{% endblock body-content %}
+
+
+

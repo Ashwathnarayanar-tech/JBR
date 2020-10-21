@@ -1,0 +1,50 @@
+.mz-itemlisting {
+    min-height: @itemListingThumbSize + @gutter;
+    .clearfix();
+    .mz-itemlisting-thumb {
+        float: left;
+        margin-right: 5px;
+        width: 50px;
+        height: 50px;
+    }
+    .mz-itemlisting-details {
+        float: left;
+        margin-right: @gutter/2;
+        max-width: 270px;
+        .mz-item-shipdate {
+            margin: 0;
+            font-size: 0.72em;
+            color: #13a513;
+        }
+    }
+    .mz-itemlisting-actions {
+        float: right;
+        margin-right: @gutter/2;
+        text-align: center;
+        a {
+            display: block;
+            margin: 4px 0;
+            font-size: @fontSizeSmall;
+            .permalink(#666);
+        }
+    }
+    .mz-itemlisting-title {
+        color: #666666;
+        font-size: 12px;
+        font-weight: bolder;
+        .permalink(#666);
+    }
+    .mz-itemlisting-description {
+        margin: 4px 0;
+        font-size: 11px;
+    }
+    .mz-itemlisting-prompt {
+        float: left;
+        max-width: 50%;
+        a.mz-action {
+            display: inline-block;
+            margin: 0 5px;
+        }
+    }
+}
+

@@ -1,0 +1,121 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-wedding mz-wed-favor mz-wed-center{% endblock body-tag-classes %} 
+{% block body-content %}
+{% require_script "modules/common" %} 
+<section>
+    <article class="wedding-title">
+        <p class="sectionTitle">Jelly Belly Wedding Center</p>
+        <p class="sectionTitle" style="font-size: 34px;">Where to Start</p>
+    </article>
+    <div class="welcome-center">
+        <div class="welcome-center-details">
+            <p>Welcome to Jelly Belly's Wedding Center. Here you'll find lots of great ideas for wedding favors, bridal shower favors, wedding decorations, gifts and more, all infused with the flavor and color Jelly Belly is known for!</p>
+            <div class="weddingNav">
+                <img src="/resources/images/wedding/brideGroom.png" alt="brideGroom"/> 
+                <ul>
+                    {% comment %}<li><a href="/wedding-center">Wedding Center Home</a> &#9658;</li>{% endcomment %}
+                    <li><a href="/wedding-ideas">Wedding Themes</a> &#9658;</li>
+                    <li><a href="/wedding-color-palettes">Color Palettes</a> &#9658;</li>
+                    <li><a href="/wedding-personalized-favors">Personalized Favors</a> &#9658;</li>
+                    <li><a href="/wedding-featured-candy">Featured Candy</a> &#9658;</li>
+                    <li><a class="candyCalculatorModal" >Candy Calculator</a> &#9658;</li>
+                </ul>
+            </div>
+        </div>
+        <div class="welcome-center-image">
+            <div onclick="location.href='/wedding-ideas" onmouseout="document.getElementById('overlay').style.backgroundPosition='0 top'" onmouseover="document.getElementById('overlay').style.backgroundPosition='0 bottom'" class="W_glamThemeLink" id="overlay" style="background-position: 0px top;"></div>
+ <a href="http://www.jellybelly.com/search/?pageSize=300&sortBy=price%2Basc&query=champagne+%2B+draft"> <img border="0" src="http://cdn-sb.mozu.com/10723-m1/cms/files/a5f2a85e-a85f-4a86-8d4b-14a672345326"></a>
+        </div>
+        <div class="clearfix"></div>
+        <div class="color-palette candy-calculator">
+            <hr />
+            <div class="home-palette">
+                <p class="sectionTitle" style="font-size: 34px;">Color Palettes</p>
+                <div id="home-features">
+                <div>
+                    <img src="/resources/images/wedding/Wedding Center/colorSwatches.jpg" class="img-border">     
+                </div>
+            </div>
+            <a  class="candy-link" href="/wedding-color-palettes">View our wedding candy color palettes ►</a>
+            
+            </div>
+            <div class="candy-container">
+                <p class="sectionTitle" style="font-size: 34px;">MyJellyBelly.com</p>
+                <div id="home-features">
+                    <div>
+                        <div class="candy-details">
+                        <p class="sectionTitle" style="font-size: 20px;">Customized Wedding Favors</p>
+                        <p>A Variety of Containers</p>
+                        <p>A Variety of Containers</p>
+                        </div>
+                        <figure>
+                            <img src="/resources/images/wedding/Wedding Center/myjellybelly_weddingSection.png" class="myJBW_image">
+                        </figure>
+                       <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <a class="candy-link" href="/wedding-personalized-favors">View customized wedding candy containers  ►</a>
+            <div class="clearfix"></div>
+        </div>
+        <div class="candy-calculator">
+            <hr />
+            <p class="sectionTitle" style="font-size: 34px;">Candy Calculator</p>
+            <div id="home-features">
+                <div>
+                    <p>
+                        Wondering how much wedding candy you need for your Special Day? The Jelly Belly <a class="candyCalculatorModal" href="#">
+                            Candy Calculator
+                        </a>allows you to easily choose
+                        your candy and wedding favor container shape, then enter the container dimensions to obtain the approximate amount of wedding candy necessary.
+                    </p>
+                    <figure>
+                        <img class="img-border" src="/resources/images/wedding/Wedding Center/candy_calculator_wedding.png" />
+                    </figure>
+                   
+                </div>
+            </div>
+            <!-- /beach -->
+        </div>
+        <a class="candy-link"  class="W_links candyCalcLink candyCalculatorModal">Use our Wedding Favor Candy Calculator ►</a>
+        <div class="wedding-banner">
+            <hr />
+            <p class="sectionTitle" style="font-size: 34px;">Featured Candy</p>
+            <div id="home-features">
+                <div>
+                    <figure>
+                        <img src="/resources/images/wedding/Wedding Center/champagne_home.jpg">
+                        <figcaption>
+                            <a href="/search?query=champagne">Champagne Bubbles</a><br>
+                            <br>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/resources/images/wedding/Wedding Center/raspberry_home.jpg">
+                        <figcaption>
+                            <a href="/search?query=raspberries">Raspberries and Blackberries</a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/resources/images/wedding/Wedding Center/dutchMintsColor_home.jpg">
+                        <figcaption>
+                            <a href="/search?query=chocolate%20dutch">Assorted Chocolate<br>Dutch Mints</a>
+                        </figcaption>
+                    </figure>
+                    <p>Classic, fun and sophisticated, Jelly Belly jelly beans and candies are popular choices for weddings. <a href="/wedding-featured-candy">Click here</a> and take a look at our wide selection. The possibilities are endless!</p>
+                </div>
+            </div>
+            <!-- /beach -->
+        </div>
+        <div class="clearfix"></div>
+        <!-- /Zen Wedding -->
+    </div>
+</section>
+<script src="{{siteContext.cdnPrefix}}/scripts/vendor/cufon.js"></script> 
+<script src="{{siteContext.cdnPrefix}}/scripts/vendor/UniRom_500.font.js"></script>
+<script type="text/javascript">Cufon.replace('.sectionTitle');</script>
+<script type="text/javascript">Cufon.now();</script>
+{% endblock body-content %} 
+
+

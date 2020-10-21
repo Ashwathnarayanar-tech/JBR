@@ -1,0 +1,23 @@
+    
+    
+    <div style="box-shadow: 0 -40px 80px -80px rgba(0,0,0,0.5) inset;padding:6px;
+            border-radius: 12px;border: 1px solid #ccc;margin: 5px;">
+            
+            <h3 class="heading" style="color:{{Model.config.headColor}};margin: 4px 0px 0px 10px;" >{{Model.config.head}}</h3>
+            
+            <figure style="float:left;margin: 10px 15px 7px 10px;">
+                <a class="imiageLInk" {% if Model.config.link %}href="{{Model.config.link}}"{% endif %}>
+                    <img class="imgSrcValue" src="{{Model.config.img}}" width="133" border="0">
+                </a>
+            </figure>
+            
+            <div class="description" style="line-height: 21px;margin: 7px 7px 11px 11px;">
+                {{Model.config.content|safe}}
+            </div>
+            
+            <div style="clear:both;"></div>
+    </div>
+
+
+
+

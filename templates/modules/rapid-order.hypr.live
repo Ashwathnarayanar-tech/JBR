@@ -1,0 +1,473 @@
+<div class="rapid-order-live">
+	<div class="data-notify">
+	</div>
+	<div class="data-future">
+	</div>
+	{% if model.isLoading %}
+		<div class="custopopup"></div>
+	{% endif %}
+	<div class="could-get-barcode-fromimage" id="could-get-barcode-fromimage">
+	    <div class="popup-body">
+	        <div class="popup-content">
+	            <p>The UPC code did not scan correctly.<strong>Please try again.</strong></p>
+	        </div>
+	        <div class="popup-footer">
+	            <button class="cancelscan">cancel</button> 
+	            <button class="rescan">Capture</button>             
+	        </div>
+	    </div> 
+	</div>
+	<div class="could-get-productSKU-fromimage" id="could-get-productSKU-fromimage"> 
+        <div class="msg-content"> 
+            <div class="popup-content"> 
+                <p class="sku-not-found">The UPC code isn't in our system. Please add the case SKU manually.</p>
+                <p class="item-not-found">Item not found.</p> 
+            </div>
+        </div>
+    </div>
+	{% if model.showCustompopup %}
+		<div class="custopopup">
+			<div class="custompopup-body">
+				<div class="custompopup-content">
+					<p class="message">{{model.customMsg}}</p>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	{% if model.addtocartpopup and model.addtocartpopup.isShowpopUp %}
+		<div class="custopopup">
+			<div class="custompopup-body">
+				<div class="custompopup-content">
+					<p class="message">{{model.addtocartpopup.msg}}</p>
+					{% if model.addtocartpopup.itemsNotAddes.length %}
+						<div class="itemsNot-Added">
+							<span class="label-notadded">You have not added the following products.</span>
+							<ul class="list-cointainer">
+								{% for item in model.addtocartpopup.itemsNotAddes %}
+									<li class="item-list">{{item.sku}}-{{item.name}}-<span class="msg">{{item.msg}}</span></li>
+								{% endfor %}
+							</ul>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	{% if not model.isMobile %}
+		<div class="heading">
+			<h1>RAPID ORDER FORM</h1>
+			{% comment %}<p>Work from your "shopping list" and add items by Item Number (SKU). Just type in the Item Number and click anywhere to add the line. Once your list is complete, click Add All to Cart.</p>{% endcomment %}
+			<p>Work from your "shopping list" and add items by Item Number (SKU). Just type in the Item Number and select your option from the displayed choice(s). Once your list is complete, click Add All to Cart.</p>
+		</div>
+		<div class="rapidorderitemlist">
+			<div class="list-heading">
+				<div class="sku-pname"> 
+					<label>SKU # or Product Name</label>
+				</div>
+				<div class="price">
+					<label>Price</label>
+				</div>
+				<div class="qty">
+					<label>Qty</label>
+				</div>
+				<div class="lineTotal">
+					<label>Line total</label>
+				</div> 
+			</div>
+			<div class="item-listing">
+				{% for item in model.items  %}
+					{% if item.isfilled %}
+						<div class="items filled identifier-{{item.rowId}}" data-attr-pCode="{{item.sku}}" data-attr-rowid = "{{item.rowId}}">
+							<div class="itemtitel">
+								<div class="cointaine-tital-suggestion">
+									<div class="tital-cointainer">
+										<span data-attr-rowId = "{{item.rowId}}" class="skuInput">{{item.sku}}-{{item.productName|safe}}</span>
+										<span class="item-coldpack"> 
+											{% if item.isheatsensitive %}
+												<span class="item-coldpackState">
+													cold pack
+												</span>
+											{% endif %} 
+										</span>
+										<span class="item-avalible-state {% if item.inventoryInfo.manageStock %}{% if item.inventoryInfo.onlineStockAvailable > 0 %}{% if item.firstShipDate and now|is_before(item.firstShipDate) %}future{% else %}green{% endif %}{% else %}red{% endif %}{% else %}green{% endif %}"> 
+											{% if item.inventoryInfo.manageStock %}
+												{% if item.inventoryInfo.onlineStockAvailable > 0 %}
+													{% if item.firstShipDate and now|is_before(item.firstShipDate) %}
+														Available on </br>
+														{{item.firstShipDate|date("M j, Y")}}
+													{% else %} 
+														In Stock
+													{% endif %}
+												{% else %}
+													Out of Stock 
+												{% endif %}
+											{% else %}
+												In Stock
+											{% endif %}
+										</span>
+									</div>
+									<div class="suggestion-data suggestion-{{item.rowId}}"></div>
+								</div>
+							</div> 
+							<div class="price">
+								{% if item.salesPrice < item.price %}	
+									{{item.salesPrice|currency}}
+								{% else %}
+									{{item.price|currency}}
+								{% endif %}
+							</div> 
+							<div class="qty">
+								<select data-index="{{forloop.index}}" class="qty-select" data-attr-row="{{item.rowId}}" name="qty-box">
+									{% with "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50"|split(" ") as option %}
+										{% for a in option %}
+											<option {% if item.qty == a %}selected="selected"{% endif %} value={{a}}>{{a}}</option> 
+										{% endfor %}
+									{% endwith %} 
+								</select> 
+							</div>
+							<div class="linetotal">  
+								{{item.lineTotal|currency}}
+							</div>
+							<div class="remove" tabindex="0" data-index="{{forloop.index}}" data-attr-row="{{item.rowId}}">
+								&#10006;
+							</div>
+						</div>
+					{% else %} 
+						<div class="items notfilled identifier-{{item.rowId}}" data-attr-rowid = "{{item.rowId}}">
+							<div class="itemtitel">
+								<div class="cointaine-tital-suggestion">
+									<div class="tital-cointainer">
+										<input data-index="{{forloop.index}}" autocomplete="off" type="text" data-attr-rowId = "{{item.rowId}}" placeholder="Enter SKU # or Product Name" class="skuInput" name="productname" />	
+										{% if model.isTablet %} <img src="resources/images/Camera.png" alt="scan barcodde" class="scan-img">{% endif %}
+									</div>
+									<div class="suggestion-data suggestion-{{item.rowId}}"></div>
+								</div>
+							</div>
+							<div class="price">
+							</div>
+							<div class="qty">
+								<select data-index="{{forloop.index}}" class="qty-select" name="qty-box" disabled="true">
+									{% with "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50"|split(" ") as option %}
+										{% for a in option  %}
+											<option value={{a}}>{{a}}</option>  
+										{% endfor %}
+									{% endwith %} 
+								</select> 
+							</div>
+							<div class="linetotal">
+							</div>
+							<span class="rowError">{{item.error}}</span>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+			<div class="stiky-bar">
+				<div class="countent">
+					<div class="first-sec">
+						<div class="clrlisrandclodpack">
+							<span tabindex="0" class="clearList {% if not model.listItemCount %}disabled{% endif %}">Clear List</span>
+							<span class="coldpackMsg">Note: Cold Pack items will only be shipped on Mondays and Tuesdays.</span>
+						</div>
+						<div class="futureDateData">
+							{% if model.hasFutureProduct %}
+								{% comment %}<span class="text-future">Your Order Will be Dispatched On/After {{model.ListFirstshipdate|date("M j, Y")}}</span>{% endcomment %}
+								<span class="text-future">Your order’s Ship Date will be on or after {{model.ListFirstshipdate|date("M j, Y")}}</span>
+							{% endif %}
+						</div>
+					</div>
+					<div class="section-sec">
+						{% if model.listItemCount %}
+							<span class="itemCount-data">{{model.listItemCount}} {% if model.listItemCount > 1 %} Items {% else %} Item {% endif %}</span>
+							<span class="subtotal">Subtotal: {{model.listTotal|currency}}</span>
+						{% endif %}
+						<button class="addAllToCart {% if not model.listItemCount %}disabled{% endif %}">Add All to Cart</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="topSellers-sec">
+			<h2 class="topsellersHeading">Check Out Our Top-Sellers</h2>
+			<div class="tab-section">
+				<div class="tab-heading">
+					{% for cat in model.topSellers %}
+						{% if cat.items and cat.items.length > 0 %}
+							<span data-attr-catCode="{{cat.catCode}}" class="tab-item {% if cat.activeStatus %}active{% endif %}">{{cat.catName}}</span> 
+						{% endif %}
+					{% endfor %}
+				</div>
+				<div class="tab-content"> 
+					{% for cat in model.topSellers %}
+						<div class="tab-item-content {% if cat.activeStatus %}active{% endif %}">
+							{% if cat.items %}
+								{% for item in cat.items %}
+									{% if item.productCode %}
+										<div class="item-cointainer {% with model.topSellAddedItems|findwhere('sku', item.productCode) as data %}{% if data %}active{% endif %}{% endwith %}">
+											<span class="item-img-cointainer"><img class="item-img" alt="item image of {{item.productName|safe}}" src="{% make_url 'image' item.productImages with max=150 as_parameter %}" /></span>	
+											<span class="item-name">
+												<p class="name">{{item.productName|safe}}</p> 
+												<p class="price-data">
+													{% if item.price.salePrice < item.price.price %}<span class="unit-price strice">{{item.price.price|currency}}</span><span class="salePrice">{{item.price.salePrice|currency}}</span>{% else %}<span class="unit-price">{{item.price.price|currency}}	</span>{% endif %}
+												</p>
+												{% if model.isTablet %}
+													<span class="popularity">
+														<span class="label">Popularity</span>
+														<span class="value">{{item.popularity}}/10</span>
+													</span>
+												{% endif %}
+											</span>  
+											{% if not model.isTablet %}
+												<span class="popularity">
+													<span class="label">Popularity</span>
+													<span class="value">{{item.popularity}}/10</span>
+												</span>
+											{% endif %}
+											<span class="item-dataAction {% if item.inventoryInfo.manageStock %}{% if item.inventoryInfo.onlineStockAvailable > 0 %}{% if item.firstShipDate and now|is_before(item.firstShipDate) %}both{% else %}single{% endif %}{% else %}single{% endif %}{% else %}single{% endif %}">
+												{% with model.topSellAddedItems|findwhere('sku', item.productCode) as data %}
+													{% if data %}
+														<span data-attr-code="{{item.productCode}}" class="removeTopItem">&#10006;</span>
+													{% endif %}
+												{% endwith %}
+												{% if item.inventoryInfo.manageStock %}
+													{% if item.inventoryInfo.onlineStockAvailable > 0 %}
+														{% if item.firstShipDate and now|is_before(item.firstShipDate) %}
+															<button data-attr-code="{{item.productCode}}" class="notify-me-top">Notify Me</button>
+															{% with model.topSellAddedItems|findwhere('sku', item.productCode) as data %}
+																{% if data %}
+																	<span class="qtySelector"><span data-attr-code="{{item.productCode}}" class="spinnerDec">&#x2212;</span><input readonly type="text" value="{{data.qty}}" class="qtyChange" /><span data-attr-code="{{item.productCode}}" class="spinnerInc">&#x2b;</span></span> 
+																{% else %} 
+																	<button data-attr-code="{{item.productCode}}" class="select-product future-select-top">Select</button>
+																{% endif %}
+															{% endwith %}
+														{% else %} 
+															{% with model.topSellAddedItems|findwhere('sku', item.productCode) as data %}
+																{% if data %}
+																	<span class="qtySelector"><span data-attr-code="{{item.productCode}}" class="spinnerDec">&#x2212;</span><input readonly min="1" max="50" type="number" value="{{data.qty}}" class="qtyChange" /><span data-attr-code="{{item.productCode}}" class="spinnerInc">&#x2b;</span></span>
+																{% else %}
+																	<button data-attr-code="{{item.productCode}}" class="select-product instock-select-top">Select</button>
+																{% endif %}
+															{% endwith %}
+														{% endif %}
+													{% else %}
+														<button data-attr-code="{{item.productCode}}" class="notify-me-top">Notify Me</button>
+													{% endif %}
+												{% else %}
+													{% with model.topSellAddedItems|findwhere('sku', item.productCode) as data %}
+														{% if data %} 
+															<span class="qtySelector"><span data-attr-code="{{item.productCode}}" class="spinnerDec">&#x2212;</span><input readonly min="1" max="50" type="number" value="{{data.qty}}" calss="qtyChange" /><span data-attr-code="{{item.productCode}}" class="spinnerInc">&#x2b;</span></span>
+														{% else %}
+															<button data-attr-code="{{item.productCode}}" class="select-product instock-select-top">Select</button>
+														{% endif %}
+													{% endwith %}
+												{% endif %}
+												<span class="item-avalible-state {% if item.inventoryInfo.manageStock %}{% if item.inventoryInfo.onlineStockAvailable > 0 %}{% if item.firstShipDate and now|is_before(item.firstShipDate) %}future{% else %}green{% endif %}{% else %}red{% endif %}{% else %}green{% endif %}"> 
+													{% if item.inventoryInfo.manageStock %}
+														{% if item.inventoryInfo.onlineStockAvailable > 0 %}
+															{% if item.firstShipDate and now|is_before(item.firstShipDate) %}
+																Available on </br>
+																{{item.firstShipDate|date("M j, Y")}}
+															{% endif %}
+														{% endif %}
+													{% endif %}
+												</span>
+											</span>
+										</div>
+									{% endif %}
+								{% endfor %}
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	{% else %}
+		<div class="mobile-cointainer {% if model.hasProgressbar %}progressbar{% endif %}"> 
+			<div class="heading">
+				<h1>
+					<span class="valueMargin">
+						<img class="moveBack" src="resources/images/arrowLeft.png" alt="move back" />
+					</span> 
+					RAPID ORDER FORM 
+					<span class="tolltipicon">i</span>
+					<p class="mobiletooltip">Work from your "shopping list" and add items by Item Number (SKU). Just type in the Item Number and select your option from the displayed choice(s). Once your list is complete, click Add All to Cart.</p>
+				</h1>
+				</div>
+			<div class="rapidorderitemlist">
+				<div class="item-listing">
+					<div class="itemtitel">
+						<div class="cointaine-tital-suggestion">
+							<div class="tital-cointainer">
+								<input autocomplete="off" type="text" data-attr-rowId = "{{item.rowId}}" placeholder="Enter SKU # or Product Name" class="skuInput" name="productname" />	
+								<img src="resources/images/Camera.png" alt="scan barcodde" class="scan-img">
+							</div>
+							<div class="suggestion-data suggestion-{{item.rowId}}"></div>
+						</div>
+					</div>
+					{% if model.listItemCount %}<span class="clearList">Clear List</span>{% endif %}
+					{% for item in model.items  %}
+						{% if item.isfilled %}
+							<div class="items filled identifier-{{item.rowId}}" data-attr-pCode="{{item.sku}}" data-attr-rowid = "{{item.rowId}}">
+								<div class="itemtitel">
+									<span class="prod-data-first" data-attr-rowId = "{{item.rowId}}">
+										<span class="prod-code">
+											{{item.sku}}
+										</span>
+										<span class="prod-img-sec">
+											<img class="item-img" alt="item image of {{item.productName|safe}}" src="{% make_url 'image' item.productImages with max=150 as_parameter %}" />
+										</span>
+										<p class="price-data">{% if item.salesPrice < item.price %}{{item.salesPrice|currency}}{% else %}{{item.price|currency}}{% endif %}</p>
+									</span><span class="prod-data-second">
+										<div class="remove" data-attr-row="{{item.rowId}}">
+											&#10006;
+										</div>
+										<span class="second-prod-data-first">
+											<span data-attr-rowId = "{{item.rowId}}" class="prod-name">{{item.productName|safe}}</span>
+											<span class="item-coldpack"> 
+												{% if item.isheatsensitive %}
+													<span class="item-coldpackState">
+														cold pack
+													</span>
+												{% endif %} 
+											</span>
+										</span>
+										<span class="second-prod-data-second">
+											<span class="item-avalible-state {% if item.inventoryInfo.manageStock %}{% if item.inventoryInfo.onlineStockAvailable > 0 %}{% if item.firstShipDate and now|is_before(item.firstShipDate) %}future{% else %}green{% endif %}{% else %}red{% endif %}{% else %}green{% endif %}"> 
+												{% if item.inventoryInfo.manageStock %}
+													{% if item.inventoryInfo.onlineStockAvailable > 0 %}
+														{% if item.firstShipDate and now|is_before(item.firstShipDate) %}
+															Available on </br>
+															{{item.firstShipDate|date("M j, Y")}}
+														{% else %} 
+															In Stock
+														{% endif %}
+													{% else %}
+														Out of Stock
+													{% endif %}
+												{% else %}
+													In Stock
+												{% endif %}
+											</span>
+										</span>
+										<div class="qty">
+											<span class="qtySelector"><span data-attr-code="{{item.sku}}" class="spinnerDecMob">&#x2212;</span><input readonly min="1" max="50" type="number" value="{{item.qty}}" class="qtyChangemob" /><span data-attr-code="{{item.sku}}" class="spinnerIncmob">&#x2b;</span></span> 
+										</div>
+									</span>
+								</div>
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+				<div class="stiky-bar">
+					{% if model.listItemCount %}
+						<div class="first-sec">
+							<div class="futureDateData">
+								{% if model.hasFutureProduct %}
+									{% comment %}<span class="text-future">Your Order Will be Dispatched On/After {{model.ListFirstshipdate|date("M j, Y")}}</span> {% endcomment %}
+									<span class="text-future">Your order’s Ship Date will be on or after {{model.ListFirstshipdate|date("M j, Y")}}</span>
+								{% endif %}
+							</div>
+						</div>					
+						<div class="countent">
+							<div class="section-sec">
+								<span class="first-sec-in-second">
+									<span class="itemCount-data">{{model.listItemCount}} Items</span>
+									<span class="subtotal">Subtotal: {{model.listTotal|currency}}</span>
+								</span>
+								<button class="addAllToCart {% if not model.listItemCount %}disabled{% endif %}">Add All to Cart</button>
+							</div>
+						</div>	
+					{% endif %}				
+				</div>
+			</div>
+			<div class="topSellers-sec">
+				<h2 class="topsellersHeading">Check Out Our Top-Sellers</h2>
+				<div class="tab-section">
+					<div class="viewport">
+						<div class="tab-heading-viewport">
+							<div class="tab-heading">
+								{% for cat in model.topSellers %}
+									{% if cat.items and cat.items.length > 0 %}
+										<span data-attr-catCode="{{cat.catCode}}" class="tab-item {% if cat.activeStatus %}active{% endif %}">{{cat.catName}}</span> 
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+					<div class="tab-content"> 
+						{% for cat in model.topSellers %}
+							<div class="tab-item-content {% if cat.activeStatus %}active{% endif %}">
+								{% if cat.items %}
+									{% for item in cat.items %}
+										{% if item.productCode %}
+											<div class="item-cointainer {% with model.topSellAddedItems|findwhere('sku', item.productCode) as data %}{% if data %}active{% endif %}{% endwith %}">
+												<span class="item-first-sec">
+													<span class="item-img-cointainer"><img class="item-img" alt="item image of {{item.productName|safe}}" src="{% make_url 'image' item.productImages with max=150 as_parameter %}" /></span>	
+													<p class="price-data">
+														{% if item.price.salePrice < item.price.price %}<span class="unit-price strice">{{item.price.price|currency}}</span><span class="salePrice">{{item.price.salePrice|currency}}</span>{% else %}<span class="unit-price">{{item.price.price|currency}}	</span>{% endif %}
+													</p>
+												</span><span class="item-second-sec">
+													<span class="first-in-second">
+														{% with model.topSellAddedItems|findwhere('sku', item.productCode) as data %}
+															{% if data %}
+																<span data-attr-code="{{item.productCode}}" class="removeTopItem">&#10006;</span>
+															{% endif %}
+														{% endwith %}
+														<span class="item-name">
+															<p class="name">{{item.productName|safe}}</p> 
+														</span>
+														<span class="item-avalible-state {% if item.inventoryInfo.manageStock %}{% if item.inventoryInfo.onlineStockAvailable > 0 %}{% if item.firstShipDate and now|is_before(item.firstShipDate) %}future{% else %}green{% endif %}{% else %}red{% endif %}{% else %}green{% endif %}"> 
+															{% if item.inventoryInfo.manageStock %}
+																{% if item.inventoryInfo.onlineStockAvailable > 0 %}
+																	{% if item.firstShipDate and now|is_before(item.firstShipDate) %}
+																		Available on </br>
+																		{{item.firstShipDate|date("M j, Y")}}
+																	{% endif %}
+																{% endif %}
+															{% endif %}
+														</span>													
+													</span><span class="item-dataAction {% if item.inventoryInfo.manageStock %}{% if item.inventoryInfo.onlineStockAvailable > 0 %}{% if item.firstShipDate and now|is_before(item.firstShipDate) %}both{% else %}single{% endif %}{% else %}single{% endif %}{% else %}single{% endif %}">
+														
+														<span class="popularity">
+															<span class="label">Popularity</span>
+															<span class="value">{{item.popularity}}/10</span>
+														</span>
+														<span class="btn-sec">
+															{% if item.inventoryInfo.manageStock %}
+																{% if item.inventoryInfo.onlineStockAvailable > 0 %}
+																	{% if item.firstShipDate and now|is_before(item.firstShipDate) %}
+																		<button data-attr-code="{{item.productCode}}" class="notify-me-top">Notify Me</button>{% with model.topSellAddedItems|findwhere('sku', item.productCode) as data %}{% if data %}<span class="qtySelector"><span data-attr-code="{{item.productCode}}" class="spinnerDec">&#x2212;</span><input readonly min="1" max="50" type="number" value="{{data.qty}}" class="qtyChange" /><span data-attr-code="{{item.productCode}}" class="spinnerInc">&#x2b;</span></span>{% else %}<button data-attr-code="{{item.productCode}}" class="select-product future-select-top">Select</button>{% endif %}{% endwith %}
+																	{% else %} 
+																		{% with model.topSellAddedItems|findwhere('sku', item.productCode) as data %}
+																			{% if data %}
+																				<span class="qtySelector"><span data-attr-code="{{item.productCode}}" class="spinnerDec">&#x2212;</span><input readonly min="1" max="50" type="number" value="{{data.qty}}" class="qtyChange" /><span data-attr-code="{{item.productCode}}" class="spinnerInc">&#x2b;</span></span>
+																			{% else %}
+																				<button data-attr-code="{{item.productCode}}" class="select-product instock-select-top">Select</button>
+																			{% endif %}
+																		{% endwith %}
+																	{% endif %}
+																{% else %}
+																	<button data-attr-code="{{item.productCode}}" class="notify-me-top">Notify Me</button>
+																{% endif %}
+															{% else %}
+																{% with model.topSellAddedItems|findwhere('sku', item.productCode) as data %}
+																	{% if data %} 
+																		<span class="qtySelector"><span data-attr-code="{{item.productCode}}" class="spinnerDec">&#x2212;</span><input readonly min="1" max="50" type="number" value="{{data.qty}}" calss="qtyChange" /><span data-attr-code="{{item.productCode}}" class="spinnerInc">&#x2b;</span></span>
+																	{% else %}
+																		<button data-attr-code="{{item.productCode}}" class="select-product instock-select-top">Select</button>
+																	{% endif %}
+																{% endwith %}
+															{% endif %}
+														</span> 
+													</span>
+												</span>
+											</div>
+										{% endif %}
+									{% endfor %}
+								{% endif %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+</div>    

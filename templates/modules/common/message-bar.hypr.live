@@ -1,0 +1,25 @@
+<div class="mz-messagebar" data-mz-message-bar>
+    {% if model.length > 0 %}
+    <ul class="is-showing mz-errors">
+        {% for msg in model %}
+            {%if msg.message == "You should receive an email with instructions to reset your password shortly."%}
+            <li style="color:rgb(185, 74, 72);">
+                {{ msg.message|safe }}</li>
+            {%else%}
+                {% if msg.message == "Missing or invalid parameter: password Password must be different from the previous 4 utilized passwords."%}
+                    <li>To keep things safe, your new Password cannot be one of your 4 previous Passwords.</li>
+                {%else%}
+                    {% if msg.message == "Missing or invalid parameter: password Invalid password format."%}
+                        <li>Password must be a minimum of 6 characters with at least 1 number and 1 alphabetic character</li>
+                    {%else%}
+                    
+                        <li>{{ msg.message|safe }}</li>
+                    {%endif%}
+                {%endif%}
+            {%endif%}
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+
+

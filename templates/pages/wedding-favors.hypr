@@ -1,0 +1,73 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-wedding mz-wed-favor{% endblock body-tag-classes %} 
+{% block body-content %}
+{% require_script "modules/common" %} 
+<section>
+    <article class="wedding-title">
+        <p class="sectionTitle">Jelly Belly Wedding Center</p>
+        <img class="ring" src="/resources/images/wedding/Wedding Center/rings.gif" />
+        <div class="clearfix"></div>
+    </article>
+    <div class="wedding-center">
+        <div class="weddingNav">
+            <p class="sectionTitle whereToStartText">Wedding Guide</p>
+            <img src="/resources/images/wedding/brideGroom.png" alt="brideGroom"/> 
+            <ul>
+                <li><a href="/wedding-center">Wedding Center Home</a> &#9658;</li>
+                <li><a href="/wedding-ideas">Wedding Themes</a> &#9658;</li>
+                <li><a href="/wedding-color-palettes">Color Palettes</a> &#9658;</li>
+                <li><a href="/wedding-personalized-favors">Personalized Favors</a> &#9658;</li>
+                <li><a href="/wedding-featured-candy">Featured Candy</a> &#9658;</li>
+                <li><a class="candyCalculatorModal" href="">Candy Calculator</a> &#9658;</li>
+            </ul>
+        </div>
+        <div class="weddingBody">
+            <p class="sectionTitle" style="font-size: 50px;">Personalized Wedding Favors</p>
+            <hr />
+            <div class="weddingThemeCont weddingFavor">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">MyJellyBelly.com</p> 
+                    <p>
+                        Make your wedding ceremony and reception even more personal with customized wedding favors and gifts.
+                        Choose a container and fill it with Jelly Belly jelly beans in your wedding colors, or your favorite flavors.
+                        Then decorate it with your own photos or pick from our wedding artwork.
+                        Make sweet keepsakes that your reception, shower or party guests will never forget!
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=redblack&asug=">
+                    <img src="/resources/images/wedding/Wedding Center/myjellybelly_weddingSection.png" />
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="wedding-pic-container">
+                <a href="http://www.myjellybelly.com/">
+                    <p class="sectionTitle">Click here to visit MyJellyBelly.com</p> 
+                </a>
+    
+                <div class="W_myjbPics_container">
+                    <div class="W_myjbPics">
+                        <a href="http://www.myjellybelly.com/"><img src="/resources/images/wedding/Wedding Flavors/myjb_sample1.jpg" /></a>
+                    </div>
+                    <div class="W_myjbPics">
+                        <a href="http://www.myjellybelly.com/"><img src="/resources/images/wedding/Wedding Flavors/myjb_sample2.jpg" /></a>
+                    </div>
+                    <div class="W_myjbPics">
+                        <a href="http://www.myjellybelly.com/"><img src="/resources/images/wedding/Wedding Flavors/myjb_sample3.jpg" /></a>
+                    </div>
+                    <div class="clearFix"></div>
+                </div>
+            </div>
+            <!-- /beach -->
+        </div>
+        <div class="clearfix"></div>
+        <!-- /Zen Wedding -->
+    </div>
+</section>
+{% endblock body-content %}
+
+
+
+

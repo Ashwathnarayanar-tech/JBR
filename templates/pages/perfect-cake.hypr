@@ -1,0 +1,61 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Party Perfect Cupcakes</h1>
+    <article class="carnival-details txt-left">
+        <h2>Party Perfect Cupcakes</h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Party Perfect Cupcakes/party_cupcakes.jpg">
+            </figure>
+            <!-- AddThis Button -->
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+            <img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border: 0">
+            </a>
+            <!-- /AddThis Button -->
+            <p>
+                A unique and colorful spin on birthday cakes! These stacked cupcakes trimmed with Jelly Belly jelly beans are simple to make, and make a special day even better!
+            </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>4 jumbo cupcakes, baked 1 each in blue, red, yellow, and orange paper liners</li>
+                <li>4 standard cupcakes, baked 1 each in blue, red, yellow, and orange paper liners</li>
+                <li>4 mini cupcakes, baked 1 each in blue, red, yellow, and orange paper liners</li>
+                <li>1 can (16 oz) vanilla frosting</li>
+                <li>Assorted food colors</li>
+                <li>
+                    Jelly Belly jelly beans, approx. 3 oz each (about 1/3 cup each), in flavors:
+                    <a target="_blank" href="/search?query=berry blue&amp;asug=">Berry Blue</a> |
+                    <a target="_blank" href="/search?query=blueberry&amp;asug=">Blueberry</a> |
+                    <a target="_blank" href="/search?query=cotton candy&amp;asug=">Cotton Candy</a> |
+                    <a target="_blank" href="/search?query=very cherry&amp;asug=">Very Cherry</a> |
+                    <a target="_blank" href="/search?query=kiwi&amp;asug=">Kiwi</a> |
+                    <a target="_blank" href="/search?query=crushed pineapple&amp;asug=">Crushed Pineapple</a> |
+                    <a target="_blank" href="/search?query=orange sherbet&amp;asug=">Orange Sherbet</a>
+                </li>
+                <li>4 wavy birthday candles (optional)</li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>Divide the vanilla frosting into 4 mixing bowls. Tint each bowl a different pastel color (green, orange, pink, and blue) with the food coloring.</li>
+                <li>
+                    Working on one party cupcake tier at a time, spread tinted frosting on top of cupcakes in like colored paper liners and make smooth. Using matching jelly bean colors,
+                    arrange alternate color Jelly Belly jelly beans around the outer edge of each cupcake, one lengthwise and one crosswise.
+                </li>
+                <li>Stack the cupcakes, pressing the top cupcake into the frosting to secure. Insert a candle in the top center cupcake if desired. Repeat with the remaining cupcakes and jelly beans.</li>
+            </ol>
+            <h2>MAKES 4 CUPCAKES</h2>
+            <hr>
+            
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+

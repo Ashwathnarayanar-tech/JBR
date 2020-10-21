@@ -1,0 +1,246 @@
+{% extends "page" %}
+
+{% block body-tag-classes %} mz-product {% endblock body-tag-classes %}
+
+{% block body-content %}
+
+{% require_script "pages/product" %}
+{% require_script "modules/crosssell" %}
+
+{% preload_json model "product" %}
+
+<div itemscope itemtype="http://schema.org/Product" class="mz-l-container">	
+    <div data-mz-productimages class="mz-productimages mz-l-sidebar original">
+        {% include "modules/product/product-images" %}
+    </div>
+    <div data-mz-productimages class="mz-productimages mz-l-sidebar variant">
+        {% include "modules/product/product-images" %}
+    </div>
+    <div class="mz-productdetail-wrap">
+        {% include "modules/common/message-bar" %}
+        <div id="product-detail" class="mz-productdetail mz-l-stack">
+            {% include "modules/product/product-detail" %}
+        </div>
+	</div>
+    <div id="accordianVarient" class="variant">
+        {% if themeSettings.heatsensitive %}
+            {% for item in model.properties %} 
+                {% if item.attributeFQN == "tenant~IsHeatSensitive"%}
+                    {%for value in item.values%}
+                        {% if value.value == true %}
+                            <strong><p><span style="color: #bc0000">IMPORTANT:</span></strong> During warm-weather months (April through October),
+                            this item requires special handling, including the use of a cold pack, and requires the order to be shipped on a Monday or Tuesday. 
+                            Order more than $100 of Heat-Sensitive goods to get the cold pack for free! Please
+                            <a style="color: #00a3e0; text-decoration:none" href="/shipping_information">click here</a> for more information or <a style="color: #00a3e0; text-decoration:none" href="/contact-us">contact us</a>.</p> 
+                        {% endif%}
+                    {%endfor%}
+                {%endif%}
+            {% endfor %}
+        {% endif %}
+        <ul class="tabStructer"><!-- we will keep this LI open by default -->
+            <div class="tabHead">
+                <ul>
+                    <li class="headItem active" data-attr="ProductInfo">
+                        <h3>Product Info<span class="icon-minus"></span></h3>
+                    </li>
+                    {% for item in model.properties %}
+                        {% if item.attributeFQN == "tenant~isamix"%}
+                            {% for value in item.values%}
+                                {% if value.value == true %}
+                                    <li class="headItem" data-attr="FlavorsinthisMix">
+                                        <h3>Flavors in this Mix<span class="icon-minus"></span></h3>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                    {% if model.mixvar %}
+                        <li class="headItem" data-attr="MixVarieties">
+                            <h3>Mix Varieties<span class="icon-minus"></span></h3>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="tabContent">
+                <li class="contentItem ProductInfo active">
+                    <ul style="display:block;">
+                        <li> 
+                            <div class="product-info">
+                                {{ model.content.productFullDescription|safe }}
+                            </div>
+                            <span class="mz-pagetitle-note"> 
+                                <span itemprop="sku" style="font-style: italic; ">
+                                    {% for item in model.properties %} 
+                                        {% if item.attributeFQN == "tenant~sku"%}
+                                            {% for values in item.values%}
+                                                SKU-{{ values.value }}
+                                            {%endfor%}
+                                        {%endif%}
+                                    {% endfor %}
+                                </span>
+                            </span>
+                            <div class="clearfix"></div>
+                        </li>
+                    </ul>
+                </li>
+                <style>
+                    ul #flavors {
+                        -moz-column-count: 3;
+                        -moz-column-gap: 20px;
+                        -webkit-column-count: 3;
+                        -webkit-column-gap: 20px;
+                        column-count: 3;
+                        column-gap: 20px;
+                    }
+                </style>
+                {% for item in model.properties %}
+                    {% if item.attributeFQN == "tenant~isamix"%}
+                        {% for value in item.values%}
+                            {% if value.value == true %}
+                                <li class="contentItem FlavorsinthisMix">
+                                    <ul id="flavors">
+                                        {% for item in model.properties %}
+                                            {% if item.attributeFQN == "tenant~flavors"%}
+                                                {% for values in item.values%}
+                                                    <li>•   {{ values.value }}</li>
+                                                {%endfor%}
+                                            {%endif%}
+                                        {% endfor %}
+                                        <div class="clearfix"></div>
+                                    </ul>
+                                </li>
+                            {% endif%}
+                        {%endfor%}
+                    {%endif%}
+                {% endfor %}
+                <li class="contentItem MixVarieties">
+                    {% if model.mixvar %}
+                        <ul>
+                            <li>
+                                <div class="mix-varieties">
+                                    <a href="javascript:void(0)">A&amp;W Cream Soda </a>
+                                    <a href="javascript:void(0)">A&amp;W Root Beer </a>
+                                    <a href="javascript:void(0)">Berry Blue  </a>
+                                    <a href="javascript:void(0)">Blueberry  </a>
+                                    <a href="javascript:void(0)">Bubble Gum  </a>
+                                    <a href="javascript:void(0)">Buttered Popcorn  </a>
+                                    <a href="javascript:void(0)">Cantaloupe  </a>
+                                    <a href="javascript:void(0)">Cappuccino  </a>
+                                    <a href="javascript:void(0)">Caramel Corn  </a>
+                                    <a href="javascript:void(0)">Chili Mango  </a>
+                                    <a href="javascript:void(0)">Chocolate Pudding  </a>
+                                    <a href="javascript:void(0)">Cinnamon  </a>
+                                    <a href="javascript:void(0)">Coconut  </a>
+                                    <a href="javascript:void(0)">Cotton Candy  </a>
+                                    <a href="javascript:void(0)">Crushed Pineapple  </a>
+                                    <a href="javascript:void(0)">Dr Pepper  </a>
+                                    <a href="javascript:void(0)">French Vanilla  </a>
+                                    <a href="javascript:void(0)">Green Apple  </a>
+                                    <a href="javascript:void(0)">Island Punch  </a>
+                                    <a href="javascript:void(0)">Juicy Pear  </a>
+                                    <a href="javascript:void(0)">Kiwi  </a>
+                                    <a href="javascript:void(0)">Lemon Drop  </a>
+                                    <a href="javascript:void(0)">Lemon Lime  </a>
+                                    <a href="javascript:void(0)">Licorice  </a>
+                                    <a href="javascript:void(0)">Mango </a>
+                                    <a href="javascript:void(0)">Margarita  </a>
+                                    <a href="javascript:void(0)">Mixed Berry Smoothie  </a>
+                                    <a href="javascript:void(0)">Orange Sherbet </a>
+                                    <a href="javascript:void(0)">Peach </a>
+                                    <a href="javascript:void(0)">Pina Colada  </a>
+                                    <a href="javascript:void(0)">Plum  </a>
+                                    <a href="javascript:void(0)">Pomegranate  </a>
+                                    <a href="javascript:void(0)">Raspberry  </a>
+                                    <a href="javascript:void(0)">Red Apple  </a>
+                                    <a href="javascript:void(0)">Sizzling Cinnamon  </a>
+                                    <a href="javascript:void(0)">Sour Cherry  </a>
+                                    <a href="javascript:void(0)">Strawberry Cheesecake </a>
+                                    <a href="javascript:void(0)">Strawberry Daiquiri  </a>
+                                    <a href="javascript:void(0)">Strawberry Jam  </a>
+                                    <a href="javascript:void(0)">Sunkist Lemon  </a>
+                                    <a href="javascript:void(0)">Sunkist Lime  </a>
+                                    <a href="javascript:void(0)">Sunkist Orange  </a>
+                                    <a href="javascript:void(0)">Sunkist Pink Grapefruit  </a>
+                                    <a href="javascript:void(0)">Sunkist Tangerine  </a>
+                                    <a href="javascript:void(0)">Toasted Marshmallow  </a>
+                                    <a href="javascript:void(0)">Top Banana </a>
+                                    <a href="javascript:void(0)">Tutti-Fruitti  </a>
+                                    <a href="javascript:void(0)">Very Cherry  </a>
+                                    <a href="javascript:void(0)">Watermelon  </a>
+                                    <a href="javascript:void(0)">Wild Blackberry </a>
+                                </div>
+                            </li>
+                        </ul>
+                    {% endif %}
+                </li>
+            </div>
+        </ul>
+    </div>
+</div>
+
+
+{% include "modules/page-popup" %}
+<div class="all-product-suggtion-cointeiner">
+    <div class="header-list-cointeiner">
+        <div class="head-to-activate name-1-heading-tab active" data-id="rti-section">you may also like</div><div class="head-to-activate name-2-heading-tab" data-id="revently-viewed">recently viewed</div><div class="head-to-activate name-3-heading-tab" data-id="top-seller">our top-sellers</div>
+    </div> 
+    <div class="container-product-sections">
+        <div class="pd-list-section rti-section active">
+            {% dropzone zoneId="rti-product" scope="template" %}
+        </div>
+        <div class="pd-list-section revently-viewed"> 
+            {% if model.productType !== "fixture" %}
+                <div id="recent" data-mz-productrecent-view ></div>
+            {% endif %}
+        </div>
+        <div class="pd-list-section top-seller">   
+            {% if model.productType != "fixture" %}
+                {% comment %}
+                {% include_products "modules/product/crosssell-carousel" with productCodes=themeSettings.addCrosssellProductList as_parameter %}
+                {% endcomment %}
+                <div id="topsell" class="topseller"></div>
+            {% endif %} 
+        </div>
+    </div>
+</div>
+{% if model.productType == "fixture" %}
+    <h3>Recommended Bundles:</h3>
+    {% include_products "modules/bundles/pre_built_bundles" with pageSize=200 categoryCode=427 %}
+    
+    <h3>Build-Your-Bundle (choose your own products):</h3>
+    {% include_products "modules/bundles/custom_products" with pageSize=200 categoryCode=361 %}
+    
+   <div class="add-all-cart"><button id="addtobasket" data-mz-action="addTobasket" class="fixture_cart mz-productdetail-addtocart add-bundles mz-button mz-button-large" disabled="disabled" >Add All to Cart</button></div> 
+    
+{% endif %}
+
+
+
+{% endblock body-content %}
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

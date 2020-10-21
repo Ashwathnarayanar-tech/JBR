@@ -1,0 +1,162 @@
+{% block purchase-order-form %}
+    <div class="mz-l-formfieldgroup-row purchase-order-main">
+        <div class="mz-l-formfieldgroup-cell paymentTerms" >
+            {% if model.paymentTermOptions.length > 0 %}
+                {% comment %}
+                    <select class="mz-l-formfieldgroup-halfsize" id="mz-payment-purchase-order-payment-terms" name="payment-terms" data-mz-value="{{ purchaseordercontext }}paymentTerm" data-mz-purchase-order-payment-term >
+                        <option selected="selected" value="">{{labels.selectPurchaseOrderPaymentTerm}}</option>
+                        {% for term in model.paymentTermOptions %}
+                                <option {% if model.paymentTerm.code == term.code %} selected="selected" {% endif %} value="{{ term.code }}">{{ term.description }}</option>
+                        {% endfor %}
+                    </select>
+                {% endcomment %}
+                {% for term in model.paymentTermOptions %}
+                    <div class="{{ term.code }}" {% if model.paymentTermOptions.length == 1  and term.code == "card-on-file" %}style="float:none;" {% endif %}> 
+                        <input data-mz-value="{{ purchaseordercontext }}paymentTerm" data-mz-purchase-order-payment-term id = {{ term.code }} type="radio" name="payment-terms" value="{{ term.code }}" 
+                        {% if model.paymentTerms.file and term.code == "terms-on-file" %}checked = "checked" {% else %} {% if model.paymentTerms.card && term.code == "card-on-file"%} checked="checked"
+                        {% else %} {% if not model.paymentTerms.file && not model.paymentTerms.card && term.code == "terms-on-file" %} checked="checked" {% endif %}
+                        {% endif %} {% endif %}/> 
+                        <label for="{{ term.code }}"> {% if term.code == "terms-on-file" %}Net Terms on File {% else %} {{ term.description }}{% endif %}</label>
+                        {% if term.code == "terms-on-file" %}<span class="whatterm">what is this?</span><span class="term-tooltip">{{ labels.termsonfileinfo }}</span>{% endif %} 
+                    </div>
+                {% endfor %}
+                <div class="clear"></div>
+            {% else %}
+                <span class="mz-payment-purchase-order-payment-terms">{% if term.code == "terms-on-file" %}Net Terms on File {% else %} {{ model.paymentTerm.description }} {% endif %}</span>
+            {% endif %}
+            <span class="mz-validationmessage" data-mz-validationmessage-for="{{ purchaseordercontext }}paymentTerm"></span>
+        </div>
+        {% if model.paymentTerms.card and not model.errors %}
+            <div class="maincard">
+                <div class="mz-l-formfieldgroup-cell">
+                    <label for="selectcards"><span> *</span> Select a Card:</label>
+                </div>
+                <div class="mz-l-formfieldgroup-cell selectcard-options">
+                    <select name="poterms" id ="selectcards" class="selectcard" data-mz-value="{{ purchaseordercontext }}selectCreditCard">
+                        {% if model.cards.res.length > 0 %} 
+                            
+                            {% for card in model.cards.res %}
+                                {% if card.isExpired == false %}
+                                    <option value="{{ card.token }}" {% if model.paymentTerms.selectedCard && model.paymentTerms.cardNumber== card.token %} selected = "selected" {% endif %}>{{ card.concard }}  {{card.conExpiry}}</option>
+                                {% endif %}
+                            {% endfor %}   
+                        {% endif %}       
+                    </select>
+                    <span class="mz-validationmessage" data-mz-validationmessage-for="{{ purchaseordercontext }}selectCreditCard"></span>
+                </div>    
+                <button class="addcard-button" data-mz-action="addCard" >Add New Card</button>
+            </div>
+        {% endif %}
+        {% if model.errors and not model.paymentTerms.file %}
+            <p style="font-weight: bold;color: rgba(255, 0, 0, 0.84);">{{ model.errors }}</p>
+        {% endif %}
+        {% if model.paymentTerms.file or model.paymentTerms.card and not model.errors %}
+            <div class="mz-l-formfieldgroup-cell purchase-number"> 
+                <!--
+                    <div class="mz-l-formfieldgroup-row mz-payment-purchase-order-amount-row">
+                        <div class="mz-l-formfieldgroup-cell">
+                            <label for="mz-payment-purchase-order-amount">{{ labels.purchaseOrderAmount }}:</label>
+                        </div>
+                        <div class="mz-l-formfieldgroup-cell">
+                            <span class="mz-payment-purchase-order-amount">{{ model.amount | currency }}</span>
+                        </div>
+                    </div>
+                -->
+                <div class="mz-l-formfieldgroup-row mz-payment-purchase-order-number-row">
+                    <div class="mz-l-formfieldgroup-cell">
+                        <label for="mz-payment-purchase-order-number"><span class=""> *</span> {{ labels.purchaseOrderNumber }}:</label>
+                    </div>
+                    <div class="mz-l-formfieldgroup-cell">
+                        <input type="text" name="purchase-order-number" maxlength="20" id="mz-payment-purchase-order-number" data-mz-value="{{ purchaseordercontext }}purchaseOrderNumber" value="{{ model.purchaseOrderNumber }}" />
+                        <p class="reqnumbers">*PO Number of 3+ characters is required</p>
+                        <!-- <span class="mz-validationmessage" data-mz-validationmessage-for="{{ purchaseordercontext }}purchaseOrderNumber"></span> -->
+                    </div>
+                </div>
+                <!-- <div class="mz-l-formfieldgroup-row mz-payment-purchase-order-payment-terms-row">
+                    <div class="mz-l-formfieldgroup-cell">
+                        <label for="mz-payment-purchase-order-payment-terms">{{ labels.purchaseOrderPaymentTerms }}<span class="is-required"> *</span>:</label>
+                    </div>
+                    <div class="mz-l-formfieldgroup-cell">
+                        {% if model.paymentTermOptions.length > 1 %}
+                            <select class="mz-l-formfieldgroup-halfsize" id="mz-payment-purchase-order-payment-terms" name="payment-terms" data-mz-value="{{ purchaseordercontext }}paymentTerm" data-mz-purchase-order-payment-term >
+                                <option selected="selected" value="">{{labels.selectPurchaseOrderPaymentTerm}}</option>
+                                {% for term in model.paymentTermOptions %}
+                                    <option {% if model.paymentTerms.code == term.code %} selected="selected" {% endif %} value="{{ term.code }}">{{ term.description }}</option>
+                                {% endfor %}
+                            </select>
+                        {% else %}
+                            <span class="mz-payment-purchase-order-payment-terms">{{ model.paymentTerm.description }}</span>
+                        {% endif %}
+                        <span class="mz-validationmessage" data-mz-validationmessage-for="{{ purchaseordercontext }}paymentTerm"></span>
+                    </div>
+                </div>-->
+                {% if not model.paymentTerms.isSubscriptionActive %}
+                {% for field in siteContext.checkoutSettings.purchaseOrder.customFields %}
+                    {% if field.isEnabled %}
+                        {% with 'pOCustomField-'+field.code as modelName %}
+                            <div class="mz-l-formfieldgroup-row mz-payment-purchase-order-custom-field-row mz-custom-pOCustomField-{{ field.code }}">
+                                {% if field.code == "shipdate" %}
+                                    <div class="mz-l-formfieldgroup-cell">
+                                        <label for="mz-payment-pOCustomField-{{ field.code }}">
+                                            {% if field.isRequired %}
+                                                <span class="is-required"> *</span> 
+                                            {% endif %}     
+                                            Desired Ship Date:
+                                        </label>
+                                    </div>
+                                    <div class="mz-l-formfieldgroup-cell">
+                                        <label class="calendar" for="datePicker"><img src="../resources/images/calendaricon1.png" %} alt="calendar" /></label>
+                                        <input type="text" class="datePicker" id="datePicker" readonly name="po-custom-field-{{ field.code }}" id="mz-payment-pOCustomField-{{ field.code }}" data-mz-value="{{ purchaseordercontext }}pOCustomField-{{field.code}}" value="{{model|prop(modelName)}}" />
+                                        <p class="earliest-date">The earliest date we can ship is <span class=""></span></p>
+                                        <span class="mz-validationmessage" id="mz-payment-pOCustomField-{{ field.code }}-validation" data-mz-validationmessage-for="{{ purchaseordercontext }}pOCustomField-{{field.code}}"></span>
+                                    </div>
+                                {% else %}
+                                    <div class="mz-l-formfieldgroup-cell">
+                                        <label for="mz-payment-pOCustomField-{{ field.code }}">
+                                            {{ field.label }}
+                                            {% if field.isRequired %}
+                                                <span class="is-required"> *</span> 
+                                            {% endif %}
+                                        :</label>
+                                    </div>
+                                    <div class="mz-l-formfieldgroup-cell">
+                                        <input type="text" name="po-custom-field-{{ field.code }}" id="mz-payment-pOCustomField-{{ field.code }}" data-mz-value="{{ purchaseordercontext }}pOCustomField-{{field.code}}" 
+                                        {% if model.paymentTerms.card and field.code=="cardnumber" %} value="{{model.paymentTerms.cardNumber}}" {% else %}
+                                        {% if model.paymentTerms.card and field.code=="profileid" %} value="{{model.paymentTerms.profile}}" {% else %} value="{{model|prop(modelName)}}"
+                                        {% endif %}
+                                        {% endif %}    
+                                        />
+                                        <span class="mz-validationmessage" id="mz-payment-pOCustomField-{{ field.code }}-validation" data-mz-validationmessage-for="{{ purchaseordercontext }}pOCustomField-{{field.code}}"></span>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% endwith %}
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+            </div>
+            {% if model.paymentTerm.code == "terms-on-file" %}
+                <div class="mz-l-formfieldgroup-cell balance-details">
+                    <div>
+                        <div class="mz-l-formfieldgroup-row credit-limit">
+                            <div class="mz-l-formfieldgroup-cell">
+                                <strong>{{labels.creditLimit}}:</strong>
+                            </div>
+                            <div class="mz-l-formfieldgroup-cell">
+                                <span>{{ model.creditLimit | currency }}</span>
+                            </div>
+                        </div>
+                        <div class="mz-l-formfieldgroup-row available-balance">
+                            <div class="mz-l-formfieldgroup-cell">
+                                <strong>{{labels.availableBalance}}:</strong>
+                            </div>
+                            <div class="mz-l-formfieldgroup-cell">
+                                <span>{{ model.availableBalance | currency }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}    
+        </div>
+    {% endif %}
+{% endblock purchase-order-form %}

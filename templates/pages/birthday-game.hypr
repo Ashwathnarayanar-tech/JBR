@@ -1,0 +1,95 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static {% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Birthday Party Games</h1>
+    <article class="carnival-details txt-left">
+        <h2 class="indent">Gone Fishin'</h2>
+        <p>You will need:</p>
+        <ul class="contentList">
+            <li>● 2 people to run the game</li>
+            <li>● Long piece of string, like clothesline</li>
+            <li>● Tablecloth or bed sheet</li>
+            <li>● Fishing pole or string tied to a stick</li>
+            <li>● Clothespin</li>
+            <li>● Different types of small prizes</li>
+        </ul>
+        <p>Tie the long string across the room and lay a sheet over it so no one can see what is on the other side. Use the fishing pole or tie a string around a stick or broom handle. Tie a clothespin on the end of the "fishing pole" string. Let each guest take a turn "casting" their line over the sheet. Have a helper stand on the other side and attach the small prizes to the clothespin. When they are done, the helper gives a slight tug on the line. When the kids "reel" in their line, they will have a prize on the end. </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <h2 class="indent">Freeze Tag</h2>
+        <p>You will need:</p>
+        <ul class="contentList">
+            <li>● Plenty of room to run around</li>
+        </ul>
+        <p>
+                The birthday child can be selected to be "it" (the person who has to tag other 
+        people) first. The tagger tries to tag all the other guests. If a player is 
+        tagged, he or she must freeze. Players who are not frozen can "unfreeze" frozen 
+        players by touching them. The first player to be frozen 3 times becomes "it" 
+        next.  
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <h2 class="indent">Statues</h2>
+        <p>You will need:</p>
+        <ul class="contentList">
+            <li>● Music</li>
+        </ul>
+        <p>
+               All players move around while the music is playing, when the music stops the 
+            players have to stand like statues, anyone who moves is out. Start the music 
+            again and repeat as many times as you like.  
+                     
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <h2 class="indent">Telephone Game</h2>
+        <p>You will need:</p>
+        <ul class="contentList">
+            <li>● Enough chairs and room for the kids to be in a big circle</li>
+        </ul>
+        <p>
+                Have the kids sit in a circle. Help the birthday child think of a message. The 
+                birthday child then whispers the message to the person on their left. That 
+                person whispers the message to the person on their left, and so on. When the 
+                message has traveled all the way around the circle the person on the birthday 
+                child’s right tells the message out loud. Then the birthday child tells the 
+                original message. It will be funny to see how mixed up the original message got. 
+                Play again until ready for new game.   
+                         
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <h2 class="indent">Tied in Knots Game</h2>
+        <p>You will need:</p>
+        <ul class="contentList">
+            <li>● A pretty big area</li>
+        </ul>
+        <p>
+                Instruct the guests to stand in a circle facing inward. To begin, everyone 
+                extends his or her right hand into the ring and takes hold of someone else’s 
+                hand. Then they do the same with their left hands. The object of the game is to 
+                see if they can untangle the "knot" by ducking under people, stepping over them 
+                or turning around. No matter what happens they can’t let go of their hands. 
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <h2 class="indent">Name That Jelly Belly</h2>
+        <p>You will need:</p>
+        <ul class="contentList">
+            <li>● About 3-5 Jelly Belly jelly beans</li>
+            <li>● 1 cup that can’t be seen through</li>
+            <li>● 1 Napkin</li>
+        </ul>
+        <p>
+                Put the jelly belly jelly bean on top of a napkin and put a cup over it. Have 
+                the kids ask yes or no questions ("Is it green?", "Is it a fruit?"…) to guess 
+                the flavor of the jelly belly you have hidden. When they guess correctly give it 
+                         
+        </p>
+    </article>
+</section>
+{% endblock body-content %}
+

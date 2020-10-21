@@ -1,0 +1,40 @@
+{% extends "modules/common/order-listing" %}
+{% block order-details %}
+    <ul class="order-list-heading" returnOrderHead="{{model.id}}">
+            <li>
+                <label>{{ labels.status }}:</label>
+                <span>{{ model.status }}</span>
+            </li>
+            <li>
+                <label>{{ labels.returnNumber }}:</label>
+                <span>{{ model.returnNumber }}</span>
+            </li>
+            <li>
+                <label>{{ labels.returnTotal }}:</label>
+                <span>{{ model.refundAmount|currency }}</span>
+            </li>
+            <li class="plus-minus">
+                <label><a returnOrderID="{{model.id}}">+</a></label>
+                <span></span>
+            </li>
+        </ul> 
+        {% comment %}
+    <dl class="mz-propertylist">
+        <dt>{{ labels.status }}</dt>
+        <dd>{{ model.status }}</dd>
+        <dt>{{ labels.returnNumber }}</dt>
+        <dd>{{ model.returnNumber }}</dd>
+        <dt>{{ labels.returnTotal }}</dt>
+        <dd>{{ model.refundAmount|currency }}</dd>
+    </dt>
+    {% endcomment %}
+{% endblock order-details %}
+{% block order-items %}
+    <div returnOrderDetails="{{model.id}}">
+    {% for item in model.items %}
+    {% include "modules/my-account/return-history-item-listing" with model=item %}
+    {% endfor %}
+    </div>
+{% endblock order-items %}
+
+

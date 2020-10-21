@@ -1,0 +1,217 @@
+#x-account-wishlist{
+    .mz-l-stack-sectiontitle{
+        border-top: 1px solid #ccc;
+        padding: 11px 0px 11px 22px;
+        border-bottom: 1px solid #ccc;
+        font-size: 14px;
+        font-family: @Trebuchet;
+        color: #000;
+    }
+    .mz-accountwishlist-list{
+        .mz-table{
+            .header-tr{
+                th{
+                    font-size: 14px;
+                    padding: 15px 22px;
+                    border-top: none;
+                    border-bottom: 1px solid #ccc;
+                }
+                .accountstorecredit-header-creditnumber {
+                    text-align: center;
+                }
+                td {
+                    padding: 10px 22px;
+                }
+            }
+            .item-tr{
+                height: 100px;
+                border-bottom: 1px solid #ccc;
+                color: #000;
+                background: #FFf;
+                &:hover{
+                    border-bottom:1px solid #36abe2;
+                }
+                td {
+                    padding: 10px 22px;
+                    &:last-child {
+                        padding: 10px 0;
+                    }
+                }
+                .itemlisting-title {
+                  font-size: 12px;
+                  color: #212120;
+                  text-decoration: none;
+                    width: 270px;
+                    white-space: pre-line;
+                    text-overflow: ellipsis;
+                    display: block;
+                    word-wrap: break-word;
+                }
+                .action-calss{
+                    text-align: center;
+                        .action-remove{
+                            background: #949494;
+                            color: #fff;
+                            display: inline-block;
+                            font-size: 11px;
+                            font-weight: bold;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            border: 0;
+                            padding: 7px 10px;
+                            position: relative;
+                            margin: 0px 2px 0 10px;
+                            cursor: pointer;
+                            &:hover {
+                                background: #656565; 
+                            }
+                        }
+                        
+                        .action-addToCart{
+                            border: none;
+                            color: #FFF;
+                            background: #F8732E;
+                            font-size: 11px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            padding: 8px;
+                            position: relative;
+                            margin: 0px 2px;
+                            cursor: pointer;
+                          &:hover{
+                              color: #fef4e9;
+                              background: #f78d1d;
+                          }
+                        }
+                        .disabled{
+                            height: 20px;
+                          margin: 0px;
+                          padding: 4px 14px;
+                          position: relative;
+                          width: 107px;
+                          background: #f7bc6f;
+                          border: 1px solid #e28104;
+                          color: #fff;
+                          display: block;
+                          cursor: pointer;
+                          font-family: arial;
+                          font-size: 14px;
+                          font-weight: bold;
+                          line-height: 19px;
+                          text-decoration: none;
+                          text-transform: uppercase;
+                          border-radius: 0;
+                          color: #606060;
+                          border: solid 1px #b7b7b7;
+                          background: #fff;
+                          background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#ededed));
+                          background: -moz-linear-gradient(top,#fff,#ededed);
+                          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#ededed');
+                        }
+                }
+            }
+            .is-warning,.is-success {
+                color: #fa0303;
+                padding: 2px 5px;
+                border: 0px;
+                background: #FFF;
+                border-bottom: 1px solid;
+                p{
+                    margin: 5px 0px;
+                }
+                .mz-action, .doNotRemove{
+                    background: #36abe2;
+                    border: 0;
+                    color: #fff;
+                    text-transform: uppercase;
+                    border-radius: 0;
+                    -moz-border-radius: 0;
+                    -webkit-border-radius: 0;
+                    padding: 3px 3px;
+                    font-size: 10px;
+                    width: 21%;
+                    margin: 0px 2px 9px 2px;
+                    display: inline-block;
+                    text-align: center;
+                    text-decoration: none;
+                }
+                .doNotRemove{
+                    background: #7c7a7a;
+                }
+            } .is-success{
+                color: #1FD52F;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1016px){
+    
+    .header-tr{
+        display: none;
+    }
+    #x-account-wishlist { 
+        .mz-l-stack-sectiontitle{
+            padding-left: 0px;
+        }
+    }
+    
+    #x-account-wishlist .mz-accountwishlist-list .mz-table .item-tr {
+        border-bottom: 1px solid #ccc;
+        .itemlisting-title {
+         font-weight: bold;
+         width:auto; 
+        }
+        td{
+            display: block;
+            padding-top: 15px;
+            padding-left: 10px;
+            .action-calss{
+                text-align: left !important;
+            }
+            &:first-child {
+                float: left;
+                width: 43%;
+                text-align: center;
+            }
+            &:last-child {
+                padding-bottom: 15px;
+            }    
+            .action-calss{
+                    text-align: center;
+                        .action-remove{
+                            display: inline-block;
+                            padding: 8px 1%;
+                            width: 45%;
+                            text-align: center;
+                            margin-left: 2%;
+                        }
+                        
+                        .action-addToCart{
+                            display: inline-block;
+                            padding: 8px 1%;
+                            width: 45%;
+                            text-align: center;
+                        }
+                     
+                }
+        }
+        .wish-list-buttons {
+            padding-bottom: 20px;
+        }
+        .wish-list-total:after {
+            content: "";
+            display: block; 
+            clear: both;
+        }
+    }
+} 
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+
+<div class="mz-accountsettings-details">
+    <div class="mz-accountsettings-user">
+        <h3 class="mz-l-stack-sectiontitle">{{ labels.accountSettings }}</h3>
+        <div>
+            <ul>
+                <li>
+                    <label></label>
+                    <span>
+                    </span>
+                </li>
+                <li class="grouping">
+                    <label>Your Account:</label>
+                    <span>{{model.lastName}}</span>
+                </li>
+                <li>
+                    <label>Name:</label>
+                    <span>{{ model.firstName }}</span>
+                    <div class="clearfix"></div>
+                </li> 
+                <li> 
+                    <label class="contact-label">Contact:</label>
+                    {% for contact in model.contacts %} 
+                        {% if forloop.index == 1 %}
+                            <ul class="address">
+                                <li><span class="contact-address">{{ contact.address.address1 }}</span></li>
+                                {% if contact.address.address2 %}
+                                    <li><span class="contact-address">{{ contact.address.address2 }}</span></li>
+                                {% endif %}
+                                {% if contact.address.address3 %}
+                                    <li><span class="contact-address">{{ contact.address.address3 }}</span></li>
+                                {% endif %}
+                                <li><span class="contact-address">{{ contact.address.cityOrTown }}, {{ contact.address.stateOrProvince }}, {{ contact.address.postalOrZipCode }}</span></li>
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
+                </li>
+                {% if themeSettings.newsLetterMarkettingInMyAccount%}
+                <li>
+                    <label>{{ labels.accountOptIn }}:</label>
+                    <span><input type="checkbox" id="account-acceptsmarketing" data-mz-value="acceptsMarketing" {% if model.acceptsMarketing %}checked="checked"{% endif %} /></span>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+
+
+
+

@@ -1,0 +1,46 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <article>
+        <h1 class="mz-pagetitle">Brant Seghetti</h1>
+        <figure class="vertImage cyclingImg">
+            <img src="/resources/images/sponsors/Brant Seghetti/BrantandDad.jpg">
+            <br>
+            <br>
+            <img src="/resources/images/sponsors/Brant Seghetti/seghetti_sparky.jpg">
+            <figcaption class="finePrint">There's no mistaking Brant and Sparky at any air show or competition. The silver plane is covered in Jelly Belly jelly beans, and Mr. Jelly Belly's hanging from the tail. 
+                And Brant's the one pilot handing out Jelly Belly samples before and after his performances! 
+            </figcaption>
+        </figure>
+        <p>To find out when and where Brant will be performing, look at our <a href="/sponsorships-event-calendar">Event Calendar</a>.</p>
+        <p>Jelly Belly’s professional air racer, Brant grew up around planes. His father Steve was an avid pilot and instilled his love of flying into Brant.</p>
+        <p>During races, Brant reaches speeds up to 350 mph while zooming around pylons with up to seven other planes on his tail.</p>
+        <p>
+            Brant flies every race in “Sparky,” a P-51D Mustang. Sparky was built in Los Angeles in 1944, and was flown in World War II by an ace pilot. 
+            Steve Seghetti picked Sparky up in 1984. The plane got its name when Steve landed it after forgetting to deploy the landing gear. 
+            Sparks shot up from the bottom of the plane and the name "Sparky" was born.
+        </p>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+

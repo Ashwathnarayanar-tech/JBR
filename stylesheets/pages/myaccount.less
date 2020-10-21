@@ -1,0 +1,259 @@
+.mz-messagebar .mz-errors li {
+    text-align: center !important;
+
+}
+    .mz-myaccount {
+    .mz-pageheader-desktop .jb-serach-box-with-label p {
+        font-size: 14px;
+    }
+    .subsc-cancel-alert{
+        display: none;
+        position: fixed;
+        font-family: Arial,Helvetica,sans-serif;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 99999;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        .zero-pop{
+            position: absolute;
+            z-index: 99;
+            background: #fff;
+            width: 40%;
+            left: 30%;
+            top: 35%;
+            border: 1px solid;
+            border-radius: 6px;
+            padding: 1%;
+            .zero-msg{
+                padding: 4% 4% 3% 4%;
+                margin: 0;
+                font-size: 14px;
+                font-family: Trebuchet MS,Verdana,sans-serif;
+                text-align: center;
+            }
+            .button_continue{
+                text-align: center;
+                .continue{
+                    background: #36abe2;
+                    border: 0;
+                    color: white;
+                    text-transform: uppercase;
+                    border-radius: 0;
+                    -moz-border-radius: 0;
+                    -webkit-border-radius: 0;
+                    padding: 2% 8%;
+                    font-size: 14px;
+                    font-weight: bold;
+                    font-family: Trebuchet MS,Verdana,sans-serif;
+                    position: relative;
+                }
+            }
+        }
+    }
+    a[href="/myaccount"] {
+        color: #00a3e0;
+    }
+    .mz-l-paginatedlist {
+        overflow: hidden;
+        position: relative;
+    }
+    .none-myaccount{
+        display: none !important;
+    }
+    .mz-pagetitle {
+        color: #1381B5;
+        font-size: 26px;
+        font-weight: bold;
+        margin: 10px 0 10px;
+        font-family: @Trebuchet;
+        float: left;
+        
+    }
+    .mz-description {
+        display: inline-block;
+        float: right;
+        color: #231f20;
+        font-size: 12px;
+        float: left;
+        margin: 25px 115px;
+    }
+    .mz-l-pagecontent {
+        padding: 10px 0px 0px 0px;
+    }
+    .mz-myaccount-panels {
+        margin-left: 235px;
+       
+    }
+    .addtocartoverlay{
+        position: absolute; 
+        top: 13%;
+        left: 23%;
+        height: 80%;
+        background: #cfcfcf;
+        width: 80%;
+        opacity: 0.5;
+        display: none; 
+    }
+    .shipping-link {
+        display: block;
+        float: right;
+        margin-bottom: 20px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #36abe2;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .mz-myaccount-nav {
+        width: 212px;
+        box-sizing: border-box;
+        border-right: 1px solid #e4e4e4;
+        margin: 0px 10px 0 0;
+        padding-right: 25px;
+        .mz-scrollnav-item {
+            margin-top: 10px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        a.mz-scrollnav-link {
+            padding: 8px 30px;
+            outline: none;
+            display: block;
+            text-align: left;
+            text-decoration: none;
+            font-size: 14px;
+            font-family: @Trebuchet;
+            font-weight: bold;
+            color: #231f20;
+            &.mz-nav-head {
+                color: #f8732e;
+                font-size: 16px;
+                font-family: @Trebuchet;
+                padding: 10px 0;
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+        a.mz-scrollnav-link.active{
+            background: #ebf6fc;
+            border-radius: 0;
+        }
+    }
+
+    .mz-contacttype-isprimary {
+        font-size: @fontSizeSmall;
+        font-style: italic;
+        display: block;
+        margin-top: 3px;
+        text-indent: @gutter;
+    }
+    @media (max-width: 600px) {
+        .mz-myaccount-panels {
+            margin-left: 0;
+        }
+        .mz-myaccount-nav { 
+            float: none;
+            width: auto;
+            margin-bottom: @gutter;
+            .clearfix();
+            .mz-scrollnav-item {
+                float: left;
+                margin: @gutter/4;
+            }
+        }
+    }
+	.mz-cms-content{
+		padding: 0px;
+	}
+}
+
+@media only screen and (min-width: 1px) and (max-width: 767px){
+    .mz-myaccount {
+        .mz-myaccount-panels{
+            margin-left: 0px;
+        }
+        .mz-pagetitle {
+            color: #f8732e;
+            font-size: 26px;
+            font-weight: bold;
+            margin: 20px 0 20px;
+            font-family: @Trebuchet;
+            float: none;
+            text-transform: uppercase;
+            
+        }
+        .mz-desktop{
+            display: none;
+        }
+        .mz-l-container{
+            //margin-top: 73px !important;
+        }  
+        
+        .selected-menu-mobile{
+              cursor : pointer;
+              display: block;
+              width: 100%;
+              text-align: left;
+              font-size: 14px;
+              padding: 9px 11px;
+              border: 1px solid #C4C4C4;
+              margin-top: 0px !important;
+              box-sizing: border-box;
+              border-radius: 3px;
+              -moz-border-radius: 3px;
+              -webkit-border-radius: 3px;
+              font-weight: bold;
+              color: #000;
+              background: url('../../resources/images/icons/menu-dropdown.png') no-repeat scroll 95% 50%;
+        }
+        .mz-description{
+            padding: 6px 3px;
+            margin: 10px 0px;
+            line-height: 20px;
+        }
+        .mz-l-sidebar, .mz-myaccount-nav{
+            display: none;
+        }
+        .mobile-popupmenu-myaccount{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: white;
+            top: 128px;  
+            z-index: 11;
+            left: 0;
+            .mz-scrollnav-link-mobile{
+                  display: block;
+                  padding: 5px;
+                  text-decoration: none;
+                  font-size: 14px;
+                  font-weight: 600;    
+                  margin-top: 5px;
+            }
+            .mz-scrollnav-link-mobile.active{
+                background: #ebf6fc;
+            }
+        }
+        .subsc-cancel-alert{
+            .zero-pop {
+                width: 75%;
+                left: 11.5%;
+                padding-bottom: 1em;
+            }
+        }
+    }
+} 
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .mz-subscriptionhistory {
+        .mz-subscription-section .mz-subscriptionlist .mz-subscription-listing .subscription-contianer .subs-list-details .subs-list-edit .subs-list-edit-body ul.subs-list-info li span {
+            display: block;
+        }
+    } 
+}

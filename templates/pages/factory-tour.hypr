@@ -1,0 +1,143 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+    
+ 
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar mz-w-direction mz-w-youth-camps{% endblock body-tag-classes %} 
+{% block body-content %} 
+<section>
+        <div class="carnival-details">
+             {% dropzone "dropzone_area1-factory-tours" scope="page" %}
+        </div> 
+    <article>
+        <h1 class="mz-pagetitle">
+            Jelly Belly Factory Tours
+        </h1>
+        <figure class="vertImage">
+            <img src="/resources/images/visit-us/CA_VC.jpg"> 
+        </figure>
+        <h3>
+            Daily from 9 AM to 4 PM PT*
+        </h3>
+        <p class="finePrint">
+            *Except New Year's Day, Easter Sunday, Thanksgiving Day and Christmas Day
+        </p>
+        <h3 class="allCaps">
+            GENERAL TOURS
+        </h3>
+        <p>
+            Step into our factory and smell the aroma of chocolate, peach, cinnamon, pineapple, or whatever is being cooked up that day. 
+            Visit our candy making factory in Fairfield, California, located about an hour's drive north of San Francisco, and 45 minutes west of Sacramento.
+        </p>
+        <p>
+            During the 40-minute walking tour, Jelly Belly tour guides will show you a real working factory where we cook up over 150 different sweet treats. Learn the secrets to how we create the legendary Jelly Belly jelly bean and discover why it takes more than a week to make a single bean.
+        </p>
+        <p>
+            <a href="" onclick="popup = window.open('http://content.jellybelly.com/cachefly/Video/2minvid/minitour.html', 'PopupPage', 'height=280,width=320,scrollbars=no,resizable=no'); return false" target="_blank">
+            Click here for a video
+            </a>
+            with details on the Fairfield Visitor Center and tour! 
+        </p>
+        <hr>
+        <h3 class="allCaps">
+            WEEKDAY TOURS
+        </h3>
+        <p>
+            The Jelly Belly Visitor Center is open daily from 9 AM to 5 PM PT, and guided factory tours operate daily from 9 AM to 4 PM PT, except for 
+            <strong>
+            New Year's Day, Easter Sunday, Thanksgiving Day,
+            </strong>
+            and 
+            <strong>
+            Christmas Day.
+            </strong>
+            We have reduced hours on the 1st Saturday in December, Christmas Eve and New Year's Eve; on these three days tours end at 2:00 PM, our Café closes at 2:00 PM and our retail 
+            store closes at 3:00 PM. Hours are subject to change. Bus and RV parking is available during business hours. Overnight parking is prohibited. An on-site dog walk area is available for guests traveling with pets. 
+        </p>
+        <p>
+            Jelly Belly factory tours are especially popular and referred to by many as a "unique and sweet experience". Reservations are not required. 
+            Tours are FREE and depart approximately every 10-15 minutes throughout the day and last approximately 40 minutes. 
+            <span class="bold">
+            While the typical wait for tours is approximately 15 minutes, 
+            tour waits can be as long as 1 hour or more during certain holidays, the Easter season, Spring Break, summer (mid-June to end of August), Veteran’s Day, the Friday and Saturday 
+            after Thanksgiving, the week before Christmas, and the week before New Year's.
+            </span>
+        </p>
+        <p>
+            Please plan to bring strollers or wheelchairs as all areas of the Visitor Center and factory tour are fully ADA accessible. 
+            Note that strollers and wheelchairs are not provided.
+        </p>
+        <p>
+            Jelly Belly has teamed up with Sharpshooter Imaging&trade; to offer souvenir photos. Pictures of your tour group are taken just before your tour and are available for 
+            purchase when you return from your tour!
+        </p>
+        <p>
+            NOTE: Jelly Belly is a working factory. While we strive to keep all manufacturing areas operating at full capacity Monday through Friday, there may be times some or all areas 
+            of the factory will not be operating or operating at full production. This includes annual end of March physical inventory and maintenance shut down periods. Production schedules 
+            are subject to change without notice. Please refer to our 
+            <a href="/California-Factory-Events">
+            Event Calendar
+            </a>
+            for these notifications. 
+        </p>
+        <p class="finePrint">
+            ALLERGEN NOTICE: Our Retail Store, Café, and Chocolate Shoppe confections and foods contain certain allergy triggers. Please check out our 
+            <a href="/frequently-asked-questions">
+            FAQ
+            </a>
+            (Frequently Asked Questions) to learn more about allergens and to submit a question. 
+        </p>
+    </article>
+</section>
+<section class="warehouse-direction">
+    <hr>
+    <figure class="direction-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3133.741003271776!2d-122.07979659706213!3d38.23911686510197!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085140b6b68ba2d%3A0x8722b63b4f417055!2s1+Jelly+Belly+Ln%2C+Fairfield%2C+CA+94533%2C+USA!5e0!3m2!1sen!2sin!4v1416374206084" width="400" height="300" frameborder="0" style="border:0"></iframe>
+        <br>
+        <small>
+        <a  href="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=10100+Jelly+Belly+Lane+Pleasant+Prairie,+Wisconsin+53158&amp;sll=42.52912,-87.876128&amp;sspn=1.325733,2.287903&amp;ie=UTF8&amp;ll=42.540307,-87.896805&amp;spn=0.044268,0.072956&amp;z=13&amp;iwloc=addr&amp;source=embed">
+        View Larger Map
+        </a>
+        </small>
+    </figure>
+    <div class="direction-details">
+        <h3>
+            WEEKEND TOURS
+        </h3>
+        <p>
+            On weekends and certain holidays, we still conduct our full 40-minute guided factory tours, but since our candy makers are at home with their families, 
+            we give our candy making machines a rest. Video monitors show the different steps of our famous candy making process as you walk through the route.
+        </p>
+        <p>
+            For additional tour information, call 1-800-9-JELLYBEAN (1-800-953-5592).
+        </p>
+        <h3 class="">
+            COMMUTE ALERT!
+        </h3>
+        <p>
+            Planning a visit? Please note that Bay Area traffic is heaviest in the mornings between 6:00 AM and 8:00 AM, and evenings between 3:00 PM and 7:00 PM, 
+            most week days and some holidays. Travel time listed with map and directions are based upon non-commute hours; please anticipate longer travel times. 
+            In some instances actual travel time may be double (or longer) than the travel time shown on the map. 
+        </p>
+    </div>
+    <div class="clearfix">
+    </div>
+</section>
+{% endblock body-content %}
+
+
+
+
+

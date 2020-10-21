@@ -1,0 +1,25 @@
+
+<div class="jelly-belly-recipes">
+    <h2 class ="recipes-head">{{model.config.header}}</h2>
+    <ul >
+    {% with model.config.data|length as totalCount%}
+        {% for item in model.config.data %}
+            {% with forloop.counter|add:1 as newCount%}
+            
+            <li class="recipes-item  recipes-{% if forloop.last %}none{%else%}{% if newCount == totalCount %}result{%else%}mix{%endif%}{%endif%}-bg">
+                <figure class="recipes-figure">
+                    <img class="recipes-img" alt="{{item.name}}" title="{{item.name}}" src="{{item.imageUrl}}">
+                </figure>
+                <p class="recipes-para">
+                    {% if not forloop.last %}<a class="recipes-anchor" {% if item.link %} href="{{item.link}}"{% else %}style="color:#000;" {%endif%}>{{item.name}}</a>{%endif%}
+                </p>
+            </li>
+            {% endwith %}
+        {% endfor %}
+    {% endwith %}
+    </ul>
+    <div class="clearfix"></div>
+</div>
+
+
+

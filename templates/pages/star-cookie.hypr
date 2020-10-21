@@ -1,0 +1,72 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Shooting Star Cookie Pops</h1>
+    <article class="carnival-details txt-left">
+        <h2>Shooting Star Cookie Pops</h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Shooting Star Cookie Pops/Shooting_Stars.jpg">
+            </figure>
+            <!-- AddThis Button -->
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+            <img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border: 0"></a>
+            <!-- /AddThis Button -->
+            <p>
+                Just as fun as watching fireworks, but a lot better tasting! These patriotic pops are yummy sugar cookies lit up with Jelly Belly beans and Confections. A fun summer sweet!   
+            </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>1 roll (16.5 ounces) refrigerated sugar cookie dough</li>
+                <li>3/4 cup flour</li>
+                <li>11 lollypop sticks (8 inches long)</li>
+                <li>1 box (16 oz) confectioner’s sugar</li>
+                <li>3 tablespoons egg white powder</li>
+                <li>Red and blue paste food coloring</li>
+                <li>1 cup each (about 8 oz) Jelly Belly jelly beans in flavors: 
+                    <a target="_blank" href="/search?query=blueberry&amp;asug=">Blueberry</a> | 
+                    <a target="_blank" href="/search?query=coconut&amp;asug=">Coconut</a> |
+                    <a target="_blank" href="/search?query=very cherry&amp;asug=">Very Cherry</a>
+                </li>
+                <li>1 Cup (about 8 oz) Jelly Belly <a target="_blank" href="/search?query=champagne bubbles&amp;asug=">Champagne Bubbles</a></li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>Preheat oven to 350°F. Line 2 cookie sheets with parchment paper.</li>
+                <li>
+                    Knead the flour into the sugar cookie dough on a work surface until smooth. 
+                    Roll out the cookie dough to a scant 1/4-inch thickness. Cut out as many star shapes as possible, 4 and 5 inch, using cookie cutters. 
+                    Transfer the shapes to the prepared pans. Insert a lollipop stick about halfway into the cookie dough. 
+                    Repeat with the remaining dough and sticks to make about 11 cookie pops.
+                </li>
+                <li>Bake until lightly golden and firm, about 10 to 13 minutes. Transfer to a wire rack until cooled completely.
+                </li>
+                <li>Combine the confectioner’s sugar and egg white powder in a mixing bowl. 
+                    Add 6 tablespoons warm water and beat with an electric mixer until smooth. Divide the frosting evenly into 3 bowls. 
+                    Tint one bowl red, one blue, and leave the remaining bowl white. Keep the frosting covered with plastic wrap to prevent drying.
+                </li>
+                <li>Working on one cookie at a time, spread a thin layer of desired colored frosting to cover the top of the cookie. 
+                    Arrange the Jelly Belly jelly beans in desired pattern (see photo), close together, on top of the cookie. 
+                    Transfer the cookie to a wire rack. Repeat with the remaining cookies, frosting and Jelly Belly beans.
+                    Allow cookies to dry at least 2 hours.
+                </li>
+                <li>When ready to serve, fill a small vase or small pot with Styrofoam and then cover with Champagne Bubbles. 
+                    Press cookie pops into Styrofoam to look like shooting stars.
+                </li>
+            </ol>
+            <h2>MAKES ABOUT 11 COOKIE POPS</h2>
+            <hr>
+            
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+

@@ -1,0 +1,64 @@
+
+
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">
+        Fun Facts About Jelly Belly
+    </h1>
+    <article class="carnival-details txt-left">
+        <p>
+            Very Cherry remained the most popular flavor of Jelly Belly beans for two decades until 1998, when Buttered Popcorn moved into first place. In 2003 Very Cherry moved back into top position by a mere 8 million beans.
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <p>
+            Blueberry flavor was created for Ronald Reagan's presidential inauguration in 1981 when over three tons of Jelly Belly beans were consumed during the festivities.
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <p>
+            A portrait of President Ronald Reagan made from 10,000 Jelly Belly beans hangs in the Ronald Reagan Presidential Library in Simi Valley, Calif.
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <p>
+            During the presidency of Ronald Reagan, Jelly Belly beans were served in the Oval Office and on Air Force One. A holder was designed for the plane so the jar of Jelly Belly beans would not spill during turbulence.
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <p>
+            It takes 7 to 21 days to make a single Jelly Belly jelly bean.
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <p>
+            The first jelly bean was created by an unknown American candy maker in the 1800s. An 1861 advertisement recommended sending jelly beans to soldiers fighting in the Civil War.
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <p>
+            Enough Jelly Belly beans were eaten in the last year to circle the earth more than five times.
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <p>
+            The original eight flavors of Jelly Belly beans introduced in 1976 were Very Cherry, Root Beer, Cream Soda, Tangerine, Green Apple, Lemon, Licorice and Grape.
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <p>
+            Jelly Belly beans were the first jelly beans in outer space when President Reagan sent them on the 1983 flight of the space shuttle Challenger
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <p>
+            Jelly Belly donated 288,000 jelly beans in 47 different flavors for the world's first jelly bean stop-motion animation music video "In Your Arms" by Kina Grannis; released November 2011.
+        </p>
+    </article>
+</section>
+{% endblock body-content %}
+
+

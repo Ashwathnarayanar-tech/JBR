@@ -1,0 +1,8 @@
+
+    {% preload_json Model.config "special-plp-widget" %}
+    <div  class="configured-plp" style="text-align:{{Model.config.alignment}}">
+    {% include_products "modules/product/configured-product-listing" with  productCodes=Model.config.products  as_parameter %}
+    </div>
+
+
+

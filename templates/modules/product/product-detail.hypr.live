@@ -1,0 +1,514 @@
+<div class="ip-container"><div class="jb-inner-overlay"></div></div> 
+<script type="text/javascript">
+  var bnProductId = "{{ model.productCode }}";
+</script>
+{% comment %} Bundle kit starts {% endcomment %}
+{% if model.productType == "fixture" %}
+  <h1 class="mz-pagetitle" itemprop="name">{{ model.content.productName|safe }}</h1>
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="mz-productdetail-price mz-l-stack-section">
+    {% include "modules/product/price-stack" %}
+  </div>
+  {% include "modules/bundles/bundle_table" %} 
+  <div class="mz-productdetail-conversion-controls">
+    <span data-mz-action="checked" id="check-d" class="check-style" ><i class="fa fa-check" id="check"> </i>
+      <input class="mz-productdetail-qty" data-mz-value="1" type="checkbox" {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} data-mz-value="quantity" />
+    </span>
+    <label class="mz-qty-label">{{ labels.buythisfixture }}</label>
+    <span class="mz-validationmessage" data-mz-validationmessage-for="quantity"></span>
+  </div> 
+  <section class="mz-l-stack-section mz-productdetail-conversion">
+    <div class="mz-productdetail-conversion-buttons">
+      <button id="add-to-cart" " mz-add-to-cart="{{model.productCode}}"  class="mz-productdetail-addtocart add-bundles mz-button mz-button-large {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %}" {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %}
+        {% if not model.custom.length>0 && not model.custompro.length> 0  %}  disabled="disabled"{% endif %}data-mz-action="addTobasket" >
+        Add All to Cart
+      </button>
+      {% if siteContext.supportsInStorePickup %}
+        <form class="mz-instorepickup" method="POST" data-mz-localstoresform action="/location/product">
+          <button type="submit" {% if model.notDoneConfiguring or not model.purchasableState.isPurchasable or not model.supportsInStorePickup %} disabled="disabled" {% endif %} class="mz-button mz-instorepickuplink-button {% if model.notDoneConfiguring or not model.purchasableState.isPurchasable or not model.supportsInStorePickup %}is-disabled{% endif %}" data-mz-action="checkLocalStores">{{ labels.checkLocalStores }}</button>
+          <input type="hidden" data-mz-localstoresform-input name="item" value="{% json_attribute model %}" />
+        </form>
+      {% endif %}
+    </div>
+    {% if not model.purchasableState.isPurchasable %}
+      <p class="mz-productdetail-notpurchasable">
+        {{ labels.notPurchasable }}:
+        {% for message in model.purchasableState.messages %}
+          <span>{{ message.message }}</span>
+        {% endfor %}
+      </p> 
+    {% endif %} 
+  </section>
+  <div id="accordion">
+    <h2>Product Copy</h2>
+    <ul class="accordion-list accordion"><!-- we will keep this LI open by default -->
+      <li>
+        <h3>Description<span><i class="fa fa-plus right"></i><i  class="fa fa-minus right"></i></span></h3>
+        <p>{{ labels.fullDesc }}: {{ model.content.productFullDescription|safe }}</p>
+      </li>
+      <li>
+        <h3>Capacity<span><i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></span></h3>
+        <p>{{ labels.fullDesc }}: {{ model.content.productFullDescription|safe }}</p>
+      </li>
+      <li>
+        <h3>Sales Strategy<span><i class="fa fa-plus right"></i><i class="fa fa-minus right"></i><span></h3>
+        <p>{{ labels.fullDesc }}: {{ model.content.productFullDescription|safe }}</p>
+      </li>
+    </ul>
+  </div>  
+{% endif %}
+{% comment %} Bundle kit end {% endcomment %}
+{% if model.productType !== "fixture" %}
+  <h1 class="mz-pagetitle"><span itemprop="name">{{ model.content.productName|safe }}</span></h1>
+  {% if model.content.productShortDescription and themeSettings.showProductDetailShortDesc %}
+    <div class="mz-productdetail-shortdesc mz-l-stack-section">
+      <span itemscope="description">{{ model.content.productShortDescription|safe }}</span>
+    </div>
+  {% endif %}
+  {% if model.price.onSale and model.savePrice %}
+    <div class="sale-offer original" id="saleDiv"><strong>ON SALE!</strong> Was <span> {{model.price.price|currency }}</span>. You save <span>${{model.savePrice}}</span>!</div>
+    <div class="percentage original"><span>You Got <span class="savepercentage"></sapn></span><span>% OFF !</span></div>
+  {% endif %}
+  <div class="product-detail-container {% if model.inventoryInfo.onlineStockAvailable < 1 or model.isFutureProduct %}oos-item {% endif %}">
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="mz-productdetail-price mz-l-stack-section original">
+      {% if model.options and model.options.length > 0 %}
+        {% include "modules/product/product-options" %}
+      {% else %}
+        {% include "modules/product/price-stack" %}
+      {% endif %} 
+    </div>
+    {% if model.price.onSale and model.savePrice %}
+      <div class="sale-offer variant" id="saleDiv"><strong>SALE</strong><span class="salesprice"> {{model.price.salePrice|currency }}</span> <span class="textCointainer"><span class="strice">{{model.price.price|currency }}</span> You save <span>${{model.savePrice}}</span>(<span class="savePer">{{model.savePrice|divide(model.price.price)|multiply(100)|floatformat(0)}}%<span>)</span></div>
+    {% else %}
+      <div class="sale-offer variant"><span class="pricevalue"> {{model.price.price|currency }}</span></div>
+    {% endif %}
+    <section class="mz-l-stack-section mz-productdetail-conversion original">
+      <div class="mz-conversion-control-container">
+        <div class="mz-productdetail-conversion-controls">
+          <span class="mz-qty-label">{{ labels.qty }}</span>
+          {% if model.price.price > 0 %}
+            <select class="mz-productdetail-qty qty-{{ model.productCode }}" id="quantity" name="quantity"  data-mz-value="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+            </select>
+          {% else %}
+            <select class="mz-productdetail-qty" id="quantity" name="quantity"  data-mz-value="quantity">
+              <option value="1">1</option>
+            </select>    
+          {% endif %}
+          <span class="mz-validationmessage" data-mz-validationmessage-for="quantity"></span>
+        </div>
+        {% if model.inventoryInfo.onlineStockAvailable > 0 and model.isFutureProduct == false %} 
+          <div id="instock-notification-signup" class="in-stock variant {% if not pageContext.isDesktop %}notDesktop{% endif %}" style="text-align: center;">
+            <p>Available to Order.</p>
+          </div>
+        {% endif %}
+        <div class="mz-productdetail-conversion-buttons">
+          {% if  model.purchasableState.isPurchasable %}
+            {% if model.inventoryInfo.onlineStockAvailable < 1 && not model.purchaseDateAvailable %}
+              <button id="notify-me" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" 
+                data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" data-mz-product-name="{{ model.content.productName }}" class="mz-productdetail-oos jb-out-of-stock jb-tealium-trigger mz-notifyme">
+                {{ labels.notifyWidgetButton }}
+              </button>
+            {% else %}
+                {% if model.isFutureProduct == false %}
+                    <button id="add-to-cart" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" data-mz-prcode="{{ model.productCode }}"
+                        data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" data-mz-product-name="{{ model.content.productName }}"
+                        class="mz-productdetail-addtocart gtm-add-to-cart jb-tealium-trigger {% if model.isFutureProduct %} show-popup-confirmation{% endif %} {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %}" 
+                        {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} {% if not model.isFutureProduct %}data-mz-action="addToCart" {% endif %}>
+                        {{ labels.addToCart }}
+                    </button>
+                    <button id="subscribe" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" 
+                      data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" 
+                      class="mz-productdetail-subscribe {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %}" 
+                      {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} data-mz-action="subscribe">{{ labels.subscribe }}
+                    </button>
+                {% else %} 
+                    <button id="add-to-cart" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" data-mz-prcode="{{ model.productCode }}"
+                        data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" data-mz-product-name="{{ model.content.productName }}"
+                        class="mz-productdetail-addtocart gtm-add-to-cart jb-tealium-trigger {% if model.isFutureProduct %} show-popup-confirmation{% endif %} {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %}" 
+                        {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} {% if not model.isFutureProduct %}data-mz-action="addToCart" {% endif %}>
+                        {{ labels.addToCart }}
+                    </button>
+                {% endif %}
+            {% endif %}
+          {% else %}
+            {% if model.options and model.options.length > 0 %}
+              <button style="padding: 4px 0px;width: 135px;" id="add-to-cart" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" 
+                class="mz-productdetail-addtocart jb-tealium-trigger {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %} gift-prize-select" data-mz-product-name="{{ model.content.productName }}" data-mz-prcode="{{ model.productCode }}
+                {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} data-mz-action="addToCart" >
+                SHOP GIFT CARD
+              </button>
+            {% else %}
+              <button id="notify-me" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" class="mz-productdetail-oos jb-out-of-stock jb-tealium-trigger mz-notifyme">
+                {{ labels.notifyWidgetButton }}
+              </button>
+            {% endif %}
+          {% endif %}
+          {% if model.inventoryInfo.onlineStockAvailable > 0 and model.isFutureProduct == false %}   
+            <div id="instock-notification-signup" class="in-stock {% if pageContext.isDesktop %}desktop{% endif %}" style="text-align: center;">
+              <p>Available to Order.</p>
+            </div> 
+          {% endif %}  
+        </div>
+      </div>
+      {% if model.isFutureProduct %}
+        <div class="oos-msg">This item is <span class="oos-red">out of stock</span> and has an availability date of <strong>{{ model.purchaseDateAvailable }}</strong>. </div>
+      {% else %}
+        {% if not model.purchasableState.isPurchasable %}
+          <div class="oos-msg">This item is <span class="oos-red">out of stock</span> and will be available <strong>SOON</strong>. </div>
+        {% endif %}
+      {% endif %}
+      {% if not model.purchasableState.isPurchasable %}
+        <!-- <p class="mz-productdetail-notpurchasable">Not Purchasable:
+          {% for message in model.purchasableState.messages %}
+            <span>{{ message.message }}</span>
+          {% endfor %}
+        </p>-->
+      {% endif %}
+    </section>
+    <section class="mz-l-stack-section mz-productdetail-conversion variant">
+      <div class="mz-conversion-control-container">
+        <div class="mz-productdetail-conversion-controls">
+          <span class="mz-qty-label">QTY:</span>
+          {% if model.price.price > 0 %}
+            <select class="mz-productdetail-qty qty-{{ model.productCode }}" id="quantity" name="quantity"  data-mz-value="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+            </select>
+          {% else %}
+            <select class="mz-productdetail-qty" id="quantity" name="quantity"  data-mz-value="quantity">
+              <option value="1">1</option>
+            </select>    
+          {% endif %}
+          <span class="mz-validationmessage" data-mz-validationmessage-for="quantity"></span>
+        </div>
+        {% if model.inventoryInfo.onlineStockAvailable > 0 and model.isFutureProduct == false %} 
+          <div id="instock-notification-signup" class="in-stock {% if not pageContext.isDesktop %}notDesktop{% endif %} variant" style="text-align: center;">
+            <p>Available to Order.</p>
+          </div>
+        {% endif %}
+        {% if model.isFutureProduct %}
+          <div class="oos-msg variant">This item is <span class="oos-red">out of stock</span> and has an availability date of <strong>{{ model.purchaseDateAvailable }}</strong>. </div>
+        {% else %}
+          {% if not model.purchasableState.isPurchasable %}
+            <div class="oos-msg variant">This item is <span class="oos-red">out of stock</span> and will be available <strong>SOON</strong>. </div>
+          {% endif %}
+        {% endif %}
+      </div>
+      <div class="mz-productdetail-conversion-buttons">
+        {% if  model.purchasableState.isPurchasable %}
+          {% if model.inventoryInfo.onlineStockAvailable < 1 && not model.purchaseDateAvailable %}
+            <button id="notify-me" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" 
+              data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" data-mz-prcode="{{ model.productCode }} class="mz-productdetail-oos jb-out-of-stock jb-tealium-trigger mz-notifyme">
+              {{ labels.notifyWidgetButton }}
+            </button>
+          {% else %}
+            <button id="add-to-cart" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" 
+              data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" data-mz-prcode="{{ model.productCode }}" data-mz-product-name="{{ model.content.productName }}"
+              class="mz-productdetail-addtocart jb-tealium-trigger gtm-add-to-cart {% if model.isFutureProduct %} show-popup-confirmation{% endif %} {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %}" 
+              {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} {% if not model.isFutureProduct %}data-mz-action="addToCart" {% endif %}>
+              {{ labels.addToCart }}
+            </button>
+            {% if not model.isFutureProduct %}
+              <button id="subscribe" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" 
+                  data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" 
+                  class="mz-productdetail-subscribe {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %}" 
+                  {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} data-mz-action="subscribe">{{ labels.subscribe }}
+              </button>
+            {% endif %}  
+          {% endif %}
+        {% else %}
+          {% if model.options and model.options.length > 0 %}
+            <button style="padding: 4px 0px;width: 135px;" id="add-to-cart" data-mz-prcode="{{ model.productCode }}" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" data-mz-product-name="{{ model.content.productName }}" 
+              class="mz-productdetail-addtocart jb-tealium-trigger {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %} gift-prize-select" 
+              {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} data-mz-action="addToCart" >
+              SHOP GIFT CARD
+            </button>
+          {% else %}
+            <button id="notify-me" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" class="mz-productdetail-oos jb-out-of-stock jb-tealium-trigger mz-notifyme">
+              {{ labels.notifyWidgetButton }}
+            </button>
+          {% endif %}
+        {% endif %}
+        {% if model.inventoryInfo.onlineStockAvailable > 0 and model.isFutureProduct == false %}   
+          <div id="instock-notification-signup" class="in-stock {% if pageContext.isDesktop %}desktop{% endif %} original" style="text-align: center;">
+            <p>Available to Order.</p>
+          </div> 
+        {% endif %}  
+      </div>
+      {% if model.isFutureProduct %}
+        <div class="oos-msg original">This item is <span class="oos-red">out of stock</span> and has an availability date of <strong>{{ model.purchaseDateAvailable }}</strong>. </div>
+      {% else %}
+        {% if not model.purchasableState.isPurchasable %}
+          <div class="oos-msg original">This item is <span class="oos-red">out of stock</span> and will be available <strong>SOON</strong>. </div>
+        {% endif %}
+      {% endif %}
+      {% if not model.purchasableState.isPurchasable %}
+        <!-- <p class="mz-productdetail-notpurchasable">Not Purchasable:
+          {% for message in model.purchasableState.messages %}
+            <span>{{ message.message }}</span>
+          {% endfor %}
+        </p>-->
+      {% endif %}
+    </section>
+    <div class="clearfix"></div>
+  </div>
+  <div id="testimonial-section" class="product-detail-container"  style="height: 100%; background: #EFEFEF; border: 1px solid #CBCBCB; line-height: 1.3; padding: 7px; border-radius: 7px; display: none; font-size: 16px; text-align: center; margin-top: 10px; display: none;">
+    <div style="vertical-align: middle;">
+      "<i><span id="testimonial-quote"></span></i>"
+      <br>
+      <span id="testimonial-data"></span>
+    </div>
+  </div> 
+  <p class="pstock {% if model.inventoryInfo.onlineStockAvailable > 0 %} green {% endif %}" style="display: none"></p>
+  {% if model.inventoryInfo.onlineStockAvailable > 0 and model.isFutureProduct == false %} 
+    <div id="instock-notification-signup" class="in-stock original {% if not pageContext.isDesktop %}notDesktop{% endif %}" style="text-align: center;">
+      <p>Available to Order.</p>
+    </div>
+  {% endif %}
+  <div id="accordian" class="original">
+    {% if themeSettings.heatsensitive %}
+      {% for item in model.properties %} 
+        {% if item.attributeFQN == "tenant~IsHeatSensitive"%}
+          {%for value in item.values%}
+            {% if value.value == true %}
+            <div style="text-align: left;">
+              <strong style="color: #cc0000;">IMPORTANT:</strong> 
+              <strong>This item is Heat-Sensitive.</strong>
+              <br>
+              During warm-weather months (March through October), this item requires special handling.  Orders with Heat-Sensitive items:
+              <ul>
+                <li style="list-style-type: disc;">Require a $10 Handling Fee per cold pack needed</li>
+                <li style="list-style-type: disc;">Get cold packs for FREE when ordering over $500 of Heat-Sensitive items!</li>
+                <li style="list-style-type: disc;">Ship only on a Monday or Tuesday</li>
+              </ul>
+              <p>
+                Please <a style="color: #00a3e0; text-decoration:none" href="/shipping_information">click here</a> for more information or <a style="color: #00a3e0; text-decoration:none" href="/contact-us">contact us</a>.
+              </p>
+            </div>
+            {% endif%}
+          {%endfor%}
+        {%endif%}
+      {% endfor %}
+    {% endif %}
+    <ul class="accordian-list"><!-- we will keep this LI open by default -->
+      <li class="active">
+        <h3>Product Info<span class="icon-minus"></span></h3>
+        <ul style="display:block;">
+          <li> 
+            <div class="product-info">
+              {{ model.content.productFullDescription|safe }}
+            </div>
+            <span class="mz-pagetitle-note"> 
+              <span itemprop="sku" style="font-style: italic; ">
+                {% for item in model.properties %} 
+                  {% if item.attributeFQN == "tenant~sku"%}
+                    {% for values in item.values%}
+                      SKU-{{ values.value }}
+                    {%endfor%}
+                  {%endif%}
+                {% endfor %}
+              </span>
+            </span>
+            <div class="clearfix"></div>
+          </li>
+        </ul>
+      </li>
+      <style>
+        ul #flavors {
+          -moz-column-count: 3;
+          -moz-column-gap: 20px;
+          -webkit-column-count: 3;
+          -webkit-column-gap: 20px;
+          column-count: 3;
+          column-gap: 20px;
+        }
+      </style>
+      {% for item in model.properties %}
+        {% if item.attributeFQN == "tenant~isamix"%}
+          {% for value in item.values%}
+            {% if value.value == true %}
+              <li>
+                <h3>Flavors in this Mix<span class="icon-minus"></span></h3>
+                <ul id="flavors">
+                  {% for item in model.properties %}
+                    {% if item.attributeFQN == "tenant~flavors"%}
+                      {% for values in item.values%}
+                        <li>•   {{ values.value }}</li>
+                      {%endfor%}
+                    {%endif%}
+                  {% endfor %}
+                  <div class="clearfix"></div>
+                </ul>
+              </li>
+            {% endif%}
+          {%endfor%}
+        {%endif%}
+      {% endfor %}
+      <li>
+        {% if model.mixvar %}
+          <h3>Mix Varieties<span class="icon-minus"></span></h3>
+          <ul>
+            <li>
+              <div class="mix-varieties">
+                <a href="javascript:void(0)">A&amp;W Cream Soda </a>
+                <a href="javascript:void(0)">A&amp;W Root Beer </a>
+                <a href="javascript:void(0)">Berry Blue  </a>
+                <a href="javascript:void(0)">Blueberry  </a>
+                <a href="javascript:void(0)">Bubble Gum  </a>
+                <a href="javascript:void(0)">Buttered Popcorn  </a>
+                <a href="javascript:void(0)">Cantaloupe  </a>
+                <a href="javascript:void(0)">Cappuccino  </a>
+                <a href="javascript:void(0)">Caramel Corn  </a>
+                <a href="javascript:void(0)">Chili Mango  </a>
+                <a href="javascript:void(0)">Chocolate Pudding  </a>
+                <a href="javascript:void(0)">Cinnamon  </a>
+                <a href="javascript:void(0)">Coconut  </a>
+                <a href="javascript:void(0)">Cotton Candy  </a>
+                <a href="javascript:void(0)">Crushed Pineapple  </a>
+                <a href="javascript:void(0)">Dr Pepper  </a>
+                <a href="javascript:void(0)">French Vanilla  </a>
+                <a href="javascript:void(0)">Green Apple  </a>
+                <a href="javascript:void(0)">Island Punch  </a>
+                <a href="javascript:void(0)">Juicy Pear  </a>
+                <a href="javascript:void(0)">Kiwi  </a>
+                <a href="javascript:void(0)">Lemon Drop  </a>
+                <a href="javascript:void(0)">Lemon Lime  </a>
+                <a href="javascript:void(0)">Licorice  </a>
+                <a href="javascript:void(0)">Mango </a>
+                <a href="javascript:void(0)">Margarita  </a>
+                <a href="javascript:void(0)">Mixed Berry Smoothie  </a>
+                <a href="javascript:void(0)">Orange Sherbet </a>
+                <a href="javascript:void(0)">Peach </a>
+                <a href="javascript:void(0)">Pina Colada  </a>
+                <a href="javascript:void(0)">Plum  </a>
+                <a href="javascript:void(0)">Pomegranate  </a>
+                <a href="javascript:void(0)">Raspberry  </a>
+                <a href="javascript:void(0)">Red Apple  </a>
+                <a href="javascript:void(0)">Sizzling Cinnamon  </a>
+                <a href="javascript:void(0)">Sour Cherry  </a>
+                <a href="javascript:void(0)">Strawberry Cheesecake </a>
+                <a href="javascript:void(0)">Strawberry Daiquiri  </a>
+                <a href="javascript:void(0)">Strawberry Jam  </a>
+                <a href="javascript:void(0)">Sunkist Lemon  </a>
+                <a href="javascript:void(0)">Sunkist Lime  </a>
+                <a href="javascript:void(0)">Sunkist Orange  </a>
+                <a href="javascript:void(0)">Sunkist Pink Grapefruit  </a>
+                <a href="javascript:void(0)">Sunkist Tangerine  </a>
+                <a href="javascript:void(0)">Toasted Marshmallow  </a>
+                <a href="javascript:void(0)">Top Banana </a>
+                <a href="javascript:void(0)">Tutti-Fruitti  </a>
+                <a href="javascript:void(0)">Very Cherry  </a>
+                <a href="javascript:void(0)">Watermelon  </a>
+                <a href="javascript:void(0)">Wild Blackberry </a>
+              </div>
+            </li>
+          </ul>
+        {% endif %}
+      </li>
+    </ul>
+  </div>
+  <div id="openModal" class="modalDialog">
+    <div class="quick-view">
+      <div class="close"></div> 
+      <div id="viewpro"></div>
+    </div>
+  </div>
+  <p class="gourmet jb-acc-powerrev">Jelly Belly -<em> The Original Gourmet</em><sup class="origGourmetRball" style="line-height: 80%;">&reg;</sup></p>
+{% endif %}

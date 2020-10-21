@@ -1,0 +1,81 @@
+{% extends "page" %}
+{% block title-tag-content %}
+    My Account
+{% endblock title-tag-content %}
+{% block body-tag-classes %} mz-myaccount {% endblock body-tag-classes %}
+
+{% block body-content %}
+{% require_script "pages/myaccount" %}
+
+{% preload_json model "customer" %}
+
+<div class="mz-l-container">
+
+    <h1 class="mz-pagetitle">{{ labels.yourAccount }}</h1>
+    <a class="selected-menu-mobile mz-mobile"></a>
+    <p class="mz-description">Welcome to your account. You'll use your account to manage orders, access information and more.</p>
+    <div class="clearfix"></div>
+    <div class="subsc-cancel-alert" style="display: none;">
+        <div class="zero-pop">
+            <p class="zero-msg">
+                Your subscription list is cancelled successfully.
+            </p>
+            <div class="button_continue"><button class="continue">Okay</button></div>
+        </div>
+    </div>
+    <div class="mz-l-sidebar mz-myaccount-nav">
+        {% include "modules/my-account/my-account-nav" with navtarget="body" %}
+    </div>
+
+    <div id="account-panels" class="mz-myaccount-panels mz-l-stack mz-l-stack-large">
+
+        <div id="account-messages">
+            {% include "modules/common/message-bar" with model=model.messages %}
+        </div>
+
+        <div class="mz-l-stack-section mz-accountsettings" id="x-account-settings" style="display:none;">
+            {% include "modules/my-account/my-account-settings" %}
+        </div>
+        <div class="mz-l-stack-section mz-accountorderhistory" id="x-account-orderhistory" style="display:none;">
+            <div class="error-popup-orderHistory">
+                <div class="popup-cointainer">
+                    <div class="content">
+                        <div class="tick-mark"><span>&#10004;</span></div>
+                        <p>You have successfully added to your cart.</p>
+                        <div class="notAdded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% include "modules/my-account/my-account-orderhistory" with model=model.orderHistory %}
+        </div>
+        <div class="mz-l-stack-section mz-subscriptionhistory" id="x-account-subscriptionhistory" style="display:none;">
+            {% include "modules/my-account/my-subscriptions" %}
+        </div>
+            <div class="mz-l-stack-section mz-invoices" id="x-account-invoices" style="display:none;"></div>
+    </div>
+    <a class="shipping-link" href="/shipping-information">Shipping Info and Return Details</a>
+    <div class="clearfix"></div>
+    <div class="mobile-popupmenu-myaccount mz-mobile" style="display:none;">
+
+        <a class="mz-scrollnav-link-mobile" forID="account-settings" href="#account-settings">
+            {{ labels.accountSettings }}
+        </a>
+        <a class="mz-scrollnav-link-mobile" forID="rapid-order" href="#rapid-order" style="display:none">
+            {{ labels.accountRapidOrder }}
+        </a>
+        <a class="mz-scrollnav-link-mobile" forID="account-orderhistory" href="#account-orderhistory">
+            {{ labels.orderHistory }}
+        </a>
+        <a class="mz-scrollnav-link-mobile" forID="account-subscriptionhistory" href="#account-subscriptionhistory">
+            {{ labels.subscription }}
+        </a>
+            <a class="mz-scrollnav-link-mobile" forID="account-invoices" href="#account-invoices">
+                {{ labels.invoices }}
+            </a>
+        </div>
+        <div class="addtocartoverlay"></div>
+
+
+</div>
+{% endblock body-content %}

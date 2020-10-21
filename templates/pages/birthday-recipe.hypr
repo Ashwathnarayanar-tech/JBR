@@ -1,0 +1,72 @@
+{% extends "page" %}
+
+ 
+
+{% block body-tag-classes %}mz-visit-us{% endblock body-tag-classes %}
+
+{% block body-content %}
+    
+    <h1 class="mz-pagetitle">Birthday Party Recipes</h1>
+    <ul class="jb-feature-brands">
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Birthday Bark</h3>
+                <figure>
+                  <a href="/recipes-birthday-bark">
+                    <img src="/resources/images/baking_decoration/bark_t.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Birthday parties should be colorful and fun, and nothing fits this description better than our Birthday Bark. On top of that, it's easy to make and tastes amazing! 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-birthday-bark">View More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Nest Cookies</h3>
+                <figure>
+                  <a href="/recipes-nest-cookies">
+                    <img src="/resources/images/baking_decoration/nests.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  All the little birds will be flocking to your nest when you make these coconut delights, topped with Jelly Belly jelly beans. 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-nest-cookies">View More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Jelly Belly Crispy Balls</h3>
+                <figure>
+                  <a href="/recipes-cripsy-balls">
+                    <img src="/resources/images/baking_decoration/crispyBalls_t.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Have a ball on your birthday. Better yet, have a lot of them. Because our Crispy Balls are so delicious and simple to make, one won't be nearly enough. 
+                  <a class="jb-feature-brand-moreinfo" href="/recipes-cripsy-balls">View More ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+    </ul>
+    <figure class="vertImage">
+      <img src="/resources/images/visit-us/JB_visitUs.jpg">
+    </figure>
+    <div class="clearfix"></div>
+{% endblock body-content %}
+
+
+
+
+

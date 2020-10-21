@@ -1,0 +1,215 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static {% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <div class="vending">
+    
+    <div class="mar-left10">
+    <img src="/resources/images/explore/confections-jb/confections-logo.png" alt="" title="Jelly Belly Confections" />
+
+    <h1 class="mz-pagetitle mar-top0">Jelly Belly Confections</h1> 
+   </div>
+   
+    <article>
+   
+        <p class="mar-top0">
+    Did you know Jelly Belly Candy Company makes over 100 other candies? Yep, we're a veritable capital of candymaking in America.
+    </p>
+   <p> 
+    If there's one thing we know, it's how to make yummy candy of the same caliber as Jelly Belly beans. We cook up all sorts of sweets worthy of gifts and elegant gatherings. There are gummi and sour candies for the young set, too. But there's more. We also make special Confections for Valentine's Day, Easter, Halloween and Christmas. 
+    </p>
+    <p>
+     You'll find these candies in many of the same gourmet shops and specialty stores where you find Jelly Belly beans. Look for the name Confections from the Makers of Jelly Belly. 
+     </p>
+     <div class="headline-beans">
+	<h2>Look for these great Confections by Jelly Belly:</h2>
+	</div>
+
+<div class="block-container">
+<h3>Mellocremes</h3>
+
+<figure>
+<a href="/search?query=mellocremes" title="Shop Mellocremes">
+<img src="/resources/images/explore/confections-jb/confections1.jpg" alt="" />
+</a>
+</figure>
+
+<div class="left-beans">
+<h5>Rich, soft morsels that melt in your mouth. Our famous Candy Corn is just one of the smooth, full-flavored treats you'll find here.</h5>
+<p class="padd-left0">
+<a href="/search?query=mellocremes" class="marbtm60" title="Shop Mellocremes" >Shop Mellocremes ►
+</a>
+</p>
+</div>
+</div>
+
+
+<div class="block-container">
+<h3>Sour Confections</h3>
+
+<figure>
+<a href="/search?query=Sour+Confections" title="Shop Sour Confections">
+<img src="/resources/images/explore/confections-jb/confections2.png" alt="" />
+</a>
+</figure>
+
+<div class="left-beans">
+<h5>Your eyes will tear up, your lips will pucker, and you'll love every second of it when you dig into our deliciously sour creations.</h5>
+<p class="padd-left0">
+<a href="/search?query=Sour+Confection" class="marbtm60" title="Shop Sour Confections">Shop Sour Confections ►</a>
+</p>
+</div>
+</div>
+
+
+    <div id="fundraisingForm">
+     
+    </div>
+
+    </article>
+   </div>
+   <figure class="vendingImage">
+      <img alt="" src="/resources/images/explore/confections-jb/confections_right-img.jpg">  
+    </figure>
+    
+    <div class="block-container">
+<h3>Nutty Confections</h3>
+
+<figure>
+<a href="/search?query=Nutty+Confections" title="Shop Nutty Confections">
+<img alt="" src="/resources/images/explore/confections-jb/confections3.jpg"/>
+</a>
+</figure>
+
+<div class="left-beans">
+<h5>The plumpest almonds and cashews are smothered in chocolate or coated with candy, and they couldn't taste any better.</h5>
+<p class="padd-left0">
+<a href="/search?query=Nutty+Confections" class="marbtm60" title="Shop Nutty Confections">Shop Nutty Confections ►</a>
+</p>
+</div>
+</div>
+
+
+  <div class="block-container">
+<h3>Gummis and Jells</h3> 
+
+<figure>
+<a href="/search?query=Gummis+and+Jells" title="Shop Gummis and Jells">
+<img alt="" src="/resources/images/explore/confections-jb/confections4.jpg"/>
+</a>
+</figure>
+
+<div class="left-beans">
+<h5>Not too soft, not too tough, we blend the perfect chewy consistency with vibrant flavor to create the greatest Gummis around. You'll eat them by the handful.</h5>
+<p class="padd-left0">
+<a href="/search?query=Gummis+and+Jells" class="marbtm60" title="Shop Gummis and Jells">Shop Gummis and Jells ►</a>
+</p>
+</div>
+</div>
+
+ <div class="block-container">
+<h3>Licorice</h3>
+
+<figure>
+<a href="/search?query=Licorice" title="Shop Licorice">
+<img alt="" src="/resources/images/explore/confections-jb/confections5.jpg"/>
+</a>
+</figure>
+
+<div class="left-beans">
+<h5>There's nothing quite like the taste of this time-honored Confection. We take pride in creating the richest, most flavorful licorice you'll find anywhere.</h5>
+<p class="padd-left0">
+<a href="/search?query=Licorice" class="marbtm60" title="Shop Licorice">Shop Licorice ►</a>
+</p>
+</div>
+</div>
+
+
+  <div class="block-container">
+<h3>Novelty Candy</h3>
+
+<figure>
+<a href="/search?query=Novelty" title="Shop Novelty Candy">
+<img alt=""  src="/resources/images/explore/confections-jb/confections6.jpg"/>
+</a>
+</figure>
+
+<div class="left-beans">
+<h5>From ridiculously hard jawbreakers to fruit-flavored tarantulas. The only thing these wild candies have in common is that they taste REALLY good.</h5>
+<p class="padd-left0">
+<a href="/search?query=novelty" class="marbtm60" title="Shop Novelty Candy" >Shop Novelty Candy ►</a>
+</p>
+</div>
+</div>
+
+  <div class="block-container">
+<h3>Chocolates</h3>
+
+<figure>
+<a href="/search?query=Chocolates" title="Shop Chocolates">
+<img alt="" src="/resources/images/explore/confections-jb/confections7.jpg"/>
+</a>
+</figure>
+
+<div class="left-beans">
+<h5>Only the most luscious, high-quality chocolate goes into these, and you'll know it as each piece lights up your taste buds and soothes your senses.</h5>
+<p class="padd-left0">
+<a href="/search?query=Chocolates" title="Shop Chocolates" class="marbtm60" >Shop Chocolates ►</a>
+</p>
+</div>
+</div>
+
+
+  <div class="block-container">
+<h3>Cinnamon Confections</h3>
+
+<figure>
+<a href="/search?query=Cinnamon+Confections" title="Shop Cinnamon Confections">
+<img alt=""  src="/resources/images/explore/confections-jb/confections8.png"/>
+</a>
+</figure>
+
+<div class="left-beans">
+<h5>Little candies that pack a very hot punch. Proof that the spiciest things come in the smallest packages.</h5>
+<p class="padd-left0">
+<a href="/search?query=Cinnamon+Confections" title="Shop Cinnamon Confections" class="marbtm60" >Shop Cinnamon Confections ►</a>
+</p>
+</div>
+</div>    
+    
+    
+    <div class="clearfix"></div>
+</section>
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

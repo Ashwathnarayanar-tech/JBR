@@ -1,0 +1,70 @@
+
+<nav class="mz-utilitynav">
+  <div style="margin-top: 15px;margin-right: 79px;text-align: right;" class="usermail-cointainer">
+  
+    {% if not user.isAnonymous %}
+    <a href="/myaccount" class="mz-utilitynav-link desktop-useremail" style="margin-left: 6px;">
+      My account
+    </a> 
+    (<a href="/logout" data-mz-action="logout" class="mz-utilitynav-link">{{ labels.logOut }}</a>)
+   
+    {% else %}
+    {% comment %}
+    <a style="padding-right: 5px; margin-left: 25px;" href="/user/login" data-mz-action="login" data-placement="bottom" class="mz-utilitynav-link">{{ labels.logIn }}</a>
+{% endcomment %}
+    {% require_script "modules/login-links" %}
+
+    {% endif %} 
+
+
+  </div>
+  <span>
+    <div style="margin-top: -25px;text-align: right;"> 
+      <a class="mz-utilitynav-link-cart" href="/cart" style="height: 18px;width: 65px;padding-top: 25px;" >
+
+        <!-- <span class="cart-image"></span> -->
+
+        <i class="fa fa-shopping-cart fa-3x" style="color: #fff; margin-right: 5px; font-size: 28px; padding-top: -25px; margin-top: -20px;"></i>
+        <span data-mz-role="cartmonitor" style="font-size: 14px; margin-left: 0px; margin-bottom: 0px;"></span><span style="padding: 0px 0px 0px 4px;" data-mz-text="carttext"></span>
+        {% require_script "modules/cart-monitor" %}
+
+      </a>
+    </div>
+    <p style="margin-right: 79px; margin-top: -20px; font-size: 16px" class="desktop-contact"> {{ labels.contactNo }}   </p>
+  </span>
+
+</nav>
+{% require_script "modules/minicart" %}
+<div class="jb-minicart-popup" data-mz-minicart="" style="margin-top: 37px;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

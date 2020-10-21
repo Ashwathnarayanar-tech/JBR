@@ -1,0 +1,32 @@
+ 
+{% if model.items %}   
+<div class="crosssell-carousel" style="display: none;">
+{% comment %}
+<h3 class="top-seller">Check out our top-sellers: </h3>
+{% endcomment %}
+    <div class="mz-productlist mz-productlist-carousel">
+        {% if model.items.length > 0 %}
+            <ul class="crosssell mz-productlist-grid" id="mz-productlist-list" >
+                {% for prod in model.items %}
+                    <li id="" class="mz-productlist-item" data-mz-product="{{ prod.productCode }}">
+                        {% include "modules/product/crosssell-listing" with model=prod %}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+        	<div class="no-prod-list">There are no products in recently viewed list</div>
+        {% endif %}
+    </div>
+</div> 
+{% endif %}
+     
+{% require_script "modules/crosssell" %}
+
+
+
+
+
+
+
+
+

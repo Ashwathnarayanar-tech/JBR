@@ -1,0 +1,122 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static {% endblock body-tag-classes %} 
+{% block body-content %} 
+<section>
+    <div class="vending">
+    
+    <div class="mar-left10">
+    <img alt="" src="/resources/images/explore/cold-stone/coldstone-logo.png" title="Cold Stone Creamery®"/> 
+
+    <h1 class="mz-pagetitle mar-top0">Cold Stone Creamery®</h1> 
+   </div>   
+   
+    <article>
+    <div class="headline-beans">
+       <h2>Cold Stone Creamery® Signature Creation™ Ice Cream Flavors</h2>
+       </div>
+       
+       <div class="headline-beans">
+       <h3>Two great brands. One cool idea!</h3>
+       </div>
+       
+        <p class="mar-top0">
+      The beans are inspired by Cold Stone Creamery® Signature Creation™ ice cream flavors, and taste just as creamy and delicious as your favorite Cold Stone treats!
+    </p>
+     <div class="headline-beans">
+    <h3 class="padleft50">Each flavor tastes like it was just scooped onto a waffle cone - no dripping and no melting!</h3>
+	</div>
+	
+
+<h6 class="beans-btn padd-left0">
+<a href="/search?query=cold+stone" title="SHOP COLD STONE CREAMERY®">SHOP Cold Stone Creamery®</a>
+</h6>
+
+<div class="img-block">
+<figure>
+<img alt="" title="Apple Pie a la Cold Stone®" src="/resources/images/explore/cold-stone/coldstone1.jpg" / >
+</figure>
+<p>
+<a href="/search?query=cold+stone" title="Apple Pie a la Cold Stone®">Apple Pie a la Cold Stone®</a>
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" title="Birthday Cake Remix™" src="/resources/images/explore/cold-stone/coldstone2.jpg" >
+</figure>
+<p>
+<a href="/search?query=cold+stone" title="Birthday Cake Remix™">Birthday Cake Remix™</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" title="Chocolate Devotion™" src="/resources/images/explore/cold-stone/coldstone3.jpg" >
+</figure>
+<p>
+<a href="/search?query=cold+stone" title="Chocolate Devotion™">Chocolate Devotion™</a>  
+</p>
+</div>
+
+<div class="img-block clear">
+<figure>
+<img alt="" title="Mint Mint Chocolate Chocolate Chip®" src="/resources/images/explore/cold-stone/coldstone4.jpg" />
+</figure>
+<p>
+<a href="/search?query=cold+stone" title="Mint Mint Chocolate Chocolate Chip®">Mint Mint Chocolate Chocolate Chip®</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/cold-stone/coldstone5.jpg" title="Our Strawberry Blonde™" />
+</figure>
+<p>
+<a href="/search?query=cold+stone" title="Our Strawberry Blonde™">Our Strawberry Blonde™</a> 
+</p>
+</div>
+
+    <div id="fundraisingForm">
+     
+    </div>
+
+    </article>
+   </div>
+   <figure class="vendingImage">
+      <img alt="" src="/resources/images/explore/cold-stone/coldstone-rht-img.png">  
+    </figure>
+    <div class="clearfix"></div>
+</section>
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,280 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-wedding{% endblock body-tag-classes %} 
+{% block body-content %}
+{% require_script "modules/common" %} 
+<section>
+    <article class="wedding-title">
+        <p class="sectionTitle">Jelly Belly Wedding Center</p>
+        <img class="ring" src="/resources/images/wedding/Wedding Center/rings.gif" />
+        <div class="clearfix"></div>
+    </article>
+    <div class="wedding-center">
+        <div class="weddingNav">
+            <p class="sectionTitle whereToStartText">Wedding Guide</p>
+            <img src="/resources/images/wedding/brideGroom.png" alt="brideGroom"/> 
+            <ul>
+                <li><a href="/wedding-center">Wedding Center Home</a> &#9658;</li>
+                <li><a href="/wedding-ideas">Wedding Themes</a> &#9658;</li>
+                <li><a href="/wedding-color-palettes">Color Palettes</a> &#9658;</li>
+                <li><a href="/wedding-personalized-favors">Personalized Favors</a> &#9658;</li>
+                <li><a href="/wedding-featured-candy">Featured Candy</a> &#9658;</li>
+                <li><a class="candyCalculatorModal" href="">Candy Calculator</a> &#9658;</li>
+            </ul>
+        </div>
+        <div class="weddingBody">
+            <p class="sectionTitle" style="font-size: 50px;">Color Palettes</p>
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Red & Black</p>
+                    <p class="col2 themeDescription">
+                        Sound strange? It shouldn’t. This was THE wedding color combo in 2010. The bold red looks even bolder against the black foundation.
+                        And flowers and favors in these colors are not hard to find. Use this combo as a just-so-edgy accent,
+                        or bathe your whole ceremony in it to make eyes pop and jaws drop.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=redblack&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/redBlack.jpg" />
+                        <p>Licorice or Wild Blackberry & Red Apple</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /beach -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Dark Brown & Light Blue</p>
+                    <p class="col2 themeDescription">
+                        Warm and earthy meets cool and airy. This duo creates an elegant but still-welcoming atmosphere.
+                        Top off blue place settings with rich desserts – chocolate cake, or chocolate ice cream, perhaps?
+                        The possibilities are mouthwatering.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=darkbrownlightblue&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/blueBrown.jpg" />
+                        <p>Chocolate Pudding & Berry Blue</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /california -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Light Green, Black & White</p>
+                    <p class="col2 themeDescription">
+                        It’s sleek, it’s modern and it’s classic, all at once. Try bright yellow flowers with lush green leaves in glossy black vases.
+                        Bowls of green and black jelly beans will pop off white place settings and give your wedding a timelessly hip look.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=lightgreenblackwhite&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/greenWhiteBlack.jpg" />
+                        <p>Licorice or Wild Blackberry, Lemon Lime, French Vanilla</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /contemporary -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Red & Light Blue</p>
+                    <p class="col2 themeDescription">
+                        Sizzling, vibrant red jumps out at you while the muted blue pulls it back just a little.
+                        This hot and cold color combination was one of the trendiest picks in 2010.
+                        Finding accessories and favors in these colors is half the fun, and the beans are simply scrumptious together.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=redlightblue&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/blueRed.jpg" />
+                        <p>Sour Cherry, Pomegranate and Berry Blue</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Garden Wedding -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Light Green & Light Blue</p>
+                    <p class="col2 themeDescription">
+                        Sizzling, vibrant red jumps out at you while the muted blue pulls it back just a little.
+                        This hot and cold color combination was one of the trendiest picks in 2010.
+                        Finding accessories and favors in these colors is half the fun, and the beans are simply scrumptious together.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=lightgreenlightblue&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/blueGreen.jpg" />
+                        <p>Lemon Lime, Berry Blue</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Rustic Wedding -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Dark Brown, Light Brown & Cream</p>
+                    <p class="col2 themeDescription">
+                        “Sumptuous” is the first word that springs to mind when you see this combination. Or maybe it’s "warm." Or possibly "luxurious." Your wedding guests will be saying "gorgeous!"
+                        when they lay their eyes on it.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=darkbrownlightbrowncream&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/whiteBrown.jpg" />
+                        <p>Dark Brown, Light Brown, Cream</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Uptown Wedding -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Dark Brown, Pink & Light Pink</p>
+                    <p class="col2 themeDescription">
+                        Straight from your most romantic fantasy, this mix conjures up visions of roses and hearts and chocolate-dipped strawberries.
+                        Combine rich brown arrangements with soft pink accessories and your wedding is a love story come to life.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=darkbrownpinklightpink&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/pinkBrown.jpg" />
+                        <p>Chocolate Pudding, Cotton Candy, Bubble Gum</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Zen Wedding -->
+            <!-- /Rustic Wedding -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Black & White</p>
+                    <p class="col2 themeDescription">
+                        Is any explanation really needed? The hue of crisp tuxedos and flowing wedding dresses remains as exquisite as ever.
+                        Just two classic colors will make your ceremony chic, simple and sophisticated.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=blackwhite&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/blackWhite.jpg" />
+                        <p>Licorice or Wild Blackberry, Coconut</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Uptown Wedding -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Purple & Light Blue</p>
+                    <p class="col2 themeDescription">
+                        Here's another popular combo. Place deep purple flowers or fruits like grapes and plums atop pale blue tablecloths to create a vivid bouquet.
+                        And of course, Jelly Belly jelly beans always add flavor and fun to the proceedings.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=purplelightblue&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/bluePurple.jpg" />
+                        <p>Mixed Berry Smoothie, Island Punch & Berry Blue</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Zen Wedding -->
+            <!-- /Rustic Wedding -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Pink, Light Pink & Yellow</p>
+                    <p class="col2 themeDescription">
+                        Even if the sky's cloudy, you can still have plenty of sunshine at your wedding by using these bright and joyous colors.
+                        Pinks and yellows actually illuminate each other and give your wedding party a clean, refreshing aura.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=pinklightpinkyellow&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/pinkYellow.jpg" />
+                        <p>Bubble Gum, Cotton Candy, Lemon Drop & Sunkist&reg; Lemon</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Uptown Wedding -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Green, Light Green & White</p>
+                    <p class="col2 themeDescription">
+                        Scores of weddings in 2010 featured this fast-rising mix. Could it be because it’s the color of money? Or fresh summer grass?
+                        Or crunchy green apples? It’s all of the above, and a palette your guests won’t forget.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=greenlightgreenwhite&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/whiteGreen.jpg" />
+                        <p>Coconut, 7UP&reg;, Kiwi, Margarita & Lemon Lime</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Zen Wedding -->
+            <!-- /Rustic Wedding -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Pink, Light Pink & Cream</p>
+                    <p class="col2 themeDescription">
+                        If you’re having a February wedding, use valentine colors to enhance the romance. Darker pink highlights to cream and light pink arrangements give the ceremony
+                        a lovingly sweet feel, while letting dark pink dominate adds some sexiness to the party.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=pinklightpinkcream&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/pinkWhiteRed.jpg" />
+                        <p>Pomegranate Cosmo, Pomegranate, Cotton Candy, Strawberry Cheesecake, A&W&reg; Cream Soda</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Uptown Wedding -->
+            <hr />
+            <div class="weddingThemeCont">
+                <div class="wedding-theme-details">
+                    <p class="sectionTitle">Light Pink, Light Orange & Orange</p>
+                    <p class="col2 themeDescription">
+                        Spring can be in the air at any time of year with this beautiful bouquet. The pale pinks and oranges are delicate and feminine,
+                        while the bright orange radiates light and warmth. This combo is designed to create smiles.
+                    </p>
+                </div>
+                <div class="subSectionLinks_photoContainer">
+                    <a target="_blank" href="/search?query=lightpinklightorangeorange&asug=">
+                        <img src="/resources/images/wedding/Color Palettes/pinkOrange.jpg" />
+                        <p>Bubble Gum, Cotton Candy, Orange Sherbet, Pink Grapefruit, Peach Bellini</p>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- /Zen Wedding -->
+    </div>
+</section>
+<script src="{{siteContext.cdnPrefix}}/scripts/vendor/cufon.js"></script> 
+<script src="{{siteContext.cdnPrefix}}/scripts/vendor/UniRom_500.font.js"></script>
+<script type="text/javascript">Cufon.replace('.sectionTitle');</script>
+<script type="text/javascript">Cufon.now();</script>
+{% endblock body-content %}
+
+
+
+

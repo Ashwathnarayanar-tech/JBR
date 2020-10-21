@@ -1,0 +1,155 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-factory{% endblock body-tag-classes %} 
+{% block body-content %}
+
+<h1 class="mz-pagetitle"> Fun Stuff </h1>
+    <ul class="jb-feature-brands">
+        
+        <!-- Factory Tour -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Factory Tour </h3>
+                <figure>
+                  <a href=" /california-factory-tours">
+                    <img src="/resources/images/jb_entertainment/tours_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Stores exclusively devoted to Jelly Belly? Find out where they are and how to reach them right here!   
+                  <a class="jb-feature-brand-moreinfo" href=" /california-factory-tours">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+        <!-- MyJellyBelly.com - Custom Gifts -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> MyJellyBelly.com - Custom Gifts </h3>
+                <figure>
+                  <a href="https://www.myjellybelly.com/">
+                    <img src="/resources/images/jb_entertainment/myjb_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Now you can give customized Jelly Belly gifts! Pick the container, personalize the message and image, then choose your favorite beans. 
+                  <a class="jb-feature-brand-moreinfo" href="https://www.myjellybelly.com/">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Jelly Belly Bean Art Gallery -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Jelly Belly Bean Art Gallery </h3>
+                <figure>
+                  <a href="/ArtGallery">
+                    <img src="/resources/images/jb_entertainment/beanArt_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 The galleries inside contain an exhibition of commissioned works done in classic mosaic art form using Jelly Belly jelly beans.  
+                  <a class="jb-feature-brand-moreinfo" href="/ArtGallery">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Jelly Belly Jelly Bean Recipes -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Jelly Belly Jelly Bean Recipes </h3>
+                <figure>
+                  <a href="/jelly-belly-bean-recipes">
+                    <img src="/resources/images/jb_entertainment/Recipes_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  For true Jelly Belly flavor, eat one bean at a time. However, if you want to get creative, mix flavors together for a unique gourmet treat!
+                  <a class="jb-feature-brand-moreinfo" href="/jelly-belly-bean-recipes">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Jelly Belly Flavor Guides -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Rat-a-Tat-Tat Drum Cake </h3>
+                <figure>
+                  <a href="/bake-and-decorate-Index">
+                    <img src="/resources/images/jb_entertainment/flavorGuides_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Get the scoop on what flavors are available for all of our candies and mixes. You won't know where to start!
+                  <a class="jb-feature-brand-moreinfo" href="/bake-and-decorate-Index">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <!-- Fun Facts about Jelly Belly -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Gourmet Tasting Party </h3>
+                <figure>
+                  <a href="/bake-and-decorate-Index">
+                    <img src="/resources/images/jb_entertainment/funFacts_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 Not only are Jelly Belly jelly beans fun to eat, but there is lots of fun information about our beans and our company. Take a look at some of the Fun 
+                  <a class="jb-feature-brand-moreinfo" href="/bake-and-decorate-Index">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Jelly Belly Fleet -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Jelly Belly Fleet </h3>
+                <figure>
+                  <a href="/jelly-belly-fleet">
+                    <img src="/resources/images/jb_entertainment/fleet_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Check out the awesomely powerful machines that represent Jelly Belly right here!
+                  <a class="jb-feature-brand-moreinfo" href="/jelly-belly-fleet">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Jelly Belly Downloads -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Jelly Belly Downloads </h3>
+                <figure>
+                  <a href="/downloads">
+                    <img src="/resources/images/jb_entertainment/downloads_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Spruce up your computer screen with a sweetness only Jelly Belly can bring! In just a few clicks of your mouse you can download fun and colorful desktop wallpapers or watch our tasty commercials!   
+                  <a class="jb-feature-brand-moreinfo" href="/downloads">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+    </ul>
+    
+    <div class="clearfix"></div>
+
+{% endblock body-content %}
+
+
+
+
+

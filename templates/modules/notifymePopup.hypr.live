@@ -1,0 +1,94 @@
+<div class="notify-me-popup">
+	<div class="popupContent">
+		{% if not model.isMobile %}
+			<div class="popupBody">
+				<div class="popupTopSec">
+					<p>The selected product is currently <strong>Out of Stock! </strong></p>
+					<span class="closePopup" tabindex="0">&#10006;</span>
+				</div>
+				<div class="productSec"> 
+					<span class="item-code">{{model.productCode}}</span>	
+					<span class="item-img-cointainer"><img class="item-img" alt="item image of {{model.productName|safe}}" src="{{model.productImages}}"/></span>	
+					<span class="item-name">
+						<p class="name">{{model.productName|safe}}</p>
+						<p class="price-data">
+							{% if model.price.salePrice < model.price.price %}<span class="unit-price strice">{{model.price.price|currency}}</span><span class="salePrice">{{model.price.salePrice|currency}}</span>{% else %}<span class="unit-price">{{model.price.price|currency}}	</span>{% endif %}
+						</p>
+					</span> 
+					<span class="item-avalible-state {% if model.inventoryInfo.manageStock %}{% if model.inventoryInfo.onlineStockAvailable > 0 %}{% if model.firstShipDate and now|is_before(model.firstShipDate) %}future{% else %}green{% endif %}{% else %}red{% endif %}{% else %}green{% endif %}"> 
+						{% if model.inventoryInfo.manageStock %}
+							{% if model.inventoryInfo.onlineStockAvailable > 0 %}
+								{% if model.firstShipDate and now|is_before(model.firstShipDate) %}
+									Available on </br>
+									{{model.firstShipDate|date("M j, Y")}}
+								{% else %} 
+									In Stock
+								{% endif %}
+							{% else %}
+								Out of Stock
+							{% endif %}
+						{% else %}
+							In Stock
+						{% endif %}
+					</span>
+				</div>
+				<div class="input-cointainer">
+					{% if not model.success %}			
+						<p>Enter your email address to be notified when this item is back in stock.</p>
+						<input type="text" name="email" class="notify-me-input" value="{{model.userEmail}}"/> 
+						<button class="notify-me-btn">NOTIFY ME</button>
+						<span id="notify-error-text">{{model.error}}</span>
+					{% else %}
+						<span class="success-msg">Thank you! We'll let you know when we have more.</span>
+					{% endif %}
+				</div>
+			</div>
+		{% else %}
+			<div class="popupBody">
+				<div class="popupTopSec">
+					<span class="closePopup">&#10006;</span>
+					<p>The selected product is currently <strong>Out of Stock! </strong></p>
+				</div>
+				<div class="productSec">
+					<span class="first-prod-sec">
+						<span class="item-code">{{model.productCode}}</span>
+						<span class="item-img-cointainer"><img class="item-img" alt="item image of {{model.productName|safe}}" src="{{model.productImages}}"/></span>	
+						<p class="price-data">
+							{% if model.price.salePrice < model.price.price %}<span class="unit-price strice">{{model.price.price|currency}}</span><span class="salePrice">{{model.price.salePrice|currency}}</span>{% else %}<span class="unit-price">{{model.price.price|currency}}	</span>{% endif %}
+						</p>
+					</span><span class="second-prod-sec">
+						<span class="item-name">
+							<p class="name">{{model.productName|safe}}</p>
+						</span>
+						<span class="item-avalible-state {% if model.inventoryInfo.manageStock %}{% if model.inventoryInfo.onlineStockAvailable > 0 %}{% if model.firstShipDate and now|is_before(model.firstShipDate) %}future{% else %}green{% endif %}{% else %}red{% endif %}{% else %}green{% endif %}"> 
+							{% if model.inventoryInfo.manageStock %}
+								{% if model.inventoryInfo.onlineStockAvailable > 0 %}
+									{% if model.firstShipDate and now|is_before(model.firstShipDate) %}
+										Available on </br>
+										{{model.firstShipDate|date("M j, Y")}}
+									{% else %} 
+										In Stock
+									{% endif %}
+								{% else %}
+									Out of Stock
+								{% endif %}
+							{% else %}
+								In Stock
+							{% endif %}
+						</span>
+					</span>
+				</div>
+				<div class="input-cointainer">
+					{% if not model.success %}			
+						<p>Enter your email address to be notified when this item is back in stock.</p>
+						<input type="text" name="email" class="notify-me-input" value="{{model.userEmail}}"/> 
+						<button class="notify-me-btn">NOTIFY ME</button>
+						<span id="notify-error-text">{{model.error}}</span>
+					{% else %}
+						<span class="success-msg">Thank you! We'll let you know when we have more.</span>
+					{% endif %}
+				</div>
+			</div>
+		{% endif %} 
+	</div>
+</div>

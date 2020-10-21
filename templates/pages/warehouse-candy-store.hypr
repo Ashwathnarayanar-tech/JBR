@@ -1,0 +1,93 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar{% endblock body-tag-classes %} 
+
+{% block body-content %}
+    <section>
+        <div class="carnival-details">
+             {% dropzone "dropzone_area1warehousecandy" scope="page" %}
+        </div>       
+
+        <article>
+            <h1 class="mz-pagetitle">Jelly Belly Candy Store</h1>
+            <figure class="vertImage">
+                <img src="/resources/images/visit-us/CA_store.jpg">
+            </figure>
+            <p class="small-para">
+                <a href="/wisconsin-factory-event-calendar">Click here</a> to find out what's happening at our Visitor Center in Pleasant Prairie, Wisconsin; calendar includes holiday hours and special events.
+            </p>
+            <p class="small-para">
+                Your Jelly Belly experience would not be complete without exploring our Jelly Belly Candy Store. 
+                Your first stop has to be our Sample Bar where you can try each and every flavor of Jelly Belly jelly beans that we make, along with any other new or favorite confection on our menu! 
+                Try them one at a time or in combination to create a colorful and tasty recipe!
+            </p>
+            <p class="small-para">
+                In our Jelly Belly Candy Store you can shop for your favorite flavors either individually or combined in a variety of beautiful gift boxes or mixed bags, 
+                including a variety of Sugar Free Jelly Belly flavors and gift boxes. Also available are Jelly Belly Confections like our Dutch Mints&reg;, Jordan Almonds, gummies, 
+                fruit snacks, sours and chocolate items. Create your own mixed bag of your favorites!
+            </p>
+            <p>
+                Don't forget to pick up a few bags of our world famous Belly Flops&reg; and have a blast guessing the flavors. Belly Flops&reg; are no less flavorful or lovable than regular Jelly Belly jelly beans; 
+                they just come in wild shapes and sizes.
+            </p>
+            <p>
+                Find fun Jelly Belly gifts for everyone on your list. Pick up a plush Mr. Jelly Belly toy, fun school accessories, hats, t-shirts and other items. 
+                Bring home a fun souvenir of your visit!
+            </p>
+            <p>
+                A popular area in the Candy Store is the chocolate counter where hand-made confections are sold. Tempting treats like caramel corn, 
+                chocolate clusters and more will satisfy the sweet tooth and any chocolate craving. Also, don’t miss our Fudge Counter! Specialties include cookies and cream and red velvet cake fudge, 
+                plus seasonal favorites include pumpkin fudge (for fall) and candy cane (for Christmas)! 
+            </p>
+            <p class="finePrint">
+                ALLERGEN NOTICE: Our Retail Store, Café, and Chocolate Shoppe confections and foods contain certain allergy triggers. Please check out our <a href="/frequently-asked-questions">FAQ</a> (Frequently Asked Questions) to learn more about allergens and to submit a question. 
+            </p>
+
+            <hr>
+
+            <h3 class="allCaps">STORE AND TOUR HOURS </h3>
+            <p>
+                The Jelly Belly Visitor Center is open daily from 9 AM to 5 PM CT. Warehouse tours operate daily from 9 AM to 4 PM CT, except for New Year's Day, Easter Sunday, Thanksgiving Day, 
+                and Christmas Day. We have reduced hours on the 2nd Saturday in December, Christmas Eve and New Year's Eve; on these three days tours end at 2 PM and our retail store closes at 3 PM.
+            </p>
+            <p>
+                Groups of 20 or more should contact the Visitor Center at 866-868-7522 to pre-arrange their visit. (This is not a reservation.) 
+                Tours are FREE and depart approximately every 15-30 minutes throughout the day and last approximately 25-30 minutes. <span class="bold">While the typical wait for tours can be 15 to 30 minutes, during certain holidays, 
+                the Easter season, Spring Break, summer (mid-June to the end of August), Veteran’s Day, the Friday and Saturday after Thanksgiving, the week before Christmas, and the week before New Year's, 
+                tour waits can be as long as 1 hour or more.</span>
+            </p>
+            <p>
+                Please plan to bring strollers or wheelchairs as all areas of the Visitor Center and warehouse tour are fully ADA accessible. Note that strollers and wheelchairs are not available in the Visitor Center.
+            </p>
+            <p class="bold">
+                For further Jelly Belly tour information call (866) TOUR-JBC (868-7522)
+            </p>
+        </article>
+
+    </section>
+   
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+

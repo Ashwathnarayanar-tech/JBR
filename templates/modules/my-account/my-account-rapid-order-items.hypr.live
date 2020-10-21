@@ -1,0 +1,215 @@
+
+    
+    <div id="scratchpad-text">Welcome to the Jelly Belly Quick Order Form. Just input the product number and quantity, then click Add to Cart. Simple!</div>
+    
+    <style>
+    .quantity-field {
+        width: 65px;    
+    }
+    
+    #scratchpad {
+        margin-top: 10px;
+    }
+    
+    #scratchpad tr {
+        border-bottom: 1px solid #dddddd;
+    }
+    
+    #scratchpad td {
+            padding: 5px;
+            text-align: center;
+        }
+        
+    #scratchpad th {
+            text-align: center;
+        }
+        
+    #scratchpad thead {
+        background: #dddddd;
+    }
+    #myElem{
+    display:none;
+    }
+    .rapid-order-buttons{
+        display: inline-block;
+        width: 100%;
+        text-align: right;
+    }
+    
+    .rapid-button-add-row, .rapid-button-add-cart {
+                        background: #ccc;
+                        border: 0;
+                        color: #FFF;
+                        text-transform: uppercase;
+                        border-radius: 0;
+                        -moz-border-radius: 0;
+                        -webkit-border-radius: 0;
+                        padding: 10px 50px; 
+                        font-size: 14px;
+                        font-weight: bold;
+                        font-family: @Trebuchet;
+                        cursor: default;
+
+                    }
+     
+     .rapid-button-add-cart {
+        background: #36abe2;
+        cursor: pointer;
+     }
+     .rapid-button-add-cart:hover{
+            background: #0c76a9;
+        }
+     @media only screen and (min-width: 1px) and (max-width: 767px) {
+     .rapid-button-add-row, .rapid-button-add-cart{
+         width: 100%;
+        margin-top: 10px;
+            font-size: 12px;
+     }
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .rapid-button-add-row, .rapid-button-add-cart {
+            padding: 10px 40px; 
+        }
+                    
+    }
+<!-- input[type=number] {
+    -moz-appearance:textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ -->
+
+.blurness {
+    -moz-appearance:textfield;
+}
+
+.blurness::-webkit-inner-spin-button,
+.blurness::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+    </style>
+
+    <table id="scratchpad" class="item-table rapid-order-table" width="100%">
+        <thead>
+            <tr>
+                <th width="15%">Code No.</th>
+                <th width="10%">Qty</th>
+                <th width="25%">Name</th>
+                <th width="10%">Current Price</th> 
+                <th width="10%">Line total</th>
+            </tr>
+        </thead> 
+        <tr>
+            <td><input class="blurness" data-mz-sku-field lineItemNum="1" value="" size="8"/></td>
+            <td><input style="padding:2px 4px; width: 50px;" class="blurness" data-mz-quantity-field lineItemNum="1" value="" type="number" length="4" min="1" max="50" class="quantity-field"/></td>
+            <td><span data-mz-name lineItemNum="1"></span><br><span data-mz-available lineItemNum="1"></span><br><span data-mz-notifyMe lineItemNum="1"></span><input id="locationCode" type="hidden"></td>
+            <td><span data-mz-price lineItemNum="1" value=""></span><br><span class="current-price" data-mz-saleprice lineItemNum="1" value=""></span></td>
+            <td><span data-mz-lineitem-total lineItemNum="1" value=""></span></td>
+        </tr>
+        <tr style="display: none;">
+            <td><input class="blurness" data-mz-sku-field lineItemNum="2" value="" size="8"></td>
+            <td><input class="blurness" data-mz-quantity-field lineItemNum="2" value="" type="number" length="4"  min="1" max="50" class="quantity-field"></td>
+            <td><span data-mz-name lineItemNum="2"></span><br><span data-mz-available lineItemNum="2"></span></td>
+            <td><span data-mz-price lineItemNum="2" value=""></span><br><span data-mz-saleprice lineItemNum="2" value=""></td>
+            <td><span data-mz-lineitem-total lineItemNum="2" value=""></span></td>
+        </tr>
+        <tr style="display: none;">
+            <td><input class="blurness" data-mz-sku-field lineItemNum="3" value="" size="8"></td>
+            <td><input class="blurness" data-mz-quantity-field lineItemNum="3" value="" type="number"  length="4"  min="1" max="50" class="quantity-field"></td>
+            <td><span data-mz-name lineItemNum="3"></span><br><span data-mz-available lineItemNum="3"></span></td>
+            <td><span data-mz-price lineItemNum="3" value=""></span><br><span data-mz-saleprice lineItemNum="3" value=""></span></td>
+            <td><span data-mz-lineitem-total lineItemNum="3" value=""></span></td>
+        </tr>
+        <tr style="display: none;">
+            <td><input class="blurness" data-mz-sku-field lineItemNum="4" value="" size="8"></td>
+            <td><input class="blurness" data-mz-quantity-field lineItemNum="4" value="" type="number" length="4"  min="1" max="50" class="quantity-field"></td>
+            <td><span data-mz-name lineItemNum="4"></span><br><span data-mz-available lineItemNum="4"></span></td>
+            <td><span data-mz-price lineItemNum="4" value=""></span><br><span data-mz-saleprice lineItemNum="4" value=""></span></td>
+            <td><span data-mz-lineitem-total lineItemNum="4" value=""></span></td>
+        </tr>
+        <tr style="display: none;">
+            <td><input class="blurness" data-mz-sku-field lineItemNum="5" value="" size="8"></td>
+            <td><input class="blurness" data-mz-quantity-field lineItemNum="5" value="" type="number" length="4"  min="1" max="50" class="quantity-field"></td>
+            <td><span data-mz-name lineItemNum="5"></span><br><span data-mz-available lineItemNum="5"></span></td>
+            <td><span data-mz-price lineItemNum="5" value=""></span><br><span data-mz-saleprice lineItemNum="5" value=""></span></td>
+            <td><span data-mz-lineitem-total lineItemNum="5" value=""></span></td>
+        </tr>
+        <tr style="display: none;">
+            <td><input class="blurness" data-mz-sku-field lineItemNum="6" value="" size="8"></td>
+            <td><input class="blurness" data-mz-quantity-field lineItemNum="6" value="" type="number" length="4"  min="1" max="50" class="quantity-field"></td>
+            <td><span data-mz-name lineItemNum="6"></span><br><span data-mz-available lineItemNum="6"></span></td>
+            <td><span data-mz-price lineItemNum="6" value=""></span><br><span data-mz-saleprice lineItemNum="6" value=""></span></td>
+            <td><span data-mz-lineitem-total lineItemNum="6" value=""></span></td>
+        </tr>
+        <tr style="display: none;">
+            <td><input class="blurness" data-mz-sku-field lineItemNum="7" value="" size="8"></td>
+            <td><input class="blurness" data-mz-quantity-field lineItemNum="7" value="" type="number" length="4"  min="1" max="50" class="quantity-field"></td>
+            <td><span data-mz-name lineItemNum="7"></span><br><span data-mz-available lineItemNum="7"></span></td>
+            <td><span data-mz-price lineItemNum="7" value=""></span><br><span data-mz-saleprice lineItemNum="7" value=""></td>
+            <td><span data-mz-lineitem-total lineItemNum="7" value=""></span></td>
+        </tr>
+        <tr style="display: none;">
+            <td><input class="blurness"  data-mz-sku-field lineItemNum="8" value="" size="8"></td>
+            <td><input class="blurness"  data-mz-quantity-field lineItemNum="8" value="" type="number" length="4"  min="1" max="50" class="quantity-field"></td>
+            <td><span data-mz-name lineItemNum="8"></span><br><span data-mz-available lineItemNum="8"></span></td>
+            <td><span data-mz-price lineItemNum="8" value=""></span><br><span data-mz-saleprice lineItemNum="8" value=""></span></td>
+            <td><span data-mz-lineitem-total lineItemNum="8" value=""></span></td>
+        </tr>
+        <tr style="display: none;">
+            <td><input class="blurness"  data-mz-sku-field lineItemNum="9" value="" size="8"></td>
+            <td><input class="blurness" data-mz-quantity-field lineItemNum="9" value="" type="number" length="4"  min="1" max="50" class="quantity-field"></td>
+            <td><span data-mz-name lineItemNum="9"></span><span data-mz-available lineItemNum="9"></span></td>
+            <td><span data-mz-price lineItemNum="9" value=""></span><br><br><span data-mz-saleprice lineItemNum="9" value=""></span></td>
+            <td><span data-mz-lineitem-total lineItemNum="9" value=""></span></td>
+        </tr>
+        <tr style="display: none;"> 
+            <td><input class="blurness" data-mz-sku-field lineItemNum="10" value="" size="8"></td>
+            <td><input class="blurness" data-mz-quantity-field lineItemNum="10" value="" type="number" length="4" min="1" max="50" class="quantity-field"></td>
+            <td><span data-mz-name lineItemNum="10"></span><br><span data-mz-available lineItemNum="10"></span></td>
+            <td><span data-mz-price lineItemNum="10" value=""></span><br><span data-mz-saleprice lineItemNum="10" value=""></span></td>
+            <td><span data-mz-lineitem-total lineItemNum="10" value=""></span></td>
+        </tr>
+        
+    </table>
+     
+    <center>
+    <div id="scratchpad-msg" style="display: none; width: 100%; text-align: center; margin-top: 20px; margin-bottom: 20px;"></div>
+    </center>
+    <div id="myElem" >Please wait...</div>
+    <div id="scratchpad-subtotal" style="float: right; display: none;">$0.00</div>
+    <br>
+
+    <div class="mz-l-formfieldgroup mz-align rapid-order-buttons">
+    <button id="add-row-button" class="rapid-button-add-row" data-mz-action="addRow" style="display: none;">Add Another Product</button> <button id="move-to-cart-button" class="rapid-button-add-cart" data-mz-action="moveToCartSingleItem">Add to Cart </button>
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

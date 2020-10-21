@@ -1,0 +1,39 @@
+<nav class="mz-scrollnav mz-desktop"  id="account-nav" data-mz-scrollnav="{{ navtarget }}">
+    <ul class="mz-scrollnav-list nav">
+
+        <li class="mz-scrollnav-item">
+            <a class="mz-scrollnav-link mz-nav-head" >
+                {{ labels.accountNavHead }}
+            </a>
+        </li>
+
+        <li class="mz-scrollnav-item">
+            <a class="mz-scrollnav-link" forID="account-settings" href="#account-settings">
+                {{ labels.accountSettings }}
+            </a>
+        </li>
+        <li class="mz-scrollnav-item">
+            <a class="mz-scrollnav-link" forID="rapid-order" href="#rapid-order" style="display:none;">
+                RAPID ORDER
+            </a>
+        </li>
+
+        <li class="mz-scrollnav-item">
+            <a class="mz-scrollnav-link" forID="account-orderhistory" href="#account-orderhistory">
+                {{ labels.orderHistory }}
+            </a>
+        </li>
+        <li class="mz-scrollnav-item">
+            <a class="mz-scrollnav-link" forID="account-subscriptionhistory" href="#account-subscriptionhistory">
+                {{ labels.subscription }}
+            </a>
+        </li>
+        <li class="mz-scrollnav-item">
+            <a class="mz-scrollnav-link" forID="account-invoices" href="#account-invoices">
+                {{ labels.invoices }}
+            </a>
+        </li>
+    </ul>
+</nav>
+
+{% require_script "modules/scroll-nav" %}

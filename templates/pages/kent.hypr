@@ -1,0 +1,49 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <article>
+        <h1 class="mz-pagetitle">Kent Pietsch - Professional Stunt Pilot</h1>
+        <figure class="vertImage cyclingImg">
+            <img src="/resources/images/sponsors/Kent Pietsch/pietschandTruck.jpg">
+        </figure>
+        <p>To find out when and where Kent will be performing, look at our <a href="/sponsorships-event-calendar">Event Calendar</a>.</p>
+        <p>Kent Pietsch fell in love with flying when he was four years-old. Five decades later, his passion has not waned.</p>
+        <p>Since 1973, Kent has performed his incredible aerobatic routines for millions of people at more than 400 shows that have taken him to quality venues throughout the United States.</p>
+        <p>
+            Kent grew up in Minot, North Dakota, where every day after school, he’d find a way to get to the airport, and do whatever it took to get into an airplane.
+            While most aerobatic performers have one basic program, Kent executes three storied acts that leave spectators mesmerized. 
+            These include a dead-stick (turning the engine off) routine from 6,000 feet and a rooftop landing on a moving RV! However, 
+            Kent is best known for a comedy act that features a detached aileron (wing flap) and a mesmerizing wingtip-scraping pass down the 
+            runway that you must see to believe. When Kent is at the controls of his plane, it is impossible not to watch him perform.
+        </p>
+        <p>
+            Kent loves to fly, but the audience is always his number-one priority. “If you can’t entertain, you have no business being out there,” he said. 
+            “The gratification is in knowing that people are enjoying themselves.” Kent’s humble nature and willingness to interact with fans make him a crowd favorite wherever he performs.
+        </p>
+        <p>He flies an 800-pound Interstate Cadet with a 37-foot wingspan. The plane’s horizontally opposed four-cylinder engine can generate 90 horsepower and a G-force ranging from -3 to +5.</p>
+        <hr>
+        <h4>Here are some videos of Kent in action!</h4>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+

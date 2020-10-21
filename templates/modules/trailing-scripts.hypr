@@ -1,0 +1,72 @@
+{% with themeSettings.useDebugScripts|default:pageContext.isDebugMode as debugMode %}
+
+<script src="{{siteContext.cdnPrefix}}/js/require-{% if debugMode %}debug{% else %}min{% endif %}.js"></script>
+<script type="text/javascript">
+    require.config({ 
+      cdnPrefix: "{{ siteContext.cdnPrefix }}",
+      cacheKey: "{{ siteContext.hashString }}",
+      urlArgs: "theme={{siteContext.themeId}}&cacheKey={{ siteContext.hashString }}",
+      baseUrl: "{{ siteContext.cdnPrefix }}{% if not debugMode %}/compiled{% endif %}/scripts",
+      waitSeconds: 200,
+	  paths: {
+        jquery: "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery{% if not debugMode %}.min{% endif %}",
+		underscore: "vendor/underscore/underscore",
+		backbone: "vendor/backbone/backbone",
+		d3: "https://d3js.org/d3.v4.min"
+      }
+    });
+    if(typeof Object.assign != 'function'){
+        Object.defineProperty(Object, "assign", {
+            value: function assign(target, varArgs) {
+                'use strict';
+                if (target == null) {
+                    throw new TypeError('Cannot convert undefined or null to object');
+                }
+                var to = Object(target);
+                for (var index = 1; index < arguments.length; index++) {
+                    var nextSource = arguments[index];
+                    if (nextSource != null) {
+                        for (var nextKey in nextSource) {
+                            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                                to[nextKey] = nextSource[nextKey];
+                            }
+                        }
+                    }
+                }
+                return to;
+            },
+            writable: true, 
+            configurable: true
+        });
+    }
+
+  {% if debugMode %} 
+    require([{% all_scripts %}]);
+	  // require(['modules/d3']);
+	  require(['modules/common']);
+	  require(['widgets/rti-observation','vendor/baynote']);
+  {% else %} 
+    require(['jquery'], function() {
+        require(['modules/common'], function() {
+            require([{% all_scripts %}]); 
+			require(['widgets/rti-observation','vendor/baynote']);
+        }); 
+    });
+	// require(['modules/d3']);
+  {% endif %}
+</script>
+ 
+ {% comment %}
+{% if siteContext.generalSettings.isGoogleAnalyticsEnabled %}
+  {% include "modules/analytics/google-analytics-tracking-code" %}
+{% endif %}
+{% endcomment %}
+{%endwith%}
+
+
+
+
+
+
+
+

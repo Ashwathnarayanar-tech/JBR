@@ -1,0 +1,92 @@
+
+<ul class="quick-order-item-list">  
+    {% for item in model.items %}
+        <li>
+            <div class="quick-order-history-head" QorderID="{{item.orderNumber}}">
+                <ul data-mz-showQuickOrder QorderID="{{item.orderNumber}}">
+                    <li class="quick-order-number">
+                        <label>Order Number:</label>
+                        <span>{{item.orderNumber}}</span>
+                    </li>
+                    <li class="quick-order-total">
+                        <label>Items:</label>
+                        <span>{{item.numberofproducts}}</span>
+                    </li>
+                    <li class="quick-order-total">
+                        <label>Order Total:</label>
+                        <span>${{item.total}}</span>
+                    </li>
+                    <li class="quick-order-plus">
+                        <label><a quick-order-head="{{item.orderNumber}}">+</a></label>
+                        <span></span>
+                    </li>
+                </ul>
+                
+                <div data-mz-QuickOrder class="quick-order-item-details" QorderID="{{item.orderNumber}}">
+                    <a data-mz-action="addAllToCart" class="add-all-to-cart" orderToAdd="{{item.orderNumber}}">ADD ALL TO CART </a>
+                    
+                    <div class="product-listing">
+                        {% for productItem in item.items %}
+                            <div class="product-listing-row" productItemCode={{productItem.product.productCode}}>
+                                {% if productItem.product.imageUrl %}
+                                    <div class="mz-itemlisting-thumb">
+                                        <img class="mz-itemlisting-thumb-img" src="{{ productItem.product.imageUrl }}?max=80" /> 
+                                    </div>
+                                {% endif %}
+                                    <a class="mz-itemlisting-title" href="{{ productItem.product.url }}">
+                                        {{ productItem.product.name|safe }}
+                                    </a>  
+                                    
+                                    <div class="quick-order-quantity">
+                                    {% comment %}
+                                        <a data-mz-action="decreaseQuickOrderQuantity" class="changer" quickOrderProductCodeQuantityChanger="{{productItem.product.productCode}}">-</a>
+                                        <input class="quantity-field" type="number" quickOrderProductId="{{productItem.product.productCode}}" value="{{productItem.quantity}}" min="1" class="quick-order-quantityfield" quickOrderQuantity="{{productItem.quantity}}">
+                                    {% endcomment %}   
+                                    
+                                        <select class="quantity-field" id="quantity" name="quantity"  data-mz-value="quantity" quickOrderProductId="{{productItem.product.productCode}}" value="{{productItem.quantity}}" min="1" class="quick-order-quantityfield" quickOrderQuantity="{{productItem.quantity}}" >
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>   
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                        </select>
+                                        {% comment %}
+                                            <a data-mz-action="increaseQuickOrderQuantity" class="changer" quickOrderProductCodeQuantityChanger="{{productItem.product.productCode}}">+</a>
+                                        {% endcomment %}
+                                    </div>
+                                    
+                                    <p class="inline">${{productItem.total}}</p>
+                                    <a data-mz-action="addInlineItemToCart" class="inline-add-to-cart" quickOrderProductCode="{{productItem.product.productCode}}" orderNumber="{{item.orderNumber}}" >ADD TO CART </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+            </div>
+        </li>
+    {% endfor %}
+    <li>
+        <button class="mz-more-order" data-mz-action-load-more-items="" data-mz-action="loadMoreItems">VIEW MORE ORDERS</button>    
+    </li>
+</ul>
+
+
+
+
+
+

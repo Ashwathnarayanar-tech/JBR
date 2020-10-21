@@ -1,0 +1,22 @@
+
+<div style="text-align:{{Model.config.alignment}}">
+<a href="{{Model.config.link}}" style=" color:{{Model.config.textColor}};
+        background: {{Model.config.gradientStartingColor}};
+        background: -webkit-linear-gradient(top, {{Model.config.gradientStartingColor}} 0%,{{Model.config.gradientEndingingColor}} 100%);
+        background: -moz-linear-gradient(top, {{Model.config.gradientStartingColor}} 0%,{{Model.config.gradientEndingingColor}} 100%);
+        background: -o-linear-gradient(top, {{Model.config.gradientStartingColor}} 0%,{{Model.config.gradientEndingingColor}} 100%);
+        background: -ms-linear-gradient(top, {{Model.config.gradientStartingColor}} 0%,{{Model.config.gradientEndingingColor}} 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='{{Model.config.gradientStartingColor}}',endColorstr='{{Model.config.gradientEndingingColor}}',GradientType=0);
+        border: 1px solid {{Model.config.borderColor}};
+        border-radius: {{Model.config.borderRadius}}px;
+        padding:6px;
+        display: inline-block;
+        font-size:{{Model.config.fontSize}}pt;
+        text-decoration: none;
+                                        " 
+    onmouseover="this.style.color='{{Model.config.textHoverColor}}'"
+    onmouseout="this.style.color='{{Model.config.textColor}}'">{{Model.config.name}}</a>
+    
+</div>
+
+

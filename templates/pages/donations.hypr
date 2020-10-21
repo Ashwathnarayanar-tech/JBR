@@ -1,0 +1,145 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static{% endblock body-tag-classes %}
+{% block body-content %}
+<section>
+    <article>
+        <h1 class="mz-pagetitle">
+            Donations Eligibility Form
+        </h1>
+        <article>
+            <h2>Donations Policy</h2>
+            <p>
+                Jelly Belly Candy Company is dedicated to giving back to the local communities we serve. 
+                Charitable donations of Jelly Belly products are limited to 501(c)(3) non-profit organizations,
+                located within the following counties surrounding Jelly Belly:
+            </p>
+        </article>
+        <article>
+            <div class="donation-list">
+                <h3>California</h3>
+                <ul class="contentList">
+                    <li>Solano County</li>
+                    <li>Contra Costa County</li>
+                    <li>Yolo County</li>
+                    <li>Sacramento County</li>
+                    <li>Sonoma County</li>
+                    <li>Napa County</li>
+                </ul>
+            </div>
+            <div class="donation-list">
+                <h3>Wisconsin</h3>
+                <ul class="contentList">
+                    <li>Kenosha County</li>
+                    <li>Racine County</li>
+                    <li>Milwaulkee County</li>
+                </ul>
+            </div>
+            <div class="donation-list">
+                <h3>Illinois</h3>
+                <ul class="contentList">
+                    <li>Lake County</li>
+                    <li>Cook County</li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </article>
+        <hr>
+        <article>
+            <p>
+                Donations in support of community goodwill to public/private schools, churches, U.S. Military and other organizations are at the discretion of Jelly Belly Candy Company.
+            </p>
+            <p class="listHeading">
+                Jelly Belly Candy Company does not donate to the following:
+            </p>
+            <ul class="contentList">
+                <li>●&nbsp;Organizations that limit membership based on race, religion, color, creed, gender, sexual orientation, age or national origin</li>
+            </ul>
+            <p class="listHeading">
+                In order to be considered, your organization must meet the following criteria and provide 90 days advance notice:
+            </p>
+            <ul class="contentList">
+                <li>●&nbsp;A registered non-profit, charitable organization with current 501(c)(3) status of the U.S. Internal Revenue Code or a public/private school or a U.S. Military organization. </li>
+                <li>●&nbsp;Charitable organization or event is located in one of the counties noted above. </li>
+                <li>●&nbsp;Donations are limited to one per organization within a 12 month period.</li>
+                <li>●&nbsp;All donations are to be picked up at specified Jelly Belly location.</li>
+            </ul>
+        </article>
+        <article class="txt-center" id="step2a">
+            <p>Does your organization meet the criteria listed above?</p>
+            <input type="button" id="s1y"  value="Yes">
+            <input type="button" id="s1n" value="No">
+        </article>
+        <article class="txt-center donationReq" id="step3a" style="display:none;">
+            <hr>
+            <p>
+                Is your request in support of any of the following?
+            </p>
+            <ul class="contentList">
+                <li>●&nbsp;Organizations that limit membership based on race, religion, color, creed, gender, sexual orientation, age or national origin</li>
+            </ul>
+            <p class="finePrint">
+                These organizations may hold not-for profit status but are not considered charitable in nature.
+            </p>
+            <input type="button" id="s2y"  value="Yes">
+            <input type="button" id="s2n" value="No">
+        </article>
+        
+        <article class="donationReq txt-center" id="step4a"  style="display:none;">
+        <hr>
+            <p>
+                Are you submitting this request 90 days prior to the date of need?
+            </p>
+            <input type="button" id="s3y"  value="Yes">
+            <input type="button" id="s3n" value="No">
+        </article>
+        
+        <article class="donationReq txt-center" id="step5a"  style="display:none;">
+        <hr>    
+            <p>
+                Are you submitting this request more than 6 months in advance of the date of need?
+            </p>
+            <input type="button" id="s4y"  value="Yes">
+            <input type="button" id="s4n" value="No">
+        </article>
+        
+        <article class="donationReq txt-center" id="step6a"  style="display:none;">
+        <hr>
+            <h1>
+                To continue the registration process click the "I AGREE"
+                <br>
+                below to confirm that your organization meets the above criteria.
+            </h1>
+            <p class="finePrint">NOTE:  Jelly Belly Candy Company reserves the right to amend, change or discontinue this policy at its discretion. </p>
+            <input type="button" id="agree" value="I Agree">
+            <hr>
+        </article>
+        <article class="donationReq txt-center" id="step7a"  style="display:none;">
+            <iframe src="https://mycusthelp.com/jellybelly/_cs/Requestopen.aspx?rqst=1" frameborder="0" style="width:650px; height:1500px;" height="1800" width="640"></iframe>
+        </article>
+        
+        
+    </article>
+</section>
+<div class="clearfix"></div>
+{% endblock body-content %}
+
+
+
+
+
+

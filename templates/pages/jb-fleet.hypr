@@ -1,0 +1,112 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static {% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <div class="vending-100">
+        <h1 class="mz-pagetitle mar-top0">Jelly Belly Fleet</h1>
+        <article>
+            <p><strong>When Jelly Belly makes an appearance, we don't just bring candy (though we bring plenty of that). We bring some sleek, powerful machines with us.</strong></p>
+            <div class="headline-beans">
+                <h2>The Bean Machine</h2>
+            </div>
+            <div class="block-container99">
+                <figure>
+                    <img alt="" title="The Bean Machine" src="/resources/images/jb_fleet/fleet_beanMachine.jpg"/>
+                </figure>
+                <div class="left-fleet">
+                    <p>Maybe the most famous member of the Jelly Belly Fleet, The Bean Machine is a gorgeous piece of motorcycle artistry custom designed and made by legendary bike designer Arlen Ness. Its side car is even shaped like a Jelly Belly jelly bean, as are its chrome rims.</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="headline-beans">
+                <h2>The Sport Beans Bikes</h2>
+            </div>
+            <div class="block-container99">
+                <figure>
+                    <img alt="" title="The Sport Beans Bikes" src="/resources/images/jb_fleet/fleet_sbBikes.jpg"/>
+                </figure>
+                <div class="left-fleet">
+                    <p>
+                        These are the two newest beauties to join the Fleet. They're Victory Kingpins modified by the Master himself, Arlen Ness. Custom built and custom painted in the colors of Jelly Belly's Sport Beans energizing jelly beans, they're the perfect representatives of the product: high quality and extremely powerful.
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="headline-beans">
+                <h2>The Jelly Belly Biplane</h2>
+            </div>
+            <div class="block-container99">
+                <figure>
+                    <img alt="" title="The Jelly Belly Biplane" src="/resources/images/jb_fleet/fleet_biplane.jpg"/>
+                </figure>
+                <div class="left-fleet">
+                    <p>
+                        This classic plane has been spruced up with a little Jelly Belly flavor. At air shows, you won't be able to miss it with the Jelly Belly logo on the top wing, and Mr. Jelly Belly bravely hanging off its side.
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="headline-beans">
+                <h2>Ed Jones's Rocket Powered Stage Coach</h2>
+            </div>
+            <div class="block-container99">
+                <figure>
+                    <img alt="" title="Ed Jones's Rocket Powered Stage Coach" src="/resources/images/jb_fleet/fleet_jones2.jpg"/>
+                </figure>
+                <div class="left-fleet">
+                    <p>
+                        This thing isn't pulled by ponies, that's for sure. With its flame-spitting engine, Ed "The Outlaw" Jones's bean-wrapped coach dazzles race fans with hot, loud, fast and intense exhibitions.
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="headline-beans">
+                <h2>Ed Jones's Wheelstander Fire Truck</h2>
+            </div>
+            <div class="block-container99">
+                <figure>
+                    <img alt="" title="Ed Jones's Wheelstander Fire Truck" src="/resources/images/jb_fleet/fleet_jones1.jpg"/>
+                </figure>
+                <div class="left-fleet">
+                    <p>
+                        With Ed "The Outlaw" Jones behind the wheel of this Fire Truck, any four-alarm blaze will be answered within split seconds. And when those front wheels come up, spectators' jaws hit the floor.
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="headline-beans">
+                <h2>J.P.'s Toyz</h2>
+            </div>
+            <div class="block-container99">
+                <figure>
+                    <img alt="" title="J.P.'s Toyz" src="/resources/images/jb_fleet/fleet_jimPace1.jpg"/> 
+                </figure>
+                <div class="left-fleet">
+                    <p>
+                        You've never seen Jelly Belly jelly beans move this fast, even when you're eating them. J.P.'s Toyz is an alcohol-fueled 1948 Anglia sporting a blown-out 540 Chevy engine. Built and driven by Jim Pace, it dominates the 1/4 mile.
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="headline-beans">
+                <h2>Jim Pace's Dragster</h2>
+            </div>
+            <div class="block-container99">
+                <figure>
+                    <img alt="" title="Jim Pace's Dragster" src="/resources/images/jb_fleet/fleet_jimPace2.jpg"/>
+                </figure>
+                <div class="left-fleet">
+                    <p>
+                        Another monstrous machine driven by J.P., this sleek and unique drag race car features a custom Jelly Belly logo on its chassis, although it moves much too fast for you to see it.
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div id="fundraisingForm">
+            </div>
+        </article>
+    </div>
+    <div class="clearfix"></div>
+</section>
+{% endblock body-content %}

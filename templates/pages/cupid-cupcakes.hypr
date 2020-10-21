@@ -1,0 +1,64 @@
+
+
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Cupid Cupcakes</h1>
+    <article class="carnival-details txt-left">
+        <h2>Cupid Cupcakes</h2>
+        <hr>
+        <div class="baking-recipe">
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Cupid Cakes/cupidCupcakes.jpg"  border="0">
+                <br><br>
+                <div style="width:340px;"><iframe width="100%" height="300" src="//www.youtube.com/embed/Ux9BqsPSSn0?feature=player_embedded" frameborder="0" allowfullscreen=""></iframe></div>
+            </figure>
+            <p>
+                Love, Jelly Belly style! If your sweetheart has a sweet tooth, create these beautiful cupcakes with an assortment of jelly beans and Confections and watch the sparks fly! 
+            </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>4 jumbo cupcakes, baked in red paper liners</li>
+                <li>12 standard cupcakes, baked in red paper liners</li>
+                <li>6 mini cupcakes, baked in red paper liners</li>
+                <li>1 can (16 oz) vanilla frosting</li>
+                <li>Red food coloring</li>
+                <li>About 18 oz Jelly Belly Deluxe Valentine Mix (only available during Valentine season)</li>
+                <li>About 9 oz Jelly Belly Valentine Mix (only available during Valentine season)</li>
+                <li>24 pink Jelly Belly <a target="_blank" href="/search/?query=licorice%20pastels">Licorice Pastels</a> (about 8 oz)</li>
+                <li>1 tube (4.25 oz) chocolate decorating frosting</li>
+                <li>1 bag (about 3 oz) Jelly Belly <a target="_blank" href="/search/?query=mint%20cremes">Mint Cremes</a></li>
+                <li><a target="_blank" href="/search/?query=cherry%20sours">Cherry Sours</a> from Jelly Belly</li>
+                <li>About 9 oz <a target="_blank" href="/search/?query=very%20cherry">Very Cherry</a> Jelly Belly jelly beans</li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>Divide the frosting evenly between 2 bowls. Tint one bowl light pink with the red food coloring. Cover the bowls with plastic wrap to prevent drying.</li>
+                <li>Working on 1 cupcake at a time, spread some of either frosting on top of a cupcake to make smooth. Add Jelly Belly jelly beans, Mint Cremes, 
+                    Valentine Mix and Licorice Pastels in desired love message patterns on top of the cupcakes (see photo for ideas).
+                </li>
+                <li>For the butterfly, arrange 2 pink Licorice Pastels, end to end, in the center of the cupcake. Place 2 red hearts (from the Deluxe Valentine Mix) 
+                    on either side of licorice and 2 Cupid Corn pieces (from the Deluxe Valentine Mix) for the wings. Pipe antennae with the chocolate decorating frosting. 
+                </li>
+            </ol>
+            <h2>MAKES 22 CUPCAKES</h2>
+            <hr>
+            <div class="additional-info">
+                <figure>
+                    <a href="/product/452">
+                    <img src="/resources/images/baking_decoration/Cupid Cakes/Hello_Cupcake_120.jpg" align="left" border="0" alt="Hello, Cupcake!" style="padding-right: 15px;"></a>
+                </figure>
+                <p>For more great cupcake recipes by Karen Tack and Allan Richardson, check out <em>Hello, Cupcake!</em>, available <a href="/p/7000597">here.</a></p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+

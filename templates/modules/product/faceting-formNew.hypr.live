@@ -1,0 +1,191 @@
+<a href="javascript:void(0);" class="facets-header" aria-label="Filters" aria-expanded="false" role="button" tabindex="0"><div class="container-filter"><span class="filter-icon"></span> Filter By</div></a> 
+<div class="tz-mobileSelected-filter">
+    <label role="contentinfo" tabindex="0" title="Selected Filters">Selected Filters: </label> 
+    {% for facet in model.facets %}
+        {% if facet.isFaceted %}
+            {% if facet.label != "Color" %}
+                {% for fval in facet.values %}  
+                    {% if fval.isApplied %}    
+                        <span role="contentinfo" aria-label="{{ fval.label|title}} {% if facet.label == "Price" %} $ {% endif %}" tabindex="0"  class="selected-facet-mobile">{{ fval.label|title}}<a role="button" aria-label="remove-facet {{ fval.label|title}}" tabindex="0" href="javascript:void(0);" attr-filter="{{ fval.value }}" attr-require="{{ fval.filterValue }}" class="remove-filter-one" id="{{ facet.label }}">X</a></span>
+                    {% endif %}    
+                {% endfor %} 
+            {% else %}   
+            {% if facet.label == "Color" %} 
+                {% for fval in facet.values %}  
+                    {% if fval.isApplied %} 
+                    <span role="contentinfo" aria-label="{{ fval.label|title}}  tabindex="0"  class="selected-facet-mobile"><span class="mobjb-color" style="{% if fval.value == "multi" %}background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); {% else %} background:{{ fval.value }};{% endif %}"></span><a role="button" aria-label="remove-facet {{ fval.label|title}}" tabindex="0" href="javascript:void(0);" attr-filter="{{ fval.value }}" attr-require="{{ fval.filterValue }}" class="remove-filter-one" id="{{ facet.label }}">X</a></span>
+                    {% endif %}     
+                {% endfor %} 
+            {% endif %}
+            {% endif %}
+        {% endif %}  
+    {% endfor %} 
+</div>
+{% comment %}
+<hr>  
+{% endcomment %}
+<div data-mz-facets-mobile class="mz-l-sidebar mobsidebar">
+    <section class="mz-facetingform-new">
+        {% for facet in model.facets %}
+            {% if facet.values and facet.facetType != "Hierarchy" and facet.values.length >0 %}
+                <div class="mz-l-sidebaritem-new" {% if facet.label == "Flavors" or facet.label == "Brand" %} style="display:none;" {% endif %}>
+                    {% if forloop.first %}
+                        <h4 tabindex="0" role="button" aria-label="{% if facet.label == "RatingForFacet" %}Rating{%else%}{{ facet.label }}{%endif%}" aria-expanded="false"  tabindex="0">{% if facet.label == "RatingForFacet" %}Rating{%else%}{{ facet.label }}{%endif%}<span class="mz-open-facet"></span></h4>
+                        <ul class="mz-facetingform-facet mz-facetingform-facet-hierarchy rating-ul {% if facet.label == "Color" %} color {% endif %}" data-mz-action-"loadCustomScroll" >
+                    {%else%}
+                    {% if  facet.label != "packagesize" %}
+                        <h4 tabindex="0" role="button" aria-label="{% if facet.label == "RatingForFacet" %}Rating{%else%}{{ facet.label }}{%endif%}" aria-expanded="false" tabindex="0">{% if facet.label == "RatingForFacet" %}Rating{%else%}{{ facet.label }}{%endif%}<span class="mz-close-facet"></span></h4>
+                        <ul class="mz-facetingform-facet mz-facetingform-facet-hierarchy {% if facet.label == "Color" %} color {% endif %} {% if facet.label == "RatingForFacet" %} rating-ul {% endif %}" data-mz-action-"loadCustomScroll" >
+                    {%endif%}
+                    {%endif%}
+                    {% if facet.label == "RatingForFacet" %}
+                        {% for fval in facet.values %}
+                            {% if fval.label == "40 to 50" %}
+                                <li role="button" aria-label="{% if fval.label == "10 to 50" %} one star and up {% else %}{% if fval.label == "20 to 50" %} two stars and up {% else %}{% if fval.label == "30 to 50" %} three stars and up {% else %}{% if fval.label == "40 to 50" %} four stars and up {% endif %}{% endif %}{% endif %}{% endif %}" tabindex="0" class="item-name rating {% if fval.isApplied %} mz-facetform-selected {% endif %}">
+                                    {% if fval.label == "40 to 50" %}
+                                        <span class="checkbox-style"></span>
+                                        <span   data-mz-url="{% make_url "facet" fval %}" rating-facet="4+ Stars" data-mz-facet-value class="mz1-facetingform-value reviewStar fourStar"  data-mz-facet="{{ facet.field }}" data-mz-facet-value-mobile="{{ fval.value }}" data-mz-facet-titel-mobile="{{ fval.label|title}}" facetRating="activerating" >
+                                            {% comment %}<img src='{% make_url "image" "/resources/images/stars_small_4.gif" with max=100 as_parameter %}' alt="four stars" title="four stars" /> {% endcomment %}
+                                        </span> 
+                                        <p class="mz1-facetingform-value" rating-facet="4+ Stars" data-mz-facet-value-mobile="{{ fval.value }}" data-mz-facet="{{ facet.field }}" data-mz-facet-value="{{ fval.value }}">& Up</p> 
+                                    {% endif %}
+                                </li> 
+                            {% endif %}
+                        {% endfor %}
+                         {% for fval in facet.values %}
+                            {% if fval.label == "30 to 50" %}
+                                <li role="button" aria-label="{% if fval.label == "10 to 50" %} one star and up {% else %}{% if fval.label == "20 to 50" %} two stars and up {% else %}{% if fval.label == "30 to 50" %} three stars and up {% else %}{% if fval.label == "40 to 50" %} four stars and up {% endif %}{% endif %}{% endif %}{% endif %}" tabindex="0" class="item-name rating {% if fval.isApplied %} mz-facetform-selected {% endif %}">
+                                    {% if fval.label == "30 to 50" %}
+                                        <span class="checkbox-style"></span>
+                                        <span  data-mz-url="{% make_url "facet" fval %}" rating-facet="3+ Stars" data-mz-facet-value class="mz1-facetingform-value reviewStar threeStar"  data-mz-facet="{{ facet.field }}" data-mz-facet-value-mobile="{{ fval.value }}" data-mz-facet-titel-mobile="{{ fval.label|title}}" facetRating="activerating" >
+                                            {% comment %} <img src='{% make_url "image" "/resources/images/stars_small_3.gif" with max=100 as_parameter %}' alt="three stars" title="three stars" />{% endcomment %}
+                                        </span>
+                                        <p class="mz1-facetingform-value" rating-facet="3+ Stars" data-mz-facet-value-mobile="{{ fval.value }}" data-mz-facet="{{ facet.field }}" data-mz-facet-value="{{ fval.value }}">& Up</p> 
+                                    {% endif %}
+                                </li> 
+                            {% endif %}
+                        {% endfor %}
+                         {% for fval in facet.values %}
+                            {% if fval.label == "20 to 50" %}
+                                <li role="button" aria-label="{% if fval.label == "10 to 50" %} one star and up {% else %}{% if fval.label == "20 to 50" %} two stars and up {% else %}{% if fval.label == "30 to 50" %} three stars and up {% else %}{% if fval.label == "40 to 50" %} four stars and up {% endif %}{% endif %}{% endif %}{% endif %}" tabindex="0" class="item-name rating {% if fval.isApplied %} mz-facetform-selected {% endif %}">
+                                    {% if fval.label == "20 to 50" %}
+                                        <span class="checkbox-style"></span>
+                                        <span  data-mz-url="{% make_url "facet" fval %}" rating-facet="2+ Stars" data-mz-facet-value class="mz1-facetingform-value reviewStar twoStar" 
+                                         data-mz-facet="{{ facet.field }}" data-mz-facet-value-mobile="{{ fval.value }}" data-mz-facet-titel-mobile="{{ fval.label|title}}" facetRating="activerating" >
+                                            {% comment %}<img src='{% make_url "image" "/resources/images/stars_small_2.gif" with max=100 as_parameter %}' alt="two stars" title="two stars" />{% endcomment %}
+                                        </span>
+                                        <p class="mz1-facetingform-value" rating-facet="2+ Stars" data-mz-facet-value-mobile="{{ fval.value }}" data-mz-facet="{{ facet.field }}" data-mz-facet-value="{{ fval.value }}">& Up</p> 
+                                    {% endif %}
+                                </li> 
+                            {% endif %}
+                        {% endfor %}
+                         {% for fval in facet.values %}
+                            {% if fval.label == "10 to 50" %}
+                                <li role="button" aria-label="{% if fval.label == "10 to 50" %} one star and up {% else %}{% if fval.label == "20 to 50" %} two stars and up {% else %}{% if fval.label == "30 to 50" %} three stars and up {% else %}{% if fval.label == "40 to 50" %} four stars and up {% endif %}{% endif %}{% endif %}{% endif %}" tabindex="0" class="item-name rating {% if fval.isApplied %} mz-facetform-selected {% endif %}">
+                                    {% if fval.label == "10 to 50" %}
+                                        <span class="checkbox-style"></span>
+                                        <span  data-mz-url="{% make_url "facet" fval %}" rating-facet="1+ Stars" data-mz-facet-value class="mz1-facetingform-value reviewStar oneStar" 
+                                         data-mz-facet="{{ facet.field }}" data-mz-facet-value-mobile="{{ fval.value }}" data-mz-facet-titel-mobile="{{ fval.label|title}}" facetRating="activerating" >
+                                            {% comment %}<img src='{% make_url "image" "/resources/images/stars_small_1.gif" with max=100 as_parameter %}' alt="one stars" title="one stars" />{% endcomment %}
+                                        </span>
+                                        <p class="mz1-facetingform-value" rating-facet="1+ Stars" data-mz-facet-value-mobile="{{ fval.value }}" data-mz-facet="{{ facet.field }}" data-mz-facet-value="{{ fval.value }}">& Up</p> 
+                                    {% endif %}
+                                </li>  
+                            {% endif %}
+                        {% endfor %} 
+                    {% endif %}
+                    {% for fval in facet.values %}
+                        {% if facet.label == "Price" %}
+                            <li role="button" aria-pressed="true" aria-label="{{ fval.label|title}}" tabindex="0" class="item-name li_price {% if fval.isApplied %} mz-facetform-selected {% endif %}">  
+                                <span class="checkbox-style"></span>
+                                <span  data-mz-url="{% make_url "facet" fval %}" class="mz1-facetingform-value" data-mz-facet-value 
+                                 data-mz-facet="{{ facet.field }}" data-mz-facet-value-mobile="{{ fval.value }}" data-mz-facet-titel-mobile="{{ fval.label|title}}">
+                                    {% if fval.label != "Over 40" %}
+                                        ${{fval.rangeQueryValueStart}} to ${{fval.rangeQueryValueEnd}} 
+                                    {% else %}
+                                    {% if fval.label == "Over 40" %}
+                                        Over ${{fval.rangeQueryValueStart}}  
+                                    {% endif %}
+                                    {% endif %}
+                                    <label tabindex="-1" class="mz-facetingform-valuelabel" for="{{facet.field|slugify }}_{{ fval.value|slugify }}"> ({{fval.count}})</label>
+                                </span>
+                            </li>
+                        {% else %}
+                        {% if facet.label == "Color" %}
+                            <li role="button" aria-label="{{ fval.label|title}}" class="item-name color {% if fval.isApplied %} mz-facetform-selected {% endif %}">
+                                <span data-mz-facet-value data-mz-facet-value data-mz-url="{% make_url "facet" fval %}" class="mz1-facetingform-value color" data-mz-facet="{{ facet.field }}" data-mz-facet-value-mobile="{{ fval.value }}" data-mz-facet-titel-mobile="{{ fval.label|title}}" {% if fval.value == "multi" %}style="background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);"{% else %}style="background:{{ fval.value }};"{% endif %}>
+                                    <span class="mz1-selectcolr" {%if fval.isApplied %} style="display:block" {% else %} style="display:none" {% endif %} > </span>
+                                </span>
+                            </li>
+                        {% else %}
+                        {% if facet.label == "RatingForFacet" %}
+                        {%else %}
+                        {% if facet.label == "packagesize" %} 
+                        {%else %}
+                            <li role="button" aria-label="{{ fval.label|title}}" tabindex="0" class="item-name {{ facet.label|lower }} {% if fval.isApplied %} mz-facetform-selected {% endif %}">
+                                <span class="checkbox-style"></span>
+                                <span  data-mz-url="{% make_url "facet" fval %}" data-mz-facet-value  class="mz1-facetingform-value"  data-mz-facet="{{ facet.field }}" data-mz-facet-value-mobile="{{ fval.value }}" data-mz-facet-titel-mobile="{{ fval.label|title}}">{{ fval.label }}
+                                    <label tabindex="-1" class="mz-facetingform-valuelabel" for="{{facet.field|slugify }}_{{ fval.value|slugify }}"> ({{fval.count}})</label>
+                                </span>
+                            </li>
+                        {% endif %}    
+                        {% endif %}
+                        {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endfor %} 
+        {% for facet in model.facets %}
+            {% if facet.values and facet.facetType == "Hierarchy" and facet.values.length > 0 %} 
+                {% if pageContext.pageType == "search" %}
+                    <div class="mz-l-sidebaritem-new">        
+                        {% if forloop.first %} 
+                            <h4 tabindex="0" role="button" aria-label="{% if facet.label == "RatingForFacet" %}Rating{%else%}{{ facet.label }}{%endif%}" aria-expanded="false" tabindex="0">{% if facet.label == "RatingForFacet" %}Rating{%else%}{{ facet.label }}{%endif%}<span class=""></span></h4>
+                            <ul class="mz-facetingform-facet mz-facetingform-facet-hierarchy" data-mz-action-"loadCustomScroll">
+                        {%else%}
+                        {% if model.showlabel && model.showcatgrylabel  %} 
+                            <h4 tabindex="0" role="button" aria-label="{% if facet.label == "RatingForFacet" %}Rating{%else%}{{ facet.label }}{%endif%}" aria-expanded="false" tabindex="0">{% if facet.label == "RatingForFacet" %}Rating{%else%}{{ facet.label }}{%endif%}<span class="mz-close-facet"></span></h4>
+                        {% endif %} 
+                        <ul class="mz-facetingform-facet mz-facetingform-facet-hierarchy" data-mz-action-"loadCustomScroll">{%endif%}
+                            {% for fval in facet.values %}
+                                {% if fval.childrenFacetValues.length > 0 %} 
+                                    {% if fval.isDisplayed %}
+                                        <li role="button" aria-label="{{ fval.label|title}} opens a dropdown" {% if fval.childrenFacetValues.length > 0 %} tabindex="0" role="button" {% endif %} class="item-name category mobile-category" >
+                                            <div class="cat-name-container-mobile">
+                                                <a {% if fval.childrenFacetValues.length > 0 %} tabindex="-1" href="javascript:void(0);" {% else %} tabindex="0" aria-label="{{ fval.label|title}}" href="{% make_url "facet" fval  %}" {% endif %} data-mz-url="{% make_url "facet" fval %}" data-mz-facet-value class="mz-facetingform-link" data-mz-action="drillDown" data-mz-hierarchy-id="{{ fval.value }}" data-mz-facet-value-mobile="{{ fval.value }}" tabindex="0" data-mz-facet-titel-mobile="{{ fval.label|title}}" data-mz-facet="{{ facet.field }}">{{ fval.label }}</a>
+                                                {% if fval.childrenFacetValues.length > 0 %}
+                                                    <span tabindex="-1" class="arrow down"></span> 
+                                                {% endif %}
+                                            </div>
+                                            <div class="sub-cat-list-mobile">
+                                                {% if fval.childrenFacetValues.length > 0 or fval.childrenFacetValues.count > 0%}
+                                                    <ul class="mz-facetingform-facet mz-facetingform-facet-hierarchy">
+                                                        {% for child in fval.childrenFacetValues %}
+                                                            <li class="item-name-submenu-mobile sub-category-mobile">
+                                                                <a data-mz-url="{% make_url "facet" fval %}" data-mz-facet-value tabindex="0" href="{% make_url "facet" child %}" class="mz-facetingform-link" data-mz-action="drillDown" data-mz-hierarchy-id="{{ child.value }}" data-mz-facet-value-mobile="{{ child.value }}" data-mz-facet-titel-mobile="{{ child.label|title}}" data-mz-facet="{{ facet.field }}">{{ child.label }}</a>
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                {% endif %} 
+                                            </div>
+                                        </li>
+                                    {% endif %} 
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </section>
+</div>
+<span class="button-data"> 
+<span tabindex="0" role="button" aria-label="apply" class="tzPopup-Done"><span class="donetext">apply</span></span>
+{% comment %}<span tabindex="0" role="button" aria-label="cancel" class="cancel-btn-container"><span class="tzPopup-cancel">Cancel</span>{% endcomment %}
+<span class="mz-refine-search"><span class="reloadsymbole"></span><a class="mz-reset-filter" role="button" tabindex="0" aria-label="Reset Filter"
+        data-mz-facet-value href="javascript:void(0);" data-mz-url="{% make_url "facet" "clear" %}" data-mz-action="clearFacets">Reset</a></span>
+        </span>
+
+

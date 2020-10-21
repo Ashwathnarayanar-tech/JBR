@@ -1,0 +1,13 @@
+<div class=jb-txtcontent-funfacts>
+    
+    <div class="jb-txtcontent-funfacts-sub1"> 
+        <div class="jb-txtcontent-text1"> 
+                    {{model.config.displayText | safe}} </div>
+        </div>
+</div>
+
+
+
+
+
+

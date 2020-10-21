@@ -1,0 +1,246 @@
+.mz-ourproduct{   
+    font-family: @Trebuchet;
+    /* font-family: Tahoma, Helvetica, Arial, sans-serif; */
+    background: url('../resources/images/mainBG2.jpg') no-repeat fixed center top;
+    color: #444;
+
+    .mz-cms-content {
+        padding: 0px !important;
+    }
+    
+    .viewport_gallery_slide {
+        display: none;
+    }
+     .viewport_gallery_slide:first-child {
+        display: block;
+    } 
+    .jb-e-commerce-details{
+        text-align: center;
+        margin: 0 auto;
+        hr{
+            margin: 17px auto;
+            width: 89%;
+            border: none;
+            border-bottom: 1px dotted #ccc;
+            clear: both;
+        }
+        .jb-links{
+            margin: 0px auto;
+            width: 100%;
+            text-align: center;
+            a{
+                font-size: 15px;
+                width: 22%;
+                text-decoration: none;
+                color: #00a3e0;
+                cursor: pointer;
+                margin: 0 auto;
+                font-family: @Trebuchet;
+                display: inline-block;
+                &:hover{
+                    text-decoration: underline;    
+                }
+            }
+        }
+    }
+    
+    .jb-special-button{
+        // position: absolute;
+        background-color: #428BCA;
+        border-color: #357EBD;
+        border-radius: 0px;
+        color: #FFFFFF;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        padding: 5px 15px;
+        text-decoration: none;
+        z-index:2;
+        &:hover{
+            background-color: #0B61AC;
+        }
+    }
+    .jb-special-div{
+        position: absolute;
+        height: 150px;
+        width: 250px;
+        line-height: 16px;
+        background: #f9eabe;
+        text-align: center;
+        width: 250px;
+        z-index:2;
+        opacity: 0.8;
+        min-height: 108px;
+        //Text styles
+        font-family: @Trebuchet; 
+        line-height: 1.1 !important;
+        h3{
+            font-weight: bold;
+            font-size: 24px;
+            padding: 15px 0px 0px 0px;
+            margin: 0px;
+            em{
+                
+            }
+        }
+        p{
+            margin: 20px auto;
+            font-size: 16px;
+            line-height: 18px;
+            padding-top: 10px;
+            margin-top: 0;
+        }
+    }
+    
+    .jb-free-shipping{
+        margin: 5px 0px 0px 715px;
+        top: 46px;
+        .jb-special-div;
+        .jb-free-shipping-button{
+            .jb-special-button;
+        }
+    }
+    .jb-monthly-theme{
+        margin: 236px 0px 0px 715px;
+        top: 40px;
+        .jb-special-div;
+        .jb-monthly-theme-button{
+            .jb-special-button;
+        }
+    }
+    .jb-shop-now{
+        .jb-special-button;
+        position: absolute;
+        top: 48px;
+        left: 10px;
+    }
+    // Nesting use case ended
+    .jb-search{
+        display: block;
+        clear: both;
+        width: 100%;
+        text-align: center;
+        margin: 10px auto;
+        .jb-search-ourproduct{
+            border-radius: 2px;
+            background-color: #0873a8;
+            display: block;
+            padding: 0px 4px;
+            height: 50px;
+            margin-left: 20px;
+            color: #fff;
+            float: left;
+            p{
+                float: left;
+                font-size: 22px;
+                color: #fff;
+                width: 280px;
+                line-height: 35px;
+                margin: 8px 0px 0px 0px;
+            }
+            form.mz-searchbox{
+                float: left;
+                input.mz-searchbox-field {
+                    width: 292px !important;
+                    background-position: 309px 8px !important;
+                    background-color: #ffc;
+                }
+                .mz-searchbox-button {
+                    display: inline-block !important;
+                    width: 38px;
+                    height: 14px;
+                    top: 13px;
+                    left: -40px;
+                }
+            }
+        }
+        .jb-made-in-usa{
+            display: block;
+            padding: 12px 0px 3px 6%;
+        }
+    }
+
+    #shop-our-product-brands-listing{
+        float: left;
+        display: block;
+        width: 100%;
+        margin-top: 25px;
+        [class*=mz-cms-col-] .mz-cms-content {
+            padding: 0px;
+        }
+        p{
+            font-size: 16px;
+            opacity: 0.9;
+            color: #444;
+            font-family:  @Trebuchet;
+            margin: 7px 0px 12px 0px;
+        }
+        .jb-ourproducts-brands-listing{
+            float: left;
+            display: block;
+            width: 100%;        
+            .jb-ourproducts-brand-lister{
+                display: block ;
+                clear: both ;
+                width: 100% ;
+                text-align: center ;
+                margin: 0 auto ;
+                float: left;
+                padding: 0px;
+                li{
+                    list-style-type: none;
+                    display: inline-block;
+                    margin: 0px 12px;
+                    margin-bottom: 22px !important;
+                    a{
+                        text-decoration: none;
+                        text-align: center;
+                        display: block;
+                        margin: 5px;
+                        float: left;
+                        .ourproducts-brand-details{
+                            height: 149px;
+                            border: 1px solid #ddd;
+                            border-bottom: 5px solid #0873a8;
+                            width: 202px;
+                            img{
+                                background-color: #FFF;
+                            }
+                        }
+                        p{
+                            text-align: left;
+                            width: 202px;
+                            height: 44px;
+                            overflow: hidden;
+                        }
+                    }
+                    &:hover{
+                        .ourproducts-brand-details{
+                            img{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .jb-reccomended-product-dropzone{
+        //remove the catgory imgae shoin in plp
+        .mz-productlist.mz-productlist-tiled>img {
+            display: none;
+        }
+        h2{
+            margin-top: 30px;
+        }
+    }
+
+} 
+
+
+
+
+
+
+
+

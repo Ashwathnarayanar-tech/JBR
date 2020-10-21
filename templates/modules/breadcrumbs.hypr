@@ -1,0 +1,52 @@
+
+{% if navigation.breadcrumbs.length > 0 %} 
+<div class="mz-breadcrumbs">
+	<div class="mz-wrapper">
+		<div class="mz-breadcrumbs-row">
+			<a href="/" class="mz-breadcrumb-link is-first" title="Home">Home</a> 
+			
+			{% for crumb in navigation.breadcrumbs %}
+			    <span class="mz-breadcrumb-separator other">></span>
+                {% if not forloop.last %}
+                    <a href="{{crumb.url}}" class="mz-breadcrumb-link{% if forloop.first %} is-first{% endif %}" title="{{crumb.name|safe}}">{{crumb.name|safe}}</a>
+                {% else %}
+                    <span class="mz-breadcrumb-current">{{ crumb.name|safe }}</span>
+                {% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endif %}
+
+{% if navigation.breadcrumbs.length > 0 %} 
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement":
+        [
+	{% for crumb in navigation.breadcrumbs %}
+	{% if not forloop.last %}
+		{
+            "@type": "ListItem",
+            "position": {{ forloop.counter }},
+            "item": {
+                    "@id": "http://www.{{themesettings.breadcrumbsDomain}}{{crumb.url}}",
+                    "name": "{{crumb.name|safe}}"
+                    }
+        },
+        {% else %}
+		{
+            "@type": "ListItem",
+            "position": {{ forloop.counter }},
+            "item": {
+                    "@id": "http://www.{{themesettings.breadcrumbsDomain}}{{crumb.url}}",
+                    "name": "{{crumb.name|safe}}"
+                    }
+        }        
+		{% endif %}
+	{% endfor %}
+        ]
+}
+</script>
+{% endif %}

@@ -1,0 +1,186 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+
+{% block body-tag-classes %}mz-visit-us mz-factory{% endblock body-tag-classes %}
+
+{% block body-content %}
+    
+    <h1 class="mz-pagetitle">California Factory: Fairfield</h1>
+    <ul class="jb-feature-brands">
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Free Factory Tours</h3>
+                <figure>
+                  <a href="/california-factory-tours">
+                    <img src="/resources/images/visit-us/tour_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Take our world famous factory tour and see for yourself just how all your favorite candies are made! 
+                  <a class="jb-feature-brand-moreinfo" href="/california-factory-tours">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Events/Operating Calendar</h3>
+                <figure>
+                  <a href="/California-Factory-Events">
+                    <img src="/resources/images/visit-us/calendar_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Planning a trip to the Visitor Center? Check here first for info on special dates and hours of operation, including big events that you'll want to attend! 
+                  <a class="jb-feature-brand-moreinfo" href="/California-Factory-Events">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Tour/School/Youth Camps</h3>
+                <figure>
+                  <a href="/tour-school-youth-camps">
+                    <img src="/resources/images/visit-us/tour_school_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  The Jelly Belly Visitor Center welcomes tour groups, school groups, youth camps, and others traveling as a group. Get all the details here! 
+                  <a class="jb-feature-brand-moreinfo" href="/tour-school-youth-camps">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Jelly Belly Chocolate &amp; Wine Experience</h3>
+                <figure>
+                  <a href="/wine-experience">
+                    <img src="/resources/images/visit-us/wineExp_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Featuring select wines from Suisun Valley Wineries, hand-made confections from the Jelly Belly Chocolate Shoppe and Chocolate Confections from the Makers of Jelly Belly. 
+                  <a class="jb-feature-brand-moreinfo" href="/wine-experience">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Jelly Belly Candy Store</h3>
+                <figure>
+                  <a href="/california-factory-store">
+                    <img src="/resources/images/visit-us/shop_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Step inside and see all of our Beanwear apparel, Beanware logo merchandise and of course, all the candy you can eat! 
+                  <a class="jb-feature-brand-moreinfo" href="/california-factory-store">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Jelly Belly University</h3>
+                <figure>
+                  <a href="/jelly-belly-university">
+                    <img src="/resources/images/visit-us/JBU_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Earn your Degree in Beanology! JBU gives you an up-close-and-personal look at our famous factory. Enroll now! 
+                  <a class="jb-feature-brand-moreinfo" href="/jelly-belly-university">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Jelly Belly Café</h3>
+                <figure>
+                  <a href="/California-Factory-Cafe">
+                    <img src="/resources/images/visit-us/cafe_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  We've got more than just candy! The Jelly Belly Café offers a large variety of delicious food to fill you up after your factory tour. 
+                  <a class="jb-feature-brand-moreinfo" href="/California-Factory-Cafe">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Chocolate Shoppe</h3>
+                <figure>
+                  <a href="/California-Factory-Chocolate-Shoppe ">
+                    <img src="/resources/images/visit-us/chocolate_shop_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  This old-fashioned shoppe features a wide selection of delectable chocolates handmade right in front of you. 
+                  <a class="jb-feature-brand-moreinfo" href="/California-Factory-Chocolate-Shoppe ">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Conference Space</h3>
+                <figure>
+                  <a href="/California-Factory-Conference-Space">
+                    <img src="/resources/images/visit-us/conference_thumb.jpg" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Add a little color and a lot of flavor to your business function by holding it in a Jelly Belly conference room. No one combines professionalism and fun like we do! 
+                  <a class="jb-feature-brand-moreinfo" href="/California-Factory-Conference-Space">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+    </ul>
+    
+    <div class="clearfix"></div>
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+

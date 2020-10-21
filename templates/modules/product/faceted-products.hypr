@@ -1,0 +1,177 @@
+
+{% preload_json Model "facetedproducts" %}
+
+<div id="loading_indicator" style="display: none;"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHdpZHRoPSI0MHB4IiBoZWlnaHQ9IjQwcHgiIHZpZXdCb3g9IjAgMCA0MCA0MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEuNDE0MjE7IiB4PSIwcHgiIHk9IjBweCI+CiAgICA8ZGVmcz4KICAgICAgICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWwogICAgICAgICAgICBALXdlYmtpdC1rZXlmcmFtZXMgc3BpbiB7CiAgICAgICAgICAgICAgZnJvbSB7CiAgICAgICAgICAgICAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpCiAgICAgICAgICAgICAgfQogICAgICAgICAgICAgIHRvIHsKICAgICAgICAgICAgICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoLTM1OWRlZykKICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgQGtleWZyYW1lcyBzcGluIHsKICAgICAgICAgICAgICBmcm9tIHsKICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDBkZWcpCiAgICAgICAgICAgICAgfQogICAgICAgICAgICAgIHRvIHsKICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKC0zNTlkZWcpCiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIHN2ZyB7CiAgICAgICAgICAgICAgICAtd2Via2l0LXRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7CiAgICAgICAgICAgICAgICAtd2Via2l0LWFuaW1hdGlvbjogc3BpbiAxLjVzIGxpbmVhciBpbmZpbml0ZTsKICAgICAgICAgICAgICAgIC13ZWJraXQtYmFja2ZhY2UtdmlzaWJpbGl0eTogaGlkZGVuOwogICAgICAgICAgICAgICAgYW5pbWF0aW9uOiBzcGluIDEuNXMgbGluZWFyIGluZmluaXRlOwogICAgICAgICAgICB9CiAgICAgICAgXV0+PC9zdHlsZT4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJvdXRlciI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMCwwQzIyLjIwNTgsMCAyMy45OTM5LDEuNzg4MTMgMjMuOTkzOSwzLjk5MzlDMjMuOTkzOSw2LjE5OTY4IDIyLjIwNTgsNy45ODc4MSAyMCw3Ljk4NzgxQzE3Ljc5NDIsNy45ODc4MSAxNi4wMDYxLDYuMTk5NjggMTYuMDA2MSwzLjk5MzlDMTYuMDA2MSwxLjc4ODEzIDE3Ljc5NDIsMCAyMCwwWiIgc3R5bGU9ImZpbGw6YmxhY2s7Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxnPgogICAgICAgICAgICA8cGF0aCBkPSJNNS44NTc4Niw1Ljg1Nzg2QzcuNDE3NTgsNC4yOTgxNSA5Ljk0NjM4LDQuMjk4MTUgMTEuNTA2MSw1Ljg1Nzg2QzEzLjA2NTgsNy40MTc1OCAxMy4wNjU4LDkuOTQ2MzggMTEuNTA2MSwxMS41MDYxQzkuOTQ2MzgsMTMuMDY1OCA3LjQxNzU4LDEzLjA2NTggNS44NTc4NiwxMS41MDYxQzQuMjk4MTUsOS45NDYzOCA0LjI5ODE1LDcuNDE3NTggNS44NTc4Niw1Ljg1Nzg2WiIgc3R5bGU9ImZpbGw6cmdiKDIxMCwyMTAsMjEwKTsiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMCwzMi4wMTIyQzIyLjIwNTgsMzIuMDEyMiAyMy45OTM5LDMzLjgwMDMgMjMuOTkzOSwzNi4wMDYxQzIzLjk5MzksMzguMjExOSAyMi4yMDU4LDQwIDIwLDQwQzE3Ljc5NDIsNDAgMTYuMDA2MSwzOC4yMTE5IDE2LjAwNjEsMzYuMDA2MUMxNi4wMDYxLDMzLjgwMDMgMTcuNzk0MiwzMi4wMTIyIDIwLDMyLjAxMjJaIiBzdHlsZT0iZmlsbDpyZ2IoMTMwLDEzMCwxMzApOyIvPgogICAgICAgIDwvZz4KICAgICAgICA8Zz4KICAgICAgICAgICAgPHBhdGggZD0iTTI4LjQ5MzksMjguNDkzOUMzMC4wNTM2LDI2LjkzNDIgMzIuNTgyNCwyNi45MzQyIDM0LjE0MjEsMjguNDkzOUMzNS43MDE5LDMwLjA1MzYgMzUuNzAxOSwzMi41ODI0IDM0LjE0MjEsMzQuMTQyMUMzMi41ODI0LDM1LjcwMTkgMzAuMDUzNiwzNS43MDE5IDI4LjQ5MzksMzQuMTQyMUMyNi45MzQyLDMyLjU4MjQgMjYuOTM0MiwzMC4wNTM2IDI4LjQ5MzksMjguNDkzOVoiIHN0eWxlPSJmaWxsOnJnYigxMDEsMTAxLDEwMSk7Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxnPgogICAgICAgICAgICA8cGF0aCBkPSJNMy45OTM5LDE2LjAwNjFDNi4xOTk2OCwxNi4wMDYxIDcuOTg3ODEsMTcuNzk0MiA3Ljk4NzgxLDIwQzcuOTg3ODEsMjIuMjA1OCA2LjE5OTY4LDIzLjk5MzkgMy45OTM5LDIzLjk5MzlDMS43ODgxMywyMy45OTM5IDAsMjIuMjA1OCAwLDIwQzAsMTcuNzk0MiAxLjc4ODEzLDE2LjAwNjEgMy45OTM5LDE2LjAwNjFaIiBzdHlsZT0iZmlsbDpyZ2IoMTg3LDE4NywxODcpOyIvPgogICAgICAgIDwvZz4KICAgICAgICA8Zz4KICAgICAgICAgICAgPHBhdGggZD0iTTUuODU3ODYsMjguNDkzOUM3LjQxNzU4LDI2LjkzNDIgOS45NDYzOCwyNi45MzQyIDExLjUwNjEsMjguNDkzOUMxMy4wNjU4LDMwLjA1MzYgMTMuMDY1OCwzMi41ODI0IDExLjUwNjEsMzQuMTQyMUM5Ljk0NjM4LDM1LjcwMTkgNy40MTc1OCwzNS43MDE5IDUuODU3ODYsMzQuMTQyMUM0LjI5ODE1LDMyLjU4MjQgNC4yOTgxNSwzMC4wNTM2IDUuODU3ODYsMjguNDkzOVoiIHN0eWxlPSJmaWxsOnJnYigxNjQsMTY0LDE2NCk7Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxnPgogICAgICAgICAgICA8cGF0aCBkPSJNMzYuMDA2MSwxNi4wMDYxQzM4LjIxMTksMTYuMDA2MSA0MCwxNy43OTQyIDQwLDIwQzQwLDIyLjIwNTggMzguMjExOSwyMy45OTM5IDM2LjAwNjEsMjMuOTkzOUMzMy44MDAzLDIzLjk5MzkgMzIuMDEyMiwyMi4yMDU4IDMyLjAxMjIsMjBDMzIuMDEyMiwxNy43OTQyIDMzLjgwMDMsMTYuMDA2MSAzNi4wMDYxLDE2LjAwNjFaIiBzdHlsZT0iZmlsbDpyZ2IoNzQsNzQsNzQpOyIvPgogICAgICAgIDwvZz4KICAgICAgICA8Zz4KICAgICAgICAgICAgPHBhdGggZD0iTTI4LjQ5MzksNS44NTc4NkMzMC4wNTM2LDQuMjk4MTUgMzIuNTgyNCw0LjI5ODE1IDM0LjE0MjEsNS44NTc4NkMzNS43MDE5LDcuNDE3NTggMzUuNzAxOSw5Ljk0NjM4IDM0LjE0MjEsMTEuNTA2MUMzMi41ODI0LDEzLjA2NTggMzAuMDUzNiwxMy4wNjU4IDI4LjQ5MzksMTEuNTA2MUMyNi45MzQyLDkuOTQ2MzggMjYuOTM0Miw3LjQxNzU4IDI4LjQ5MzksNS44NTc4NloiIHN0eWxlPSJmaWxsOnJnYig1MCw1MCw1MCk7Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"></div><br>
+
+<br>
+
+{% comment %}
+<div class="mz-mobile">
+	<ul class="tz-mobrefine-slot">
+        
+		<li><a href="javascript:void(0);" class="tz-mobRefine">{{ labels.refine }}</a></li>
+		<li jb-mobSort data-jb-current-sort="{{model.currentSort}}"> 
+			<label>
+				<span>
+				    {{ labels.sort }}
+				</span>
+			</label>
+			
+			<div data-mz-pagesort class="mz-sortby">
+				{% include "modules/common/page-sort" %}
+			</div>	
+			
+		</li>
+	</ul> 
+</div>   
+{% endcomment %}
+<div class="mz-mobile">
+    <ul class="tz-mobrefine-slot">
+        <li><a href="javascript:void(0);" class="tz-mobRefine" role="button">Filter By</a></li>
+        <li jb-mobSort data-jb-current-sort="{{model.currentSort}}"> 
+            <a href="javascript:void(0)" >
+            <label>
+                <span role="button">
+                    {{ labels.sortBy }}  
+                </span>
+            </label>
+            </a>
+            {% comment %}
+            <div data-mz-pagesort class="mz-sortby">
+                {% include "modules/common/page-sort" %}
+            </div>  
+            {% endcomment %}
+        </li>
+    </ul>
+</div> 
+
+<div class="mz-l-paginatedlist"> 
+    <div class="jb-pagecontrols mz-desktop" >
+        <div class="facet-filtercointainer"> 
+            {% if Model.Facets %}  
+                <div data-mz-facets class="mz-l-sidebar mz-desktop-filters">
+                    {% include "modules/product/faceting-form" %}
+                </div>
+            {% endif %}
+                <div  data-mz-pagesort class="mz-pagesort mz-desktop">
+                    {% include "modules/common/page-sort" %}
+                </div>
+            </div>
+        <div data-mz-pagingcontrols class="mz-pagingcontrols mz-desktop">
+            {% include "modules/common/paging-controls" %}
+        </div>
+       
+        <div class="clearfix"></div>
+    </div> 
+    <div class="selected-facets"> 
+        {% include "modules/product/selected-facets" %}    
+    </div>
+    {% comment %}
+    <div data-mz-pagenumbers class="mz-pagenumbers mz-desktop">
+        {% if model.totalCount > 0 %}
+            {% include "modules/common/page-numbers" %}
+        {% endif %}
+    </div>
+    {% endcomment %}
+    
+    {% dropzone "cateoryplpdropzone" scope="page" %}
+    {% if  pageContext.search.query %}
+       <!-- <a href="{{themeSettings.search_result_banner_image_url}}" style="text-align: center;display: block;">
+                <img id="sli_bimg_top_of_results" border="0" src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/{{themeSettings.search_result_banner_image}}" alt=""> -->
+        </a>
+    {% endif %}
+    <div data-mz-message-bar style="color: rgb(255, 0, 0);
+                                                width: 98%;
+                                                text-align: center;
+                                                padding: 0px 5px 1px;
+                                                font-size: 16px;
+                                                font-style: italic;
+                                                display: none;
+                                                margin: 31px 0px 5px;
+                                                background: rgb(255, 239, 239);
+                                                z-index: 99999;
+                                                top: 50%;">
+    </div>
+    <div data-mz-productlist id="unbxd_results_container">
+        {% require_script "modules/add-to-cart-plp" %}  
+        {% include "modules/product/product-list-tiled" %}
+   
+    </div>
+    <div class="load-more-prod text-center">
+        {% if model.pageCount > 1 and model.hasNextPage %}  
+            <a role='button' lastInedx="{{model.lastIndex}}" aria-label="load more" class="mz-pagenumbers-next custom-br-button {% if model.pageCount > 1 %}{% if model.hasNextPage %} loadmore-active {% else %} loadmore-disabled {% endif %}{% else %} loadmore-disabled{% endif %}" id="load-more" {% if model.pageCount > 1 %}{% if model.hasNextPage %} href="{% make_url "paging" model with page="next" %}" rel="next"  {% endif %}{% endif %}>Load More</a>
+            <a role='button' lastInedx="{{model.lastIndex}}" aria-label="load all" class="mz-pagenumbers-next custom-br-button {% if model.pageCount > 1 %}{% if model.hasNextPage %} loadmore-active {% else %} loadmore-disabled {% endif %}{% else %} loadmore-disabled{% endif %}" id="load-all" {% if model.pageCount > 1 %}{% if model.hasNextPage %} href="{% make_url "paging" model with page="next" %}" rel="all"  {% endif %}{% endif %}>Show All ({{model.totalCount}})</a>
+        {% endif %} 
+      {% comment %}
+      <a role='button' aria-label="load more" class="mz-pagenumbers-next custom-br-button loadmore-active" id="load-more">Load More</a>
+        {% if model.pageCount > 1 and model.hasNextPage %}  
+            <a role='button' lastInedx="{{model.lastIndex}}" aria-label="load more" class="mz-pagenumbers-next custom-br-button {% if model.pageCount > 1 %}{% if model.hasNextPage %} loadmore-active {% else %} loadmore-disabled {% endif %}{% else %} loadmore-disabled{% endif %}" id="load-more" {% if model.pageCount > 1 %}{% if model.hasNextPage %} href="{% make_url "paging" model with page="next" %}" rel="next"  {% endif %}{% endif %}>Load More</a>
+            <a role='button' lastInedx="{{model.lastIndex}}" aria-label="load all" class="mz-pagenumbers-next custom-br-button {% if model.pageCount > 1 %}{% if model.hasNextPage %} loadmore-active {% else %} loadmore-disabled {% endif %}{% else %} loadmore-disabled{% endif %}" id="load-all" {% if model.pageCount > 1 %}{% if model.hasNextPage %} href="{% make_url "paging" model with page="next" %}" rel="all"  {% endif %}{% endif %}>Show All ({{model.totalCount}})</a> 
+        {% endif %} 
+      {% endcomment %}
+     </div>  
+    {% comment %}
+    <div data-mz-pagenumbers class="mz-pagenumbers mz-desktop">
+        {% if model.totalCount > 0 %}
+            {% include "modules/common/page-numbers" %}
+        {% endif %}
+    </div>
+    
+
+    <div data-mz-pagenumbers-mobile class="mz-mobile-pagenumbers mz-mobile">
+        {% include "modules/common/page-controls-mobile" %}
+    </div>
+    {% endcomment %} 
+    {% dropzone "cateoryplpdropzone-above-mbz" scope="page" %}       
+    <div mybuyszone="{{themeSettings.mybuyszone}}" class="recommended-product"></div>             
+    {% dropzone "cateoryplpdropzone-below-mbz" scope="page" %}                
+           
+    <div mybuyszone="{{themeSettings.mybuyszone}}" class="recommended-product"></div>             
+                
+</div>
+<div class="tz-Facets mz-mobile">
+	{% if Model.Facets %}
+		{% include "modules/product/faceting-formNew" %}
+	{% endif %}
+</div>
+<!-- Commented Mybuys Snippets since its added using Tealium    -->
+{% comment %} 
+    {% preload_json pageContext.categoryId "pageContextCID" %}
+    {% preload_json model.items "recommendedModel" %}
+     {% preload_json  pageContext.search.query  "isSearchQueryExist" %}
+                 <div mybuyszone="{{themeSettings.mybuyszone}}"></div>
+                    <script type="text/javascript"> 
+                    var isSearch = document.getElementById("data-mz-preload-isSearchQueryExist").text;
+                       if(isSearch !== " "){
+                            mybuys.setPageType("CATEGORY");
+                            mybuys.set("categoryid", document.getElementById("data-mz-preload-pageContextCID").text);
+                            var finaldata=document.getElementById("data-mz-preload-recommendedModel").text;
+                            var jsondata=eval(finaldata);
+                            for(var i=0;i<jsondata.length;i++){
+                                var prid=jsondata[i].productCode;
+                                mybuys.addItemPresentOnPage(prid); 
+                            }
+                       }
+                    </script>
+{% endcomment %} 
+<div data-mz-mobile-page-sort class="mz-mobile mz-pagesort-mobile">
+    {% include "modules/common/page-sort-mobile" %}
+</div>
+
+ {% include_products "modules/product/crosssell-carousel" with productCodes=themeSettings.addCrosssellProductList as_parameter %}
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

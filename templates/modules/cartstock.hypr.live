@@ -1,0 +1,6 @@
+<span class="stock">
+{% for pro in model.items %}
+    {{ pro.inventoryInfo.onlineStockAvailable }}
+{% endfor %}
+</span>
+

@@ -1,0 +1,70 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <article>
+        <h1 class="mz-pagetitle">Jim Pace</h1>
+        <figure class="vertImage cyclingImg">
+            <img src="/resources/images/sponsors/Jim Pace/jptoyz_01.jpg">
+            <br>
+            <br>
+            <img src="/resources/images/sponsors/Jim Pace/jptoyz_02.jpg">
+        </figure>
+        <p>To find out when and where Jim will be performing, look at our <a href="/sponsorships-event-calendar">Event Calendar</a>.</p>
+        <p>
+            J.P.'s interest in cars from childhood up to the present has landed him many awards. His interest started with his first Revell model car contest in 1959, 
+            moving on to drag racing at the old Vacaville and Freemont Drag strips in California in the 60's and 70's, and on to building street rods in the 70's and 80's.
+        </p>
+        <p>
+            25 years ago, J.P. bought a 1960's race car known as "Catnip" and reworked it into the new J.P.'S Toyz. The body modifications include, chopping the top 3", 
+            channeling the body 6", laying the grille and windshield back for aerodynamics, and moving the rear wheels back and up 2/8" to achieve a 95" wheelbase. 
+            How would you like to drive a car with the wheel base the size of a sheet of plywood at 186mph in 7.33 seconds! 
+            The blown-on alcohol power plant is a 540 cubic inch Keith Black all-aluminum Chevrolet, with a B&amp;J planetary transmission. 
+            The PPG paint is a custom J.P. Red with Pearl White nose that flows into orange and yellow flames. J.P. is well known for his long and smoky 1/2 track burnouts.
+        </p>
+        <p class="listHeading"><strong>Chassis</strong></p>
+        <ul class="contentList">
+            <li>●&nbsp;Type Handcrafted tubular funny car cage designed by J.P.</li>
+            <li>●&nbsp;Weight 2400 with driver</li>
+            <li>●&nbsp;Tread Width 48"</li>
+            <li>●&nbsp;Height 5'7”</li>
+            <li>●&nbsp;Wheelbase 95"</li>
+            <li>●&nbsp;Body Style 1948 Anglia coupe</li>
+            <li>●&nbsp;Body Modifications Chopped, channeled, sectioned, and stretched</li>
+        </ul>
+        <p class="listHeading"><strong>Engine</strong></p>
+        <ul class="contentList">
+            <li>●&nbsp;Type Keith Black all-aluminum Chevrolet</li>
+            <li>●&nbsp;Displacement 540 cu. inch</li>
+            <li>●&nbsp;1071 Mooneyham blower, enderely injected on alchohol</li>
+            <li>●&nbsp;Brodix aluminum heads</li>
+            <li>●&nbsp;Cam Comp roller with Jessell valve train</li>
+            <li>●&nbsp;Crank Crower</li>
+            <li>●&nbsp;Rods Bill Miller</li>
+            <li>●&nbsp;Pistons Wiseco</li>
+            <li>●&nbsp;Ignition MSD Pro Mag</li>
+            <li>●&nbsp;Engine Builder TOE Racing Engines, Suisun, CA </li>
+        </ul>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+

@@ -1,0 +1,24 @@
+{% comment %}
+{% extends "modules/common/payment-method" %}
+{% block module-classes %}mz-paymentmethod-myaccount{% endblock %}
+{% block payment-method-actions %}
+    <a class="mz-paymentmethod-edit" href="javascript:;" data-mz-action="beginEditCard" data-mz-card="{{ model.id }}">{{ labels.edit }}</a>
+    <a class="mz-paymentmethod-delete" href="javascript:;" data-mz-action="beginDeleteCard" data-mz-card="{{ model.id }}">{{ labels.delete }}</a>
+{% endblock payment-method-actions %}
+{% endcomment %}
+
+
+<li class="jb-each-card" >
+        <span class="cType">Card Type :{{model.cardType}}</span>
+        <span class="cName">Name on Card :{{model.nameOnCard}}</span>
+        <span class="cNum">Card No :{{model.cardNumberPart}}</span>
+        <span class="cExp">Expiry Date :{{model.expireMonth}}/{{model.expireYear}}</span>
+        <div class="edit-action">
+            <a class="mz-paymentmethod-edit" href="javascript:;" data-mz-action="beginEditCard" data-mz-card="{{ model.id }}"></a>
+            <a class="mz-paymentmethod-delete" href="javascript:;" data-mz-action="beginDeleteCard" data-mz-card="{{ model.id }}"></a>
+        </div>
+</li>
+
+
+
+

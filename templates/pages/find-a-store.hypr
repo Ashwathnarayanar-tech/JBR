@@ -1,0 +1,22 @@
+{% extends "page" %}
+
+ 
+
+{% block body-tag-classes %}mz-footer-static{% endblock body-tag-classes %}
+
+{% block body-content %}
+
+    <section  class="jb-store-section">
+        <h1 class="mz-pagetitle">Store Locator</h1>
+        <div  class="jb-store-iframe">
+            {% dropzone "store" scope="template" %}
+        </div>
+    </section>
+    
+    <a href="{{themeSettings.nostore_urlnostore_banner_image}}">
+        <img style="margin-left: 10px; border-radius: 10px;" class="thinGrayLine" 
+             src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}}/files/{{themeSettings.nostore_banner_image}}">
+    </a>
+{% endblock body-content %}
+
+

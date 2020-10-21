@@ -1,0 +1,68 @@
+{% extends "page" %}
+
+ 
+
+
+{% block body-tag-classes %} mz-category {% endblock body-tag-classes %}
+
+{% block body-content %}
+{% preload_json category "category"%}
+{% require_script "pages/category" %}
+
+    <div data-mz-category="{{model.categoryId}}" class="jb-category-container">
+    
+        <h1 class="jb-category-title">{{ model.name }}</h1>
+    
+        <h3>{{model.content.description|safe}}</h3>
+    
+        <div class="jb-childcategory-container">
+        
+        {% for childrenCategories in model.childrenCategories%}
+        
+                <div class="jb-childcategory" data-mz-category-url="{{childrenCategories.content.slug}}">
+                    <div class="jb-colapsing-title">
+                        <h1 class="jb-category-title">{{childrenCategories.name}}</h1>
+                        <p class="mz-desktop">open/close</p>
+                        <p class="mz-mobile">+</p>
+                        
+                    </div>
+                    <div class="jb_contentfolder" style="display:none">
+                    <div class="jb-childcategory-description">{{childrenCategories.content.description|safe}}</div>
+                    <div class="jb-childChildrenCategories-container">
+                    
+                    {% for childChildrenCategories in childrenCategories.childrenCategories%}
+                        <div class="jb-childChildrenCategory" style="background-image:url('{{childChildrenCategories.content.categoryImages.0.imageUrl}}');">
+                            <a href="{{childChildrenCategories.url}}">
+                                {{childChildrenCategories.name}}
+                            </a>
+                        </div>
+                    {% endfor %}
+                    </div>
+                    
+                    <div class="jb-child-category-button">
+                            <a href="/">
+                                    <span>Shop</span>  50 Official&nbsp;►
+                            </a>
+                            <a href="/">
+                                    <span>Find</span> a store near you&nbsp;►
+                            </a>
+                    </div>
+                   </div> 
+                </div>
+                
+        {% endfor %}
+        
+        </div>
+    </div>
+
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+

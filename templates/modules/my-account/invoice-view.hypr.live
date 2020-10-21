@@ -1,0 +1,320 @@
+<div class="invoice-cointainer">
+	{% if not model.isPayment %}
+		<div class="invoice-header">
+			<div class="label left-ele">{{ labels.invoices }}</div>
+			<div class="rite-ele">
+				<span class="totalPending">Total Pending : {{model.pendingAmount|floatformat(2)|currency}}</span>
+				<button class="pay-button {% if model.selectedTotal > 0 %}active{% endif %}">PAY {% if model.selectedTotal > 0 %}{{model.selectedTotal|floatformat(2)|currency}}{% endif %}</button>
+			</div>
+		</div>
+		<div class="searchandfilter">
+			<div class="inline-ele search-box-cointainer">
+			{% if pageContext.isDesktop or pageContext.isTablet %}
+				<input class="search-box" type="text" name="serch" placeholder="Search Invoices by Number" value="{{model.query}}" />
+			{% else %}
+			    <input class="search-box" type="text" name="serch" placeholder="Search" value="{{model.query}}" />
+			{% endif %}
+				<span class="search-icon"></span>
+			</div>
+			<div class="inline-ele filter-by-cointainer">
+				<label class="label-for-filter">Filter by:</label>
+				<div class="custom-dropdown filter-by">
+					<div class="selected-item">{{model.filterselected.label}}</div>
+					<div class="options">
+						{% for value in model.filterValue %}
+							{% if model.filterselected.value == value.value %}
+								<span value="{{value.value}}" class="option {% if value.value == model.filterselected.value %}selected{% endif %}">{{value.label}}</span>
+							{% endif %}
+						{% endfor %}
+						{% for value in model.filterValue %}
+							{% if model.filterselected.value != value.value %}
+								<span value="{{value.value}}" class="option {% if value.value == model.filterselected.value %}selected{% endif %}">{{value.label}}</span>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="inline-ele sort-by-cointainer">
+				<label class="sort-for-filter">Sort by:</label>
+				<div class="custom-dropdown sort-by">
+					<div class="selected-item">{{model.sortselected.label}}</div>
+					<div class="options">
+						{% for value in model.sortValue %}
+							{% if value.value == model.sortselected.value %}
+								<span value="{{value.value}}" class="optionList {% if value.value == model.sortselected.value %}selected{% endif %}">{{value.label}}</span>
+							{% endif %}
+						{% endfor %}
+						{% for value in model.sortValue %}
+							{% if value.value != model.sortselected.value %}
+								<span value="{{value.value}}" class="optionList {% if value.value == model.sortselected.value %}selected{% endif %}">{{value.label}}</span>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			</div> 
+		</div>
+		{% comment %}
+		<div class="credit-info-text">
+			<span class="text">You have a credit of $XXX.xx waiting for you. <a href="/contact-us" target="_blank" class="contact-us-link">Contact Us</a> to claim the credit.</span>
+		</div>
+		{% endcomment %}
+		<div class="invoice-list-cointainer">
+			<div class="invoice-list">
+				{% if model.resultCount %}
+					{% for value in model.items %}
+						{% if forloop.index <= model.lastIndex %}
+							<div class="invoice-item {% if value.isActive %} active {% endif %}" id="printArea-{{value.invoiceNumber}}">
+								<div data-attr-invoice="{{value.invoiceNumber}}" class="invoice-header {% if value.isActive %} active {% endif %}">
+									<span class="custom-check"> 
+										<span class="check-box-releative-ele">
+											<input data-attr-invoice="{{value.invoiceNumber}}" type="checkbox" name="slect-invoice" value={{value.invoiceNumber}} class="select-invoice-checkbox" {% if value.isSelected and not value.paid and not value.isPending %} checked {% endif %} {% if value.paid or value.isPending or value.isCCS %} disabled {% endif %} />
+											<span class="checkmark"></span>
+										</span>
+									</span>
+									<span class="invoice-number-text">Invoice Number <strong>{{value.invoiceNumber}}</strong></span> 
+									<span class="invoice-date-text">Invoice Date <strong>{{value.InvoiceDate|date("F j, Y")}}</strong></span>
+									<span class="invoice-total-text">Invoice Total <strong>{{value.invoiceTotal|floatformat(2)|currency}}</strong></span>
+									<span class="invoice-status-text">Status <strong class="{% if value.paid %}paid{% else %}{% if value.isPending %}processing{% else %}{% if value.isCCS %}contact-customer-service{% else %}unpaid{% endif %}{% endif %}{% endif %}">{% if value.paid %}Paid{% else %}{% if value.isPending %}Processing{% else %}{% if value.isCCS %}Contact Customer Service{% else %}Unpaid{% endif %}{% endif %}{% endif %}</strong></span>
+									<span class="accordian-icon-relative-box"><span class="accordian-icon"></span></span>
+								</div>
+								<div class="invoice-details {% if value.isActive %} active {% endif %}">
+									<div class="invoice-details-head">  
+										<div class="billingCointainer">
+											<div class="billing-name-label">Billing Name</div>
+											<div class="billing-name-email">{{model.billingName}}</div>
+										</div><div class="dueDate">
+											<label class="label">DUE IN FULL BY</label>
+											<div class="date">{{value.DueDate|date("F j, Y")}}</div>
+										</div>
+									</div>
+									<div class="invoice-orders"> 
+										{% for order in value.orders %}
+											<div class="order">
+												<span class="oreder-item order-number">Order Number: {{order.ERPNumber}}</span>
+												<span class="oreder-item order-POnumber">PO Number: {{order.PONumber}}</span>
+												<span class="oreder-item order-Accountnumber">Account Number: {{order.ERPCustomerNumber}}</span>
+											</div>
+										{% endfor %}
+									</div>
+									<div class="btn-cointatiner">
+										<div data-id="printArea-{{value.invoiceNumber}}" class="print-invoice">Print Invoice</div>
+									</div>
+								</div>
+							</div>
+						{% endif %}
+					{% endfor %}
+				{% else %}
+					<div class="noItems-found-msg">
+						<span class="noitems-text">
+							Sorry, no results. Please check the Invoice Number and try again, or contact <a href="/contact-us" target="_blank" class="customet-serves-text">Customer Service</a>.
+						</span>
+					</div>
+				{% endif %}	
+			</div>
+			{% if model.lastIndex < model.resultCount %}
+				<div class="view-more-btn-cointainer">
+					<button class="view-morebutton">VIEW MORE INVOICES ({{model.resultCount}})</button>
+				</div>
+			{% endif %}
+		</div>
+	{% else %}
+		<div class="invoice-header payment">
+			<div class="label left-ele">
+				<span class="first-label">{{ labels.invoices }} > </span><span class="second-label">PAYMENT</span>
+			</div>
+		</div>	
+		<div class="payment-content">
+			<span class="back-to-invoice">< Back to My Invoices</span>
+			{% if model.isPaymentEnabled %} 
+				{% if model.SavedCards.length %}
+					<div class="savedCards">
+						<h3 class="heading-label">SAVED CARDS</h3>
+						<div class="custom-dropdown saved-cards">
+							<div class="selected-item">{{model.selectedCard.formatedCardnumber}} {{model.selectedCard.formatedData}}</div>
+							<div class="options">
+								{% for value in model.SavedCards %}
+									{% if model.selectedCard.profileid == value.profileid %}
+										<span value="{{value.profileid}}" class="optionCard" data-token="{{value.token}}">{{value.formatedCardnumber}} {{value.formatedData}}</span>
+									{% endif %}
+								{% endfor %}
+								{% for value in model.SavedCards %}
+									{% if model.selectedCard.profileid != value.profileid %}
+										<span value="{{value.profileid}}" class="optionCard" data-token="{{value.token}}">{{value.formatedCardnumber}} {{value.formatedData}}</span>
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div> 
+					</div>
+				{% else %}
+					<div class="payment-noSavedCards">There are no saved cards in your account, Please add new card and complete the apyment.</div>	
+				{% endif %}
+				<span class="add-new-card">+ ADD NEW CARD</span>
+				<div class="button-section">
+					<button class="complete-pay-button {% if model.selectedTotal > 0 %}active{% endif %}">PAY {% if model.selectedTotal > 0 %}{{model.selectedTotal|floatformat(2)|currency}}{% endif %}</button>
+				    <span class="error-payment error {% if model.paymentError %}active{% endif %}">There is some error, Please try again with different card.</span>
+				</div>
+			{% else %}
+				<div class="payment-notconfigured">Card payment is not configure to your account, please contact <a href="#" class="customet-serves-text">Customer Service</a>.</div>
+			{% endif %}
+		</div>
+	{% endif %}
+	{% if model.newCardPopup %}
+		<div class="new-card-popup">
+			<div class="popup-content">
+				<div class="popup-heading">
+					<h3 class="heading">
+						ADD NEW CARD
+					</h3> 
+					<span class="cross-icon"></span>
+				</div>
+				<div class="form-data">
+					<div class="form-group">
+						<label class="field-label">
+							<sup>*</sup>Card Number: 
+						</label>
+						<input data-attr-name="cardNumber" onkeyup="this.value = this.value.replace(/[^0-9]+/g,'').slice(0, 16);" type="number" name="card_number" class="input-field card-number" />
+						<span class="error card_number-err">Please enter card number.</span>
+					</div>
+					<div class="form-group">
+						<label class="field-label">
+							<sup>*</sup>Expires:
+						</label>
+						<select data-attr-name="expirationMonth" class="input-field expire-month" name="payment_expiration_month">
+							<option>Month</option>
+  		                	<option value="01">01 - {{ labels.january }}</option>
+	                 		<option value="02">02 - {{ labels.february }}</option>
+		              		<option value="03">03 - {{ labels.march }}</option>
+	                 		<option value="04">04 - {{ labels.april }}</option>
+	                		<option value="05">05 - {{ labels.may }}</option>
+		              		<option value="06">06 - {{ labels.june }}</option>
+		               		<option value="07">07 - {{ labels.july }}</option>
+	                		<option value="08">08 - {{ labels.august }}</option>
+	                		<option value="09">09 - {{ labels.september }}</option>
+		             		<option value="10">10 - {{ labels.october }}</option>
+	                		<option value="11">11 - {{ labels.november }}</option>
+	                		<option value="12">12 - {{ labels.december }}</option>
+						</select>
+						<select data-attr-name="expirationYear" class="input-field expire-year" name="payment_expiration_year">
+			                <option>Year</option>  
+			                {% with now|split("-")[0] as year %}
+			                    {% for a in [0,1,2,3,4,5,6,7,8,9,10,11,12] %}
+			                        <option {% if model.expireYear == year|add(a) %}selected="selected"{% endif %} value="{{ year|add(a) }}">{{ year|add(a) }}</option>
+			                    {% endfor %}
+			                {% endwith %} 
+			            </select>
+			            <span class="error payment_expiration_month-err">Please enter expire month.</span>
+			            <span class="error payment_expiration_year-err">Please enter expire year.</span>
+			            <span class="error payment_expiration_year_month-err">Please enter expire year and month.</span>
+			            <span class="error payment_expiration_year_month_validation-err">Please enter valid expire year and month.</span>
+					</div>
+					<div class="form-group">
+						<label class="field-label">
+							<sup>*</sup>CVV:
+						</label>
+						<input data-attr-name="cvv" onkeyup="this.value = this.value.replace(/[^0-9]+/g,'').slice(0, 3);" type="number" name="cvv_number" class="input-field cvv-number" />
+						<span class="cvv-info">
+            				<a id="toolTipStock" class= "shop-tip" href="javascript:void(0)" data-cart-details="">What is this?</a>
+            				<div class="cvv-info-details">
+            					<img src="/resources/images/cvv-info-2.png"/>
+            					<p class="card-type">Discover, Mastercard, Visa</p>
+            					<p class="card-no">3 Digit Card Verification Number</p>
+            					<img src="/resources/images/cvv-info-1.png"/>
+            					<p class="card-type">American Express</p>
+            					<p class="card-no">4 Digit Card Verification Number</p>
+            				</div>
+            			</span>
+						<span class="error cvv_number-err">Please enter CVV number.</span>
+					</div>
+					<div class="form-group">
+						<label class="field-label">
+							<sup>*</sup>Name On Card:
+						</label>
+						<input data-attr-name="credit-card-name" type="text" name="name_on_card" class="input-field name-on-card" />
+						<span class="error name_on_card-err">Please enter name on card.</span>
+					</div>
+					<div class="form-group">
+						<label class="field-label">
+							<sup>*</sup>First Name:
+						</label>
+						<input data-attr-name="firstName" type="text" name="first_name" class="input-field first-name" />
+						<span class="error first_name-err">Please enter first name.</span>
+					</div>
+					<div class="form-group">
+						<label class="field-label">
+							<sup>*</sup>Last Name:
+						</label>
+						<input data-attr-name="lastName" type="text" name="last_name" class="input-field last-name" />
+						<span class="error last_name-err">Please enter last name.</span>
+					</div>
+					<div class="form-group">
+						<label class="field-label">
+							<sup>*</sup>Address1:
+						</label>
+						<input data-attr-name="address1" type="text" name="address1" class="input-field address1" />
+						<span class="error address1-err">Please enter address1.</span>
+					</div>
+					<div class="form-group">
+						<label class="field-label">
+							Address2:
+						</label>
+						<input data-attr-name="address2" type="text" name="address2" class="input-field address2" />
+					</div>
+					<div class="form-group">
+						<label class="field-label">
+							<sup>*</sup>City:
+						</label>
+						<input data-attr-name="ccity" type="text" name="city" class="input-field city" />
+						<span class="error city-err">Please enter city name.</span>
+					</div>
+					<div class="form-group">
+						<label class="field-label">
+							<sup>*</sup>State:
+						</label>
+						<select data-attr-name="state" name="state" class="input-field state">                            
+                            <option value=""></option>
+                            {% for state in themeSettings.usStates %}
+                                <option value="{{ state.abbreviation }}">{{ state.name }}</option>  
+                            {% endfor %}
+                        </select>
+						<span class="error state-err">Please enter state name.</span>
+					</div>
+					<div class="form-group">
+						<label class="field-label">
+							<sup>*</sup>Zip/Postal Code:
+						</label>
+						<input data-attr-name="zip" type="text" onkeyup="this.value = this.value.replace(/[^0-9]+/g,'');" name="postal_code"  class="input-field postal-code" />
+						<span class="error postal_code-err">Please enter postal code.</span>
+					</div>
+					<span class="note-text"><strong>Please note:</strong> The Card details will be saved for future use.</span>
+					<div class="button-section">
+						<button class="save-card">ADD CARD</button>
+						<button class="cancel-card">Cancel</button> 
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	{% if model.SuccessPopup %}
+		<div class="success-popup">
+			<div class="popup-content">
+				<div class="popup-heading">
+					<h3 class="heading">
+						PAYMENT COMPLETE
+					</h3>
+					<span class="success-cross-icon"></span> 
+				</div>
+				<div class="popup-content-text-button">
+					<span class="note-text">Successfully completed the payment.</span>
+					<div class="button-section">
+						<button class="print-success-invoice">PRINT</button>
+						<button class="back-to-invoices">BACK TO MY INVOICES</button> 
+					</div> 
+				</div> 
+			</div>
+		</div>
+	{% endif %}
+</div> 
+
+
+
+

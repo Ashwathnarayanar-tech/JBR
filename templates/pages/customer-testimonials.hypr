@@ -1,0 +1,236 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static customer-testimonial {% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Customer Testimonials</h1>
+    <article>
+        <section>
+            <div class="comment-details">
+                <header>
+                    <h2>Comments about Jelly Belly <a href="/p/96777">49 Assorted Jelly Bean Flavors Apothecary Jar</a></h2>
+                    <div class="jb-star-rating">
+                        <div class="jb-stars">&nbsp;</div>
+                    </div>
+                    <h2>Amazing variety of flavors!</h2>
+                </header>
+                <p class="comment">
+                    <span></span>Bought this as gifts and EVERYONE loved them! Great looking and an amazing variety of flavors!<span></span><br>
+                </p>
+                <span class="author">-Lucy from New York, NY</span>
+            </div>
+            <a class="comment-image" href="/p/96777">
+                <img class="odd-product-img" src="/resources/images/footer-static/96777.jpg">
+            </a>
+            <div class="clearfix"></div>
+            <span class="left-arrow"></span>
+        </section>
+        <section>
+            <div class="comment-details">
+                <header>
+                    <h2>Comments about <a href="/p/98782">BeanBoozled Jelly Beans</a></h2>
+                    <div class="jb-star-rating">
+                        <div class="jb-stars">&nbsp;</div>
+                    </div>
+                    <h2>Fun, disgusting time - did I say fun?!</h2>
+                </header>
+                <p class="comment">
+                    <span></span>These were disgusting but so much fun to try one and then figure out what the disgusting taste was - great fun!
+                    My 12 and 7-year old LOVED them. Lots of spitting but lots of laughing, too.<span></span><br>
+                </p>
+                <span class="author">-Mary from Rockville, MD</span>
+            </div>
+            <a class="comment-image" href="/p/98782">
+                <img class="even-product-img" src="/resources/images/footer-static/98782.jpg">
+            </a>
+            <div class="clearfix"></div>
+            <span class="left-arrow"></span>
+        </section>
+        <section>
+            <div class="comment-details">
+                <header>
+                    <h2>Comments about the Jelly Belly <a href="/p/95000">50-Flavor Gift Box</a></h2>
+                    <div class="jb-star-rating">
+                        <div class="jb-stars">&nbsp;</div>
+                    </div>
+                    <h2>This product is a never fail gift!</h2>
+                </header>
+                <p class="comment">
+                    <span></span>I bought the gift box for Mother's Day and she loved them! My mom loves the fact that they are fat free and
+                    loves mixing the flavors and creating different tastes with the recipe book!<span></span><br>
+                </p>
+                <span class="author">-Kels from Boston, MA</span>
+            </div>
+            <a class="comment-image" href="/p/95000">
+                <img class="odd-product-img" src="/resources/images/footer-static/95000.jpg">
+            </a>
+            <div class="clearfix"></div>
+            <span class="left-arrow"></span>
+        </section>
+        <section>
+            <div class="comment-details">
+                <header>
+                    <h2>Comments about the <a href="/p/95698">Belly Flops® Jelly Beans</a></h2>
+                    <div class="jb-star-rating">
+                        <div class="jb-stars">&nbsp;</div>
+                    </div>
+                    <h2>Love the Belly Flops!</h2>
+                </header>
+                <p class="comment">
+                    <span></span>My employees and vendors just love them! I keep them out on my desk and reception area.
+                    They are a quick snack with great favors.<span></span><br>
+                </p>
+                <span class="author">-Beely from West Sacramento, CA</span>
+            </div>
+            <a class="comment-image" href="/p/95698">
+                <img class="even-product-img" src="/resources/images/footer-static/95698.jpg">
+            </a>
+            <div class="clearfix"></div>
+            <span class="left-arrow"></span>
+        </section>
+        <section>
+            <div class="comment-details">
+                <header>
+                    <h2>Comments about the <a href="/p/96267">Harry Potter Chocolate Frog</a></h2>
+                    <div class="jb-star-rating">
+                        <div class="jb-stars">&nbsp;</div>
+                    </div>
+                    <h2>Like Being on Hogwart's Express</h2>
+                </header>
+                <p class="comment">
+                    <span></span>Used these along with the Every Flavour Beans for party favors for my 9 year old son. They loved the cards depicting the characters.<span></span><br>
+                </p>
+                <span class="author">-Muggle Mom from Middletown, NJ</span>
+            </div>
+            <a class="comment-image" href="/p/96267">
+                <img class="odd-product-img" src="/resources/images/footer-static/96267.jpg">
+            </a>
+            <div class="clearfix"></div>
+            <span class="left-arrow"></span>
+        </section>
+        <section>
+            <div class="comment-details">
+                <header>
+                    <h2>Comments about the <a href="/p/95121">Mr. Jelly Belly Bean Machine</a></h2>
+                    <div class="jb-star-rating">
+                        <div class="jb-stars">&nbsp;</div>
+                    </div>
+                    <h2>A Fun Conversational item!</h2>
+                </header>
+                <p class="comment">
+                    <span></span>Great Gift for those who are hard to buy for. Unusual, fun and entertaining.<span></span><br>
+                </p>
+                <span class="author">-Happy Customer from Folsom, CA</span>
+            </div>
+            <a class="comment-image" href="/p/95121">
+                <img class="even-product-img" src="/resources/images/footer-static/95121.jpg">
+            </a>
+            <div class="clearfix"></div>
+            <span class="left-arrow"></span>
+        </section>
+        <section>
+            <div class="comment-details">
+                <header>
+                    <h2>Comments about the Jelly Belly <a href="/p/97825">Very Cherry Jelly Beans</a></h2>
+                    <div class="jb-star-rating">
+                        <div class="jb-stars">&nbsp;</div>
+                    </div>
+                    <h2>Always a favorite…</h2>
+                </header>
+                <p class="comment">
+                    <span></span>Very Cherry is always a favorite around our house. They are the first ones we buy when planning party's as a snack and treat.
+                    They also make great gifts or gift toppers.<span></span><br>
+                </p>
+                <span class="author">-Cherry lover from Covina, CA</span>
+            </div>
+            <a class="comment-image" href="/p/97825">
+                <img class="odd-product-img" src="/resources/images/footer-static/97825.jpg">
+            </a>
+            <div class="clearfix"></div>
+            <span class="left-arrow"></span>
+        </section>
+        <section>
+            <div class="comment-details">
+                <header>
+                    <h2>Comments about the <a href="/p/96767">Jelly Bean Chocolate Dips® 5-Flavor Gift Box</a></h2>
+                    <div class="jb-star-rating">
+                        <div class="jb-stars">&nbsp;</div>
+                    </div>
+                    <h2>Yummiest Jelly Belly jelly beans!</h2>
+                </header>
+                <p class="comment">
+                    <span></span>The flavor was amazing and the chocolate dipping was absolutely the cherry on top!<span></span><br>
+                </p>
+                <span class="author">-Chocoholic from&nbsp;Bloomington, CA</span>
+            </div>
+            <a class="comment-image" href="/p/96767">
+                <img class="even-product-img" src="/resources/images/footer-static/96767.jpg">
+            </a>
+            <div class="clearfix"></div>
+            <span class="left-arrow"></span>
+        </section>
+        <section>
+            <div class="comment-details">
+                <header>
+                    <h2>Comments about the Jelly Belly <a href="/p/9000_BUTERD_POP">Buttered Popcorn Jelly Beans</a></h2>
+                    <div class="jb-star-rating">
+                        <div class="jb-stars">&nbsp;</div>
+                    </div>
+                    <h2>Buttered Popcorn Jelly Belly Beans</h2>
+                </header>
+                <p class="comment">
+                    <span></span>These jelly beans taste like the fresh, buttered movie theater popcorn. These taste just like it, but better!
+                    They taste so natural and are mouthwatering.<span></span><br>
+                </p>
+                <span class="author">-Nicole the Jelly Belly Lover from Atlanta, GA</span>
+            </div>
+            <a class="comment-image" href="/p/9000_BUTERD_POP">
+                <img class="odd-product-img" src="/resources/images/footer-static/9000-BUTERD_POP.jpg">
+            </a>
+            <div class="clearfix"></div>
+            <span class="left-arrow"></span>
+        </section>
+        <section>
+            <div class="comment-details">
+                <header>
+                    <h2>Comments about the <a href="/p/9000_A_W_ROOT_B">A&amp;W® Root Beer Jelly Beans </a></h2>
+                    <div class="jb-star-rating">
+                        <div class="jb-stars">&nbsp;</div>
+                    </div>
+                    <h2>Tastes like root beer!</h2>
+                </header>
+                <p class="comment">
+                    <span></span>I love this flavor I used it to fill baby shower favors along with green apple flavor and cotton candy flavor.<span></span><br>
+                </p>
+                <span class="author">-By Sarah from Atwater CA</span>
+            </div>
+            <a class="comment-image" href="/p/9000_A_W_ROOT_B">
+                <img class="even-product-img" src="/resources/images/footer-static/9000-A&amp;W_ROOT_B.jpg">
+            </a>
+            <div class="clearfix"></div>
+            <span class="left-arrow"></span>
+        </section>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+
+
+

@@ -1,0 +1,274 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %}
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Cooking Ideas</h1>
+    <article id="candyCarmelCorn" class="carnival-details txt-left">
+        <h2>Candy Corn Caramel Corn</h2>
+        <p close-open-coocking-ideas class="mz-desktop">open/close</p>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+        <figure class="vertImage cyclingImg">
+          <img src="/resources/images/cooking_entertaining/Candy Corn Caramel Corn/Candy-Corn_glam.jpg">
+          <br><br>
+          <img src="/resources/images/cooking_entertaining/Candy Corn Caramel Corn/Candy-Corn_cones.jpg">
+        </figure>
+                
+        <h4>Ingredients:</h4>
+        <ul class="contentList">
+            <li> 3 cups plain popped popcorn</li> 
+            <li> 1 cup caramel square candies, unwrapped</li>
+            <li> 3 Tbsp cream </li>
+            <li> 1 cup (8 oz.) Jelly Belly Candy Corn </li>
+        </ul>
+           
+        <h4>Instructions:</h4>
+        <ol class="contentList">
+            <li>Place popped popcorn in large bowl and set aside</li>
+            <li>In separate microwave-safe bowl, combine caramel squares and cream</li>
+            <li>Heat on medium-high power in microwave for about one minute; stop after 20 seconds to avoid over boiling and to stir</li>
+            <li>Repeat until caramel is melted. Gradually pour hot mixture over popcorn, stirring with large spoon</li>
+            <li>Gently toss the popcorn for even coating</li>
+            <li>Add Jelly Belly Candy Corn and continue stirring until well blended</li>
+            <li>Serve in decorative cones (instructions below) or form into balls and wrap in plastic wrap</li>
+        </ol>
+        <h5>Serves 8</h5>
+   
+        <h4>Decorative cones:</h4>   
+        <p class="padleft50">
+            Cut 7-inch square card stock and roll into desired cone shape. Leave small hole at the bottom of cone and secure shape with double-sided tape.
+        </p>
+        <p class="padleft50">
+            Place Styrofoam or floral foam in tray or box. Height of foam should be about ½-inch shorter than sides of tray or box. Insert 5-inch skewers into foam approximately 3-inches apart. Fill tray with Candy Corn to cover foam. Place cones on skewers, holding cone upright and fill with Candy Corn Caramel Corn. 
+        </p>
+        </div>
+        <div class="clearfix"></div>
+    </article>
+    
+    <article id="gridiron" class="carnival-details txt-left">
+        <h2>Gridiron Cake</h2>
+        <p close-open-coocking-ideas class="mz-desktop">open/close</p>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+        <figure class="vertImage cyclingImg">
+          <img src="/resources/images/cooking_entertaining/Gridiron Cake/gridiron.jpg">
+        </figure>
+                
+        <h4>Ingredients:</h4>
+        <ul class="contentList">
+        <li> 2 cups Sugar</li>
+        <li> 1 cups butter or margarine, softened</li>
+        <li> 4 eggs, separated</li>
+        <li> 1 cups cooked, mashed potatoes, at room temperature</li>
+        <li> 1 tsp. ground cloves</li>
+        <li> 1 tsp. ground nutmeg</li>
+        <li> 1 ½ cups all-purpose flour</li>
+        <li> ½ cups milk</li>
+        <li> 2 tsp. baking powder</li>
+        <li> 1 cups walnuts, chopped</li>
+        <li> 1 (16 oz) can prepared white frosting</li>
+        <li> 1 ½ cups (12 oz) Jelly Belly jelly beans, in team colors for decorating </li>
+      </ul>
+           
+        <h4>Instructions:</h4>
+        <ol class="contentList">
+        <li>
+        Beat sugar and butter or margarine in large bowl with mixer until smooth.
+       <li>
+        Beat in egg yolks, potatoes, cinnamon, cloves and nutmeg until smooth.
+       <li>
+        Blend in flour, milk and baking powder.
+       <li>
+        Beat egg whites in medium bowl with electric mixer until slightly stiff; carefully fold into batter.
+       <li>
+        Fold in walnuts.
+       <li>
+        Spread evenly into two lightly greased 9-inch round cake pans.
+       <li>
+        Bake at 350 degrees F for 35 to 40 minutes or until toothpick inserted in center comes out clean.
+       <li>
+        Cool in pans 10 minutes; remove from pans. Cool completely on wire racks.
+       <li>
+        Fill and frost cake with white frosting.
+       <li>
+        With a toothpick draw helmet pattern lightly in frosting.
+       <li>
+        Using Jelly Belly jelly beans, decorate cake in football helmet design, using the colors of your favorite team. 
+      </ol>
+        </div>
+        <div class="clearfix"></div>
+    </article>
+    <article id="festival" class="carnival-details txt-left">
+        <h2>Festival Mix</h2>
+        <p close-open-coocking-ideas class="mz-desktop">open/close</p>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+        <figure class="vertImage cyclingImg">
+          <img src="/resources/images/cooking_entertaining/Festival Mix/festival.jpg">
+        </figure>
+                
+        <h4>Ingredients:</h4>
+        <ul class="contentList">
+            <li> 1 tbs. sugar</li>
+        <li> 1 tsp. ground cinnamon</li>
+        <li> 2 cups prepared air-popped popcorn</li>
+        <li> 1 cups bite-size wheat squares cereal</li>
+        <li> ½ cups dried cranberries</li>
+        <li> 2 ½ cups Jelly Belly jelly beans in Tangerine, A&W® Root Bear and Lemon flavors</li>
+        </ul>
+           
+        <h4>Instructions:</h4>
+        <ol class="contentList">
+            <li>In a small bowl, combine sugar and cinnamon.</li>
+        <li>In a large bowl, combine popcorn, cereal, and cranberries.</li>
+        <li>Spray popcorn mixture lightly for 4 to 5 seconds with cooking spray; quickly toss with sugar mixture.</li>
+        <li>Stir in Jelly Belly jelly beans and pretzels. Store in covered container. Stir well before serving.</li>
+        </ol>
+   
+        <h4>Holiday Variations:</h4>   
+        <ul class="contentList">
+      <li><strong>Halloween:</strong> Licorice, Orange Juice, Island Punch, Green Apple</li>
+      <li><strong>Thanksgiving:</strong> Raspberry, Caramel Apple, Red Apple, Top Banana</li>
+      <li><strong>Christmas:</strong> Cinnamon, Coconut, Green Apple</li>
+      <li><strong>New Year’s Eve:</strong> Chocolate Pudding, Coconut </li>
+    </ul>
+        </div>
+        <div class="clearfix"></div>
+    </article>
+    <article id="drum" class="carnival-details txt-left">
+        <h2>Rat-a-Tat-Tat Drum Cake</h2>
+        <p close-open-coocking-ideas class="mz-desktop">open/close</p>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            
+        <figure class="vertImage cyclingImg">
+          <img src="/resources/images/cooking_entertaining/Rat-a-Tat-Tat Drum Cake/drum.jpg">
+        </figure>    
+        <h4>Instructions:</h4> 
+        <p class="padleft50">
+            Begin a few days ahead of your party by ordering a frosted, but undecorated, 8-inch cake from your local grocery store or bakery. Select one with high sides and a flat top. Or, make your own triple decker cake finishing with a flat top. Frost generously with a white buttercream frosting. Purchase ¾ of a pound of Jelly Belly jelly beans to match your party décor. Beginning at the base of the cake, press the jelly beans around the bottom, alternating colors of jelly beans in a continuous pattern. If the jelly beans are not sticking, use dabs of frosting to stick them. 
+        </p>
+        <p class="padleft50">
+            Place Jelly Belly jelly beans around the top edge of the cake. Using a toothpick, draw the crisscross lines on the side. Place six jelly beans on each line. Complete with "drumsticks” made from chopsticks topped with around, soft fruit candies. 
+        </p>
+        </div>
+        <div class="clearfix"></div>
+    </article>
+    <article id="gourmetTasting" class="carnival-details txt-left">
+        <h2>Gourmet Tasting Party</h2>
+        <p close-open-coocking-ideas class="mz-desktop">open/close</p>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+        <figure class="vertImage cyclingImg">
+          <img src="/resources/images/cooking_entertaining/Gourmet Tasting Party/tasting.jpg">
+        </figure>
+        <p class="padleft50">
+            Anytime people gather is a great time to have a Jelly Belly Tasting Party! Each Jelly Belly bean flavor tastes so distinctly different from the others that a journey of discovery is at hand for bean tasters of all ages.
+        </p>  
+        <p class="padleft50">
+            Begin with a 50 Flavor Jelly Belly Gift Box with all the flavors arranged alphabetically in individual compartments. Select one bean at a time from the guide below. The guide arranges flavors from sweet to spicy. 
+        </p>
+        <p class="padleft50">
+            Ask each guest to taste a single bean. Notice the color of each bean. Does it match with what you expect to taste? Ask guests to describe the first flavor coming through and how each bean finishes. Is it smooth, tart, rich, complex, spicy? Which flavors are full-bodied, delicate, well-balanced, or explode in the mouth? 
+        </p>
+        <p class="padleft50">
+            The 50 Flavor Jelly Belly Gift Box has 12 servings (beans) of each flavor. 
+        </p>
+        <h4>Stage I Tasting</h4>
+        <p class="padleft50">
+            Lemon Lime | Cantaloupe | Toasted Marshmallow | Top Banana | Orange Sherbet | 
+      Very Cherry | Juicy Pear | Strawberry Cheesecake | Sunkist&reg; Lemon
+        </p>
+        <h4>Stage II Tasting</h4> 
+        <p class="padleft50">
+      Green Apple | Chocolate Pudding | Strawberry Daiquiri | Strawberry Jam | Pina Colada | Peach | Sour Cherry
+       | Sunkist&reg; Orange | Bubble Gum | Margarita
+    </p>
+    <h4>Stage III Tasting</h4> 
+    <p class="padleft50">
+      Watermelon | Sunkist&reg; Pink Grapefruit | Raspberry | Cotton Candy | Crushed Pineapple | Island Punch
+       | A&W&reg; Cream Soda | Blueberry | Cappuccino
+    </p>
+    <h4>Stage IV Tasting</h4> 
+    <p class="padleft50">
+      Cinnamon | Coconut | A&W&reg; Root Beer | Sunkist&reg; Tangerine | Tutti-Fruitti | Wild Blackberry | 
+      Buttered Popcorn | Licorice | Chili Mango | Sizzling Cinnamon
+    </p>
+        </div>
+        <div class="clearfix"></div>
+    </article>
+    <article id="newYears" class="carnival-details txt-left">
+        <h2>New Year Tasting Party</h2>
+        <p close-open-coocking-ideas class="mz-desktop">open/close</p>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+        <figure class="vertImage cyclingImg">
+          <img src="/resources/images/cooking_entertaining/New Year Tasting Party/newYears.jpg">
+        </figure>
+                
+        <h4>Ingredients:</h4>
+        <ul class="contentList">
+           <li> 100 g each, 10 to 12 individual flavors of Jelly Belly jelly beans</li>
+            <li> 12 cocktail picks</li>
+            <li> 12 martini or margarita glasses</li>
+        </ul>
+           
+        <h4>Instructions:</h4>
+        <ol class="contentList">
+            <li>Select serving of parfait glasses that hold 3/4 to 1 cup capacity.</li>
+            <li>In two separate bowls, prepare pudding mixes according to package directions.</li>
+            <li>Fill glasses with alternating layers of vanilla and butterscotch pudding. Chill 5-10 minutes.</li>
+            <li>Garnish parfaits with Jelly Belly beans on top and a fan wafer if desired.</li>
+        </ol>
+   
+        <h4>Instructions:</h4>   
+        <p class="padleft50">
+            Entertain a crowd with a simple but colorful presentation of Jelly Belly jelly beans to taste the night away. Even children are invited to this New Year’s Eve. Place single flavors of Jelly Belly jelly beans in glasses. Cut small rectangles of paper, putting two slits horizontally in the middle. Write the name of each flavor on the paper and thread onto cocktail pick. Place in glass with appropriate flavor. 
+        </p>
+        </div>
+        <div class="clearfix"></div>
+    </article>
+    <article id="tuxedo" class="carnival-details txt-left">
+        <h2>Tuxedo Jelly Belly Bean Fudge</h2>
+        <p close-open-coocking-ideas class="mz-desktop">open/close</p>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+        <figure class="vertImage cyclingImg">
+          <img src="/resources/images/cooking_entertaining/Tuxedo Jelly Belly Bean Fudge/tuxedo_fudge.jpg">
+        </figure>
+                
+        <h4>Ingredients:</h4>
+        <ul class="contentList">
+            <li> 100 g each, 10 to 12 individual flavors of Jelly Belly jelly beans</li>
+            <li> 1 C. sugar</li>
+            <li> 1 tsp. salt</li>
+            <li> 3 tablespoons unsalted butter</li>
+            <li> 1/2 C. heavy cream</li>
+            <li> 1 3/4 C. mini marshmallows</li>
+            <li> 1 tsp. pure vanilla extract</li>
+            <li> 1 1/2 C. semisweet chocolate chips</li>
+            <li> 1 1/2 C. white chocolate chips</li>
+            <li> 9 oz. Jelly Belly® jelly beans</li>
+        </ul>
+           
+        <h4>Instructions:</h4>
+        <ol class="contentList">
+            <li>Line 9-by-13-inch baking pan with waxed or parchment paper so ends overhang sides of pan; coat with cooking spray.</li>
+            <li>In saucepan over medium heat, cook sugar, salt, butter, cream and marshmallows, stirring until butter and marshmallows are almost melted.</li>
+            <li>Bring mixture to a boil; cook, stirring occasionally, 5 minutes. Remove from heat. Add chocolate chips; stir until chips are melted. </li>
+            <li>Pour mixture into lined pan. Cool until firm, 15 minutes.</li>
+            <li>Repeat basic recipe adding white chocolate chips.</li>
+            <li>Pour mixture over chocolate layer. Refrigerate 10 minutes.</li>
+            <li>Score fudge into one-inch squares, press in two Jelly Belly® jelly beans per square.</li>
+            <li>Let fudge cool in pan at room temperature, 3 hours. Remove by lifting paper from pan; cut fudge along scored lines. Plate and serve.</li>
+        </ol>
+        </div>
+        <div class="clearfix"></div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+

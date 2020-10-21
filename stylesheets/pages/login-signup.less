@@ -1,0 +1,609 @@
+ .mz-loginpage, .mz-signuppage, .mz-password-recovery-page, .mz-reset-password-page{
+    .mz-l-pagecontent {
+        padding: 10px 20px 0px 20px;
+    }
+    .mz-breadcrumbs {
+        display: none;
+    }
+    .mz-pagetitle {
+        color: #1381B5;
+        font-size: 26px;
+        font-weight: bold;
+        margin: 10px 0 10px;
+        font-family: @Trebuchet;
+    }
+    .mz-loginform {
+        .mz-l-formfieldgroup {
+            float: left;
+            width: 45%;
+            margin: 40px 15px 40px 30px !important;
+            border-right: 1px solid #ccc;
+            padding-right: 35px;
+            .mz-l-formfieldgroup-row {
+            .mz-l-formfieldgroup-cell {
+                input[type="text"], input[type="password"],  input[type="tel"],  input[type="email"],  select {
+                    width: 100%;
+                }
+                .mz-button {
+                    width: 100%;
+                }
+            }
+            }
+        }
+        .login-message {
+            float: left;
+            width: 36%;
+            margin: 57px 0px 57px 15px;
+            position: relative;
+            .arrow-left {
+            	width: 0; 
+            	height: 0; 
+            	border-top: 10px solid transparent;
+            	border-bottom: 10px solid transparent; 
+            	border-right: 10px solid #f1f1f1; 
+            	position: absolute;
+            	top: 43%;
+            	left: -10px;
+            }
+            
+            p {
+                font-size: 11px;
+                padding: 15px;
+                background: #f1f1f1;
+                color: #6b6b6b;
+                line-height: 20px;
+                a {
+                    text-decoration: none;
+                    color: #0095cc;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .signup-form {
+        .password-row {
+            position: relative;
+            .mob-pwd-row {
+                display: none;
+            }
+            .pwd-message {
+                width: 42%;
+                margin: 0px 0px 0px 15px;
+                position: absolute;
+                left: 286px;
+                top: 0;
+                display: none;
+                .arrow-left {
+                	width: 0; 
+                	height: 0; 
+                	border-top: 10px solid transparent;
+                	border-bottom: 10px solid transparent; 
+                	border-right: 10px solid #f1f1f1; 
+                	position: absolute;
+                	top: 34%;
+                	left: -10px;
+                }
+                
+                p {
+                    font-size: 11px;
+                    padding: 13px;
+                    background: #f1f1f1;
+                    color: #6b6b6b;
+                    line-height: 20px;
+                    
+                }
+            }
+        }
+    }
+    .mz-loginform, .signup-form , .forgot-pwd-form {
+        max-width: 75%;
+        margin: 30px auto;
+        .login-header {
+            font-size: 14px;
+            border-top: 1px solid #CCC;
+            border-bottom: 1px solid #ccc;
+            padding: 15px 30px;
+        }
+        .mz-l-formfieldgroup {
+            display: block;
+            margin: 40px 30px 40px 30px;
+            .mz-l-formfieldgroup-row {
+                display: block;
+                padding: 5px 0 0 0;
+            }
+            .mz-l-formfieldgroup-cell {
+                display: block;
+                padding: 0 0px 5px 0;
+                &.zero-cellspace {
+                    padding-bottom: 0;
+                    input {
+                        margin-bottom: 0;
+                    }
+                }
+                .mz-button {
+                    background: #36ABE2;
+                    border: 0;
+                    color: #FFF;
+                    text-transform: uppercase;
+                    border-radius: 0;
+                    -moz-border-radius: 0;
+                    -webkit-border-radius: 0;
+                    padding: 10px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    font-family: @Trebuchet;
+                    width: 280px;
+                    margin: 40px 0 0 0;
+                    &:hover {
+                        background: #077bb2;
+                    }
+                }
+                input[type="text"], input[type="password"],  input[type="tel"],  input[type="email"],  select {
+                    width: 280px;
+                    box-sizing: border-box;
+                    height: 35px;
+                    border: 1px solid #c2c2c2;
+                    color: #444 !important;
+                }
+                .mz-forgot {
+                    display: block;
+                    color: #0095cc;
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                label {
+                    text-align: left;
+                    font-size: 12px;
+                    color: #212120;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+input::-webkit-input-placeholder {
+   color: #bcbcbc;
+   font-size: 12px;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+   color: #bcbcbc;  
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+   color: #bcbcbc;  
+}
+
+input:-ms-input-placeholder {  
+   color: #bcbcbc;  
+}
+.mz-signuppage {
+    .signup-form {
+        .mz-l-formfieldgroup {
+            .mz-l-formfieldgroup-row {
+                &.half-width-block, &.half-width-second-block {
+                    display: inline-block;
+                    input {
+                        width: 137px !important;
+                    }
+                }
+                &.half-width-second-block {
+                    margin-left: 5px;
+                }
+            }
+            .mz-l-formfieldgroup-cell {
+                .required {
+                    display: inline-block;
+                    color: #767676;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+.mz-password-recovery-page {
+    .forgot-pwd-form {
+        .mz-l-formfieldgroup {
+            .mz-l-formfieldgroup-cell {
+                .required {
+                    display: inline-block;
+                    color: #231f20;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+.mz-reset-password-page {
+    .mz-loginform {
+        .password-row {
+            position: relative;
+            .mob-pwd-row {
+                display: none;
+            }
+            .pwd-message {
+                width: 73%;
+                margin: 0px 0px 0px 15px;
+                position: absolute;
+                right: -80%;
+                top: 0;
+                .arrow-left {
+                	width: 0; 
+                	height: 0; 
+                	border-top: 10px solid transparent;
+                	border-bottom: 10px solid transparent; 
+                	border-right: 10px solid #f1f1f1; 
+                	position: absolute;
+                	top: 34%;
+                	left: -10px;
+                }
+                
+                p {
+                    font-size: 11px;
+                    padding: 13px;
+                    background: #f1f1f1;
+                    color: #6b6b6b;
+                    line-height: 20px;
+                    
+                }
+            }
+        }
+        .mz-l-formfieldgroup {
+            border-right: none;
+            .mz-l-formfieldgroup-cell {
+                .required {
+                    display: inline-block;
+                    color: #767676;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+.popover {
+    max-width: 300px;
+    padding: 1px;
+    text-align: left;
+    background-color: #FFF;
+    background-clip: padding-box;
+    border: 1px solid #36abe2;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    top: 16px !important;
+    .popover-content {
+        padding: 10px;
+         input[placeholder],  input[placeholder],  input[placeholder] {
+            color: #bcbcbc;
+            font-size: 12px;
+        }
+        .mz-popover-login {
+            width: 240px;
+            min-height: 110px;
+             input[type="text"],  input[type="email"],  input[type="password"] {
+                width: 238px;
+                border: 1px solid #C2C2C2;
+                height: 32px;
+                box-sizing: border-box;
+                margin-bottom: 5px;
+                color: #444 !important;
+                background: #fff !important;
+            }
+            .mz-forgot-password {
+                input {
+                    margin-top: 10px;
+                }
+            }
+            .msg-reset-pwd {
+                border-top: 1px solid #ccc;
+                font-size: 11px;
+                line-height: 20px;
+                margin: 20px 0 0;
+                padding: 10px 0 0;
+                a {
+                    text-decoration: none;
+                    color: #0095cc;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .mz-popover-action {
+                text-align: left;
+                margin-top: 10px;
+                .mz-button {
+                    background: #36ABE2;
+                    border: 0;
+                    color: #FFF;
+                    text-transform: uppercase;
+                    border-radius: 0;
+                    -moz-border-radius: 0;
+                    -webkit-border-radius: 0;
+                    padding: 10px 20px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    margin: 0px 0 0 0;
+                    &:hover {
+                        background: #077bb2;
+                    }
+                }
+                a[data-mz-action="loginform"] {
+                    background: #949494;
+                    border: 0;
+                    color: #FFF;
+                    text-transform: uppercase;
+                    border-radius: 0;
+                    -moz-border-radius: 0;
+                    -webkit-border-radius: 0;
+                    padding: 10px 37px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    margin: 0px 0 0 0;
+                    text-decoration: none;
+                    &:hover {
+                        background: #656565;
+                    }
+                }
+            }
+            .mz-validationmessage {
+                display: inline-block;
+                margin: 10px 0;
+                color: #e9000f;
+                font-size: 11px;
+            }
+        }
+        .mz-popover-signup {
+            width: 225px;
+            min-height: 191px;
+            
+                position: relative;
+                .pwd-message {
+                    width: 100%;
+                    margin: 0px 0px 0px 15px;
+                    position: absolute;
+                    left: -251px;
+                    display: none;
+                    top: 36px;
+                    .arrow-right {
+                    	width: 0; 
+                    	height: 0; 
+                    	border-top: 10px solid transparent;
+                    	border-bottom: 10px solid transparent; 
+                    	border-left: 10px solid #f1f1f1; 
+                    	position: absolute;
+                    	top: 34%;
+                    	right: -10px;
+                    }
+                    
+                    p {
+                        font-size: 11px;
+                        padding: 13px;
+                        background: #f1f1f1;
+                        color: #6b6b6b;
+                        line-height: 20px;
+                        
+                    }
+                }
+            
+            .mz-button {
+                background: #36ABE2;
+                border: 0;
+                color: #FFF;
+                text-transform: uppercase;
+                border-radius: 0;
+                -moz-border-radius: 0;
+                -webkit-border-radius: 0;
+                padding: 10px 20px;
+                font-size: 12px;
+                font-weight: bold;
+                margin: 0px 0 0 0;
+                &:hover {
+                    background: #077bb2;
+                }
+            }
+            .mz-popover-signup-register {
+                margin-top: 10px !important;
+                float: none !important;
+            }
+            .mz-popover-signup-firstname, .mz-popover-signup-lastname {
+                width: 109px !important;
+            }
+             input[type="text"],  input[type="email"],  input[type="password"] {
+                width: 225px;
+                border: 1px solid #C2C2C2;
+                height: 32px;
+                box-sizing: border-box;
+                margin-bottom: 5px;
+                color: #444 !important;
+                background: #fff !important;
+            }
+        }
+    }
+    
+    
+} 
+.popover.bottom .arrow {
+    border-bottom-color: #36abe2;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+    .mz-signuppage {
+        .signup-form {
+            .mz-l-formfieldgroup {
+                .mz-l-formfieldgroup-row {
+                    &.half-width-block, &.half-width-second-block {
+                        display: inline-block;
+                        input {
+                            width: 280px !important;
+                        }
+                    }
+                    &.half-width-second-block {
+                        margin-left: 5px;
+                    }
+                }
+                .password-row {
+                    position: relative;
+                    .pwd-message {
+                        width: 42%;
+                        margin: 0px 0px 0px 15px;
+                        position: absolute;
+                        left: 286px;
+                        top: 0;
+                        .arrow-left {
+                        	width: 0; 
+                        	height: 0; 
+                        	border-top: 10px solid transparent;
+                        	border-bottom: 10px solid transparent; 
+                        	border-right: 10px solid #f1f1f1; 
+                        	position: absolute;
+                        	top: 34%;
+                        	left: -10px;
+                        }
+                        
+                        p {
+                            font-size: 11px;
+                            padding: 13px;
+                            background: #f1f1f1;
+                            color: #6b6b6b;
+                            line-height: 20px;
+                            a {
+                                text-decoration: none;
+                                color: #0095cc;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+    .mz-loginpage,.mz-signuppage, .mz-password-recovery-page, .mz-reset-password-page {
+        .mz-l-pagecontent {
+            padding: 94px 10px 0px 10px;
+        }
+        .mz-reset-password-page {
+            .mz-loginform {
+              
+            }
+        }
+        .mz-loginform {
+              .password-row {
+                .mob-pwd-row {
+                    display: block !important;
+                    font-size: 10px;
+                }
+                .pwd-message {
+                    display: none !important;
+                }
+                
+                }
+            .mz-l-formfieldgroup {
+                float: none;
+                width: 100%;
+                margin: 0 !important;
+                border-right: none;
+                padding-right: 0;
+                .mz-l-formfieldgroup-row {
+                .mz-l-formfieldgroup-cell {
+                    input[type="text"], input[type="password"],  input[type="tel"],  input[type="email"],  select {
+                        width: 100%;
+                    }
+                    .mz-button {
+                        width: 100%;
+                    }
+                }
+                }
+            }
+            .login-message {
+                float: none;
+                width: 100%;
+                margin: 30px 0 0 0;
+                position: relative;
+                border-top: 1px solid #ccc;
+                .arrow-left {
+                    width: 0; 
+                    height: 0; 
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-bottom: 10px solid #f1f1f1;
+                    position: absolute;
+                    top: 11px;
+                    left: 50%;
+                }
+                
+                p {
+                    font-size: 11px;
+                    margin-top: 30px;
+                    padding: 15px;
+                    background: #f1f1f1;
+                    color: #6b6b6b;
+                    line-height: 20px;
+                    a {
+                        text-decoration: none;
+                        color: #0095cc;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .signup-form {
+            .pwd-message {
+                display: none !important;
+            }
+            .mob-pwd-row {
+                display: block !important;
+                font-size: 10px;
+            }
+        }
+        .mz-loginform, .signup-form, .forgot-pwd-form {
+            max-width: 100%;
+            margin: 15px auto;
+            .login-header {
+                padding: 15px 0px;
+                margin-bottom: 30px;
+            }
+            .mz-l-formfieldgroup {
+                margin: 0;
+                .mz-l-formfieldgroup-row {
+                    &.half-width-block, &.half-width-second-block {
+                        display: block;
+                        input {
+                            width: 100% !important;
+                        }
+                    }
+                    &.half-width-second-block {
+                        margin-left: 0px;
+                    }
+                }
+                .mz-l-formfieldgroup-cell {
+                    .mz-button {
+                        width: 100%;
+                    }
+                    input[type="text"], input[type="password"],  input[type="tel"],  input[type="email"],  select {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

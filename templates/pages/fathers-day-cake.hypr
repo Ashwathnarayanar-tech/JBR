@@ -1,0 +1,59 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Tie-Riffic Father’s Day Cake</h1>
+    <article class="carnival-details txt-left">
+        <h2>Tie-Riffic Father’s Day Cake</h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Tie-Riffic/dads-tie_cake.jpg"> 
+            </figure>
+            <!-- AddThis Button -->
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+            <img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border: 0"></a>
+            <!-- /AddThis Button -->
+            <p>
+                It’s a delicious twist on that classic Father’s Day gift, easy to make and handsome-looking as well. Why go shopping when you can decorate for Dad? 
+            </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>1 frozen pound cake (16 ounce), thawed</li>
+                <li>1 can (16 oz) vanilla frosting</li>
+                <li>Blue food coloring</li>
+                <li>1 cup (about 8 oz) <a target="_blank" href="/search?query=blueberry&amp;asug=">Blueberry</a> Jelly Belly jelly beans</li>
+                <li>1/2 cup each red and yellow and 1 black Jelly Belly <a target="_blank" href="/search?query=licorice pastel&amp;asug=">Licorice Pastel</a></li>
+                <li>1/2 cup dark chocolate frosting</li>
+                <li>3 <a target="_blank" href="/search?query=coconut&amp;asug=">Coconut</a> Jelly Belly jelly beans</li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>Place the cake flat side down and trim the top of the cake to make level.
+                    Place the cake on a work surface with one short end facing you. Remove bottom corners (about 2 inch triangle) to make pointed end of tie.
+                    Make long angled cuts on either side stopping 2 1/2 inches short of top end of cake and leaving 1 1/2 inches between cuts at the narrowest point of the tie. 
+                    Make angle cuts out at top (to about 2 1/2 inches wide) to complete knot shape (see photo).
+                </li>
+                <li>Tint the frosting light blue with the food coloring. 
+                    Place the cake on a white serving platter or white cake cardboard. 
+                    Cover the cake with the light blue frosting and make smooth. Arrange alternating lines of blue jelly beans, red and yellow Licorice Pastels and more blue 
+                    Jelly Belly beans at an angle to create stripes, leave pale blue frosting stripes between alternating candy stripes. Change direction of the candy 
+                    stripes at the knot using the photo as guide.
+                </li>
+                <li>Spoon the chocolate frosting into a small zipper bag. 
+                    Snip a very small (1/8 inch) corner from the bag. Pipe lines on serving platter to create the shirt collar, pocket, and button flap. 
+                    Add the Coconut Jelly Belly beans as the buttons and a black Licorice Pastel and Blueberry beans as a pen in the pocket.
+                </li>
+            </ol>
+            <h2>MAKES 1 CAKE</h2>
+            <hr>
+            
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+

@@ -1,0 +1,176 @@
+{% autoescape on %}
+{% block doctype %}
+<!doctype html>
+{% endblock doctype %}
+{% block open-html-tag %}
+<html class="no-js" lang="en">
+{%endblock open-html-tag %}
+    
+    {% block head-tag %}
+    <head>
+        {% block meta-tags %}
+            <meta charset="utf-8"> 
+            {% include "modules/json-required-for-hyprlive" %}
+            {% block meta-candytags %} 
+                <meta name="description" content="{{ PageContext.MetaDescription }}">
+        		<meta name="keywords" content="{{ PageContext.MetaKeywords }}">
+		    {% endblock meta-candytags %}
+    		<meta name="correlationId" content="{{ pageContext.correlationId }}">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        {% endblock meta-tags %}
+
+            
+
+
+        <title>
+            {% block title-tag-content %} 
+                {% firstof pageContext.metaTitle model.content.productName PageContext.Title %} 
+                    {% if model.content.productName %}|{% endif %} 
+                    {% if PageContext.Title %}|{% endif %} {% parent %} {{ siteContext.generalSettings.websiteName }} 
+            {% endblock title-tag-content %}
+        </title>
+		{% block shortcut-icon %}
+    		<link rel="shortcut icon" href="{{siteContext.cdnPrefix}}/resources/images/icons/jb-favicon.ico" type="image/x-icon">
+    		<link rel="icon" href="{{siteContext.cdnPrefix}}/resources/images/icons/jb-favicon.ico" type="image/x-icon">
+    		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{siteContext.cdnPrefix}}/resources/images/icons/favicon.png" />
+    		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{siteContext.cdnPrefix}}/resources/images/icons/favicon.png" />
+    		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{siteContext.cdnPrefix}}/resources/images/icons/favicon.png" />
+    		<link href="/resources/3rdparty/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		{% endblock shortcut-icon %}
+        {% if PageContext.FeedUrl  %}
+            <link rel="alternate" type="application/rss+xml" title="{{ PageContext.Title }}" href="{{ PageContext.FeedUrl }}" />
+        {% endif %}
+        
+        {% block stylesheets %}
+            {{ "/stylesheets/storefront.less"|stylesheet_tag:"default" }} 
+        {% endblock stylesheets %}
+
+        {% block head-tag-scripts %}
+            {% include "modules/web-fonts-loader" %}
+        {% endblock head-tag-scripts %}
+            <script src="{{siteContext.cdnPrefix}}/scripts/vendor/modernizr.respond.js"></script>
+            <script src="https://ws.vidiemi.com/webservices/jb/VidiEmiOptV2/EasyXDM.JB.20141030/easyXDM.min.js"></script>
+            <script>
+                if(!navigator.cookieEnabled){
+                    alert('Please enable your browser cookies.');
+                }
+            </script>
+    		{% cms_resources %}
+            {% require_script "modules/common" %} 
+       
+		{% header_content %}
+	    <script type="application/ld+json">
+            {   "@context" : "http://schema.org",
+                "@type" : "WebSite",
+                "name" : "{{ siteContext.generalSettings.websiteName }}",
+                "alternateName" : "Jelly Belly",
+                "url" : "http://www.jellybelly.com"
+            }
+        </script>
+	
+	    {% if pageContext.cmsContext.page.path == 'home' %}
+    		<script type="application/ld+json">
+        		{
+        		"@context": "http://schema.org",
+        		"@type": "WebSite",
+        		"url": "http://www.jellybelly.com/",
+        		"potentialAction": {
+        			"@type": "SearchAction",
+        			"target": "http://www.jellybelly.com/search?query={search_term_string}&sortBy=",
+        			"query-input": "required name=search_term_string"
+        			}
+        		}
+        	</script>
+	    {% endif %} 
+    </head>
+    {% endblock head-tag %}
+    
+    {% block body-tag %}
+        {% block open-body-tag %}
+            <body class="{% block body-tag-classes %}{% endblock body-tag-classes %}">
+        {% endblock open-body-tag %}
+       
+           
+        
+          
+            <div id="page-wrapper" class="mz-l-pagewrapper">
+          
+          
+            
+          
+            
+      
+                <div role="main" id="page-content" class="mz-l-pagecontent">
+                  
+                    {% block body-content %}
+                        {% dropzone "body" scope="page" %}
+    				{% endblock body-content %}
+                </div>
+            
+            </div>
+          
+          
+    	    {% block trailing-scripts %}		
+                {% include "modules/trailing-scripts" %}	
+              
+            {% endblock trailing-scripts %}
+          
+          
+            
+            <div class="bucketinfo">
+                
+            </div>
+    		<div class="hide">
+    			{% visitor_tracking_pixel %}
+    		</div>
+        
+        
+        <script type="text/javascript" data-jb-tealium>
+			function tf() {
+				// Do not delete tf(); it still gets called from jb-tealium.js.
+                //var tenantId = {{ siteContext.tenantId }};
+                //var env = 'dev';
+                //if (tenantId == 9046) {
+                //    env = 'prod';
+                //    }
+                //else if (tenantId == 10569) {
+                //    env = 'qa';
+                //}
+                //else {
+                //    env = 'dev';
+                //    }
+                //console.log("hello");
+                //(function(a,b,c,d){a='//tags.tiqcdn.com/utag/jellybelly/specialty/prod/utag.js';b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a); /* console.log(a); console.log(b); console.log(c); console.log(d); */ })();
+            }
+        </script>
+    </body>
+    {% endblock body-tag %}
+</html>
+{% endautoescape %}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

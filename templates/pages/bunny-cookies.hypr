@@ -1,0 +1,59 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Recipes Bunny Cookies</h1>
+    <article class="carnival-details txt-left">
+        <h2>EASTER BUNNY COOKIES</h2>
+        <hr>
+        <div class="baking-recipe">
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Recipes Bunny Cookies/Bunny_Cookies.jpg">
+                <br>
+                <br>
+                <div style="width:340px;margin-top:15px;"><iframe width="100%" height="300" src="//www.youtube.com/embed/RMH7LpOoCJg" frameborder="0" allowfullscreen=""></iframe></div>
+            </figure>
+            <h3>Serves 8</h3>
+            <ul class="contentList">
+                <li>Royal Icing (recipe follows)</li>
+                <li>Rose pink and lemon or golden-yellow gel paste food coloring</li>
+                <li>8 Sugar Cookie Cutouts (recipe follows)</li>
+                <li><a target="_blank" href="/search/?query=kids mix&amp;asug=">Jelly Belly Kids Mix Jelly Beans</a></li> 
+                <li>White sanding sugar</li>
+            </ul>
+            <p>
+                Dani B will show you how surprisingly simple it is to decorate this bunny with Jelly Belly Kids Mix flavors that kids like best. 
+                Have fun with our Easter bunny cookie. The perfect Easter treat to share with your family. There's no doubt your kids will love! 
+            </p>
+            <ol class="contentList">
+                <li>Mix together some of royal icing with pink food coloring until desired shade is reached. Transfer to a small squirt bottle with a thick tip. 
+                    Leaving a ¼-inch border, outline bunny portion of a cookie and draw a jagged edge where the bunny meets the egg. 
+                    Draw several zigzags across entire surface of outlined area. Use a spatula to spread evenly, and then shake cookie gently to settle icing. 
+                    If there are any air bubbles, use a toothpick to pop them.
+                </li>
+                <li>Using a sharp paring knife, cut one blue Jelly Belly Kids Mix Jelly Bean in half crosswise. Place the halves, cut side down, on cookie to resemble eyes. 
+                    Add a pink one to resemble a nose. While the icing is still wet, transfer cookie to a paper plate and sprinkle bunny generously with sanding sugar. 
+                    Working over the paper plate, shake off any excess sugar and reserve for remaining cookies. 
+                    Using a toothpick, remove any remaining grains of sugar along the edge where bunny meets egg. 
+                    Let dry at least 15 minutes before proceeding.
+                </li>
+                <li>Mix together some of royal icing with yellow food coloring until desired shade is reached. Transfer to a small squirt bottle with a thick tip. 
+                    Leaving a ¼-inch border, outline egg portion. Draw several zigzags across entire surface of outlined area. Use a spatula to spread evenly, and then shake cookie gently to settle icing. 
+                    If there are any air bubbles, use a toothpick to pop them.
+                </li>
+                <li>Following shape of egg, use tweezers to add Jelly Belly Kids Mix Jelly Beans closely together to fill, forming a mosaic pattern. 
+                    You'll want to work fairly quickly, as the icing will begin to dry. Let cookie dry completely before packaging, about 8 hours. Repeat process with remaining cookies. 
+                </li>
+            </ol>
+            <h2>If you want to get the bunny icing template 
+                <a target="_blank" href="http://content.jellybelly.com/cachefly/Jelly-Belly/OtherImages/bakeAndDecorate/bunnyCookies_IcingTemplate.gif">Click here</a> 
+            </h2>
+        
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+

@@ -1,0 +1,9 @@
+<h3 class="mz-l-stack-sectiontitle">RAPID ORDER</h3>
+<div >
+    <div data-mz-rapid-orderlist class="rapid-order-list">
+            {% include "modules/my-account/my-account-rapid-order-items" %} 
+    </div>
+</div>
+
+
+

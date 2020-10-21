@@ -1,0 +1,59 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Birthday Party Recipes</h1>  
+    <article class="carnival-details txt-left">
+        <h2>Crispy Balls</h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg">
+             <img src="/resources/images/baking_decoration/crispyBalls_t.jpg" alt="Birthday Recipe">
+        </figure>
+                
+            <p>Have a ball on your birthday. Better yet, have a lot of them. Because our Crispy Balls are so delicious and simple to make, one won't be nearly enough.  </p>
+
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>4 cups rice cereal</li>
+                <li>½ cup peanut butter </li>
+                <li>¼ cup butter or margarine </li>
+                <li>1 cup (1/2 lb.) Jelly Belly jelly beans in <a target="_blank" href="/search/?query=tangerine&amp;asug=">Tangerine</a> or <a target="_blank" href="/search/?query=orange sherbet&amp;asug=">Orange Sherbet</a> flavor </li>
+                <li>½ cup (1/4 lb.) Jelly Belly jelly beans in<a target="_blank" href="/search/?query=green apple&amp;asug="> Green Apple</a> and<a target="_blank" href="/search/?query=licorice&amp;asug="> Licorice </a>flavors </li>
+                <li>4 cups miniature marshmallows (10 oz.) or 40 large marshmallows  </li>
+                <li>Cellophane and orange ribbon </li>
+            </ul>
+
+           
+
+
+        <h2>Instructions:</h2>
+        <ol class="contentList">
+            <li>Pour cereal in large bowl and set aside.</li>
+            <li>Melt margarine and peanut butter in large saucepan.</li>
+            <li>Add marshmallows, stirring until completely melted.</li>
+            <li>Pour marshmallow mixture over cereal and stir to coat.</li>
+            <li>Sprinkle in Jelly Belly jelly beans and stir.</li>
+            <li>With buttered fingers roll into balls (or press into 9 x 13 inch pan and cut into squares).</li>
+            <li>Cut 8-inch squares of cellophane. Roll each ball in cellophane and twist ends closed. Tie with ribbon.</li>
+        </ol>
+        <h2>MAKES 16 BALLS</h2>
+   
+        <hr>
+            <div class="additional-info">
+                <figure>
+                    <a href="/product/452">
+                    <img src="http://content.jellybelly.com/cachefly/Jelly-Belly/OtherImages/bakeAndDecorate/Hello_Cupcake_120.jpg" align="left" border="0" alt="Hello, Cupcake!" style="padding-right: 15px;">
+                    </a>
+                </figure>
+                <p>For more great cupcake recipes by Karen Tack and Allan Richardson, check out <em>Hello, Cupcake!</em>, available <a href="/product/452">here.</a></p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+

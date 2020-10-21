@@ -1,0 +1,194 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-visit-us mz-factory{% endblock body-tag-classes %} 
+{% block body-content %}
+
+<h1 class="mz-pagetitle"> Jelly Belly Coloring Pages </h1>
+
+    <p style="margin: 20px 77px;
+                text-align: left;
+                font-size: 16px;
+                line-height: 18px;">
+        Your party guests can have hours of fun coloring Mr. Jelly Belly in these exciting action poses. 
+        Click on the image that you want to color to see it at full size, 
+        then print it out and color it however you like. Each full-size image will fill an 8 1/2 x 11-inch 
+        sheet of paper.
+    </p>
+    <ul class="jb-feature-brands">
+        
+        <!-- Coloring Page 1 -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Coloring Page 1 </h3>
+                <figure>
+                  <a href="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/MrJB_Biking.jpg" target="_blank">
+                    <img src="/resources/images/colouring_page/cpBike_t.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 Mr. Jelly Belly hits the road on his bike.  
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+        <!-- Coloring Page 2 -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Coloring Page 2 </h3>
+                <figure>
+                  <a href="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/MrJB_Boombox.jpg" target="_blank">
+                    <img src="/resources/images/colouring_page/cpRadio_t.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Just chillin’ out with some cool tunes.
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Coloring Page 3 -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Coloring Page 3 </h3>
+                <figure>
+                  <a href="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/MrJB_Cartwhee.jpg" target="_blank">
+                    <img src="/resources/images/colouring_page/cpCart_t.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 Mr. Jelly Belly is flipping out! 
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Coloring Page 4 -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Coloring Page 4 </h3>
+                <figure>
+                  <a href="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/MrJB_Dancing.jpg" target="_blank">
+                    <img src="/resources/images/colouring_page/cpDance_t.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Dance to the beat with Mr. Jelly Belly!
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Coloring Page 5 -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Coloring Page 5 </h3>
+                <figure>
+                  <a href="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/MrJB_FootballReceiver.jpg" target="_blank">
+                    <img src="/resources/images/colouring_page/cpFootball_t.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                 Mr. Jelly Belly catching the game winning touchdown.
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <!-- Coloring Page 6 -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Coloring Page 6 </h3>
+                <figure>
+                  <a href="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/MrJB_folowthruGolf.jpg" target="_blank">
+                    <img src="/resources/images/colouring_page/cpGolf_t.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Tiger who? Look at that follow through!
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Coloring Page 7 -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Coloring Page 7 </h3>
+                <figure>
+                  <a href="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/MrJB_Guitar.jpg" target="_blank">
+                    <img src="/resources/images/colouring_page/cpGuitar_t.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Has anyone looked cooler in sunglasses?
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Coloring Page 8 -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Coloring Page 8 </h3>
+                <figure>
+                  <a href="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/MrJB_Happy.jpg" target="_blank">
+                    <img src="/resources/images/colouring_page/cpJump_t.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Mr. Jelly Belly jumps for joy. 
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Coloring Page 9 -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Coloring Page 9 </h3>
+                <figure>
+                  <a href="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/MrJB_Keyboard.jpg" target="_blank">
+                    <img src="/resources/images/colouring_page/cpShaffer_t.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  More music from Mr. Jelly Belly.
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        <!-- Coloring Page 10 -->
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3> Coloring Page 10 </h3>
+                <figure>
+                  <a href="{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/MrJB_Magician.jpg" target="_blank"">
+                    <img src="/resources/images/colouring_page/cpWizza_t.png" width="133" border="0">
+                  </a>
+                </figure>
+                <p>
+                  Watch him pull a rabbit out of his hat!
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+    </ul>
+    
+    <div class="clearfix"></div>
+
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+

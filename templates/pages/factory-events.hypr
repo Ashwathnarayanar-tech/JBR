@@ -1,0 +1,21 @@
+{% extends "page" %}
+
+ 
+
+{% block body-tag-classes %}mz-visit-us mz-w-snackbar{% endblock body-tag-classes %} 
+
+{% block body-content %}
+    <section>
+        <article>
+            <h1 class="mz-pagetitle">Fairfield California Center Event Calendar</h1>
+        </article>
+         {% dropzone "calendar-fccec" scope="template" %}
+    </section>
+   
+{% endblock body-content %}
+
+
+
+
+
+

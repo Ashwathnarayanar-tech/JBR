@@ -1,0 +1,106 @@
+<div class="quick-view"> 
+        <div class="quick-product-image">
+         
+            <a  {% if model.productType !== "bundle"%} href="{{ image.imageUrl }}" {% else %} 
+            href="#" {% endif %}><img class="mz-productimages-thumbimage"  src="{{ model.mainImage.imageUrl }}?max=250" /></a>
+
+    <div class="quick-product-details">
+        <div class="quick-product-name">  
+            <a href="{{model.productCode}}">{{model.content.productName|safe}}</a>
+        </div> 
+       <div class="quick-short-desc">
+        {% if model.productType == "bundle" %}
+        <h3>This bundle contains the following products:</h3>
+            <ul>
+            {% for bundle in  model.bundledProducts %}
+            
+            <li><a href="{{siteContext.domains.current.domainName}}/p/{{ bundle.productCode}}">{{ bundle.content.productName|safe }}</a>
+                <span>{{ bundle.productCode}}</span>   
+            </li>
+            
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>{{model.content.productShortDescription|safe}}</p>
+        {% endif %}
+       </div>
+       
+        <div class="jb-product-prize" data-mz-product-price="{{model.price.price}}">
+            {%if model.price.price%}<p class="jb-quickprice {% if model.price.price > model.price.salePrice and 
+            model.price.salePrice !== null and model.price.salePrice !== 0 %}strikeprice {% endif %}">
+            <span>Price:</span> {{model.price.price|currency}}</p>{%endif%}
+                {% if model.price.price !=  model.price.salePrice %} 
+                {%if model.price.salePrice%}<p class="jb-quickcsale">SALE: {{model.price.salePrice|currency}}</p>{%endif%}
+                {% endif %}
+       </div>
+       
+       <div class="qty-addto">
+       <div class="qty">
+                Quantity
+                 {% if model.price.price > 0 %}
+                <select id="quantity" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option> 
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>       
+                 {% else %}
+                    <select id="quantity" name="quantity">
+                        <option value="1">1</option>
+                    </select> 
+                 {% endif %}
+                <span class="mz-validationmessage" data-mz-validationmessage-for="quantity"></span>
+            
+        </div>
+                <div class="jb-buy-product quickview-jb" >
+                    {% if  model.purchasableState.isPurchasable %}
+                        
+                        <button id="add-to-cart" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" 
+                        data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" 
+                        class="mz-productdetail-addtocart jb-tealium-trigger {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %}" 
+                        {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} data-mz-action="recentToCart" >
+                        {{ labels.addToCart }}
+                        </button>
+                    {% else %}
+                        {% if model.options and model.options.length > 0 %}
+                        <button style="padding: 4px 0px;width: 135px;" id="add-to-cart" data-jb-price="{% if model.price.onSale %}{{ model.price.salePrice }} {% else %} {{ model.price.price }} {% endif %}" data-jb-pid="{{ model.variationProductCode|default(model.productCode) }}" 
+                        class="mz-productdetail-addtocart jb-tealium-trigger {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %} gift-prize-select" 
+                        {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} data-mz-action="recentToCart" >
+                        SHOP GIFT CARD
+                        </button>
+                    {% else %}
+                         <p class="jb-outofstock"> out of stock </p>
+                    {% endif %}
+                    
+                    {% endif %}
+                </div>
+           </div>
+           
+            {% if model.productType != "bundle" %}
+            <div class="quick-viewmore">
+              <a href="{{model.productCode}}">View Details</a>
+            </div>
+            {% endif %}
+        </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,75 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static {% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Information For Students</h1>
+    <article>
+        <p>
+            Thank you for your interest in our company. A mountain of sweet information is on this site to help students with school reports. 
+            We'll give you a jump start on your research with this quick navigation! Here goes.
+        </p>
+        <p>
+            If you want to learn about the <a target="_blank" href="http://content.jellybelly.com/cachefly/Jelly-Belly/Downloads/Company_History.pdf">History of the company</a>, it's all about candy and our candy-making family. 
+            You can also learn about the <a target="_blank" href="http://content.jellybelly.com/cachefly/Jelly-Belly/Downloads/Origin_of_JellyBean_022013.pdf">history of jelly beans</a> (no, we didn't invent the
+            first jelly bean, just the best tasting one). We make over 100 candies, and if you would like to learn about some of them, read about <a href="/ourcandy">Our Candy</a>.
+        </p>
+        <p>
+            <!-- For information on how we come up with flavors and how we make our incredibly good Jelly Belly beans, take a <a href="">Virtual Factory Tour</a>. -->
+            We also offer free public tours at our <a href="/california-factory-index">California factory</a> and  
+            <a href="/wisconsin-warehouse-index">Wisconsin center</a>.
+        </p>
+        <p>
+            Finally, be sure to check out our <a href="http://mycusthelp.com/Jellybelly/_cs/Findanswers.aspx">Frequently Asked Questions (FAQs)</a>
+            have stored questions and answers in a searchable database on a wide variety of topics.
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <h2 class="indent">Off Limits!</h2>
+        <p>There are some things we cannot help you with. Here's the list:</p>
+        <ul class="contentList">
+            <li>
+                ●&nbsp;<strong>Financial information:</strong>
+                Jelly Belly Candy Company is privately owned, and that means we don't release any confidential information, such as sales figures, balance sheets, sales or marketing data. If your report needs this sort of information, we suggest you research a public company that issues stocks and bonds.
+            </li>
+            <li>
+                ●&nbsp;<strong>Interviews:</strong>
+                Sorry, we don't give interviews about our company, unless you happen to have valid press credentials. While we would love to meet you, we're up to our necks in sugar and candy. Check out the virtual tour or take a public tour!
+            </li>
+            <li>
+                ●&nbsp;<strong>Manufacturing &amp; Operations:</strong>
+                Technical manuals, competitive information, supplier information, forecasting, distribution channels and sales data are not available. For some assignments a publicly traded company will be your best source.
+            </li>
+            <li>
+                <strong>Finally, if you don't see it here, there's a reason. It's information that we don't release to the public!</strong>
+            </li>
+            <li>
+                ●&nbsp;<strong>Candy Industry Information</strong>
+                If you want to know more about the confectionery industry, try the National Confectioners Association (the NCA) website at www.candyusa.org (link will open up a new window).
+            </li>
+        </ul>
+        <p>Good luck and thanks for thinking of Jelly Belly Candy Company for your report.</p>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+
+
+
+

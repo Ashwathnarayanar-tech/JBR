@@ -1,0 +1,114 @@
+{% if model.custom.length>0 || model.custompro.length> 0  %} 
+
+<table class="bundle">  
+        <tr>
+            <td>Name</td> 
+            <td>Qty</td>  
+            <td>Price</td>
+            <td>Total</td>
+        </tr> 
+
+        
+    {% if model.custom.length>0 %}    
+        {% for item in model.custom %}
+        
+            <tr>
+                <td>{{item.name}}</td>
+                <td>{{item.qty}}</td>
+                <td>{{item.price|currency}}</td>
+                <td>{{item.total|currency}}</td>
+                
+            </tr>
+        {% endfor %}
+    {% endif %}
+    {% if model.custompro.length> 0%}
+     
+            <tr> 
+                <td>Other Items</td>
+                <td>{{ model.proqty }}</td>
+                <td></td>
+                <td>{{ model.prototal|currency }}</td>
+            </tr>
+   {% endif %}  
+            <tr>
+                <td>Total</td>
+                <td>&nbsp</td>
+                <td>&nbsp</td>
+                <td>{{ model.subtotal|currency }}</td>
+            </tr>
+    </table>
+   <div class="bundle-mob"> 
+     
+      {% if model.custom.length>0 %}    
+      <h2>Pre-Built Bundles</h2>
+        {% for item in model.custom %}
+        
+         <div class="tblblock-mob" data-mz-productCode="{{item.pcode}}" custom="custom">
+         <span class="close-me"></span> 
+               <p class="left label-bundle"><b>Name</b></p><p class="">{{item.name}}</p>
+              <p class="left label-bundle"><b>Qty</b></p><p class="">{{item.qty}}</p>
+               <p class="left label-bundle"><b>Price</b></p><p class="">{{item.price|currency}}</p>
+               <p class="left label-bundle"><b>Total</b></p><p class="">{{item.total|currency}}</p>
+               
+           </div> 
+        {% endfor %}
+    {% endif %}
+     {% if model.custompro.length> 0%}
+     <h2>Other Items</h2>   
+         {% for item in model.custompro %}
+             <div class="tblblock-mob" custom="custompro" data-mz-productCode="{{item.pcode}}" >
+              <span class="close-me"></span>
+                <p class="left label-bundle"><b>Name</b></p><p class="data-bundle">{{item.name}}</p>
+                <p class="left label-bundle "><b>Qty</b></p><p class="data-bundle">{{item.qty}}</p>
+                <p class="left label-bundle "><b>Price</b></p><p class="data-bundle">{{item.price|currency}}</p>
+               <p class="left label-bundle"><b>Total</b></p><p class="data-bundle">{{item.total|currency}}</p>  
+            </div>
+       {% endfor %} 
+    {% endif %}
+    
+     <p style="float:left;font-weight:800">Total:</p> <p style="float:right;font-weight:800">{{ model.subtotal }}</p>
+</div>    
+
+
+   <!-- <div class="total-b"><span class="ttext">Total</span><span class="total">{{ model.subtotal|currency }}</span></div> -->
+    
+    {% else %}
+    <div class="bundle-mob"> 
+    </div>    
+    <table class="bundle">
+        <tr>
+            <td>Name</td>
+            <td>Qty</td> 
+            <td>Price</td>
+            <td>Total</td>
+        </tr>
+        <tr>
+            <td>&nbsp</td>
+            <td>&nbsp</td>
+            <td>&nbsp</td>
+            <td>&nbsp</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>&nbsp</td>
+            <td>&nbsp</td>
+            <td>{{ model.subtotal|currency }}</td>
+        </tr>
+    </table>    
+     <!-- <div class="total-b"><span class="ttext">Total</span><span class="total">{{ model.subtotal|currency }}</span></div> -->
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

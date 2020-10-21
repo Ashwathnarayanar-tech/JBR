@@ -1,0 +1,84 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static {% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Terms Of Use</h1>
+    <article>
+        <p>
+            Welcome to JellyBelly.com. Thank you for visiting. We hope you have a sweet journey of discovery while at this site.
+            We maintain this site for your personal entertainment, information, education, and communication. 
+            When you visit our site, you are legally obligated to the terms and conditions listed below and any other law or regulation that applies to the site, 
+            the Internet, and the World Wide Web. Please do not access or browse the site if you have any concerns with the terms and conditions.
+        </p>
+        <p>
+            You may download information from the site for personal use only and only on a single computer. The information may not be distributed, modified, transmitted, reused, reposted, or any 
+            other use, including text, images, audio, and video, for public or commercial purposes unless we grant prior written permission.
+        </p>
+    </article>
+    <article class="carnival-details txt-left">
+        <p class="bold listHeading">Your Acceptance of Terms</p>
+        <ol class="olPadding contentList ">
+            <li>This site and all materials incorporated in the site are copyrighted by the Jelly Belly Candy Company. 
+                The information on this page or anywhere else on the site may not be used without written permission.
+            </li>
+            <li>While we try to include accurate information on the site, we do not guarantee itsaccuracy and you use it at your own risk.
+                We assume no liability or responsibility for errors or omissions on the site.
+            </li>
+            <li>We, and anybody else who helped us create, produce, or deliver the site, are not liable for any damages you suffer as a result of your access to or use of the site,
+                including, but not limited to, direct, incidental, consequential, indirect, or punitive damages. Without limiting the foregoing, everything on the site is 
+                provided to you 'AS IS' WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED AND IMPLIED, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, 
+                FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. Please note that some jurisdictions may not allow the exclusion of implied warranties, so some of the above
+                exclusions may not apply to you. Check your local laws for any restrictions or limitations regarding the exclusion of implied warranties. We are not responsible, 
+                if while browsing, the site damages you or your computer or infects it with any viruses.
+            </li>
+            <li>If you do not want the world to know something, please do not post it on the Internet in any way, including in any survey, form, bulletin board, or anyplace else. 
+                Anything you disclose to someone else becomes theirs, unless you make an agreement otherwise.
+                <br>
+                If you send us your ideas, legally, we may use them at our discretion. We can reproduce them, disclose them, transmit them, publish them, broadcast them, and post them 
+                someplace else without personal identifying information. Please see our Privacy Statement. We can use any intellectual property (ideas, concepts, know-hows, or
+                techniques) you send to us to develop, manufacture, and market products or without obligation.
+                <br>
+                When you provide us with your name, address, e-mail address, or any other personal information, it is treated as strictly confidential and will not be sold or rented for any reason. 
+                We use this information to respond to individual requests for information, and to better understand who our consumers are and what they like. 
+                Please see our Privacy Statement for complete information.
+            </li>
+            <li>We sometimes run promotional or sales programs which require you to send us personal information, such as your name and address. 
+                If you are under 13 years of age, please ask your parent's permission before sending any personal information to this or any other web site.
+            </li>
+            <li>Pictures of people or places shown on the site are either our property or someone else's property we use with their permission. They may not be used without our prior written permission.
+            </li>
+            <li>The trademarks, logos, and service marks on the site, including Jelly Belly&reg; and its logo design, "The original gourmet jelly bean," "It's America's Favorite Jelly Bean," 
+                and the Mr. Jelly Belly character design (registered trademarks of Jelly Belly Candy Company), A&amp;W&reg; (registered trademark of A&amp;W Concentrate Co.), 
+                Dr Pepper (registered trademark of Dr Pepper/ Seven Up Company) and Hawaiian Punch&reg; (registered trademark of The Procter &amp; Gamble Company) are owned by us or usedwith the permission 
+                of the owner. You have no license or right to use them and any use may result in legal action or prosecution.
+            </li>
+            <li>We do not monitor other sites linked to this site for offensive or inaccurate information.
+            </li>
+            <li>With regard to our site, do not post or transmit any unlawful, threatening, libelous, defamatory, obscene, scandalous, inflammatory, pornographic, or profane material or any material 
+                that law enforcement may consider a criminal offense, result in a civil lawsuit, or violate any law -- anywhere, anytime. 
+                While we respect your privacy, we will fully cooperate with any law enforcement authority or court that asks us to cooperate in an investigation of illegal behavior.
+            </li>
+            <li>We may change this page or anything else on the site at any time without notice. If we do change the page, you are bound by those changes, too, whenever you visit this site.
+            </li>
+        </ol>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+

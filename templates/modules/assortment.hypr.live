@@ -1,0 +1,705 @@
+<div class="mz-productlist {% block module-classes %}{% endblock module-classes %}">
+  {% if model.items %}
+  <div class="assort-table-container">
+    <table class="assort-table mz-productlist-list">
+      <thead>
+        <tr class="desktop">
+          <th class="checkbox">
+            <div class="checkboxcustom">
+              <input class="magic-checkbox header" type="checkbox" id="checkbox" value="None" name="check" />
+              <label class="select-all"></label>
+            </div>
+          </th>
+          <th class="item">Item #</th>
+          <th class="desc">Description</th>
+          <th class="price">Price</th>
+          <th class="coldpack">Cold Pack</th>
+          <th class="qnty">Order Qty</th>
+        </tr>
+        <tr class="mobile">
+          <th colspan="4" class="checkbox">
+            <div class="checkboxcustom">
+              <input class="magic-checkbox header" type="checkbox" id="select-all" value="None" name="check" />
+              <label class="select-all" for="select-all">CHECK/UNCHECK ALL</label>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for prod in model.items %}
+        <!-- Table row for desktop--> 
+        <tr class="desktop" {% if prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable == 0  %} style="color: red !important;" title="Out of stock"{% endif %} data-mz-productstock="{% if prod.inventoryInfo.manageStock %}{{ prod.inventoryInfo.onlineStockAvailable }}{% else %}4{% endif %}" data-mz-productcode="{{ prod.productCode }}" data-mz-productweight="{{ prod.measurements.packageWeight.value }}" data-mz-productprice="{{ prod.price.price }}">
+          <td class="checkbox">
+            <div class="checkboxcustom">
+              <input {% if prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable == 0  %}disabled{% endif%} type="checkbox" class="magic-checkbox body-item" value="None" id="checkbox--{{forloop.counter}}" name="check"/>
+              <label></label>
+            </div>
+          </td>
+          <td class="item">
+            {{ prod.productCode }}
+          </td>
+          <td class="desc" assort-itemcode="{{ prod.productCode }}">
+            <div class="assort-itemname">{{ prod.content.productName|safe }}</div>
+
+            <div class="assort-error" style="color:red">
+              {% if prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable == 0  %}
+              This item is out of Stock. <span class="notify">Notify Me</span>
+              {% else %}
+              {% if  prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable < 4 %}
+              Only {{ prod.inventoryInfo.onlineStockAvailable }} in stock.
+              {% endif %}
+              {% endif %}
+            </div>
+            
+          </td>
+          <td class="price" data-price="{{prod.price.price}}">
+            {{ prod.price.price |currency }}
+          </td>
+          <td class="coldpack">
+            {% if themeSettings.heatSensitive %}
+            {% with prod.properties|findwhere('attributeFQN','tenant~IsHeatSensitive') as aliasName %}
+            {% with aliasName.values|findwhere('value',True) as checkVal %}
+            {% if checkVal %}
+              <div class="coldpack" data-coldpack="{{ checkVal.value }}">
+                <span>&#x2714;</span>
+              </div>
+            {% endif %}
+            {% endwith %}
+            {% endwith %}
+            {% endif %}
+          </td>
+          <td class="qnty">
+            {% if prod.inventoryInfo.manageStock %}
+
+            <select {% if prod.inventoryInfo.onlineStockAvailable == 0  %}disabled{% endif %}>
+            {% if prod.price.price == 0 %}
+            <option value="1">1</option>
+            {% else %}
+              <option value="1">1</option>
+              {% if prod.inventoryInfo.onlineStockAvailable >= 2  %}
+              <option value="2">2</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 3  %}
+              <option value="3">3</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 4  %}
+              <option value="4">4</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 5  %}
+              <option value="5">5</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 6  %}
+              <option value="6">6</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 7  %}
+              <option value="7">7</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 8  %}
+              <option value="8">8</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 9  %}
+              <option value="9">9</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 10 %}
+              <option value="10">10</option>
+              {% endif %}
+
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 11 %}
+              <option value="11">11</option>
+              {% endif %}
+
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 12 %}
+              <option value="12">12</option>
+              {% endif %}
+
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 13 %}
+              <option value="13">13</option>
+              {% endif %}
+
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 14 %}
+              <option value="14">14</option>
+              {% endif %}
+
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 15 %}
+              <option value="15">15</option>
+              {% endif %}
+
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 16 %}
+              <option value="16">16</option>
+              {% endif %}
+
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 17 %}
+              <option value="17">17</option>
+              {% endif %}
+
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 18 %}
+              <option value="18">18</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 19 %}
+              <option value="19">19</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 20 %}
+              <option value="20">20</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 21 %}
+              <option value="21">21</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 22 %}
+              <option value="22">22</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 23 %}
+              <option value="23">23</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 24 %}
+              <option value="24">24</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 25 %}
+              <option value="25">25</option>
+              {% endif %}
+              {% if prod.inventoryInfo.onlineStockAvailable >= 26  %}
+              <option value="26">26</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 27  %}
+              <option value="27">27</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 28  %}
+              <option value="28">28</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 29  %}
+              <option value="29">29</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 30  %}
+              <option value="30">30</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 31  %}
+              <option value="31">31</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 32  %}
+              <option value="32">32</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 33  %}
+              <option value="33">33</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 34 %}
+              <option value="34">34</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 35 %}
+              <option value="35">35</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 36 %}
+              <option value="36">36</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 37 %}
+              <option value="37">37</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 38 %}
+              <option value="38">38</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 39 %}
+              <option value="39">39</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 40 %}
+              <option value="40">40</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 41 %}
+              <option value="41">41</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 42 %}
+              <option value="42">42</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 43 %}
+              <option value="43">43</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 44 %}
+              <option value="44">44</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 45 %}
+              <option value="45">45</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 46 %}
+              <option value="46">46</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 47 %}
+              <option value="47">47</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 48 %}
+              <option value="48">48</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 49 %}
+              <option value="49">49</option>
+              {% endif %}
+              {% if  prod.inventoryInfo.onlineStockAvailable >= 50 %}
+              <option value="50">50</option>
+              {% endif %}
+            {% endif %}
+            </select>
+            
+            {% endif %}
+          </td>
+        </tr>
+        <!-- Table row for desktop end-->
+        <!--Table row for mobile/ipad portrait mode or width < 768px -->
+        {% comment %}
+        <tr class="mobile">
+          <td>
+            <table>
+              <tr class="mobile itemno">
+                <td class="item">
+                  <div class="checkboxcustom">
+                    <input {% if prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable == 0  %}disabled{% endif%} type="checkbox" class="magic-checkbox body-item" value="None" id="checkbox" name="check"/>
+                    <label></label>
+                  </div>
+                  <div class="item-label"><font>Item # </font></div>
+                </td>
+                <td class="item"><strong>{{ prod.productCode }}</strong></td>
+              </tr>
+              <tr class="mobile row1" {% if prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable == 0  %} style="color: red !important;" title="Out of stock"{% endif%} data-mz-productstock="{% if prod.inventoryInfo.manageStock %}{{ prod.inventoryInfo.onlineStockAvailable }}{% else %}4{% endif %}" data-mz-productcode="{{ prod.productCode }}" data-mz-productweight="{{ prod.measurements.packageWeight.value }}" data-mz-productprice="{{ prod.price.price }}">
+                <td class="item">Description</td>
+                <td class="item desc" assort-itemcode="{{ prod.productCode }}">
+                  <div>{{ prod.content.productName|safe }}</div>
+                </td>
+                <td class="clear-fix"></td>
+              </tr>
+              <tr class="mobile row2">
+                <td>
+                  <div class="assort-error" style="color:red">
+                    {% if prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable == 0  %}
+                    This item is out of Stock. <span class="notify">Notify Me</span>
+                    {% else %}
+                    {% if  prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable < 4 %}
+                    Only {{ prod.inventoryInfo.onlineStockAvailable }} in stock 
+                    {% endif %}
+                    {% endif %}
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="mobile row3" {% if prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable == 0  %} style="color: red !important;" title="Out of stock"{% endif%} data-mz-productstock="{% if prod.inventoryInfo.manageStock %}{{ prod.inventoryInfo.onlineStockAvailable }}{% else %}4{% endif %}" data-mz-productcode="{{ prod.productCode }}" data-mz-productweight="{{ prod.measurements.packageWeight.value }}" data-mz-productprice="{{ prod.price.price }}">
+                <td class="unit-price">
+                {{ prod.price.price |currency }}
+                </td>
+                <td class="coldpack">
+                  {% if themeSettings.heatSensitive %}
+                  {% with prod.properties|findwhere('attributeFQN','tenant~IsHeatSensitive') as aliasName %}
+                  {% with aliasName.values|findwhere('value',True) as checkVal %}
+                  {% if checkVal %}
+                    <div class="coldpack" data-coldpack="{{ checkVal.value }}">
+                      <span>&#x2714;</span>
+                    </div>
+                  {% endif %}
+                  {% endwith %}
+                  {% endwith %}
+                  {% endif %}
+                </td>
+                <td class="qnty">
+                  {% if prod.inventoryInfo.manageStock %}
+
+                  <select {% if prod.inventoryInfo.onlineStockAvailable == 0  %}disabled{% endif %}>
+                  {% if prod.price.price == 0 %}
+                  <option value="1">1</option>
+                  {% else %}
+                    <option value="1">1</option>
+                    {% if prod.inventoryInfo.onlineStockAvailable >= 2  %}
+                    <option value="2">2</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 3  %}
+                    <option value="3">3</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 4  %}
+                    <option value="4">4</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 5  %}
+                    <option value="5">5</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 6  %}
+                    <option value="6">6</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 7  %}
+                    <option value="7">7</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 8  %}
+                    <option value="8">8</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 9  %}
+                    <option value="9">9</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 10 %}
+                    <option value="10">10</option>
+                    {% endif %}
+
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 11 %}
+                    <option value="11">11</option>
+                    {% endif %}
+
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 12 %}
+                    <option value="12">12</option>
+                    {% endif %}
+
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 13 %}
+                    <option value="13">13</option>
+                    {% endif %}
+
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 14 %}
+                    <option value="14">14</option>
+                    {% endif %}
+
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 15 %}
+                    <option value="15">15</option>
+                    {% endif %}
+
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 16 %}
+                    <option value="16">16</option>
+                    {% endif %}
+
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 17 %}
+                    <option value="17">17</option>
+                    {% endif %}
+
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 18 %}
+                    <option value="18">18</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 19 %}
+                    <option value="19">19</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 20 %}
+                    <option value="20">20</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 21 %}
+                    <option value="21">21</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 22 %}
+                    <option value="22">22</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 23 %}
+                    <option value="23">23</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 24 %}
+                    <option value="24">24</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 25 %}
+                    <option value="25">25</option>
+                    {% endif %}
+                    {% if prod.inventoryInfo.onlineStockAvailable >= 26  %}
+                    <option value="26">26</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 27  %}
+                    <option value="27">27</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 28  %}
+                    <option value="28">28</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 29  %}
+                    <option value="29">29</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 30  %}
+                    <option value="30">30</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 31  %}
+                    <option value="31">31</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 32  %}
+                    <option value="32">32</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 33  %}
+                    <option value="33">33</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 34 %}
+                    <option value="34">34</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 35 %}
+                    <option value="35">35</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 36 %}
+                    <option value="36">36</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 37 %}
+                    <option value="37">37</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 38 %}
+                    <option value="38">38</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 39 %}
+                    <option value="39">39</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 40 %}
+                    <option value="40">40</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 41 %}
+                    <option value="41">41</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 42 %}
+                    <option value="42">42</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 43 %}
+                    <option value="43">43</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 44 %}
+                    <option value="44">44</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 45 %}
+                    <option value="45">45</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 46 %}
+                    <option value="46">46</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 47 %}
+                    <option value="47">47</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 48 %}
+                    <option value="48">48</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 49 %}
+                    <option value="49">49</option>
+                    {% endif %}
+                    {% if  prod.inventoryInfo.onlineStockAvailable >= 50 %}
+                    <option value="50">50</option>
+                    {% endif %}
+                  {% endif %}
+                  </select>
+                  
+                  {% endif %}
+                </td>
+                <td class="price">
+                  {{ prod.price.price |currency }}
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        {% endcomment %}
+        <tr class="mobile" {% if prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable == 0  %} style="color: red !important;" title="Out of stock"{% endif%} data-mz-productstock="{% if prod.inventoryInfo.manageStock %}{{ prod.inventoryInfo.onlineStockAvailable }}{% else %}4{% endif %}" data-mz-productcode="{{ prod.productCode }}" data-mz-productweight="{{ prod.measurements.packageWeight.value }}" data-mz-productprice="{{ prod.price.price }}">
+          <td class="item">
+            <div class="checkboxcustom item-label">
+              <input {% if prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable == 0  %}disabled{% endif%} type="checkbox" class="magic-checkbox body-item" value="None" id="checkbox" name="check"/>
+              <label><font>Item # </font></label>
+            </div>
+            <div class="item-content item-code" assort-itemcode="{{ prod.productCode }}">{{ prod.productCode }}</div>
+            <div class="clear-fix"></div>
+          </td>
+          <td class="item desc" assort-itemname>
+            <div class="item-label">Description</div>
+            <div class="item-content"><span>{{ prod.content.productName|safe }}</span>
+              <div class="assort-error" style="color:red; font-size: small;">
+                {% if prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable == 0  %}
+                This item is out of Stock. <span class="notify">Notify Me</span>
+                {% else %}
+                {% if  prod.inventoryInfo.manageStock and prod.inventoryInfo.onlineStockAvailable < 4 %}
+                Only {{ prod.inventoryInfo.onlineStockAvailable }} in stock.
+                {% endif %}
+                {% endif %}
+              </div>
+            </div>
+            <div class="clear-fix"></div>
+          </td>
+          <td class="item price" data-price="{{ prod.price.price }}">
+            <div class="item-label">Price</div>
+            <div class="item-content">{{ prod.price.price |currency }}</div>
+            <div class="clear-fix"></div>
+          </td>
+          <td class="item coldpack">
+            <div class="item-label">Cold Pack</div>
+            <div class="item-content">
+              {% if themeSettings.heatSensitive %}
+                {% with prod.properties|findwhere('attributeFQN','tenant~IsHeatSensitive') as aliasName %}
+                  {% with aliasName.values|findwhere('value',True) as checkVal %}
+                    {% if checkVal %}
+                    <div class="coldpack" data-coldpack="{{ checkVal.value }}">
+                      <span>&#x2714;</span>
+                    </div>
+                      {% else %}
+                      <div class="coldpack" data-coldpack="{{ checkVal.value }}">
+                        <span>&#x2013;</span>
+                      </div>
+                    {% endif %}
+                  {% endwith %}
+                {% endwith %}
+              {% endif %}
+            </div>
+            <div class="clear-fix"></div>
+          </td>
+          <td class="item quantity">
+            <div class="item-label">Order Qty</div>
+            <div class="item-content qnty">
+              {% if prod.inventoryInfo.manageStock %}
+
+              <select {% if prod.inventoryInfo.onlineStockAvailable == 0  %}disabled{% endif %}>
+              {% if prod.price.price == 0 %}
+              <option value="1">1</option>
+              {% else %}
+                <option value="1">1</option>
+                {% if prod.inventoryInfo.onlineStockAvailable >= 2  %}
+                <option value="2">2</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 3  %}
+                <option value="3">3</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 4  %}
+                <option value="4">4</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 5  %}
+                <option value="5">5</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 6  %}
+                <option value="6">6</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 7  %}
+                <option value="7">7</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 8  %}
+                <option value="8">8</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 9  %}
+                <option value="9">9</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 10 %}
+                <option value="10">10</option>
+                {% endif %}
+
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 11 %}
+                <option value="11">11</option>
+                {% endif %}
+
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 12 %}
+                <option value="12">12</option>
+                {% endif %}
+
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 13 %}
+                <option value="13">13</option>
+                {% endif %}
+
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 14 %}
+                <option value="14">14</option>
+                {% endif %}
+
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 15 %}
+                <option value="15">15</option>
+                {% endif %}
+
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 16 %}
+                <option value="16">16</option>
+                {% endif %}
+
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 17 %}
+                <option value="17">17</option>
+                {% endif %}
+
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 18 %}
+                <option value="18">18</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 19 %}
+                <option value="19">19</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 20 %}
+                <option value="20">20</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 21 %}
+                <option value="21">21</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 22 %}
+                <option value="22">22</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 23 %}
+                <option value="23">23</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 24 %}
+                <option value="24">24</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 25 %}
+                <option value="25">25</option>
+                {% endif %}
+                {% if prod.inventoryInfo.onlineStockAvailable >= 26  %}
+                <option value="26">26</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 27  %}
+                <option value="27">27</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 28  %}
+                <option value="28">28</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 29  %}
+                <option value="29">29</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 30  %}
+                <option value="30">30</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 31  %}
+                <option value="31">31</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 32  %}
+                <option value="32">32</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 33  %}
+                <option value="33">33</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 34 %}
+                <option value="34">34</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 35 %}
+                <option value="35">35</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 36 %}
+                <option value="36">36</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 37 %}
+                <option value="37">37</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 38 %}
+                <option value="38">38</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 39 %}
+                <option value="39">39</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 40 %}
+                <option value="40">40</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 41 %}
+                <option value="41">41</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 42 %}
+                <option value="42">42</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 43 %}
+                <option value="43">43</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 44 %}
+                <option value="44">44</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 45 %}
+                <option value="45">45</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 46 %}
+                <option value="46">46</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 47 %}
+                <option value="47">47</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 48 %}
+                <option value="48">48</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 49 %}
+                <option value="49">49</option>
+                {% endif %}
+                {% if  prod.inventoryInfo.onlineStockAvailable >= 50 %}
+                <option value="50">50</option>
+                {% endif %}
+                {% endif %}
+              </select>
+              
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+        
+  <!--Table row for mobile or width < 768px  end-->
+  {% comment  %}
+    {% endif %} 
+  {% endcomment %}  
+  {% endfor %}
+  </tbody>
+  </table>
+  <div class="summary">
+    <button disabled class="atc addToList">{{ labels.addToList }}</button>
+  </div>
+</div>
+{% endif %}
+</div>

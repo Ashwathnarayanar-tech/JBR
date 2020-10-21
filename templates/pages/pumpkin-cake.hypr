@@ -1,0 +1,65 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Pumpkin Patch Cupcakes</h1>
+    <article class="carnival-details txt-left">
+        <h2>Pumpkin Patch Cupcakes (you may also enjoy <a href="/recipes-creepy-critter-cupcakes">Creepy Critter Cupcakes</a>)</h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Pumpkin Patch Cupcakes/Pumpkin_cupcakes.jpg">
+                <br>
+                <div style="width:340px;margin-top:15px;"><iframe width="100%" height="300" src="//www.youtube.com/embed/0Sgx9upL0LI?feature=player_embedded" frameborder="0" allowfullscreen=""></iframe></div>
+            </figure>
+            <!-- AddThis Button -->
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()">
+            <img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border: 0"></a>
+            <!-- /AddThis Button -->
+            <p>
+                Don’t carve – just bite! Covered in orange-colored Jelly Belly jelly beans, these amazing cakes are the spitting images of your favorite autumn gourd. And no seeds to dig out!  
+            </p>
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>12 spice cupcakes, paper liners removed</li>
+                <li>1 can (16 oz) vanilla frosting</li>
+                <li>Orange food coloring</li>
+                <li>6 cups (about 3 lbs.) Jelly Belly jelly beans in flavors:   
+                    <a target="_blank" href="/search?query=chili mango&amp;asug=">Chili Mango</a> | 
+                    <a target="_blank" href="/search?query=cantaloupe&amp;asug=">Cantaloupe</a> | 
+                    <a target="_blank" href="/search?query=sunkist tangerine&amp;asug=">Sunkist® Tangerine</a> | 
+                    <a target="_blank" href="/search?query=sour orange&amp;asug=">Sour Orange</a> | 
+                    <a target="_blank" href="/search?query=sunkist orange&amp;asug=">Sunkist® Orange</a> | 
+                    <a target="_blank" href="/search?query=orange sherbet&amp;asug=">Orange Sherbet</a>
+                </li>
+                <li>9 green <a target="_blank" href="/search?query=fish&amp;asug=">Jelly Belly Chewy Fish</a></li>
+            </ul>
+            <h2>Instructions:</h2>
+            <ol class="contentList">
+                <li>Tint the vanilla frosting pale orange with the food coloring.</li>
+                <li>Trim the tops of 6 cupcakes to make level. Spread some of the orange frosting on top of one of the trimmed cupcakes. 
+                    Press cupcakes together, trimmed sides touching, to create 3 tall pumpkin shapes.
+                </li>
+                <li>Working on one tall cupcake pumpkin shape, cover the cupcake with some of the orange frosting. 
+                    To make pumpkins with horizontal rows start at the base of the cupcake and arrange a row of Jelly Belly jelly beans horizontally around the base. 
+                    Continue adding horizontal rows to cover the entire double cupcake pumpkin. To position beans vertically, start out with a straight row running 
+                    from the top of the cupcake to the bottom. Continue with rows of different shades of orange jelly beans to create the ribs of the pumpkin. Repeat with the 
+                    remaining single and double cupcakes and Jelly Belly beans.
+                </li>
+                <li>For the stem, cut the Jelly Belly Chewy Fish in half crosswise. 
+                    Using the tail half, insert the cut end into the top of the cupcakes to make the pumpkin stem.
+                </li>
+            </ol>
+            <h2>MAKES 9 CUPCAKES</h2>
+            <hr>
+           
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+
+
+

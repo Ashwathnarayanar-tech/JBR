@@ -1,0 +1,33 @@
+
+{% if model.content.productImages %}
+
+<figure class="mz-productimages-main" id="jb-images">
+    <img class="mz-zoom-icon mz-desktop" src="/resources/images/zoom-icon.png" alt="zoom-icon"/> 
+  <img itemprop="image" alt="{{ model.content.productName|safe }}" title="{{  model.content.productName|safe }}" class="mz-productimages-mainimage" data-mz-productimage-main src="{{ model.mainImage.imageUrl }}?max=1200" data-jb-Zoomimg="{{ model.mainImage.imageUrl }}" />
+  <figcaption class="mz-desktop ">Click on image to enlarge</figcaption>
+</figure>
+<figure class="mz-productimages-thumbs">
+    {% for image in model.content.productImages %}
+    <a class="mz-productimages-thumb" data-mz-productimage-thumb="{{ image.sequence }}" href="{{ image.imageUrl }}">
+        <img class="mz-productimages-thumbimage"  src="{{ image.imageUrl }}?max={{ themeSettings.maxProductImageThumbnailSize }}" />
+    </a>
+    {% endfor %}
+	<!-- now loop for video -->
+    {% for property in model.properties %}
+        {% if property.attributeFQN == "tenant~video-url" %}
+            {% for val in property.values %} 
+                <a id="open-video" class="mz-productimages-thumb" style="height: 50px; width: 50px;" href="#">
+                    <img class="mz-productimages-thumbimage"  src="/resources/images/play-button.jpg" />
+                </a>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+</figure>
+
+{% else %}
+<span class="mz-productimages-noimage">[{{ labels.noImages}}]</span>
+{% endif %}
+  
+
+
+

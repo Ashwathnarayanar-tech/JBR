@@ -1,0 +1,81 @@
+
+{% if model.count > 0 %}
+    
+    
+    <div class="jb-minicart-items-container">
+        <ul>
+        {% for item in model.items %}
+            <li>
+                {% if item.product.imageUrl and themeSettings.showCartItemImage %}
+                    <div class="item-image">
+                        <img src="{{ item.product.imageUrl }}?max=80" alt="cart-thumbnails"/>
+                    </div>
+                {% else %}    
+                    <div class="item-image">
+                        <img src="{{ siteContext.cdnPrefix }}/cms/{{siteContext.siteId}} /files/{{themeSettings.no_product_image}}?max=80" alt="cart-thumbnails"/>
+                    </div>
+                {% endif %}
+                
+                <div class="item-shop-details">
+                    <h4> {{item.product.name|safe}}</h4>
+                    <p>Price: {% if item.unitPrice.saleAmount %}{{item.product.price.salePrice|currency}} {% else %} {{ item.unitPrice.extendedAmount|currency }} {% endif %}</p>
+                    <p>Quantity: {{item.quantity}}</p>
+                </div>
+                <div class="item-sub-total">
+                    <p>Item Total</p>
+                     <h4>{{item.total|currency}}</h4>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="jb-minicart-total-container">
+            <div class="sub-total">SubTotal:<p>{{model.subtotal|currency}}</p></div>
+            <div class="shipping-details">Shipping: <p> TBD </p></div>
+             {% if model.remainingfreeshippinng > 0 %} {% comment %}  && !model.hasHeatSensitive {% endcomment%}
+                <div  class="hide-when-heat-sensitive" style="text-align: right;padding:3px 54px 3px 0px;">
+                    <p style="margin: 0px;font-size: 13px;">
+                        You are only {{model.remainingfreeshippinng|currency}} away from 
+                        <a href="/shipping-information" style="color: #07A119;text-decoration:none;">
+                        FREE Freight</a>!
+                    </p>
+                </div> 
+            {% endif %}
+            {% if model.remainingfreeshippinng == 0 %}
+                <div  class="hide-when-heat-sensitive" style="text-align: right;padding: 3px 54px 3px 0px;color: #07A119;">
+                    <p style="margin: 0px;font-size: 13px;">
+                        Congratulations, you qualify for 
+                        <a href="/shipping-information" style="color: #07A119;text-decoration:none;">FREE Freight</a>!
+                    </p>
+                </div> 
+            {% endif %}
+    </div>
+    <div class="jb-minicart-checkout-container">
+            <div class="estimated-total"> Estimated Total: {{model.total|currency}}</div>
+            <div class="cart-checkout-buttons">
+                <a href="/cart">VIEW CART</a>
+                <form method="post" action="{{ pageContext.secureHost }}/checkout" id="cartform">
+                    <input type="submit" class="submitButton {% if model.total < 100 %}orderNotAllowed {% endif %}" value="PROCEED TO CHECKOUT"/>
+                </form>
+                
+            </div>
+    </div>
+    
+{% else %}
+    <p class="no-items-found-message">
+        No products are added to cart.
+    </p>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+

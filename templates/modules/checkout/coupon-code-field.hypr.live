@@ -1,0 +1,16 @@
+﻿        <div class="mz-l-formfieldgroup-cell"  style="display: block;" >
+            <label for="coupon-code" style="text-align: left;font-weight: bold;font-size: 16px;padding-left: 9px;">Have a coupon code to redeem?  </label>
+        </div>
+        <div class="mz-l-formfieldgroup-cell">
+            <input type="text" id="coupon-code" name="coupon-code"  
+                style="border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;width: 180px;margin-top: 10px;"
+                {% for discount in model.orderDiscounts %}
+                    {% if not discount.excluded %}
+                        value="{{ discount.couponCode}}" {% else %} value=""  {% endif %}
+                {% endfor %}  data-mz-value="couponCode" >  
+            <button class="mz-button" data-mz-action="addCoupon" 
+                    {% if not model.couponCode %} disabled="disabled" {% endif %}>{{ labels.apply }}</button>
+            {% if model.errormessagecoupon %}
+                <span class="error-msg">{{model.errormessagecoupon}}</span>
+            {% endif %}   
+        </div>

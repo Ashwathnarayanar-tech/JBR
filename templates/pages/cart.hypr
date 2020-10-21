@@ -1,0 +1,94 @@
+{% extends "page" %}
+
+ 
+
+{% block body-tag-classes %} mz-cart {% endblock body-tag-classes %}
+
+{% block body-content %}
+
+{% require_script "pages/cart" %}
+
+{% preload_json model "cart" %}
+
+<div class="mz-l-container">
+<section>
+   
+       {% dropzone "cart-notification-dropzone" scope="template" %}
+    
+</section>
+   
+   
+    <div class="cart-header">
+    {% comment %}					
+        {% if pageContext.isMobile %}
+            <div  style="height:100px; background-color:#fff"></div>
+        {% endif %}
+    {% endcomment %}
+
+<h1 class="mz-pagetitle">{{ labels.cart }}</h1>
+        <style>
+            .example {
+                margin-top: 45px;
+                height: 90px;
+                background-image: url(http://cdn-tp1.mozu.com/9046-m1/cms/files/cbdacfd9-81f0-4915-84a1-9c2dc6a3c095);
+                background-repeat: no-repeat;
+                background-size: contain;
+                display:none;
+                
+            }
+
+            @media (min-width: 500px) {
+
+                .example {
+                    margin-top: -20px;
+                    margin-bottom: -75px;
+                    float: right;
+                    width: 468px;
+                    display: none;
+                    background-image: url(http://cdn-tp1.mozu.com/9046-m1/cms/files/32e27322-5936-4b8d-9533-e3072a20f542);
+                }
+            }
+        </style>
+{% comment %}
+        <div class="example"></div>
+{% endcomment %}    
+    	<!-- <figure class="cart-ad">
+    	    <img src="../resources/images/directimages/sparkGift_banner_optimizely.jpg">
+        </figure> -->
+        <div class="clearfix"></div>
+        <span style="padding-left:5px" class="disc-text"></span>
+    </div> 
+    <button class="trigger-render" style="display:none">trigger render</button>
+    <div class="oos-error"></div>
+	<form method="post" action="{{ siteContext.secureHost }}/checkout" id="cartform">
+		<input type="hidden" name="id" value="{{model.Id}}" />
+
+        {% include "modules/common/message-bar" with model=model.messages %} 
+        
+        <table class="mz-table mz-table-cart" id="cart">
+            {% include "modules/cart/cart-table" %}
+        </table>
+        
+    </form>
+	
+    <!-- <figure class="mobile-cart-ad">
+        <img src="../resources/images/directimages/sparkGift_banner_optimizely.jpg">
+    </figure> -->
+</div>
+
+
+
+ {% include_products "modules/product/crosssell-carousel" with productCodes=themeSettings.addCrosssellProductList as_parameter %}
+ <div class="recommended-prod-head" style="font-weight:bold;">Jelly Belly Also Recommends</div>  
+ {% dropzone zoneId="rti-cart" scope="template" %}
+
+{% endblock body-content %}
+
+{% require_script "modules/related-products" %}
+
+
+
+
+
+
+

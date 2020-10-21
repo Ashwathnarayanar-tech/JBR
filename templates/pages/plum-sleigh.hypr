@@ -1,0 +1,49 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Recipes Sugarplum Sleigh</h1>
+    <article class="carnival-details txt-left">
+        <h2>SUGARPLUM SLEIGH</h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg">
+                <img src="/resources/images/baking_decoration/Recipes Sugarplum Sleigh/sugarplumSleigh.jpg">
+        </figure>
+        <p>
+            The kids will delight in becoming Santa's helpers this holiday season when they
+            decorate a gingerbread sleigh dashing through candy snow.<br>
+            Gingerbread can be fashioned into all sorts of fanciful creations and
+            embellished with colorful candies. Our sleigh is filled with bags of sweets
+            nestled inside, as if delivered by Santa himself. It's terrific as a
+            centerpiece, and the bags of candy become party favors for the guests.
+        </p>
+        <p>
+            You will need approximately two batches of gingerbread to make a 16-inch sleigh.
+            </p>
+        <p><strong>A full-sized pattern is available here:</strong></p>
+        <ul class="contentList">
+            <li><a href="http://content.jellybelly.com/cachefly/Jelly-Belly/Downloads/ideasimages/sleighfrontback.jpg" target="_blank">Sleigh front and back</a></li>
+            <li><a href="http://content.jellybelly.com/cachefly/Jelly-Belly/Downloads/ideasimages/sleighbottom.jpg" target="_blank">Sleigh bottom</a></li>
+            <li><a href="http://content.jellybelly.com/cachefly/Jelly-Belly/Downloads/ideasimages/sleighleft.jpg" target="_blank">Sleigh left side</a></li>
+            <li><a href="http://content.jellybelly.com/cachefly/Jelly-Belly/Downloads/ideasimages/sleighright.jpg" target="_blank">Sleigh right side</a></li>
+        </ul> 
+
+        <hr>
+            <div class="additional-info">
+                <figure>
+                    <a href="/product/452">
+                    <img src="http://content.jellybelly.com/cachefly/Jelly-Belly/OtherImages/bakeAndDecorate/Hello_Cupcake_120.jpg" align="left" border="0" alt="Hello, Cupcake!" style="padding-right: 15px;">
+                    </a>
+                </figure>
+                <p>For more great cupcake recipes by Karen Tack and Allan Richardson, check out <em>Hello, Cupcake!</em>, available <a href="/p/7000597">here.</a></p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+
+

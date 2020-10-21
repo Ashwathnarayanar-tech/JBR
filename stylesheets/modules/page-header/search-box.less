@@ -1,0 +1,242 @@
+.mz-searchbox {
+    padding-top:6px;
+    position: relative;
+    .twitter-typeahead {
+        .tt-hint {
+            background: #FFF !important;
+        }
+    }
+    .mz-searchbox-field {
+        display: inline-block;
+        height: 26px;
+        width: 250px;
+        margin: 2px 0 0 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 19px;
+        padding: 2px 31px 4px 19px;
+        color: #444;
+        line-height: 22px;
+        font-family: @Trebuchet;
+        background: url('/resources/images/search_icon_blue.jpg') no-repeat !important;
+    }
+    .mz-searchbox-field {
+        &:focus::-webkit-input-placeholder {
+            color: transparent
+        }
+        &:focus::-moz-placeholder {
+            color: transparent
+        }
+    }
+     .mz-searchbox-button {
+        display: inline-block !important; 
+        width: 35px;
+        height: 35px;
+        margin-left: 0px; 
+        background: transparent;
+        text-indent: -999em;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        /*padding-left: 17px;*/
+        float: right;
+        position: absolute;
+        /*top: -30px;
+        left: -28px;*/
+        right : 29px;
+        right: -9px;
+        top: 5px;  
+        
+    }
+
+
+    .mz-searchbox-categories {
+        width: 100px; 
+    }
+    
+    
+    .tt-dropdown-menu {
+        box-sizing: border-box;
+        border: 1px solid #999;
+        border-width: 1px;
+        width: 350px;
+        background: #FFF;
+        //padding: 10px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px #888888;
+        left: -13px !important; 
+        .tt-dataset-terms {
+            .tt-suggestions {
+                padding-left: 3%;
+            }
+        }
+        .tt-dataset-pages {
+            display: inline-block; 
+            .tt-suggestion {
+                .search-item {
+                    height: 47px;
+                    overflow: hidden;
+                    //border-bottom: 1px solid #ddd;
+                    padding: 10px;
+                    .mz-itemlisting-thumb {
+                        display: inline-block;
+                        width: 50px;
+                        float: left;
+                        img{    
+                            max-width: 100%;
+                        }
+                    }
+                    .details{
+                        display: inline-block;
+                        float: right;
+                        width: 250px;
+                        .mz-itemlisting-title{
+                            display: inline-block;
+                            width: 200px;
+                            text-decoration: none;
+                            font-size: 12px;
+                        }
+                        
+                        .mz-itemlisting-description{
+                            width: 40px;
+                            font-size: 11px;
+                            float: right;
+                            padding: 0 0 0 10px;
+                            display: inline-block;
+                            span{
+                                //width: 100%;
+                               // font-weight: bolder;
+                                //display:inline-block;
+                               // margin: 0 auto;
+                               // padding: 0px;
+                                text-align: right;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    &:hover {
+                        background: #ffffcc;
+                        border-radius: 10px !important;
+                        border-right: 1px solid #ffffcc;
+                    }
+                    &:first-child {
+                        border-radius: 10px 10px 0 0;
+                    }
+                    &:last-child {
+                        border-radius: 0 0 10px 10px;
+                    }
+                    &:nth-of-type(even) {
+                        background: #f2f2f2;
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+    
+}
+
+::-webkit-input-placeholder {
+   color: #666;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #666;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #666;  
+}
+
+:-ms-input-placeholder {  
+   color: #666;  
+}
+
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+    .mz-pageheader-mobile{
+        .tt-dropdown-menu {
+            width: 96% !important;
+            left: 2% !important;
+            top: 80% !important;
+            .tt-dataset-terms {
+                .tt-suggestions {
+                    padding-left: 0;
+                }
+            }
+            .tt-dataset-pages {
+                display: block;
+                .tt-suggestion {
+                    .search-item{
+                        padding: 10px 2%;
+                        width: 96%;
+                        height: 25px;
+                        
+                        .mz-itemlisting-thumb {
+                            width: 10%;
+                            display: none;
+                        }
+                        .details{
+                            float: left;
+                            width: 72%; 
+                            margin-left: 5px;
+                            .mz-itemlisting-title{
+                                width: 250px;  
+                                text-align: left; 
+                                font-size: 11px;
+                            }
+                            
+                            .mz-itemlisting-description{
+                               width: 73%;
+                                font-size: 11px;
+                                label {
+                                    display: none;
+                                }
+                                span{
+                                    width: 100%;
+                                    font-weight: bolder;
+                                    display: none !important;
+                                   // margin: 0 auto;
+                                    padding: 0px;
+                                    text-align: right;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1px) and (max-width: 380px) {
+    .mz-pageheader-mobile{
+        .tt-dropdown-menu {
+            .search-item{
+                .details{
+                    .mz-itemlisting-title{
+                        width: 250px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

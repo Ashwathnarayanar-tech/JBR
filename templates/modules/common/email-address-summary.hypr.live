@@ -1,0 +1,13 @@
+<span style="display:block;line-height:21px;">{{ model.firstName }} {{ model.lastNameOrSurname }}</span><!--[if gte mso 9]><br /><![endif]-->
+<span style="display:block;line-height:21px;"> {{ model.address.address1 }}</span><!--[if gte mso 9]><br /><![endif]-->
+ {% if model.address.address2 %}
+  <span style="display:block;line-height:21px;">   {{ model.address.address2 }} </span><!--[if gte mso 9]><br /><![endif]-->
+{% endif %}
+{% if model.address.address3 %}
+   <span style="display:block;line-height:21px;"> {{ model.address.address3 }} </span><!--[if gte mso 9]><br /><![endif]-->
+{% endif %}
+<span style="display:block;line-height:21px;"> {{ model.address.cityOrTown }}, {{ model.address.stateOrProvince }} {{ model.address.postalOrZipCode }}</span><!--[if gte mso 9]><br /><![endif]-->
+<span style="display:block;line-height:21px;"> {{ model.address.countryCode }} </span><!--[if gte mso 9]><br /><![endif]-->
+{% if model.phoneNumbers.home %}
+    <span style="display:block;line-height:21px;">{{ model.phoneNumbers.home }}</span>
+{% endif %}

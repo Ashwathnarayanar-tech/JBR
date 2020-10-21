@@ -1,0 +1,51 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-w-snackbar mz-warehouse mz-baking mz-visit-us{% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <h1 class="mz-pagetitle">Birthday Bark</h1>
+    <article class="carnival-details txt-left">
+        <h2>Birthday Bark</h2>
+        <hr>
+        <div class="baking-recipe">
+            <!-- AddThis Button -->
+            <figure class="vertImage cyclingImg">
+             <img src="/resources/images/baking_decoration/bark_t.jpg" alt="Birthday Recipe">
+        </figure>
+                
+            <p>Cake’s not enough? Add to the food and festivities with these colorful dishes made to please roomfuls of partygoers. </p>
+
+            <h2>Ingredients:</h2>
+            <ul class="contentList">
+                <li>1 bag (12 oz.) white chocolate chips</li>
+                <li> ¾ C. (6 oz.) <a href="/nav/cat1/jellybellyjellybeans/0" target="_blank">Jelly Belly jelly beans,</a>     in party colors or assorted fruit flavors</li> </li>
+            </ul>
+
+           
+
+
+        <h2>Instructions:</h2>
+        <ol class="contentList">
+            <li>Pour white chocolate chips in a 2-cup glass measuring cup and microwave 2 to 4 minutes until barely melted, being careful not to overcook (chips may not look melted; stir before microwaving again). Or, melt chocolate on top of a double boiler. Stir to be sure all the chips are completely melted. </li>
+            <li>On wax paper, pour out chocolate into a 2-inch puddle, spreading to about ¼ inch thickness. </li>
+            <li>While still hot, sprinkle about 15 Jelly Belly jelly beans on each, and press beans lightly into the chocolate. Allow to cool completely. </li>
+        </ol>
+        <h2>MAKES 8 PIECES, ABOUT 16 to 20 SERVINGS.</h2>
+   
+        <hr>
+        <h2>Variations:</h2>   
+        <p>
+            <em>Chocolate &amp; Cherry Bark: Use milk chocolate chips and Very Cherry flavor of 
+            Jelly Belly jelly beans.
+            </em>
+        </p>
+        <p>
+            <em>Peanut Butter Bark: Use peanut butter chips and Grape Jelly, Top Banana or 
+            Blueberry flavors of Jelly Belly jelly beans. Or, try a combination of fruit 
+            flavors of jelly beans. </em>
+        </p>
+        </div>
+    </article>
+</section>
+{% endblock body-content %}
+

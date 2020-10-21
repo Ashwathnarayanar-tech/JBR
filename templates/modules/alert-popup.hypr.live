@@ -1,0 +1,30 @@
+
+<div class="mz-alert-body" data-mz-alert {% if model.visible %}style="display:block;"{% endif %}>
+    <div class="mz-alert-container">
+    	<div class="mz-alert-close">
+    		<div class="fa fa-times-circle fa-lg"></div>
+    	</div>
+    	<div class="mz-message-container">
+    		<div class="mz-message">{{ model.message }}</div>
+    		<div class="mz-action-btns">
+    			{% if model.subscribeBtns %}
+    				<button class="mz-btn-accept mz-btn-subscribe">GET STARTED</button> 
+	    			<button class="mz-btn-reject mz-btn-subscribe">CANCEL</button>
+    			{% else %}
+                    {% if model.subscriptionDialog %}
+                        <button class="mz-btn-accept mz-btn-proceed">PROCEED</button> 
+                        <button class="mz-btn-reject mz-btn-backtosub">BACK to Subscription</button> 
+                    {% else %}        
+                    {% if model.futureDialog %}
+                        <button class="mz-btn-accept mz-btn-proceed">OK</button>     
+                {% else %}
+    	    			<button class="mz-btn-accept">Yes</button> 
+    	    			<button class="mz-btn-reject">No</button> 
+    			{% endif %}
+                {% endif %}
+                {% endif %}
+    		</div>
+    	</div>
+    </div>
+</div>
+

@@ -1,0 +1,11 @@
+<div class="mz-accounthelp-details">
+    <h3 class="mz-l-stack-sectiontitle">HELP</h3>
+    <div class="mz-account-help">
+        <div class="account-help-link">
+            {% dropzone "my-account-helpbox-dropzone" scope="template" %}
+        </div>
+        <div class="account-help-faq">
+            {% dropzone "my-account-help" scope="template" %}
+        </div>
+    </div>
+</div>

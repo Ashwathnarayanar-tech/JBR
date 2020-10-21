@@ -1,0 +1,123 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+{% block body-tag-classes %}mz-footer-static {% endblock body-tag-classes %} 
+{% block body-content %}
+<section>
+    <div class="vending">
+    
+    <div class="mar-left10">
+    <img alt="" src="/resources/images/explore/dips/dips-logo.png" title="Dips - Jelly Belly Candy Company" /> 
+
+    <h1 class="mz-pagetitle mar-top0">Dips - Jelly Belly Candy Company</h1> 
+   </div>
+   
+    <article>
+    <div class="headline-beans">
+       <h3>Jelly Belly beans take a dip in rich, dark chocolate to bring you a tidal wave of deliciousness.</h3>
+       </div>
+       
+       <div class="headline-beans mar-top0">
+       <h2>What's special about Chocolate Dips™?</h2>
+       </div>
+       
+        <p class="mar-top0">
+      Mint, Very Cherry, Strawberry, Raspberry, Coconut and Orange flavors of Jelly Belly beans have all taken the dip to create the perfect pairing of flavor and chocolate. Jelly bean Chocolate Dips™ are gluten free, peanut free, OU Dairy Kosher certified and are less than 4 calories per bean!
+    </p>
+    
+	
+    <p class="mar-top0">
+ All five flavors of Jelly Belly Jelly Bean Chocolate Dips™ are also available in bulk.
+    </p>
+	
+
+<h6 class="beans-btn padd-left0">
+<a href="/search?query=dips" class="" title="SHOP CHOCOLATE DIPS™">SHOP Chocolate Dips™</a>
+</h6>
+
+<div class="img-block">
+<figure>
+<img alt="" src="/resources/images/explore/dips/dip1.png" title="Very Cherry" />
+</figure>
+<p>
+<a href="/search?query=dips+cherry" title="Very Cherry">Very Cherry</a>
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img src="/resources/images/explore/dips/dip2.png" title="Coconut">
+</figure>
+<p>
+<a href="/search?query=dips+coconut" title="Coconut">Coconut</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img src="/resources/images/explore/dips/dip3.png" title="Mint">
+</figure>
+<p>
+<a href="/search?query=dips+mint" title="Mint">Mint</a>  
+</p>
+</div>
+
+<div class="img-block clear">
+<figure>
+<img src="/resources/images/explore/dips/dip4.png" title="Orange">
+</figure>
+<p>
+<a href="/search?query=dips+orange" title="Orange">Orange</a> 
+</p>
+</div>
+
+<div class="img-block">
+<figure>
+<img src="/resources/images/explore/dips/dip5.png" title="Strawberry">
+</figure>
+<p>
+<a href="/search?query=dips+strawberry" title="Strawberry">Strawberry</a> 
+</p>
+</div>
+
+    <div id="fundraisingForm">
+     
+    </div>
+
+    </article>
+   </div>
+   <figure class="vendingImage">
+      <img alt="" src="/resources/images/explore/dips/dips_rgt-img.jpg">  
+    </figure>
+    <div class="clearfix"></div>
+</section>
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

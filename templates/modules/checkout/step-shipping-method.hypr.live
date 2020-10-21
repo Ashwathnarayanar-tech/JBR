@@ -1,0 +1,70 @@
+    <h3 class="mz-formstep-header">
+        <span class="step-no"><label>02</label></span>
+        <span class="checkout-icons"></span>
+        <label>{{ labels.shippingMethod }}</label>
+        <span class="step-completed"></span>
+         {% if model.requiresFulfillmentInfo %}
+        <button class="mz-button mz-button-small mz-formstep-edit" data-mz-action="edit">{{ labels.edit }}</button>
+        {% endif %}
+    </h3>
+
+    <div class="mz-formstep-body">
+        <div class="mz-formstep-summary">
+            {% if model.requiresFulfillmentInfo %} 
+                <strong>{{ model.shippingMethodName }}</strong> - <span id="shippingmethod_summary_{{ model.shippingMethodCode }}">{{ model.price|currency }}</span>
+            {% else %}
+            {{ labels.noFulfillmentInfoRequired }}
+            {% endif %}
+        </div>
+        <div class="mz-formstep-fields mz-l-formfieldgroup">
+            <p id="hide-from-heat-sensitive" style="font-weight: bold; display: block;">Orders over {{themeSettings.freeshippingBoundingValue|currency}} qualify for <a style="text-decoration:none;" href="/shipping-information">FREE Ground Shipping!</a> </p>
+            
+         <!--   <div id="heat-warning" style="display: none;">
+                {% if model.availableShippingMethods.length > 0 %}
+                    <p><strong>Your order has one or more heat-sensitive products, requiring expedited shipping to ensure that your candy arrives in the best possible condition.  For more information, please see the FAQ section, below.</strong></p>
+                {% else %}
+                    <p><strong>Because there is a heat-sensitive item in your cart, your order must ship to a domestic street address with an expedited shipping method and may not ship immediately.  Please see the FAQ section, below.</strong></p>
+                {% endif %}
+            </div> -->
+            
+            {% if model.availableShippingMethods.length > 0 %}
+				<p class="address-info">Choose Shipping Method</p> 
+                {% for method in model.availableShippingMethods %} 
+                    <div>
+                        <label>
+                            <input type="radio" name="shippingMethod" id="pre-selectchecked" value="{{ method.shippingMethodCode }}" data-mz-value="shippingMethodCode" data-mz-shipping-method  {% if model.shippingMethodCode == method.shippingMethodCode %} checked="checked" {% endif %}>
+                            {{ method.shippingMethodName }} - <span id="shippingmethod_detail_{{ method.shippingMethodCode }}">{{ method.price|currency }}</span>
+                        </label>
+                    </div>
+                {% endfor %}
+                <span class="mz-validationmessage" data-mz-validationmessage-for="shippingMethodCode"></span> 
+            {% else %}
+                <p>{{ labels.noShippingMethods }}</p>
+            {% endif %}
+        </div>
+        <div class="mz-formstep-next">
+            <button type="button" class="mz-button mz-shipmethod brontocart-ship-method" data-mz-action="next">{{ labels.contToPayInfo }}</button>
+        </div>
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

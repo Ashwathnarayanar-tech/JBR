@@ -1,0 +1,17 @@
+<div style="text-align: {{Model.config.alignment}};">
+        <iframe 
+            style="display: inline-block;"
+            width="260" 
+            height="300" 
+            frameborder="0" 
+            src="{{Model.config.googlemap}}" 
+            marginwidth="0" 
+            marginheight="0" 
+            scrolling="no">
+        </iframe>
+    <a href="{{Model.config.link}}" style="text-decoration: none;color: #0094FF; display: block;">View Larger Map</a>
+</div>
+
+
+
+

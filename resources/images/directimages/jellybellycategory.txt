@@ -1,0 +1,224 @@
+Jelly Belly
+cateory: Brands
+
+[name] => Confections
+		[description] => You'll find these candies in many of the same gourmet shops and specialty stores where you find Jelly Belly jelly beans. Look for the name Confections from the Makers of Jelly Belly.
+		[pageTitle] => Confections
+		[localeCode] => en-US
+		[metaTagTitle] => 
+		[metaTagDescription] => 
+		[metaTagKeywords] => 
+		[slug] => confections
+ [name] => Dips
+		[description] => The world's first chocolate-covered jelly beans. Flavorful jelly bean centers are drenched with rich, dark chocolate to make a decadent pairing -- a flavor sensation!
+		[pageTitle] => Dips
+		[localeCode] => en-US
+		[metaTagTitle] => 
+		[metaTagDescription] => 
+		[metaTagKeywords] => 
+		[slug] => dips		
+ [name] => Disney
+		[description] => Celebrations and events â€“ from birthdays to anniversaries, graduations to holidays â€“ get even sweeter with the iconic Disney characters of Mickey Mouse, Minnie Mouse, Donald Duck, Goofy and Pluto.
+		[pageTitle] => Disney
+		[localeCode] => en-US
+		[metaTagTitle] => 
+		[metaTagDescription] => 
+		[metaTagKeywords] => 
+		[slug] => disney
+
+[name] => Harrypotter
+		[description] => Muggles rejoice â€“ the boy wizard's favorite candies are here!  Bertie Bott's Every Flavour Beansâ„¢ features truly magical flavours, while the Chocolate Frogs include collectible trading cards â€“the lucky might get Dumbledore!
+		[pageTitle] => Harry Potter
+		[localeCode] => en-US
+		[metaTagTitle] => 
+		[metaTagDescription] => 
+		[metaTagKeywords] => 
+		[slug] => harrypotter	
+		
+ [name] => Hellokitty
+		[description] => Hello Kittyâ€™s favorite red, pink and white Jelly Belly jelly bean flavors create her personal mix and she keeps them in her own Hello Kitty candy dishes.Our Hello KittyÂ® Collection â€“ a sweet treat for any fashionista!
+		[pageTitle] => Hello Kitty
+		[localeCode] => en-US
+		[metaTagTitle] => 
+		[metaTagDescription] => 
+		[metaTagKeywords] => 
+		[slug] => hellokitty		
+[name] => Jellybelly
+		[description] => Discover the flavor adventure of the world's most famous jelly bean. Jelly Belly jelly beans expand the flavor horizons with the largest collection of flavors on the planet. The Original Gourmet Jelly Bean.
+		[pageTitle] => Jelly Belly
+		[localeCode] => en-US
+		[metaTagTitle] => 
+		[metaTagDescription] => 
+		[metaTagKeywords] => 
+		[slug] => jellybelly
+ [name] => Sportbeans
+		[description] => Athletes fuel your body with Sport Beans, a scientifically formulated source of carbohydrates, electrolytes and vitamins for peak performance.  Now featuring Sport BeansÂ® Protein Recovery Crispsâ„¢.
+		[pageTitle] => Sport Beans
+		[localeCode] => en-US
+		[metaTagTitle] => 
+		[metaTagDescription] => 
+		[metaTagKeywords] => 
+		[slug] => sportbeans
+   [name] => Sunkist
+		[description] => Bursting with natural flavors and free from artificial colors, these gourmet pectin jell confections and jelly beans delight the taste buds while remaining OU kosher, fat free, peanut free, gluten free and dairy free.
+		[pageTitle] => Sunkist
+		[localeCode] => en-US
+		[metaTagTitle] => 
+		[metaTagDescription] => 
+		[metaTagKeywords] => 
+		[slug] => sunkist
+ [name] => Tabasco
+		[description] => Jelly BellyÂ® TABASCOÂ® Jelly Beans are as spicy as the iconic sauce itself. Take a walk on the wild side and try the beans drenched in rich dark chocolate â€“ a surprisingly tasty flavor combination.
+		[pageTitle] => Tabasco
+		[localeCode] => en-US
+		[metaTagTitle] => 
+		[metaTagDescription] => 
+		[metaTagKeywords] => 
+		[slug] => tabasco	
+ [name] => Sugarfree
+		[description] =>  Our extensive sugar-free line cuts the calories (unlike most sugar-free products) while satisfying your cravings. Splenda and other sugar substitutes make sure the famous Jelly Belly flavor stays right where it belongs.
+		[pageTitle] => Sugar Free
+		[localeCode] => en-US
+		[metaTagTitle] => 
+		[metaTagDescription] => 
+		[metaTagKeywords] => 
+		[slug] => sugarfree	
+name] => Beanboozled
+		[description] => A wild collection dares you to compare some of our tastiest flavors with our craziest ones. Toothpaste? Moldy Cheese? With these flavors in disguise, you never know which one you will taste..
+		[pageTitle] => Bean Boozled
+		[localeCode] => en-US
+		[metaTagTitle] => 
+		[metaTagDescription] => 
+		[metaTagKeywords] => 
+		[slug] => beanboozled		
+ [name] => Bellyflops
+		[description] => Did you ever wonder what happens to the Jelly Belly jelly beans that are a little less perfect? Or the ones that somehow escaped the Jelly Belly logo stamper? Well, those are our beloved Belly Flops!!!!
+		[pageTitle] => Belly Flops
+		[localeCode] => en-US
+		[metaTagTitle] => 
+		[metaTagDescription] => 
+		[metaTagKeywords] => 
+		[slug] => bellyflops		
+		
+category: Jelly Belly Flavor Guides
+[name] => Jelly Belly Flavor Guides
+[description] => Discover the flavor adventure of the world's most famous jelly bean. Jelly Belly beans expand the flavor horizons with the largest collection of flavors on the planet, each a delicious delight to the taste buds. The Original Gourmet Jelly BeanÂ®.
+[pageTitle] => Jelly Belly Flavor Guides
+[localeCode] => en-US
+[metaTagTitle] => 
+[metaTagDescription] => 
+[metaTagKeywords] => 
+[slug] => jelly-belly-flavor-guides
+
+	 [name] => Jelly Belly 50 Official Flavors
+			[description] => The most amazing, delightful and delicious collection of gourmet jelly beans is an adventure in taste. 
+
+	Eating Directions:
+
+
+	Savor one flavor at a time to experience the true and distinctive taste of each Jelly Belly bean.
+			[pageTitle] => Jelly Belly 50 Official Flavors
+			[localeCode] => en-US
+			[metaTagTitle] => 
+			[metaTagDescription] => 
+			[metaTagKeywords] => 
+			[slug] => jelly-belly-50-official-flavors
+					
+					[name] => A&WÂ® Cream Soda
+                            [description] => 
+                            [pageTitle] => A&WÂ® Cream Soda
+                            [localeCode] => en-US
+                            [metaTagTitle] => 
+                            [metaTagDescription] => 
+                            [metaTagKeywords] => 
+                            [slug] => a-w-cream-soda
+							
+					[name] => A&WÂ® Root Beer
+                            [description] => 
+                            [pageTitle] => A&WÂ® Root Beer
+                            [localeCode] => en-US
+                            [metaTagTitle] => 
+                            [metaTagDescription] => 
+                            [metaTagKeywords] => 
+                            [slug] => a-w-root-beer		
+					[name] => Berry Blue
+                            [description] => 
+                            [pageTitle] => Berry Blue
+                            [localeCode] => en-US
+                            [metaTagTitle] => 
+                            [metaTagDescription] => 
+                            [metaTagKeywords] => 
+                            [slug] => berry-blue
+					[name] => Blueberry
+                            [description] => 
+                            [pageTitle] => Blueberry
+                            [localeCode] => en-US
+                            [metaTagTitle] => 
+                            [metaTagDescription] => 
+                            [metaTagKeywords] => 
+                            [slug] => blueberry
+					[name] => Bubble Gum
+                            [description] => 
+                            [pageTitle] => Bubble Gum
+                            [localeCode] => en-US
+                            [metaTagTitle] => 
+                            [metaTagDescription] => 
+                            [metaTagKeywords] => 
+                            [slug] => bubble-gum
+					[name] => Buttered Popcorn
+                            [description] => 
+                            [pageTitle] => Buttered Popcorn
+                            [localeCode] => en-US
+                            [metaTagTitle] => 
+                            [metaTagDescription] => 
+                            [metaTagKeywords] => 
+                            [slug] => buttered-popcorn
+					[name] => Cantaloupe
+                            [description] => 
+                            [pageTitle] => Cantaloupe
+                            [localeCode] => en-US
+                            [metaTagTitle] => 
+                            [metaTagDescription] => 
+                            [metaTagKeywords] => 
+                            [slug] => cantaloupe
+					
+					[name] => Cappuccino
+                            [description] => 
+                            [pageTitle] => Cappuccino
+                            [localeCode] => en-US
+                            [metaTagTitle] => 
+                            [metaTagDescription] => 
+                            [metaTagKeywords] => 
+                            [slug] => cappuccino			
+			
+	[name] => Jewel Bean Collection
+			[description] => Popular Jelly Belly jelly bean flavors finished with a beautiful pearlescent sheen!
+			[pageTitle] => Jewel Bean Collection
+			[localeCode] => en-US
+			[metaTagTitle] => 
+			[metaTagDescription] => 
+			[metaTagKeywords] => 
+			[slug] => jewel-bean-collection		
+	 [name] => Rookie FlavorsÂ®
+                            [description] => The newest Jelly Belly jelly bean flavors hope to become official flavors someday.
+
+
+In this collection, you will enjoy 7UP, Grape Crush, Orange Crush, Pomegranate Cosmo, Mojito, Peach Bellini and TABASCOÂ®.
+                            [pageTitle] => Rookie FlavorsÂ®
+                            [localeCode] => en-US
+                            [metaTagTitle] => 
+                            [metaTagDescription] => 
+                            [metaTagKeywords] => 
+                            [slug] => rookie-flavors-		
+							
+	[name] => Kids Mix
+                            [description] => Kids know what they like and they're more than happy to tell you. We asked hundreds of kids to choose their most favorite Jelly Belly jelly bean flavors. The result is this kid-approved collection the whole family will enjoy!
+                            [pageTitle] => Kids Mix
+                            [localeCode] => en-US
+                            [metaTagTitle] => 
+                            [metaTagDescription] => 
+                            [metaTagKeywords] => 
+                            [slug] => kids-mix						
+		
+		
+		

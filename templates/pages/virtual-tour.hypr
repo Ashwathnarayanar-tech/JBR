@@ -1,0 +1,20 @@
+{% extends "page" %}
+
+ 
+
+{% block body-tag-classes %}mz-visit-us mz-warehouse{% endblock body-tag-classes %}
+
+{% block body-content %}
+  <section>  
+    <iframe width="100%" height="500" style="height: 598px !important;" frameborder="0" allowfullscreen="" src="https://jellybelly.com/assets/virtualTour/factorytour.swf"></iframe>
+  </section>
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+

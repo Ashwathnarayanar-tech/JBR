@@ -1,0 +1,143 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-new-and-upcoming{% endblock body-tag-classes %}
+{% block body-content %}
+    {% require_script "pages/new-and-upcoming" %}  
+
+	
+	<div class="new-and-upcoming">
+        {% dropzone "new-and-upcoming-info-1" scope="page" %}
+    </div>	
+	<div class="new-and-upcoming">
+        {% dropzone "new-and-upcoming-info-2" scope="page" %}
+    </div>	
+	<div class="new-and-upcoming">
+        {% dropzone "new-and-upcoming-info-3" scope="page" %}
+    </div>
+	<div class="mz-cms-row">
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-1" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-2" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-3" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-4" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-5" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-6" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-7" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-8" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-9" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-10" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-11" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-12" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-13" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-14" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-15" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-16" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-17" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "new-18" scope="page" %}
+		</div>
+	</div>
+	<div class="new-and-upcoming">
+        {% dropzone "new-and-upcoming-info-4" scope="page" %}
+    </div>
+	<div class="mz-cms-row">
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-1" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-2" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-3" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-4" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-5" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-6" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-7" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-8" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-9" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-10" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-11" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-12" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-13" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-14" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-15" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-16" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-17" scope="page" %}
+		</div>
+		<div class="mz-cms-col-4-12" style="display:inline-block">
+			{% dropzone "upcoming-18" scope="page" %}
+		</div>
+	</div>
+	<div class="new-and-upcoming">
+        {% dropzone "new-and-upcoming-info-5" scope="page" %}
+    </div>
+
+  
+    <!-- Commented Mybuys Snippets since its added using Tealium    -->
+		{% comment %} 
+    
+    <script type="text/javascript"> mybuys.setPageType("HOME"); </script>
+      {% endcomment %}
+{% endblock body-content %}
+

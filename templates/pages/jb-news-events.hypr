@@ -1,0 +1,87 @@
+{% extends "page" %}
+{% block meta-tags %}
+{% parent %}
+    <meta name="robots" id="robotsMeta" content="{{themeSettings.robots_value}}" />
+    <meta name="googlebot" id="googleBotMeta" content="{{themeSettings.googlebot_value}}" />
+    <meta name="google-site-verification" content="{{themeSettings.google-site-verification_value}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="verify-v1" content="GyEpGH2+ELQEr5SNfmuM4t4YK8HYpuY49UbvQgcxFUM=" />
+    <meta name="description" content="Jelly Belly Candy Company - Official Site.  Features Factory fresh candy, jelly beans, chocolate, gummy, licorice and more" />
+    <meta name="keywords" content="Candy, jelly jeans, candy,  chocolate,  gummy, licorice, Bean Boozled, beanboozled, belly flops " />
+    <meta name="owner" content="Jelly Belly Candy Company" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+{% endblock meta-tags %}
+ 
+
+{% block body-tag-classes %}mz-visit-us mz-factory{% endblock body-tag-classes %}
+
+{% block body-content %}
+    
+    <h1 class="mz-pagetitle">Jelly Belly News &amp; Events</h1>
+    <ul class="jb-feature-brands">
+        
+        <li class="jb-feature-brand-listing"> 
+            <div class="jb-feature-brand-item">
+                <h3>Event Calendar</h3>
+                <figure class="right-brandimg">
+                  <a href="/event-calendar">
+                    <img src="/resources/images/jb-news-and-events/events.png" alt="" title="Event Calendar" width="98" >
+                  </a>
+                </figure>
+                <p>
+                 Get details on the exciting events that Jelly Belly is involved in, from cycling races to Belly Flop sales! 
+                  <a class="jb-feature-brand-moreinfo" href="/event-calendar">More Info ►</a>
+                </p>
+                
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Newsroom</h3>
+                <figure>
+                  <a href="http://news.jellybelly.com/index.php" title="Newsroom">
+                    <img src="/resources/images/jb-news-and-events/news.png" alt="" width="133" >
+                  </a>
+                </figure>
+                <p>
+                  What’s new with us? Read about all the thrilling, fun and sometimes wacky happenings in the world of Jelly Belly.
+                  <a class="jb-feature-brand-moreinfo" href="http://news.jellybelly.com/index.php">More Info ►</a>
+                </p> 
+                <div class="clearfix"></div>
+            </div>
+        </li>
+        
+        
+        <li class="jb-feature-brand-listing">
+            <div class="jb-feature-brand-item">
+                <h3>Sponsorhips</h3>
+                <figure>
+                  <a href="/sportsSponsorships" title="Sponsorhips">
+                    <img src="/resources/images/jb-news-and-events/athletes.jpg" alt="" width="133" >
+                  </a>
+                </figure>
+                <p>
+                  Candy isn't the only thing you'll find with the Jelly Belly name on it. We sponsor many exciting people and programs in areas from golf to drag racing.
+                  <a class="jb-feature-brand-moreinfo" href="/sportsSponsorships">More Info ►</a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+      
+    </ul>
+    
+    <div class="clearfix"></div>
+{% endblock body-content %}
+
+
+
+
+
+
+
+

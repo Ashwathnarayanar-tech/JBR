@@ -1,0 +1,56 @@
+{% extends "page" %}
+    {% block meta-candytags %}
+     <meta name="description" content = "{{model.properties.metainfo}}">
+     <meta name="keyword" content = "{{model.properties.metakey}}">
+    {% endblock meta-candytags %}
+
+{% block stylesheets %}
+    {% parent %}
+    <link href="http://t.p.mybuys.com/clients/JELLYBELLY/css/styles.css" type="text/css" rel="stylesheet" id="mybuysstyles">
+{% endblock stylesheets %}
+
+{% block head-tag-scripts %}
+    {% parent %}
+    <script type="text/javascript" src="http://t.p.mybuys.com/js/mybuys4.js"> </script>
+    <script type="text/javascript" src="http://t.p.mybuys.com/clients/JELLYBELLY/js/setup.js"> </script> 
+{% endblock head-tag-scripts %}
+ 
+{% block body-tag-classes %}mz-footer-static{% endblock body-tag-classes %}
+{% block body-content %}
+{% require_script "pages/static-page" %}
+
+    {{model.properties.Body|safe}}
+    
+    <div mybuyszone="{{themeSettings.mybuyszone}}" class="recommended-product"></div>  
+    
+    {% require_script "pages/static-page" %}
+    
+    <script type="text/javascript">
+    	mybuys.setPageType("CATEGORY"); 
+    	mybuys.set("categoryid",{{model.properties.category}});
+    </script>
+    <script type="text/javascript">
+    	mybuys.initPage();
+    </script>
+    
+{% endblock body-content %}
+
+
+{% comment %}
+{% block body-tag-telium %}
+    <script type="text/javascript" data-jb-tealium>
+        function tf() {
+            console.log("Overrriding telium call");
+        }
+    </script>
+{% endblock body-tag-telium %}	
+{% endcomment }
+
+
+
+
+
+
+
+
+

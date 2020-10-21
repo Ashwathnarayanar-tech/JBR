@@ -1,0 +1,52 @@
+{% extends "page" %}
+
+{% block body-tag-classes %}mz-subscription-confirmation{% endblock body-tag-classes %}
+{% block breadcrumbs %} {% endblock breadcrumbs %}
+{% block body-content %}
+
+{#<div class="mz-loader"> Please Wait... </div>#}
+<div class="mz-confirmation-container is-loading">
+	<div>
+		<div class="mz-confirmation-header">
+			<h1>Subscription Confirmation</h1>
+			<h3>Thank you for your subscription!<br class="mobile" /> You will receive an email confirmation.</h3>
+
+		</div>
+
+		<div class="mz-shipping-info">
+			<h3>Shipping</h3>
+			<table class="mz-shippinginfo-table">
+				<thead>
+					<th class="mz-long">PRODUCT</th>
+					<th class="mz-short">QTY</th>
+					<th class="mz-short">EACH</th>
+					<th class="mz-short">TOTAL</th>
+				</thead>
+				<tbody></tbody>
+				<tfoot></tfoot>
+			</table>
+		</div>
+
+		<div class="mz-payment-info">
+			<h3>Payment</h3>
+			<table class="mz-payment-table">
+				<thead></thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<div class="mz-schedule-info">
+			<h3>Scheduled</h3>
+			<table class="mz-schedule-table">
+				<thead></thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="mz-pricing-info"></div>
+</div>
+
+
+{% require_script "pages/subscription-confirmation" %}
+{% endblock body-content %}

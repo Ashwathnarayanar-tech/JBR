@@ -1,0 +1,518 @@
+{% extends "page" %}
+ 
+{% block body-tag-classes %}mz-footer-static mz-wedding{% endblock body-tag-classes %} 
+{% block body-content %}
+{% require_script "modules/common" %} 
+<section>
+    <article class="wedding-title">
+        <p class="sectionTitle">Jelly Belly Wedding Center</p>
+        <img class="ring" src="http://content.jellybelly.com/cachefly/Jelly-Belly/WeddingCenter/rings.gif" />
+        <div class="clearfix"></div>
+    </article>
+    <div class="wedding-center">
+        <div class="weddingNav">
+            <p class="sectionTitle whereToStartText">Wedding Guide</p>
+            <img src="/resources/images/wedding/brideGroom.png" alt="brideGroom"/> 
+            <ul>
+                <li><a href="/wedding-center">Wedding Center Home</a> &#9658;</li>
+                <li><a href="/wedding-ideas">Wedding Themes</a> &#9658;</li>
+                <li><a href="/wedding-color-palettes">Color Palettes</a> &#9658;</li>
+                <li><a href="/wedding-personalized-favors">Personalized Favors</a> &#9658;</li>
+                <li><a href="/wedding-featured-candy">Featured Candy</a> &#9658;</li>
+                <li><a class="candyCalculatorModal" href="">Candy Calculator</a> &#9658;</li>
+            </ul>
+        </div>
+        <div class="weddingBody">
+            <div id="beach-wedding" style="display:none;">
+                <p class="sectionTitle" style="font-size: 50px;">Beach Wedding</p>
+                <hr />
+                <div class="theme-slider">
+                    <a class="more-theme" href="/wedding-ideas">View more wedding themes here</a>
+                    <div class="clearfix"></div>
+                    <div class="slider">
+                        
+                        <div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Beach Wedding/1.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Beach Wedding/2.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Beach Wedding/3.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Beach Wedding/4.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Beach Wedding/5.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Beach Wedding/6.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Beach Wedding/7.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Beach Wedding/8.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Beach Wedding/9.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Beach Wedding/10.jpg" alt=""/>
+            			</div>
+                        
+                    </div>
+                    <p>
+                        A Burlap tarp and gift bags keep the sandy appearance while keeping the sand out of your candy. And use pure white seashells and starfish to make the turquoise tint of the jelly beans pop brightly in the sunshine. 
+                        Clear glass or plastic bowls and jars can hold the remaining beans without clashing with the motif. 
+                    </p>
+                    <div class="candy-color-used">
+                        <div class="candy-used">
+                            <span class="sectionTitle">Candy Used</span>
+                            <ul class="liImg">
+                                <li><a href="/search?query=7UP">7UP&reg; Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=berry%20blue">Berry Blue Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=cream%20soda">A&amp;W&reg; Cream Soda Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=juicy%20pear">Juicy Pear Jelly Belly jelly beans</a></li>
+                            </ul>
+                        </div>
+                        <div class="color-used">
+                            <span class="sectionTitle">Colors:</span>
+                            <ul class="liImg">
+                                <li>Green</li>
+                                <li>Light Green</li>
+                                <li>White</li>
+                                <li>Light Blue</li>
+                                <li>Sand</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+            <div id="california-wedding" style="display:none;">
+                <p class="sectionTitle" style="font-size: 50px;">California Wedding</p>
+                <hr />
+                <div class="theme-slider">
+                    <a class="more-theme" href="/wedding-ideas">View more wedding themes here</a>
+                    <div class="clearfix"></div>
+                    <div class="slider">
+                    
+                        <div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/California Wedding/1.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/California Wedding/2.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/California Wedding/3.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/California Wedding/4.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/California Wedding/5.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/California Wedding/6.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/California Wedding/7.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/California Wedding/8.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/California Wedding/9.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/California Wedding/10.jpg" alt=""/>
+            			</div>
+                        
+                    
+                    </div>
+                    <p>
+                        Infuse your ceremony with Golden State charm, no matter where it’s held. Use bright orange and yellow confections and accessories against
+                        a baby blue foundation to make your candy bar resemble a dazzling meadow against a brilliant sky. Miniature Jelly Belly pails, curvy glass jars and little tins personalized at MyJellyBelly.com give it a touch of that unmistakable California style. 
+                    </p>
+                    <div class="candy-color-used">
+                        <div class="candy-used">
+                            <span class="sectionTitle">Candy Used</span>
+                            <ul class="liImg">
+                                <li><a href="/search?query=sunkist%20orange">Sunkist&reg; Orange Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=orange%20sherbet">Orange Sherbet Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=sour%20orange">Sour Orange Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=caramel%20corn">Caramel Corn Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=peach">Peach Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=peach%20bellini">Peach Bellini Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=berry%20blue">Berry Blue Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=cream%20soda">A&amp;W&reg; Cream Soda Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=coconut">Coconut Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=orange%20slices">Sunkist&reg; Orange Slices</a></li>
+                                <li><a href="/search?query=fruit%20gems">Sunkist&reg; Fruit Gems in Orange &amp; Grapefruit flavors</a></li>
+                                <li><a href="/search?query=candy%20corn">Candy Corn by Jelly Belly</a></li>
+                                <li><a href="/search?query=champagne">Champagne Bubbles by Jelly Belly</a></li>
+                                <li><a href="/search?query=peach%20rings">Peach Rings by Jelly Belly</a></li>
+                            </ul>
+                        </div>
+                        <div class="color-used">
+                            <span class="sectionTitle">Colors:</span>
+                            <ul class="liImg">
+                                <li>Orange</li>
+                                <li>Light Blue</li>
+                                <li>Yellow</li>
+                                <li>White</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+            <div id="contemporary-wedding" style="display:none;">
+                <p class="sectionTitle" style="font-size: 50px;">Contemporary Wedding</p>
+                <hr />
+                <div class="theme-slider">
+                    <a class="more-theme" href="/wedding-ideas">View more wedding themes here</a>
+                    <div class="clearfix"></div>
+                    <div class="slider">
+                    
+                    
+                        <div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Contemporary Wedding/1.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Contemporary Wedding/2.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Contemporary Wedding/3.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Contemporary Wedding/4.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Contemporary Wedding/5.jpg" alt=""/>
+            			</div>
+            			
+                    </div>
+                    <p>
+                        The Contemporary Wedding aims to be hip and stylish without looking too extravagant or worse, outdated a year or two in the future. Well-defined shapes like squares and circles are always simultaneously modern,
+                        yet classic. And the green, white and black color pattern is equally enduring. Finally, adding cream-colored flowers will soften the shapes and keep your party from feeling like geometry class.
+                    </p>
+                    <div class="candy-color-used">
+                        <div class="candy-used">
+                            <span class="sectionTitle">Candy Used</span>
+                            <ul class="liImg">
+                                <li><a href="/search?query=coconut">Coconut Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=sour%20apple">Sour Apple Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=licorice">Licorice Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=wild%20blackberry">Wild Blackberry Jelly Belly jelly beans</a></li>
+                            </ul>
+                        </div>
+                        <div class="color-used">
+                            <span class="sectionTitle">Colors:</span>
+                            <ul class="liImg">
+                                <li>Green</li>
+                                <li>Black</li>
+                                <li>White</li>
+                                <li>Off White</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+            <div id="garden-wedding" style="display:none;">
+                <p class="sectionTitle" style="font-size: 50px;">Garden Wedding</p>
+                <hr />
+                <div class="theme-slider">
+                    <a class="more-theme" href="/wedding-ideas">View more wedding themes here</a>
+                    <div class="clearfix"></div>
+                    <div class="slider">
+                    
+                    
+                        <div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Garden Wedding/1.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Garden Wedding/2.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Garden Wedding/3.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Garden Wedding/4.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Garden Wedding/5.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Garden Wedding/6.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Garden Wedding/7.jpg" alt=""/>
+            			</div>
+                    
+                    </div>
+                    <p>
+                       Light pinks, creams and whites and the smell of freshly-cut roses seem made for each other. Floral patterns abound, even on the cups. But the soft colors are subtle enough to give your party the feel of a pristinely-manicured garden. Place jelly beans in
+                       small vases or circular candy dishes, and place cupcakes on tiers to resemble a scrumptious little topiary. 
+                    </p>
+                    <div class="candy-color-used">
+                        <div class="candy-used">
+                            <span class="sectionTitle">Candy Used</span>
+                            <ul class="liImg">
+                                <li><a href="/search?query=bubble%20gum">Bubble Gum Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=cotton%20candy">Cotton Candy Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=french%20vanilla">French Vanilla Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=raspberry">Raspberry Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=strawberry%20cheesecake">Strawberry Cheesecake Jelly Belly jelly beans</a></li>
+                            </ul>
+                        </div>
+                        <div class="color-used">
+                            <span class="sectionTitle">Colors:</span>
+                            <ul class="liImg">
+                                <li>Pink</li>
+                                <li>Light Pink</li>
+                                <li>White</li>
+                                <li>Red</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="rustic-wedding" style="display:none;">
+                <p class="sectionTitle" style="font-size: 50px;">Rustic Wedding</p>
+                <hr />
+                <div class="theme-slider">
+                    <a class="more-theme" href="/wedding-ideas">View more wedding themes here</a>
+                    <div class="clearfix"></div>
+                    <div class="slider">
+                    
+                        
+                        <div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/1.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/2.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/3.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/4.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/5.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/6.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/7.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/8.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/9.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/10.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/8.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/9.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Rustic Wedding/10.jpg" alt=""/>
+            			</div>
+                    
+                    </div>
+                    <p>
+                        You can search yard sales and thrift stores to find what you need for this country-style candy bar. An old wooden dresser or cabinet, vintage glass jars and tarnished, galvanized aluminum tins and cups become new again when arranged just right and filled with Jelly Belly treats. Muted
+                        wallpapers and posters that may have lost some color retain all their charm as backdrops in this fun theme. 
+                    </p>
+                    <div class="candy-color-used">
+                        <div class="candy-used">
+                            <span class="sectionTitle">Candy Used</span>
+                            <ul class="liImg">
+                                <li><a href="/search?query=cappuccino">Cappuccino Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=champagne">Champagne Bubbles</a></li>
+                                <li><a href="/search?query=pectin%20drops">Chocolate-Covered Cherry Pectin Drops</a></li>
+                                <li><a href="/search?query=raisins">Chocolate Raisins</a></li>
+                                <li><a href="/search?query=chocolate%20pudding">Chocolate Pudding Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=coconut">Coconut Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=white%20chocolate">White Chocolate Dutch Mints</a></li>
+                                <li><a href="/search?query=french%20vanilla">French Vanilla Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=white%20jordan">White Jordan Almonds</a></li>
+                                <li><a href="/search?query=juicy%20pear">Juicy Pear Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=malt%20balls">Chocolate Malt Balls</a></li>
+                                <li><a href="/search?query=mint%20mint%20chocolate">Mint Mint Chocolate Chocolate Chip<sup>&reg;</sup><br>Cold Stone Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=sour%20grape">Sour Grape Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=blueberry">Blueberry Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=toasted">Toasted Marshmallow Jelly Belly jelly beans</a></li>
+                            </ul>
+                        </div>
+                        <div class="color-used">
+                            <span class="sectionTitle">Colors:</span>
+                            <ul class="liImg">
+                                <li>White</li>
+                                <li>Brown</li>
+                                <li>Dark Brown</li>
+                                <li>Light Brown</li>
+                                <li>Green</li>
+                                <li>Light Green</li>
+                                <li>Blue</li>
+                                <li>Light Blue</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+            <div id="uptown-wedding" style="display:none;">
+                <p class="sectionTitle" style="font-size: 50px;">Uptown Wedding</p>
+                <hr />
+                <div class="theme-slider">
+                    <a class="more-theme" href="/wedding-ideas">View more wedding themes here</a>
+                    <div class="clearfix"></div>
+                    <div class="slider">
+                    
+                        
+                        <div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Uptown Wedding/1.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Uptown Wedding/2.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Uptown Wedding/3.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Uptown Wedding/4.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Uptown Wedding/5.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Uptown Wedding/6.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Uptown Wedding/7.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Uptown Wedding/8.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Uptown Wedding/9.jpg" alt=""/>
+            			</div>
+            			
+                    </div>
+                    <p>
+                        Sophisticated yet simple, vibrant yet slightly subdued, this motif may be “Uptown,” but it can be achieved on any budget. It’s all about color choices and placement. Sky blue hues reflect off lustrous silver platters and utensils to make them shine even brighter. Use white/ivory
+                        flowers as elegant neutrals, and dark brown napkins and candies to add the perfect touch of warmth. 
+                    </p>
+                    <div class="candy-color-used">
+                        <div class="candy-used">
+                            <span class="sectionTitle">Candy Used</span>
+                            <ul class="liImg">
+                                <li><a href="/search?query=cappuccino">Cappuccino Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=pudding">Chocolate Pudding Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=french%20vanilla">French Vanilla Jelly Belly jelly beans</a></li>
+                            </ul>
+                        </div>
+                        <div class="color-used">
+                            <span class="sectionTitle">Colors:</span>
+                            <ul class="liImg">
+                                <li>Dark Brown</li>
+                                <li>Brown</li>
+                                <li>White</li>
+                                <li>Light Blue</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="zen-wedding" style="display:none;" >
+                <p class="sectionTitle" style="font-size: 50px;">Zen Wedding</p>
+                <hr />
+                <div class="theme-slider">
+                    <a class="more-theme" href="/wedding-ideas">View more wedding themes here</a>
+                    <div class="clearfix"></div>
+                    <div class="slider">
+                    
+                        
+                        <div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Zen Wedding/1.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Zen Wedding/2.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Zen Wedding/3.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Zen Wedding/4.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Zen Wedding/5.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Zen Wedding/6.jpg" alt=""/>
+            			</div>
+            			<div class="viewport_gallery_slide">
+            				<img src="/resources/images/Wedding Theme/Zen Wedding/7.jpg" alt=""/>
+            			</div>
+                    </div>
+                    <p>
+                        A hint of Asian allure goes a long way in the Zen Wedding party. Use white tablecloths and place settings with understated glassware, and offset it all with quirky, bright green origami fortune tellers. The jelly beans inside are a fun, unexpected twist. 
+                        Single stalks of lucky bamboo and elegant orchids are the ideal accents to create a calming yet jovial vibe. 
+                    </p>
+                    <div class="candy-color-used">
+                        <div class="candy-used">
+                            <span class="sectionTitle">Candy Used</span>
+                            <ul class="liImg">
+                                <li><a href="/search?query=green%20apple">Green Apple Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=juicy%20pear">Juicy Pear Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=margarita">Margarita Jelly Belly jelly beans</a></li>
+                                <li><a href="/search?query=sunkist%20lime">Sunkist&reg; Lime Jelly Belly jelly beans</a></li>
+                            </ul>
+                        </div>
+                        <div class="color-used">
+                            <span class="sectionTitle">Colors:</span>
+                            <ul class="liImg">
+                                <li>Green</li>
+                                <li>Light Green</li>
+                                <li>White</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- /Zen Wedding -->
+    </div>
+</section>
+<script src="{{siteContext.cdnPrefix}}/scripts/vendor/cufon.js"></script> 
+<script src="{{siteContext.cdnPrefix}}/scripts/vendor/UniRom_500.font.js"></script>
+<script type="text/javascript">Cufon.replace('.sectionTitle');</script>
+<script type="text/javascript">Cufon.now();</script>
+{% endblock body-content %}
+
+
+
+
+
+
+

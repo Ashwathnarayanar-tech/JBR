@@ -1,0 +1,41 @@
+<ul class="mz-pro-main">
+{% for pro in model.items %}
+    <li class="mz-pro-sub" data-mz-product="{{ pro.productCode }}"> 
+   <div class="bun" ><img src="{{ pro.mainImage.src }}" alt="no image availabe"/></div> 
+        <div>
+            <div class="prod-detail">
+                <p class="prod-name"><a href="{{pro.url}}">{{ pro.content.productName|safe }}</a></p>
+                <p class="prod-price">Price: {{ pro.price.price|currency }}</p>
+                {% if pro.price.salePrice < pro.price.price %}  
+                    <p class="prod-sale-price" >Sale:  {{ pro.price.salePrice|currency }}</p>
+                {% endif %}
+            </div>
+            <div class="qty" {% if not pro.purchasableState.isPurchasable %} disabled="disabled" {% endif %}>  
+                Quantity
+                <input prqtys class="quantity" value="1" type="number" min="1" max="20" placeholder="1"> 
+                <span data-mz-action="checked" id="check-p" class="check-style"><i id="check02" class="fa fa-check"></i>   
+                <input type="checkbox" value="{{ pro.productCode }}" prodname="{{ pro.content.productName }}"  price ="{{ pro.price.salePrice }}" 
+                class="check" add-to-pro-list {% if not pro.purchasableState.isPurchasable %} disabled="disabled" {% endif %}> </span> 
+            </div>
+        </div>
+         {% if not pro.purchasableState.isPurchasable %} <p class="out-of-stock"> Out of Stock </p> {% endif %}
+    </li> 
+{% endfor %}
+</ul>
+ 
+
+   
+  
+  
+    
+
+
+
+
+
+
+
+
+
+
+

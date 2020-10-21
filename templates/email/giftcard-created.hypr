@@ -1,0 +1,223 @@
+  {% extends "email/email" %}
+
+  {% block body-content %}
+   
+   {% for digiPack in model.Order.digitalPackages  %}
+        {% with forloop.counter0  as giftCount%}
+            {% for digiCode in digiPack.items%}
+                {% if forloop.counter0 == 0 %}
+                    {% if digiCode.giftCardCode == model.credit.code %} 
+                        
+                    
+   
+        <div style="text-align: center;">
+           {% for item in model.Order.items  %}
+            {% if giftCount == forloop.counter0 %}
+               {% for propertie in item.product.properties %}
+                    {% if propertie.attributeFQN == "tenant~gift-picture" %}
+                        {% for val in propertie.values %}
+                                <img style="max-width: 100%;" src="http:{{ siteContext.cdnPrefix }}/cms/{{ siteContext.siteId}}/files/{{val.value}}" />
+                        {% endfor %}
+                    {% endif %}
+                    {% if propertie.attributeFQN == "tenant~gift-type" %}
+                        {% for val in propertie.values %}
+                            <h2 style=" color: #4DA4E4 !important;
+                                    display: block;
+                                    font-size: 36px;
+                                    padding: 0px 9px;
+                                    margin: 7px 0px;
+                                    line-height: 45px;">
+                            {{val.value}}</h2>                  
+                        {% endfor %}
+                    {% endif %}
+               {% endfor %}
+            {% endif %}
+        {% endfor %}
+            
+           
+            
+            <div style="clear:both;"></div>
+        </div>
+        
+        <div>
+            <p style="  line-height: 21px;
+                        color: #000000;
+                       
+                        font-size: 17px;
+                        padding: 8px 0;
+                        width: 100%;
+                        display: block;
+                        margin: 0px;">
+                Hi,</p><br />
+                
+                {% if model.order.shopperNotes.giftMessage %}
+                     <p style="  line-height: 21px;
+                        color: #209BC8;
+                        
+                        font-size: 17px;
+                        padding: 10px 0;
+                        width: 100%;
+                        display: block;
+                        margin: 0px;">{{model.order.shopperNotes.giftMessage}}</p><br />         
+                {% endif %}
+            
+                {% for item in model.Order.items  %}
+                {% if giftCount == forloop.counter0 %}
+                {% for propertie in item.product.properties %}
+                    {% if propertie.attributeFQN == "tenant~gift-type" %}
+                            {% for val in propertie.values %}
+                                {% if val.value == "Generic" %}
+                                <p style="  line-height: 21px;
+                        color: #000000;
+                        
+                        font-size: 17px;
+                        padding: 10px 0;
+                        width: 100%;
+                        display: block;
+                        margin: 0px;">
+                                    {{ labels.giftCardLabelGeneric|string_format(model.Order.billingInfo.billingContact.firstName,model.Order.billingInfo.billingContact.lastNameOrSurname,model.Order.billingInfo.billingContact.firstName)}}</p>         
+                                {% else %}
+                                    {% if val.value == "Happy Birthday" %}
+                                    <p style="  line-height: 21px;
+                        color: #000000;
+                        
+                        font-size: 17px;
+                        padding: 10px 0;
+                        width: 100%;
+                        display: block;
+                        margin: 0px;">
+                                        {{ labels.giftCardLabelHappyBirthday|string_format(model.Order.billingInfo.billingContact.firstName,model.Order.billingInfo.billingContact.lastNameOrSurname,model.Order.billingInfo.billingContact.firstName)}}</p>
+                                    {% else %}
+                                        {% if val.value == "Thank You" %}
+                                        <p style="  line-height: 21px;
+                        color: #000000;
+                        
+                        font-size: 17px;
+                        padding: 10px 0;
+                        width: 100%;
+                        display: block;
+                        margin: 0px;">
+                                            {{ labels.giftCardLabelThankYou|string_format(model.Order.billingInfo.billingContact.firstName,model.Order.billingInfo.billingContact.lastNameOrSurname,model.Order.billingInfo.billingContact.firstName)}}</p>
+                                        {% else %}
+                                            {% if val.value == "Congratulations" %}
+                                            <p style="  line-height: 21px;
+                        color: #000000;
+                        
+                        font-size: 17px;
+                        padding: 10px 0;
+                        width: 100%;
+                        display: block;
+                        margin: 0px;">
+                                                {{ labels.giftCardLabelCongratulations|string_format(model.Order.billingInfo.billingContact.firstName,model.Order.billingInfo.billingContact.lastNameOrSurname,model.Order.billingInfo.billingContact.firstName)}}</p>
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+                {% endfor %}
+                
+        </div>
+        <div>
+            <p style="  line-height: 21px;
+                        color: #000000;
+                        
+                        font-size: 17px;
+                        padding: 10px 0;
+                        width: 100%;
+                        display: block;
+                        margin: 0px;">
+                This Gift Card can be used only at <a style="text-decoration: none;color: #209BC8;"  href="www.jellybelly.com">www.jellybelly.com</a> and should be treated as cash.  Whoever has the Gift Card Claim Code (listed below) will be able to use the full amount that is available on the Gift Card.  To keep this number safe, you might want to write down the Claim Code so that you have a copy.
+            </p>
+        </div>
+        <table>
+            <tr>
+                <td style="line-height: 21px;
+                            color: #000000;
+                            
+                            font-size: 17px;
+                            padding: 7px 10px;
+                            width: 155px;
+                            display: inline-block;">
+                    Gift Card Amount:</td>
+                <td style="line-height: 21px;
+                            color: #2693D5;
+                            font-weight: 600;
+                            
+                            font-size: 17px;
+                            padding: 7px 10px;
+                            display: inline-block;">
+                    {{model.Credit.CurrentBalance|currency}}</td>
+            </tr>
+            <tr>
+                <td style="line-height: 21px;
+                            color: #000000;
+                            font-size: 17px;
+                            padding: 7px 10px;
+                            width: 155px;
+                            display: inline-block;">
+                    Claim Code:</td>
+                <td style="line-height: 21px;
+                        color: #2693D5;
+                        font-weight: 600;
+                        font-size: 17px;
+                        padding: 7px 10px;
+                        display: inline-block;">
+                    {{model.Credit.Code}}</td>
+            </tr>
+            <tr>
+                <td style="line-height: 21px;
+                            color: #000000;
+                            font-size: 17px;
+                            width: 155px;
+                            padding: 7px 10px;
+                            display: inline-block;">
+                    Instructions:</td>
+                <td style="line-height: 21px;
+                            color: #000;
+                            font-size: 17px;
+                            padding: 7px 10px;
+                            display: inline-block;">
+                    To redeem your gift, visit us at <br><a style=" text-decoration: none; color: #00AEEF; " href="http://{{domainName}}/">{{domainName|safe}}</a></td>
+            </tr>
+        <table>
+        
+        <p style="line-height:21px; color:#000000;display: block;  font-size: 16px; padding: 10px 0; width:100%; ">
+            Sweet Regards,<br>
+            Jelly Belly
+        </p>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+   {% endfor %}
+{% endblock body-content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

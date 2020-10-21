@@ -1,0 +1,44 @@
+<div class="jelly-belly-bean-art-gallery-widget">
+    <div class="artgallery-loader">
+        <span class="artgallery-loader-spin"><span>
+    </div>
+    <p class="art-gallery-mainhead">Jelly Belly Bean Art Collection</p> 
+    <div class="jelly-belly-bean-art-gallery-main-menu">
+        {% for obj in model.config.data %}
+            <p {% if forloop.counter == 1%}class="active"{% endif %} maingalleryid="{{obj.id}}">{{obj.name}}</p>
+        {% endfor %}
+    </div>
+    <div class="jelly-belly-bean-art-gallery-item">
+        {% for obj in model.config.data %}
+            <img class="gallery-item gallery-item-image" mainbanner="{{obj.id}}" src="{{obj.mainImageURL}}" {% if forloop.counter != 1%}style="display:none;"{% endif %}/>
+            {% for detailItem in obj.details%}
+                <div class="gallery-item gallery-item-detail" subgallerydetails="{{obj.id}}{{detailItem.orderId}}" style="display:none;">
+                    <img class="detail-image" src="{{detailItem.mainImg}}"/>
+                    <div class="detail-desc">
+                        <h3>{{detailItem.name}}</h3>
+                        {% if detailItem.artist %}<p class="spec">Artist : {{detailItem.artist}}</p>{% endif %}
+                        {% if detailItem.dimension %}<p class="spec">Dimension : {{detailItem.dimension}}</p>{% endif %}
+                        {% if detailItem.year %}<p class="spec">Year : {{detailItem.year}}</p>{% endif %}
+                        <p>{{detailItem.desc}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>   
+    
+    <div class="jelly-belly-bean-art-gallery-thumps">
+        {% for obj in model.config.data %}
+            <div class="gallery-carousel gallery-carousel-group" maincarousal="{{obj.id}}" {% if forloop.counter != 1%}style="display:none;"{% endif %}>
+            {% for detailItem in obj.details%}
+                <img subgallerydetailsid="{{obj.id}}{{detailItem.orderId}}" src="{{detailItem.thumpImg}}?max=100"/>
+            {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% require_script "widgets/jelly-belly-bean-artgallery" %} 
+
+
+
+
