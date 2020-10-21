@@ -1,3 +1,4 @@
+/*jshint -W030 */
 ({
     paths: {
         jquery: "empty:",
@@ -31,27 +32,35 @@
                 'modules/models-messages',
                 'modules/models-product',
                 'modules/scroll-nav',
-                'modules/search-autocomplete',
+                //'modules/search-autocomplete',
                 'modules/views-collections',
                 'modules/views-messages',
                 'modules/views-paging',
                 'modules/views-productlists',
-                'pages/jb-tealium-new',
-                'modules/header-myaccount',
-                //'widgets/rti-observation',
-                //'vendor/baynote',
-                //'modules/menu',
-                //'pages/jb-overlay-popup',
-                'widgets/column'
+                'modules/menu',
+                'modules/minicart',
+				        'modules/browser-info',
+				        // 'modules/pepperjam',				
+				        'modules/zinrelo',
+                'modules/geodetect',
+				        'pages/flavor-guides',
+                'modules/new-lazy-load'
             ],
             exclude: ['jquery'],
         },
         {
             name: "pages/cart",
+			include: [
+            'modules/geodetect'
+        ],
             exclude: ["modules/common"]
         },
         {
             name: "pages/category",
+            include: [
+            'modules/geodetect',
+			'modules/add-to-wishlist-modal'
+		],
             exclude: ["modules/common"]
         },
         {
@@ -72,10 +81,17 @@
         },
         {
             name: "pages/product",
+            include: [
+            'modules/geodetect',
+            'modules/add-to-wishlist-modal'
+          ],
             exclude: ["modules/common"]
         },
         {
             name: 'pages/search',
+			include: [
+            'modules/geodetect'
+          ],
             exclude: ["modules/common"]
         }
     ]

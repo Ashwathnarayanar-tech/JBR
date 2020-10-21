@@ -1,6 +1,7 @@
 /* global module: true */
 module.exports = function (grunt) {
     'use strict';
+    grunt.loadNpmTasks('grunt-contrib-watch');
     var pkg = grunt.file.readJSON('./package.json');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -8,7 +9,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-mozu-appdev-sync');
     grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('mozu-theme-helpers');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     require('time-grunt')(grunt);
     grunt.initConfig({
         mozuconfig: grunt.file.exists('./mozu.config.json') ? grunt.file.readJSON('./mozu.config.json') : {},
@@ -53,39 +53,45 @@ module.exports = function (grunt) {
                 src: '{<%= jshint.production.src %>}',
                 options: { devel: true }
             },
-            options: {
-                es3: true,
-                browser: true,
-                undef: true,
-                nonstandard: true,
-                ignores: ['scripts/vendor/**/*.js'],
-                globals: {
-                    JSON: true,
-                    console: true,
-                    window: true,
-                    document: true,
-                    setTimeout: true,
-                    clearTimeout: true,
-                    module: true,
-                    define: true,
-                    require: true,
-                    Modernizr: true,
-                    process: true,
-                    alert: true,
-                    setInterval: true,
-                    clearInterval: true,
-                    POWERREVIEWS: true,
-                    Image: true,
-                    jQuery: true,
-                    utag_data: true,
-                    tf: true,
-                    sessionStorage: true,
-                    brontoObj: true,
-                    generateClickEvent: true,
-					safari: true,
-					Promise:true
-                }
-            }
+            options : {
+				//es3: true,
+				//browser: true,
+				undef : true,
+				//nonstandard: true,
+				laxcomma : true,
+				unused : false,
+				ignores : ['scripts/vendor/**/*.js','**/*.gitignore'],
+				globals : {
+					JSON : true,
+					console : true,
+					window : true,
+					document : true,
+					setTimeout : true,
+					clearTimeout : true,
+					module : true,
+					define : true,
+					require : true,
+					Modernizr : true,
+					process : true,
+					alert : true,
+					setInterval : true,
+					clearInterval : true,
+					POWERREVIEWS : true,
+					Image : true,
+					jQuery : true,
+					utag_data : true,
+					tf : true,
+					navigator : true,
+					location : true,
+					sessionStorage:true,
+					brontoObj: true,
+					URLSearchParams: true,
+					generateClickEvent: true,
+					YT:true,
+          zrl_mi: true,
+          dataLayer: true
+				}
+			}
         },
         compress: {
             build: {
@@ -116,10 +122,14 @@ module.exports = function (grunt) {
         },
         mozutheme: {
             'check': { 'command': 'check' },
-            'fullcompile': { 'command': 'compile' },
+            'compile': { 'command': 'compile' },
             'quickcompile': {
                 'command': 'compile',
                 'opts': { 'skipminification': true }
+            },
+			'fullcompile': {
+                'command': 'compile',
+                'opts': { 'skipminification': false }
             }
         },
         watch: {
@@ -169,7 +179,8 @@ module.exports = function (grunt) {
             'upload': {
                 'options': {
                     'action': 'upload',
-                    'noclobber': true
+                    'noclobber': true,
+					'soloOnly': false
                 },
                 'src': [
                     'admin/**/*',
@@ -194,7 +205,10 @@ module.exports = function (grunt) {
                 'remove': []
             },
             'wipe': {
-                'options': { 'action': 'deleteAll' },
+                'options': { 
+					'action': 'deleteAll',
+					'soloOnly': false
+					},
                 'src': '<%= mozusync.upload.src %>'
             }
         }

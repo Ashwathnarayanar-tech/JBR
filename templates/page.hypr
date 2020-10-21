@@ -393,7 +393,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script type="text/javascript" src="https://libraries.unbxdapi.com/prod-jellybellyretailer-com809071570732436_autosuggest.js"></script>
 {% endif %}
 {% endcomment %}
-
 {% dropzone zoneId="unbxd-config" scope="site" %}
 
     </body>

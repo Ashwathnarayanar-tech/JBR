@@ -890,16 +890,17 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
             }
         },
         changeTerms:function(e){
-            var selectedCard = _.findWhere(this.model.get('purchaseOrder.cards').res,{isExpired: false});
+            var selectedCard = this.model.get('purchaseOrder.cards')?_.findWhere(this.model.get('purchaseOrder.cards').res,{isExpired: false}):null;
             if(e.currentTarget.value === "card-on-file"){
                 $('.maincard').show(); 
                 this.model.get('purchaseOrder.paymentTerms').card  = true;
                 this.model.get('purchaseOrder.paymentTerms').file  = false;
-            
-            this.model.get('purchaseOrder.paymentTerms').cardNumber = selectedCard.token!== undefined ?selectedCard.token: "";
-            this.model.get('purchaseOrder.paymentTerms').profile = selectedCard.profileid;
-            this.model.get('purchaseOrder.paymentTerms').selectedCard = true;
-            this.model.get('purchaseOrder').set('selectCreditCard',selectedCard.token); 
+                if(selectedCard){
+                    this.model.get('purchaseOrder.paymentTerms').cardNumber = selectedCard.token!== undefined ?selectedCard.token: "";
+                    this.model.get('purchaseOrder.paymentTerms').profile = selectedCard.profileid;
+                    this.model.get('purchaseOrder.paymentTerms').selectedCard = true;
+                    this.model.get('purchaseOrder').set('selectCreditCard',selectedCard.token); 
+                }
             }else{ 
                 $('.maincard').hide();
                 this.model.get('purchaseOrder.paymentTerms').file = true;
@@ -2314,3 +2315,4 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
   });
     });
 });
+

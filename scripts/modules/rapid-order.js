@@ -165,6 +165,7 @@ require(['modules/backbone-mozu', 'underscore', 'modules/jquery-mozu', 'modules/
             },
             triggerCamara : function(e){
                 $(document).find('#getimage').click(); 
+                //this.getProductFeomBarcode("071567528252");
             },
             mobdecreaseQty : function(e){
                 var itemCode = $(e.target).attr("data-attr-code");
