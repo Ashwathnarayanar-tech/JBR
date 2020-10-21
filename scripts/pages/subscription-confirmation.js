@@ -59,7 +59,7 @@ require([
             scheduleInfo = "",
             generalInfo = "";
         try {
-            api.request('POST', '/svc/getSubscription',{method:"GET"}).then(function(res) {
+            api.request('POST', '/svc/getSubscription',{method:"GET",subscriptionId:subscriptionId}).then(function(res) {
                 if (!res.error && res.res.subscriptionModel!==null && res.res.subscriptionModel.orderDetails.length > 0) {
                     existingEntityData = res.res.subscriptionModel.orderDetails;
                     existingEntityData.find(function(ob) {

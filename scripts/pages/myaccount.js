@@ -2199,7 +2199,7 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
         var customerId = require.mozuData("user").userId,existingEntityData = [],
         subscriptionModel = Backbone.MozuModel.extend({}); 
         try {
-            Api.request('POST', 'svc/getSubscription',{method:"GET"}).then(function(res) {
+            Api.request('POST', 'svc/getSubscription',{method:"GETLIST"}).then(function(res) {
                  if (!res.error && res.res.subscriptionModel!==null && res.res.subscriptionModel.orderDetails.length > 0) {
                     existingEntityData = res.res.subscriptionModel;
                 }
