@@ -59,20 +59,15 @@ require([
             scheduleInfo = "",
             generalInfo = "";
         try {
-            api.request('POST', '/svc/getSubscription',{method:"GET"}).then(function(res) {
-                if (!res.error && res.res.subscriptionModel!==null && res.res.subscriptionModel.orderDetails.length > 0) {
-                    existingEntityData = res.res.subscriptionModel.orderDetails;
-                    existingEntityData.find(function(ob) {
-                        if (ob.subscriptionId === subscriptionId) {
+            api.request('POST', '/svc/getSubscription',{method:"GET",subscriptionId:subscriptionId}).then(function(res) {
+                 if (!res.error &&  res.res.subscriptionId !== undefined) {
+                            var ob = res.res;
                             subscribedItems = ob.order.items; //array
                             paymentInfo = ob.order.payments; //array, contains billingInfo
                             shippingInfo = ob.order.fulfillmentInfo; //object, fulfillmentContact
                             scheduleInfo = ob.schedule; //object
                             generalInfo = ob.order;
                             console.log(ob.order.fulfillmentInfo);
-                            return ob;
-                        }
-                    });
                     $('.mz-confirmation-header').append('<h4>Your subscription number is <span>' + subscriptionId + '</span></h4>');
 
                     // display Shipping info
