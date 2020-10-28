@@ -1156,24 +1156,16 @@ define([
                 formRenderFlag = window.formRenderFlag = true; // flag to handle form update
             // retrieve data from entity    
             try {
-                api.request('POST', 'svc/getSubscription',{method:"GET"}).then(function(res) { 
+                api.request('POST', 'svc/getSubscription',{method:"GET",subscriptionId:editSub}).then(function(res) { 
                // api.request('GET', '/api/platform/entitylists/createsubscription@jbellyretailer/entities?filter=customerId eq ' + customerId).then(function(res) {
-                    var modelItems;
-                    if (res.res.subscriptionModel!==null  && res.res.subscriptionModel.orderDetails.length > 0) {
-                        modelItems = res.res.subscriptionModel.orderDetails;
-                    }
-                    //= res.items[0].orderDetails;
-                    modelItems.find(function(ele) {
-                        if (editSub === ele.subscriptionId) {
-                            var date  = new Date(ele.schedule.startDate),
+                   
+                    if (!res.error &&  res.res.subscriptionId !== undefined) {
+                        currentSubsItem = res.res;
+                        var date  = new Date(currentSubsItem.schedule.startDate),
                             startDate = new Date((date.getUTCMonth()+1)+'/'+date.getUTCDate()+'/'+date.getUTCFullYear()),
                             fdate = ('0'+(startDate.getMonth()+1)).slice(-2)+ '-' + ('0'+startDate.getDate()).slice(-2) + '-' + startDate.getFullYear();
-                            ele.schedule.startDate = fdate;
-                            currentSubsItem = ele;
-                        }
-                    });
-
-                    
+                            currentSubsItem.schedule.startDate = fdate;
+                    }
 
                     var locationCodes = "";
                     if (window.location.host.indexOf("s16708") > -1 || window.location.host.indexOf("east.jellybellyretailer.com") > -1) {

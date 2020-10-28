@@ -1717,7 +1717,7 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
 			window.orderSummary.model.set("subscriptionStatus", "active");
 
             var urlParams = this.getUrlParams(window.location.href); 
-                var editSubsId = urlParams.subId ? urlParams.subId :"";  
+                var editSubsId = urlParams.edit ? urlParams.edit :"";  
                 var subscriptionId = (editSubsId) ? editSubsId : this.generateSubscriptionId(window.order.attributes.customerAccountId, 7);
                 var userId = require.mozuData("user").userId;
                 var createdDate = new Date().toISOString();
@@ -1814,7 +1814,8 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
             },
             getUrlParams:function(url){
         var regex = /[?&]([^=#]+)=([^&#]*)/g,params = {},match;
-          while (match = regex.exec(url)) {
+            match = regex.exec(url);
+          while (match ) {
             params[match[1]] = match[2];
           }
           return params;
