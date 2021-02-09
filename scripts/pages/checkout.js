@@ -1725,13 +1725,18 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
 		generateSubscriptionId: function(accn, length) {
             return accn + Math.round((Math.pow(36, length + 1) - Math.random() * Math.pow(36, length))).toString(36).slice(1);
         },
-		subscribe: function() {
+		subscribe: function() { 
 			$(".overlay-for-complete-page").addClass("overlay-shown");
 			$("#page-content").addClass("is-loading");
 			window.orderSummary.model.set("subscriptionStatus", "active");
 
             var urlParams = this.getUrlParams(window.location.href); 
-                var editSubsId = urlParams.edit ? urlParams.edit :"";  
+                var editSubsId = urlParams.edit ? urlParams.edit :""; 
+                if(typeof $.cookie("isSubscriptionActive") != "undefined") {
+                    if(typeof $.cookie("chktEdit") != "undefined" && editSubsId === "")
+                    editSubsId = $.cookie("chktEdit");
+                   
+                }
                 var subscriptionId = (editSubsId) ? editSubsId : this.generateSubscriptionId(window.order.attributes.customerAccountId, 7);
                 var userId = require.mozuData("user").userId;
                 var createdDate = new Date().toISOString();
@@ -1827,12 +1832,16 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
                 });
             },
             getUrlParams:function(url){
-        var regex = /[?&]([^=#]+)=([^&#]*)/g,params = {},match;
-            match = regex.exec(url);
-          while (match ) {
-            params[match[1]] = match[2];
-          }
-          return params;
+                var result = {};
+                var params = window.location.search;
+                params = params.substr(1);
+                var queryParamArray = params.split('&');
+                queryParamArray.forEach(function(queryParam) {
+                    var item = queryParam.split('=');
+                    result[item[0]] = decodeURIComponent(item[1]);
+                });
+                console.log(result);
+                return result;
         },
 		createSubscription1:function(existingEntityData,subscriptionInfo,ordersContainer,order,isEditSubscription,subscriptionId,createdDate,modifiedDate){
 		    var cartModel = new CartModels.Cart();
