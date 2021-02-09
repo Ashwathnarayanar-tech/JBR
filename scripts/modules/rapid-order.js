@@ -16,7 +16,7 @@ require(['modules/backbone-mozu', 'underscore', 'modules/jquery-mozu', 'modules/
                 "click .spinnerDec" : "decreaseQty",
                 "click .removeTopItem" : "removeItemfromtopseller",
                 "click .clearList" : "clearList",
-                "click .addAllToCart" : "addAllToCart",
+                "click .addAllToCart" : "addAllToCartCheck",
                 "click .spinnerIncmob" : "mobincreseQty",
                 "click .spinnerDecMob" : "mobdecreaseQty",
                 "click .scan-img" : "triggerCamara",
@@ -219,6 +219,66 @@ require(['modules/backbone-mozu', 'underscore', 'modules/jquery-mozu', 'modules/
                 }
                 window.modelRapidOrder.model.set('items',items);
                 window.modelRapidOrder.render();   
+            },
+            addAllToCartCheck:function(e){
+                var _this= this;
+                if(typeof $.cookie("isSubscriptionActive") !== "undefined"){
+                    /*alertPopup.AlertView.fillmessage("first-dailog","You have already started building a Subscription. Do you want to remove the subscription products and add this product to the cart?", function(result) {
+                        if(!result) {
+                             alertPopup.AlertView.closepopup();
+                        }else{
+                            var cartModel = new CartModels.Cart(); 
+                            cartModel.apiEmpty().then(function(){
+                                $.removeCookie("isSubscriptionActive");
+                                $.removeCookie("scheduleInfo");
+                                CartMonitor.update();
+                                MiniCart.MiniCart.updateMiniCart();
+                                alertPopup.AlertView.closepopup();
+                                _this.addAllToCart();
+                            },function(err){
+                                console.log("cartModels api empty error",err); 
+                            });
+                        } 
+                    }); */
+                    alertPopup.AlertView.fillmessage("addall-dailog","You have started building a Subscription. Do you want to add this item to your Subscription?", function(result) {
+                        if(!result) {
+                            alertPopup.AlertView.fillmessage("second-dailog","We can't mix Subscription and non-Subscription items at this time. Do you want to remove the Subscription item(s) from the cart?", function(result1) {
+                                if(result1) {
+                                    var cartModel = new CartModels.Cart();
+                                    try {
+                                        // empty cart
+                                        cartModel.apiEmpty().then(function(){
+                                            $.removeCookie("isSubscriptionActive");
+                                            $.removeCookie("scheduleInfo");
+                                            CartMonitor.update();
+                                            MiniCart.MiniCart.updateMiniCart();
+                                            alertPopup.AlertView.closepopup();
+                                            _this.addAllToCart();
+                                        },function(err){
+                                            console.log("cartModels api empty error",err); 
+                                        });
+                                    }
+                                    catch(e){
+                                        console.error(e);
+                                    }
+                                }
+                                else {
+                                    alertPopup.AlertView.closepopup();
+                                    $('.addtocartoverlay').hide();
+                                }
+                            });
+                        } else {
+                            // add product as subscription
+                            alertPopup.AlertView.closepopup();
+                            $('.addtocartoverlay').hide(); 
+                            _this.addAllToCart();
+                        }
+                    });
+                
+                }
+                else{
+                    _this.addAllToCart();
+                }
             },
             addAllToCart : function(e){
                 var itemsROF = window.modelRapidOrder.model.get('items').filter(function(e){return e.isfilled;});
@@ -1346,7 +1406,7 @@ require(['modules/backbone-mozu', 'underscore', 'modules/jquery-mozu', 'modules/
                 }
             });
             // initilize barcode maping
-            if(window.width() < 1030){
+            if($(window).width() < 1030){
                 $(document).on('focus', '#barcodeval', function(e){
                     setTimeout(function(){
                         $(document).find('.overlay-for-complete-page').show();

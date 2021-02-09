@@ -297,7 +297,20 @@
         inflateCustomFields: function() {
             var customFields = [];
             var siteSettingsCustomFields = HyprLiveContext.locals.siteContext.checkoutSettings.purchaseOrder.customFields;
-            var self = this;
+            var self = this,selprofileId="",selcardnumber="";
+            if($('#mz-payment-pOCustomField-cardnumber').val() === "" || $('#mz-payment-pOCustomField-profileid').val() ===""){
+               if(window.rescards!==undefined){
+					var selectedCard = _.findWhere(window.rescards.res,{token: $('.selectcard').val()});
+					if(selectedCard!==undefined){
+                        selcardnumber  = selectedCard.token!== undefined ?selectedCard.token: "";
+                        selprofileId = selectedCard.profileid;  
+                    }
+				}
+            }
+            else{
+                selprofileId = $('#mz-payment-pOCustomField-profileid').val();
+                selcardnumber = $('#mz-payment-pOCustomField-cardnumber').val();
+            }
             siteSettingsCustomFields.forEach(function(field) {
                 if(field.isEnabled) {
                     var value;
@@ -305,9 +318,9 @@
                     if(this.get("pOCustomField-"+field.code) !== undefined && this.get("pOCustomField-"+field.code) !==""){
                         value = this.get("pOCustomField-"+field.code);
                     }else if(field.code ==='cardnumber' && self.get('paymentTerm.code') === "card-on-file"){
-                        value = $('#mz-payment-pOCustomField-cardnumber').val();
+                        value = selcardnumber;
                     }else if(field.code === 'profileid' && self.get('paymentTerm.code') === "card-on-file" ){
-                        value =  $('#mz-payment-pOCustomField-profileid').val();
+                        value =  selprofileId;
                     }
                     else if(field.code  === "shipdate"){
                         value = $('#datePicker').datepicker({ dateFormat: 'MM,dd,yyyy' }).val();
@@ -335,14 +348,14 @@
             selectCreditCard:{
                 fn: function(value,attr){
                     if(this.get('purchaseOrder.paymentTermOptions') && this.get('purchaseOrder.paymentTermOptions').length === 1 && this.get('purchaseOrder.paymentTermOptions').models[0].get('code') !== "terms-on-file"){
-                        if(this.get('purchaseOrder.paymentTermOptions').models[0].get('code')  == "card-on-file" && (value === "" || value === undefined || value=== null )){
+                        if(this.get('purchaseOrder.paymentTermOptions').models[0].get('code')  == "card-on-file" && ((value === "" || value === undefined || value=== null)&&(this.get('purchaseOrder.paymentTerms').cardNumber==="" ))){
                             return Hypr.getLabel('purchaseSelectCard');
                         }
                     }else{
                         if(this.get('purchaseOrder.paymentTermOptions') && 
                         this.get('purchaseOrder.paymentTermOptions').length > 1 && 
                         this.get('purchaseOrder.paymentTerm.code') == "card-on-file" && 
-                        (value === "" || value === undefined || value=== null ) && this.get('purchaseOrder.paymentTerms').card ){
+                        ((value === "" || value === undefined || value=== null) && this.get('purchaseOrder.paymentTerms').cardNumber==="") && this.get('purchaseOrder.paymentTerms').card ){
                             return Hypr.getLabel('purchaseSelectCard');
                         }
                     }
