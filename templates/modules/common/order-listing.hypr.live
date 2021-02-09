@@ -108,7 +108,7 @@
         </div >
         <h3  orderID="{{model.orderNumber}}" class="mz-orderlisting-heading" 
                     style="display:{% if model.id == itemReturnOrderID %}block{%else%}none{%endif%};" >YOUR ORDER 
-                     <a data-mz-action="addAllToCart" class="add-all-to-cart" orderToAdd="{{model.orderNumber}}" >ADD ALL TO CART </a>
+                     <a data-mz-action="addAllToCartmyacc" class="add-all-to-cart" orderToAdd="{{model.orderNumber}}" >ADD ALL TO CART </a>
                     </h3>  
        
         <h3  orderID="{{model.orderNumber}}" class="mz-orderlisting-date right" 

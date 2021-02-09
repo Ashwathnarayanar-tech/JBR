@@ -448,6 +448,51 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                 });
             } 
         },
+        addAllToCartmyacc: function(e){ 
+            var me = this;
+            $('.addtocartoverlay').show(); 
+            if(typeof $.cookie("isSubscriptionActive") === "undefined") {
+                this.addAllToCart(e);
+            }
+            else {
+                AlertPopup.AlertView.fillmessage("addinline-dailog","You have started building a Subscription. Do you want to add this item to your Subscription?", function(result) {
+                    console.log(result);
+                    if(!result) {
+                        AlertPopup.AlertView.fillmessage("second-dailog","We can't mix Subscription and non-Subscription items at this time. Do you want to remove the Subscription item(s) from the cart?", function(result1) {
+                            console.log(result1);
+                            if(result1) {
+                                console.log("will clear cart and subscription related cookie & update cart with selected item as non-Subscription");
+                                var cartModel = CartModels.Cart.fromCurrent();
+                                try {
+                                    // empty cart
+                                    cartModel.apiEmpty().then(function(res) {
+                                    AlertPopup.AlertView.closepopup();
+                                        // remove subscription cookie
+                                        $.removeCookie("isSubscriptionActive",{path:"/"});
+                                        $.removeCookie("scheduleInfo",{path:"/"});
+
+                                        me.addAllToCart(e);
+                                    });
+                                }
+                                catch(e){
+                                    console.error(e);
+                                }
+                            }
+                            else {
+                                AlertPopup.AlertView.closepopup();
+                                $('.addtocartoverlay').hide();
+                                console.log("do nothing, keep cart as it is!");
+                            }
+                        });
+                    } else {
+                        // add product as subscription
+                        console.log("add product as subscription");
+                        AlertPopup.AlertView.closepopup();
+                        me.addAllToCart(e);
+                    }
+                });
+            } 
+        },
         addSingleItemtoCart:function(e){
             var orderNumber = $(e.currentTarget).parent().parent().attr('orderid');   
             var quantityElement =$(e.currentTarget).parent().find('.quick-order-quantity').find('.quantity-field');   

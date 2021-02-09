@@ -852,6 +852,7 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
                   window.checkoutViews.steps.paymentInfo.model.get('purchaseOrder').set('paymentTerms',{file:null,card:null,cardNumber:null,profile:null,selectedCard:null});
             }
           
+            window.checkoutViews.steps.paymentInfo.model.get('purchaseOrder').set('cards',window.rescards);
             //select card on file default
             if(window.checkoutViews.steps.paymentInfo.model.get('purchaseOrder.paymentTermOptions')){
                 if( window.checkoutViews.steps.paymentInfo.model.get('purchaseOrder.paymentTermOptions').length=== 1 &&  window.checkoutViews.steps.paymentInfo.model.get('purchaseOrder.paymentTermOptions').models[0].get('code') === "card-on-file"){
@@ -890,16 +891,17 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
             }
         },
         changeTerms:function(e){
-            var selectedCard = _.findWhere(this.model.get('purchaseOrder.cards').res,{isExpired: false});
+            var selectedCard = this.model.get('purchaseOrder.cards')?_.findWhere(this.model.get('purchaseOrder.cards').res,{isExpired: false}):null;
             if(e.currentTarget.value === "card-on-file"){
                 $('.maincard').show(); 
                 this.model.get('purchaseOrder.paymentTerms').card  = true;
                 this.model.get('purchaseOrder.paymentTerms').file  = false;
-            
-            this.model.get('purchaseOrder.paymentTerms').cardNumber = selectedCard.token!== undefined ?selectedCard.token: "";
-            this.model.get('purchaseOrder.paymentTerms').profile = selectedCard.profileid;
-            this.model.get('purchaseOrder.paymentTerms').selectedCard = true;
-            this.model.get('purchaseOrder').set('selectCreditCard',selectedCard.token); 
+            if(selectedCard) {
+                this.model.get('purchaseOrder.paymentTerms').cardNumber = selectedCard.token!== undefined ?selectedCard.token: "";
+                this.model.get('purchaseOrder.paymentTerms').profile = selectedCard.profileid;
+                this.model.get('purchaseOrder.paymentTerms').selectedCard = true;
+                this.model.get('purchaseOrder').set('selectCreditCard',selectedCard.token); 
+            }
             }else{ 
                 $('.maincard').hide();
                 this.model.get('purchaseOrder.paymentTerms').file = true;
@@ -1286,6 +1288,7 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
         },
         render: function() {
                 var self = this; 
+                var selectedCard="" ;
                 CheckoutStepView.prototype.render.apply(this, arguments);
             var status = self.model.stepStatus();
                 if(typeof window.getDates !== "undefined" && typeof window.getDates.FirstShipDate !== "undefined"){
@@ -1299,6 +1302,17 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
                     self.dateSelector(sdate);
                 }    
                 self.model.set('paymentType', 'PurchaseOrder');
+                 if(self.model.get('purchaseOrder.cards')){
+                    if(self.model.get('purchaseOrder.cards').res.length>0){
+                   selectedCard = _.findWhere(self.model.get('purchaseOrder.cards').res,{token: $('.selectcard').val()});
+                  if(selectedCard!==undefined){
+                        self.model.get('purchaseOrder.paymentTerms').cardNumber = selectedCard.token!== undefined ?selectedCard.token: "";
+                        self.model.get('purchaseOrder.paymentTerms').profile = selectedCard.profileid;
+                        self.model.get('purchaseOrder.paymentTerms').selectedCard = true;
+                        }
+                    }
+                } 
+                
                // $('.mz-payment-select-saved-payments').blur();
            /* if(window.test && !($(".mz-paymenttype-input[value=PurchaseOrder]").is(":checked")) && window.testval != "PurchaseOrder" && !$(".mz-paymenttype-input[value=CreditCard]").is(':checked')){ 
                 $('.mz-paymenttype-input[value="CreditCard"]').trigger("click");
