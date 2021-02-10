@@ -1111,17 +1111,7 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
             this.render();
         },
         initialize: function() {
-            var orderDetails = [],
-                orderDetailsLength = 0;
-
-            if(typeof this.model.get("orderDetails") != "undefined") {
-                orderDetails = this.model.get("orderDetails").reverse();
-            } 
-            if(typeof this.model.get("orderDetails") != "undefined") {
-                orderDetailsLength = this.model.get("orderDetails").length;
-            }
-            this.model.attributes.batch = Math.ceil(orderDetailsLength/5);
-            orderDetails.forEach(function(k) {
+           var k = this.model.attributes;
                 if(k.schedule){
                 var endDate = k.schedule.endType,
                     endDateToDelivery = "";
@@ -1137,7 +1127,7 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                 });
                 k.schedule.deliveries = endDateToDelivery; 
             }
-            });
+            
         },
         getRenderContext: function() {
             var c = Backbone.MozuView.prototype.getRenderContext.apply(this, arguments);
