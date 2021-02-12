@@ -827,6 +827,7 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
             }
             this.render();
             var subscriptionModel = Backbone.MozuModel.extend({}); 
+            window.subscriptionModel.subscribedStatus = status;
             window.MyaccountSubscription =  new MyaccountSubscriptionView({
                 el: $(".subs-list-details[subscriptionId='"+subId+"']"),
                 model: new subscriptionModel(window.subscriptionModel)
