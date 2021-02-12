@@ -747,10 +747,10 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                 Api.request('POST', 'svc/getSubscription',{method:"GET",subscriptionId:subId}).then(function(res) {
                     if (!res.error &&  res.res.subscriptionId !== undefined) {
                         var result = res.res;
-                       
+                        window.subscriptionModel = result;
                         var MyaccountSubscription = window.MyaccountSubscription =  new MyaccountSubscriptionView({
                             el: $(".subs-list-details[subscriptionId='"+subId+"']"),
-                            model: new subscriptionModel(result)
+                            model: new subscriptionModel(window.subscriptionModel)
                         });  
                         MyaccountSubscription.render();
                     }
@@ -826,6 +826,12 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                 }
             }
             this.render();
+            var subscriptionModel = Backbone.MozuModel.extend({}); 
+            window.MyaccountSubscription =  new MyaccountSubscriptionView({
+                el: $(".subs-list-details[subscriptionId='"+subId+"']"),
+                model: new subscriptionModel(window.subscriptionModel)
+            });  
+            window.MyaccountSubscription.render();
         },
         render: function() {
             
