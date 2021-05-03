@@ -641,7 +641,7 @@ define([
             $('#interval-startdate').datepicker({
                 beforeShowDay: heatSensitive,
                 minDate: '0',
-                maxDate: '+6m',
+                maxDate: '+11m',
                 dateFormat: "mm-dd-yy",
                 autoclose:true,
                 onSelect: function(dateText, inst) {
@@ -690,8 +690,9 @@ define([
             }
 
             function heatSensitive(date) {
-                var restDates = Hypr.getThemeSetting('shipping_date');
-                var blackoutdates = restDates.split(',');
+                //var restDates = Hypr.getThemeSetting('shipping_date');
+                //var blackoutdates = restDates.split(',');
+                var blackoutdates = window.blockedShippingDates;
                 var day;
                 var m = date.getMonth();
                 var d = date.getDate();
@@ -706,37 +707,42 @@ define([
                 var currentDate = ('0' + (mm + 1)).slice(-2) + "/" + ('0' + ddd).slice(-2) + "/" + yy;
                 var compareDate = ('0' + (m + 1)).slice(-2) + '/' + ('0' + d).slice(-2) + '/' + y;
                 if (heat) {
-                    for (var i = 0; i < blackoutdates.length; i++) {
-                        if ($.inArray(compareDate, blackoutdates) != -1 || new Date() > date || shipdate > date) {
-                            return [false];
-                        }
-                    }
-                    day = date.getDay();
-                    if (day === 3 || day === 4 || day === 5 || day === 6 || day === 0) {
+                    if ($.inArray(compareDate, blackoutdates) != -1 || new Date() > date || shipdate > date) {
+                       // console.log("blackoutdates --- ",$.inArray(compareDate, blackoutdates),compareDate);
                         return [false];
-                    } else {
-                        return [true];
                     }
+                    else{
+                        day = date.getDay();
+                        //console.log(" day ---",day);
+                        if (day === 3 || day === 4 || day === 5 || day === 6 || day === 0) {
+                            return [false];
+                        } else {
+                            return [true];
+                        }
+                    }   
                 } else {
-                    for (var j = 0; j < blackoutdates.length; j++) {
-                        if ($.inArray(compareDate, blackoutdates) != -1 || new Date() > date || shipdate > date) {
+                    if ($.inArray(compareDate, blackoutdates) != -1 || new Date() > date || shipdate > date) {
+                        return [false];
+                    }
+                    else{
+                        day = date.getDay();
+                        if (day === 6 || day === 0) {
                             return [false];
+                        } else {
+                            return [true];
                         }
                     }
-                    day = date.getDay();
-                    if (day === 6 || day === 0) {
-                        return [false];
-                    } else {
-                        return [true];
-                    }
+                    
                 }
             }
         },
         datePicker: function() {
             var date = new Date();
             var businessdays = 2;
-            var restDates = Hypr.getThemeSetting('shipping_date');
-            var blackoutdates = restDates.split(',');
+            //var restDates = Hypr.getThemeSetting('shipping_date');
+            //var blackoutdates = restDates.split(',');
+            var blackoutdates = window.blockedShippingDates;
+            console.log("blackoutdates ----",blackoutdates);
             var day, month, year, fulldate, currentDate, comparedate;
             while (businessdays) {
                 date.setFullYear(date.getFullYear(), date.getMonth(), (date.getDate() + 1));
@@ -763,8 +769,9 @@ define([
         heatSensitvieDatePicker: function() {
             var date = new Date();
             var businessdays = 2;
-            var restDates = Hypr.getThemeSetting('shipping_date');
-            var blackoutdates = restDates.split(',');
+            //var restDates = Hypr.getThemeSetting('shipping_date');
+            //var blackoutdates = restDates.split(',');
+            var blackoutdates = window.blockedShippingDates;
             var day, month, year, currentDate, comparedate;
             while (businessdays) {
                 date.setFullYear(date.getFullYear(), date.getMonth(), (date.getDate() + 1));
@@ -803,6 +810,34 @@ define([
                 return false;
             }
         },
+        getBlockOutDates :function(){
+            var items = [];
+            var _this = this;
+            $.each($('[data-mz-productcode]'),function(i,v){
+                if(items.length> 0 && items.indexOf($(v).attr('data-mz-productcode'))<0){
+                    items.push($(v).attr('data-mz-productcode'));
+                }else if(items.length<1){
+                    items.push($(v).attr('data-mz-productcode'));
+                }
+            });
+            var apiResult = {dates:[],isSuccess:false,blockoutDates:[]};
+            api.request("post","/sfo/get_dates",{data:items}).then(function(result){
+                console.log( " result ---",result);
+                var formatedDates = window.formatApiData(result);
+                window.blockedShippingDates = formatedDates;
+                window.getDatesItems = result.Items;
+                _this.dateSelector();
+                window.getDates();
+                return (apiResult);
+            },function(er){
+                console.log("error ---",er);
+             return (apiResult);
+            });
+        },
+        initialize: function () {
+           console.log(" alter changes");
+           this.getBlockOutDates();
+        },
         render: function() {
             var scheduleInfoForm = this.$el.find('.mz-subscription-interval-container>form'),
                 formInfo = "";
@@ -835,8 +870,9 @@ define([
                 scheduleInfoForm.find('[name="frequencyType"]').find('option[value="'+formInfo.frequencyType+'"]').attr("selected",true);
                 scheduleInfoForm.find('[name="endDate"]').find('option[value="'+formInfo.endDate+'"]').attr("selected",true);
             }*/
-            this.dateSelector();
-            
+            if(window.blockedShippingDates && window.blockedShippingDates.length>0)
+                 this.dateSelector();
+           
         }
     });
 
@@ -1010,33 +1046,18 @@ define([
             return false;
         }
 
-        function getDates(){
-            var items = [];
-            $.each($('[data-mz-productcode]'),function(i,v){
-                if(items.length> 0 && items.indexOf($(v).attr('data-mz-productcode'))<0){
-                    items.push($(v).attr('data-mz-productcode'));
-                }else if(items.length<1){
-                    items.push($(v).attr('data-mz-productcode'));
-                }
-            });
-            api.request("post","/sfo/get_dates",{data:items}).then(function(r) {
-                var blackoutDates = [];
-                if(r.BlackoutDates.length > 0) {
-                    blackoutDates = r.BlackoutDates.map(function(d) {
-                        return formatDate(d);
-                    });
-                }
-                console.log(r);
-                if(r.Items.length>0){
-                    var len = r.Items.length,i=0;
-                    for(i;i<len;i++){
-                        productDisplay(r.Items[i].FirstShipDate,blackoutDates,r.Items[i].SKU);
-                    } 
-                }
-            },function(er){
-                console.log(er.message);
-            });
-        }
+        window.getDates = function(){
+            var blackoutDates =  window.blockedShippingDates;
+            var Items = window.getDatesItems;
+            console.log("items ---",Items);
+            if(Items && Items.length>0){
+                var len = Items.length,i=0;
+                for(i;i<len;i++){
+                    productDisplay(Items[i].FirstShipDate,blackoutDates,Items[i].SKU);
+                } 
+            }
+           
+        };
         function productDisplay(firstDate,blackoutDates,pcode){
             var udate =  new Date(firstDate),
                 date = new Date((udate.getUTCMonth()+1)+'/'+udate.getUTCDate()+'/'+udate.getUTCFullYear());     
@@ -1073,7 +1094,6 @@ define([
             var startdate = ('0'+(sdate.getMonth()+1)).slice(-2)+ '/' + ('0'+sdate.getDate()).slice(-2) + '/' + sdate.getFullYear();
             return startdate;
         }
-        getDates();
         // check if url pattern has search product    
         if (window.location.search.length > 0) {
             query = (typeof window.location.search.split("=")[1] == "undefined") ? " " : window.location.search.split("=")[1];

@@ -412,8 +412,9 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
 			}
 
 			function heatSensitive(date) {
-				var restDates = Hypr.getThemeSetting('shipping_date');
-				var blackoutdates = restDates.split(',');
+				//var restDates = Hypr.getThemeSetting('shipping_date');
+				//var blackoutdates = restDates.split(',');
+                var blackoutdates  = window.getDates.BlackoutDates;
 				var day;
 				var m = date.getMonth();
 				var d = date.getDate();
@@ -428,37 +429,39 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
 				var currentDate = ('0' + (mm + 1)).slice(-2) + "/" + ('0' + ddd).slice(-2) + "/" + yy;
 				var compareDate = ('0' + (m + 1)).slice(-2) + '/' + ('0' + d).slice(-2) + '/' + y;
 				if (heat) {
-					for (var i = 0; i < blackoutdates.length; i++) {
-						if ($.inArray(compareDate, blackoutdates) != -1 || new Date() > date || shipdate > date) {
-							return [false];
-						}
-					}
-					day = date.getDay();
-					if (day === 3 || day === 4 || day === 5 || day === 6 || day === 0) {
-						return [false];
-					} else {
-						return [true];
-					}
-				} else {
-					for (var j = 0; j < blackoutdates.length; j++) {
-						if ($.inArray(compareDate, blackoutdates) != -1 || new Date() > date || shipdate > date) {
-							return [false];
-						}
-					}
-					day = date.getDay();
-					if (day === 6 || day === 0) {
-						return [false];
-					} else {
-						return [true];
-					}
-				}
+                    if ($.inArray(compareDate, blackoutdates) != -1 || new Date() > date || shipdate > date) {
+                        return [false];
+                    }
+                    else{
+                        day = date.getDay();
+                        if (day === 3 || day === 4 || day === 5 || day === 6 || day === 0) {
+                            return [false];
+                        } else {
+                            return [true];
+                        }
+                    }   
+                } else {
+                    if ($.inArray(compareDate, blackoutdates) != -1 || new Date() > date || shipdate > date) {
+                        return [false];
+                    }
+                    else{
+                        day = date.getDay();
+                        if (day === 6 || day === 0) {
+                            return [false];
+                        } else {
+                            return [true];
+                        }
+                    }
+                    
+                }
 			}
 		},
 		datePicker: function(){
 			var date = new Date();
 			var businessdays = 2;
-			var restDates = Hypr.getThemeSetting('shipping_date');
-			var blackoutdates = restDates.split(',');
+			//var restDates = Hypr.getThemeSetting('shipping_date');
+			//var blackoutdates = restDates.split(',');
+            var blackoutdates  = window.getDates.BlackoutDates;
 			var day, month, year, fulldate, currentDate, comparedate;
 			while (businessdays) {
 				date.setFullYear(date.getFullYear(), date.getMonth(), (date.getDate() + 1));
@@ -491,8 +494,9 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
 		heatSensitvieDatePicker: function() {
 			var date = new Date();
 			var businessdays = 2;
-			var restDates = Hypr.getThemeSetting('shipping_date');
-			var blackoutdates = restDates.split(',');
+			//var restDates = Hypr.getThemeSetting('shipping_date');
+			//var blackoutdates = restDates.split(',');
+            var blackoutdates  = window.getDates.BlackoutDates;
 			var day, month, year, currentDate, comparedate;
 			while (businessdays) {
 				date.setFullYear(date.getFullYear(), date.getMonth(), (date.getDate() + 1));
@@ -1951,6 +1955,8 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
                 api.request("post","/sfo/get_dates",{data: items})
                 .then(function(r) {
                     var getDates = window.getDates = r;
+                        window.getDates.BlackoutDates = window.formatApiData(r);
+                        console.log("window.getDates.BlackoutDates -----",window.getDates.BlackoutDates);
                     updateShippingDates();
                 },function(er) {
                     console.error(er);

@@ -1758,5 +1758,43 @@ var customers  = Backbone.MozuModel.extend({});
 
 });
 
+// require(["modules/api"], function(api) { 
+//     window.blockoutDates = function blockoutDates(){    
+//         window.getShippingBlockoutDates =  new Promise(function(resolve, reject){
+//             console.log("window.shippingItems ---",window.shippingItems);
+//             var items =  window.shippingItems ?  window.shippingItems :[];
+//             var apiResult = {dates:[],isSuccess:false,blockoutDates:[]};
+
+//             api.request("post","/sfo/get_dates",{data:items}).then(function(result){
+//                 console.log( " result ---",result);
+//                 var formatedDates = window.formatApiData(result);
+//                 apiResult.dates = formatedDates;
+//                 apiResult.blockoutDates = result.BlackoutDates;
+//             resolve(apiResult);
+//             },function(er){
+//                 console.log("error ---",er);
+//             resolve(apiResult);
+//             });
+//         });
+//         return  window.getShippingBlockoutDates;
+// };
+// });
+
+window.formatApiData = function formatApiData(result){
+    var dates = [];
+    if(result && result.Blackout){
+        var blockoutDates = result.Blackout;
+        for(var i=0;i<blockoutDates.length;i++){
+            var dt = new Date(blockoutDates[i].Date);
+            var mth = dt.getMonth()+1;
+             mth = mth <10 ? "0"+mth : mth;
+            var day = dt.getDate() < 10 ? "0"+dt.getDate() : dt.getDate();
+            var year = dt.getFullYear();
+            var formatDt = mth +'/'+day+'/'+year;
+            dates.push(formatDt);
+        }
+    }
+    return dates;
+} ;
 
 
