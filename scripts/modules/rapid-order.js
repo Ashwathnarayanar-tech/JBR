@@ -1064,7 +1064,8 @@ require(['modules/backbone-mozu', 'underscore', 'modules/jquery-mozu', 'modules/
                             nSelf.model.set('error',""); 
                             nSelf.render();
                             setTimeout(function(){nSelf.closePopup();},5000);
-                        }, function (xhr) {
+                        }, function (xhrRespone) {
+                            var xhr = xhrRespone.value && xhrRespone.value.errors ? xhrRespone.value.errors :xhrRespone;
                             if(xhr.errorCode == "VALIDATION_CONFLICT"){
                                 nSelf.model.set('success',false);
                                 nSelf.model.set('userEmail',email);

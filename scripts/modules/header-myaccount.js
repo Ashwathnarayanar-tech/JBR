@@ -113,7 +113,8 @@ require([
                 this.$el.find('.mz-signup-password').val('');
                 this.$el.find('.mz-signup-confirmpassword').val('');
             },
-            displayApiMessage: function(xhr) {
+            displayApiMessage: function(xhrRespone) {
+                var xhr = xhrRespone.value && xhrRespone.value.errors ? xhrRespone.value.errors :xhrRespone;
                 var err;
                 if (xhr.errorCode == "MISSING_OR_INVALID_PARAMETER") {
                     var errorMessage = xhr.message;

@@ -70,7 +70,8 @@ define(['shim!vendor/bootstrap/js/popover[shim!vendor/bootstrap/js/tooltip[modul
             }
             
         },
-        displayApiMessage: function (xhr) {
+        displayApiMessage: function (xhrRespone) {
+            var xhr = xhrRespone.value && xhrRespone.value.errors ? xhrRespone.value.errors :xhrRespone;
             if(xhr.applicationName === "Customer" && xhr.errorCode === "ITEM_NOT_FOUND" ){
                 xhr.message = Hypr.getLabel('resetPasswordMessage');
             }
