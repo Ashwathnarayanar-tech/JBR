@@ -1,4 +1,4 @@
-define(['modules/backbone-mozu', 'hyprlive', 'modules/jquery-mozu', 'underscore',
+define(['modules/backbone-mozu', 'hyprlive', 'modules/jquery-mozu', 'underscore','hyprlivecontext',
 'modules/models-customer', 'modules/views-paging',
 'modules/api',
 'modules/models-product',
@@ -6,7 +6,7 @@ define(['modules/backbone-mozu', 'hyprlive', 'modules/jquery-mozu', 'underscore'
 'modules/cart-monitor',
 "modules/alert-popup",
 'modules/minicart',"vendor/jquery.mask"], 
-function(Backbone, Hypr, $, _, CustomerModels, PagingViews,Api,
+function(Backbone, Hypr, $, _,HyprLiveContext,CustomerModels, PagingViews,Api,
 ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
     
     var EditableView = Backbone.MozuView.extend({
@@ -158,7 +158,11 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
         ],
         initialize: function () {
             // this.listenTo(this.model, "change:pageSize", _.bind(this.model.changePageSize, this.model));
-			//this.lookupRequestors();
+            //this.lookupRequestors();
+            var self=this;
+            this.listenTo(this.model, 'ordersLoaded', function(id) {
+                self.render();
+            });
             var isloadingMoreItems = window.isloadingMoreItems = false;
         },
         loadMoreItems: function(){
@@ -724,8 +728,154 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
         }
     }),
 
-    MyaccountSubscriptionView = Backbone.MozuView.extend({
+    MyaccountSubscriptionListView = Backbone.MozuView.extend({
         templateName: "modules/my-account/subscription-history-list",
+        additionalEvents: {
+            "click .subs-list-heading": "toggleShow",
+            "click .mz-more-order": "loadMoreItems",
+            "mouseenter .mz-schedule.paused": "handleMouseEnter",
+            "mouseleave .mz-schedule.paused": "handleMouseExit"
+
+        },
+        toggleShow: function(e) {
+            var subId = $(e.currentTarget).attr('data-subscription-id'),active=true,me=this;
+            e.preventDefault();
+            if($(e.currentTarget).hasClass('active')) {
+                $(e.currentTarget).removeClass('active');
+                $(e.currentTarget).nextAll('.subs-list-details').slideUp();
+                $(e.currentTarget).find('.plus-minus a').html('&#43;');
+            }
+            else {
+               var subscriptionModel = Backbone.MozuModel.extend({}); 
+                Api.request('POST', 'svc/getSubscription',{method:"GET",subscriptionId:subId}).then(function(res) {
+                    if (!res.error &&  res.res.subscriptionId !== undefined) {
+                        var result = res.res;
+                        window.subscriptionModel = result;
+                        var MyaccountSubscription = window.MyaccountSubscription =  new MyaccountSubscriptionView({
+                            el: $(".subs-list-details[subscriptionId='"+subId+"']"),
+                            model: new subscriptionModel(window.subscriptionModel)
+                        });  
+                        MyaccountSubscription.render();
+                    }
+                }, function(er) {
+                    // fail condition
+                    console.log("Data error " + er);
+                });
+                $('.subs-list-heading').removeClass('active');
+                $('.subs-list-heading').find('.plus-minus a').html('&#43;');
+                $('.subs-list-heading').nextAll('.subs-list-details').slideUp();
+                $(e.currentTarget).addClass('active');
+                $(e.currentTarget).nextAll('.subs-list-details').slideDown();
+                $(e.currentTarget).find('.plus-minus a').html('&#8722;');
+
+            }
+        },
+        handleMouseEnter: function(e) {
+            $(".mz-paused-tooltip").show();
+        },
+        handleMouseExit: function(e) {
+            $(".mz-paused-tooltip").hide();
+        },
+        loadMoreItems: function(e) {
+            var me = this;
+            var batch = me.model.get("batch"),
+                moreItemstoLoad = window.moreItemstoLoad = 1,
+                isLoadMore = window.isLoadMore = true;
+            var moreItems = $("[data-subscription]").filter(":hidden").slice(0,5);
+            if(batch > 1) {
+                batch--;
+                me.model.set("batch",batch);
+            }
+            this.render();
+        },
+        initialize: function() {
+            var orderDetails = [],
+                orderDetailsLength = 0;
+
+            if(typeof this.model.get("orderDetails") != "undefined") {
+                orderDetails = this.model.get("orderDetails").reverse();
+            } 
+            if(typeof this.model.get("orderDetails") != "undefined") {
+                orderDetailsLength = this.model.get("orderDetails").length;
+            }
+            this.model.attributes.batch = Math.ceil(orderDetailsLength/5);
+            orderDetails.forEach(function(k) {
+                if(k.schedule){
+                var endDate = k.schedule.endType,
+                    endDateToDelivery = "";
+                if(endDate === null || endDate === "null" || endDate === "until i cancel") {
+                    endDate = 12;
+                }
+                else {
+                    endDate = parseInt(endDate.split(" ")[0], 10);
+                }
+                endDateToDelivery = Array.apply(null, Array(endDate));
+                endDateToDelivery.forEach(function(k,v){
+                    endDateToDelivery[v] = (v++ < 9 ? '0' : '') +(v);
+                });
+                k.schedule.deliveries = endDateToDelivery; 
+            }
+            });
+        },
+        getRenderContext: function() {
+            var c = Backbone.MozuView.prototype.getRenderContext.apply(this, arguments);
+            return c;  
+        },
+        changeStatus:function(subId,status){
+            console.log("this.model ",this.model);
+             for(var i=0;i<this.model.get('orderDetails').length;i++){
+                if(this.model.get('orderDetails')[i].subscriptionId === subId ){
+                    this.model.get('orderDetails')[i].subscribedStatus = status;
+                }
+            }
+            this.render();
+            var subscriptionModel = Backbone.MozuModel.extend({}); 
+            window.subscriptionModel.subscribedStatus = status;
+            window.MyaccountSubscription =  new MyaccountSubscriptionView({
+                el: $(".subs-list-details[subscriptionId='"+subId+"']"),
+                model: new subscriptionModel(window.subscriptionModel)
+            });  
+            window.MyaccountSubscription.render();
+        },
+        render: function() {
+            
+            Backbone.MozuView.prototype.render.apply(this);
+            
+            var maxListItems = $('.mz-subscription-listing').length;
+            if(this.model.get("batch")) {
+                var batch = this.model.get("batch"), //4
+                    inital = 0,
+                    current = 0,
+                    toShow = "";
+                console.log(batch);
+
+                var extra = 0;
+                if(batch != 1) {
+                    extra = maxListItems % 5;
+                }
+
+                if(batch > 1) {
+                    current = (extra !== 0) ? (5*(batch - 2)) : (5*(batch - 1));
+                } 
+                else {
+                    current = 0;
+                }
+                toShow = $(".mz-subscription-listing").slice(0, (maxListItems - extra - current));
+                toShow.each(function() {
+                    $(this).show();
+                });
+            }
+
+            if(window.currentAction) {
+                var device = $(window).width()<768?'.mobile':'.desktop';
+                $('.mz-subscription-listing[data-subscription="'+window.currentAction+'"]').find(".subs-list-heading"+device).addClass("active");
+                $('.mz-subscription-listing[data-subscription="'+window.currentAction+'"]').find(".subs-list-heading"+device).nextAll('.subs-list-details').show();
+            }
+        }
+    }),
+
+    MyaccountSubscriptionView = Backbone.MozuView.extend({
+        templateName: "modules/my-account/subscriptiondetail",
         additionalEvents: {
             "click .subs-list-heading": "toggleShow",
             "click #pause-subscription": "pauseSubcription",
@@ -739,6 +889,7 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
 
         },
         toggleShow: function(e) {
+            var subId = $(e.currentTarget).attr('data-subscription-id'),active=true,me=this;
             e.preventDefault();
             if($(e.currentTarget).hasClass('active')) {
                 $(e.currentTarget).removeClass('active');
@@ -746,6 +897,17 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                 $(e.currentTarget).find('.plus-minus a').html('&#43;');
             }
             else {
+                Api.request('POST', 'svc/getSubscription',{method:"GET",subscriptionId:subId}).then(function(res) {
+                    if (!res.error &&  res.res.subscriptionId !== undefined) {
+                        var result = res.res;
+                        var existingOrders = me.model.get("orderDetails");
+                        console.log("existingOrders ----",existingOrders);
+
+                    }
+                }, function(er) {
+                    // fail condition
+                    console.log("Data error " + er);
+                });
                 $('.subs-list-heading').removeClass('active');
                 $('.subs-list-heading').find('.plus-minus a').html('&#43;');
                 $('.subs-list-heading').nextAll('.subs-list-details').slideUp();
@@ -768,22 +930,15 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                     //console.log(me.model.get("orderDetails"));
                     var counter = 1;
                     while(counter){
-                        if(me.model.get("orderDetails")[counter-1].subscriptionId == window.currentAction){
-                            me.model.get("orderDetails")[counter-1].subscribedStatus = "Paused";
-                            me.model.get("orderDetails")[counter-1].modifiedDate = new Date().toISOString();
+                        if(me.model.attributes.subscriptionId == window.currentAction){
+                            me.model.attributes.subscribedStatus = "Paused";
+                            me.model.attributes.modifiedDate = new Date().toISOString();
                             counter = 0;
                             window.paused = false;
                         }else{ 
                             counter++;
                         } 
                     }
-                    // me.model.get("orderDetails").find(function(obj){
-                    //     if(obj.subscriptionId == $(e.target).parents(".mz-subscription-listing").data("subscription")) {
-                    //         //console.log(obj);
-                    //         obj.subscribedStatus = "Paused";
-                    //         obj.modifiedDate = new Date().toISOString();
-                    //     }
-                    // });
                     try {
                         //me.model.get("orderDetails").reverse();
                         //need to test against multiple accounts
@@ -791,6 +946,7 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                         Api.request('POST', 'svc/getSubscription',{method:"UPDATE",data:me.model.attributes}).then(function(res) {
                             console.log(res);
                             if(res) {
+                                window.myaccountSubscriptionList.changeStatus(window.currentAction,"Paused");
                                 setTimeout(function(){
                                     var activeEl = $(document).find('.subscription-contianer[subscriptionid="'+window.currentAction+'"]');
                                     activeEl.find(".subs-list-heading").addClass("active");
@@ -836,28 +992,23 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                     //console.log(me.model.get("orderDetails"));
                     var counter = 1;
                     while(counter && window.unpaused){
-                        if(me.model.get("orderDetails")[counter-1].subscriptionId == window.currentAction){
-                            me.model.get("orderDetails")[counter-1].subscribedStatus = "Active";
-                            me.model.get("orderDetails")[counter-1].modifiedDate = new Date().toISOString();
+                        if(me.model.attributes.subscriptionId == window.currentAction){
+                            me.model.attributes.subscribedStatus = "Active";
+                            me.model.attributes.modifiedDate = new Date().toISOString();
                             counter = 0;
                             window.unpaused = false;
                         }else{
                             counter++;
                         } 
                     }
-                    // me.model.get("orderDetails").find(function(obj){
-                    //     if(obj.subscriptionId == $(e.target).parents(".mz-subscription-listing").data("subscription")) {
-                    //         //console.log(obj);
-                    //         obj.subscribedStatus = "Active";
-                    //         obj.modifiedDate = new Date().toISOString();
-                    //     }
-                    // });
+                   
                     try {
                         //need to test against multiple accounts
                         Api.request('POST', 'svc/getSubscription',{method:"UPDATE",data:me.model.attributes}).then(function(res) {
                         //Api.request('PUT', '/api/platform/entitylists/createsubscription@jbellyretailer/entities/' + customerId, me.model.attributes).then(function(res) {
                             //console.log(res);
                             if(res) {
+                                window.myaccountSubscriptionList.changeStatus(window.currentAction,"Active");
                                 setTimeout(function(){
                                     var activeEl = $(document).find('.subscription-contianer[subscriptionid="'+window.currentAction+'"]');
                                     activeEl.find(".subs-list-heading").addClass("active");
@@ -896,12 +1047,11 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                     $(".overlay-for-complete-page").addClass("overlay-shown");
                     $(".mz-subscriptionhistory").addClass("is-loading");
                     window.cancel = false; 
-                    me.model.get("orderDetails").find(function(obj){
+                        var obj = me.model.attributes;
                         if(obj.subscriptionId == window.currentAction) { 
                             obj.subscribedStatus = "Cancelled";
                             obj.modifiedDate = new Date().toISOString();
                         }
-                    });
                     try {
                         //need to test against multiple accounts
                         Api.request('POST', 'svc/getSubscription',{method:"UPDATE",data:me.model.attributes}).then(function(res) {
@@ -912,6 +1062,7 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                             },2000);
                             $(".overlay-for-complete-page").removeClass("overlay-shown");
                             $(".mz-subscriptionhistory").removeClass("is-loading"); 
+                            window.myaccountSubscriptionList.changeStatus(window.currentAction,"Cancelled");
                             me.render();
                             $(".subsc-cancel-alert").show();
                             $(document).find('.subs-list-heading.active').find('.plus-minus a').html('&#8722;');
@@ -970,17 +1121,8 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
             this.render();
         },
         initialize: function() {
-            var orderDetails = [],
-                orderDetailsLength = 0;
-
-            if(typeof this.model.get("orderDetails") != "undefined") {
-                orderDetails = this.model.get("orderDetails").reverse();
-            } 
-            if(typeof this.model.get("orderDetails") != "undefined") {
-                orderDetailsLength = this.model.get("orderDetails").length;
-            }
-            this.model.attributes.batch = Math.ceil(orderDetailsLength/5);
-            orderDetails.forEach(function(k) {
+           var k = this.model.attributes;
+                if(k.schedule){
                 var endDate = k.schedule.endType,
                     endDateToDelivery = "";
                 if(endDate === null || endDate === "null" || endDate === "until i cancel") {
@@ -994,7 +1136,8 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                     endDateToDelivery[v] = (v++ < 9 ? '0' : '') +(v);
                 });
                 k.schedule.deliveries = endDateToDelivery; 
-            });
+            }
+            
         },
         getRenderContext: function() {
             var c = Backbone.MozuView.prototype.getRenderContext.apply(this, arguments);
@@ -1049,6 +1192,32 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                 $retView.ScrollTo({ axis: 'y' });
             });
         },
+        printReturnLabel: function(e) {
+            var self = this,
+                $target = $(e.currentTarget);
+
+            //Get Whatever Info we need to our shipping label
+            var returnId = $target.data('mzReturnid'),
+                returnObj = self.model.get('items').findWhere({
+                    id: returnId
+                });
+
+            var printReturnLabelView = new PrintView({
+                model: returnObj
+            });
+
+            var _totalRequestCompleted = 0;
+
+            window.accountModel.apiGetFulfillmentReturnLabel({
+                'returnId': returnId
+            }).then(function(data) {
+                returnObj.set('labelImageSrc', data.imageURL);
+
+                printReturnLabelView.render();
+                printReturnLabelView.loadPrintWindow();
+            });
+
+        },
         getRenderContext: function () {
             var context = Backbone.MozuView.prototype.getRenderContext.apply(this, arguments);
             if(context.model.hasNextPage) {
@@ -1062,7 +1231,31 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
             this.model.changePageSize(true);
         }
     });
+    var PrintView = Backbone.MozuView.extend({
+        templateName: "modules/my-account/my-account-print-window",
+        el: $('#mz-printReturnLabelView'),
+        initialize: function() {},
+        loadPrintWindow: function() {
+            var host = HyprLiveContext.locals.siteContext.cdnPrefix,
+                printScript = host + "/scripts/modules/print-window.js",
+                printStyles = host + "/stylesheets/modules/my-account/print-window.css";
     
+            var my_window,
+                self = this,
+                width = window.screen.width - (window.screen.width / 2),
+                height = window.screen.height - (window.screen.height / 2),
+                offsetTop = 200,
+                offset = window.screen.width * 0.25;
+            my_window = window.open("", 'mywindow' + Math.random() + ' ', 'width=' + width + ',height=' + height + ',top=' + offsetTop + ',left=' + offset + ',status=1');
+            my_window.document.write('<html><head>');
+            my_window.document.write('<link rel="stylesheet" href="' + printStyles + '" type="text/css">');
+            my_window.document.write('</head>');
+            my_window.document.write('<body>');
+            my_window.document.write($('#mz-printReturnLabelView').html());
+            my_window.document.write('<script src="' + printScript + '"></script>');
+            my_window.document.write('</body></html>');
+        }
+    });
     var PaymentMethodsView = EditableView.extend({
         templateName: "modules/my-account/my-account-paymentmethods",
         autoUpdate: [
@@ -1390,7 +1583,194 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
             $('[data-mz-action="addAllToCart"][orderToAdd="'+orderId+'"]').removeClass('active');
         }
     });
+    var OrderHistoryListingView = Backbone.MozuView.extend({
+        templateName: "modules/my-account/order-history-listing",
+        initialize: function() {
+            this._views = {
+                standardView: this,
+                returnView: null
+            };
+        },
+        views: function() {
+            return this._views;
+        },
+        getRenderContext: function() {
+            var context = Backbone.MozuView.prototype.getRenderContext.apply(this, arguments);
+            context.returning = this.returning;
+            if (!this.returning) {
+                context.returning = [];
+            }
+            context.returningPackage = this.returningPackage;
+            return context;
+        },
+        render: function() {
+            var self = this;
+            Backbone.MozuView.prototype.render.apply(this, arguments);
 
+            if (!this._views.returnView) {
+                this._views.returnView = new ReturnOrderListingView({
+                    el: self.el,
+                    model: self.model
+                });
+                this.views().returnView.on('renderMessage', this.renderMessage, this);
+                this.views().returnView.on('returnCancel', this.returnCancel, this);
+                this.views().returnView.on('returnSuccess', this.returnSuccess, this);
+                this.views().returnView.on('returnFailure', this.returnFailure, this);
+            }
+        },
+        renderMessage: function(message) {
+            var self = this;
+            if (message) {
+                if (message.messageType) {
+                    message.autoFade = true;
+                    this.model.messages.reset([message]);
+                    this.messageView.render();
+                }
+            }
+        },
+        returnSuccess: function() {
+            this.renderMessage({
+                messageType: 'returnSuccess'
+            });
+            this.render();
+        },
+        returnFailure: function() {
+            this.renderMessage({
+                messageType: 'returnFailure'
+            });
+            this.render();
+        },
+        returnCancel: function() {
+            this.render();
+        },
+        selectReturnItems: function() {
+            if (typeof this.returning == 'object') {
+                $.each(this.returning, function(index, value) {
+                    $('[data-mz-start-return="' + value + '"]').prop('checked', 'checked');
+                });
+            }
+        },
+        addReturnItem: function(itemId) {
+            if (typeof this.returning == 'object') {
+                this.returning.push(itemId);
+                return;
+            }
+            this.returning = [itemId];
+        },
+        removeReturnItem: function(itemId) {
+            if (typeof this.returning == 'object') {
+                if (this.returning.length === 0) {
+                    delete this.returning;
+                } else {
+                    var itemIdx = this.returning.indexOf(itemId);
+                    if (itemIdx != -1) {
+                        this.returning.splice(itemIdx, 1);
+                    }
+                }
+            }
+        },
+        startOrderReturn: function(e) {
+            this.model.clearReturn();
+            this.views().returnView.render();
+        }
+    });
+    var ReturnOrderListingView = Backbone.MozuView.extend({
+        templateName: "modules/my-account/order-history-listing-return",
+        getRenderContext: function() {
+            var context = Backbone.MozuView.prototype.getRenderContext.apply(this, arguments);
+            var order = this.model;
+            if (order) {
+                this.order = order;
+                context.order = order.toJSON();
+            }
+            return context;
+        },
+        render: function() {
+            var self = this;
+            var returnItemViews = [];
+            self.model.fetchReturnableItems().then(function(data) {
+                var returnableItems = self.model.returnableItems(data.items);
+                if (self.model.getReturnableItems().length < 1) {
+                    self.trigger('renderMessage', {
+                        messageType: 'noReturnableItems'
+                    });
+                    //self.$el.find('[data-mz-message-for="noReturnableItems"]').show().text(Hypr.getLabel('noReturnableItems')).fadeOut(6000);
+                    return false;
+                }
+                Backbone.MozuView.prototype.render.apply(self, arguments);
+                $.each(self.$el.find('[data-mz-order-history-listing-return-item]'), function(index, val) {
+                    var packageItem = returnableItems.find(function(model) {
+                        if($(val).data('mzOrderLineId') == model.get('orderLineId')){
+                            if ($(val).data('mzOptionAttributeFqn')) {
+                                return (model.get('orderItemOptionAttributeFQN') == $(val).data('mzOptionAttributeFqn') && model.uniqueProductCode() == $(val).data('mzProductCode'));
+                            }
+                            return (model.uniqueProductCode() == $(val).data('mzProductCode'));
+                        }
+                        return false;
+                    });
+                    returnItemViews.push(new ReturnOrderItemView({
+                        el: this,
+                        model: packageItem
+                    }));
+                });
+                _.invoke(returnItemViews, 'render');
+            });
+        },
+        clearOrderReturn: function() {
+            this.$el.find('[data-mz-value="isSelectedForReturn"]:checked').click();
+        },
+        cancelOrderReturn: function() {
+            this.clearOrderReturn();
+            this.trigger('returnCancel');
+        },
+        finishOrderReturn: function() {
+            var self = this,
+                op = this.model.finishReturn();
+            if (op) {
+                return op.then(function(data) {
+                    self.model.isLoading(false);
+                    self.clearOrderReturn();
+                    self.trigger('returnSuccess');
+                }, function() {
+                    self.model.isLoading(false);
+                    self.clearOrderReturn();
+                    this.trigger('returnFailure');
+                });
+            }
+        }
+    });
+    var ReturnOrderItemView = Backbone.MozuView.extend({
+        templateName: "modules/my-account/order-history-listing-return-item",
+        autoUpdate: [
+            'isSelectedForReturn',
+            'rmaReturnType',
+            'rmaReason',
+            'rmaQuantity',
+            'rmaComments'
+        ],
+        dataTypes: {
+            'isSelectedForReturn': Backbone.MozuModel.DataTypes.Boolean
+        },
+        startReturnItem: function(e) {
+            var $target = $(e.currentTarget);
+            if (this.model.uniqueProductCode()) {
+                if (!e.currentTarget.checked) {
+                    this.model.set('isSelectedForReturn', false);
+                    //var itemDetails = packageItem.getItemDetails();
+                    this.model.cancelReturn();
+                    this.render();
+                    return;
+                }
+                this.model.set('isSelectedForReturn', true);
+                this.model.startReturn();
+                this.render();
+            }
+        },
+        render: function() {
+            Backbone.MozuView.prototype.render.apply(this, arguments);
+        }
+    });
+    
     var InvoiceView = Backbone.MozuView.extend({
         templateName: "modules/my-account/invoice-view",
         additionalEvents: {
@@ -2243,21 +2623,38 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
         _.invoke(window.accountViews, 'render');
         var customerId = require.mozuData("user").userId,existingEntityData = [],
         subscriptionModel = Backbone.MozuModel.extend({}); 
-        try {
-            Api.request('POST', 'svc/getSubscription',{method:"GET"}).then(function(res) {
-                 if (!res.error && res.res.subscriptionModel!==null && res.res.subscriptionModel.orderDetails.length > 0) {
-                    existingEntityData = res.res.subscriptionModel;
-                }
+               try {
+            Api.request('POST', 'svc/getSubscription',{method:"GETLIST",pageSize:10,page:1,sortDirection:"DESC"}).then(function(res) {
+                console.log(res.res);
+                if (!res.error) {
+                   existingEntityData = formatGetListData(res.res);
+               }
 
-                var myaccountSubscription = new MyaccountSubscriptionView({
+                var myaccountSubscriptionList =  window.myaccountSubscriptionList = new MyaccountSubscriptionListView({
                     el: $(".mz-subscription-section"),
                     model: new subscriptionModel(existingEntityData)
                 }); 
-                myaccountSubscription.render();     
+                myaccountSubscriptionList.render();     
              });
         } catch (e) {
             console.error(e);
         }
+
+        var formatGetListData = function(response){
+            var result = {customerId:response.customerId,page:response.page,pageSize:response.pageSize,totalPages:response.totalPages, totalOrders:response.totalOrders };
+            var orderDetails = [];
+            for (var i =0 ; i<response.kiboOrderTemplates.length;i++)
+            {
+                var localObj = response.kiboOrderTemplates[i];
+                var obj = {customerId:localObj.customerId,subscriptionId:localObj.subscriptionId,nickname:localObj.nickname,subscribedStatus:localObj.subscribedStatus,order:{total:localObj.order.total}};
+                orderDetails.push(obj);
+            }
+            result.orderDetails = orderDetails;
+            result.totalReceivedOrders = result.page*result.pageSize;
+            return result;
+        };
+
+
         //Mask for phone number field - 
         $('input[name="shippingphone"]').mask("(999) 999-9999");
         // Handler to open-close order return panels
@@ -2321,5 +2718,10 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
     }); */
 
     });
+    return {
+        'OrderHistoryListingView': OrderHistoryListingView,
+        'ReturnPrintLabelView': PrintView,
+        'AddressBookView': AddressBookView
+     };
 });
 

@@ -1,0 +1,11 @@
+<div id="mz-printReturnLabelView">
+	<div class="printViewContent">
+		<div class="return-label">
+			<img src="{{ model.labelImageSrc }}" alt="Return Label Image"/>
+		</div>
+	</div>
+	<div class="printView-opitions-bar print-hide">
+		<button class="mz-button" onclick="printLabelHandler()">{{labels.printWindowPrintButton}}</button>
+		<button class="mz-button" onclick="cancelHandler()">{{labels.printWindowCancelButton}}</button>
+	</div>
+</div> 

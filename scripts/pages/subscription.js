@@ -178,9 +178,9 @@ define([
             if (me.validateEmail($('#mz-instock-request-email').val())) {
                 var locationCodes = "";
                 $(document).find('.err-msg-notify').html("");
-                if (window.location.host.indexOf("s16708") > -1 || window.location.host.indexOf("east.jellybellyretailer.com") > -1) {
+                if (window.location.host.indexOf("s16708") > -1 || window.location.host.indexOf("east.jellybellyretailer.com") > -1 || window.location.host.indexOf('s48917') > -1 || window.location.host.indexOf('s50196') > -1 ) {
                     locationCodes = "MDC";
-                } else if (window.location.host.indexOf("s21410") > -1 || window.location.host.indexOf("west.jellybellyretailer.com") > -1) {
+                } else if (window.location.host.indexOf("s21410") > -1 || window.location.host.indexOf("west.jellybellyretailer.com") > -1 || window.location.host.indexOf('s48916') > -1  || window.location.host.indexOf('s50197') > -1 ) {
                     locationCodes = "FDC";
                 }
                 api.create('instockrequest', {
@@ -958,9 +958,9 @@ define([
         CartModels.Cart.fromCurrent().apiGet().then(function(d) {
             if(d.data.items.length > 0) {
                 var locationCodes = "";
-                if (window.location.host.indexOf("s16708") > -1 || window.location.host.indexOf("east.jellybellyretailer.com") > -1) {
+                if (window.location.host.indexOf("s16708") > -1 || window.location.host.indexOf("east.jellybellyretailer.com") > -1 || window.location.host.indexOf('s48917') > -1  || window.location.host.indexOf('s50196') > -1 ) {
                     locationCodes = "MDC";
-                } else if (window.location.host.indexOf("s21410") > -1 || window.location.host.indexOf("west.jellybellyretailer.com") > -1) {
+                } else if (window.location.host.indexOf("s21410") > -1 || window.location.host.indexOf("west.jellybellyretailer.com") > -1 || window.location.host.indexOf('s48916') > -1  || window.location.host.indexOf('s50197') > -1 ) {
                     locationCodes = "FDC";
                 }
                 getCartItemsforSubsOrder(d.data.items,locationCodes);
@@ -1156,29 +1156,22 @@ define([
                 formRenderFlag = window.formRenderFlag = true; // flag to handle form update
             // retrieve data from entity    
             try {
-                api.request('POST', 'svc/getSubscription',{method:"GET"}).then(function(res) { 
+                api.request('POST', 'svc/getSubscription',{method:"GET",subscriptionId:editSub}).then(function(res) { 
                // api.request('GET', '/api/platform/entitylists/createsubscription@jbellyretailer/entities?filter=customerId eq ' + customerId).then(function(res) {
-                    var modelItems;
-                    if (res.res.subscriptionModel!==null  && res.res.subscriptionModel.orderDetails.length > 0) {
-                        modelItems = res.res.subscriptionModel.orderDetails;
-                    }
-                    //= res.items[0].orderDetails;
-                    modelItems.find(function(ele) {
-                        if (editSub === ele.subscriptionId) {
-                            var date  = new Date(ele.schedule.startDate),
+                   
+                    if (!res.error &&  res.res.subscriptionId !== undefined) {
+                        currentSubsItem = res.res;
+                        var date  = new Date(currentSubsItem.schedule.startDate),
                             startDate = new Date((date.getUTCMonth()+1)+'/'+date.getUTCDate()+'/'+date.getUTCFullYear()),
                             fdate = ('0'+(startDate.getMonth()+1)).slice(-2)+ '-' + ('0'+startDate.getDate()).slice(-2) + '-' + startDate.getFullYear();
-                            ele.schedule.startDate = fdate;
-                            currentSubsItem = ele;
-                        }
-                    });
+                            currentSubsItem.schedule.startDate = fdate;
+                    }
 
-                    
 
                     var locationCodes = "";
-                    if (window.location.host.indexOf("s16708") > -1 || window.location.host.indexOf("east.jellybellyretailer.com") > -1) {
+                    if (window.location.host.indexOf("s16708") > -1 || window.location.host.indexOf("east.jellybellyretailer.com") > -1 || window.location.host.indexOf('s48917') > -1 || window.location.host.indexOf('s50196') > -1 ) {
                         locationCodes = "MDC";
-                    } else if (window.location.host.indexOf("s21410") > -1 || window.location.host.indexOf("west.jellybellyretailer.com") > -1) {
+                    } else if (window.location.host.indexOf("s21410") > -1 || window.location.host.indexOf("west.jellybellyretailer.com") > -1 || window.location.host.indexOf('s48916') > -1 || window.location.host.indexOf('s50197') > -1 ) {
                         locationCodes = "FDC";
                     }
 

@@ -285,7 +285,8 @@ define([
             customDiscount:function(){  
                 var self = this, nameSpace = '';
                 if(window.location.host.indexOf('retailer') == -1){
-                    nameSpace = "jbellyretailer";
+                    //UCP for 10569 and pre-prod
+                    nameSpace = "jbelly";
                 }else if(window.location.host.indexOf('retailer') != -1){
                      nameSpace = "jbelly";
                 }

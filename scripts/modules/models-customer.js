@@ -1,7 +1,7 @@
 define(['modules/backbone-mozu',"modules/api", 'underscore', 'modules/models-address', 'modules/models-orders', 
-        'modules/models-paymentmethods', 'modules/models-product', 'hyprlive',
-        'modules/minicart',"modules/cart-monitor"], 
-        function (Backbone,api, _, AddressModels, OrderModels, PaymentMethods, ProductModels, Hypr, MiniCart, CartMonitor) {
+        'modules/models-paymentmethods', 'modules/models-product','modules/models-returns','hyprlive',
+        'modules/minicart',"modules/cart-monitor",'modules/models-b2b-account'], 
+        function (Backbone,api, _, AddressModels, OrderModels, PaymentMethods, ProductModels,ReturnModels, Hypr, MiniCart, CartMonitor,B2BAccountModels) {
 
 
     var pageContext = require.mozuData('pagecontext'),
@@ -46,6 +46,10 @@ define(['modules/backbone-mozu',"modules/api", 'underscore', 'modules/models-add
 
     var CustomerContact = Backbone.MozuModel.extend({
         mozuType: 'contact',
+        requiredBehaviors: [1002],
+        defaults: {
+            userId: require.mozuData('user').userId  
+        },
         relations: {
             address: AddressModels.StreetAddress,
             phoneNumbers: AddressModels.PhoneNumbers
@@ -243,7 +247,7 @@ CustomAttributes=Backbone.MozuModel.extend({
             editingContact: CustomerContact,
             wishlist: Wishlist,
             orderHistory: OrderModels.OrderCollection,
-            returnHistory: OrderModels.RMACollection
+            returnHistory: ReturnModels.RMACollection
         }, Customer.prototype.relations),
         validation: {
             password: {
@@ -261,6 +265,7 @@ CustomAttributes=Backbone.MozuModel.extend({
             editingCard: {},
             editingContact: {}
         },
+        helpers: ['isNonPurchaser'],
         initialize: function() {
             var self = this,
                 orderHistory = this.get('orderHistory'),
@@ -272,11 +277,33 @@ CustomAttributes=Backbone.MozuModel.extend({
             returnHistory.lastRequest = {
                 pageSize: 5
             };
+            orderHistory.apiGet(orderHistory.lastRequest).then(function (req) {
+                var orderModels = _.map(req.data.items, function(item){
+                    item.items = _.map(item.items, function(orderItem) {
+                        orderItem.id = orderItem.id + '-' + orderItem.lineId;
+                        return orderItem;
+                    });
+
+                    //Temp until Package Fulfillment is fixed
+
+
+                    return new OrderModels.Order(item);
+                });
+                orderHistory.get('items').reset(orderModels);
+                orderHistory.trigger('ordersLoaded');
+            });
             orderHistory.on('returncreated', function(id) {
                 returnHistory.apiGet(returnHistory.lastRequest).then(function () {
                     returnHistory.trigger('returndisplayed', id);
                 });
             });
+
+            _.defer(function (cust) {
+                cust.getCards();
+            }, self);
+        },
+        isNonPurchaser: function() {
+            return (require.mozuData('user').behaviors.length) ? false : true;
         },
         changePassword: function () {
             var self = this;
@@ -338,6 +365,9 @@ CustomAttributes=Backbone.MozuModel.extend({
                 return self.getCards();
             });
         },
+        deleteMultipleCards: function(ids) {
+            return this.apiModel.api.all.apply(this.apiModel.api, ids.map(_.bind(this.apiModel.deletePaymentCard, this.apiModel))).then(_.bind(this.getCards, this));
+        },
         getCards: function () {
             var self = this;
             var cardsCollection = this.get('cards');
@@ -357,11 +387,14 @@ CustomAttributes=Backbone.MozuModel.extend({
             editingContact.clear();
             editingContact.set('accountId', this.get('id'));
         },
-        saveContact: function () {
+        saveContact: function (options) {
             var self = this,
                 editingContact = this.get('editingContact'),
                 apiContact;
             
+            if (options && options.forceIsValid) {
+                editingContact.set('address.isValidated', true);
+            }
             var op = editingContact.save();
             if (op) return op.then(function (contact) {
                 apiContact = contact;
@@ -388,8 +421,15 @@ CustomAttributes=Backbone.MozuModel.extend({
                 acceptsMarketing: yes
             });
         },
+        updateAttribute: function (attributeFQN, attributeDefinitionId, values) {
+            this.apiUpdateAttribute({
+                attributeFQN: attributeFQN,
+                attributeDefinitionId: attributeDefinitionId,
+                values: values
+            });
+        },
         toJSON: function (options) {
-            var j = Backbone.MozuModel.prototype.toJSON.apply(this, arguments);
+            var j = Customer.prototype.toJSON.apply(this, arguments);
             if (!options || !options.helpers)
                 delete j.customer;
             delete j.password;
@@ -397,9 +437,23 @@ CustomAttributes=Backbone.MozuModel.extend({
             delete j.oldPassword;
             return j;
         }
+    }),
+    B2BCustomerAccount = B2BAccountModels.b2bUser.extend({
+        toJSON: function (options) {
+            var j = Customer.prototype.toJSON.apply(this, arguments);
+            if (!options || !options.helpers)
+                delete j.customer;
+            delete j.password;
+            delete j.confirmPassword;
+            delete j.oldPassword;
+            j.accountId = j.id;
+            j.id = j.userId;
+            return j;
+        }
     });
 
     return {
+        B2BCustomer: B2BCustomerAccount,
         Contact: CustomerContact,
         Customer: Customer,
         EditableCustomer: EditableCustomer,

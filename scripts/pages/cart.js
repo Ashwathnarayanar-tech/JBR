@@ -29,7 +29,12 @@ define(['modules/backbone-mozu', 'underscore', 'hyprlive', 'modules/jquery-mozu'
             $(document).find('.overlay').show();
             var nameSpace;
             if(window.location.host.indexOf('retailer') == -1){
-                nameSpace = "jbellyretailer";
+                //UCP
+                if(window.location.host.indexOf('stg1')!==-1){
+                    nameSpace = "jbelly";
+                }else{
+                    nameSpace = "jbellyretailer";
+                }
             }else if(window.location.host.indexOf('retailer') != -1){
                  nameSpace = "jbelly";
             }
@@ -1094,9 +1099,9 @@ define(['modules/backbone-mozu', 'underscore', 'hyprlive', 'modules/jquery-mozu'
                     productCode: e.target.getAttribute('data-mz-product-code'),
                         locationCode: '' //this.model.get('inventoryInfo').onlineLocationCode
                     };
-                    if(window.location.host.indexOf('s16708') > -1 || window.location.host.indexOf('east') > -1){
+                    if(window.location.host.indexOf('s16708') > -1 || window.location.host.indexOf('east') > -1 || window.location.host.indexOf('s48917')>-1 || window.location.host.indexOf('s50196')>-1){
                         obj.locationCode = 'MDC';
-                    }else if(window.location.host.indexOf('s21410') > -1 || window.location.host.indexOf('west') > -1){
+                    }else if(window.location.host.indexOf('s21410') > -1 || window.location.host.indexOf('west') > -1 || window.location.host.indexOf('s48916')>-1 || window.location.host.indexOf('s50197')>-1){
                         obj.locationCode = 'FDC';
                     } 
                     Api.create('instockrequest',obj ).then(function () {

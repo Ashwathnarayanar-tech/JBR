@@ -1725,52 +1725,125 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
 		generateSubscriptionId: function(accn, length) {
             return accn + Math.round((Math.pow(36, length + 1) - Math.random() * Math.pow(36, length))).toString(36).slice(1);
         },
-		subscribe: function() {
-			$(".overlay-for-complete-page").addClass("overlay-shown");
-			$("#page-content").addClass("is-loading");
-			window.orderSummary.model.set("subscriptionStatus", "active");
-			var isEditSubscription = false,
-				editSubsId = "";
-			//if (window.location.search.indexOf("edit") > 0) {
-			if(typeof $.cookie("chktEdit") != "undefined") {
-				//editSubsId = window.location.search.split("&")[1].split("=").pop();
-				editSubsId = $.cookie("chktEdit");
-				isEditSubscription = true;
-			}
-			var subscriptionId = (editSubsId) ? editSubsId : this.generateSubscriptionId(window.orderSummary.model.attributes.customerAccountId, 7);
-			var userId = require.mozuData("user").userId;
-			var ordersContainer = [];
-			var subscriptionInfo = {};
-			var order = {};
-			var createdDate = new Date().toISOString();
-			var modifiedDate = new Date().toISOString();
-			order.customerId = userId;
-			subscriptionInfo.subscriptionId = subscriptionId;
-			subscriptionInfo.modifiedDate = modifiedDate;
-			subscriptionInfo.subscribedStatus = "Active";
-			subscriptionInfo.order = window.orderSummary.model.attributes;
-			subscriptionInfo.schedule = window.orderSummary.model.attributes.scheduleInfo;
-			var existingEntityData = "",self = this;
-			try {
-				// get data from entity
-				api.request('post', '/svc/getSubscription',{method:"GET"}).then(function(res) {
-				//api.request('GET', '/api/platform/entitylists/createsubscription@jbellyretailer/entities?filter=customerId eq ' + order.customerId).then(function(res) {
-                    if (!res.error && res.res.subscriptionModel !==null && res.res.subscriptionModel.orderDetails.length > 0) {
-                        existingEntityData = res.res.subscriptionModel;
-                    } else{
-                        self.createSubscription(existingEntityData,subscriptionInfo,ordersContainer,order,isEditSubscription,subscriptionId,createdDate,modifiedDate);
+		subscribe: function() { 
+            $(".overlay-for-complete-page").addClass("overlay-shown");
+            $("#page-content").addClass("is-loading");
+            window.orderSummary.model.set("subscriptionStatus", "active");
+
+            var urlParams = this.getUrlParams(window.location.href); 
+                var editSubsId = urlParams.edit ? urlParams.edit :""; 
+                if(typeof $.cookie("isSubscriptionActive") != "undefined") {
+                    if(typeof $.cookie("chktEdit") != "undefined" && editSubsId === "")
+                    editSubsId = $.cookie("chktEdit");
+                   
+                }
+                var subscriptionId = (editSubsId) ? editSubsId : this.generateSubscriptionId(window.order.attributes.customerAccountId, 7);
+                var userId = require.mozuData("user").userId;
+                var createdDate = new Date().toISOString();
+                var modifiedDate = new Date().toISOString();
+                var order = {};
+                order.customerId = userId; 
+                order.subscriptionId = subscriptionId;
+                order.modifiedDate = modifiedDate;
+                order.subscribedStatus = "Active"; 
+                order.lastOrderDate = null; 
+                try{
+                    order.nextOrderDate = new Date($(document).find('.subscription').find('#interval-startdate').val()).toISOString();
+                } catch(err){
+                    order.nextOrderDate = "";
+                }
+                order.lastCheckDate = null;
+                order.order =  window.order.attributes;
+                order.schedule = window.orderSummary.model.attributes.scheduleInfo;
+                order.completedOrders = [];
+                order.nickname = require.mozuData('user').firstName;
+                try {
+                      if(editSubsId){
+                        var me = this;
+                        api.request('POST', '/svc/getSubscription',{method:"GET",subscriptionId:editSubsId}).then(function(res) {
+                            if (!res.error &&  res.res.subscriptionId !== undefined) {
+                                var existingorder = res.res;
+                                existingorder.modifiedDate = modifiedDate;
+                                existingorder.subscribedStatus = "Active"; 
+                                existingorder.nextOrderDate = order.nextOrderDate;
+                                existingorder.order = order.order;
+                                existingorder.schedule = order.schedule;
+                                me.updateSubscription(existingorder,editSubsId);
+                            }   
+                        }, function(er) {
+                            // fail condition
+                            console.log("Data error " + er);
+                        });
+                      }
+                      else {
+                        this.createSubscription(order,subscriptionId,createdDate,modifiedDate);
+                      }
+                      //if(typeof $.cookie("subscriptionCreated") !== 'undefined' && $.cookie("subscriptionCreated") == 'true'){
+                } catch (error) {
+                    console.error(error);
+                }
+        },
+        createSubscription: function(order,subscriptionId,createdDate,modifiedDate){
+                var cartModel = new CartModels.Cart();
+                order.createdDate = createdDate;           
+                api.request('post','/svc/getSubscription',{method:"CREATE",data:order} ).then(function(res) {
+                    if (res) {
+                        cartModel.apiEmpty();
+                        $.cookie("isSubscriptionActive", '', {
+                            path: '/',
+                            expires: -1
+                        });
+                        $.cookie("scheduleInfo", '', {
+                            path: '/',
+                            expires: -1
+                        });
+                        $.cookie("chktSub",'',{path: '/',expires: -1});
+                        $.cookie("chktEdit",'',{path: '/',expires: -1});
                     }
-				// 	if (res.items.length > 0) {
-				// 		existingEntityData = res.items[0];
-				// 	}
-				}).then(function() {
-					 self.createSubscription(existingEntityData,subscriptionInfo,ordersContainer,order,isEditSubscription,subscriptionId,createdDate,modifiedDate);
-				});
-			} catch (error) {
-				console.error(error);
-			}
-		},
-		createSubscription:function(existingEntityData,subscriptionInfo,ordersContainer,order,isEditSubscription,subscriptionId,createdDate,modifiedDate){
+                    setTimeout(function() {
+                        $(".overlay-for-complete-page").removeClass("overlay-shown");
+                        $("#page-content").removeClass("is-loading");
+                        window.location.href = "/subscription-confirmation?subscription=" + subscriptionId;
+                    }, 300);
+                });
+            },
+            updateSubscription: function(order,subscriptionId){
+                var cartModel = new CartModels.Cart();         
+                api.request('post','/svc/getSubscription',{method:"UPDATE",data:order}).then(function(res) {
+                    setTimeout(function() {
+                        $(".overlay-for-complete-page").removeClass("overlay-shown");
+                        $("#page-content").removeClass("is-loading");
+                        window.location.href = "/subscription-confirmation?subscription=" + subscriptionId;
+                    }, 300);
+                    if (res) {
+                        cartModel.apiEmpty();
+                        CartMonitor.update();
+                        $.cookie("isSubscriptionActive", '', {
+                            path: '/',
+                            expires: -1
+                        });
+                        $.cookie("scheduleInfo", '', {
+                            path: '/',
+                            expires: -1
+                        });
+                        $.cookie("chktSub",'',{path: '/',expires: -1});
+                        $.cookie("chktEdit",'',{path: '/',expires: -1});
+                    }
+                });
+            },
+            getUrlParams:function(url){
+                var result = {};
+                var params = window.location.search;
+                params = params.substr(1);
+                var queryParamArray = params.split('&');
+                queryParamArray.forEach(function(queryParam) {
+                    var item = queryParam.split('=');
+                    result[item[0]] = decodeURIComponent(item[1]);
+                });
+                console.log(result);
+                return result;
+        },
+        createSubscription1:function(existingEntityData,subscriptionInfo,ordersContainer,order,isEditSubscription,subscriptionId,createdDate,modifiedDate){
 		    var cartModel = new CartModels.Cart();
 			// check if entity already has data
 			if (existingEntityData === "") {
