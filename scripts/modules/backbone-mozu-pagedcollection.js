@@ -83,7 +83,17 @@ define([
             defaultSort: defaultSort,
 
             _isPaged: true,
+            getQueryParams: function() {
+                var self = this, lrClone = _.clone(this.lastRequest);
+                _.each(lrClone, function(v, p) {
+                    if (self.baseRequestParams && (p in self.baseRequestParams)) delete lrClone[p];
+                });
+                if (parseInt(lrClone.pageSize, 10) === defaultPageSize) delete lrClone.pageSize;
 
+                var startIndex = this.get('startIndex');
+                if (startIndex) lrClone.startIndex = startIndex;
+                return lrClone;
+            },
             getQueryString: function() {
                 var self = this, lrClone = _.clone(this.lastRequest);
                 _.each(lrClone, function(v, p) {
@@ -107,7 +117,7 @@ define([
                 if (sortBy) conf.sortBy = sortBy;
                 return conf;
             },
-
+            
             previousPage: function() {
                 if(this.lastRequest.sortBy === "undefined") {
                     // delete conf.sortBy;
@@ -127,7 +137,23 @@ define([
                     return this.apiModel.nextPage(this.lastRequest);
                 } catch (e) { }
             },
-
+            syncIndex: function (currentUriFragment) {
+                try {
+                    var uriStartIndex = parseInt(($.deparam(currentUriFragment).startIndex || 0), 10);
+                    if (!isNaN(uriStartIndex) && uriStartIndex !== this.apiModel.getIndex()) {
+                        this.lastRequest.startIndex = uriStartIndex;
+                        return this.apiModel.setIndex(uriStartIndex, this.lastRequest);
+                    }
+                } catch (e) { }
+            },
+            setIndex: function(num, config){
+                try {
+                    num = parseInt(num, 10);
+                    if (typeof num === 'number') {
+                        return this.apiModel.setIndex((num), Object.assign(this.lastRequest, config));
+                    }
+                } catch (e) { }
+            },
             setPage: function(num) {
                 if(this.lastRequest.sortBy === "undefined") {
                     // delete conf.sortBy;
@@ -204,6 +230,10 @@ define([
                 return (this.lastRequest && decodeURIComponent(this.lastRequest.sortBy).replace(/\+/g, ' ')) || defaultSort;
             },
 
+            currentFilter: function () {
+                return (this.lastRequest && this.lastRequest.filter && decodeURIComponent(this.lastRequest.filter).replace(/\+/g, ' ')) || '';
+            },
+
             sortBy: function(sortString) {
                 if(this.lastRequest.sortBy === "undefined") {
                     // delete conf.sortBy;
@@ -211,6 +241,11 @@ define([
                 }
                 return this.apiGet($.extend(this.lastRequest, { sortBy: sortString }));
             },
+
+            filterBy: function (filterString) {
+                return this.apiGet($.extend(this.lastRequest, { filter: filterString }));
+            },
+
             initialize: function() {
                 this.lastRequest = this.buildRequest();
             },

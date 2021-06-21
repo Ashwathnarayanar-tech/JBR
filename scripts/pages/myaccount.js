@@ -1,4 +1,4 @@
-define(['modules/backbone-mozu', 'hyprlive', 'modules/jquery-mozu', 'underscore',
+define(['modules/backbone-mozu', 'hyprlive', 'modules/jquery-mozu', 'underscore','hyprlivecontext',
 'modules/models-customer', 'modules/views-paging',
 'modules/api',
 'modules/models-product',
@@ -6,7 +6,7 @@ define(['modules/backbone-mozu', 'hyprlive', 'modules/jquery-mozu', 'underscore'
 'modules/cart-monitor',
 "modules/alert-popup",
 'modules/minicart',"vendor/jquery.mask"], 
-function(Backbone, Hypr, $, _, CustomerModels, PagingViews,Api,
+function(Backbone, Hypr, $, _,HyprLiveContext,CustomerModels, PagingViews,Api,
 ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
     
     var EditableView = Backbone.MozuView.extend({
@@ -158,7 +158,11 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
         ],
         initialize: function () {
             // this.listenTo(this.model, "change:pageSize", _.bind(this.model.changePageSize, this.model));
-			//this.lookupRequestors();
+            //this.lookupRequestors();
+            var self=this;
+            this.listenTo(this.model, 'ordersLoaded', function(id) {
+                self.render();
+            });
             var isloadingMoreItems = window.isloadingMoreItems = false;
         },
         loadMoreItems: function(){
@@ -724,7 +728,6 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
         }
     }),
 
-
     MyaccountSubscriptionListView = Backbone.MozuView.extend({
         templateName: "modules/my-account/subscription-history-list",
         additionalEvents: {
@@ -1189,6 +1192,32 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                 $retView.ScrollTo({ axis: 'y' });
             });
         },
+        printReturnLabel: function(e) {
+            var self = this,
+                $target = $(e.currentTarget);
+
+            //Get Whatever Info we need to our shipping label
+            var returnId = $target.data('mzReturnid'),
+                returnObj = self.model.get('items').findWhere({
+                    id: returnId
+                });
+
+            var printReturnLabelView = new PrintView({
+                model: returnObj
+            });
+
+            var _totalRequestCompleted = 0;
+
+            window.accountModel.apiGetFulfillmentReturnLabel({
+                'returnId': returnId
+            }).then(function(data) {
+                returnObj.set('labelImageSrc', data.imageURL);
+
+                printReturnLabelView.render();
+                printReturnLabelView.loadPrintWindow();
+            });
+
+        },
         getRenderContext: function () {
             var context = Backbone.MozuView.prototype.getRenderContext.apply(this, arguments);
             if(context.model.hasNextPage) {
@@ -1202,7 +1231,31 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
             this.model.changePageSize(true);
         }
     });
+    var PrintView = Backbone.MozuView.extend({
+        templateName: "modules/my-account/my-account-print-window",
+        el: $('#mz-printReturnLabelView'),
+        initialize: function() {},
+        loadPrintWindow: function() {
+            var host = HyprLiveContext.locals.siteContext.cdnPrefix,
+                printScript = host + "/scripts/modules/print-window.js",
+                printStyles = host + "/stylesheets/modules/my-account/print-window.css";
     
+            var my_window,
+                self = this,
+                width = window.screen.width - (window.screen.width / 2),
+                height = window.screen.height - (window.screen.height / 2),
+                offsetTop = 200,
+                offset = window.screen.width * 0.25;
+            my_window = window.open("", 'mywindow' + Math.random() + ' ', 'width=' + width + ',height=' + height + ',top=' + offsetTop + ',left=' + offset + ',status=1');
+            my_window.document.write('<html><head>');
+            my_window.document.write('<link rel="stylesheet" href="' + printStyles + '" type="text/css">');
+            my_window.document.write('</head>');
+            my_window.document.write('<body>');
+            my_window.document.write($('#mz-printReturnLabelView').html());
+            my_window.document.write('<script src="' + printScript + '"></script>');
+            my_window.document.write('</body></html>');
+        }
+    });
     var PaymentMethodsView = EditableView.extend({
         templateName: "modules/my-account/my-account-paymentmethods",
         autoUpdate: [
@@ -1530,7 +1583,194 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
             $('[data-mz-action="addAllToCart"][orderToAdd="'+orderId+'"]').removeClass('active');
         }
     });
+    var OrderHistoryListingView = Backbone.MozuView.extend({
+        templateName: "modules/my-account/order-history-listing",
+        initialize: function() {
+            this._views = {
+                standardView: this,
+                returnView: null
+            };
+        },
+        views: function() {
+            return this._views;
+        },
+        getRenderContext: function() {
+            var context = Backbone.MozuView.prototype.getRenderContext.apply(this, arguments);
+            context.returning = this.returning;
+            if (!this.returning) {
+                context.returning = [];
+            }
+            context.returningPackage = this.returningPackage;
+            return context;
+        },
+        render: function() {
+            var self = this;
+            Backbone.MozuView.prototype.render.apply(this, arguments);
 
+            if (!this._views.returnView) {
+                this._views.returnView = new ReturnOrderListingView({
+                    el: self.el,
+                    model: self.model
+                });
+                this.views().returnView.on('renderMessage', this.renderMessage, this);
+                this.views().returnView.on('returnCancel', this.returnCancel, this);
+                this.views().returnView.on('returnSuccess', this.returnSuccess, this);
+                this.views().returnView.on('returnFailure', this.returnFailure, this);
+            }
+        },
+        renderMessage: function(message) {
+            var self = this;
+            if (message) {
+                if (message.messageType) {
+                    message.autoFade = true;
+                    this.model.messages.reset([message]);
+                    this.messageView.render();
+                }
+            }
+        },
+        returnSuccess: function() {
+            this.renderMessage({
+                messageType: 'returnSuccess'
+            });
+            this.render();
+        },
+        returnFailure: function() {
+            this.renderMessage({
+                messageType: 'returnFailure'
+            });
+            this.render();
+        },
+        returnCancel: function() {
+            this.render();
+        },
+        selectReturnItems: function() {
+            if (typeof this.returning == 'object') {
+                $.each(this.returning, function(index, value) {
+                    $('[data-mz-start-return="' + value + '"]').prop('checked', 'checked');
+                });
+            }
+        },
+        addReturnItem: function(itemId) {
+            if (typeof this.returning == 'object') {
+                this.returning.push(itemId);
+                return;
+            }
+            this.returning = [itemId];
+        },
+        removeReturnItem: function(itemId) {
+            if (typeof this.returning == 'object') {
+                if (this.returning.length === 0) {
+                    delete this.returning;
+                } else {
+                    var itemIdx = this.returning.indexOf(itemId);
+                    if (itemIdx != -1) {
+                        this.returning.splice(itemIdx, 1);
+                    }
+                }
+            }
+        },
+        startOrderReturn: function(e) {
+            this.model.clearReturn();
+            this.views().returnView.render();
+        }
+    });
+    var ReturnOrderListingView = Backbone.MozuView.extend({
+        templateName: "modules/my-account/order-history-listing-return",
+        getRenderContext: function() {
+            var context = Backbone.MozuView.prototype.getRenderContext.apply(this, arguments);
+            var order = this.model;
+            if (order) {
+                this.order = order;
+                context.order = order.toJSON();
+            }
+            return context;
+        },
+        render: function() {
+            var self = this;
+            var returnItemViews = [];
+            self.model.fetchReturnableItems().then(function(data) {
+                var returnableItems = self.model.returnableItems(data.items);
+                if (self.model.getReturnableItems().length < 1) {
+                    self.trigger('renderMessage', {
+                        messageType: 'noReturnableItems'
+                    });
+                    //self.$el.find('[data-mz-message-for="noReturnableItems"]').show().text(Hypr.getLabel('noReturnableItems')).fadeOut(6000);
+                    return false;
+                }
+                Backbone.MozuView.prototype.render.apply(self, arguments);
+                $.each(self.$el.find('[data-mz-order-history-listing-return-item]'), function(index, val) {
+                    var packageItem = returnableItems.find(function(model) {
+                        if($(val).data('mzOrderLineId') == model.get('orderLineId')){
+                            if ($(val).data('mzOptionAttributeFqn')) {
+                                return (model.get('orderItemOptionAttributeFQN') == $(val).data('mzOptionAttributeFqn') && model.uniqueProductCode() == $(val).data('mzProductCode'));
+                            }
+                            return (model.uniqueProductCode() == $(val).data('mzProductCode'));
+                        }
+                        return false;
+                    });
+                    returnItemViews.push(new ReturnOrderItemView({
+                        el: this,
+                        model: packageItem
+                    }));
+                });
+                _.invoke(returnItemViews, 'render');
+            });
+        },
+        clearOrderReturn: function() {
+            this.$el.find('[data-mz-value="isSelectedForReturn"]:checked').click();
+        },
+        cancelOrderReturn: function() {
+            this.clearOrderReturn();
+            this.trigger('returnCancel');
+        },
+        finishOrderReturn: function() {
+            var self = this,
+                op = this.model.finishReturn();
+            if (op) {
+                return op.then(function(data) {
+                    self.model.isLoading(false);
+                    self.clearOrderReturn();
+                    self.trigger('returnSuccess');
+                }, function() {
+                    self.model.isLoading(false);
+                    self.clearOrderReturn();
+                    this.trigger('returnFailure');
+                });
+            }
+        }
+    });
+    var ReturnOrderItemView = Backbone.MozuView.extend({
+        templateName: "modules/my-account/order-history-listing-return-item",
+        autoUpdate: [
+            'isSelectedForReturn',
+            'rmaReturnType',
+            'rmaReason',
+            'rmaQuantity',
+            'rmaComments'
+        ],
+        dataTypes: {
+            'isSelectedForReturn': Backbone.MozuModel.DataTypes.Boolean
+        },
+        startReturnItem: function(e) {
+            var $target = $(e.currentTarget);
+            if (this.model.uniqueProductCode()) {
+                if (!e.currentTarget.checked) {
+                    this.model.set('isSelectedForReturn', false);
+                    //var itemDetails = packageItem.getItemDetails();
+                    this.model.cancelReturn();
+                    this.render();
+                    return;
+                }
+                this.model.set('isSelectedForReturn', true);
+                this.model.startReturn();
+                this.render();
+            }
+        },
+        render: function() {
+            Backbone.MozuView.prototype.render.apply(this, arguments);
+        }
+    });
+    
     var InvoiceView = Backbone.MozuView.extend({
         templateName: "modules/my-account/invoice-view",
         additionalEvents: {
@@ -2385,7 +2625,7 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
         _.invoke(window.accountViews, 'render');
         var customerId = require.mozuData("user").userId,existingEntityData = [],
         subscriptionModel = Backbone.MozuModel.extend({}); 
-        try {
+               try {
             Api.request('POST', 'svc/getSubscription',{method:"GETLIST",pageSize:10,page:1,sortDirection:"DESC"}).then(function(res) {
                 console.log(res.res);
                 if (!res.error) {
@@ -2479,5 +2719,10 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
     }); */
 
     });
+    return {
+        'OrderHistoryListingView': OrderHistoryListingView,
+        'ReturnPrintLabelView': PrintView,
+        'AddressBookView': AddressBookView
+     };
 });
 

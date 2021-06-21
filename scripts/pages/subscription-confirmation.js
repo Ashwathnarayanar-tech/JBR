@@ -59,7 +59,7 @@ require([
             scheduleInfo = "",
             generalInfo = "";
         try {
-            api.request('POST', '/svc/getSubscription',{method:"GET",subscriptionId:subscriptionId}).then(function(res) {
+           api.request('POST', '/svc/getSubscription',{method:"GET",subscriptionId:subscriptionId}).then(function(res) {
                  if (!res.error &&  res.res.subscriptionId !== undefined) {
                             var ob = res.res;
                             subscribedItems = ob.order.items; //array

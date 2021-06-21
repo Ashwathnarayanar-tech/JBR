@@ -1730,9 +1730,9 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
             return accn + Math.round((Math.pow(36, length + 1) - Math.random() * Math.pow(36, length))).toString(36).slice(1);
         },
 		subscribe: function() { 
-			$(".overlay-for-complete-page").addClass("overlay-shown");
-			$("#page-content").addClass("is-loading");
-			window.orderSummary.model.set("subscriptionStatus", "active");
+            $(".overlay-for-complete-page").addClass("overlay-shown");
+            $("#page-content").addClass("is-loading");
+            window.orderSummary.model.set("subscriptionStatus", "active");
 
             var urlParams = this.getUrlParams(window.location.href); 
                 var editSubsId = urlParams.edit ? urlParams.edit :""; 
@@ -1786,7 +1786,7 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
                 } catch (error) {
                     console.error(error);
                 }
-		},
+        },
         createSubscription: function(order,subscriptionId,createdDate,modifiedDate){
                 var cartModel = new CartModels.Cart();
                 order.createdDate = createdDate;           
@@ -1847,7 +1847,7 @@ function ($, _, api,Hypr, Backbone, CheckoutModels, messageViewFactory, CartMoni
                 console.log(result);
                 return result;
         },
-		createSubscription1:function(existingEntityData,subscriptionInfo,ordersContainer,order,isEditSubscription,subscriptionId,createdDate,modifiedDate){
+        createSubscription1:function(existingEntityData,subscriptionInfo,ordersContainer,order,isEditSubscription,subscriptionId,createdDate,modifiedDate){
 		    var cartModel = new CartModels.Cart();
 			// check if entity already has data
 			if (existingEntityData === "") {

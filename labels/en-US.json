@@ -439,7 +439,14 @@
   "subscription"                          : "MY SUBSCRIPTIONS",
   "futureSubscription"                    : "Sorry, you cannot Subscribe to products that are not currently in stock.",
   "invoices"                              : "MY INVOICES",
-  "futureProductSubscription"             : "Sorry, you cannot Subscribe to unavailable products"
+  "futureProductSubscription"             : "Sorry, you cannot Subscribe to unavailable products",
+  "printWindowCancelButton": "Cancel",
+  "printWindowPrintButton": "Print",
+  "orderItemsNotShipped": "Shipping Soon",
+  "orderItemsPickup": "Pick up in store",
+  "orderDigitalItems": "Fulfilled Digital Products",
+  "returnCreated": "Return Created",
+  "returnPrintLabelButton": "Print"
 }
 
 
