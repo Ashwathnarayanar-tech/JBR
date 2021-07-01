@@ -1178,6 +1178,10 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
                 $('.mz-subscription-listing[data-subscription="'+window.currentAction+'"]').find(".subs-list-heading"+device).addClass("active");
                 $('.mz-subscription-listing[data-subscription="'+window.currentAction+'"]').find(".subs-list-heading"+device).nextAll('.subs-list-details').show();
             }
+            var devices = window.getDeviceMode();
+            console.log("Devices ----",devices);
+            this.model.set("pageContext",devices);
+           console.log("model pageCOntext ", this.model.get('pageContext'));
         }
     }),
 
@@ -2161,6 +2165,10 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
         },
         render: function() {       
             Backbone.MozuView.prototype.render.apply(this);
+            var devices = window.getDeviceMode();
+            console.log("Devices ----",devices);
+            this.model.set("pageContext",devices);
+           console.log("model pageCOntext ", this.model);
         } 
     });
 
@@ -2170,6 +2178,8 @@ ProductModels, CartModels, CartMonitor,AlertPopup,MiniCart) {
         Data.isMobile = $(window).width() < 768 ? true : false;
         Data.isTablet = $(window).width() < 1025 && $(window).width() > 767 ? true : false;
         Data.isDesktop = $(window).width() > 1024 ? true : false;
+        var devices = window.getDeviceMode();
+        Data.pageContext = devices;
         var invoiceModelData = Backbone.MozuModel.extend({});
         var requestData = {method : "GETInvoice",customerNumber : require.mozuData('user').lastName};
         Api.request('POST','svc/getInvoices', requestData).then(function(invoices){

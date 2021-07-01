@@ -45,11 +45,11 @@
         </div>
     {% endcomment %}
         
-        {% if pageContext.isDesktop %}
-        <div class="jb-center-logo mz-desktop">
-            <img class="jb-center-logo-img toggleModal lazy-load" src="{{ siteContext.cdnPrefix }}/resources/images/new-logo-images/jb_logo_web_footer_revised.png?quality=20" data-src="{{ siteContext.cdnPrefix }}/resources/images/new-logo-images/jb_logo_web_footer_revised.png?quality=90" alt="" nopin = "nopin" />
-        </div>
-        {% endif %}
+        <div class="isDesktop">
+            <div class="jb-center-logo mz-desktop">
+                <img class="jb-center-logo-img toggleModal lazy-load" src="{{ siteContext.cdnPrefix }}/resources/images/new-logo-images/jb_logo_web_footer_revised.png?quality=20" data-src="{{ siteContext.cdnPrefix }}/resources/images/new-logo-images/jb_logo_web_footer_revised.png?quality=90" alt="" nopin = "nopin" />
+            </div>
+        </div>    
   
     <div class="modal">
 
@@ -66,14 +66,14 @@
 
     </div>
     
-    {% if pageContext.isMobile or pageContext.isTablet %}
-    <div class="jb-social-links-mobile">
-        <div class="jb-center-logo">
-            <img class="jb-center-logo-img toggleModal lazy-load" src="{{ siteContext.cdnPrefix }}/resources/images/new-logo-images/jb_logo_web_footer_mobile_revised.png?quality=20" data-src="{{ siteContext.cdnPrefix }}/resources/images/new-logo-images/jb_logo_web_footer_mobile_revised.png?quality=90" alt="footer-logo" width="100" height="55" nopin="nopin" />
-        </div>
+    <div class="isMobile">
+        <div class="jb-social-links-mobile">
+            <div class="jb-center-logo">
+                <img class="jb-center-logo-img toggleModal lazy-load" src="{{ siteContext.cdnPrefix }}/resources/images/new-logo-images/jb_logo_web_footer_mobile_revised.png?quality=20" data-src="{{ siteContext.cdnPrefix }}/resources/images/new-logo-images/jb_logo_web_footer_mobile_revised.png?quality=90" alt="footer-logo" width="100" height="55" nopin="nopin" />
+            </div>
 
-    </div>
-    {% endif %}
+        </div>
+    </div>  
 </div>
 
 {%endif%}

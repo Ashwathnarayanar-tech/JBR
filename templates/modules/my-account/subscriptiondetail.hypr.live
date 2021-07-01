@@ -36,9 +36,9 @@
 							<td class="mz-price">{{prod.unitPrice.saleAmount|currency}}</td>
 						</tr>
 					{% endfor %}
-					<tr class="mz-tfoot">{% if pageContext.isDesktop %}
+					<tr class="mz-tfoot">{% if model.pageContext.isDesktop %}
 						
-						<td colspan="3"></td><td colspan="2"><label>Sub Total: </label><span>{{item.order.discountedTotal|currency}}</span></td>
+						<td colspan="3"></td><td colspan="2"><label>Sub Total: desk </label><span>{{item.order.discountedTotal|currency}}</span></td>
 						{% else %}
 						
 						<td colspan="2"></td><td colspan="3"><label>Sub Total: </label><span>{{item.order.discountedTotal|currency}}</span></td>

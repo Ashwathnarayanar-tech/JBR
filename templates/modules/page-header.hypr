@@ -6,9 +6,9 @@
 {% comment %} {% if pageContext.secureHost == "https://t12046-s16708.sandbox.mozu.com" %} {% if pageContext.pageType == "category" or pageContext.pageType == "search" %}style="width: 79.5%;"{% endif %}{% endif %} {% endcomment %}
 
 
-{% if pageContext.isMobile %}
-<!-- Mobile code -->
 
+<!-- Mobile code -->
+<div class ="isMobile">
   <header class="mz-pageheader-mobile">
   		<div style="width: 100%; position: absolute; z-index: 500; height: 1px; text-align: center;">
   		    <center>
@@ -103,8 +103,9 @@
           </div>
   </header>
   
-  
-  {% else %}
+ </div>
+ <div class="isDesktop"> 
+ 
     <header class="mz-pageheader-desktop {% if themeSettings.bannerImageEnabled %} mz-pageheader-hasbanner {% endif %}">
 
             {% block store-branding %}
@@ -159,7 +160,8 @@
     {% endif %}
     	   
     </header>
-{% endif %}    
+    </div>
+  
 
 {%endif%}
 

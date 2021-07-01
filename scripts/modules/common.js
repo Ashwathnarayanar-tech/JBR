@@ -1796,5 +1796,35 @@ window.formatApiData = function formatApiData(result){
     }
     return dates;
 } ;
+window.getDeviceMode =  function getDeviceMode(){
+    var obj = {isDesktop:false,isTablet:false,isMobile:false};
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; 
+    var wdt = (iOS) ? window.screen.width : window.innerWidth;
+    console.log(" window width ---",wdt,iOS);
+    if(iOS){
+        var ua = navigator.userAgent;
+        console.log("ua----",ua);
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+            obj.isTablet = true;
 
+        }
+        else if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+            obj.isMobile = true;
+        }
+        else
+            obj.isDesktop = true;
+    }
+    else {
+        if(wdt <= 765 || (window.orientation === 90 && wdt<=812)){
+            obj.isMobile = true;
+        }
+        else if (wdt >765 && wdt<=1030){
+            obj.isTablet = true;
+        }
+        else{
+            obj.isDesktop = true;
+        }
+    }    
+    return obj;
+};
 

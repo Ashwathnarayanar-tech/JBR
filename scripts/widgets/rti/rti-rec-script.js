@@ -283,7 +283,11 @@ $('.recommended-product-container').each(function(){
                //this.colorSelected();
                this.manageBlocksHeight();
                if($('[data-toolstip="toolstip"]').length>0)
-                $('[data-toolstip="toolstip"]').tooltip();    
+                $('[data-toolstip="toolstip"]').tooltip(); 
+                var devices = window.getDeviceMode();
+                console.log("Devices ----",devices);
+                self.model.set("pageContext",devices);
+               console.log("model pageCOntext ", self.model.get('pageContext'));   
 
          },
         colorSwatchingRecommend: function(e) {

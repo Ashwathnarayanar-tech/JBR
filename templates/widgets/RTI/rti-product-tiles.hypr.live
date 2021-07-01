@@ -1,6 +1,6 @@
 <div class="clearfix{% if model.config.displayType == "carousel" or model.config.format == "carousel" %} carousel-display{% else %} grid-display{% endif %}" data-config="{% json_attribute model.config %}">
 {% if model.config.displayType == "carousel" or model.config.format == "carousel" %}
-<div class="{% if pageContext.isMobile %}hidden{% endif %}">
+<div class="{% if model.pageContext.isMobile %}hidden{% endif %}">
     <div class="previous {% if model.items.length == 0 %}hidden{% endif %}">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="19.5px" height="54.3px" viewBox="0 0 23 58" version="1.1">
             <title>chevron left for subcategory tiles</title>

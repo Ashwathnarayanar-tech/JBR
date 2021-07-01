@@ -234,6 +234,11 @@ function ($, _, Hypr, Backbone, Api, alertPopup, CartMonitor, ProductModels, Pro
                //  $('.fixture_cart').addClass('addtocart2');
                //  $('.fixture_cart').removeClass('addtocart1');
             }
+
+            var devices = window.getDeviceMode();
+            console.log("Devices ----",devices);
+            me.model.set("pageContext",devices);
+           console.log("model pageCOntext ", me.model.get('pageContext'));
            
            
         },

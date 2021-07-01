@@ -76,12 +76,8 @@ at line no 3-9
             {% endif %}    
         </div> 
        
-        <div class="qty">
-                {% if pageContext.isDesktop %}
+        <div class="qty test">
                     QTY
-                {% else %}
-                    QTY
-                {% endif %}
                 {% if model.price.price > 0 %}
                 <select id="quantity" class="qty-{{ model.productCode }}" name="quantity">
                 <option value="1">1</option>

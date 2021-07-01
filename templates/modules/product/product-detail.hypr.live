@@ -146,7 +146,7 @@
           <span class="mz-validationmessage" data-mz-validationmessage-for="quantity"></span>
         </div>
         {% if model.inventoryInfo.onlineStockAvailable > 0 and model.isFutureProduct == false %} 
-          <div id="instock-notification-signup" class="in-stock variant {% if not pageContext.isDesktop %}notDesktop{% endif %}" style="text-align: center;">
+          <div id="instock-notification-signup" class="in-stock variant {% if not model.pageContext.isDesktop %}notDesktop{% endif %}" style="text-align: center;">
             <p>Available to Order.</p>
           </div>
         {% endif %}
@@ -193,7 +193,7 @@
             {% endif %}
           {% endif %}
           {% if model.inventoryInfo.onlineStockAvailable > 0 and model.isFutureProduct == false %}   
-            <div id="instock-notification-signup" class="in-stock {% if pageContext.isDesktop %}desktop{% endif %}" style="text-align: center;">
+            <div id="instock-notification-signup" class="in-stock {% if model.pageContext.isDesktop %}desktop{% endif %}" style="text-align: center;">
               <p>Available to Order.</p>
             </div> 
           {% endif %}  
@@ -279,7 +279,7 @@
           <span class="mz-validationmessage" data-mz-validationmessage-for="quantity"></span>
         </div>
         {% if model.inventoryInfo.onlineStockAvailable > 0 and model.isFutureProduct == false %} 
-          <div id="instock-notification-signup" class="in-stock {% if not pageContext.isDesktop %}notDesktop{% endif %} variant" style="text-align: center;">
+          <div id="instock-notification-signup" class="in-stock {% if not model.pageContext.isDesktop %}notDesktop{% endif %} variant" style="text-align: center;">
             <p>Available to Order.</p>
           </div>
         {% endif %}
@@ -327,7 +327,7 @@
           {% endif %}
         {% endif %}
         {% if model.inventoryInfo.onlineStockAvailable > 0 and model.isFutureProduct == false %}   
-          <div id="instock-notification-signup" class="in-stock {% if pageContext.isDesktop %}desktop{% endif %} original" style="text-align: center;">
+          <div id="instock-notification-signup" class="in-stock {% if model.pageContext.isDesktop %}desktop{% endif %} original" style="text-align: center;">
             <p>Available to Order.</p>
           </div> 
         {% endif %}  
@@ -358,7 +358,7 @@
   </div> 
   <p class="pstock {% if model.inventoryInfo.onlineStockAvailable > 0 %} green {% endif %}" style="display: none"></p>
   {% if model.inventoryInfo.onlineStockAvailable > 0 and model.isFutureProduct == false %} 
-    <div id="instock-notification-signup" class="in-stock original {% if not pageContext.isDesktop %}notDesktop{% endif %}" style="text-align: center;">
+    <div id="instock-notification-signup" class="in-stock original {% if not model.pageContext.isDesktop %}notDesktop{% endif %}" style="text-align: center;">
       <p>Available to Order.</p>
     </div>
   {% endif %}

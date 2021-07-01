@@ -203,3 +203,79 @@ button {
 }
 
 /* End of  loader  */
+
+/* kibo variable replacement css */
+
+.isDesktop{
+  display: block;
+}
+
+.isMobile{
+  display:none;
+}
+.pageDesktop{
+  display: block;
+}
+.pageTablet{
+  display: none;
+}
+.pageMobile{
+  display: none;
+}
+
+
+@media only screen and (min-width: 1px) and (max-width: 767px) {
+  .isDesktop{
+    display: none;
+  }
+  
+  .isMobile{
+    display:block;
+  }
+  .pageDesktop{
+    display: none;
+  }
+  .pageTablet{
+    display: none;
+  }
+  .pageMobile{
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px)and (orientation: landscape) {
+  .isDesktop{
+    display: block;
+  }
+  .isMobile{
+    display:none;
+  }
+  .pageDesktop{
+    display: none;
+  }
+  .pageTablet{
+    display: block;
+  }
+  .pageMobile{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px)and (orientation: portrait) {
+  .isDesktop{
+    display: none;
+  }
+  .isMobile{
+    display:block;
+  }
+  .pageDesktop{
+    display: none;
+  }
+  .pageTablet{
+    display: block;
+  }
+  .pageMobile{
+    display: none;
+  }
+}
+/* kibo variable replacement css End here */

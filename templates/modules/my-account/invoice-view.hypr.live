@@ -8,8 +8,8 @@
 			</div>
 		</div>
 		<div class="searchandfilter">
-			<div class="inline-ele search-box-cointainer">
-			{% if pageContext.isDesktop or pageContext.isTablet %}
+			<div class="inline-ele search-box-cointainer"> 
+			{% if model.pageContext.isDesktop or model.pageContext.isTablet %}
 				<input class="search-box" type="text" name="serch" placeholder="Search Invoices by Number" value="{{model.query}}" />
 			{% else %}
 			    <input class="search-box" type="text" name="serch" placeholder="Search" value="{{model.query}}" />
